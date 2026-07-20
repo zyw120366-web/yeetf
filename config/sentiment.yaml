@@ -1,0 +1,83 @@
+name: ye 题材情绪审核
+status: frozen_for_live
+frozen_on: '2026-07-18'
+execution: 每个交易日收盘后采集并冻结；只允许用于下一交易日开盘信号
+sources:
+  strong_theme: 同花顺强势股题材归因
+  limit_sentiment: 东财涨停/炸板/跌停池（可用时）
+  news: 财联社电报与东财全球资讯（只保留当时抓取快照）
+features:
+  - 各ETF类别匹配的强势股数量
+  - 类别强势股成交额合计与全市场占比
+  - 类别大单净量为正的股票比例
+  - 题材热度相对过去5个已冻结交易日的加速度
+  - 全市场炸板率、跌停数和连板高度
+rules:
+  immutable_raw_snapshots: true
+  missing_source_means_unknown_not_zero: true
+  historical_backfill_for_2021_2022_forbidden: true
+  historical_features_available_from: '2024-01-01'
+  missing_history_fallback: 只使用当时可得的ETF价格、排名与类别广度，不把缺失情绪填成0
+  live_use_allowed: true
+  ai_review_required_for_every_collected_row: true
+  incomplete_review_action: 禁止使用部分情绪数据；不开新仓，价格卖出规则仍正常执行
+  after_close_use: AI审核完成的数据才可参与下一交易日开盘信号
+  preopen_news_use: 只允许阻止新买入，不允许制造买入、延迟卖出或改变ETF排序
+  adverse_preopen_block: AI负面风险不低于0.80且置信度不低于0.75
+ai_review:
+  reviewer: current Codex chat
+  structured_output: true
+  review_mode: each collected row is reviewed and written by Codex in the current conversation
+  required_environment: none
+  audit_fields: [source_hash, relevant, matched_categories, matched_symbols, direction, horizon, confidence, novelty, summary, evidence, risk_flags]
+category_keywords:
+  宽基: [权重, 指数, 蓝筹]
+  风格红利: [红利, 高股息, 央企]
+  商品: [黄金, 豆粕, 化工, 能源]
+  美股: [纳指, 标普, 美股]
+  港股与亚洲: [港股, 恒生, 日韩]
+  医药医疗: [医药, 创新药, 医疗, 中药]
+  金融地产: [银行, 证券, 保险, 地产, 金融科技]
+  科技数字: [通信, 算力, 人工智能, 芯片, 游戏, 传媒]
+  高端制造: [军工, 机器人, 电池, 光伏, 航空航天]
+  周期资源: [有色, 钢铁, 煤炭, 稀土, 化工]
+  消费农业: [消费, 白酒, 家电, 养殖, 旅游, 农业]
+  基建公用: [电力, 基建, 建材, 公用事业]
+symbol_keywords:
+  518880.SH: [黄金, 金矿, 贵金属]
+  159981.SZ: [能源化工, 石化, 石油, 化工]
+  159985.SZ: [豆粕, 大豆, 养殖, 饲料]
+  513090.SH: [券商, 证券, 港股]
+  513130.SH: [恒生科技, 港股科技, 互联网]
+  513530.SH: [港股红利, 央企红利, 高股息]
+  513200.SH: [创新药, 医药, 生物科技]
+  513310.SH: [半导体, 芯片]
+  512010.SH: [医药, 创新药, 生物医药, CXO]
+  562600.SH: [医疗器械, 医疗设备, 医疗]
+  159647.SZ: [中药, 中成药]
+  512070.SH: [券商, 证券, 保险]
+  512800.SH: [银行]
+  159851.SZ: [金融科技, 互联网金融, 数字货币]
+  512200.SH: [房地产, 地产, 物业]
+  512760.SH: [半导体, 芯片, 集成电路, 封测]
+  515050.SH: [通信, 5G, CPO, 光模块, 光通信, 算力, 数据中心, 服务器]
+  159819.SZ: [人工智能, AI, 算力, 大模型, DeepSeek, 数据中心]
+  159869.SZ: [游戏, 传媒, 短剧, 影视]
+  562500.SH: [机器人, 人形机器人, 自动化]
+  512660.SH: [军工, 航空航天, 卫星, 商业航天, 无人机]
+  159755.SZ: [电池, 锂电, 新能源车, 固态电池, 储能]
+  515790.SH: [光伏, 风电, 新能源, 储能]
+  563380.SH: [航空航天, 商业航天, 卫星, 军工]
+  512400.SH: [有色, 铜, 铝, 锌, 金属, 稀有金属]
+  515210.SH: [钢铁, 特钢]
+  515220.SH: [煤炭, 焦煤, 焦炭]
+  516020.SH: [化工, 石化, 化肥, 农药, 氟化工, 磷化工]
+  516150.SH: [稀土, 磁材, 永磁]
+  510630.SH: [消费, 食品饮料, 零售]
+  512690.SH: [白酒, 酒]
+  159996.SZ: [家电, 消费电子, 智能家居]
+  159865.SZ: [养殖, 猪肉, 鸡肉, 饲料]
+  159766.SZ: [旅游, 酒店, 景区, 免税]
+  159611.SZ: [电力, 火电, 水电, 核电, 绿电]
+  516970.SH: [基建, 建筑, 工程机械]
+  159745.SZ: [建材, 水泥, 玻璃]

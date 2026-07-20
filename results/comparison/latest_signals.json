@@ -1,0 +1,46 @@
+{
+  "signal_date": "2026-07-20",
+  "execution_rule": {
+    "signal_time": "每个交易日收盘后",
+    "trade_time": "下一交易日开盘",
+    "historical_fill_proxy": "下一交易日开盘价加固定滑点",
+    "ordinary_etf_one_way_cost": 0.0015,
+    "qdii_or_premium_sensitive_one_way_cost": 0.003,
+    "minimum_commission": 5,
+    "cost_rule": "唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径"
+  },
+  "strategy": {
+    "name": "ye 策略",
+    "status": "frozen_for_live",
+    "target_portfolio": [
+      {
+        "symbol": "159985.SZ",
+        "name": "豆粕ETF华夏",
+        "weight": 1.0
+      }
+    ],
+    "diagnostics": {
+      "mode": "offensive",
+      "selected": "159985.SZ",
+      "entered": "",
+      "exited": "",
+      "exit_reasons": "",
+      "entry_eligible_count": 3,
+      "holding_count": 1,
+      "exposure": 1.0
+    },
+    "live_use_allowed": true
+  },
+  "reference": {
+    "name": "etfwin 策略",
+    "status": "reference_only_not_live",
+    "target_portfolio": [
+      {
+        "symbol": "159985.SZ",
+        "name": "豆粕",
+        "weight": 1.0
+      }
+    ],
+    "live_use_allowed": false
+  }
+}

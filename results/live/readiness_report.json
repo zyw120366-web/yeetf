@@ -1,0 +1,27 @@
+{
+  "status": "READY",
+  "core_backtest_and_site": "PASS",
+  "checks": {
+    "single_strategy_name": true,
+    "pool_is_45": true,
+    "ordinary_cost_reconciles": true,
+    "premium_cost_reconciles": true,
+    "equity_return_reconciles": true,
+    "round_trip_pnl_reconciles": true,
+    "fees_reconcile": true,
+    "slippage_reconciles": true,
+    "html_exists": true,
+    "governance_frozen": true,
+    "previous_execution_reconciled": true,
+    "live_account_state_confirmed": true,
+    "live_plan_uses_account_truth": true,
+    "ai_review_complete": true
+  },
+  "blocking_items": [],
+  "reconciliation": {
+    "realized_round_trip_pnl": 546701.4825765907,
+    "open_position_pnl": 6515.365778456637,
+    "cash_management_net": 7115.972191780844,
+    "terminal_reconstructed_equity": 660332.8205468282
+  }
+}

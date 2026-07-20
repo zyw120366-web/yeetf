@@ -1,0 +1,50 @@
+name: etfwin 策略
+role: same_snapshot_reference
+status: reference_only_not_live
+source: https://etfwin.com/etf-rotation/guide
+
+rules:
+  pool_size: 20
+  roc_short_days: 20
+  roc_medium_days: 60
+  roc_short_weight: 1.0
+  roc_medium_weight: 1.5
+  entry_rank_limit: 5
+  holdings_num: 1
+  ma_days: 120
+  max_entry_ma_bias: 0.15
+  rank_change_short_days: 5
+  rank_change_long_days: 20
+  exit_on_ma_break: true
+  exit_on_short_roc_negative: true
+  exit_on_dual_rank_decline: true
+  defensive_etf: null
+
+universe:
+  - {code: '588200', market: SH, name: 科创芯片, category: 科技主线}
+  - {code: '159941', market: SZ, name: 纳指100, category: 科技主线}
+  - {code: '515880', market: SH, name: 通信, category: 科技主线}
+  - {code: '512980', market: SH, name: 传媒, category: 科技主线}
+  - {code: '562500', market: SH, name: 机器人, category: 科技主线}
+  - {code: '515790', market: SH, name: 光伏, category: 新能源}
+  - {code: '515030', market: SH, name: 新能源车, category: 新能源}
+  - {code: '512400', market: SH, name: 有色金属, category: 周期资源}
+  - {code: '159870', market: SZ, name: 化工, category: 周期资源}
+  - {code: '561360', market: SH, name: 石油, category: 周期资源}
+  - {code: '518880', market: SH, name: 黄金, category: 防御商品}
+  - {code: '159985', market: SZ, name: 豆粕, category: 防御商品}
+  - {code: '513120', market: SH, name: 创新药, category: 消费医药}
+  - {code: '512170', market: SH, name: 医疗, category: 消费医药}
+  - {code: '512880', market: SH, name: 证券, category: 金融地产}
+  - {code: '512200', market: SH, name: 房地产, category: 金融地产}
+  - {code: '513520', market: SH, name: 日经225, category: 海外分散}
+  - {code: '513500', market: SH, name: 标普500, category: 海外分散}
+  - {code: '159920', market: SZ, name: 恒生ETF, category: 海外分散}
+  - {code: '512660', market: SH, name: 军工, category: 其他主题}
+
+public_information:
+  score: 总分 = ROC20 × 1.0 + ROC60 × 1.5
+  buy: 排名前5、ROC20与ROC60均为正；指南同时强调MA120下方不参与，MA120乖离超过15%不追高。
+  sell: MA120破位、ROC20转负、5日与20日排名同时下滑均为风险信号。
+  limitation: 指南是操作纪律，不是完整自动交易源码；“市场好时扩展前10”没有公开量化定义，本地固定使用前5、最多持有1只。按用户要求，本地执行不买指南中的511880防御标的，无合格ETF时保留现金。
+  maintenance: 每次正式运行用与ye相同的数据截止日、次日开盘执行和成本模型重建历史参考；不生成当前持仓，也不参与ye策略选池或调参。

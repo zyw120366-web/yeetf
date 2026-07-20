@@ -1,0 +1,5365 @@
+{
+  "items": [
+    {
+      "source_hash": "7849f426ed99c6e7661d3ea7d9a10b7d9690ab4d828334de50b6d863ff7fe18d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.55,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "浙江美大 | 控制权变更+跨境电商+集成灶龙头"
+      ],
+      "risk_flags": [
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "2754ded90218494111ecf48f025760dc96cc157ab7d1181704136633c67fe350",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "九安医疗 | 参股DeepSeek+参股月之暗面+AI医疗+中报预增"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a5dd5a824b48e44f2fa3f34968fe7e6ba4d8c37896874f37bd032c319f3c222b",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.4,
+      "novelty": 0.55,
+      "summary": "个股特殊事项或事件驱动，主题外推能力有限。",
+      "evidence": [
+        "*ST高科 | 撤销民事裁定+半导体封测+AI教育+东阳国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2b0c19b5bc3773ae50d519325d96570d96d445f0fb5d5fa0ebb3655b11fb5ce0",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.4,
+      "novelty": 0.55,
+      "summary": "个股特殊事项或事件驱动，主题外推能力有限。",
+      "evidence": [
+        "艾艾精工 | 控制权拟变更+复牌+轻型输送带+消费电子"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "1c4c1fa82bfcc1f817ac4f4afbb7e2f3103186b6dcb0b976b35565c0bea9d371",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "开润股份 | DeepSeek投资+服装代工+全球化产能"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "98cd2ddd55e2cafdc8e8016111d523e4de60158a31db2c0d3ea2a0c3117bac9f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "道明光学 | 努比亚AI手机+石墨烯散热+反光材料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "cb180755194332d65c127759a5811007f73ae17860c1d8c7a5140b27bc689dc3",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "中岩大地 | 拟收购PCB刀具+岩土工程+核电"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f838b59d522abd4ddb93414406d6946af72931ebe55dce33fd1796ba2ba0ebef",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.55,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "索菱股份 | 车路云+智能座舱+北美市场"
+      ],
+      "risk_flags": [
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "b429985116a7b54283eaba10a8e02d90f6dca067458fa0327cb2de7a49ee35f9",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513130.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "智度股份 | 中报预增+华为鲸鸿+互联网媒体+广告"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "fc821a657392e4f07d784ead1853fe2a882ca779d923bf68d3f3f54b97d57c6d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.55,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "科华控股 | 定增获批+混动零部件+涡轮增压器壳体"
+      ],
+      "risk_flags": [
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "6378ba5d6ce3efce10d31d706fbdd8efaa597366664584c0bd8290e489794f26",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "珍宝岛 | 中成药集采+中药全产业链"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "383705274e6959ca1d69aac5cac59a7bb82567e7ca6763fea6186647920b832c",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "米奥会展 | 间接参股月之暗面+AI应用+拟投资阶跃星辰+境外会展"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "41cb5f78edb6990bf7edf1feb68f47a22eb63179a9dab0638348c9d35bc3b89e",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159981.SZ",
+        "515790.SH",
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "金牛化工 | 甲醇+风电+河北国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "3069dbee2cb1d28a237ec4cbdb38d4b1eb9ca9c909173f8437f4ae43993e361c",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "贵绳股份 | 商业航天+钢丝绳+贵州国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "bd10f0d05f23fc09667fc054bd483b3da1594aaf1d9809bfcbec501649c2d0e3",
+      "relevant": true,
+      "matched_categories": [
+        "风格红利",
+        "商品",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "515790.SH",
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "华银电力 | 火电+新能源+定增获批+央企"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d2b34f1f9a51dd9679bd3f0ca64cf237acdd6ea4cd741293d3089745aa5230d1",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "立新能源 | 风电光伏+定增获批+半年报预增+新疆国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d4461ed917748fccab755b4a577eaabf29b591f976e339a91d897186ec83f5b9",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH",
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "乐山电力 | 电力+天然气+新型储能"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2e6d19f461d00d874181ad08a055cb4510971481b23a938cff1fdd4348024a3d",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "陕鼓动力 | 压缩空气储能+资产重组+西安国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d5f692577fcaa076e7d1fb3e8067b92ef7d1e48de87d46ed33cd536dfc0ed16b",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "共进股份 | 数据中心交换机+机器人+国企改革+回购"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "eafbb71823f0d2cb2d5d4924ae30e6b47ba37186d0e473c751026ba3ec439fd6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "562500.SH",
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "信通电子 | 电力智能运维+算力租赁+防冰机器人+高送转"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "07513487ee99bedf29a6bbd14d4663f26b3e6036839fb4d0b2c9fd227d5d38c3",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH",
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "深南电A | 电力+储能+综合能源服务+中报扭亏"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d6f17f4143db8c5d65802e5389924396a7a66ebd8c1dd5c86dde114472c39965",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "杭州热电 | 热电联产+绿色能源+国企改革"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a8d33e000f72eb7e5acde261e59b679397b0708e4a01a82c150125f133f9eafb",
+      "relevant": true,
+      "matched_categories": [
+        "风格红利",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "桂冠电力 | 水电高增+绿色电力+央企"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "943b06906545fd81effb8ce316a1d024ee6a4d6b5a381b5f7e7c80f0eb61611b",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "513090.SH",
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "湘财股份 | 证券+中报预增+吸收合并"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c63c4ecb4a3e8941b305ff6af55fa31f50c39edf9ccf473a38d751ee4d46ffa7",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "甘咨询 | 参股算力+工程咨询+AI应用+国企改革"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "1dff4defe8731a8cc995a7d18ef293242de33ea132193c0d4a971f7fc967b93c",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "赣能股份 | 上网电量增长+水电资产注入+江西国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e2c2d9f4045987bf98191655a4086f2b5ab594e7f9cd6f460e0545790867b44f",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "宁波能源 | 热电联产+绿色电力+一季报增长+宁波国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5c65099c1e0f02ddf4bf5f14e846cd29a8c81bdfec52a4318c2733ea31c3363a",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH",
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "亚泰集团 | 医药+水泥建材+资产出售+中报减亏"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "726848c325ec9544a27e25daeea2151deedbe970dded178a9fef4fa745796768",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.4,
+      "novelty": 0.55,
+      "summary": "个股特殊事项或事件驱动，主题外推能力有限。",
+      "evidence": [
+        "*ST萃华 | 黄金珠宝+锂盐业务+澄清传闻+超跌反弹"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "57fc3dbb8d1e7a7f1a4c8f482253e5d6ead773be59f41de67cbcb5a4dfd19c37",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "星网宇达 | 商业航天+无人系统+中报扭亏"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5c5d34caf85e4d003ce7f8ebd72f3af666da60b09bc5e977d540cddbab00aaea",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.55,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "赤天化 | 尿素+甲醇+中报预计扭亏"
+      ],
+      "risk_flags": [
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "c2617dfdf3226622ef64c8ee5a0c4d2ab5648c6929f1edd1ba5930e6b55ec121",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "双欣材料 | 锂电池电解液+聚乙烯醇+国产替代+次新股"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8475363ed228f677c06f205c01165d4716a890fb4adbdc4c28ceac5b6f57b602",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512200.SH",
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.55,
+      "summary": "强势题材上榜原因含可映射主题，作为短期正向线索。",
+      "evidence": [
+        "香江控股 | 算力+家居商贸+房地产"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "6dc453fb367cf3a857a32005b9389335d92023397c0ee0b9e9b077b2a3611d20",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.55,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "湖南发展 | 水力发电+中报预增+资产重组+湖南国资"
+      ],
+      "risk_flags": [
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "1682c6e85ee8b92d577ec32abb4c0aaa4e6d7dc764a73f73ae7a94269115875f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "九安医疗 | 医疗器械"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "a255bad39abdb72ce05cf5e04beece6f8d638679a992c4ce65f418b5ebb62b55",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "浙江美大 | 厨卫电器"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "30ff9bb35ad763769e6c6d66bf991157b68f035b2c958f18d2d017223a0ce72d",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "开润股份 | 服装家纺"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "0e5451ff242ff0c3722df5b9b7d46af2dee64fe3c50a946ca6b8cd9b9cbbbdec",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "艾艾精工 | 塑料"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1f21f5e70967ef3cea399de704b44d3813fcdc19f31addc6b8704dd8bac9481f",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "索菱股份 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "6dac4f00e73b738e3530365134ed00ffdcc8404dac1c503d01fd6ce0a2ca5453",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "中岩大地 | 专业工程"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "e022b4ffe52a578dee1b28531a4aba15e07f8d1c774bb9b67c34cc9924bad7f5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "道明光学 | 塑料"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "341c8361b59b8a8a9b83c35ac19f108f920bc75cdfb20431e905d434aeb9b2c8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "智度股份 | 广告营销"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "985bfadfda66b1cdf85b37d3c1c384184ef614709b1f076ca227cb66305241d0",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "科华控股 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "6c9dba68306634970e0429a3af6bc494a557bbcd982d0e8d178bba627030c0c9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "珍宝岛 | 中药Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "e70b9756465f40a2a754b7760f44690c02a962a5cd31c04ad4b66ee3c23bc1c2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "米奥会展 | 专业服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "0a5358d0975e19b7f1f923abf8b7caaac692fc43ee84ab6db5f3f11fe7ed4d4d",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159981.SZ",
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "金牛化工 | 化学原料"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "b98e5ee16a8b4de8fe2ab1a75899eb791281bb492038b6851338a1ccfa8c3a59",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "赤天化 | 农化制品"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "0648ea71a751d6aa8cb215ad980a42733ae81428bb65797abe23150d787faa7c",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "贵绳股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "27abbb444d26e76a02e9a795eb07eb79a752e2554686e4b1365d356e20a9dd8f",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "华银电力 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "634c8b3590aaa2d003379c01fe6075875383b3294802e3902d892999c98c79ab",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "信通电子 | 电网设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "fa2ff6f8787a32c892922f35677dd70293708dbeea7bbdc694406fb836d3787d",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "乐山电力 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "ad2084e21162fba1b3084a59883b84fde33e258ea4d5563c3d5d192f55c620f6",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "515790.SH",
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "立新能源 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "2770f517544fa88fa2a0204ffde6a658b34235c3407ffbb2b5327799757409c3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "云创退 | IT服务Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "403182f7a03913ae3c8375e58c4002905f523b442ed1a1aae8fb4611a46d6c06",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "共进股份 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "100a380b7cd403239cb726414c57dc62589bbd337e0a0a65fb1f135042634409",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "陕鼓动力 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "b2850f56dc56cd802329fc81098ad3bb499693b4df0f796ad450dafce5ef8898",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "深南电A | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "ed6928529f1eb57eea659ec8210a508c972acb6dfdd1eff147df076a1caf9319",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "杭州热电 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c925bcdff54e5bffe1d48749eaa0e29285b024694d8c9f0ef0eacd806ab5c42f",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "甘咨询 | 工程咨询"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "31e1fdf7b7d6910b9ac9af430bb89f36708a2653cc0a9cda3c11fae639a41175",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "桂冠电力 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "53e10e07d2c898dddf8d3487a0b5720245a9c07d7afc1f0960c8be7c50f74ed1",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "513090.SH",
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "湘财股份 | 证券Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8da6a30012a48ea0236c989eaede0747a884a98a35735354b3ac74aa07259f0c",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "赣能股份 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "f2476dc627234ee3769a161a68df45d9a88df89340c0fdc57c00046d4d618dfe",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "宁波能源 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "246c55c97d858e06f1c68ac3fd56a1bd1304d5cfa596819d0e0fa332abf21b03",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "亚泰集团 | 综合Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "48020075a813f446c72da64c2582ac022df374450b4dd2bd875250af55df6cc7",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "星网宇达 | 航天装备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "430be0d0cf269be7a0bd43fc1efd1a8adac625f7837edbc43d98a88a05e53c0e",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "香江控股 | 房地产开"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "67fb570fa13998a6bdfe1eacbd6d9d605568666fd1a5a577cf8e35d1d990b2d5",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "双欣材料 | 化学纤维"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cda16a68127e85d34528219dd7f870a7e26b1e95bf07ac2b38a845b43fc97e23",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日涨停：对应主题有正向盘面强度，但仅作单日证据。",
+      "evidence": [
+        "湖南发展 | 电力"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "f465a79a86b2353c5e8300a0f61bb6b44258973edcc3da0cd7bdac453aef7b99",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "512690.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "威龙股份 | 非白酒"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c9122c42b0d9e71a6c36467def72aa30b38caa049f3f6937581a63cf4fa34ae2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "中百集团 | 一般零售"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cb13fc36f5b32ff3c50ee38118ec9d70e705c83a86e085d07d1535fa47aaa119",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "哈药股份 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "0acb3195f2231773e75dbcfb43a11f7cb0b670bd0aea2c1dc198a412dd2a42e7",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "中央商场 | 一般零售"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "0949581155986a0f94a3f4b65dc8456fdacb7869ba1dbd9c1c89bc1635ef3cfc",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "一鸣食品 | 饮料乳品"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d8618ece53546b18bad201206aeeff8025ac4e6d1609f9c59a9117051d9dc75c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "立方控股 | IT服务Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "6b59be321504efb9ff827fceb7bcdc1681f74968f25c9accafe5bc422f2377f1",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "贤丰控股 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "69f1c11cbd492f40461b5ca20366fd4a657b3b59df80f535c522cf0b68cb39a6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "星网锐捷 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7dfc502786397186ef16cf8a8698d9904df14a5e1ee5cce17af98a6711bac1b2",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "水发燃气 | 燃气Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "a14fd81247cbec8b000196b643d7009801f5458ff8675d9be4017f5bb5156ab4",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.35,
+      "summary": "当日炸板：题材承接转弱，作为短期负向风险。",
+      "evidence": [
+        "肯特催化 | 化学制品"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7d89d2c159d0b4e565012b792609b164315bce04fdd1a3170110c19a7ab33099",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "力聚热能 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7a1ab7492f9c3c1baf48656c07638751afc10d209bc7aac60a8e6d1833005d50",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "豪尔赛 | 装修装饰"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "cfecbaf97103647d3a114911091f344ec880069cc41c6181bc8647dcb9663911",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "瑞玛精密 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "e183894228d9776b5dd05424cff6381fce91353f0d5f76fca3d7d4791181db5f",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "利通电子 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "b282fd72573a02b9fc2deb7068abd9c06e52a95104f33cf88c0e607f622a15a2",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "晶方科技 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1bcf4bd4a37408dc68023e2ee502831ec3b74255f8641688842b08daa0728996",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "德才股份 | 装修装饰"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "0ea01b09b140323a43d3a2e1e7e537ae5fcf2bf7be9e10cf3d86a4a3fe674744",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "润建股份 | 通信服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "189c467a7096171cf62301640d029558dfebcc0e7e3490f549d2677bcca2dc04",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "东材科技 | 塑料"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7e3dd7cdd1f81d3bb0d7e414067b3c33fdcf54debb9aa78598cc004215d5a41f",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "516970.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "拓山重工 | 工程机械"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "fe3824182831cca80a51877b010159b7652254fe871d54c4aabbaa4d8495e92a",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "瀛通通讯 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "64addbcb3f2c8231d46f7f8eab24ec88e5bb4deaaecc1f9e4f99b839ff2e10e8",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "宁波中百 | 一般零售"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1bff29f67b2bff24b550b8f4a53335e8b922deefcc740a971835129463de953a",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "璞源材料 | 服装家纺"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8b943d7db0b3a886551b0af9e122c5b072f708cf4b31cf15134e3dcadbe4d8a0",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "地铁设计 | 工程咨询"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "40c8b97be7e7a6672df799646f009fd89d90d900340419cdef21be2f5e315fc0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "安联锐视 | 计算机设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "9f9e73bc72570d406fcf16f036b5a7b410897b97b3c9ebcb88d5dc90876eeeb4",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "联德股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "5da3f15a0b2333306ee01c892195ff458a2e1658344bc961ab282ef31cc5e67e",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "三佳科技 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "bdd2246b00d5868c4243653fd842987c5a1a26dc79e7dddb95e5b3e40ed3106f",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "宁波韵升 | 金属新材"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "eeca7664211419df01eecf30b5aa2229f7abbd54de1af7955f6cdf78998472a5",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "京基智农 | 养殖业"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "31baa315c180c42bc2402098ac9b70084d055e2cb6d2b29785796aa29e5b5700",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "超颖电子 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "35439083b9f1842585d90bbc55ca7d479fbba5abdfcc781fef17cd9e56aade0e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "科新发展 | 装修装饰"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "a165d69b5fa2c9317b36faca01e23bba46f6f7f6b6f5f0d4f5adb904a41faf04",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "盛景微 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "5b1211340523c0ccacb76a725193c74e3f37cfd34437b1c2bb1d35139c4d66e6",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "健麾信息 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cd665684de1902947eb380ea00925cde281b12540a03a3db537cae80c93b7086",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "宇环数控 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "172c2a931d859e908cfec11861bf3d28c4b289105b3db08d0aa015863953a1be",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "来伊份 | 休闲食品"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d513eca8114aee16348df5b8c7f41c6f1dafbc804ddc6d831934dd715492c585",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "银轮股份 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c4b075e81cccbf99e099814a3b623689f56a52ff40f77041ee94b23807fee4d1",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "江南新材 | 金属新材"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "ba78254e876c2b911856f1faabc75cda7f4e07d89b895dd55b30e611b4ee5672",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "电光科技 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c33d797ecc7b923e785da6345cc07dd28e24ec1c82d62b9613486537787dfac4",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "朗迪集团 | 家电零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "472810db94b828562425b8e4d785cb34f09811dd97dba405e3db085eb6e47c44",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "长裕集团 | 化学原料"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "4b0b3effbc87fe2b39a2a6956b6db7ab70612888733b3f1fbd4a32c3b020d832",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "春秋电子 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1883aa6955f18e998d37916c25b3ffbb3bcdb5e67213c539c8b759e05d8cef66",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "联诚精密 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "40b95406e9575db9abdefd1ca8cba094ab338fd2fb2201ce4830fbc4a9362692",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "海欣股份 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c665fd8246e2ce80abdf4d343219ed3b2902ec0d09c4d46c899341e6bd1cd97e",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "合富中国 | 医疗服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c807e5d7b92a858b29a3779a596e7bab16e48d0cc3948f25c62f330052253bb0",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "诚邦股份 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d65d300d55a886fcc84a18231e44eebdaec8e93bb4bae235d2ce6c6b91025461",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "博杰股份 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "99bd9a395434db765b4df9d013889baa5ee53f0a96e5a18a09caf4114a593a91",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "实朴检测 | 专业服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "cb890392a61d396326c55058005df1ef6ad9749e63d9ae0ce452423347758548",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "杭州园林 | 基础建设"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "fda9960a93d7ee80067e74548f4ac71bffcee8ef1c6fc2d364a077d324fdd37d",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "易德龙 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7f5e134e3334639852c0abc2d097df1d6d19a6980041eac257579e5c3c1244d3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "奥士康 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cae1b54d5128eed34ee2b58b979912dbaafc47e9b59c5eb9f75f8a065bbb4512",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "石药景峰 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "40e9bc7d56ec29eda3321ab178879f458b9fbb8fc648e0530553191124c731e6",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "神通科技 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "b8f02091a6d7091d067bd52c962cfd4be047e833459063863235c05ac55cabeb",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "康强电子 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "522130b9515499532224e497718c4df35472268de8c25b6d97eabb0f8fdba414",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "大为股份 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "3c5d2191a4452ef9082f3ac6de30e20f2083b7a8cad404b13a958ff7607e7272",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "泰坦股份 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "0bdd6c3e789d161066d72bc4def60fdcfdb63b9033b72ca2942ef5bad5073ac9",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "柘中股份 | 电网设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "f36abcab6e0e873a8d0a5e949eeae065bc02bea08d74388b2dcfeef02515142f",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "道恩股份 | 塑料"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "5d5a0342cf9f80e6906096bb834546423675c23a6afb61551ce98b40c1b3f3a6",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "永茂泰 | 工业金属"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "565d92b45dcbd2aeddc4376e39e0d9286729a4cab33415960e8604a4397a70ca",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "双成药业 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "560b41fcf285524bfebaacb8fde08bc670b3d5a97a62df61d5f96d4c73f2cdd6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "菲沃泰 | 电子化学"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8d354ab394fa5a0393e23d6655f3346dd5c403d8aab1ad5867248c10224f7419",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "亿嘉和 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1d28fdc5d49c0f2eab63a2a04358253b7505e901ff9657cb996aac81691d4b1c",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华懋科技 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "995db1e82e5e5f1cb9aeadfc5b2f4b5673b16c26038cda17dbe7e106377cf90d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华体科技 | 光学光电"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1e91afc2483acee5e50740bcec80118de8731f1c008c97b831250cca3fb8aabc",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "可川科技 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cd0a836cd3f79d4cf89c792ffa5c4aecda5c63a65379676c927e30ba4b68056d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "名雕股份 | 装修装饰"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "9a590c0b7a17f488aee3de45f6dcef2fe8879371b4ee5e98ba9008ac35226222",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "友邦吊顶 | 装修建材"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "307a1b48c3e2c94695d616d7475c3422106b6d39ef3ba6118b6746dacd58a4df",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "奥海科技 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "a0925910c9c983a2956c1a84da67a5bb526f31d360b85b70ba0bc49facefdb3b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "博敏电子 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8f44d039a25c43066680442bca7367c887e04a8b93e990d7feb82d0a71e9d92d",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "金帝股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "15634b3f21ca7f18dff52c8f8d413b5b522c4b08c1c096eb2656b0740fa1820f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "盛视科技 | 计算机设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "fa25b5b3e7dd90ae75a6098084be26dc2cd44468ec7c55e63f27bb27e13e9e2f",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华丰股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d4fbeb5f57a0cd76856b1f5a26747db56e70df3e3451ddd55520bbddb73c589c",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "共达电声 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "a1427b6f48313924f512acb9f00497b01d719c86409c91aec7d6502209a94aa6",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "亚太药业 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "acfa21cc68f9e2d39eefc22e67fb5b9da07d45e29daa140911ecb973d371d644",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "宇晶股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "81fba691734a9a32a0c1942c9489111beafb657cded12d6f60d091e1b4e7f287",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "百诚医药 | 医疗服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "107e25a8d6ec93f5c1b702edd01571eb12e29657cc469d8ae7d2d6a3c96ac3e6",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "康惠股份 | 中药Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "231fc6f6664d6b025bdad1fbbf5d215f827623272267712367f90fb60b34a8dc",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "天普股份 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d6fc9683a92ff89e2433577debfce03510f11a2e8c707d42b52490cdbe9a24b7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "征和工业 | 摩托车及"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "257f0ba926a28208772a181949e590e9e9aff0d0cb64a430acac69fa8288abe0",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "煌上煌 | 休闲食品"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "88fa34ed68f88d57ac58fdbfb9611c2e20ab7e2e71179b48462f5bc62c4d7b6c",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "药康生物 | 医疗服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "e53c1de2fd49e9a4963ba63a7eab5cc4f957b6a4a64dda60301265b943aff3dc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中瓷电子 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "67a341a2cf3d7d20d7d855833557c83339bf60e2ac0064d324bd9d1021f74f89",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "至纯科技 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "19bce1e1d754869310d5679b14e937b33ffe66b27db3471724d2ba6e02e20cc7",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "和而泰 | 家电零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "5df0ec9422630a44f16256e9a3277af73855fafd4960614760d04cd541d72b55",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "泰嘉股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "f9aa57e072dc9fb0ebd49a92e794af43c947a8c1e1ba5b7d125a64f75966b566",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "睿能科技 | 其他电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d6101426fcab060446529956735bd23b3af4fcf2a89df9dc19e50222c5e6d181",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "盈趣科技 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cc15c7333d6c69fe04fb0bf18403a44c2b6f8ad595e32d33f72e0f319d009a44",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "奥赛康 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "629ada2cec3bdab0aae61021470d965e54ef579b9c1f23ab6fe467ae64f9f557",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "和胜股份 | 工业金属"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8be0af43272535a232fd40278b06968194e9d3bbe9a85642917148d444a066e3",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华亚智能 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "79bafe4a7077dbcfa507a41a8887e87f86f10e13f02f334beee361889a065e88",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "实益达 | 光学光电"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c85c84274e2b520b7e93c9272f31985388d446719747247762afde89ad39bec9",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "圣晖集成 | 专业工程"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cc22f87b5395dbaa6618f9f1edc2db8f411308d5ca3f2335f58f92330abefa6d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "冠石科技 | 光学光电"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "5fc135db2f252801c40b0261b099459396b88b041fd214ef0f9989e714650ace",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲"
+      ],
+      "matched_symbols": [
+        "513090.SH",
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "大港股份 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "642940d1b80d2e37a59981aabc12b9af5e330676b7be21a7ff61bc3cff6818f2",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华微电子 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "3c650927cb08fca5a90d39d896f1c7e9b65eda0b55e6bb04485ff3c92ec4af6f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "双鹭药业 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8eb5f32a844794d8a08315d2495f722f1084c6e2be99425caa4850b292cf2098",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "亚威股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "dd7a4773b80e3726e38f05c72744b5a72c29b5361db5b7ad6831963b0e92fc79",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "科瑞技术 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "3b380cb760503e4021de58d4ee3eb754a45ccd3ec09c05539a347cadc020d416",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "宝鼎科技 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8f881e0bbf6f3381aebfbd683ac90944943a0919a63d51f3ddf974d5b27bcba9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "特一药业 | 中药Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7045bda8a2d34a64b9e5cfa5e9d99be0d0543905b122470c40e8cda23fcb5421",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中国长城 | 计算机设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7b291d5485bde59a189d17cfba52be9960eafeb0775241a13919dd22a2dd267c",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "蔚蓝锂芯 | 电池"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "4fc163b8668247a8fc7ab8b9867cb0f0e214e1e1a7a18ba6478bed937c3687b6",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "领先股份 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "6e17044ffaccfca5302d49411330f7cb9a20d2c94f57d35cd52c819121d1978f",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "先导基电 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "117e3d2c86659ea4e4b4cf7b1f31edc84d8db913e759f598cc40b06bcb777853",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "苏州科达 | 计算机设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "bcc4db29c09b38d36bd46ae600f5e1c048bfe8f7acb2e76aeb3397bd859c7508",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "福日电子 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "e46cf96a750400da118cba84a1b09b97e7fa72de85467d419c32a7c6fb36feeb",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "万润科技 | 光学光电"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c51978c2cd567c96c02c582889e80d538eab71c3f6feb35a252dc326524133b6",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "江苏北人 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "300d51e906db7532a6300ac175a481494cc80e0267d57fdedac7fa4f723d0e14",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "安妮股份 | 造纸"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "55b6272995ee230665b8a1e1acf87f396b03a6728432d87cca35a3925b08cc22",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "润都股份 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "54db5aae63f081c384f0acdb1c7242e7cf196344cb98a42f0765416ff13aa418",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "金富科技 | 包装印刷"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "5ed8a573158cf028e814e7dd3f9e9896513454de9905a9e4cef35484456cb2f4",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "平安电工 | 塑料"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "189c908c66ba26cabf4ae7d76531b521e339c88f3c25f5fdde2a1fe889c08450",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "博迁新材 | 金属新材"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1070c8756aad1e0ac757b1d1f1cfdca583cb64a9545a7a6756dfa0ee067060c1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "创业黑马 | 教育"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "a18cdd5b047b0538199bb23a78fdf329172fc1acce9153faa70853f765129b77",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "晋拓股份 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "476da2491195a83d2b46016bab336e7af469781f00d72189fe6f26369a3e3db9",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "合锻智能 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "2abd4b26948418ec32ab3b9c5ad397e789112cb0a14610013c3815ed364e965e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中京电子 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "fe43966efacdaa50402912d18c3d3e5a04c472df105a0dd2e2adc85b10c87729",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "艾华集团 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c927ff0546fb8b9cdb11fe0eeececc2dba00d3b82b0690471beea24d196b8960",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "海南海药 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "645a16a1da169dfea5df8efd6a60db22f8fcc15e0db8e6b989870156cf13e5b9",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "德龙汇能 | 燃气Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "3305f0996c0cd0630a41dc200a2b51659a06b505017d1fbccb7c1978686f250b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "声迅股份 | 计算机设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "76fb95ba6c0a319f4099c78b8b02c6e0f9344c6a4c23b044c3faef3f0ee26ab1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "综艺股份 | 综合Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "51d230bc2b3a7bdb509f26857ffc43047eb30d508d6b569174bc84182d59e481",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "海星股份 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "078d903b7336e2601210c2c96873845ab037fb8ef4119148466412f663dbace5",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "洪田股份 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "4fb1fdd7a19c84e1dee6a5f497328ac1a987d9ea222851df30ed8114bc3b9cf1",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "XD长江通 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "28fc75604c3a2e09631b9baf15613899964715139cc3e38d39a44e022c493f79",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "广合科技 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "2394124f50519cbd503db36bf6596f0764efd3af0b1a1bccdc5feed5695d7920",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中电港 | 其他电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "116a88a584ef9d39fc121f6659435a751467247303f6ec47ef47c55a3dc05b9a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "安孚科技 | 电池"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1bdbdec504dc10b3ddbfbde5726680ab5a977130824236de8a48903d5b95b414",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "祥鑫科技 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7e5fb8d8c7b75a31b4aa20a541243b034bfcf96eb2b4d7b123af8128c1c19f01",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "深科技 | 消费电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "72d590bc69bc6d2bf068a537f24e57fc8f91d21b3e1b33accf991cf03c4abfc8",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "福达合金 | 金属新材"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "126f833409b037ceca38e828289fa083940b38c9b776015d5f16cb62ebf275a1",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "昂利康 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d43a091e809908faaab0af2b05f94ac96b3f258952828817117a06d099edfd6c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "鼎通科技 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "8f2d5218592378ec65f95238afe90587681ec0331ecaa416618f1459dc5416b2",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "川润股份 | 通用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cee8e4a64bd686c60cf00e61112bc228eb8ee31be49e9599c7dbd6a8853adad6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "方正科技 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "daed58450671decbdaf37899eaacaa9ea298d8c88dbbb157ec554c8f8deab2da",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "航天电器 | 军工电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7c329af7b85efbd3e6a2d68613da0b11c31e82051484b59074377452866df2be",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "美盈森 | 包装印刷"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "c5741d47eac7234142a28a0d8c0c76d20a1661dda35f4e9c71b49f6e739812ac",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "杰瑞股份 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1e2c9f1b8a30fa3a5e40585a7b6ae566554a25e414bfdabe7f74d9d59e8222af",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "莲花控股 | 调味发酵"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "13f96b18b62a57d2eb68f033fa7ded88a9e7b6a7491a9a3f0c9a85069e0ae1c6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华正新材 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "b60dbb6116c2c88d6dfc8efcbcd7ff1be4d1551abee6d3cc999a776d01b1b9aa",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "沃格光电 | 光学光电"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "76ac5bf9b8cd4b0f35d1dc047a2dd687ed9af7a8bbb87d25c443e8078ce981cf",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "三羊马 | 铁路公路"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "7d1c722e929f641cf91676cf3e67ecf155e511bc10e280854b99fdb51b05828c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "高新发展 | 房屋建设"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "98d02be817b5ef4d9128b64d42b7ec706f073a58a8bc699813fe373f57636543",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "探路者 | 服装家纺"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "aff21a489324183a3f323c11727c6369355988e6e9a1f1e7e51c534966dd0ca1",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "崇达技术 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "edf79d9183702453e942c71fb8c05edd5a555d5882e8ec8f02548668c57b0b6e",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "赛腾股份 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1abbbc385ca4264c046a72c34e7e6e36292e8e319963f8838b87c0a5db8faaa0",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "禾盛新材 | 家电零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "57e5ac2aa45bcd72097181e456354856c8e41c77831694bae59ebb854574c559",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "胜通能源 | 燃气Ⅱ"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "b04059b879762d406c13c2caa0a078b0efa30e166bf530884820bd6f9a7de671",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "智微智能 | 计算机设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "37289a84a95afc680920ea97f49a28950c6d67d49fd29b5e36856281179ccbba",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "百花医药 | 医疗服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "a0d38942f0afaaf955e6ce41dd969a943388bcfb926e7166b7828f0def38e2d5",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "哈三联 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "924197c1a28c7f53ecbe3596a199d289a8bb94e8d456e852fd49b58adf8f6dd8",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "鹭燕医药 | 医药商业"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "dab518511aef25c32313fd21a16f2382269a99462779eb24a2b109298d423cf4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "汇绿生态 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "ba492465f9c32aee976e2b33702802426149dc09493698030099b48a71e36818",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中恒电气 | 其他电源"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "4392ecea0128dac6b0d370ea94d707c3ce4286559ac8230b2d7e6595836a63de",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "飞龙股份 | 汽车零部"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "31378c528e8a51bfa6268ea15c43903a0bcc5496e263a1d16dc3700e695f3749",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "意华股份 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "07418405a17b6b201153856f1cec9c3f5f0c3db82dd1c8c2fe41235a01511275",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "海思科 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "6a0fbbac98d8eeff0a0c9bc11d078b97463216e89cb387f23463ac0e5d55d576",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中科曙光 | 计算机设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d037a9ac8653f64a1663e8a7e71401fca61e638de8805f9e193f4959157c2f57",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中天科技 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "28097ba2dd2e95c9b8b32b5b8171e9ef259f8cbb256bf4d405b228873606f1be",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "立方制药 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7b97fa100c5d5edc8efba4407af3a5406980ff2df1d46cf708c15ea48a1af7bb",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "远东股份 | 电网设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "b0533b54fd4c08fd1ab2d833513e98b6eb6c3cad6a16581aa16ddd01f9a9bb13",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "航天工程 | 专用设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "d09787dcd77918c2473edd713bd045824de14a5ea587dbef7ef5ce41c75114d0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "江海股份 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "f0d62d11adece769e1638e3e709ffb23196a70f2dcc4b53092c4b7405bc00e03",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "格林达 | 电子化学"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "782ddef0741372a5d944b43c4f9809d93774cbb7e2acd35e92b9acb337586791",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华盛昌 | 电网设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "bf0a4f9d0b63cd45495b31a9b4db0abf1061e4f2263af4610f00b96d58d9e813",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "时空科技 | 专业工程"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "25bd0b8ec295059474d4137bf19c2bf7508a0b2c9ed69ceb57d8d673296a0f4c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "烽火通信 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "e5c143bc77e89b3ce78f47671217b108eaea6ae3c115706a3d458d68111b4044",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "云南锗业 | 小金属"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1e1b59034cb69146399a49b8191fcba70d3eeb18497e93a37a219f617313ca07",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "太极实业 | 工程咨询"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "6f0ede340ec820fa7300fbff11141419f2869a2c83e519d2ae3a37215d38a87a",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "人民同泰 | 医药商业"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "0d470d4d6dbe923c039f2465f17f2355565655073775b90ba255472ce61b30bd",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "合肥城建 | 房地产开"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "6ec275717e58bee7fb6aabc49137a4e238f88cb37f97d64a8c43fd8bd8d77837",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "红板科技 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "7986d78ede2680793e6de75bb11d9619000dfa137a354cdf3e7b2f41a3d61794",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "生益科技 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c4c14dac26f03ddb3d73138751e2bae6f5499cbedf50f0acb7bd0a57c8877808",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "凯莱英 | 医疗服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "200522ba347baf45f170dc3e710c4b9177ce01b8a40e7b0147c275cf5bda6564",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "兴森科技 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "cd3c34202bcc7e93914af8ce23eb2c14015c4ff91af81e5ddf9dcb9e322c2e2d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "永鼎股份 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "96bbca7a8b72b323fa1dc18dfef470b08c381262c10f22dc4f9023a5fac54a9e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "大恒科技 | 软件开发"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "9d8e753c3d4899f99ec5f00fcce82cb4a055eb926d216c72a72255115f3b49a5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "风华高科 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "a3a182746ef439b9716bc9cb51609048cdb4ef47663f3049c7b36565d69534e6",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "灵康药业 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "0ec830cf2982829e1ed28d3e6853fd20862173d2a8134aa0511923e8cfe599fa",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "兴业科技 | 纺织制造"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "5df53c13e8cf2fac37d5531fb4922b68e51e1cf4b4476e1282bf668eb224a490",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "科伦药业 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "198e876f405fa446585b9325641cf2964114adee90d82da6e01771fe878bc699",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "剑桥科技 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "affd6572dc5cd8059efd77c975a156505184fbb035f5961b9a021b0245b54ea4",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "铖昌科技 | 军工电子"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "3239772d6e829c3e8f981f2c93149be4ec0131dc693096f139d39bdeeb40fe0c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "天娱数科 | 广告营销"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "c57f8f52c53e7ec1267e999f0f338c44c2db96b067d06341acd741ef22fdd9b4",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "津药药业 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "2f2bdefe703170989bb81e87a43b1e83d837902cfa70c77c84dac927313d7b6c",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "长光华芯 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "a8462a863b5070410065500e2f67b05a7f1742d042479195c6fad0ad85c5b54a",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "万通发展 | 房地产开"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "3dd40ad7e0df6c2934622afb968b963a50cee5c5b386054b6cdde46f4ef5655b",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "先河环保 | 环保设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "778d74e6040e90f49bddc5ec8f41b86b999caebe9499cc155f38b79a3dbfd103",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "宿迁联盛 | 化学制品"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "898cce8c10a93b91ffbf4dc59dc833f1dd68c00074a3bc4313298376fa3fb367",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "晶华新材 | 化学制品"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "033b71a155ac43eff5b30c1b3dbb5e1934e5944027a94904bdc767febd448f4c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "中兴通讯 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "688240b031535971cf01cea1e1c8fc86aa6cc735d8ceb425ee79443d3a7246bf",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "埃斯顿 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1d58e22863914a1d3bdff4b56331bcd93180b101c79e41afea811ce71e84ac21",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "金安国纪 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "4d868774b80f6f85a3ac959ad7f39e5b0d631f64aa6277e78baaba566c8f09e9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "长飞光纤 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "fc735bcae18f74c43c68388a5c8064eb743ed3d8cd69dda67feb215e30b1669a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华工科技 | 自动化设"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "bae3e50e99c7da0bf5d7a1966b9daf47be2beb069739bacedf3360bd10aeda00",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "光迅科技 | 通信设备"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "85ce9058e15fe84f72f7a9a116fc547a99294c64bd7cdb8e4666588e59b5ceb9",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "麦格米特 | 其他电源"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "fd4a1c584b6352b56ef6d6210192c45582147dec17a51e13a90cc3ad181fc428",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "华天科技 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "ce86dc00a7dcb21a68c3ddac99fc1742af233123753b8d6a5b8bdc89ef57fb6f",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "兆易创新 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "c613b7d73ede49917ebea23ebeabce33c847a19b81bcd877f8cd8dc26e445dd7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.35,
+      "summary": "与固定 ETF 池没有明确、可验证的主题映射。",
+      "evidence": [
+        "恒尚节能 | 装修装饰"
+      ],
+      "risk_flags": [
+        "仅单日盘面",
+        "无固定池映射"
+      ]
+    },
+    {
+      "source_hash": "9befee7257fede6077c2c44a3dcb46461132d9487f99c09d1fbbc8eb2d9cefb5",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "美诺华 | 化学制药"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "ce5ee730bab405a057812bb255fd0791c1f89253f71d62137c9107d6e1dc78ee",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "昭衍新药 | 医疗服务"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "2c08085035097722a483ed431cd20f3b9705bdcc3530baef5b08aba78b66a150",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "东山精密 | 元件"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    },
+    {
+      "source_hash": "1b6126ffcefc801d3dc39eb06246b14fb8975a48938c58ca34e06b725a3a220d",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "当日跌停：对应主题存在局部负向盘面风险，但仅作单日证据。",
+      "evidence": [
+        "德明利 | 半导体"
+      ],
+      "risk_flags": [
+        "仅单日盘面"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+study_id: roc20_roc60_score_final_2026_07_19
+scope: >-
+  Only the cross-sectional momentum score may change. The ETF universe,
+  entry and exit gates, sentiment module, execution timing and costs remain
+  identical to the formal ye strategy.
+baseline: raw_w150
+candidates:
+  - id: raw_w100
+    family: raw_weight
+    roc60_weight: 1.00
+  - id: raw_w125
+    family: raw_weight
+    roc60_weight: 1.25
+  - id: raw_w175
+    family: raw_weight
+    roc60_weight: 1.75
+  - id: raw_w200
+    family: raw_weight
+    roc60_weight: 2.00
+  - id: horizon_normalized
+    family: horizon_normalized_log
+  - id: cross_section_rank
+    family: cross_section_rank
+  - id: volatility_adjusted
+    family: volatility_adjusted
+statistics:
+  seed: 20260719
+  bootstrap_draws: 20000
+  return_block_days: 20
+  multiple_testing: holm_bonferroni
+promotion_gate:
+  adjusted_p_max: 0.05
+  require_daily_return_superiority: true
+  require_failure_rate_superiority: true
+  max_drawdown_deterioration_points: 0.0
+  period_2021_2022_min_return: 0.0
+  period_2025_2026_min_etfwin_fraction: 0.6666666666666666
+  require_local_parameter_platform: true
+  local_cagr_tolerance_points: 2.0

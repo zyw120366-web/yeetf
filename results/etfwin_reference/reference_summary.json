@@ -1,0 +1,85 @@
+{
+  "name": "etfwin 策略",
+  "generated_through": "2026-07-20",
+  "metrics": {
+    "total_return": 2.8816715615428907,
+    "cagr": 0.1835226357324078,
+    "annual_volatility": 0.2781904512081921,
+    "sharpe": 0.7680371624962232,
+    "sortino": 1.2813477868448633,
+    "max_drawdown": -0.4998487710127286,
+    "calmar": 0.367156320821952,
+    "annual_turnover": 35.44950932240369,
+    "trade_count": 810.0,
+    "average_exposure": 0.8416320896839872,
+    "total_fees": 11847.131663076665,
+    "slippage_cost_estimate": 55964.47266351428,
+    "blocked_order_count": 0.0,
+    "limit_blocked_order_count": 0.0,
+    "eligibility_blocked_order_count": 0.0,
+    "liquidity_limited_order_count": 413.0
+  },
+  "periods": {
+    "全区间": {
+      "total_return": 2.8816715615428907,
+      "cagr": 0.1835226357324078,
+      "annual_volatility": 0.2781904512081921,
+      "sharpe": 0.7680371624962232,
+      "sortino": 1.2813477868448633,
+      "max_drawdown": -0.4998487710127286,
+      "calmar": 0.367156320821952,
+      "annual_turnover": 35.44950932240369,
+      "trade_count": 810.0,
+      "average_exposure": 0.8416320896839872,
+      "total_fees": 11847.131663076665,
+      "slippage_cost_estimate": 55964.47266351428,
+      "blocked_order_count": 0.0,
+      "limit_blocked_order_count": 0.0,
+      "eligibility_blocked_order_count": 0.0,
+      "liquidity_limited_order_count": 413.0
+    },
+    "2018—2020": {
+      "total_return": -0.30891874511802675,
+      "cagr": -0.13741310222724668,
+      "annual_volatility": 0.22491098320073247,
+      "sharpe": -0.5639756829203886,
+      "max_drawdown": -0.49966040984415416
+    },
+    "2021—2022": {
+      "total_return": 0.18676660565774128,
+      "cagr": 0.09009596966132527,
+      "annual_volatility": 0.28083837569792686,
+      "sharpe": 0.4571147307806669,
+      "max_drawdown": -0.27275202219036376
+    },
+    "2023—2024": {
+      "total_return": 0.29870298154393704,
+      "cagr": 0.14011804364472047,
+      "annual_volatility": 0.2757756486099062,
+      "sharpe": 0.630511958266846,
+      "max_drawdown": -0.3439449725282725
+    },
+    "2025—2026": {
+      "total_return": 2.6443033294213976,
+      "cagr": 1.3104956037346458,
+      "annual_volatility": 0.34483849194924937,
+      "sharpe": 2.7083522426933215,
+      "max_drawdown": -0.13873110904586605
+    }
+  },
+  "timing": {
+    "completed_round_trips": 153.0,
+    "median_entry_delay_days": 18.0,
+    "median_exit_delay_days": 0.0,
+    "median_peak_giveback": -0.03354289688848,
+    "median_move_capture_ratio": 0.6146070456149773,
+    "false_start_rate": 0.5947712418300654,
+    "premature_exit_rate": 0.48366013071895425,
+    "fixed_horizon_false_buy_rate": 0.6013071895424836,
+    "material_premature_exit_rate": 0.20915032679738563,
+    "failed_operation_rate": 0.7647058823529411
+  },
+  "status": "reference_only_not_live",
+  "source": "https://etfwin.com/etf-rotation/guide",
+  "note": "公开规则的本地量化代理；仅作同数据、同成本、同执行时点对照，不参与ye实盘信号。"
+}

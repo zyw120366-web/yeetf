@@ -1,0 +1,60 @@
+{
+  "card_type": "ye_live_run_card",
+  "strategy": {
+    "id": "YE-FORMAL-2026-07-19",
+    "name": "ye 策略",
+    "status": "frozen_for_live",
+    "rule_source": "config/ye_strategy.yaml",
+    "execution_source": "scripts/run_after_close.py",
+    "daily_mode": "收盘后生成、下一交易日开盘执行"
+  },
+  "signal_date": "2026-07-17",
+  "execute": "下一交易日开盘",
+  "created_at_utc": "2026-07-20T04:33:26.954827+00:00",
+  "decision": {
+    "current_symbol": null,
+    "target_symbol": null,
+    "actions": [
+      {
+        "side": "hold",
+        "symbol": null,
+        "target_weight": 0.0
+      }
+    ],
+    "cost": "唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径"
+  },
+  "cash_management": {
+    "enabled": true,
+    "product": "收盘宝",
+    "instruction": "收盘后仅对实际闲置现金执行；不改变上述ETF计划。",
+    "subscribe_window": "交易日15:00-15:30",
+    "amount_rule": "收盘可用现金大于1000元时，按1000元整数倍申报；保留无法整除的余额",
+    "fee_rate": 1e-05,
+    "annualized_yield": "下单时实时值；不得在实盘计划中写死或承诺收益",
+    "maturity": "下一交易日开盘前本金和利息回到股票账户可用资金",
+    "failure_action": "下单失败、收益率缺失、额度不足或到账异常时，保留现金；不得影响ETF卖出或买入计划"
+  },
+  "sentiment_review": {
+    "status": "complete",
+    "coverage": 1.0,
+    "reviewed_count": 269,
+    "input_count": 269
+  },
+  "release": {
+    "readiness": "READY",
+    "blocking_items": [],
+    "plan_is_not_fill": true
+  },
+  "audit": {
+    "run_manifest": "results/audit/2026-07-17_run_manifest.json",
+    "run_manifest_sha256": "410a2d2a3fb8809c4e86ca390ca68fc03aa050b33f06de7abe56909059bfcf0e",
+    "critical_file_count": 19,
+    "source_file_count": 20,
+    "price_file_count": 56
+  },
+  "execution_reconciliation": {
+    "status": "not_required",
+    "actual_fill_template": "results/live/2026-07-17_actual_fills.template.json",
+    "reconciliation_output": "results/audit/2026-07-17_execution_reconciliation.json"
+  }
+}

@@ -1,0 +1,3 @@
+# Preserve bytes exactly: run manifests hash source, data and generated artifacts.
+* -text
+*.html linguist-generated=true

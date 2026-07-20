@@ -1,0 +1,28 @@
+formal_strategy:
+  id: YE-FORMAL-2026-07-19
+  name: ye 策略
+  status: frozen_for_live
+  rule_source: config/ye_strategy.yaml
+  execution_source: scripts/run_after_close.py
+  daily_mode: 收盘后生成、下一交易日开盘执行
+change_control:
+  daily_execution_may_not_change:
+    - 买入卖出规则
+    - ETF池
+    - 成本
+    - 仓位规则
+    - 情绪审核放行条件
+  promotion_requirements:
+    - 独立研究脚本与正式入口物理隔离
+    - 明确研究假设、样本区间、对照规则和失败条件
+    - 样本外回测、回撤、交易数与统计检验全部通过
+    - 用户明确确认后才可修改唯一规则真源
+live_audit:
+  require_run_card: true
+  require_previous_execution_reconciliation: true
+  plan_is_not_fill: true
+  actual_fill_source: 用户或券商成交回单确认
+  account_state_path: results/live/account_state.json
+  account_state_rule: 实盘仓位只来自用户或券商确认；历史回测影子持仓不得代替
+  run_card_path: results/audit/YYYY-MM-DD_live_run_card.json
+  reconciliation_path: results/audit/YYYY-MM-DD_execution_reconciliation.json

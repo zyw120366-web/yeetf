@@ -1,0 +1,101 @@
+{
+  "strategy": "ye 策略",
+  "signal_date": "2026-07-20",
+  "execute": "下一交易日开盘",
+  "current_symbol": null,
+  "target_symbol": "512010.SH",
+  "backtest_shadow_target_symbol": "159985.SZ",
+  "account_state": {
+    "source": "用户在当前 Codex 对话明确确认",
+    "as_of": "2026-07-20_close",
+    "confirmation_status": "confirmed",
+    "first_live_day": true,
+    "total_equity": 12000.0,
+    "available_cash": 12000.0,
+    "positions": [],
+    "pending_orders": []
+  },
+  "decision_basis": {
+    "live_position_source": "results/live/account_state.json；不得使用回测持仓代替",
+    "eligible_candidates": [
+      {
+        "symbol": "512010.SH",
+        "name": "医药ETF易方达",
+        "rank": 2,
+        "momentum_score": 0.1743344620845178,
+        "selection_score": 0.1743344620845178,
+        "entry_path": "常规动量"
+      },
+      {
+        "symbol": "159647.SZ",
+        "name": "中药ETF鹏华",
+        "rank": 3,
+        "momentum_score": 0.1345272725943226,
+        "selection_score": 0.1345272725943226,
+        "entry_path": "常规动量"
+      },
+      {
+        "symbol": "159985.SZ",
+        "name": "豆粕ETF华夏",
+        "rank": 4,
+        "momentum_score": 0.1334047751782587,
+        "selection_score": 0.1334047751782587,
+        "entry_path": "常规动量"
+      }
+    ],
+    "selection_rule": "空仓时按正式路径选择分排序：常规/质量延伸使用动量分，新趋势使用ROC20+0.05×R²20；已有仓位未触发卖出条件时不因其他候选分数更高而换仓。",
+    "backtest_shadow_note": "回测影子持仓只用于绩效和一致性审计，不代表真实账户持仓，也不决定首次实盘买单。"
+  },
+  "actions": [
+    {
+      "side": "buy",
+      "symbol": "512010.SH",
+      "target_weight": 1.0
+    }
+  ],
+  "execution": {
+    "target_policy": "策略只产生 0% 或 100% 的目标仓位，不进行主观分批建仓、加仓、减仓或止盈。",
+    "order_sequence": "换仓时先卖旧仓，再买新仓；子订单只由流动性上限触发。",
+    "broker_fill_confirmation_required": true,
+    "confirmation_rule": "下一次收盘后运行前，必须以真实成交数量确认实际仓位和未完成订单；计划不得当作已成交。",
+    "orders": [
+      {
+        "side": "buy",
+        "symbol": "512010.SH",
+        "target_weight": 1.0,
+        "reference_capital": 12000.0,
+        "amount_median_20d": 773451616.0,
+        "max_participation_rate": 0.001,
+        "max_notional_per_open": 773451.616,
+        "estimated_opens_at_reference_capital": 1,
+        "instruction": "完整目标超过单日上限时，按同一目标拆为连续开盘子订单；不得把拆单视为新信号。",
+        "buy_estimate": {
+          "last_close": 0.3759999871253967,
+          "estimated_execution_price": 0.3764511871099472,
+          "estimated_quantity_at_last_close": 31800,
+          "estimated_notional": 11971.147750096321,
+          "estimated_commission": 5.0,
+          "quantity_rule": "下一交易日开盘按实际可用现金、实际开盘成交价、100份整数倍和最低佣金重新计算；估算数量不是预先成交。"
+        }
+      }
+    ]
+  },
+  "cost": "唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径",
+  "cash_management": {
+    "enabled": true,
+    "product": "收盘宝",
+    "instruction": "收盘后仅对实际闲置现金执行；不改变上述ETF计划。",
+    "subscribe_window": "交易日15:00-15:30",
+    "amount_rule": "收盘可用现金大于1000元时，按1000元整数倍申报；保留无法整除的余额",
+    "fee_rate": 1e-05,
+    "annualized_yield": "下单时实时值；不得在实盘计划中写死或承诺收益",
+    "maturity": "下一交易日开盘前本金和利息回到股票账户可用资金",
+    "failure_action": "下单失败、收益率缺失、额度不足或到账异常时，保留现金；不得影响ETF卖出或买入计划"
+  },
+  "ai_review": {
+    "reviewer": "codex_chat",
+    "input_count": 331,
+    "reviewed_count": 331,
+    "coverage": 1.0
+  }
+}

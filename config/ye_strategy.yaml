@@ -1,0 +1,130 @@
+name: ye 策略
+role: 唯一正式策略
+status: frozen_for_live
+frozen_on: '2026-07-18'
+
+execution:
+  signal_time: 每个交易日收盘后
+  trade_time: 下一交易日开盘
+  historical_fill_proxy: 下一交易日开盘价加固定滑点
+  ordinary_etf_one_way_cost: 0.0015
+  qdii_or_premium_sensitive_one_way_cost: 0.0030
+  minimum_commission: 5
+  cost_rule: 唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径
+
+cash_management:
+  enabled: true
+  product: 收盘宝
+  instrument: 1天期通用质押式回购
+  purpose: 仅管理ETF交易后闲置现金；不产生、不筛选、不覆盖任何ETF买卖信号
+  subscribe_window: 交易日15:00-15:30
+  maturity: 下一交易日开盘前本金和利息回到股票账户可用资金
+  amount_rule: 收盘可用现金大于1000元时，按1000元整数倍申报；保留无法整除的余额
+  minimum_order: 1000
+  order_lot: 1000
+  fee_rate: 0.00001
+  minimum_fee: 0.0
+  annualized_yield: 下单时实时值；不得在实盘计划中写死或承诺收益
+  historical_backtest_annual_rate: 0.015
+  historical_backtest_note: 过去几年平均年化的统一回测口径；按1000元整数倍和十万分之一费用模拟，不代表逐日实际成交收益
+  interest_count: Actual/365，周末和节假日按实际占款天数计息
+  safeguards:
+    - 仅在券商已启用收盘宝、当日可下单且显示下一交易日开盘前可用时执行
+    - 下单失败、收益率缺失、额度不足或到账异常时，保留现金；不得影响ETF卖出或买入计划
+    - 每日运行卡必须记录是否启用、下单时年化、预计申报规则和任何异常
+  risk_notice: 低风险不等于无风险；须持续满足券商适当性要求（截图显示C3及以上）
+
+rules:
+  roc_short_days: 20
+  roc_medium_days: 60
+  roc_short_weight: 1.0
+  roc_medium_weight: 1.5
+  entry_rank_limit: 5
+  holdings_num: 1
+  ma_days: 120
+  max_entry_ma_bias: 0.09
+  rank_change_short_days: 5
+  rank_change_long_days: 20
+  exit_confirmation_days: 1
+  ma_exit_confirmation_days: 1
+  roc_exit_confirmation_days: 1
+  require_short_roc_positive: true
+  require_medium_roc_positive: true
+  require_above_ma: true
+  exit_on_ma_break: true
+  exit_on_short_roc_negative: true
+  exit_on_dual_rank_decline: true
+  macd_soft_exit_confirmation: false
+  listing_warmup_days: 120
+  liquidity_lookback_days: 20
+  minimum_entry_amount: 20000000
+  defensive_etf: null
+
+enhanced_selection:
+  fixed_pool_size: 45
+  price_only_for_historical_dates_without_sentiment:
+    entry_rank_limit: 3
+    category_roc20_positive_breadth_min: 0.75
+    soft_exit_protection:
+      rank_limit: 3
+      roc60_min: 0.08
+      require_above_ma120: true
+    note: 仅用于历史缺失期复现；实盘情绪审核不完整时不开新仓
+  sentiment_available:
+    source: a-stock-data盘面数据 + 财联社快讯，经AI逐条结构化审核
+    ai_review_required: true
+    ai_review_mode: current Codex chat reviews every collected row; no external API key
+    incomplete_review_action: 不开新仓；既有仓位的价格卖出规则继续执行
+    weak_edge_filter:
+      applies_when: 基础排名4至5且ROC20低于2%
+      confirmation: 匹配题材强势股至少3只、数量加速不低于0、正DDE占比至少50%
+    emerging_trend:
+      memory_days: 3
+      maximum_base_rank: 15
+      roc20_min: 0.03
+      roc60_range: [-0.08, 0.0]
+      ma120_bias_range: [-0.03, 0.09]
+      r2_20_min: 0.70
+      efficiency20_min: 0.20
+      matched_hot_stocks_min: 3
+      hot_score_min: 0.45
+      count_acceleration_min: 0.25
+      positive_dde_share_min: 0.50
+      ranking_score: ROC20 + 0.05 × R²20
+    quality_extension:
+      ma120_bias_range: [0.09, 0.12]
+      base_rank_limit: 5
+      r2_20_min: 0.75
+      efficiency20_min: 0.40
+      roc5_min: -0.01
+      matched_hot_stocks_min: 2
+      hot_score_min: 0.45
+      count_acceleration_min: 0.0
+    hot_exit_protection:
+      hot_score_min: 0.60
+      matched_hot_stocks_min: 3
+      positive_dde_share_min: 0.50
+      memory_days: 2
+      protects: ROC20转负与排名衰退两类软退出
+      never_protects: MA120破位
+  reentry_cooldown_days: 5
+
+plain_language:
+  score: ROC20 × 1.0 + ROC60 × 1.5；趋势质量与情绪只作门槛或例外，不替代核心动量评分
+  buy: 固定45只池中，通常要求排名前5、ROC20和ROC60均为正、位于MA120上方且乖离不超过9%，再买合格标的中得分最高的1只
+  hold: 最多持有1只；没有合格标的时持有现金
+  sell: 跌破MA120、ROC20转负、或当前排名同时差于5日前和20日前，任一触发即退出；只有已审核热点可短暂保护软退出，MA120破位不延迟
+  news: 所有已采集盘面与新闻逐条由AI审核；漏审、重复或来源失败均视为情绪数据不可用，禁止部分数据进入买入信号
+
+validation:
+  backtest_start: '2018-07-02'
+  backtest_end: '2026-07-20'
+  total_return: 5.6033282055
+  cagr: 0.2642791940
+  max_drawdown: -0.2218193578
+  failed_operation_rate: 0.6875
+  return_2021_2022: 0.2055634199
+  return_2025_2026: 2.9342760502
+  live_use_allowed: true
+  live_condition: 参数冻结；每日数据、AI审核覆盖率、次日开盘执行与固定成本记录全部通过检查
+  parameter_note: 规则已冻结；实盘中不得根据单笔盈亏临时改阈值

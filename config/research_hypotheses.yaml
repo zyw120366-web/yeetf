@@ -1,0 +1,27 @@
+registry:
+  purpose: 记录正式策略之外的研究假设；本文件不产生信号、不改变订单。
+  promotion_target: config/ye_strategy.yaml
+  current_formal_strategy_id: YE-FORMAL-2026-07-19
+hypotheses:
+  - id: H-2026-07-19-01
+    title: 多主题并持能否提升资金利用率
+    status: queued
+    boundary: 独立研究，不接入每日执行
+    acceptance: 样本外年化、回撤、独立交易数和校正后显著性均优于正式基准
+  - id: H-2026-07-19-02
+    title: 强势主题的赢家延伸能否改善收益回撤比
+    status: queued
+    boundary: 独立研究，不接入每日执行
+    acceptance: 不得牺牲弱环境保护；必须通过冻结样本外检验
+  - id: H-2026-07-19-03
+    title: 主题内量价质量是否提供稳定增量
+    status: rejected_current_sample
+    boundary: 已观察到不稳定性；不得加入正式买入条件
+    acceptance: 仅允许在新的独立样本重新立项
+  - id: H-2026-07-20-01
+    title: 收盘宝闲置现金管理能否提高组合净值
+    status: promoted_execution_overlay
+    boundary: 仅管理正式 ye 的闲置现金；不改变ETF信号、池子、ETF成本或订单目标
+    verified_terms: 收盘后15:00-15:30下单，1天期通用回购，下一交易日开盘前本息可用，1000元整数倍，手续费十万分之一；年化以实时下单值为准
+    result: 1.5%正式回测口径（1000元整数倍、十万分之一费用）显示累计收益+524.93%→+553.29%、年化25.59%→26.29%、最大回撤-22.63%→-22.18%；不将2024平均1.832%外推为全历史真实收益
+    acceptance: 已按用户确认升格为独立现金执行层；每日必须记录实际年化和执行异常，产品不可用即保留现金
