@@ -4,8 +4,8 @@
   "confirmation_status": "confirmed",
   "source": "用户在当前 Codex 对话明确确认",
   "first_live_day": false,
-  "total_equity": 12026.2,
-  "available_cash": 2175.0,
+  "total_equity": 9851.2,
+  "available_cash": 0.0,
   "positions": [
     {
       "symbol": "512010.SH",
@@ -19,5 +19,5 @@
   ],
   "pending_orders": [],
   "last_exit_dates": {},
-  "note": "用户确认2026-07-21以0.375成本买入26200股512010.SH；按成本金额9825元推算剩余现金2175元，今日收盘价0.376。历史回测模型持仓不得作为实盘持仓。"
+  "note": "用户更正并确认：2026-07-21以0.375成本买入26200股512010.SH，账户资金已全部投入，可用现金为0元；今日收盘价0.376，收盘总权益按持仓市值计为9851.20元。历史回测模型持仓不得作为实盘持仓。"
 }

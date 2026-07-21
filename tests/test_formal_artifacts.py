@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import html
 import json
 import importlib.util
 from pathlib import Path
+import re
 
 import pytest
 import yaml
@@ -74,3 +76,17 @@ def test_backtest_html_exposes_etf_dashboard_controls() -> None:
     )
     for marker in ("全池 ETF 观察台", "近3个月", "近1年", "按策略排名", "etfTrendChart"):
         assert marker in backtest
+
+
+def test_daily_html_opens_with_plain_language_overview() -> None:
+    script = ROOT / "dashboard" / "scripts" / "build_ye_strategy_html.py"
+    spec = importlib.util.spec_from_file_location("build_ye_strategy_html_daily", script)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    daily = module.build_daily_page()
+    match = re.search(r'<section class="section" id="dailyOverview">(.*?)</section>', daily, re.S)
+    assert match
+    overview = html.unescape(re.sub(r"<[^>]+>", "", match.group(1)))
+    assert "今日决策路径综述" in overview
+    assert len(re.sub(r"\s+", "", overview)) >= 500

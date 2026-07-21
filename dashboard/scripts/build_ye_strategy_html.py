@@ -459,18 +459,65 @@ def build_daily_page() -> str:
     strongest = max(theme_rows, key=lambda item: item[1] - item[2], default=("无", 0, 0))
     riskiest = max(theme_rows, key=lambda item: item[2] - item[1], default=("无", 0, 0))
     positions = [item for item in account.get("positions", []) if as_float(item.get("quantity")) > 0]
-    account_position = (
+    account_position_plain = (
         "空仓"
         if not positions
-        else f"持有 {html_lib.escape(str(positions[0].get('symbol')))} · {int(as_float(positions[0].get('quantity'))):,} 股"
+        else f"持有 {positions[0].get('symbol')} · {int(as_float(positions[0].get('quantity'))):,} 股"
     )
+    account_position = html_lib.escape(account_position_plain)
     target_weight = "100%" if target_symbol else "0%"
     order_text = (
         f"收盘估算约 {int(as_float(buy_estimate.get('estimated_quantity_at_last_close'))):,} 份；开盘按实际价格、可用现金和100份整数倍重算。"
         if buy_estimate else "本次没有新增买单。"
     )
     confirmation_label = "买卖计划待成交确认" if orders else "无买卖订单 · 无需成交确认"
+    current_symbol = plan.get("current_symbol")
+    held_match = rankings[rankings["symbol"].eq(current_symbol)] if current_symbol else pd.DataFrame()
+    if not held_match.empty:
+        held_row = held_match.iloc[-1]
+        held_exit_checks = (
+            f"收盘价{'仍在MA120上方' if as_bool(held_row['above_ma120']) else '已经跌到MA120下方'}，"
+            f"ROC20为{pct(as_float(held_row['roc20']))}，"
+            f"5日与20日排名{'没有同时恶化' if not as_bool(held_row['dual_rank_decline']) else '已经同时恶化'}"
+        )
+    else:
+        held_exit_checks = "当前没有旧仓需要检查"
+    if not target_match.empty:
+        target_row = target_match.iloc[-1]
+        target_snapshot = (
+            f"{target_name}在全池排第{int(as_float(target_row['rank']))}，正式选择分为"
+            f"{pct(as_float(target_row.get(score_column, target_row['momentum_score'])))}，"
+            f"ROC20为{pct(as_float(target_row['roc20']))}、ROC60为{pct(as_float(target_row['roc60']))}，"
+            f"MA120乖离为{pct(as_float(target_row['ma120_bias']))}，通过{path_name(target_row)}路径"
+        )
+    else:
+        target_snapshot = "今天没有ETF通过全部条件，策略目标因此是现金"
+    if current_symbol and current_symbol == target_symbol:
+        decision_story = (
+            f"账户已经持有{target_name}，而上述卖出条件均未触发，所以策略继续持有原仓。"
+            "这里不会因为其他ETF短期排名更高就主动换仓，也不会为了凑满流程重复买入。"
+        )
+    elif not current_symbol and target_symbol:
+        decision_story = f"账户原本空仓，因此从最终合格候选中按正式选择分选出{target_name}作为唯一目标。"
+    elif current_symbol and target_symbol:
+        decision_story = f"旧仓已经触发退出，卖出后再按正式选择分切换到{target_name}，先卖后买。"
+    elif current_symbol:
+        decision_story = "旧仓已经触发退出，但今天没有新的合格候选，因此卖出后持有现金。"
+    else:
+        decision_story = "账户原本空仓，今天又没有新的合格候选，因此继续持有现金。"
+    overview_paragraphs = [
+        f"先说结论：这份日报是用{date}收盘后的冻结数据，为下一交易日开盘做决定。当前实盘账户为{account_position_plain}，可用现金{as_float(account.get('available_cash')):,.2f}元，收盘总权益{as_float(account.get('total_equity')):,.2f}元。今天算出的明日动作是“{action}{target_name}”，上线检查为{status}。{decision_story}因此，读完这一段就可以先把最重要的事记住：明日只执行已经写明的动作，不根据盘中感觉临时追涨、加仓或更换标的。",
+        f"决策的第一步不是看谁排第一，而是先读取用户确认的真实账户。策略把券商实际成交当作唯一账户真相，不会拿历史回测里的影子仓位代替实盘。账户有旧仓时，必须先检查三类卖出条件：是否跌破MA120，ROC20是否转负，以及当前排名是否同时差于5日前和20日前。今天对现有持仓的检查结果是：{held_exit_checks}。这一步决定旧仓是否还能继续持有；只要没有触发退出，就不会因为排行榜出现另一个高分ETF而换仓。反过来，如果任何退出条件成立，价格规则优先，资讯或热点也不能替硬退出开绿灯。",
+        f"第二步才是全池筛选。固定母池中的{len(rankings)}只ETF全部统一计算，没有临时添加热门品种，也没有因为主观偏好删掉弱势品种。其中{pool_count}只通过“上市至少120个交易日、最近20日成交额中位数不低于2,000万元”的新开仓资格。之后三条路径并行判断，而不是一层一层放宽：常规动量路径通过{normal_count}只，新趋势例外通过{emerging_count}只，9%—12%质量延伸通过{extension_count}只；三条路径取并集后，共有{len(candidates)}只最终合格。所谓最终合格只是进入候选集合，并不代表这些ETF都要买，策略始终只允许持有一只ETF或持有现金。",
+        f"第三步看最终目标本身。{target_snapshot}。这些数字分别回答了短中期涨势是否同向、价格是否站在长期均线上方，以及价格离长期均线是否已经过远。排名高本身不等于可以买：双ROC不为正、跌破MA120、乖离超过对应上限，或指定的趋势质量与热点确认不完整，都会被挡在候选集合之外。今天的目标是按冻结规则算出来的结果，不是看到某条新闻后临时指定，也不是单看一日涨跌或ETF名称作出的主观判断。",
+        f"第四步是资讯审核。今天共冻结并逐条审核{total}条资讯，完成{reviewed}条，覆盖率为{(reviewed / total if total else 0):.0%}；只有达到100%，新开仓硬门才算通过。目标所属的{target_category}主题共有{target_theme['positive']}条正向、{target_theme['negative']}条负向记录。资讯在这套策略里的职责很有限：它用于确认排名4—5的弱边缘、新趋势例外、9%—12%质量延伸以及软退出保护，不能凭新闻创造一个价格趋势，也不会用一个笼统的市场情绪标签推翻全部常规信号。今天所有资讯完成审核，数据完整性没有阻断决策；正负信息同时保留披露，不把负面消息藏掉。",
+        f"最后把筛选结果与账户状态合并，才得到真正可执行的明日计划：{action}{target_name}，目标仓位{target_weight}。{order_text}当前运行状态为{status}，表示价格数据、资讯覆盖、账户确认、前序成交对账和正式产物检查已经按规则通过；如果任何一项变成BLOCKED，就不得新增仓位。今天的结论看起来简单，但它是依次经过真实账户确认、旧仓卖出检查、45只ETF统一计算、三条入场路径、全部资讯审核和执行约束后得到的，不是“排行榜第一就买”。后面的表格保留每一层数字和每只ETF的主要淘汰原因，方便逐项复核这段白话综述。",
+    ]
+    if len("".join(overview_paragraphs)) < 500:
+        raise RuntimeError("daily plain-language overview must contain at least 500 characters")
+    overview_html = "".join(f"<p>{html_lib.escape(paragraph)}</p>" for paragraph in overview_paragraphs)
     body = f'''
+<section class="section" id="dailyOverview"><article class="card strategy-lead daily-overview"><span class="label">先看这里 · 500字以上白话版</span><h2>今日决策路径综述</h2>{overview_html}</article></section>
 <section class="section"><div class="card kpis"><div class="kpi"><span class="label">实盘账户</span><strong class="value">{as_float(account.get('total_equity')):,.0f} 元</strong><p>{account_position} · 已确认</p></div><div class="kpi"><span class="label">次日动作</span><strong class="value">{html_lib.escape(str(action))}</strong></div><div class="kpi"><span class="label">目标</span><strong class="value">{html_lib.escape(str(target_name))} · {target_weight}</strong></div><div class="kpi"><span class="label">放行</span><strong class="value">{html_lib.escape(str(status))}</strong></div></div></section>
 <section class="section"><div class="section-title"><h2>次日开盘计划</h2><span>{confirmation_label}</span></div><article class="card plan"><div class="plan-grid"><div><span class="label">执行结论</span><br><strong>{html_lib.escape(str(action))} {html_lib.escape(str(target_name))}</strong><p>目标仓位 {target_weight}。{html_lib.escape(order_text)}</p></div><div><span class="label">决策所用账户</span><br><strong>{as_float(account.get('available_cash')):,.2f} 元可用现金 · {account_position}</strong><p>仅使用用户确认的实盘账户。历史回测仓位不参与本次实盘选单。</p></div></div></article></section>
 <section class="section"><div class="section-title"><h2>今日筛选漏斗</h2><span>每个数字都来自当日正式结果</span></div><div class="filter-strip"><article class="card filter-stage"><small>固定母池</small><strong>{len(rankings)} 只</strong><p>45只ETF统一计算，不临时增删。</p></article><article class="card filter-stage"><small>上市期与流动性</small><strong>{pool_count} 只</strong><p>上市≥120日，20日成交额中位数≥2,000万元。</p></article><article class="card filter-stage"><small>三条路径取并集</small><strong>{len(candidates)} 只</strong><p>常规、新趋势、质量延伸任一路径通过。</p></article><article class="card filter-stage"><small>账户状态决策</small><strong>{1 if target_symbol else 0} 只</strong><p>{'空仓后按正式选择分取第一名。' if not positions else '旧仓未退出则继续持有；退出后才选新目标。'}</p></article></div></section>
