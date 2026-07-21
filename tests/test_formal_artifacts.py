@@ -89,4 +89,5 @@ def test_daily_html_opens_with_plain_language_overview() -> None:
     assert match
     overview = html.unescape(re.sub(r"<[^>]+>", "", match.group(1)))
     assert "今日决策路径综述" in overview
-    assert len(re.sub(r"\s+", "", overview)) >= 500
+    overview_length = len(re.sub(r"\s+", "", overview))
+    assert 500 <= overview_length <= 800

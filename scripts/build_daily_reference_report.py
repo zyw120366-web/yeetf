@@ -151,10 +151,7 @@ def main() -> None:
     else:
         target_snapshot = "今天没有ETF通过全部条件，策略目标因此是现金"
     if current_symbol and current_symbol == target_symbol:
-        decision_story = (
-            f"账户已经持有{target_name}，而上述卖出条件均未触发，所以策略继续持有原仓。"
-            "这里不会因为其他ETF短期排名更高就主动换仓，也不会为了凑满流程重复买入。"
-        )
+        decision_story = f"现有{target_name}仓位未触发卖出，继续持有；不因其他ETF排名更高而换仓。"
     elif not current_symbol and target_symbol:
         decision_story = f"账户原本空仓，因此从最终合格候选中按正式选择分选出{target_name}作为唯一目标。"
     elif current_symbol and target_symbol:
@@ -169,12 +166,11 @@ def main() -> None:
     )
     target_weight = "100%" if target_symbol else "0%"
     overview_paragraphs = [
-        f"先说结论：这份日报是用{args.date}收盘后的冻结数据，为下一交易日开盘做决定。当前实盘账户为{account_position}，可用现金{account['available_cash']:,.2f}元，收盘总权益{account['total_equity']:,.2f}元。今天算出的明日动作是“{actions}”，上线检查为{readiness['status']}。{decision_story}因此，读完这一段就可以先把最重要的事记住：明日只执行已经写明的动作，不根据盘中感觉临时追涨、加仓或更换标的。",
-        f"决策的第一步不是看谁排第一，而是先读取用户确认的真实账户。策略把券商实际成交当作唯一账户真相，不会拿历史回测里的影子仓位代替实盘。账户有旧仓时，必须先检查三类卖出条件：是否跌破MA120，ROC20是否转负，以及当前排名是否同时差于5日前和20日前。今天对现有持仓的检查结果是：{held_exit_checks}。这一步决定旧仓是否还能继续持有；只要没有触发退出，就不会因为排行榜出现另一个高分ETF而换仓。反过来，如果任何退出条件成立，价格规则优先，资讯或热点也不能替硬退出开绿灯。",
-        f"第二步才是全池筛选。固定母池中的{len(ranking)}只ETF全部统一计算，没有临时添加热门品种，也没有因为主观偏好删掉弱势品种。其中{int(pool_eligible.sum())}只通过“上市至少120个交易日、最近20日成交额中位数不低于2,000万元”的新开仓资格。之后三条路径并行判断，而不是一层一层放宽：常规动量路径通过{normal_count}只，新趋势例外通过{emerging_count}只，9%—12%质量延伸通过{extension_count}只；三条路径取并集后，共有{len(candidates)}只最终合格。所谓最终合格只是进入候选集合，并不代表这些ETF都要买，策略始终只允许持有一只ETF或持有现金。",
-        f"第三步看最终目标本身。{target_snapshot}。这些数字分别回答了短中期涨势是否同向、价格是否站在长期均线上方，以及价格离长期均线是否已经过远。排名高本身不等于可以买：双ROC不为正、跌破MA120、乖离超过对应上限，或指定的趋势质量与热点确认不完整，都会被挡在候选集合之外。今天的目标是按冻结规则算出来的结果，不是看到某条新闻后临时指定，也不是单看一日涨跌或ETF名称作出的主观判断。",
-        f"第四步是资讯审核。今天共冻结并逐条审核{review['input_count']}条资讯，完成{review['reviewed_count']}条，覆盖率为{review['coverage']:.0%}；只有达到100%，新开仓硬门才算通过。目标所属的{target_category}主题共有{target_positive}条正向、{target_negative}条负向记录。资讯在这套策略里的职责很有限：它用于确认排名4—5的弱边缘、新趋势例外、9%—12%质量延伸以及软退出保护，不能凭新闻创造一个价格趋势，也不会用一个笼统的市场情绪标签推翻全部常规信号。今天所有资讯完成审核，数据完整性没有阻断决策；正负信息同时保留披露，不把负面消息藏掉。",
-        f"最后把筛选结果与账户状态合并，才得到真正可执行的明日计划：{actions}，目标仓位{target_weight}。{order_summary}当前运行状态为{readiness['status']}，表示价格数据、资讯覆盖、账户确认、前序成交对账和正式产物检查已经按规则通过；如果任何一项变成BLOCKED，就不得新增仓位。今天的结论看起来简单，但它是依次经过真实账户确认、旧仓卖出检查、45只ETF统一计算、三条入场路径、全部资讯审核和执行约束后得到的，不是“排行榜第一就买”。后面的表格保留每一层数字和每只ETF的主要淘汰原因，方便逐项复核这段白话综述。",
+        f"结论：本次使用{args.date}收盘数据决定下一交易日动作。实盘账户{account_position}，可用现金{account['available_cash']:,.2f}元，收盘总权益{account['total_equity']:,.2f}元。明日计划为“{actions}”，目标仓位{target_weight}；{decision_story}",
+        f"第一步先查旧仓，不先追排行榜。卖出只看三项：跌破MA120、ROC20转负、当前排名同时差于5日前和20日前。今日检查为：{held_exit_checks}。因此旧仓处理结论明确；价格退出一旦触发，新闻和热点不能推翻。",
+        f"第二步筛全池。固定{len(ranking)}只ETF全部计算，{int(pool_eligible.sum())}只通过上市满120个交易日和20日成交额中位数不低于2,000万元的资格门槛。三条路径并行：常规动量{normal_count}只、新趋势{emerging_count}只、9%—12%质量延伸{extension_count}只，取并集后最终合格{len(candidates)}只。合格只代表进入候选，不代表同时买入。",
+        f"第三步核对目标：{target_snapshot}。排名只是起点，还必须同时满足双ROC、MA120位置、乖离上限，以及对应路径的趋势质量或热点条件；任何关键门槛失败都不能入选。",
+        f"第四步审核资讯：{review['reviewed_count']}/{review['input_count']}条已逐条完成，覆盖率{review['coverage']:.0%}；{target_category}主题为{target_positive}条正向、{target_negative}条负向。资讯只确认指定例外和软退出保护，不能凭新闻制造买点，也不能覆盖MA120硬退出。最终状态{readiness['status']}，{order_summary}明日按计划执行，不临时追涨、加仓或改标的。",
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
