@@ -115,6 +115,22 @@ def main() -> None:
     normal_count = int((confirmed_normal & pool_eligible).sum())
     emerging_count = int((ranking["emerging_entry"].astype(bool) & pool_eligible).sum())
     extension_count = int((ranking["quality_extension"].astype(bool) & pool_eligible).sum())
+    positions = [item for item in account.get("positions", []) if float(item.get("quantity", 0)) > 0]
+    account_position = (
+        "当前空仓"
+        if not positions
+        else f"当前持有 {positions[0]['symbol']} {int(float(positions[0]['quantity'])):,} 股"
+    )
+    if current_symbol and current_symbol == target_symbol:
+        account_decision = f"现有持仓 {current_symbol} 未触发卖出条件，继续持有；不因其他标的排名变化而换仓。"
+    elif not current_symbol:
+        account_decision = f"当前空仓，按正式路径选择分取第一名，得到唯一目标 {target_name}（{target_symbol or '现金'}）。"
+    else:
+        account_decision = f"现有持仓触发退出后，按正式路径选择分确定目标 {target_name}（{target_symbol or '现金'}）。"
+    strongest = max(category_rows, key=lambda row: row[1] - row[2], default=("无", 0, 0))
+    most_negative = max(category_rows, key=lambda row: row[2], default=("无", 0, 0))
+    target_category = str(target_row.iloc[-1]["category"]) if not target_row.empty else "无"
+    target_positive, target_negative = category_lookup.get(target_category, (0, 0))
     lines = [
         f"# ye 策略日报｜{args.date}",
         "",
@@ -123,9 +139,9 @@ def main() -> None:
         "## 一、实盘结论",
         "",
         f"- 信号日：{args.date} 收盘后；执行：下一交易日开盘。",
-        f"- 实盘账户真相：用户确认资金 {account['total_equity']:,.2f} 元、可用现金 {account['available_cash']:,.2f} 元、当前空仓；状态日期 {account['as_of']}。",
+        f"- 实盘账户真相：用户确认资金 {account['total_equity']:,.2f} 元、可用现金 {account['available_cash']:,.2f} 元、{account_position}；状态日期 {account['as_of']}。",
         f"- 唯一目标：{target_name}（{target_symbol or '现金'}）{('，目标仓位 100%' if target_symbol else '，目标仓位 0%')}。",
-        f"- 订单动作：{actions}；计划待下一交易日真实成交确认，不能提前记为持仓。",
+        (f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。" if execution_orders else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"),
         f"- 固定成本：{plan['cost']}。",
         "",
         "## 二、今天怎样从 45 只 ETF 得到唯一目标",
@@ -134,7 +150,7 @@ def main() -> None:
         f"2. **新开仓资格**：{int(pool_eligible.sum())}/45只通过上市≥120日、20日成交额中位数≥2,000万元。",
         f"3. **三条路径并行**：常规动量 {normal_count} 只、新趋势例外 {emerging_count} 只、9%—12%质量延伸 {extension_count} 只。",
         f"4. **路径取并集**：共有 {len(candidates)} 只最终合格。",
-        f"5. **账户状态决策**：当前空仓，按正式路径选择分取第一名，得到唯一目标 {target_name}（{target_symbol}）。",
+        f"5. **账户状态决策**：{account_decision}",
         "",
         "| 最终顺序 | ETF | 全池排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
         "|---:|---|---:|---:|---:|---:|---:|---|---|",
@@ -147,9 +163,9 @@ def main() -> None:
         "",
         f"- 审核覆盖：{review['reviewed_count']}/{review['input_count']} = {review['coverage']:.0%}；相关记录：{review['relevant_count']} 条。",
         "- 数据来源：" + "；".join(f"{name} {count} 条" for name, count in source_counts(review["items"])),
-        "- **主要正向**：基建公用/电力 35 正、7 负；煤炭及部分资源方向带动周期资源，但周期整体为 24 正、38 负，内部明显分化。",
-        "- **主要负向**：科技数字 22 正、75 负，硬件、半导体、通信跌停扩散最多，属于当天最突出的风险簇。",
-        f"- **目标医药主题**：医药医疗共 {category_lookup.get('医药医疗', (0, 0))[0]} 正、{category_lookup.get('医药医疗', (0, 0))[1]} 负；目标走常规动量路径，不依赖热点例外放行。" if target_sentiment is not None else "- 目标主题没有可用的情绪映射，按未知处理。",
+        f"- **主要正向**：{strongest[0]}共 {strongest[1]} 正、{strongest[2]} 负，是当日净正向记录最集中的主题。",
+        f"- **风险与分歧**：{most_negative[0]}出现 {most_negative[2]} 条负向记录；需与同主题正向记录及价格趋势合并看待。",
+        f"- **目标{target_category}主题**：共 {target_positive} 正、{target_negative} 负；目标走常规动量路径，不依赖热点例外放行。" if target_sentiment is not None else "- 目标主题没有可用的情绪映射，按未知处理。",
         "- 结论：审核完整性硬门已通过；当天没有候选依赖新趋势或质量延伸例外。正式规则没有统一负面阈值去否决所有常规买点。",
         "",
         "| 主题 | 正向记录 | 负向记录 |",

@@ -459,15 +459,20 @@ def build_daily_page() -> str:
     strongest = max(theme_rows, key=lambda item: item[1] - item[2], default=("无", 0, 0))
     riskiest = max(theme_rows, key=lambda item: item[2] - item[1], default=("无", 0, 0))
     positions = [item for item in account.get("positions", []) if as_float(item.get("quantity")) > 0]
-    account_position = "空仓" if not positions else f"持有 {html_lib.escape(str(positions[0].get('symbol')))}"
+    account_position = (
+        "空仓"
+        if not positions
+        else f"持有 {html_lib.escape(str(positions[0].get('symbol')))} · {int(as_float(positions[0].get('quantity'))):,} 股"
+    )
     target_weight = "100%" if target_symbol else "0%"
     order_text = (
         f"收盘估算约 {int(as_float(buy_estimate.get('estimated_quantity_at_last_close'))):,} 份；开盘按实际价格、可用现金和100份整数倍重算。"
         if buy_estimate else "本次没有新增买单。"
     )
+    confirmation_label = "买卖计划待成交确认" if orders else "无买卖订单 · 无需成交确认"
     body = f'''
 <section class="section"><div class="card kpis"><div class="kpi"><span class="label">实盘账户</span><strong class="value">{as_float(account.get('total_equity')):,.0f} 元</strong><p>{account_position} · 已确认</p></div><div class="kpi"><span class="label">次日动作</span><strong class="value">{html_lib.escape(str(action))}</strong></div><div class="kpi"><span class="label">目标</span><strong class="value">{html_lib.escape(str(target_name))} · {target_weight}</strong></div><div class="kpi"><span class="label">放行</span><strong class="value">{html_lib.escape(str(status))}</strong></div></div></section>
-<section class="section"><div class="section-title"><h2>次日开盘计划</h2><span>计划待真实成交确认</span></div><article class="card plan"><div class="plan-grid"><div><span class="label">执行结论</span><br><strong>{html_lib.escape(str(action))} {html_lib.escape(str(target_name))}</strong><p>目标仓位 {target_weight}。{html_lib.escape(order_text)}</p></div><div><span class="label">决策所用账户</span><br><strong>{as_float(account.get('available_cash')):,.2f} 元可用现金 · {account_position}</strong><p>仅使用用户确认的实盘账户。历史回测仓位不参与本次实盘选单。</p></div></div></article></section>
+<section class="section"><div class="section-title"><h2>次日开盘计划</h2><span>{confirmation_label}</span></div><article class="card plan"><div class="plan-grid"><div><span class="label">执行结论</span><br><strong>{html_lib.escape(str(action))} {html_lib.escape(str(target_name))}</strong><p>目标仓位 {target_weight}。{html_lib.escape(order_text)}</p></div><div><span class="label">决策所用账户</span><br><strong>{as_float(account.get('available_cash')):,.2f} 元可用现金 · {account_position}</strong><p>仅使用用户确认的实盘账户。历史回测仓位不参与本次实盘选单。</p></div></div></article></section>
 <section class="section"><div class="section-title"><h2>今日筛选漏斗</h2><span>每个数字都来自当日正式结果</span></div><div class="filter-strip"><article class="card filter-stage"><small>固定母池</small><strong>{len(rankings)} 只</strong><p>45只ETF统一计算，不临时增删。</p></article><article class="card filter-stage"><small>上市期与流动性</small><strong>{pool_count} 只</strong><p>上市≥120日，20日成交额中位数≥2,000万元。</p></article><article class="card filter-stage"><small>三条路径取并集</small><strong>{len(candidates)} 只</strong><p>常规、新趋势、质量延伸任一路径通过。</p></article><article class="card filter-stage"><small>账户状态决策</small><strong>{1 if target_symbol else 0} 只</strong><p>{'空仓后按正式选择分取第一名。' if not positions else '旧仓未退出则继续持有；退出后才选新目标。'}</p></article></div></section>
 <section class="section"><div class="section-title"><h2>三条入场路径的当日结果</h2><span>三条路径并行，不是依次放宽</span></div><div class="path-grid"><article class="card path-card"><span class="count">{normal_count}</span><span class="label">路径 A</span><h3>常规动量</h3><p>前5、双ROC为正、MA120上方、乖离≤9%；排名4—5且ROC20&lt;2%时再做热点确认。今日需弱边缘确认 {weak_edge_count} 只。</p></article><article class="card path-card"><span class="count">{emerging_count}</span><span class="label">路径 B</span><h3>新趋势例外</h3><p>排名≤15、ROC20≥3%、ROC60为-8%至0%，并通过R²、效率与热点门槛；记忆3日。</p></article><article class="card path-card"><span class="count">{extension_count}</span><span class="label">路径 C</span><h3>9%—12%质量延伸</h3><p>仅处理乖离略高但趋势质量很强的前5候选；R²、效率、ROC5和热点必须同时通过。</p></article></div></section>
 <section class="section"><div class="section-title"><h2>最终候选与唯一目标</h2><span>按正式路径选择分排序；最终通过不等于同时买入</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>顺序</th><th>ETF</th><th>全池排名</th><th>选择分</th><th>通过路径</th><th>账户处理</th></tr></thead><tbody>{candidate_rows}</tbody></table></div></section>

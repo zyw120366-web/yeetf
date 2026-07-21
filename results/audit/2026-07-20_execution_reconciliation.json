@@ -1,0 +1,26 @@
+{
+  "signal_date": "2026-07-20",
+  "status": "confirmed",
+  "expected_orders": [
+    {
+      "side": "buy",
+      "symbol": "512010.SH"
+    }
+  ],
+  "actual_fills": [
+    {
+      "side": "buy",
+      "symbol": "512010.SH",
+      "status": "filled",
+      "quantity": 26200,
+      "price": 0.375,
+      "broker_order_id": null
+    }
+  ],
+  "confirmation_status": "complete",
+  "matched_plan": true,
+  "all_filled": true,
+  "source": "用户在当前 Codex 对话明确确认",
+  "note": "用户确认于2026-07-21以0.375成本买入26200股医药ETF易方达；未报告剩余未成交订单。",
+  "created_at_utc": "2026-07-21T07:10:54.985660+00:00"
+}
