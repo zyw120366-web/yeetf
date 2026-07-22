@@ -13,6 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from etf_rotation.data import symbol_key
+from etf_rotation.sentiment_ai import (
+    canonical_event_key,
+    deduplicate_reviewed_rows,
+    effective_symbol_mapping,
+)
 
 
 def keyword_match(text: str, keywords: list[str]) -> bool:
@@ -56,10 +61,27 @@ def build() -> pd.DataFrame:
     for day in dates:
         source_rows = rows_by_date[day]
         ai_day = bool(source_rows and source_rows[0].get("_ai_reviewed"))
+        if ai_day:
+            normalized_rows = []
+            for row in source_rows:
+                effective, rejected = effective_symbol_mapping(
+                    row, row["ai"], symbol_keywords
+                )
+                normalization = {
+                    **row.get("normalization", {}),
+                    "event_key": row.get("normalization", {}).get("event_key")
+                    or canonical_event_key(row),
+                    "effective_matched_symbols": effective,
+                    "rejected_matched_symbols": rejected,
+                }
+                normalized_rows.append({**row, "normalization": normalization})
+            source_rows = normalized_rows
         positive_market = [
             row for row in source_rows
             if not ai_day or (row["ai"]["relevant"] and int(row["ai"]["direction"]) > 0)
         ]
+        if ai_day:
+            positive_market = deduplicate_reviewed_rows(positive_market)
         market_count = len(positive_market)
         market_turnover = sum(float(row.get("turnover") or row.get("chengjiaoe") or 0.0) for row in positive_market)
         for symbol, category in categories.items():
@@ -70,11 +92,9 @@ def build() -> pd.DataFrame:
                 related = [
                     row for row in source_rows
                     if row["ai"]["relevant"]
-                    and (
-                        symbol in row["ai"]["matched_symbols"]
-                        or category in row["ai"]["matched_categories"]
-                    )
+                    and symbol in row["normalization"]["effective_matched_symbols"]
                 ]
+                related = deduplicate_reviewed_rows(related)
                 matched = [row for row in related if int(row["ai"]["direction"]) > 0]
                 negative = [row for row in related if int(row["ai"]["direction"]) < 0]
             else:

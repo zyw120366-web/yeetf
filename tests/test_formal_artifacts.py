@@ -40,7 +40,22 @@ def test_formal_summary_matches_frozen_validation() -> None:
 def test_daily_entry_does_not_call_research_scripts() -> None:
     entry = (ROOT / "scripts" / "run_after_close.py").read_text(encoding="utf-8")
     assert "research_" not in entry
+    assert "experiments/" not in entry
     assert 'run("run_strategies.py")' in entry
+
+
+def test_ablation_full_variant_matches_formal_result() -> None:
+    ablation = json.loads(
+        (ROOT / "results" / "research" / "strategy_ablation" / "summary.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    formal = json.loads(
+        (ROOT / "results" / "ye_strategy" / "summary.json").read_text(encoding="utf-8")
+    )
+    full = next(item for item in ablation["variants"] if item["variant"] == "full_strategy")
+    assert full["total_return"] == pytest.approx(formal["metrics"]["total_return"], abs=1e-12)
+    assert ablation["daily_execution_impact"] == "none"
 
 
 def test_public_html_contains_only_current_strategy_context() -> None:

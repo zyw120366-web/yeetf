@@ -1,5 +1,5 @@
 formal_strategy:
-  id: YE-FORMAL-2026-07-19
+  id: YE-FORMAL-2026-07-22
   name: ye 策略
   status: frozen_for_live
   rule_source: config/ye_strategy.yaml
@@ -26,3 +26,14 @@ live_audit:
   account_state_rule: 实盘仓位只来自用户或券商确认；历史回测影子持仓不得代替
   run_card_path: results/audit/YYYY-MM-DD_live_run_card.json
   reconciliation_path: results/audit/YYYY-MM-DD_execution_reconciliation.json
+research_review:
+  cadence: monthly_only
+  daily_entry_integration: forbidden
+  ablation_entry: experiments/strategy_ablation.py
+  monthly_entry: experiments/monthly_live_review.py
+  output: results/research/
+change_history:
+  - date: '2026-07-22'
+    approved_by: user
+    scope: 收紧AI审核证据映射、跨来源事件去重、完整审核协议指纹；新增与每日入口隔离的消融和月度复盘
+    unchanged: ETF池、动量参数、买卖阈值、仓位、成本、每日人工步骤

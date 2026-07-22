@@ -7,7 +7,7 @@
 - 数据冻结日：2026-07-22。用户已确认以0.375成本持有 `512010.SH`（医药ETF易方达）26,200股，且账户资金全部投入、可用现金0元；上一计划无买卖订单，持仓按账户连续性滚存。今日收盘价0.377，持仓市值及总权益9,877.40元。持仓排名第3，ROC20 +10.56%、ROC60 +3.29%、MA120乖离 +4.18%，未触发MA120、ROC20或排名双降退出，下一交易日开盘继续持有，无买卖订单。豆粕ETF也通过常规路径，但旧仓有效时不为新候选换仓；回测影子目标不得代替实盘持仓。
 - 单边固定成本：普通 ETF 0.15%，QDII/溢价敏感 ETF 0.30%，最低佣金 5 元。不得切换成本口径。
 - 正式策略与其他研究项目完全隔离。日常运行不得引入候选策略、参数试验或主观覆盖。
-- 正式治理标识为 `YE-FORMAL-2026-07-19`，规则冻结与变更条件位于 `config/strategy_governance.yaml`；研究假设只登记在 `config/research_hypotheses.yaml`，不参与日常信号。
+- 正式治理标识为 `YE-FORMAL-2026-07-22`。用户已批准收紧AI证据映射、跨源事件去重和可复现留痕；ETF池、动量参数、买卖阈值、仓位、成本与每日人工步骤均未改变。规则冻结与变更条件位于 `config/strategy_governance.yaml`。
 
 ## 最新正式回测快照
 
@@ -23,6 +23,8 @@
 4. 运行 `scripts/run_after_close.py --date YYYY-MM-DD --skip-collect`。
 5. 仅当 `results/live/readiness_report.json` 为 `READY` 时，次日订单计划才可执行。
 6. 每次运行会生成 `results/audit/YYYY-MM-DD_live_run_card.json`；若前一份计划含买卖，下一次运行前必须完成真实成交对账，否则禁止新增仓位。
+
+AI审核每一行仍保留，但ETF有效映射必须由专属关键词直接支持；同日同公司跨来源在特征层只计一次。月度复盘独立运行 `experiments/strategy_ablation.py` 与 `experiments/monthly_live_review.py`，不接入每日入口、不自动调参。
 
 完整操作见 `docs/每日执行.md` 与 skill 的 `SKILL.md`。
 

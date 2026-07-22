@@ -1,6 +1,6 @@
 name: ye 题材情绪审核
 status: frozen_for_live
-frozen_on: '2026-07-18'
+frozen_on: '2026-07-22'
 execution: 每个交易日收盘后采集并冻结；只允许用于下一交易日开盘信号
 sources:
   strong_theme: 同花顺强势股题材归因
@@ -14,6 +14,9 @@ features:
   - 全市场炸板率、跌停数和连板高度
 rules:
   immutable_raw_snapshots: true
+  cross_source_event_deduplication: 同一交易日同一公司逐行审核但题材强度只计一次
+  category_broadcast_to_symbols: false
+  direct_symbol_keyword_required: true
   missing_source_means_unknown_not_zero: true
   historical_backfill_for_2021_2022_forbidden: true
   historical_features_available_from: '2024-01-01'
@@ -30,6 +33,8 @@ ai_review:
   review_mode: each collected row is reviewed and written by Codex in the current conversation
   required_environment: none
   audit_fields: [source_hash, relevant, matched_categories, matched_symbols, direction, horizon, confidence, novelty, summary, evidence, risk_flags]
+  protocol: config/sentiment_review_policy.yaml
+  reproducibility_fields: [model_family, model_snapshot, surface, reviewed_in_current_conversation, protocol_sha256, sentiment_config_sha256, review_schema_sha256]
 category_keywords:
   宽基: [权重, 指数, 蓝筹]
   风格红利: [红利, 高股息, 央企]
@@ -52,7 +57,7 @@ symbol_keywords:
   513530.SH: [港股红利, 央企红利, 高股息]
   513200.SH: [创新药, 医药, 生物科技]
   513310.SH: [半导体, 芯片]
-  512010.SH: [医药, 创新药, 生物医药, CXO]
+  512010.SH: [医药, 创新药, 生物医药, CXO, 中药, 化学制药, 医疗器械]
   562600.SH: [医疗器械, 医疗设备, 医疗]
   159647.SZ: [中药, 中成药]
   512070.SH: [券商, 证券, 保险]

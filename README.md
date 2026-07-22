@@ -10,6 +10,9 @@
 - [策略治理与实盘审计](docs/策略治理与实盘审计.md)：规则冻结、研究假设登记、每日运行卡与真实成交对账。
 - `run_strategies.py`：重建 ye 与 etfwin 的同快照回测和当日信号。
 - `scripts/run_after_close.py`：AI 审核提交后的正式每日入口。
+- `experiments/strategy_ablation.py`：研究专用的四档组件消融，不接入每日入口。
+- `experiments/monthly_live_review.py`：每月一次的实盘、完整策略与纯价格核心复盘，不自动调参。
+- `experiments/universe_history_audit.py`：一次性检查当前45只池的历史上市、流动性和价格连续性，不接入每日入口。
 - `dashboard/scripts/build_ye_strategy_html.py`：生成策略、日报和回测三个静态 HTML。
 - `outputs/`：三份可直接打开的正式 HTML；生成路径始终位于仓库内部，不依赖电脑用户名或克隆位置。
 - `skills/ye-daily-execution/`：与项目一起版本管理的每日执行 Skill 真源。
@@ -26,6 +29,15 @@ PYTHONPATH=src python3 scripts/build_live_run_card.py --date YYYY-MM-DD
 ```
 
 每日使用时直接在 Codex 对话中调用 `$ye-daily-execution`。不需要 `OPENAI_API_KEY`；当日所有盘面与资讯由当前 Codex 对话逐条审核。
+
+月末另行运行：
+
+```sh
+PYTHONPATH=src python3 experiments/strategy_ablation.py
+PYTHONPATH=src python3 experiments/monthly_live_review.py --month YYYY-MM
+```
+
+这两个研究脚本永远不由每日入口调用。
 
 ## 两台电脑同步
 

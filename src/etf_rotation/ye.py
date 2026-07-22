@@ -75,6 +75,7 @@ def build_ye_signals(
     sentiment_available: pd.Series,
     *,
     raw_score_override: pd.DataFrame | None = None,
+    components: dict[str, bool] | None = None,
 ):
     """Build the one frozen ye strategy from production configuration only."""
 
@@ -97,6 +98,13 @@ def build_ye_signals(
     roc5 = close.pct_change(5, fill_method=None)
     breadth = category_breadth(features.roc_short, categories)
     available = broadcast(sentiment_available, symbols)
+    component_flags = {
+        "weak_edge_filter": True,
+        "emerging_trend": True,
+        "quality_extension": True,
+        "hot_exit_protection": True,
+        **(components or {}),
+    }
 
     normal = (
         features.roc_short.gt(0.0)
@@ -117,7 +125,11 @@ def build_ye_signals(
         & sentiment["count_acceleration"].ge(0.0)
         & sentiment["positive_dde_share"].ge(0.50)
     )
-    current_normal = normal & (~weak_edge | edge_following)
+    current_normal = (
+        normal & (~weak_edge | edge_following)
+        if component_flags["weak_edge_filter"]
+        else normal.copy()
+    )
 
     emerging_cfg = live["emerging_trend"]
     emerging_trigger = (
@@ -143,6 +155,8 @@ def build_ye_signals(
         & features.ma_bias.ge(float(emerging_cfg["ma120_bias_range"][0]))
         & features.ma_bias.le(float(live["quality_extension"]["ma120_bias_range"][1]))
     )
+    if not component_flags["emerging_trend"]:
+        emerging = pd.DataFrame(False, index=calendar, columns=symbols)
 
     extension_cfg = live["quality_extension"]
     quality_extension = (
@@ -159,6 +173,8 @@ def build_ye_signals(
         & sentiment["hot_score"].ge(float(extension_cfg["hot_score_min"]))
         & sentiment["count_acceleration"].ge(float(extension_cfg["count_acceleration_min"]))
     )
+    if not component_flags["quality_extension"]:
+        quality_extension = pd.DataFrame(False, index=calendar, columns=symbols)
     entry_gate = (~available & fallback) | (
         available & (current_normal | emerging | quality_extension)
     )
@@ -186,6 +202,8 @@ def build_ye_signals(
     hot_memory = hot_trigger.rolling(
         int(hot["memory_days"]), min_periods=1
     ).max().fillna(False).astype(bool)
+    if not component_flags["hot_exit_protection"]:
+        hot_memory = pd.DataFrame(False, index=calendar, columns=symbols)
     soft_exit &= ~hot_memory
 
     bundle, _ = etfwin_signals(
@@ -214,5 +232,6 @@ def build_ye_signals(
         "r2_20": r2,
         "efficiency20": efficiency,
         "category_breadth": breadth,
+        "components": component_flags,
     }
     return bundle, features, eligibility, listed_sessions, trailing_amount, decision

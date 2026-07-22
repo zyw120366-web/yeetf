@@ -15,9 +15,15 @@
     "previous_execution_reconciled": true,
     "live_account_state_confirmed": true,
     "live_plan_uses_account_truth": true,
-    "ai_review_complete": true
+    "ai_review_complete": true,
+    "ai_review_protocol_requirement_satisfied": true
   },
   "blocking_items": [],
+  "review_protocol": {
+    "required_for_signal_date": false,
+    "fingerprinted": false,
+    "status": "legacy_exempted"
+  },
   "reconciliation": {
     "realized_round_trip_pnl": 546701.4825765907,
     "open_position_pnl": 15965.000779444828,

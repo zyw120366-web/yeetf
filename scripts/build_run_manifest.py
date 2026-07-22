@@ -36,6 +36,7 @@ def main() -> None:
         ROOT / "config" / "ye_strategy.yaml",
         ROOT / "config" / "etfwin_official.yaml",
         ROOT / "config" / "sentiment.yaml",
+        ROOT / "config" / "sentiment_review_policy.yaml",
         ROOT / "config" / "strategy_governance.yaml",
         ROOT / "config" / "research_hypotheses.yaml",
         ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json",

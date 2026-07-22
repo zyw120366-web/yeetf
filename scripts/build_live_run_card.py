@@ -66,6 +66,13 @@ def main() -> None:
             "coverage": review.get("coverage"),
             "reviewed_count": review.get("reviewed_count"),
             "input_count": review.get("input_count"),
+            "prompt_version": review.get("prompt_version"),
+            "review_metadata": review.get("review_metadata"),
+            "review_protocol": review.get("review_protocol"),
+            "protocol_status": (
+                "fingerprinted" if review.get("review_protocol")
+                else "legacy_pre_policy"
+            ),
         },
         "release": {
             "readiness": readiness["status"],

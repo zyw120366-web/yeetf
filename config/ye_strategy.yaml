@@ -1,7 +1,7 @@
 name: ye 策略
 role: 唯一正式策略
 status: frozen_for_live
-frozen_on: '2026-07-18'
+frozen_on: '2026-07-22'
 
 execution:
   signal_time: 每个交易日收盘后
@@ -74,6 +74,7 @@ enhanced_selection:
     source: a-stock-data盘面数据 + 财联社快讯，经AI逐条结构化审核
     ai_review_required: true
     ai_review_mode: current Codex chat reviews every collected row; no external API key
+    evidence_normalization: 每行保留审核；ETF映射必须有专属关键词直接支持；同日同公司跨来源在特征层只计一次
     incomplete_review_action: 不开新仓；既有仓位的价格卖出规则继续执行
     weak_edge_filter:
       applies_when: 基础排名4至5且ROC20低于2%
@@ -118,13 +119,13 @@ plain_language:
 
 validation:
   backtest_start: '2018-07-02'
-  backtest_end: '2026-07-20'
-  total_return: 5.6033282055
-  cagr: 0.2642791940
+  backtest_end: '2026-07-22'
+  total_return: 5.697909758217876
+  cagr: 0.2663115253036332
   max_drawdown: -0.2218193578
   failed_operation_rate: 0.6875
   return_2021_2022: 0.2055634199
-  return_2025_2026: 2.9342760502
+  return_2025_2026: 2.990627927046517
   live_use_allowed: true
   live_condition: 参数冻结；每日数据、AI审核覆盖率、次日开盘执行与固定成本记录全部通过检查
-  parameter_note: 规则已冻结；实盘中不得根据单笔盈亏临时改阈值
+  parameter_note: 阈值保持冻结；2026-07-22只收紧审核证据映射、跨源去重与可复现留痕，不根据盈亏调参

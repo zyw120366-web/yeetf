@@ -42,6 +42,8 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
 
 2. 读取 `market_data/sentiment/review_queue/YYYY-MM-DD.json`。逐行审核，包含无关资讯；保留原始 `source_hash`，不得合并、漏审、重复或补造。按 [审核草稿格式](references/review-schema.md) 用 `apply_patch` 写入 `market_data/sentiment/manual_drafts/YYYY-MM-DD.json`。
 
+   审核时禁止把类别标签自动扩散到同类全部 ETF；`matched_symbols` 必须获得冻结行中专属关键词的直接支持。同一公司跨来源重复时仍逐行审核，系统在下游特征层自动只计一次。草稿必须记录当前 Codex 的模型家族、可见快照信息与使用界面；精确快照未暴露时如实记录 `not_exposed_by_codex`。
+
 3. 提交并验证审核记录；失败不得绕过：
 
    ```sh
@@ -89,3 +91,14 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
 第一句直接写：`次日开盘：买入 / 卖出 / 换仓 / 持有 / 空仓`。
 
 随后仅列出目标 ETF、目标仓位（0%/100%）、实际成交确认/对账状态、AI 审核覆盖率、`READY/BLOCKED`、固定成本和任何阻塞项。计划待成交确认时必须写“计划待成交确认”。最后给出三个正式 HTML 和当日运行卡的本地链接；审核细节保留在日报和审计文件中。
+
+## 月度复盘（不属于每日流程）
+
+仅在月末收盘后或用户明确要求时运行：
+
+```sh
+PYTHONPATH=src python3 experiments/strategy_ablation.py
+PYTHONPATH=src python3 experiments/monthly_live_review.py --month YYYY-MM
+```
+
+月度复盘比较正式策略、纯价格核心和实盘账户路径，只输出研究报告，不修改正式信号、订单、日报或任何参数。不得把月度研究脚本接入 `scripts/run_after_close.py`。

@@ -1,7 +1,7 @@
 {
   "strategy": "ye 策略",
   "signal_date": "2026-07-22",
-  "created_at_utc": "2026-07-22T07:24:24.840034+00:00",
+  "created_at_utc": "2026-07-22T11:10:09.215496+00:00",
   "python": "3.13.6",
   "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
   "critical_files": [
@@ -12,8 +12,8 @@
     },
     {
       "path": "config/ye_strategy.yaml",
-      "bytes": 5350,
-      "sha256": "338627922433fb106982b4595cf3a017c221b1915eda0d3ff1ebf3554017bfd2"
+      "bytes": 5561,
+      "sha256": "6a51118b5183fbdf9935a18e1ae19472500cc7ac4ce9977cb38d15c52382648f"
     },
     {
       "path": "config/etfwin_official.yaml",
@@ -22,18 +22,23 @@
     },
     {
       "path": "config/sentiment.yaml",
-      "bytes": 4185,
-      "sha256": "0c7e5e0fc6443e029ff9a94f124443e30af8873794fa53185082ce34cfa368cd"
+      "bytes": 4614,
+      "sha256": "ef67cf89c5fa8c5de335d42eee16811053f592cb444777d050913698ec57f661"
+    },
+    {
+      "path": "config/sentiment_review_policy.yaml",
+      "bytes": 2399,
+      "sha256": "35ab1f9efa53250b644bcfa8b215bb40667d5ce92be443fa450f367ec32cad9c"
     },
     {
       "path": "config/strategy_governance.yaml",
-      "bytes": 1126,
-      "sha256": "408c55b52f7a9c796caba9ac9d0322aefdb5b4b96e63808d93edb10d0dea5148"
+      "bytes": 1630,
+      "sha256": "12291f8bfe37bd2b7710ce479bd01666c81c23ba087e7bbb907e247f227139ec"
     },
     {
       "path": "config/research_hypotheses.yaml",
       "bytes": 1747,
-      "sha256": "564da7e828a7c96733a99f031169162a5a9829e3af00b0d1d170eac0677266c4"
+      "sha256": "b573d451aada99fffbe261a009acb69bd21c5c512508e1df54eb25ada952e4c5"
     },
     {
       "path": "market_data/sentiment/ai_review/2026-07-22.json",
@@ -42,8 +47,8 @@
     },
     {
       "path": "market_data/sentiment/features/symbol_daily.csv",
-      "bytes": 5308278,
-      "sha256": "295a956f544c5fe906e33ed4ea30454470dcd6a216b3f86034cb5cc9221b3254"
+      "bytes": 5304639,
+      "sha256": "3c3d4a2b8e2c22a1d5966c7cb7ab329c11d2143a320638319613e37a17c81bec"
     },
     {
       "path": "results/ye_strategy/summary.json",
@@ -87,8 +92,8 @@
     },
     {
       "path": "results/live/readiness_report.json",
-      "bytes": 809,
-      "sha256": "f710ce5da2c144cd15abe4e484c57475fc78a4fb47d078d8bd571921f85c9b44"
+      "bytes": 990,
+      "sha256": "602f033c207c2f7373f84320b387c6e15da940141f893a4a88ab9deecf57a5c4"
     },
     {
       "path": "dashboard/public/ye-strategy.html",
@@ -144,8 +149,8 @@
     },
     {
       "path": "src/etf_rotation/sentiment_ai.py",
-      "bytes": 7337,
-      "sha256": "c1800fe910631b7fa18501f0a928d7c189d4095ecf1d015c3703c04e4afccca1"
+      "bytes": 13039,
+      "sha256": "56216cf9a15e5a115d8cfd35447b210cec8ecaf45e5148fb6f2684f15fe671ef"
     },
     {
       "path": "src/etf_rotation/strategy.py",
@@ -154,8 +159,8 @@
     },
     {
       "path": "src/etf_rotation/ye.py",
-      "bytes": 8893,
-      "sha256": "378ea6e3ada1d6aa84cffc45768b835c2caf5cf7911c0237eefdd731ca8ba516"
+      "bytes": 9640,
+      "sha256": "116e0894dab8ad8ffe5f9f5e4e037ea40a6bf9da65c8a4d397d61d27ff7d6894"
     },
     {
       "path": "run_strategies.py",
@@ -164,8 +169,8 @@
     },
     {
       "path": "scripts/build_sentiment_features.py",
-      "bytes": 7020,
-      "sha256": "07e2212ef3284a01bd598d13923ea3710c5273b7c0fab7d8326d73aa427897b5"
+      "bytes": 7897,
+      "sha256": "61d7a0f27e779be47dacf8d65585bd6d74b5edf1e9cb252ca8c30995228c3693"
     },
     {
       "path": "scripts/build_trade_audit.py",
@@ -179,8 +184,8 @@
     },
     {
       "path": "scripts/validate_live_readiness.py",
-      "bytes": 7988,
-      "sha256": "b3445a5b91544e352e47a74737fb93c4603bda241ffdac5dc84379ee587b0d41"
+      "bytes": 9093,
+      "sha256": "fa9ec07cf2276ac6e4e857cd6ec94d32f7804840fdbed16731f2a3909e1370c6"
     },
     {
       "path": "scripts/build_daily_reference_report.py",
@@ -189,8 +194,8 @@
     },
     {
       "path": "scripts/build_live_run_card.py",
-      "bytes": 4097,
-      "sha256": "7d6db7bed35e5861092ee383f63cb3c91381b7469117b36dbb2545ceff46bc8c"
+      "bytes": 4435,
+      "sha256": "6390cbfd4e0b73fbdcf9fba38d14184e51696f72a6ddf5cd65f2045c3e43d80c"
     },
     {
       "path": "scripts/reconcile_actual_fills.py",
@@ -491,7 +496,7 @@
     }
   ],
   "counts": {
-    "critical_files": 20,
+    "critical_files": 21,
     "source_files": 20,
     "price_files": 56
   }

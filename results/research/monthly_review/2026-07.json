@@ -1,0 +1,41 @@
+{
+  "status": "research_only",
+  "month": "2026-07",
+  "daily_execution_impact": "none",
+  "confirmed_run_days": 2,
+  "latest_run_card": "results/audit/2026-07-22_live_run_card.json",
+  "strategy_ids_seen": [
+    "YE-FORMAL-2026-07-19",
+    "YE-FORMAL-2026-07-22"
+  ],
+  "live": {
+    "net_contributed_capital": 9825.0,
+    "ending_equity": 9877.4,
+    "return_since_live_start": 0.00533333333333319,
+    "observed_month_drawdown": 0.0,
+    "ending_positions": [
+      {
+        "symbol": "512010.SH",
+        "name": "医药ETF易方达",
+        "quantity": 26200,
+        "average_cost": 0.375,
+        "market_price": 0.377,
+        "market_value": 9877.4,
+        "unrealized_pnl": 52.4
+      }
+    ]
+  },
+  "shadow_same_month": {
+    "full_strategy_return": 0.010800114858282361,
+    "price_core_return": -0.003573484146818129,
+    "full_minus_price_core": 0.01437359900510049
+  },
+  "discipline": {
+    "ai_review_complete_days": 2,
+    "ready_days": 2,
+    "reconciliation_statuses": {
+      "not_required": 2
+    }
+  },
+  "interpretation": "月度报告只核对实盘、纪律和冻结基线差异，不据此自动调参。"
+}
