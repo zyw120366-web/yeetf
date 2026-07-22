@@ -89,9 +89,7 @@ def main() -> None:
     target_dir.mkdir(parents=True, exist_ok=True)
     text = json.dumps(payload, ensure_ascii=False, indent=2)
     dated = target_dir / f"{args.date}_run_manifest.json"
-    latest = target_dir / "latest_run_manifest.json"
     dated.write_text(text, encoding="utf-8")
-    latest.write_text(text, encoding="utf-8")
     print(json.dumps({"manifest": str(dated), **payload["counts"]}, ensure_ascii=False))
 
 

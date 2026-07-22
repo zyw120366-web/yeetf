@@ -253,14 +253,19 @@ def main() -> None:
         for item in actions
         if item["side"] in {"buy", "sell"} and item.get("symbol")
     ]
-    template_payload = {
-        "signal_date": args.date,
-        "confirmation_status": "pending",
-        "source": "用户或券商成交回单确认",
-        "fills": fill_rows,
-        "note": "按本计划的下一交易日真实成交填写；计划和估算数量都不是成交。",
-    }
-    template.write_text(json.dumps(template_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    if fill_rows:
+        template_payload = {
+            "signal_date": args.date,
+            "confirmation_status": "pending",
+            "source": "用户或券商成交回单确认",
+            "fills": fill_rows,
+            "note": "按本计划的下一交易日真实成交填写；计划和估算数量都不是成交。",
+        }
+        template.write_text(
+            json.dumps(template_payload, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+    else:
+        template.unlink(missing_ok=True)
     print(json.dumps(payload, ensure_ascii=False, indent=2))
 
 

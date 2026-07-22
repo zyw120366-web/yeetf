@@ -1,7 +1,7 @@
 {
   "strategy": "ye 策略",
   "signal_date": "2026-07-22",
-  "created_at_utc": "2026-07-22T11:10:09.215496+00:00",
+  "created_at_utc": "2026-07-22T11:24:55.905670+00:00",
   "python": "3.13.6",
   "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
   "critical_files": [
@@ -37,8 +37,8 @@
     },
     {
       "path": "config/research_hypotheses.yaml",
-      "bytes": 1747,
-      "sha256": "b573d451aada99fffbe261a009acb69bd21c5c512508e1df54eb25ada952e4c5"
+      "bytes": 315,
+      "sha256": "6f8f41bc02a6009893a928770fe9865c86eb12fe17e213e916d48550bdfed815"
     },
     {
       "path": "market_data/sentiment/ai_review/2026-07-22.json",
@@ -164,8 +164,8 @@
     },
     {
       "path": "run_strategies.py",
-      "bytes": 15541,
-      "sha256": "97291e532d7837cc5db87dc4dd7515855296fe9de0577cbb814f87bb7ddf18b3"
+      "bytes": 15215,
+      "sha256": "03a4c7f67cc1fd71986dfaa3ff58161138eb140036943555a81c90afc70d9879"
     },
     {
       "path": "scripts/build_sentiment_features.py",
@@ -179,8 +179,8 @@
     },
     {
       "path": "scripts/build_live_order_plan.py",
-      "bytes": 13331,
-      "sha256": "f922c6485c4b9a987c218505c15f62efbae75190bfb07cb898c8517e552487a0"
+      "bytes": 13454,
+      "sha256": "42c2cce99ba6c24f359e0c4d45468d7d746ded9d5541d0932bcffd1d15ee5eec"
     },
     {
       "path": "scripts/validate_live_readiness.py",
@@ -194,8 +194,8 @@
     },
     {
       "path": "scripts/build_live_run_card.py",
-      "bytes": 4435,
-      "sha256": "6390cbfd4e0b73fbdcf9fba38d14184e51696f72a6ddf5cd65f2045c3e43d80c"
+      "bytes": 4469,
+      "sha256": "160569a89120d179e9d160b811494c7920bc3987b6a4d05ac4bf39feed659792"
     },
     {
       "path": "scripts/reconcile_actual_fills.py",

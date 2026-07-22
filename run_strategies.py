@@ -279,13 +279,6 @@ def main() -> None:
     save_frame(annual, comparison_dir / "annual.csv")
     save_frame(timing, comparison_dir / "timing.csv")
     save_frame(equity.reset_index(), comparison_dir / "equity.csv")
-    rounds = realized_round_trips(ye_result.trades, calendar)
-    if not rounds.empty:
-        rounds.insert(0, "strategy", YE_NAME)
-        rounds.insert(2, "name", rounds["symbol"].map(names))
-        rounds.insert(3, "category", rounds["symbol"].map(categories))
-    save_frame(rounds, comparison_dir / "round_trips.csv")
-
     latest = calendar[-1]
     rank = ye_features.rank
     base_pass = (

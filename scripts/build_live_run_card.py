@@ -43,6 +43,7 @@ def main() -> None:
         }
         for item in plan["actions"]
     ]
+    requires_confirmation = any(item["side"] in {"buy", "sell"} for item in plan["actions"])
     template_path = live / f"{args.date}_actual_fills.template.json"
     reconciliation_path = audit / f"{args.date}_execution_reconciliation.json"
     card = {
@@ -87,17 +88,18 @@ def main() -> None:
             "price_file_count": manifest["counts"]["price_files"],
         },
         "execution_reconciliation": {
-            "status": "not_required" if not any(item["side"] in {"buy", "sell"} for item in plan["actions"]) else "pending_next_open",
-            "actual_fill_template": template_path.relative_to(ROOT).as_posix(),
+            "status": "pending_next_open" if requires_confirmation else "not_required",
+            "actual_fill_template": (
+                template_path.relative_to(ROOT).as_posix()
+                if requires_confirmation else None
+            ),
             "reconciliation_output": reconciliation_path.relative_to(ROOT).as_posix(),
         },
     }
     audit.mkdir(parents=True, exist_ok=True)
     dated = audit / f"{args.date}_live_run_card.json"
-    latest = audit / "latest_live_run_card.json"
     text = json.dumps(card, ensure_ascii=False, indent=2)
     dated.write_text(text, encoding="utf-8")
-    latest.write_text(text, encoding="utf-8")
     print(json.dumps({"run_card": str(dated), "readiness": readiness["status"]}, ensure_ascii=False))
 
 
