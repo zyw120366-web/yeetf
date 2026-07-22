@@ -91,3 +91,10 @@ def test_daily_html_opens_with_plain_language_overview() -> None:
     assert "今日决策路径综述" in overview
     overview_length = len(re.sub(r"\s+", "", overview))
     assert 500 <= overview_length <= 800
+    for marker in ("策略实盘开启以来", "本次买入收益", "今日收益"):
+        assert marker in daily
+    assert "医药ETF易方达（512010.SH）、豆粕ETF华夏（159985.SZ）" in daily
+    assert "医药ETF易方达（继续持有）" in daily
+    assert "决策所用账户" not in daily
+    assert "放行</span>" not in daily
+    assert "最终状态READY" not in daily

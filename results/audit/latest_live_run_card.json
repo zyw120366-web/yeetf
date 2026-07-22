@@ -10,7 +10,7 @@
   },
   "signal_date": "2026-07-22",
   "execute": "下一交易日开盘",
-  "created_at_utc": "2026-07-22T07:10:42.377343+00:00",
+  "created_at_utc": "2026-07-22T07:24:24.905024+00:00",
   "decision": {
     "current_symbol": "512010.SH",
     "target_symbol": "512010.SH",
@@ -32,6 +32,11 @@
     "first_live_day": false,
     "total_equity": 9877.4,
     "available_cash": 0.0,
+    "performance": {
+      "strategy_start_date": "2026-07-21",
+      "net_contributed_capital": 9825.0,
+      "calculation_basis": "用户确认资金全部投入首笔买入；26200股×0.375元=9825元，后续如有出入金必须同步调整"
+    },
     "positions": [
       {
         "symbol": "512010.SH",
@@ -92,7 +97,7 @@
   },
   "audit": {
     "run_manifest": "results/audit/2026-07-22_run_manifest.json",
-    "run_manifest_sha256": "3e9ce95bb4e9fdd7d7579e2ac0aa4c4e10da576d75ee6f14346d4d36c2693755",
+    "run_manifest_sha256": "bef8dc7a57439b644015ef9bf975db02ca07eb3753a7309a62224663d1a27d72",
     "critical_file_count": 20,
     "source_file_count": 20,
     "price_file_count": 56

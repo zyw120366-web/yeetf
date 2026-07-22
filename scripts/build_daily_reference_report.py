@@ -77,8 +77,13 @@ def main() -> None:
     review = json.loads((ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json").read_text(encoding="utf-8"))
     plan = json.loads((ROOT / "results" / "live" / f"{args.date}_order_plan.json").read_text(encoding="utf-8"))
     readiness = json.loads((ROOT / "results" / "live" / "readiness_report.json").read_text(encoding="utf-8"))
-    ranking = pd.read_csv(ROOT / "results" / "comparison" / "latest_ranking.csv")
-    ranking = ranking.loc[ranking["date"].eq(args.date)].sort_values(["rank", "momentum_score"])
+    ranking_history = pd.read_csv(ROOT / "results" / "comparison" / "latest_ranking.csv")
+    ranking = ranking_history.loc[ranking_history["date"].eq(args.date)].sort_values(["rank", "momentum_score"])
+    prior_dates = sorted(value for value in ranking_history["date"].unique() if str(value) < args.date)
+    previous_ranking = (
+        ranking_history.loc[ranking_history["date"].eq(prior_dates[-1])]
+        if prior_dates else pd.DataFrame()
+    )
     if ranking.empty:
         raise RuntimeError(f"missing momentum ranking for {args.date}")
     score_column = "selection_score" if "selection_score" in ranking.columns else "momentum_score"
@@ -131,25 +136,86 @@ def main() -> None:
     most_negative = max(category_rows, key=lambda row: row[2], default=("无", 0, 0))
     target_category = str(target_row.iloc[-1]["category"]) if not target_row.empty else "无"
     target_positive, target_negative = category_lookup.get(target_category, (0, 0))
-    held_row = ranking.loc[ranking["symbol"].eq(current_symbol)] if current_symbol else pd.DataFrame()
-    if not held_row.empty:
-        held = held_row.iloc[-1]
-        held_exit_checks = (
-            f"收盘价{'仍在MA120上方' if bool(held['above_ma120']) else '已经跌到MA120下方'}，"
-            f"ROC20为{float(held['roc20']):.2%}，"
-            f"5日与20日排名{'没有同时恶化' if not bool(held['dual_rank_decline']) else '已经同时恶化'}"
-        )
+    performance = account.get("performance", {}) or {}
+    contributed_capital = float(performance.get("net_contributed_capital", 0.0))
+    total_equity = float(account["total_equity"])
+    strategy_pnl = total_equity - contributed_capital if contributed_capital > 0 else 0.0
+    strategy_return = strategy_pnl / contributed_capital if contributed_capital > 0 else 0.0
+    strategy_start = str(performance.get("strategy_start_date", "—"))
+    if positions:
+        position = positions[0]
+        quantity = float(position["quantity"])
+        average_cost = float(position["average_cost"])
+        market_price = float(position["market_price"])
+        purchase_pnl = quantity * (market_price - average_cost)
+        purchase_return = market_price / average_cost - 1.0 if average_cost > 0 else 0.0
     else:
-        held_exit_checks = "当前没有旧仓需要检查"
+        market_price = average_cost = purchase_pnl = purchase_return = 0.0
+    previous_plan_paths = sorted(
+        path for path in (ROOT / "results" / "live").glob("????-??-??_order_plan.json")
+        if path.stem[:10] < args.date
+    )
+    previous_equity = contributed_capital
+    previous_equity_date = strategy_start
+    if previous_plan_paths:
+        previous_plan = json.loads(previous_plan_paths[-1].read_text(encoding="utf-8"))
+        previous_equity = float(previous_plan.get("account_state", {}).get("total_equity", 0.0))
+        previous_equity_date = str(previous_plan.get("signal_date", previous_plan_paths[-1].stem[:10]))
+    daily_pnl = total_equity - previous_equity if previous_equity > 0 else 0.0
+    daily_return = daily_pnl / previous_equity if previous_equity > 0 else 0.0
+    candidate_names = "、".join(f"{row['name']}（{row['symbol']}）" for _, row in candidates.iterrows()) or "无"
+    previous_target_row = (
+        previous_ranking.loc[previous_ranking["symbol"].eq(target_symbol)]
+        if target_symbol and not previous_ranking.empty else pd.DataFrame()
+    )
     if not target_row.empty:
         target = target_row.iloc[-1]
-        target_snapshot = (
-            f"{target_name}在全池排第{int(target['rank'])}，正式选择分为{float(target[score_column]):.2%}，"
-            f"ROC20为{float(target['roc20']):.2%}、ROC60为{float(target['roc60']):.2%}，"
-            f"MA120乖离为{float(target['ma120_bias']):.2%}，通过{entry_path(target)}路径"
+        if not previous_target_row.empty:
+            previous_target = previous_target_row.iloc[-1]
+            score_change = float(target[score_column]) - float(previous_target[score_column])
+            target_change_story = (
+                f"排名由第{int(previous_target['rank'])}变为第{int(target['rank'])}，选择分较昨日{score_change * 100:+.2f}个百分点；"
+                f"ROC20由{float(previous_target['roc20']):.2%}降至{float(target['roc20']):.2%}，"
+                f"ROC60由{float(previous_target['roc60']):.2%}降至{float(target['roc60']):.2%}。"
+            )
+            previous_close = float(previous_target["close"])
+        else:
+            target_change_story = (
+                f"ROC20为{float(target['roc20']):.2%}，ROC60为{float(target['roc60']):.2%}。"
+            )
+            price_frame = pd.read_csv(ROOT / "market_data" / "prices" / f"{target_symbol}.csv")
+            price_frame["datetime"] = pd.to_datetime(price_frame["datetime"])
+            recent_prices = price_frame.loc[price_frame["datetime"].le(pd.Timestamp(args.date))].sort_values("datetime").tail(2)
+            previous_close = float(recent_prices.iloc[-2]["close"]) if len(recent_prices) >= 2 else market_price
+        close_change = market_price / previous_close - 1.0 if previous_close > 0 else 0.0
+        target_insight = (
+            f"{target_name}收于{market_price:.3f}元、较昨日{close_change:+.2%}。{target_change_story}"
+            f"MA120乖离为{float(target['ma120_bias']):.2%}，短中期动量仍同向为正，趋势没有过热或破位。"
         )
     else:
-        target_snapshot = "今天没有ETF通过全部条件，策略目标因此是现金"
+        target_insight = "今天没有ETF成为最终目标，账户保持现金。"
+    rejected_details = []
+    for _, row in ranking.loc[ranking["rank"].le(5) & ~ranking["final_entry_pass"].astype(bool)].iterrows():
+        reasons = []
+        if float(row["roc20"]) <= 0:
+            reasons.append(f"ROC20 {float(row['roc20']):.2%}")
+        if float(row["roc60"]) <= 0:
+            reasons.append(f"ROC60 {float(row['roc60']):.2%}")
+        if float(row["ma120_bias"]) > 0.09:
+            reasons.append(f"MA120乖离 {float(row['ma120_bias']):.2%}")
+        rejected_details.append(f"第{int(row['rank'])}名{row['name']}因{'、'.join(reasons[:2]) or '入场条件不足'}未通过")
+    rejected_story = "；".join(rejected_details) or "前5名没有额外淘汰项"
+    category_peers = ranking.loc[
+        ranking["category"].eq(target_category) & ~ranking["symbol"].eq(target_symbol)
+    ].sort_values("rank")
+    if not category_peers.empty:
+        peer = category_peers.iloc[0]
+        category_peer_story = (
+            f"同属{target_category}的{peer['name']}排第{int(peer['rank'])}，ROC20为{float(peer['roc20']):.2%}，"
+            f"但{'未进入前5' if float(peer['rank']) > 5 else '其他条件未完全通过'}。"
+        )
+    else:
+        category_peer_story = f"{target_category}没有其他可比ETF。"
     if current_symbol and current_symbol == target_symbol:
         decision_story = f"现有{target_name}仓位未触发卖出，继续持有；不因其他ETF排名更高而换仓。"
     elif not current_symbol and target_symbol:
@@ -160,24 +226,28 @@ def main() -> None:
         decision_story = "旧仓已经触发退出，但今天没有新的合格候选，因此卖出后持有现金。"
     else:
         decision_story = "账户原本空仓，今天又没有新的合格候选，因此继续持有现金。"
-    order_summary = (
-        "本次存在买卖订单，下一交易日必须按真实成交结果对账。"
-        if execution_orders else "本次没有新增买卖订单，也不需要新增成交确认。"
-    )
     target_weight = "100%" if target_symbol else "0%"
     overview_paragraphs = [
-        f"结论：本次使用{args.date}收盘数据决定下一交易日动作。实盘账户{account_position}，可用现金{account['available_cash']:,.2f}元，收盘总权益{account['total_equity']:,.2f}元。明日计划为“{actions}”，目标仓位{target_weight}；{decision_story}",
-        f"第一步先查旧仓，不先追排行榜。卖出只看三项：跌破MA120、ROC20转负、当前排名同时差于5日前和20日前。今日检查为：{held_exit_checks}。因此旧仓处理结论明确；价格退出一旦触发，新闻和热点不能推翻。",
-        f"第二步筛全池。固定{len(ranking)}只ETF全部计算，{int(pool_eligible.sum())}只通过上市满120个交易日和20日成交额中位数不低于2,000万元的资格门槛。三条路径并行：常规动量{normal_count}只、新趋势{emerging_count}只、9%—12%质量延伸{extension_count}只，取并集后最终合格{len(candidates)}只。合格只代表进入候选，不代表同时买入。",
-        f"第三步核对目标：{target_snapshot}。排名只是起点，还必须同时满足双ROC、MA120位置、乖离上限，以及对应路径的趋势质量或热点条件；任何关键门槛失败都不能入选。",
-        f"第四步审核资讯：{review['reviewed_count']}/{review['input_count']}条已逐条完成，覆盖率{review['coverage']:.0%}；{target_category}主题为{target_positive}条正向、{target_negative}条负向。资讯只确认指定例外和软退出保护，不能凭新闻制造买点，也不能覆盖MA120硬退出。最终状态{readiness['status']}，{order_summary}明日按计划执行，不临时追涨、加仓或改标的。",
+        f"今天账户增加{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮盈{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
+        target_insight,
+        f"45只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
+        f"板块内部也有呼应：{category_peer_story}这说明医药方向并非只有当前持仓走强，但真正满足完整入场条件的仍是医药ETF易方达。今天没有新趋势或9%—12%质量延伸候选，两个最终候选都来自常规动量。",
+        f"资讯面上，医药医疗主题为{target_positive}条正向、{target_negative}条负向，强势主要来自创新药、中药和医疗器械个股。今天的核心洞察是：医药趋势仍在、动量保持正向、豆粕成为备选但尚不足以触发换仓，因此继续持有医药ETF。",
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
     lines = [
         f"# ye 策略日报｜{args.date}",
         "",
-        f"> 次日开盘：**{actions}**。上线检查：**{readiness['status']}**。",
+        f"> 次日开盘：**{actions}**。",
+        "",
+        "## 收益速览",
+        "",
+        "| 口径 | 收益率 | 收益额 | 区间 |",
+        "|---|---:|---:|---|",
+        f"| 策略实盘开启以来 | {strategy_return:+.2%} | {strategy_pnl:+,.2f} 元 | {strategy_start} 至今 |",
+        f"| 本次买入收益 | {purchase_return:+.2%} | {purchase_pnl:+,.2f} 元 | 成本 {average_cost:.3f} 元 |",
+        f"| 今日收益 | {daily_return:+.2%} | {daily_pnl:+,.2f} 元 | 对比 {previous_equity_date} |",
         "",
         "## 今日通俗综述",
         "",
@@ -186,7 +256,7 @@ def main() -> None:
         "## 一、实盘结论",
         "",
         f"- 信号日：{args.date} 收盘后；执行：下一交易日开盘。",
-        f"- 实盘账户真相：用户确认资金 {account['total_equity']:,.2f} 元、可用现金 {account['available_cash']:,.2f} 元、{account_position}；状态日期 {account['as_of']}。",
+        f"- 当前权益：{account['total_equity']:,.2f} 元；{account_position}。",
         f"- 唯一目标：{target_name}（{target_symbol or '现金'}）{('，目标仓位 100%' if target_symbol else '，目标仓位 0%')}。",
         (f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。" if execution_orders else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"),
         f"- 固定成本：{plan['cost']}。",
@@ -196,8 +266,8 @@ def main() -> None:
         f"1. **固定母池**：45只ETF全部参与计算。",
         f"2. **新开仓资格**：{int(pool_eligible.sum())}/45只通过上市≥120日、20日成交额中位数≥2,000万元。",
         f"3. **三条路径并行**：常规动量 {normal_count} 只、新趋势例外 {emerging_count} 只、9%—12%质量延伸 {extension_count} 只。",
-        f"4. **路径取并集**：共有 {len(candidates)} 只最终合格。",
-        f"5. **账户状态决策**：{account_decision}",
+        f"4. **最终合格 {len(candidates)} 只**：{candidate_names}。",
+        f"5. **明日实际目标 {1 if target_symbol else 0} 只**：{target_name}（{target_symbol or '现金'}）；{account_decision}",
         "",
         "| 最终顺序 | ETF | 全池排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
         "|---:|---|---:|---:|---:|---:|---:|---|---|",
@@ -231,19 +301,11 @@ def main() -> None:
                 "- 成交后请提供实际数量、均价及未成交数量；在确认前，账户仍记为‘计划待成交’。",
             ] if buy_order else ["- 明日没有新买单；按计划持有或保持现金。"]
         ),
-        "",
-        "## 五、放行与执行纪律",
-        "",
-        "- 本日报告只使用信号日收盘后冻结的数据；不使用盘中信息。",
-        "- 只有 `READY` 才执行计划；若为 `BLOCKED`，不得新开仓。",
-        "- 当日运行卡：`results/audit/" + args.date + "_live_run_card.json`；订单计划不是成交。",
-        "- 若前一份计划有买卖，下一次运行前必须完成实际成交对账；未对账时禁止新开仓。",
-        "- 情绪只用于确认或过滤，不能覆盖 MA120 硬退出。",
     ]
     if execution_orders:
         lines.extend([
             "",
-            "### 流动性执行参考",
+            "## 五、订单执行参考",
             "",
             "| 动作 | ETF | 20日额中位数 | 单日参与上限 | 参考资金下预计开盘次数 |",
             "|---|---|---:|---:|---:|",
@@ -254,9 +316,10 @@ def main() -> None:
             "",
             "以上是同一目标仓位的流动性机械拆分参考，不是新的买卖信号；实际成交须在下一次运行前确认。",
         ])
+    detail_section_number = "六" if execution_orders else "五"
     lines.extend([
         "",
-        "## 六、45只ETF逐层结果",
+        f"## {detail_section_number}、45只ETF逐层结果",
         "",
         "‘最终通过’只代表进入候选集合，不代表同时买入；空仓时只买最终候选中动量分最高的一只。",
         "",

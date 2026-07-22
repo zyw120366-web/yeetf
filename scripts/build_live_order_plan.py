@@ -194,6 +194,7 @@ def main() -> None:
             "first_live_day": bool(account.get("first_live_day", False)),
             "total_equity": float(account["total_equity"]),
             "available_cash": float(account["available_cash"]),
+            "performance": account.get("performance", {}),
             "positions": account.get("positions", []),
             "pending_orders": account.get("pending_orders", []),
         },

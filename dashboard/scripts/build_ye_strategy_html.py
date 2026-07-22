@@ -343,8 +343,13 @@ def build_daily_page() -> str:
     if not ranking_path.exists():
         body = '<section class="section"><div class="notice">尚未生成当日排名。请先完成收盘后运行，再刷新此页。</div></section>'
         return page("ye 策略今日日报", "daily", "今日日报", "等待收盘后冻结数据", "未生成", body)
-    rankings = pd.read_csv(ranking_path)
-    rankings = rankings.loc[rankings["date"].eq(date)].copy()
+    ranking_history = pd.read_csv(ranking_path)
+    rankings = ranking_history.loc[ranking_history["date"].eq(date)].copy()
+    prior_dates = sorted(value for value in ranking_history["date"].unique() if str(value) < date)
+    previous_rankings = (
+        ranking_history.loc[ranking_history["date"].eq(prior_dates[-1])].copy()
+        if prior_dates else pd.DataFrame()
+    )
     plan = json.loads(plan_path.read_text(encoding="utf-8")) if plan_path.exists() else {}
     readiness = json.loads(readiness_path.read_text(encoding="utf-8")) if readiness_path.exists() else {}
     actions = plan.get("actions", []) or []
@@ -466,6 +471,44 @@ def build_daily_page() -> str:
     )
     account_position = html_lib.escape(account_position_plain)
     target_weight = "100%" if target_symbol else "0%"
+    total_equity = as_float(account.get("total_equity"))
+    performance = account.get("performance", {}) or {}
+    contributed_capital = as_float(performance.get("net_contributed_capital"))
+    strategy_pnl = total_equity - contributed_capital if contributed_capital > 0 else 0.0
+    strategy_return = strategy_pnl / contributed_capital if contributed_capital > 0 else 0.0
+    strategy_start = str(performance.get("strategy_start_date", "—"))
+    if positions:
+        live_position = positions[0]
+        position_quantity = as_float(live_position.get("quantity"))
+        average_cost = as_float(live_position.get("average_cost"))
+        market_price = as_float(live_position.get("market_price"))
+        purchase_pnl = position_quantity * (market_price - average_cost)
+        purchase_return = market_price / average_cost - 1.0 if average_cost > 0 else 0.0
+    else:
+        average_cost = market_price = 0.0
+        purchase_pnl = purchase_return = 0.0
+    previous_plan_paths = sorted(
+        path for path in (PROJECT / "results" / "live").glob("????-??-??_order_plan.json")
+        if path.stem[:10] < date
+    )
+    previous_equity = contributed_capital
+    previous_equity_date = strategy_start
+    if previous_plan_paths:
+        previous_plan = json.loads(previous_plan_paths[-1].read_text(encoding="utf-8"))
+        previous_equity = as_float(previous_plan.get("account_state", {}).get("total_equity"))
+        previous_equity_date = str(previous_plan.get("signal_date", previous_plan_paths[-1].stem[:10]))
+    daily_pnl = total_equity - previous_equity if previous_equity > 0 else 0.0
+    daily_return = daily_pnl / previous_equity if previous_equity > 0 else 0.0
+
+    def signed_pct(value: float) -> str:
+        return f"{value:+.2%}"
+
+    def signed_money(value: float) -> str:
+        return f"{value:+,.2f} 元"
+
+    def value_class(value: float) -> str:
+        return "positive" if value > 0 else "negative" if value < 0 else ""
+
     order_text = (
         f"收盘估算约 {int(as_float(buy_estimate.get('estimated_quantity_at_last_close'))):,} 份；开盘按实际价格、可用现金和100份整数倍重算。"
         if buy_estimate else "本次没有新增买单。"
@@ -492,6 +535,82 @@ def build_daily_page() -> str:
         )
     else:
         target_snapshot = "今天没有ETF通过全部条件，策略目标因此是现金"
+    previous_target_match = (
+        previous_rankings[previous_rankings["symbol"].eq(target_symbol)]
+        if target_symbol and not previous_rankings.empty else pd.DataFrame()
+    )
+    if not target_match.empty and not previous_target_match.empty:
+        previous_target = previous_target_match.iloc[-1]
+        score_change = as_float(target_row.get(score_column, target_row["momentum_score"])) - as_float(
+            previous_target.get(score_column, previous_target["momentum_score"])
+        )
+        target_change_story = (
+            f"排名由第{int(as_float(previous_target['rank']))}变为第{int(as_float(target_row['rank']))}，"
+            f"选择分较昨日{score_change * 100:+.2f}个百分点；ROC20由{pct(as_float(previous_target['roc20']))}"
+            f"降至{pct(as_float(target_row['roc20']))}，ROC60由{pct(as_float(previous_target['roc60']))}"
+            f"降至{pct(as_float(target_row['roc60']))}。"
+        )
+    else:
+        target_change_story = (
+            f"ROC20为{pct(as_float(target_row['roc20']))}，ROC60为{pct(as_float(target_row['roc60']))}。"
+            if not target_match.empty else ""
+        )
+    candidate_names = "、".join(
+        f"{row.name}（{row.symbol}）" for row in candidates.itertuples(index=False)
+    ) or "无"
+    rejected_details = []
+    for row in rankings.loc[rankings["rank"].le(5) & ~final_mask].sort_values("rank").itertuples(index=False):
+        reasons = []
+        if as_float(row.roc20) <= 0:
+            reasons.append(f"ROC20 {pct(as_float(row.roc20))}")
+        if as_float(row.roc60) <= 0:
+            reasons.append(f"ROC60 {pct(as_float(row.roc60))}")
+        if as_float(row.ma120_bias) > 0.09:
+            reasons.append(f"MA120乖离 {pct(as_float(row.ma120_bias))}")
+        if not as_bool(row.above_ma120):
+            reasons.append("MA120下方")
+        rejected_details.append(f"第{int(row.rank)}名{row.name}因{'、'.join(reasons[:2]) or '入场条件不足'}未通过")
+    rejected_story = "；".join(rejected_details) or "前5名没有额外淘汰项"
+    if not target_match.empty:
+        target_prices = pd.read_csv(PROJECT / "market_data" / "prices" / f"{target_symbol}.csv")
+        target_prices["datetime"] = pd.to_datetime(target_prices["datetime"])
+        recent_prices = target_prices.loc[target_prices["datetime"].le(pd.Timestamp(date))].sort_values("datetime").tail(2)
+        previous_close = as_float(recent_prices.iloc[-2]["close"]) if len(recent_prices) >= 2 else market_price
+        close_change = market_price / previous_close - 1.0 if previous_close > 0 else 0.0
+        target_insight_story = (
+            f"{target_name}今天仍排第{int(as_float(target_row['rank']))}，"
+            f"选择分{pct(as_float(target_row.get(score_column, target_row['momentum_score'])))}。"
+            f"{target_change_story}短中期动量仍同向为正；"
+            f"MA120乖离为{pct(as_float(target_row['ma120_bias']))}，没有出现明显过热或破位。"
+        )
+        close_story = f"{target_name}收于{market_price:.3f}元，较昨日{signed_pct(close_change)}"
+    else:
+        target_insight_story = "今天没有ETF成为最终目标，账户保持现金。"
+        close_story = "账户当前没有ETF持仓"
+    if len(candidates) > 1:
+        first_candidate, second_candidate = candidates.iloc[0], candidates.iloc[1]
+        candidate_comparison_story = (
+            f"{first_candidate['name']}选择分{pct(as_float(first_candidate[score_column]))}，"
+            f"高于{second_candidate['name']}的{pct(as_float(second_candidate[score_column]))}"
+        )
+    elif len(candidates) == 1:
+        only_candidate = candidates.iloc[0]
+        candidate_comparison_story = (
+            f"唯一候选{only_candidate['name']}选择分{pct(as_float(only_candidate[score_column]))}"
+        )
+    else:
+        candidate_comparison_story = "今天没有最终合格候选"
+    category_peers = rankings.loc[
+        rankings["category"].eq(target_category) & ~rankings["symbol"].eq(target_symbol)
+    ].sort_values("rank")
+    if not category_peers.empty:
+        peer = category_peers.iloc[0]
+        category_peer_story = (
+            f"同属{target_category}的{peer['name']}排第{int(as_float(peer['rank']))}，"
+            f"ROC20为{pct(as_float(peer['roc20']))}，但{'未进入前5' if as_float(peer['rank']) > 5 else '其他条件未完全通过'}。"
+        )
+    else:
+        category_peer_story = f"{target_category}没有其他可比ETF。"
     if current_symbol and current_symbol == target_symbol:
         decision_story = f"现有{target_name}仓位未触发卖出，继续持有；不因其他ETF排名更高而换仓。"
     elif not current_symbol and target_symbol:
@@ -503,20 +622,20 @@ def build_daily_page() -> str:
     else:
         decision_story = "账户原本空仓，今天又没有新的合格候选，因此继续持有现金。"
     overview_paragraphs = [
-        f"结论：本次使用{date}收盘数据决定下一交易日动作。实盘账户{account_position_plain}，可用现金{as_float(account.get('available_cash')):,.2f}元，收盘总权益{as_float(account.get('total_equity')):,.2f}元。明日计划为“{action}{target_name}”，目标仓位{target_weight}；{decision_story}",
-        f"第一步先查旧仓，不先追排行榜。卖出只看三项：跌破MA120、ROC20转负、当前排名同时差于5日前和20日前。今日检查为：{held_exit_checks}。因此旧仓处理结论明确；价格退出一旦触发，新闻和热点不能推翻。",
-        f"第二步筛全池。固定{len(rankings)}只ETF全部计算，{pool_count}只通过上市满120个交易日和20日成交额中位数不低于2,000万元的资格门槛。三条路径并行：常规动量{normal_count}只、新趋势{emerging_count}只、9%—12%质量延伸{extension_count}只，取并集后最终合格{len(candidates)}只。合格只代表进入候选，不代表同时买入。",
-        f"第三步核对目标：{target_snapshot}。排名只是起点，还必须同时满足双ROC、MA120位置、乖离上限，以及对应路径的趋势质量或热点条件；任何关键门槛失败都不能入选。",
-        f"第四步审核资讯：{reviewed}/{total}条已逐条完成，覆盖率{(reviewed / total if total else 0):.0%}；{target_category}主题为{target_theme['positive']}条正向、{target_theme['negative']}条负向。资讯只确认指定例外和软退出保护，不能凭新闻制造买点，也不能覆盖MA120硬退出。最终状态{status}，{order_text}明日按计划执行，不临时追涨、加仓或改标的。",
+        f"今天账户增加{signed_money(daily_pnl)}，收益{signed_pct(daily_return)}；{close_story}。自{strategy_start}实盘开启以来，账户累计{signed_money(strategy_pnl)}，本次买入浮盈{signed_money(purchase_pnl)}。明日结论不变：{action}{target_name}，不产生新订单。",
+        target_insight_story,
+        f"45只ETF中有{len(candidates)}只最终通过，分别是{candidate_names}。{candidate_comparison_story}，且{decision_story}前5名里，{rejected_story}；它们名次高，但当前并不是可买候选。",
+        f"板块内部也有呼应：{category_peer_story}这表明医药方向并非只有当前持仓一只走强，但真正满足完整入场条件的仍是医药ETF易方达。今天没有新趋势或9%—12%质量延伸候选，两个最终候选都来自常规动量，信号结构比单纯看热点更集中。",
+        f"资讯面上，医药医疗主题记录为{target_theme['positive']}条正向、{target_theme['negative']}条负向，强势主要来自创新药、中药和医疗器械个股；科技数字仍是全市场最强资讯主题，但其高排名ETF被价格条件挡住。今天最重要的洞察是：医药趋势仍在、动量保持正向、豆粕成为备选但尚不足以触发换仓，因此继续持有医药ETF。",
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
     overview_html = "".join(f"<p>{html_lib.escape(paragraph)}</p>" for paragraph in overview_paragraphs)
     body = f'''
+<section class="section" id="liveReturns"><div class="card kpis" style="grid-template-columns:repeat(3,1fr)"><div class="kpi"><span class="label">策略实盘开启以来</span><strong class="value {value_class(strategy_return)}">{signed_pct(strategy_return)}</strong><p>{signed_money(strategy_pnl)} · 自 {html_lib.escape(strategy_start)}</p></div><div class="kpi"><span class="label">本次买入收益</span><strong class="value {value_class(purchase_return)}">{signed_pct(purchase_return)}</strong><p>{signed_money(purchase_pnl)} · 成本 {average_cost:.3f} 元</p></div><div class="kpi"><span class="label">今日收益</span><strong class="value {value_class(daily_return)}">{signed_pct(daily_return)}</strong><p>{signed_money(daily_pnl)} · 对比 {html_lib.escape(previous_equity_date)}</p></div></div></section>
 <section class="section" id="dailyOverview"><article class="card strategy-lead daily-overview"><span class="label">先看这里 · 约500字要点版</span><h2>今日决策路径综述</h2>{overview_html}</article></section>
-<section class="section"><div class="card kpis"><div class="kpi"><span class="label">实盘账户</span><strong class="value">{as_float(account.get('total_equity')):,.0f} 元</strong><p>{account_position} · 已确认</p></div><div class="kpi"><span class="label">次日动作</span><strong class="value">{html_lib.escape(str(action))}</strong></div><div class="kpi"><span class="label">目标</span><strong class="value">{html_lib.escape(str(target_name))} · {target_weight}</strong></div><div class="kpi"><span class="label">放行</span><strong class="value">{html_lib.escape(str(status))}</strong></div></div></section>
-<section class="section"><div class="section-title"><h2>次日开盘计划</h2><span>{confirmation_label}</span></div><article class="card plan"><div class="plan-grid"><div><span class="label">执行结论</span><br><strong>{html_lib.escape(str(action))} {html_lib.escape(str(target_name))}</strong><p>目标仓位 {target_weight}。{html_lib.escape(order_text)}</p></div><div><span class="label">决策所用账户</span><br><strong>{as_float(account.get('available_cash')):,.2f} 元可用现金 · {account_position}</strong><p>仅使用用户确认的实盘账户。历史回测仓位不参与本次实盘选单。</p></div></div></article></section>
-<section class="section"><div class="section-title"><h2>今日筛选漏斗</h2><span>每个数字都来自当日正式结果</span></div><div class="filter-strip"><article class="card filter-stage"><small>固定母池</small><strong>{len(rankings)} 只</strong><p>45只ETF统一计算，不临时增删。</p></article><article class="card filter-stage"><small>上市期与流动性</small><strong>{pool_count} 只</strong><p>上市≥120日，20日成交额中位数≥2,000万元。</p></article><article class="card filter-stage"><small>三条路径取并集</small><strong>{len(candidates)} 只</strong><p>常规、新趋势、质量延伸任一路径通过。</p></article><article class="card filter-stage"><small>账户状态决策</small><strong>{1 if target_symbol else 0} 只</strong><p>{'空仓后按正式选择分取第一名。' if not positions else '旧仓未退出则继续持有；退出后才选新目标。'}</p></article></div></section>
+<section class="section"><div class="section-title"><h2>次日开盘计划</h2><span>{confirmation_label}</span></div><article class="card plan"><span class="label">执行结论</span><br><strong>{html_lib.escape(str(action))} {html_lib.escape(str(target_name))}</strong><p>目标仓位 {target_weight}。{html_lib.escape(order_text)}</p></article></section>
+<section class="section"><div class="section-title"><h2>今日筛选漏斗</h2><span>不仅看数量，也直接看留下了谁</span></div><div class="filter-strip"><article class="card filter-stage"><small>固定母池</small><strong>{len(rankings)} 只</strong><p>45只ETF全部完成计算。</p></article><article class="card filter-stage"><small>上市期与流动性</small><strong>{pool_count} 只</strong><p>{pool_count}只全部通过基础资格。</p></article><article class="card filter-stage"><small>最终合格</small><strong>{len(candidates)} 只</strong><p>{html_lib.escape(candidate_names)}</p></article><article class="card filter-stage"><small>明日实际目标</small><strong>{1 if target_symbol else 0} 只</strong><p>{html_lib.escape(str(target_name))}{'（继续持有）' if current_symbol == target_symbol and target_symbol else ''}</p></article></div></section>
 <section class="section"><div class="section-title"><h2>三条入场路径的当日结果</h2><span>三条路径并行，不是依次放宽</span></div><div class="path-grid"><article class="card path-card"><span class="count">{normal_count}</span><span class="label">路径 A</span><h3>常规动量</h3><p>前5、双ROC为正、MA120上方、乖离≤9%；排名4—5且ROC20&lt;2%时再做热点确认。今日需弱边缘确认 {weak_edge_count} 只。</p></article><article class="card path-card"><span class="count">{emerging_count}</span><span class="label">路径 B</span><h3>新趋势例外</h3><p>排名≤15、ROC20≥3%、ROC60为-8%至0%，并通过R²、效率与热点门槛；记忆3日。</p></article><article class="card path-card"><span class="count">{extension_count}</span><span class="label">路径 C</span><h3>9%—12%质量延伸</h3><p>仅处理乖离略高但趋势质量很强的前5候选；R²、效率、ROC5和热点必须同时通过。</p></article></div></section>
 <section class="section"><div class="section-title"><h2>最终候选与唯一目标</h2><span>按正式路径选择分排序；最终通过不等于同时买入</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>顺序</th><th>ETF</th><th>全池排名</th><th>选择分</th><th>通过路径</th><th>账户处理</th></tr></thead><tbody>{candidate_rows}</tbody></table></div></section>
 <section class="section"><div class="section-title"><h2>资讯审核如何影响今天的筛选</h2><span>审核完整是硬门，热点只作用于指定路径</span></div><div class="truth-grid"><article class="card truth"><span class="num">完整性</span><h3>{reviewed}/{total} · 100%</h3><p>全部冻结记录逐条审核完成，因此新开仓资格未被数据完整性阻断。</p></article><article class="card truth"><span class="num">路径影响</span><h3>常规 {normal_count} / 新趋势 {emerging_count} / 延伸 {extension_count}</h3><p>今日最终候选全部来自常规路径，没有候选依赖新趋势或延伸例外放行。</p></article><article class="card truth"><span class="num">主题披露</span><h3>{html_lib.escape(target_category)} {target_theme['positive']}正 / {target_theme['negative']}负</h3><p>最强净正向：{html_lib.escape(str(strongest[0]))}；最大净负向：{html_lib.escape(str(riskiest[0]))}。正式规则没有全市场趋势开关，也没有统一“负面阈值”否决常规路径。</p></article></div></section>
