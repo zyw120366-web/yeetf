@@ -1,5 +1,5 @@
 {
-  "signal_date": "2026-07-21",
+  "signal_date": "2026-07-22",
   "execution_rule": {
     "signal_time": "每个交易日收盘后",
     "trade_time": "下一交易日开盘",
@@ -25,7 +25,7 @@
       "entered": "",
       "exited": "",
       "exit_reasons": "",
-      "entry_eligible_count": 1,
+      "entry_eligible_count": 2,
       "holding_count": 1,
       "exposure": 1.0
     },
