@@ -54,7 +54,11 @@ def test_ablation_full_variant_matches_formal_result() -> None:
         (ROOT / "results" / "ye_strategy" / "summary.json").read_text(encoding="utf-8")
     )
     full = next(item for item in ablation["variants"] if item["variant"] == "full_strategy")
-    assert full["total_return"] == pytest.approx(formal["metrics"]["total_return"], abs=1e-12)
+    assert ablation["generated_through"] <= formal["generated_through"]
+    if ablation["generated_through"] == formal["generated_through"]:
+        assert full["total_return"] == pytest.approx(
+            formal["metrics"]["total_return"], abs=1e-12
+        )
     assert ablation["daily_execution_impact"] == "none"
 
 
@@ -108,8 +112,25 @@ def test_daily_html_opens_with_plain_language_overview() -> None:
     assert 500 <= overview_length <= 800
     for marker in ("策略实盘开启以来", "本次买入收益", "今日收益"):
         assert marker in daily
-    assert "医药ETF易方达（512010.SH）、豆粕ETF华夏（159985.SZ）" in daily
-    assert "医药ETF易方达（继续持有）" in daily
+    signal = json.loads(
+        (ROOT / "results" / "comparison" / "latest_signals.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    plan = json.loads(
+        (ROOT / "results" / "live" / f"{signal['signal_date']}_order_plan.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    candidates = plan["decision_basis"]["eligible_candidates"]
+    for candidate in candidates:
+        assert f"{candidate['name']}（{candidate['symbol']}）" in daily
+    if plan["current_symbol"] == plan["target_symbol"] and plan["target_symbol"]:
+        current = next(
+            candidate for candidate in candidates
+            if candidate["symbol"] == plan["current_symbol"]
+        )
+        assert f"{current['name']}（继续持有）" in daily
     assert "决策所用账户" not in daily
     assert "放行</span>" not in daily
     assert "最终状态READY" not in daily

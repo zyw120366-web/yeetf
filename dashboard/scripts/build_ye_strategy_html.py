@@ -571,6 +571,7 @@ def build_daily_page() -> str:
             reasons.append("MA120下方")
         rejected_details.append(f"第{int(row.rank)}名{row.name}因{'、'.join(reasons[:2]) or '入场条件不足'}未通过")
     rejected_story = "；".join(rejected_details) or "前5名没有额外淘汰项"
+    leading_rejection = rejected_details[0] if rejected_details else "前5名没有额外淘汰项"
     if not target_match.empty:
         target_prices = pd.read_csv(PROJECT / "market_data" / "prices" / f"{target_symbol}.csv")
         target_prices["datetime"] = pd.to_datetime(target_prices["datetime"])
@@ -621,12 +622,19 @@ def build_daily_page() -> str:
         decision_story = "旧仓已经触发退出，但今天没有新的合格候选，因此卖出后持有现金。"
     else:
         decision_story = "账户原本空仓，今天又没有新的合格候选，因此继续持有现金。"
+    if current_symbol and current_symbol == target_symbol and target_symbol:
+        core_insight = (
+            f"{target_name}虽出现单日波动，但仍未触发价格退出；{leading_rejection}，"
+            "因此继续按既定纪律持有。"
+        )
+    else:
+        core_insight = decision_story
     overview_paragraphs = [
-        f"今天账户增加{signed_money(daily_pnl)}，收益{signed_pct(daily_return)}；{close_story}。自{strategy_start}实盘开启以来，账户累计{signed_money(strategy_pnl)}，本次买入浮盈{signed_money(purchase_pnl)}。明日结论不变：{action}{target_name}，不产生新订单。",
+        f"今天账户变动{signed_money(daily_pnl)}，收益{signed_pct(daily_return)}；{close_story}。自{strategy_start}实盘开启以来，账户累计{signed_money(strategy_pnl)}，本次买入浮动盈亏{signed_money(purchase_pnl)}。明日结论不变：{action}{target_name}，不产生新订单。",
         target_insight_story,
         f"45只ETF中有{len(candidates)}只最终通过，分别是{candidate_names}。{candidate_comparison_story}，且{decision_story}前5名里，{rejected_story}；它们名次高，但当前并不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}这表明医药方向并非只有当前持仓一只走强，但真正满足完整入场条件的仍是医药ETF易方达。今天没有新趋势或9%—12%质量延伸候选，两个最终候选都来自常规动量，信号结构比单纯看热点更集中。",
-        f"资讯面上，医药医疗主题记录为{target_theme['positive']}条正向、{target_theme['negative']}条负向，强势主要来自创新药、中药和医疗器械个股；科技数字仍是全市场最强资讯主题，但其高排名ETF被价格条件挡住。今天最重要的洞察是：医药趋势仍在、动量保持正向、豆粕成为备选但尚不足以触发换仓，因此继续持有医药ETF。",
+        f"板块内部也有呼应：{category_peer_story}这表明{target_category}方向并非只有当前目标走强，但真正满足完整入场条件的仍是{target_name}。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量，信号结构比单纯看热点更集中。",
+        f"资讯面上，{target_category}主题记录为{target_theme['positive']}条正向、{target_theme['negative']}条负向，均按专属关键词直接映射。今天最重要的洞察是：{core_insight}",
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")

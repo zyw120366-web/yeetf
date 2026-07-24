@@ -20,14 +20,14 @@
   },
   "blocking_items": [],
   "review_protocol": {
-    "required_for_signal_date": false,
-    "fingerprinted": false,
-    "status": "legacy_exempted"
+    "required_for_signal_date": true,
+    "fingerprinted": true,
+    "status": "fingerprinted"
   },
   "reconciliation": {
     "realized_round_trip_pnl": 546701.4825765907,
-    "open_position_pnl": 15965.000779444828,
+    "open_position_pnl": 39265.17134409632,
     "cash_management_net": 7124.492465753447,
-    "terminal_reconstructed_equity": 669790.975821789
+    "terminal_reconstructed_equity": 693091.1463864405
   }
 }

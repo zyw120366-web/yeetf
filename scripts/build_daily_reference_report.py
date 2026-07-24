@@ -54,6 +54,8 @@ def candidate_outcome(row: pd.Series, target_symbol: str | None, current_symbol:
     if not bool(row["final_entry_pass"]):
         return entry_blockers(row)
     if str(row["symbol"]) == target_symbol:
+        if current_symbol and current_symbol == target_symbol:
+            return "最终合格；现有实盘持仓未触发卖出，继续作为唯一目标"
         return "最终合格且正式路径选择分最高，选为唯一目标"
     if current_symbol and current_symbol == target_symbol:
         return "最终合格，但现有实盘持仓未触发卖出，策略不为追逐更高分而换仓"
@@ -205,6 +207,7 @@ def main() -> None:
             reasons.append(f"MA120乖离 {float(row['ma120_bias']):.2%}")
         rejected_details.append(f"第{int(row['rank'])}名{row['name']}因{'、'.join(reasons[:2]) or '入场条件不足'}未通过")
     rejected_story = "；".join(rejected_details) or "前5名没有额外淘汰项"
+    leading_rejection = rejected_details[0] if rejected_details else "前5名没有额外淘汰项"
     category_peers = ranking.loc[
         ranking["category"].eq(target_category) & ~ranking["symbol"].eq(target_symbol)
     ].sort_values("rank")
@@ -226,13 +229,20 @@ def main() -> None:
         decision_story = "旧仓已经触发退出，但今天没有新的合格候选，因此卖出后持有现金。"
     else:
         decision_story = "账户原本空仓，今天又没有新的合格候选，因此继续持有现金。"
+    if current_symbol and current_symbol == target_symbol and target_symbol:
+        core_insight = (
+            f"{target_name}虽出现单日波动，但仍未触发价格退出；{leading_rejection}，"
+            "因此继续按既定纪律持有。"
+        )
+    else:
+        core_insight = decision_story
     target_weight = "100%" if target_symbol else "0%"
     overview_paragraphs = [
-        f"今天账户增加{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮盈{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
+        f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
         target_insight,
         f"45只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}这说明医药方向并非只有当前持仓走强，但真正满足完整入场条件的仍是医药ETF易方达。今天没有新趋势或9%—12%质量延伸候选，两个最终候选都来自常规动量。",
-        f"资讯面上，医药医疗主题为{target_positive}条正向、{target_negative}条负向，强势主要来自创新药、中药和医疗器械个股。今天的核心洞察是：医药趋势仍在、动量保持正向、豆粕成为备选但尚不足以触发换仓，因此继续持有医药ETF。",
+        f"板块内部也有呼应：{category_peer_story}这说明{target_category}方向并非只有当前目标走强，但真正满足完整入场条件的仍是{target_name}。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
+        f"资讯面上，{target_category}主题为{target_positive}条正向、{target_negative}条负向，均按专属关键词直接映射。今天的核心洞察是：{core_insight}",
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
