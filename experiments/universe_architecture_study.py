@@ -17,6 +17,7 @@ from etf_rotation.backtest import run_backtest
 from etf_rotation.data import load_panel, symbol_key, universe_keys
 from etf_rotation.execution import execution_project, period_metrics
 from etf_rotation.sentiment import load_sentiment_matrices
+from etf_rotation.strategy import SignalBundle
 from etf_rotation.ye import build_ye_signals
 
 
@@ -78,9 +79,16 @@ def main() -> None:
             "core_anchor_challenger",
             formal["enhanced_selection"]["universe_architecture"]["challenger_symbols"],
         ),
+        "champion_cash_gap_45_plus_6": (
+            all_symbols,
+            "core_champion_cash_gap",
+            formal["enhanced_selection"]["universe_architecture"]["challenger_symbols"],
+        ),
     }
     rows = []
     date_checks: dict[str, dict] = {}
+    decisions: dict[str, dict] = {}
+    bundles: dict[str, SignalBundle] = {}
     for key, (symbols, mode, challengers) in variants.items():
         config = copy.deepcopy(formal)
         architecture = config["enhanced_selection"]["universe_architecture"]
@@ -109,6 +117,8 @@ def main() -> None:
             project,
             cash_management=cash_management(config),
         )
+        decisions[key] = decision
+        bundles[key] = bundle
         recent = period_metrics(result.equity, "2025-01-01", end, capital)
         rows.append({
             "variant": key,
@@ -126,14 +136,36 @@ def main() -> None:
             }
 
     metrics = pd.DataFrame(rows)
+    champion_decision = decisions["champion_cash_gap_45_plus_6"]
+    champion_bundle = bundles["champion_cash_gap_45_plus_6"]
+    core_available = champion_bundle.diagnostics[
+        "priority_entry_available"
+    ].astype(bool)
+    challenger_held = champion_bundle.weights[
+        formal["enhanced_selection"]["universe_architecture"]["challenger_symbols"]
+    ].sum(axis=1).gt(0.0)
+    core_rank_equal = decisions["core_45"]["entry_rank"].equals(
+        champion_decision["entry_rank"][core_symbols]
+    )
+    core_exit_equal = decisions["core_45"]["dual_rank_decline"].equals(
+        champion_decision["dual_rank_decline"][core_symbols]
+    )
+    invariants = {
+        "core_rank_unchanged": bool(core_rank_equal),
+        "core_rank_exit_unchanged": bool(core_exit_equal),
+        "challenger_held_while_core_entry_available_days": int(
+            (challenger_held & core_available).sum()
+        ),
+    }
     payload = {
         "status": "research_evidence_for_user_approved_change",
         "generated_through": end,
         "same_data_cost_and_execution": True,
         "variants": clean(metrics.to_dict(orient="records")),
         "communication_case": date_checks,
-        "decision": "采用45只核心锚定＋6只挑战者；拒绝51只全局混排。",
-        "reason": "新增ETF只能增加可选机会，不能因自身尚不可买而改变核心ETF的排名、类别宽度或退出。",
+        "path_isolation_invariants": invariants,
+        "decision": "采用45只核心冠军＋6只挑战者空档补位；拒绝51只全局混排和挑战者与核心平权竞争。",
+        "reason": "新增ETF不能改变核心排名和退出，也不能在已有合格核心候选时替代核心路径；挑战者只填补核心无候选的现金空档，并在核心候选恢复时让位。",
     }
     OUTPUT.mkdir(parents=True, exist_ok=True)
     metrics.to_csv(OUTPUT / "metrics.csv", index=False, encoding="utf-8-sig")
@@ -143,12 +175,13 @@ def main() -> None:
     labels = {
         "core_45": "原45只核心池",
         "global_rank_51": "51只全局混排（拒绝）",
-        "anchor_45_plus_6": "45核心＋6挑战者（正式）",
+        "anchor_45_plus_6": "45核心＋6挑战者平权竞争（拒绝）",
+        "champion_cash_gap_45_plus_6": "45核心冠军＋6挑战者空档补位（正式）",
     }
     lines = [
         "# ETF池排名架构对照",
         "",
-        "三组使用同一价格、资讯、成本和次日开盘执行。测试目的不是挑最高收益，而是验证扩池不会让不可买的新ETF破坏原有核心信号。",
+        "四组使用同一价格、资讯、成本和次日开盘执行。测试目的不是挑最高收益，而是验证扩池不会让新增ETF破坏原有核心信号。",
         "",
         "| 架构 | 累计收益 | 年化 | 最大回撤 | 交易数 | 2025—2026收益 |",
         "|---|---:|---:|---:|---:|---:|",
@@ -160,9 +193,11 @@ def main() -> None:
         )
     lines.extend([
         "",
-        "结论：拒绝把51只ETF直接放进同一个前五排名。正式架构保留原45只的相对排名、类别宽度和排名退出，6只挑战者只有在完整满足入场资格后，才按相对核心池的虚拟排名竞争。",
+        "结论：拒绝把51只ETF直接放进同一个前五排名，也拒绝让挑战者与合格核心候选平权竞争。正式架构保留原45只的相对排名、类别宽度和排名退出；只有核心池当天没有合格候选时，完整合格的挑战者才能填补空档，核心候选恢复即让位。",
         "",
-        "这是一项排名语义修复，不是根据哪组历史收益最高来选参数；挑战者造成的绩效变化必须来自它自身真正成交。",
+        f"结构不变量：核心排名不变={invariants['core_rank_unchanged']}；核心排名退出不变={invariants['core_rank_exit_unchanged']}；挑战者占仓且核心已有买点的天数={invariants['challenger_held_while_core_entry_available_days']}。",
+        "",
+        "这是一项路径优先级约束，不是根据哪组历史收益最高来选参数。它不能保证挑战者交易永不亏损，但可阻止挑战者导致核心机会被错过和后续持仓链持续分叉。",
         "",
     ])
     (OUTPUT / "summary.md").write_text("\n".join(lines), encoding="utf-8")

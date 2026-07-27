@@ -77,6 +77,31 @@
       "cash_management_fees": 1304.6300000000138,
       "return_2025_2026": 3.077867795593427,
       "max_drawdown_2025_2026": -0.12533599645475135
+    },
+    {
+      "variant": "champion_cash_gap_45_plus_6",
+      "total_return": 5.981998556408405,
+      "cagr": 0.27233804314605625,
+      "annual_volatility": 0.22244514497198498,
+      "sharpe": 1.235287887267242,
+      "sortino": 2.143969828187871,
+      "max_drawdown": -0.20906256593091377,
+      "calmar": 1.3026628747876954,
+      "annual_turnover": 16.332827038721945,
+      "trade_count": 264.0,
+      "average_exposure": 0.519101779129785,
+      "total_fees": 6588.810666412409,
+      "slippage_cost_estimate": 35773.73721643926,
+      "blocked_order_count": 0.0,
+      "limit_blocked_order_count": 0.0,
+      "eligibility_blocked_order_count": 0.0,
+      "liquidity_limited_order_count": 113.0,
+      "cash_management_annual_rate": 0.015,
+      "cash_interest_income": 8605.972602739756,
+      "cash_interest_calendar_days": 2947.0,
+      "cash_management_fees": 1388.3800000000065,
+      "return_2025_2026": 3.062610943522003,
+      "max_drawdown_2025_2026": -0.125341390811315
     }
   ],
   "communication_case": {
@@ -90,6 +115,10 @@
         "communication_entry_gate": false
       },
       "anchor_45_plus_6": {
+        "communication_rank": 4.0,
+        "communication_entry_gate": true
+      },
+      "champion_cash_gap_45_plus_6": {
         "communication_rank": 4.0,
         "communication_entry_gate": true
       }
@@ -106,9 +135,18 @@
       "anchor_45_plus_6": {
         "communication_rank": 1.0,
         "communication_entry_gate": false
+      },
+      "champion_cash_gap_45_plus_6": {
+        "communication_rank": 1.0,
+        "communication_entry_gate": false
       }
     }
   },
-  "decision": "采用45只核心锚定＋6只挑战者；拒绝51只全局混排。",
-  "reason": "新增ETF只能增加可选机会，不能因自身尚不可买而改变核心ETF的排名、类别宽度或退出。"
+  "path_isolation_invariants": {
+    "core_rank_unchanged": true,
+    "core_rank_exit_unchanged": true,
+    "challenger_held_while_core_entry_available_days": 0
+  },
+  "decision": "采用45只核心冠军＋6只挑战者空档补位；拒绝51只全局混排和挑战者与核心平权竞争。",
+  "reason": "新增ETF不能改变核心排名和退出，也不能在已有合格核心候选时替代核心路径；挑战者只填补核心无候选的现金空档，并在核心候选恢复时让位。"
 }

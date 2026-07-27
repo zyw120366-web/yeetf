@@ -157,7 +157,7 @@ def build_ye_signals(
         )
     challenger_symbols = [symbol for symbol in symbols if symbol in configured_challengers]
     core_symbols = [symbol for symbol in symbols if symbol not in set(challenger_symbols)]
-    if architecture_mode == "core_anchor_challenger":
+    if architecture_mode in {"core_anchor_challenger", "core_champion_cash_gap"}:
         expected_core = int(architecture["core_pool_size"])
         if len(core_symbols) != expected_core:
             raise ValueError(
@@ -305,6 +305,10 @@ def build_ye_signals(
         soft_exit_confirmation=soft_exit,
         dual_rank_decline_override=dual_rank_decline,
         reentry_cooldown_days=int(enhanced["reentry_cooldown_days"]),
+        priority_symbols=(
+            core_symbols if architecture_mode == "core_champion_cash_gap" else None
+        ),
+        preempt_for_priority_entry=architecture_mode == "core_champion_cash_gap",
     )
     decision = {
         "entry_gate": entry_gate,

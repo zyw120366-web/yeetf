@@ -1,6 +1,6 @@
 registry:
   purpose: 只登记尚未解决且获准研究的假设；不产生信号、不改变订单
   promotion_target: config/ye_strategy.yaml
-  current_formal_strategy_id: YE-FORMAL-2026-07-27
+  current_formal_strategy_id: YE-FORMAL-2026-07-27B
   rule: 没有明确假设、对照、失败条件和用户授权时，不保留待办式研究想法
 hypotheses: []

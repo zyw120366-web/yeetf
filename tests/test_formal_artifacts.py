@@ -71,13 +71,20 @@ def test_universe_architecture_evidence_matches_formal_result() -> None:
     formal = json.loads(
         (ROOT / "results" / "ye_strategy" / "summary.json").read_text(encoding="utf-8")
     )
-    anchor = next(item for item in study["variants"] if item["variant"] == "anchor_45_plus_6")
+    anchor = next(
+        item for item in study["variants"]
+        if item["variant"] == "champion_cash_gap_45_plus_6"
+    )
     assert study["same_data_cost_and_execution"] is True
     assert anchor["total_return"] == pytest.approx(formal["metrics"]["total_return"], abs=1e-12)
     communication = study["communication_case"]["2026-04-07"]
     assert communication["core_45"]["communication_rank"] == 4.0
     assert communication["global_rank_51"]["communication_rank"] == 6.0
-    assert communication["anchor_45_plus_6"]["communication_rank"] == 4.0
+    assert communication["champion_cash_gap_45_plus_6"]["communication_rank"] == 4.0
+    invariants = study["path_isolation_invariants"]
+    assert invariants["core_rank_unchanged"] is True
+    assert invariants["core_rank_exit_unchanged"] is True
+    assert invariants["challenger_held_while_core_entry_available_days"] == 0
 
 
 def test_public_html_contains_only_current_strategy_context() -> None:
@@ -103,7 +110,10 @@ def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:
     assert all(len(item["series"]) >= min(int(item["listed_sessions"]), 253) for item in items)
     assert sum(item["return_1y"] is not None for item in items) >= 40
     assert all(
-        {"rank", "momentum_score", "roc20", "roc60", "ma120_bias", "final_entry_pass"}
+        {
+            "rank", "momentum_score", "roc20", "roc60", "ma120_bias",
+            "technical_entry_pass", "final_entry_pass",
+        }
         <= item.keys()
         for item in items
     )

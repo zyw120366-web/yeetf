@@ -63,7 +63,7 @@ rules:
 enhanced_selection:
   fixed_pool_size: 51
   universe_architecture:
-    mode: core_anchor_challenger
+    mode: core_champion_cash_gap
     core_pool_size: 45
     challenger_symbols:
       - 560280.SH
@@ -72,8 +72,9 @@ enhanced_selection:
       - 513520.SH
       - 513030.SH
       - 561360.SH
-    entry_rule: 核心45只继续独立形成前5/前3强度标尺；挑战者只有完整满足上市、流动性、价格与AI路径后，才按相对核心池的虚拟排名竞争
-    isolation_rule: 挑战者不得稀释核心类别宽度、不得占据核心排名名额、不得改变核心持仓的排名退出；不合格挑战者对核心信号零影响
+    entry_rule: 核心45只继续独立形成前5/前3强度标尺并拥有第一买入权；只有当天没有任何合格核心候选时，完整合格的挑战者才按相对核心池的虚拟排名竞争
+    isolation_rule: 挑战者不得稀释核心类别宽度、不得占据核心排名名额、不得改变核心持仓的排名退出；持有挑战者时一旦出现合格核心候选，下一开盘让位；挑战者只能影响核心原本没有候选的空档
+    live_selection_order: 现有核心仓未退出则继续持有；空仓时核心候选优先；无核心候选才选挑战者；挑战者持仓遇核心候选时先卖挑战者再买核心
     promotion_rule: 挑战者只在半年或年度池版本复核中考虑晋升；每日执行不得调整核心池或挑战者清单
   price_only_for_historical_dates_without_sentiment:
     entry_rank_limit: 3
@@ -125,7 +126,7 @@ enhanced_selection:
 
 plain_language:
   score: ROC20 × 1.0 + ROC60 × 1.5；45只核心池形成冻结强度标尺，6只挑战者用相同分数与核心标尺比较
-  buy: 核心池照旧要求前5、双ROC为正、位于MA120上方且乖离不超过9%；挑战者必须先完整通过上市、流动性、价格与AI路径，才可凭相对核心池的虚拟排名竞争，任何不合格挑战者都不能挤掉核心候选
+  buy: 核心池照旧要求前5、双ROC为正、位于MA120上方且乖离不超过9%，并拥有第一买入权；只有当天无合格核心候选时，挑战者才可在完整通过上市、流动性、价格与AI路径后填补空档；核心候选恢复时挑战者让位
   hold: 最多持有1只；没有合格标的时持有现金
   sell: 跌破MA120、ROC20转负、或当前排名同时差于5日前和20日前，任一触发即退出；只有已审核热点可短暂保护软退出，MA120破位不延迟
   news: 所有已采集盘面与新闻逐条由AI审核；漏审、重复或来源失败均视为情绪数据不可用，禁止部分数据进入买入信号
@@ -133,12 +134,12 @@ plain_language:
 validation:
   backtest_start: '2018-07-02'
   backtest_end: '2026-07-27'
-  total_return: 4.94203714955203
-  cagr: 0.24715731677270036
-  max_drawdown: -0.2531344160704029
-  failed_operation_rate: 0.696969696969697
-  return_2021_2022: 0.15714348586635474
-  return_2025_2026: 3.077867795593427
+  total_return: 5.981998556408405
+  cagr: 0.27233804314605625
+  max_drawdown: -0.20906256593091377
+  failed_operation_rate: 0.676923076923077
+  return_2021_2022: 0.23620671475347677
+  return_2025_2026: 3.062610943522003
   live_use_allowed: true
   live_condition: 核心池与挑战者清单冻结；每日数据、AI审核覆盖率、次日开盘执行与固定成本记录全部通过检查
-  parameter_note: 动量、买卖、成本与仓位阈值未改变；2026-07-27只修复扩池时不合格ETF占位问题，并加入6只经事前覆盖审计的挑战者
+  parameter_note: 动量、价格买卖、成本与仓位阈值未改变；2026-07-27修复扩池占位与路径替代问题，6只挑战者只在核心无候选时补位并在核心候选恢复时让位

@@ -65,10 +65,19 @@ def choose_live_target(current: str | None, candidates: pd.DataFrame, reasons: l
 
 
 def order_candidates(candidates: pd.DataFrame) -> pd.DataFrame:
-    """Apply the frozen path-specific entry score used by the signal engine."""
+    """Give core candidates first right, then rank within each pool role."""
 
     score = "selection_score" if "selection_score" in candidates.columns else "momentum_score"
-    return candidates.sort_values([score, "rank"], ascending=[False, True])
+    ordered = candidates.copy()
+    role = (
+        ordered["pool_role"]
+        if "pool_role" in ordered.columns
+        else pd.Series("core", index=ordered.index)
+    )
+    ordered["pool_priority"] = role.map({"core": 0, "challenger": 1}).fillna(0)
+    return ordered.sort_values(
+        ["pool_priority", score, "rank"], ascending=[True, False, True]
+    )
 
 
 def estimate_buy(symbol: str, available_cash: float, day: pd.Timestamp, market: dict) -> dict:
@@ -154,6 +163,13 @@ def main() -> None:
         if held.empty:
             raise RuntimeError(f"confirmed live holding {current} is outside the fixed ETF pool")
         held_exit_reasons = exit_reasons(held.iloc[-1])
+        core_available = bool(
+            candidates["pool_role"].eq("core").any()
+            if "pool_role" in candidates.columns else len(candidates)
+        )
+        held_is_challenger = str(held.iloc[-1].get("pool_role", "core")) == "challenger"
+        if held_is_challenger and core_available:
+            held_exit_reasons.append("核心池出现合格候选（挑战者让位）")
     target = choose_live_target(current, candidates, held_exit_reasons)
     actions: list[dict] = []
     if current and current != target:
@@ -203,13 +219,14 @@ def main() -> None:
             "eligible_candidates": [
                 {
                     "symbol": str(row["symbol"]), "name": str(row["name"]),
+                    "pool_role": str(row.get("pool_role", "core")),
                     "rank": int(row["rank"]), "momentum_score": float(row["momentum_score"]),
                     "selection_score": float(row.get("selection_score", row["momentum_score"])),
                     "entry_path": "常规动量" if bool(row["normal_entry"]) else "新趋势" if bool(row["emerging_entry"]) else "质量延伸",
                 }
                 for _, row in candidates.iterrows()
             ],
-            "selection_rule": "空仓时按正式路径选择分排序：常规/质量延伸使用动量分，新趋势使用ROC20+0.05×R²20；已有仓位未触发卖出条件时不因其他候选分数更高而换仓。",
+            "selection_rule": "核心候选拥有第一买入权；只有当天无合格核心候选时，挑战者才按正式路径选择分填补空档。核心持仓未触发卖出时继续持有；挑战者持仓遇到合格核心候选时让位。",
             "backtest_shadow_note": "回测影子持仓只用于绩效和一致性审计，不代表真实账户持仓，也不决定首次实盘买单。",
         },
         "actions": actions,

@@ -91,7 +91,7 @@ def main() -> None:
     checks = {
         "single_strategy_name": config["name"] == "ye 策略" and config["role"] == "唯一正式策略",
         "pool_architecture_reconciles": (
-            architecture["mode"] == "core_anchor_challenger"
+            architecture["mode"] == "core_champion_cash_gap"
             and len(universe_symbols) == len(market["universe"])
             and len(universe_symbols) == config["enhanced_selection"]["fixed_pool_size"] == 51
             and len(core_symbols) == architecture["core_pool_size"] == 45

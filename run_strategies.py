@@ -289,6 +289,13 @@ def main() -> None:
         & ye_features.above_ma
         & ye_features.ma_bias.le(float(ye_config["rules"]["max_entry_ma_bias"]))
     )
+    technical_entry_pass = decision["entry_gate"] & ye_eligibility
+    core_entry_available = technical_entry_pass[decision["core_symbols"]].any(axis=1)
+    priority_entry_pass = technical_entry_pass.copy()
+    if decision["challenger_symbols"]:
+        priority_entry_pass.loc[:, decision["challenger_symbols"]] &= (
+            ~core_entry_available.to_numpy()[:, None]
+        )
     latest_ranking = pd.DataFrame({
         "date": str(latest.date()),
         "symbol": symbols,
@@ -315,7 +322,8 @@ def main() -> None:
         ],
         "pool_eligible": ye_eligibility.loc[latest].to_numpy(),
         "base_entry_pass": base_pass.loc[latest].to_numpy(),
-        "final_entry_pass": (decision["entry_gate"] & ye_eligibility).loc[latest].to_numpy(),
+        "technical_entry_pass": technical_entry_pass.loc[latest].to_numpy(),
+        "final_entry_pass": priority_entry_pass.loc[latest].to_numpy(),
         "normal_entry": decision["normal"].loc[latest].to_numpy(),
         "confirmed_normal_entry": decision["current_normal"].loc[latest].to_numpy(),
         "weak_edge_confirmed": decision["weak_edge_confirmed"].loc[latest].to_numpy(),

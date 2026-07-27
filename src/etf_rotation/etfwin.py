@@ -158,6 +158,8 @@ def etfwin_signals(
     profit_confirmation: pd.DataFrame | None = None,
     rank_only_entry_eligible: bool = False,
     reentry_cooldown_days: int = 0,
+    priority_symbols: list[str] | None = None,
+    preempt_for_priority_entry: bool = False,
 ) -> tuple[SignalBundle, EtfwinFeatures]:
     """Run an ETFWin-core rotation strategy without look-ahead.
 
@@ -177,6 +179,12 @@ def etfwin_signals(
     missing = set(symbols) - set(close.columns)
     if missing:
         raise KeyError(f"missing close series: {sorted(missing)}")
+    priority = set(priority_symbols or [])
+    missing_priority = priority - set(symbols)
+    if missing_priority:
+        raise KeyError(f"priority symbols are missing: {sorted(missing_priority)}")
+    if preempt_for_priority_entry and not priority:
+        raise ValueError("priority symbols are required when preemption is enabled")
     prices = close[symbols]
     features = etfwin_features(
         prices, rules, raw_score_override=raw_score_override
@@ -305,6 +313,11 @@ def etfwin_signals(
     for location, date in enumerate(prices.index):
         exited: list[str] = []
         reasons: dict[str, str] = {}
+        priority_available = any(
+            bool(entry.loc[date, symbol])
+            and location - last_exit_location[symbol] > reentry_cooldown_days
+            for symbol in priority
+        )
         for symbol in list(selected):
             price = float(prices.loc[date, symbol])
             if np.isfinite(price):
@@ -367,7 +380,9 @@ def etfwin_signals(
                     and bool(profit_confirmation.loc[date, symbol])  # type: ignore[union-attr]
                 )
             reason = None
-            if emergency_exit.loc[date, symbol]:
+            if preempt_for_priority_entry and symbol not in priority and priority_available:
+                reason = "核心池出现合格候选"
+            elif emergency_exit.loc[date, symbol]:
                 reason = "附加紧急风险退出"
             elif ma_break:
                 reason = "跌破MA120"
@@ -400,6 +415,8 @@ def etfwin_signals(
                 .dropna()
                 .sort_values(ascending=False)
             )
+            if priority_available:
+                candidates = candidates.loc[candidates.index.isin(priority)]
             for symbol in candidates.index:
                 symbol = str(symbol)
                 if symbol in selected or symbol in exited:
@@ -437,6 +454,7 @@ def etfwin_signals(
                     f"{symbol}:{reason}" for symbol, reason in reasons.items()
                 ),
                 "entry_eligible_count": int(entry.loc[date].sum()),
+                "priority_entry_available": bool(priority_available),
                 "holding_count": len(selected),
             }
         )

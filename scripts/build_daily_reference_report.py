@@ -52,11 +52,13 @@ def entry_blockers(row: pd.Series) -> str:
 
 def candidate_outcome(row: pd.Series, target_symbol: str | None, current_symbol: str | None) -> str:
     if not bool(row["final_entry_pass"]):
+        if bool(row.get("technical_entry_pass", False)):
+            return "技术条件已通过；当日存在核心候选，等待核心空档"
         return entry_blockers(row)
     if str(row["symbol"]) == target_symbol:
         if current_symbol and current_symbol == target_symbol:
             return "最终合格；现有实盘持仓未触发卖出，继续作为唯一目标"
-        return "最终合格且正式路径选择分最高，选为唯一目标"
+        return "最终合格且符合核心优先顺序，选为唯一目标"
     if current_symbol and current_symbol == target_symbol:
         return "最终合格，但现有实盘持仓未触发卖出，策略不为追逐更高分而换仓"
     return "最终合格，但正式路径选择分低于已选目标；不同时持有多只"
@@ -287,10 +289,10 @@ def main() -> None:
         "",
         f"## 二、今天怎样从 {len(ranking)} 只 ETF 得到唯一目标",
         "",
-        f"1. **冻结母池**：{len(ranking)}只ETF全部参与计算，其中45只核心、{len(ranking) - 45}只挑战者；挑战者不占核心排名名额。",
+        f"1. **冻结母池**：{len(ranking)}只ETF全部计算，其中45只核心、{len(ranking) - 45}只挑战者；核心独立排名并拥有买入优先权。",
         f"2. **新开仓资格**：{int(pool_eligible.sum())}/{len(ranking)}只通过上市≥120日、20日成交额中位数≥2,000万元。",
         f"3. **三条路径并行**：常规动量 {normal_count} 只、新趋势例外 {emerging_count} 只、9%—12%质量延伸 {extension_count} 只。",
-        f"4. **最终合格 {len(candidates)} 只**：{candidate_names}。",
+        f"4. **核心优先后最终合格 {len(candidates)} 只**：{candidate_names}；只有当天没有核心候选时，挑战者才补位。",
         f"5. **明日实际目标 {1 if target_symbol else 0} 只**：{target_name}（{target_symbol or '现金'}）；{account_decision}",
         "",
         "| 最终顺序 | ETF | 池角色 | 决策排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
