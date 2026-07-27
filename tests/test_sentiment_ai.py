@@ -67,6 +67,26 @@ def test_same_company_cross_source_rows_keep_audit_but_count_once() -> None:
     assert deduplicated[0]["source"] == "vendor_b"
 
 
+def test_snapshot_date_deduplicates_vendor_row_without_timestamp() -> None:
+    snapshot = {
+        "date": "2026-07-27",
+        "sources": {
+            "vendor_a": {
+                "ok": True,
+                "rows": [{"id": 1, "date": "2026-07-27", "name": "甲公司", "reason": "算力"}],
+            },
+            "vendor_b": {
+                "ok": True,
+                "rows": [{"id": 2, "name": "甲公司", "industry": "通信"}],
+            },
+        },
+    }
+    payload = review_snapshot(snapshot, {}, fake_review, model="test")
+    first, second = payload["items"]
+    assert first["normalization"]["event_key"] == second["normalization"]["event_key"]
+    assert second["normalization"]["duplicate_of"] == first["source_hash"]
+
+
 def test_generic_commodity_text_cannot_map_to_soybean_etf() -> None:
     review = {"matched_symbols": ["518880.SH", "159985.SZ"]}
     item = {"name": "招金黄金", "title": "黄金+半年报预增", "body": "贵金属"}

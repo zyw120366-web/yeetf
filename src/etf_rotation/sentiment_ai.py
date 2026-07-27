@@ -240,7 +240,14 @@ def review_snapshot(
     reviewed_items = []
     for item in inputs:
         review = by_hash[item["source_hash"]]
-        event_key = canonical_event_key(item)
+        # Some vendor rows omit their own timestamp even though the frozen
+        # snapshot has an unambiguous trading date. Use that date only for the
+        # cross-source event key so same-company rows still deduplicate while
+        # the immutable source row and source_hash remain untouched.
+        event_key = canonical_event_key({
+            **item,
+            "date": item.get("date") or snapshot.get("date"),
+        })
         duplicate_of = first_by_event.get(event_key)
         first_by_event.setdefault(event_key, item["source_hash"])
         effective, rejected = effective_symbol_mapping(item, review, symbol_keywords)

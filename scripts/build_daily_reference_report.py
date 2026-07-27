@@ -190,9 +190,17 @@ def main() -> None:
             recent_prices = price_frame.loc[price_frame["datetime"].le(pd.Timestamp(args.date))].sort_values("datetime").tail(2)
             previous_close = float(recent_prices.iloc[-2]["close"]) if len(recent_prices) >= 2 else market_price
         close_change = market_price / previous_close - 1.0 if previous_close > 0 else 0.0
+        roc20 = float(target["roc20"])
+        roc60 = float(target["roc60"])
+        if roc20 > 0 and roc60 > 0:
+            momentum_story = "ROC20、ROC60均为正，短中期动量同向。"
+        elif roc20 > 0:
+            momentum_story = "ROC20仍为正、ROC60已转负；中期动量走弱，但这不是现有仓位的独立卖出条件。"
+        else:
+            momentum_story = "ROC20已转负，需要按正式退出规则处理。"
         target_insight = (
             f"{target_name}收于{market_price:.3f}元、较昨日{close_change:+.2%}。{target_change_story}"
-            f"MA120乖离为{float(target['ma120_bias']):.2%}，短中期动量仍同向为正，趋势没有过热或破位。"
+            f"MA120乖离为{float(target['ma120_bias']):.2%}，价格仍在MA120上方。{momentum_story}"
         )
     else:
         target_insight = "今天没有ETF成为最终目标，账户保持现金。"
@@ -213,9 +221,15 @@ def main() -> None:
     ].sort_values("rank")
     if not category_peers.empty:
         peer = category_peers.iloc[0]
+        if bool(peer["final_entry_pass"]):
+            peer_result = "并已通过正式入场筛选"
+        elif float(peer["rank"]) > 5:
+            peer_result = "但未进入前5"
+        else:
+            peer_result = "但未通过完整入场条件"
         category_peer_story = (
             f"同属{target_category}的{peer['name']}排第{int(peer['rank'])}，ROC20为{float(peer['roc20']):.2%}，"
-            f"但{'未进入前5' if float(peer['rank']) > 5 else '其他条件未完全通过'}。"
+            f"{peer_result}。"
         )
     else:
         category_peer_story = f"{target_category}没有其他可比ETF。"
@@ -241,7 +255,7 @@ def main() -> None:
         f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
         target_insight,
         f"45只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}这说明{target_category}方向并非只有当前目标走强，但真正满足完整入场条件的仍是{target_name}。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
+        f"板块内部也有呼应：{category_peer_story}这说明{target_category}方向并非只有当前持仓走强；现有{target_name}没有触发退出，因此不会仅因出现新的合格候选而换仓。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
         f"资讯面上，{target_category}主题为{target_positive}条正向、{target_negative}条负向，均按专属关键词直接映射。今天的核心洞察是：{core_insight}",
     ]
     if len("".join(overview_paragraphs)) < 500:

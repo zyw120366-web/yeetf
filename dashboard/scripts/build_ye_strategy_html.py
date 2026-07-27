@@ -578,11 +578,19 @@ def build_daily_page() -> str:
         recent_prices = target_prices.loc[target_prices["datetime"].le(pd.Timestamp(date))].sort_values("datetime").tail(2)
         previous_close = as_float(recent_prices.iloc[-2]["close"]) if len(recent_prices) >= 2 else market_price
         close_change = market_price / previous_close - 1.0 if previous_close > 0 else 0.0
+        target_roc20 = as_float(target_row["roc20"])
+        target_roc60 = as_float(target_row["roc60"])
+        if target_roc20 > 0 and target_roc60 > 0:
+            momentum_story = "ROC20、ROC60均为正，短中期动量同向。"
+        elif target_roc20 > 0:
+            momentum_story = "ROC20仍为正、ROC60已转负；中期动量走弱，但这不是现有仓位的独立卖出条件。"
+        else:
+            momentum_story = "ROC20已转负，需要按正式退出规则处理。"
         target_insight_story = (
             f"{target_name}今天仍排第{int(as_float(target_row['rank']))}，"
             f"选择分{pct(as_float(target_row.get(score_column, target_row['momentum_score'])))}。"
-            f"{target_change_story}短中期动量仍同向为正；"
-            f"MA120乖离为{pct(as_float(target_row['ma120_bias']))}，没有出现明显过热或破位。"
+            f"{target_change_story}MA120乖离为{pct(as_float(target_row['ma120_bias']))}，价格仍在MA120上方。"
+            f"{momentum_story}"
         )
         close_story = f"{target_name}收于{market_price:.3f}元，较昨日{signed_pct(close_change)}"
     else:
@@ -606,9 +614,15 @@ def build_daily_page() -> str:
     ].sort_values("rank")
     if not category_peers.empty:
         peer = category_peers.iloc[0]
+        if as_bool(peer["final_entry_pass"]):
+            peer_result = "并已通过正式入场筛选"
+        elif as_float(peer["rank"]) > 5:
+            peer_result = "但未进入前5"
+        else:
+            peer_result = "但未通过完整入场条件"
         category_peer_story = (
             f"同属{target_category}的{peer['name']}排第{int(as_float(peer['rank']))}，"
-            f"ROC20为{pct(as_float(peer['roc20']))}，但{'未进入前5' if as_float(peer['rank']) > 5 else '其他条件未完全通过'}。"
+            f"ROC20为{pct(as_float(peer['roc20']))}，{peer_result}。"
         )
     else:
         category_peer_story = f"{target_category}没有其他可比ETF。"
@@ -633,7 +647,7 @@ def build_daily_page() -> str:
         f"今天账户变动{signed_money(daily_pnl)}，收益{signed_pct(daily_return)}；{close_story}。自{strategy_start}实盘开启以来，账户累计{signed_money(strategy_pnl)}，本次买入浮动盈亏{signed_money(purchase_pnl)}。明日结论不变：{action}{target_name}，不产生新订单。",
         target_insight_story,
         f"45只ETF中有{len(candidates)}只最终通过，分别是{candidate_names}。{candidate_comparison_story}，且{decision_story}前5名里，{rejected_story}；它们名次高，但当前并不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}这表明{target_category}方向并非只有当前目标走强，但真正满足完整入场条件的仍是{target_name}。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量，信号结构比单纯看热点更集中。",
+        f"板块内部也有呼应：{category_peer_story}这表明{target_category}方向并非只有当前持仓走强；现有{target_name}没有触发退出，因此不会仅因出现新的合格候选而换仓。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
         f"资讯面上，{target_category}主题记录为{target_theme['positive']}条正向、{target_theme['negative']}条负向，均按专属关键词直接映射。今天最重要的洞察是：{core_insight}",
     ]
     if len("".join(overview_paragraphs)) < 500:

@@ -127,8 +127,8 @@ def test_daily_html_opens_with_plain_language_overview() -> None:
         assert f"{candidate['name']}（{candidate['symbol']}）" in daily
     if plan["current_symbol"] == plan["target_symbol"] and plan["target_symbol"]:
         current = next(
-            candidate for candidate in candidates
-            if candidate["symbol"] == plan["current_symbol"]
+            position for position in plan["account_state"]["positions"]
+            if position["symbol"] == plan["current_symbol"]
         )
         assert f"{current['name']}（继续持有）" in daily
     assert "决策所用账户" not in daily
