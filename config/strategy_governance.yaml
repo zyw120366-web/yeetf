@@ -1,7 +1,8 @@
 formal_strategy:
-  id: YE-FORMAL-2026-07-22
+  id: YE-FORMAL-2026-07-27
   name: ye 策略
   status: frozen_for_live
+  effective_for_signal_dates_from: '2026-07-28'
   rule_source: config/ye_strategy.yaml
   execution_source: scripts/run_after_close.py
   daily_mode: 收盘后生成、下一交易日开盘执行
@@ -33,6 +34,11 @@ research_review:
   monthly_entry: experiments/monthly_live_review.py
   output: results/research/
 change_history:
+  - date: '2026-07-27'
+    approved_by: user
+    scope: 引入45只核心池加6只挑战者的锚定架构；挑战者不再稀释或阻塞核心排名、类别宽度与排名退出
+    unchanged: 动量公式、买卖阈值、单仓、成本、AI审核强度与每日人工步骤
+    effective_for_signal_dates_from: '2026-07-28'
   - date: '2026-07-22'
     approved_by: user
     scope: 收紧AI审核证据映射、跨来源事件去重、完整审核协议指纹；新增与每日入口隔离的消融和月度复盘

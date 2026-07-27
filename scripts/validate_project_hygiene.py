@@ -112,7 +112,10 @@ def collect_issues() -> list[str]:
     latest_card = ROOT / "results" / "audit" / f"{data_end}_live_run_card.json"
     if latest_card.exists():
         card = json.loads(latest_card.read_text(encoding="utf-8"))
-        if card.get("strategy", {}).get("id") != strategy_id:
+        effective_from = str(
+            governance["formal_strategy"].get("effective_for_signal_dates_from", "0001-01-01")
+        )
+        if data_end >= effective_from and card.get("strategy", {}).get("id") != strategy_id:
             issues.append("latest dated run card uses a stale formal strategy id")
     else:
         issues.append(f"missing latest dated run card: {latest_card.name}")

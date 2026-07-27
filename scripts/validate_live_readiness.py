@@ -51,6 +51,12 @@ def main() -> None:
     ]
     confirmed_symbol = str(confirmed_positions[0]["symbol"]) if len(confirmed_positions) == 1 else None
     metrics = audit["summary"]["metrics"]
+    architecture = config["enhanced_selection"]["universe_architecture"]
+    universe_symbols = {
+        f"{item['code']}.{item['market']}" for item in market["universe"]
+    }
+    challenger_symbols = set(architecture["challenger_symbols"])
+    core_symbols = universe_symbols - challenger_symbols
     final_equity = float(audit["equity"][-1]["equity"])
     cash_management_net = float(metrics.get("cash_interest_income", 0.0)) - float(
         metrics.get("cash_management_fees", 0.0)
@@ -84,7 +90,14 @@ def main() -> None:
     open_position_pnl = terminal_reconstructed_equity - initial_capital - realized_round_trip_pnl - cash_management_net
     checks = {
         "single_strategy_name": config["name"] == "ye 策略" and config["role"] == "唯一正式策略",
-        "pool_is_45": len(market["universe"]) == config["enhanced_selection"]["fixed_pool_size"] == 45,
+        "pool_architecture_reconciles": (
+            architecture["mode"] == "core_anchor_challenger"
+            and len(universe_symbols) == len(market["universe"])
+            and len(universe_symbols) == config["enhanced_selection"]["fixed_pool_size"] == 51
+            and len(core_symbols) == architecture["core_pool_size"] == 45
+            and len(challenger_symbols) == 6
+            and challenger_symbols <= universe_symbols
+        ),
         "ordinary_cost_reconciles": math.isclose(
             market["execution"]["fixed_default"]["commission_rate"] + market["execution"]["fixed_default"]["slippage_rate"],
             config["execution"]["ordinary_etf_one_way_cost"], abs_tol=1e-12,

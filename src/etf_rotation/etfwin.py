@@ -151,6 +151,7 @@ def etfwin_signals(
     raw_score_override: pd.DataFrame | None = None,
     entry_ranking_score_override: pd.DataFrame | None = None,
     soft_exit_confirmation: pd.DataFrame | None = None,
+    dual_rank_decline_override: pd.DataFrame | None = None,
     emergency_exit: pd.DataFrame | None = None,
     atr: pd.DataFrame | None = None,
     profit_protection: EtfwinProfitProtection | None = None,
@@ -223,6 +224,18 @@ def etfwin_signals(
             exit_rank.gt(exit_rank.shift(rules.rank_change_short_days))
             & exit_rank.gt(exit_rank.shift(rules.rank_change_long_days))
         ).fillna(False)
+    if dual_rank_decline_override is not None:
+        missing_decline = set(symbols) - set(dual_rank_decline_override.columns)
+        if missing_decline:
+            raise KeyError(
+                "dual-rank-decline override is missing symbols: "
+                f"{sorted(missing_decline)}"
+            )
+        dual_rank_decline = (
+            dual_rank_decline_override.reindex(index=prices.index, columns=symbols)
+            .fillna(False)
+            .astype(bool)
+        )
     if entry_gate is None:
         entry_gate = pd.DataFrame(True, index=prices.index, columns=symbols)
     else:

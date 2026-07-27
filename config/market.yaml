@@ -9,7 +9,7 @@ project:
 data_policy:
   historical_bars: easy-tdx / 通达信前复权日线
   quote_verification: 腾讯行情接口（按 a-stock-data 的直连方法核验）
-  universe_source: 用户母池 + 上交所ETF清单 + 流动性和相关性审计
+  universe_source: 冻结45只核心池 + 经覆盖、流动性和相关性审计的6只挑战者池
 
 execution:
   routine:
@@ -74,6 +74,12 @@ universe:
   - {code: '159611', market: SZ, name: 电力ETF广发, category: 基建公用}
   - {code: '516970', market: SH, name: 基建ETF广发, category: 基建公用}
   - {code: '159745', market: SZ, name: 建材ETF国泰, category: 基建公用}
+  - {code: '560280', market: SH, name: 工程机械ETF华泰柏瑞, category: 高端制造}
+  - {code: '561380', market: SH, name: 电网设备ETF广发, category: 基建公用}
+  - {code: '512980', market: SH, name: 传媒ETF广发, category: 科技数字}
+  - {code: '513520', market: SH, name: 日经ETF华夏, category: 港股与亚洲}
+  - {code: '513030', market: SH, name: 德国ETF华安, category: 海外欧洲}
+  - {code: '561360', market: SH, name: 石油ETF国泰, category: 周期资源}
 
 market_proxies: []
 benchmark: {code: '510300', market: SH, name: 沪深300ETF华泰柏瑞}

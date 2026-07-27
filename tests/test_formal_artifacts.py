@@ -62,6 +62,24 @@ def test_ablation_full_variant_matches_formal_result() -> None:
     assert ablation["daily_execution_impact"] == "none"
 
 
+def test_universe_architecture_evidence_matches_formal_result() -> None:
+    study = json.loads(
+        (ROOT / "results" / "research" / "universe_architecture_study" / "summary.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    formal = json.loads(
+        (ROOT / "results" / "ye_strategy" / "summary.json").read_text(encoding="utf-8")
+    )
+    anchor = next(item for item in study["variants"] if item["variant"] == "anchor_45_plus_6")
+    assert study["same_data_cost_and_execution"] is True
+    assert anchor["total_return"] == pytest.approx(formal["metrics"]["total_return"], abs=1e-12)
+    communication = study["communication_case"]["2026-04-07"]
+    assert communication["core_45"]["communication_rank"] == 4.0
+    assert communication["global_rank_51"]["communication_rank"] == 6.0
+    assert communication["anchor_45_plus_6"]["communication_rank"] == 4.0
+
+
 def test_public_html_contains_only_current_strategy_context() -> None:
     strategy = (ROOT / "dashboard" / "public" / "ye-strategy.html").read_text(encoding="utf-8")
     for stale in ("best_cooldown5", "继续研究方向", "ye v2", "重成本"):
@@ -78,8 +96,10 @@ def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:
     spec.loader.exec_module(module)
     dashboard = module.build_etf_dashboard()
     items = dashboard["items"]
-    assert len(items) == 45
-    assert len({item["symbol"] for item in items}) == 45
+    assert len(items) == 51
+    assert len({item["symbol"] for item in items}) == 51
+    assert sum(item["pool_role"] == "core" for item in items) == 45
+    assert sum(item["pool_role"] == "challenger" for item in items) == 6
     assert all(len(item["series"]) >= min(int(item["listed_sessions"]), 253) for item in items)
     assert sum(item["return_1y"] is not None for item in items) >= 40
     assert all(

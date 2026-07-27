@@ -254,7 +254,7 @@ def main() -> None:
     overview_paragraphs = [
         f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
         target_insight,
-        f"45只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
+        f"{len(ranking)}只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
         f"板块内部也有呼应：{category_peer_story}这说明{target_category}方向并非只有当前持仓走强；现有{target_name}没有触发退出，因此不会仅因出现新的合格候选而换仓。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
         f"资讯面上，{target_category}主题为{target_positive}条正向、{target_negative}条负向，均按专属关键词直接映射。今天的核心洞察是：{core_insight}",
     ]
@@ -285,18 +285,18 @@ def main() -> None:
         (f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。" if execution_orders else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"),
         f"- 固定成本：{plan['cost']}。",
         "",
-        "## 二、今天怎样从 45 只 ETF 得到唯一目标",
+        f"## 二、今天怎样从 {len(ranking)} 只 ETF 得到唯一目标",
         "",
-        f"1. **固定母池**：45只ETF全部参与计算。",
-        f"2. **新开仓资格**：{int(pool_eligible.sum())}/45只通过上市≥120日、20日成交额中位数≥2,000万元。",
+        f"1. **冻结母池**：{len(ranking)}只ETF全部参与计算，其中45只核心、{len(ranking) - 45}只挑战者；挑战者不占核心排名名额。",
+        f"2. **新开仓资格**：{int(pool_eligible.sum())}/{len(ranking)}只通过上市≥120日、20日成交额中位数≥2,000万元。",
         f"3. **三条路径并行**：常规动量 {normal_count} 只、新趋势例外 {emerging_count} 只、9%—12%质量延伸 {extension_count} 只。",
         f"4. **最终合格 {len(candidates)} 只**：{candidate_names}。",
         f"5. **明日实际目标 {1 if target_symbol else 0} 只**：{target_name}（{target_symbol or '现金'}）；{account_decision}",
         "",
-        "| 最终顺序 | ETF | 全池排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
-        "|---:|---|---:|---:|---:|---:|---:|---|---|",
+        "| 最终顺序 | ETF | 池角色 | 决策排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
+        "|---:|---|---|---:|---:|---:|---:|---:|---|---|",
         *[
-            f"| {index} | {row['name']}（{row['symbol']}） | {int(row['rank'])} | {row[score_column]:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {entry_path(row)} | {candidate_outcome(row, target_symbol, current_symbol)} |"
+            f"| {index} | {row['name']}（{row['symbol']}） | {'挑战者' if row.get('pool_role') == 'challenger' else '核心'} | {int(row['rank'])} | {row[score_column]:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {entry_path(row)} | {candidate_outcome(row, target_symbol, current_symbol)} |"
             for index, (_, row) in enumerate(candidates.iterrows(), start=1)
         ],
         "",
@@ -343,14 +343,14 @@ def main() -> None:
     detail_section_number = "六" if execution_orders else "五"
     lines.extend([
         "",
-        f"## {detail_section_number}、45只ETF逐层结果",
+        f"## {detail_section_number}、{len(ranking)}只ETF逐层结果",
         "",
         "‘最终通过’只代表进入候选集合，不代表同时买入；空仓时只买最终候选中动量分最高的一只。",
         "",
-        "| 排名 | ETF | 资格 | 动量分 | ROC20 | ROC60 | MA120乖离 | 常规 | 新趋势 | 延伸 | 最终处理 |",
-        "|---:|---|---|---:|---:|---:|---:|---|---|---|---|",
+        "| 决策排名 | ETF | 池角色 | 资格 | 动量分 | ROC20 | ROC60 | MA120乖离 | 常规 | 新趋势 | 延伸 | 最终处理 |",
+        "|---:|---|---|---|---:|---:|---:|---:|---|---|---|---|",
         *[
-            f"| {int(row['rank'])} | {row['name']}（{row['symbol']}） | {'通过' if row['pool_eligible'] else '未通过'} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row.get('confirmed_normal_entry', row['normal_entry']) and row['pool_eligible'] else '—'} | {'通过' if row['emerging_entry'] and row['pool_eligible'] else '—'} | {'通过' if row['quality_extension'] and row['pool_eligible'] else '—'} | {candidate_outcome(row, target_symbol, current_symbol)} |"
+            f"| {int(row['rank'])} | {row['name']}（{row['symbol']}） | {'挑战者' if row.get('pool_role') == 'challenger' else '核心'} | {'通过' if row['pool_eligible'] else '未通过'} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row.get('confirmed_normal_entry', row['normal_entry']) and row['pool_eligible'] else '—'} | {'通过' if row['emerging_entry'] and row['pool_eligible'] else '—'} | {'通过' if row['quality_extension'] and row['pool_eligible'] else '—'} | {candidate_outcome(row, target_symbol, current_symbol)} |"
             for _, row in ranking.iterrows()
         ],
     ])

@@ -14,6 +14,7 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
 每次运行前必须完整读取 `RESEARCH_MEMORY.md` 和 `RESEARCH_STATUS.md`。前者保存长期结论与变更记录，后者只保存当前冻结状态和账户事实；两者都不得覆盖配置和账户真源。
 
 - `config/ye_strategy.yaml` 是唯一正式策略规则；日常执行不得修改规则、ETF 池、成本、研究参数或网页口径。
+- 正式母池为45只核心ETF＋6只挑战者。核心池独立形成排名、类别宽度和核心持仓的排名退出；挑战者只有完整通过资格与入场路径后才按相对核心池的虚拟排名竞争。不得在日报或人工判断中把51只改回全局混排。
 - `config/strategy_governance.yaml` 定义正式冻结与放行边界；`config/research_hypotheses.yaml` 只登记独立研究，不产生任何日常信号。
 - 只使用信号日收盘数据，于下一交易日开盘执行。目标只能是现金 0% 或单一 ETF 100%。不加仓、减仓、网格、主观覆盖或分批止盈。
 - 所有资讯审核均在当前 Codex 对话中完成；不要求也不使用 `OPENAI_API_KEY`。用户可以直接要求逐条解释。
@@ -66,6 +67,8 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
    - `results/audit/YYYY-MM-DD_run_manifest.json`
    - `results/audit/YYYY-MM-DD_live_run_card.json`
    - `results/comparison/latest_signals.json`
+
+   同时确认 `latest_ranking.csv` 恰有51只、`pool_role` 为45个 `core` 与6个 `challenger`；任一不符视为池架构校验失败，不能放行新仓。
 
 6. 用 `apply_patch` 维护 `RESEARCH_STATUS.md` 的当前快照，并在 `RESEARCH_MEMORY.md` 的变更记录中增加一条简洁的当日运行或实质改动。没有写入记忆的项目改动不算完成；不得把详细日报复制进记忆。
 

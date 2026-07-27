@@ -280,7 +280,7 @@ def main() -> None:
     save_frame(timing, comparison_dir / "timing.csv")
     save_frame(equity.reset_index(), comparison_dir / "equity.csv")
     latest = calendar[-1]
-    rank = ye_features.rank
+    rank = decision["entry_rank"]
     base_pass = (
         ye_eligibility
         & rank.le(int(ye_config["rules"]["entry_rank_limit"]))
@@ -308,7 +308,11 @@ def main() -> None:
         "rank": rank.loc[latest].to_numpy(),
         "rank_5d_ago": rank.shift(int(ye_config["rules"]["rank_change_short_days"])).loc[latest].to_numpy(),
         "rank_20d_ago": rank.shift(int(ye_config["rules"]["rank_change_long_days"])).loc[latest].to_numpy(),
-        "dual_rank_decline": ye_features.dual_rank_decline.loc[latest].to_numpy(),
+        "dual_rank_decline": decision["dual_rank_decline"].loc[latest].to_numpy(),
+        "pool_role": [
+            "challenger" if symbol in decision["challenger_symbols"] else "core"
+            for symbol in symbols
+        ],
         "pool_eligible": ye_eligibility.loc[latest].to_numpy(),
         "base_entry_pass": base_pass.loc[latest].to_numpy(),
         "final_entry_pass": (decision["entry_gate"] & ye_eligibility).loc[latest].to_numpy(),

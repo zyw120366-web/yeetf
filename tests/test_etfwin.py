@@ -197,6 +197,35 @@ def test_entry_ranking_override_changes_entry_without_replacing_exit_features() 
     )
 
 
+def test_dual_rank_decline_override_controls_rank_exit_only() -> None:
+    close = price_frame()
+    rules = EtfwinRules(
+        roc_short_days=2,
+        roc_medium_days=4,
+        ma_days=5,
+        entry_rank_limit=2,
+        max_entry_ma_bias=1.0,
+        rank_change_short_days=2,
+        rank_change_long_days=4,
+        exit_on_ma_break=False,
+        exit_on_short_roc_negative=False,
+        exit_on_dual_rank_decline=True,
+    )
+    decline = pd.DataFrame(False, index=close.index, columns=close.columns)
+    decline.loc[close.index[-1], "steady"] = True
+    bundle, _ = etfwin_signals(
+        close,
+        list(close.columns),
+        rules,
+        dual_rank_decline_override=decline,
+    )
+    assert bundle.weights.loc[close.index[-2], "steady"] == 1.0
+    assert bundle.weights.loc[close.index[-1], "steady"] == 0.0
+    assert "5日与20日排名同时下滑" in bundle.diagnostics.loc[
+        close.index[-1], "exit_reasons"
+    ]
+
+
 def test_entry_ranking_override_orders_multiple_eligible_candidates() -> None:
     close = price_frame()
     rules = EtfwinRules(
