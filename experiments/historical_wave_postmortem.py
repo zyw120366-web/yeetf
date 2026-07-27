@@ -103,9 +103,12 @@ def main() -> None:
     sentiment, sentiment_available = load_sentiment_matrices(
         FEATURES, panel["close"].index, symbols
     )
-    formal, features, eligibility, _, _, decision = build_ye_signals(
+    formal, features, eligibility, _, trailing_amount, decision = build_ye_signals(
         panel, symbols, categories, config, sentiment, sentiment_available
     )
+    liquidity_only_eligibility = trailing_amount.ge(
+        float(config["rules"]["minimum_entry_amount"])
+    ).fillna(False)
 
     wave_rows = []
     for title, definition in WAVES.items():
@@ -168,20 +171,35 @@ def main() -> None:
         & features.ma_bias.le(0.12)
     )
     variants = {
-        "formal": decision["fallback"],
-        "remove_breadth_keep_top3": base & features.rank.le(3),
-        "remove_breadth_use_top5": base & features.rank.le(5),
-        "remove_breadth_top5_bias12": base_12 & features.rank.le(5),
+        "formal": {
+            "fallback": decision["fallback"],
+            "eligibility": eligibility,
+        },
+        "remove_breadth_keep_top3": {
+            "fallback": base & features.rank.le(3),
+            "eligibility": eligibility,
+        },
+        "remove_breadth_use_top5": {
+            "fallback": base & features.rank.le(5),
+            "eligibility": eligibility,
+        },
+        "remove_breadth_top5_bias12": {
+            "fallback": base_12 & features.rank.le(5),
+            "eligibility": eligibility,
+        },
+        "remove_listing_and_breadth_top3": {
+            "fallback": base & features.rank.le(3),
+            "eligibility": liquidity_only_eligibility,
+        },
+        "remove_listing_and_breadth_top5": {
+            "fallback": base & features.rank.le(5),
+            "eligibility": liquidity_only_eligibility,
+        },
     }
     premium_sensitive = [
         symbol for symbol in symbols
         if symbol.split(".")[0].startswith("513") or symbol == "159941.SZ"
     ]
-    project = execution_project(
-        market,
-        premium_sensitive,
-        eligibility.shift(1, fill_value=False).astype(bool),
-    )
     cash = config["cash_management"]
     cash_management = {
         "annual_rate": float(cash["historical_backtest_annual_rate"]),
@@ -190,16 +208,22 @@ def main() -> None:
         "order_lot": float(cash["order_lot"]),
     }
     counterfactuals = []
-    for variant, fallback in variants.items():
+    for variant, definition in variants.items():
+        variant_eligibility = definition["eligibility"]
+        project = execution_project(
+            market,
+            premium_sensitive,
+            variant_eligibility.shift(1, fill_value=False).astype(bool),
+        )
         if variant == "formal":
             bundle = formal
         else:
-            entry_gate = (~available & fallback) | (available & live_gate)
+            entry_gate = (~available & definition["fallback"]) | (available & live_gate)
             bundle, _ = etfwin_signals(
                 panel["close"][symbols],
                 symbols,
                 _rules(config["rules"]),
-                entry_eligibility=eligibility,
+                entry_eligibility=variant_eligibility,
                 entry_gate=entry_gate,
                 entry_ranking_score_override=decision["entry_score"],
                 soft_exit_confirmation=decision["soft_exit_confirmation"],
@@ -244,8 +268,9 @@ def main() -> None:
         "waves": wave_rows,
         "counterfactuals": counterfactuals,
         "conclusion": (
-            "五段主升浪主要被前3排名、75%类别宽度、9%乖离、120日上市门槛和单仓不换仓的交集挡住。"
-            "简单放宽会增加大量错误交易并显著扩大回撤，不能因漏掉几段已知行情直接修改正式参数。"
+            "五段主升浪主要被前3排名、75%类别宽度、9%乖离、MA120所需数据期和单仓不换仓的交集挡住。"
+            "但单独删除上市满120日并不会提前入场，因为MA120本身仍需120根有效日线；"
+            "简单放宽宽度、排名或乖离会增加大量错误交易并显著扩大回撤，不能因漏掉几段已知行情直接修改正式参数。"
         ),
     })
     OUTPUT.mkdir(parents=True, exist_ok=True)
@@ -286,6 +311,8 @@ def main() -> None:
         "remove_breadth_keep_top3": "去宽度、保留前3",
         "remove_breadth_use_top5": "去宽度、放到前5",
         "remove_breadth_top5_bias12": "去宽度、前5、乖离12%",
+        "remove_listing_and_breadth_top3": "去120日、去宽度、保留前3",
+        "remove_listing_and_breadth_top5": "去120日、去宽度、放到前5",
     }
     for key in labels:
         row = cf[key]
