@@ -1,0 +1,649 @@
+{
+  "status": "research_only",
+  "formal_strategy_id": "YE-FORMAL-2026-07-22",
+  "data_through": "2026-07-24",
+  "daily_execution_impact": "none",
+  "historical_regime": "2024年前没有情绪数据，使用排名前3、类别ROC20正向宽度至少75%的价格回退；当前前5、9%-12%质量延伸和新趋势例外并未追溯应用。",
+  "waves": [
+    {
+      "wave": "2021新能源",
+      "start": "2021-03-01",
+      "end": "2021-12-31",
+      "finding": "光伏在2021-06-21至22日满足前5和9%乖离，但只排第5/4，未满足历史回退的前3；次日升至第3时乖离已达9.8%。电池ETF直到2021-12-17才满120个交易日，已晚于11月高点。",
+      "portfolio_changes": [
+        {
+          "date": "2021-03-01",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2021-03-24",
+          "symbol": "513500.SH",
+          "name": "标普500ETF博时"
+        },
+        {
+          "date": "2021-03-30",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2021-04-08",
+          "symbol": "159941.SZ",
+          "name": "纳指ETF广发"
+        },
+        {
+          "date": "2021-04-22",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2021-06-07",
+          "symbol": "512760.SH",
+          "name": "芯片ETF国泰"
+        },
+        {
+          "date": "2021-08-18",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2021-10-27",
+          "symbol": "159865.SZ",
+          "name": "养殖ETF国泰"
+        },
+        {
+          "date": "2021-10-28",
+          "symbol": "510630.SH",
+          "name": "消费ETF华夏"
+        },
+        {
+          "date": "2021-11-10",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2021-11-16",
+          "symbol": "159865.SZ",
+          "name": "养殖ETF国泰"
+        },
+        {
+          "date": "2021-11-24",
+          "symbol": "512690.SH",
+          "name": "酒ETF鹏华"
+        },
+        {
+          "date": "2021-12-27",
+          "symbol": null,
+          "name": null
+        }
+      ],
+      "proxies": [
+        {
+          "symbol": "515790.SH",
+          "name": "光伏ETF华泰柏瑞",
+          "category": "高端制造",
+          "window_return": 0.4632479275158585,
+          "start_to_peak_return": 0.624786403945685,
+          "peak_date": "2021-08-30",
+          "first_entry_eligible_date": "2021-06-18",
+          "best_rank": 1.0,
+          "normal_days": 2,
+          "formal_fallback_days": 0,
+          "first_normal_date": "2021-06-21",
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 1,
+            "below_ma120": 0,
+            "ma120_bias_over_9pct": 85,
+            "rank_worse_than_3": 24,
+            "category_breadth_below_75pct": 45
+          }
+        },
+        {
+          "symbol": "159755.SZ",
+          "name": "电池ETF广发",
+          "category": "高端制造",
+          "window_return": 0.2321951617774769,
+          "start_to_peak_return": 0.4234146588817378,
+          "peak_date": "2021-11-29",
+          "first_entry_eligible_date": "2021-12-17",
+          "best_rank": 21.0,
+          "normal_days": 0,
+          "formal_fallback_days": 0,
+          "first_normal_date": null,
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 0,
+            "below_ma120": 0,
+            "ma120_bias_over_9pct": 0,
+            "rank_worse_than_3": 0,
+            "category_breadth_below_75pct": 0
+          }
+        }
+      ]
+    },
+    {
+      "wave": "2021元宇宙",
+      "start": "2021-09-01",
+      "end": "2021-12-31",
+      "finding": "游戏ETF在最强阶段排名第1，但MA120乖离约12%至17%，超过9%；11月26日回落后正式通过，组合已于11月24日选中酒ETF，单仓且旧仓有效不换仓。",
+      "portfolio_changes": [
+        {
+          "date": "2021-09-01",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2021-10-27",
+          "symbol": "159865.SZ",
+          "name": "养殖ETF国泰"
+        },
+        {
+          "date": "2021-10-28",
+          "symbol": "510630.SH",
+          "name": "消费ETF华夏"
+        },
+        {
+          "date": "2021-11-10",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2021-11-16",
+          "symbol": "159865.SZ",
+          "name": "养殖ETF国泰"
+        },
+        {
+          "date": "2021-11-24",
+          "symbol": "512690.SH",
+          "name": "酒ETF鹏华"
+        },
+        {
+          "date": "2021-12-27",
+          "symbol": null,
+          "name": null
+        }
+      ],
+      "proxies": [
+        {
+          "symbol": "159869.SZ",
+          "name": "游戏ETF华夏",
+          "category": "科技数字",
+          "window_return": 0.2815758722601289,
+          "start_to_peak_return": 0.2815758722601289,
+          "peak_date": "2021-12-31",
+          "first_entry_eligible_date": "2021-11-12",
+          "best_rank": 1.0,
+          "normal_days": 5,
+          "formal_fallback_days": 5,
+          "first_normal_date": "2021-11-26",
+          "first_formal_fallback_date": "2021-11-26",
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 0,
+            "below_ma120": 0,
+            "ma120_bias_over_9pct": 21,
+            "rank_worse_than_3": 0,
+            "category_breadth_below_75pct": 10
+          }
+        },
+        {
+          "symbol": "159819.SZ",
+          "name": "人工智能ETF易方达",
+          "category": "科技数字",
+          "window_return": 0.06882167396445471,
+          "start_to_peak_return": 0.06882167396445471,
+          "peak_date": "2021-12-31",
+          "first_entry_eligible_date": "2021-09-01",
+          "best_rank": 6.0,
+          "normal_days": 0,
+          "formal_fallback_days": 0,
+          "first_normal_date": null,
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 17,
+            "below_ma120": 8,
+            "ma120_bias_over_9pct": 0,
+            "rank_worse_than_3": 45,
+            "category_breadth_below_75pct": 20
+          }
+        },
+        {
+          "symbol": "515050.SH",
+          "name": "通信ETF华夏",
+          "category": "科技数字",
+          "window_return": 0.12800002098083496,
+          "start_to_peak_return": 0.13333336512247707,
+          "peak_date": "2021-12-24",
+          "first_entry_eligible_date": "2021-09-01",
+          "best_rank": 2.0,
+          "normal_days": 18,
+          "formal_fallback_days": 0,
+          "first_normal_date": "2021-11-22",
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 16,
+            "below_ma120": 4,
+            "ma120_bias_over_9pct": 0,
+            "rank_worse_than_3": 40,
+            "category_breadth_below_75pct": 22
+          }
+        }
+      ]
+    },
+    {
+      "wave": "2022末疫后复苏",
+      "start": "2022-10-01",
+      "end": "2023-02-28",
+      "finding": "旅游ETF从2022-11-03起已多日满足常规价格条件，但消费农业大类宽度多数只有20%至40%，低于历史回退要求的75%；唯一正式通过日是2023-02-27，已在主升浪之后且当时持有酒ETF。",
+      "portfolio_changes": [
+        {
+          "date": "2022-10-10",
+          "symbol": "518880.SH",
+          "name": "黄金ETF华安"
+        },
+        {
+          "date": "2022-10-11",
+          "symbol": "159985.SZ",
+          "name": "豆粕ETF华夏"
+        },
+        {
+          "date": "2022-11-29",
+          "symbol": "513200.SH",
+          "name": "港股通医药ETF易方达"
+        },
+        {
+          "date": "2023-01-31",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2023-02-08",
+          "symbol": "512690.SH",
+          "name": "酒ETF鹏华"
+        }
+      ],
+      "proxies": [
+        {
+          "symbol": "159766.SZ",
+          "name": "旅游ETF富国",
+          "category": "消费农业",
+          "window_return": 0.1775898376220746,
+          "start_to_peak_return": 0.21670195270113002,
+          "peak_date": "2022-12-14",
+          "first_entry_eligible_date": "2022-10-10",
+          "best_rank": 1.0,
+          "normal_days": 13,
+          "formal_fallback_days": 1,
+          "first_normal_date": "2022-11-03",
+          "first_formal_fallback_date": "2023-02-27",
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 3,
+            "below_ma120": 4,
+            "ma120_bias_over_9pct": 31,
+            "rank_worse_than_3": 34,
+            "category_breadth_below_75pct": 16
+          }
+        },
+        {
+          "symbol": "510630.SH",
+          "name": "消费ETF华夏",
+          "category": "消费农业",
+          "window_return": 0.10220269360481549,
+          "start_to_peak_return": 0.1268722948156038,
+          "peak_date": "2023-01-16",
+          "first_entry_eligible_date": null,
+          "best_rank": 4.0,
+          "normal_days": 0,
+          "formal_fallback_days": 0,
+          "first_normal_date": null,
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 0,
+            "below_ma120": 0,
+            "ma120_bias_over_9pct": 0,
+            "rank_worse_than_3": 0,
+            "category_breadth_below_75pct": 0
+          }
+        },
+        {
+          "symbol": "512690.SH",
+          "name": "酒ETF鹏华",
+          "category": "消费农业",
+          "window_return": 0.19640564856167253,
+          "start_to_peak_return": 0.232349162944947,
+          "peak_date": "2023-02-20",
+          "first_entry_eligible_date": "2022-10-10",
+          "best_rank": 1.0,
+          "normal_days": 12,
+          "formal_fallback_days": 6,
+          "first_normal_date": "2022-12-09",
+          "first_formal_fallback_date": "2022-12-14",
+          "held_days": 15,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 14,
+            "below_ma120": 14,
+            "ma120_bias_over_9pct": 33,
+            "rank_worse_than_3": 42,
+            "category_breadth_below_75pct": 12
+          }
+        }
+      ]
+    },
+    {
+      "wave": "2023 AI算力+CPO",
+      "start": "2023-01-01",
+      "end": "2023-06-30",
+      "finding": "人工智能和通信ETF在主升阶段多数时间MA120乖离超过9%；少数回落到9%以内的日期通常只排第4/5，未满足历史回退的前3。策略在2023-03-09至04-27基本空仓，因此核心原因不是仓位占用。",
+      "portfolio_changes": [
+        {
+          "date": "2023-01-03",
+          "symbol": "513200.SH",
+          "name": "港股通医药ETF易方达"
+        },
+        {
+          "date": "2023-01-31",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2023-02-08",
+          "symbol": "512690.SH",
+          "name": "酒ETF鹏华"
+        },
+        {
+          "date": "2023-03-08",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2023-04-28",
+          "symbol": "510880.SH",
+          "name": "红利ETF华泰柏瑞"
+        },
+        {
+          "date": "2023-05-24",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2023-05-30",
+          "symbol": "513500.SH",
+          "name": "标普500ETF博时"
+        },
+        {
+          "date": "2023-06-20",
+          "symbol": null,
+          "name": null
+        }
+      ],
+      "proxies": [
+        {
+          "symbol": "159819.SZ",
+          "name": "人工智能ETF易方达",
+          "category": "科技数字",
+          "window_return": 0.30647482261185854,
+          "start_to_peak_return": 0.4848920233976106,
+          "peak_date": "2023-06-20",
+          "first_entry_eligible_date": "2023-01-03",
+          "best_rank": 1.0,
+          "normal_days": 4,
+          "formal_fallback_days": 0,
+          "first_normal_date": "2023-06-06",
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 5,
+            "below_ma120": 0,
+            "ma120_bias_over_9pct": 72,
+            "rank_worse_than_3": 39,
+            "category_breadth_below_75pct": 11
+          }
+        },
+        {
+          "symbol": "515050.SH",
+          "name": "通信ETF华夏",
+          "category": "科技数字",
+          "window_return": 0.3185184890841273,
+          "start_to_peak_return": 0.38518517782658734,
+          "peak_date": "2023-06-20",
+          "first_entry_eligible_date": "2023-01-03",
+          "best_rank": 2.0,
+          "normal_days": 6,
+          "formal_fallback_days": 0,
+          "first_normal_date": "2023-03-17",
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 0,
+            "below_ma120": 4,
+            "ma120_bias_over_9pct": 45,
+            "rank_worse_than_3": 73,
+            "category_breadth_below_75pct": 8
+          }
+        },
+        {
+          "symbol": "512760.SH",
+          "name": "芯片ETF国泰",
+          "category": "科技数字",
+          "window_return": 0.06962029892734911,
+          "start_to_peak_return": 0.3185653816102445,
+          "peak_date": "2023-04-07",
+          "first_entry_eligible_date": "2023-01-03",
+          "best_rank": 3.0,
+          "normal_days": 0,
+          "formal_fallback_days": 0,
+          "first_normal_date": null,
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 4,
+            "below_ma120": 7,
+            "ma120_bias_over_9pct": 21,
+            "rank_worse_than_3": 54,
+            "category_breadth_below_75pct": 4
+          }
+        }
+      ]
+    },
+    {
+      "wave": "2023中特估",
+      "start": "2022-11-01",
+      "end": "2023-05-31",
+      "finding": "基建ETF在2022-12-05正式通过，但当时持有港股医药且未触发退出；红利ETF到2023-04-28才升至前3并通过，五一假期后开盘成交时已接近5月8日阶段高点，最终该笔约亏3.25%。",
+      "portfolio_changes": [
+        {
+          "date": "2022-11-01",
+          "symbol": "159985.SZ",
+          "name": "豆粕ETF华夏"
+        },
+        {
+          "date": "2022-11-29",
+          "symbol": "513200.SH",
+          "name": "港股通医药ETF易方达"
+        },
+        {
+          "date": "2023-01-31",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2023-02-08",
+          "symbol": "512690.SH",
+          "name": "酒ETF鹏华"
+        },
+        {
+          "date": "2023-03-08",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2023-04-28",
+          "symbol": "510880.SH",
+          "name": "红利ETF华泰柏瑞"
+        },
+        {
+          "date": "2023-05-24",
+          "symbol": null,
+          "name": null
+        },
+        {
+          "date": "2023-05-30",
+          "symbol": "513500.SH",
+          "name": "标普500ETF博时"
+        }
+      ],
+      "proxies": [
+        {
+          "symbol": "516970.SH",
+          "name": "基建ETF广发",
+          "category": "基建公用",
+          "window_return": 0.1943906843362342,
+          "start_to_peak_return": 0.3558993204955463,
+          "peak_date": "2023-05-08",
+          "first_entry_eligible_date": "2022-11-01",
+          "best_rank": 1.0,
+          "normal_days": 4,
+          "formal_fallback_days": 1,
+          "first_normal_date": "2022-11-28",
+          "first_formal_fallback_date": "2022-12-05",
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 19,
+            "below_ma120": 18,
+            "ma120_bias_over_9pct": 42,
+            "rank_worse_than_3": 88,
+            "category_breadth_below_75pct": 68
+          }
+        },
+        {
+          "symbol": "510880.SH",
+          "name": "红利ETF华泰柏瑞",
+          "category": "风格红利",
+          "window_return": 0.16222320740314977,
+          "start_to_peak_return": 0.2801626159031545,
+          "peak_date": "2023-05-08",
+          "first_entry_eligible_date": "2022-11-01",
+          "best_rank": 2.0,
+          "normal_days": 6,
+          "formal_fallback_days": 2,
+          "first_normal_date": "2023-04-25",
+          "first_formal_fallback_date": "2023-04-28",
+          "held_days": 15,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 16,
+            "below_ma120": 13,
+            "ma120_bias_over_9pct": 10,
+            "rank_worse_than_3": 85,
+            "category_breadth_below_75pct": 13
+          }
+        },
+        {
+          "symbol": "512040.SH",
+          "name": "价值100ETF富国",
+          "category": "风格红利",
+          "window_return": 0.12745101149251026,
+          "start_to_peak_return": 0.21848742442147606,
+          "peak_date": "2023-05-08",
+          "first_entry_eligible_date": "2022-12-28",
+          "best_rank": 6.0,
+          "normal_days": 0,
+          "formal_fallback_days": 0,
+          "first_normal_date": null,
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 0,
+            "below_ma120": 0,
+            "ma120_bias_over_9pct": 2,
+            "rank_worse_than_3": 24,
+            "category_breadth_below_75pct": 0
+          }
+        },
+        {
+          "symbol": "159611.SZ",
+          "name": "电力ETF广发",
+          "category": "基建公用",
+          "window_return": 0.14387632454664478,
+          "start_to_peak_return": 0.15933412612470121,
+          "peak_date": "2023-05-29",
+          "first_entry_eligible_date": "2022-11-01",
+          "best_rank": 3.0,
+          "normal_days": 7,
+          "formal_fallback_days": 0,
+          "first_normal_date": "2023-05-17",
+          "first_formal_fallback_date": null,
+          "held_days": 0,
+          "blocker_day_counts": {
+            "roc60_nonpositive": 32,
+            "below_ma120": 36,
+            "ma120_bias_over_9pct": 2,
+            "rank_worse_than_3": 87,
+            "category_breadth_below_75pct": 52
+          }
+        }
+      ]
+    }
+  ],
+  "counterfactuals": [
+    {
+      "variant": "formal",
+      "full_total_return": 5.930911463864391,
+      "full_cagr": 0.2714913467365765,
+      "full_max_drawdown": -0.2218193578066835,
+      "return_2021_2023": 0.44318962189622635,
+      "annual_returns": {
+        "2021": 0.18658258388142857,
+        "2022": 0.015996219924556687,
+        "2023": 0.1971080062080719
+      },
+      "fill_count": 256
+    },
+    {
+      "variant": "remove_breadth_keep_top3",
+      "full_total_return": 5.0297564584566965,
+      "full_cagr": 0.2497081176742959,
+      "full_max_drawdown": -0.3664336304546125,
+      "return_2021_2023": -0.010489544957912544,
+      "annual_returns": {
+        "2021": 0.17196541428690626,
+        "2022": -0.15905457072611562,
+        "2023": 0.004009396491923445
+      },
+      "fill_count": 332
+    },
+    {
+      "variant": "remove_breadth_use_top5",
+      "full_total_return": 3.660992133988473,
+      "full_cagr": 0.21041798610473372,
+      "full_max_drawdown": -0.4006068811878172,
+      "return_2021_2023": -0.2324201332791216,
+      "annual_returns": {
+        "2021": -0.08565642478241564,
+        "2022": -0.18777347736525207,
+        "2023": 0.033563086827997024
+      },
+      "fill_count": 399
+    },
+    {
+      "variant": "remove_breadth_top5_bias12",
+      "full_total_return": 7.955381739730855,
+      "full_cagr": 0.31256605348164945,
+      "full_max_drawdown": -0.45049804784646863,
+      "return_2021_2023": -0.18780168794524943,
+      "annual_returns": {
+        "2021": 0.009634981533574338,
+        "2022": -0.2652037623030815,
+        "2023": 0.09478986719518967
+      },
+      "fill_count": 499
+    }
+  ],
+  "conclusion": "五段主升浪主要被前3排名、75%类别宽度、9%乖离、120日上市门槛和单仓不换仓的交集挡住。简单放宽会增加大量错误交易并显著扩大回撤，不能因漏掉几段已知行情直接修改正式参数。"
+}
