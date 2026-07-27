@@ -395,6 +395,7 @@ def build_daily_page() -> str:
     candidates = rankings.loc[final_mask].copy()
     score_column = "selection_score" if "selection_score" in candidates else "momentum_score"
     candidates = candidates.sort_values([score_column, "rank"], ascending=[False, True])
+    current_symbol = plan.get("current_symbol")
 
     def path_name(row) -> str:
         normal_value = getattr(row, "confirmed_normal_entry", getattr(row, "normal_entry", False))
@@ -406,8 +407,15 @@ def build_daily_page() -> str:
             return "9%—12%质量延伸"
         return "未通过"
 
+    def candidate_handling(symbol: str, index: int) -> str:
+        if symbol == target_symbol:
+            return "<b>唯一目标</b>"
+        if current_symbol == target_symbol and target_symbol:
+            return "合格；现有仓位未触发退出，不换仓"
+        return "合格，选择分较低" if index > 1 else "合格；当前计划未选用"
+
     candidate_rows = "".join(
-        f"<tr><td>{index}</td><td><b>{html_lib.escape(str(row.name))}</b><br><span class=\"muted\">{row.symbol}</span></td><td>{int(row.rank)}</td><td>{pct(as_float(getattr(row, score_column)))}</td><td>{html_lib.escape(path_name(row))}</td><td>{'<b>唯一目标</b>' if str(row.symbol) == target_symbol else '合格，选择分较低'}</td></tr>"
+        f"<tr><td>{index}</td><td><b>{html_lib.escape(str(row.name))}</b><br><span class=\"muted\">{row.symbol}</span></td><td>{int(row.rank)}</td><td>{pct(as_float(getattr(row, score_column)))}</td><td>{html_lib.escape(path_name(row))}</td><td>{candidate_handling(str(row.symbol), index)}</td></tr>"
         for index, row in enumerate(candidates.itertuples(index=False), start=1)
     )
 
@@ -422,7 +430,11 @@ def build_daily_page() -> str:
         if str(row.symbol) == target_symbol:
             handling = "<b>唯一目标</b>"
         elif final_ok:
-            handling = "最终合格，选择分较低"
+            handling = (
+                "最终合格；现有仓位未触发退出，不换仓"
+                if current_symbol == target_symbol and target_symbol
+                else "最终合格，选择分较低"
+            )
         else:
             blockers = []
             if not pool_ok: blockers.append("上市期/流动性")
@@ -514,7 +526,6 @@ def build_daily_page() -> str:
         if buy_estimate else "本次没有新增买单。"
     )
     confirmation_label = "买卖计划待成交确认" if orders else "无买卖订单 · 无需成交确认"
-    current_symbol = plan.get("current_symbol")
     held_match = rankings[rankings["symbol"].eq(current_symbol)] if current_symbol else pd.DataFrame()
     if not held_match.empty:
         held_row = held_match.iloc[-1]
