@@ -3,7 +3,7 @@
   "core_backtest_and_site": "PASS",
   "checks": {
     "single_strategy_name": true,
-    "pool_is_45": true,
+    "pool_architecture_reconciles": true,
     "ordinary_cost_reconciles": true,
     "premium_cost_reconciles": true,
     "equity_return_reconciles": true,
@@ -25,9 +25,9 @@
     "status": "fingerprinted"
   },
   "reconciliation": {
-    "realized_round_trip_pnl": 546701.4825765907,
-    "open_position_pnl": 28371.567303950444,
-    "cash_management_net": 7124.492465753447,
-    "terminal_reconstructed_equity": 682197.5423462946
+    "realized_round_trip_pnl": 562115.6292837386,
+    "open_position_pnl": -12323.43434751994,
+    "cash_management_net": 7217.592602739749,
+    "terminal_reconstructed_equity": 657009.7875389584
   }
 }
