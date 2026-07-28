@@ -129,6 +129,15 @@ def build_etf_dashboard() -> dict:
 
 def build_payload() -> dict:
     audit = json.loads(AUDIT_PATH.read_text(encoding="utf-8"))
+    market = yaml.safe_load((PROJECT / "config" / "market.yaml").read_text(encoding="utf-8"))
+    formal = yaml.safe_load((PROJECT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
+    satellite_symbols = set(
+        formal["enhanced_selection"]["universe_architecture"]["challenger_symbols"]
+    )
+    fund_names = {
+        f"{item['code']}.{item['market']}": item["name"]
+        for item in market["universe"]
+    }
     reference = json.loads(
         (PROJECT / "results" / "etfwin_reference" / "reference_summary.json").read_text(
             encoding="utf-8"
@@ -165,6 +174,7 @@ def build_payload() -> dict:
     trades = []
     for trade in completed:
         item = dict(trade)
+        item["pool_role"] = "satellite" if trade["symbol"] in satellite_symbols else "core"
         item["buy_fills"] = [
             {"date": fill["date"], "price": fill["execution_price"], "quantity": fill["quantity"]}
             for fill in fills
@@ -178,6 +188,23 @@ def build_payload() -> dict:
             and trade["exit_start_date"] <= fill["date"] <= trade["exit_completed_date"]
         ]
         trades.append(item)
+    satellite_trades = [trade for trade in trades if trade["pool_role"] == "satellite"]
+    satellite_rows = []
+    for symbol in sorted(satellite_symbols):
+        symbol_trades = [trade for trade in satellite_trades if trade["symbol"] == symbol]
+        satellite_rows.append(
+            {
+                "symbol": symbol,
+                "name": fund_names[symbol],
+                "completed_trades": len(symbol_trades),
+                "realized_net_pnl": sum(float(trade["net_pnl"]) for trade in symbol_trades),
+                "holding_days": sum(int(trade["holding_days"]) for trade in symbol_trades),
+                "last_entry_date": max(
+                    (str(trade["entry_start_date"]) for trade in symbol_trades),
+                    default=None,
+                ),
+            }
+        )
     prices = {}
     for symbol in sorted({trade["symbol"] for trade in trades}):
         frame = pd.read_csv(PROJECT / "market_data" / "prices" / f"{symbol}.csv")
@@ -211,6 +238,15 @@ def build_payload() -> dict:
         "comparisons": comparisons,
         "trades": trades,
         "prices": prices,
+        "satellite_backtest": {
+            "configured_count": len(satellite_symbols),
+            "completed_trades": len(satellite_trades),
+            "realized_net_pnl": sum(float(trade["net_pnl"]) for trade in satellite_trades),
+            "holding_days": sum(int(trade["holding_days"]) for trade in satellite_trades),
+            "traded_symbols": sorted({trade["symbol"] for trade in satellite_trades}),
+            "items": satellite_rows,
+            "note": "卫星历史盈亏是正式回测中的实际成交汇总，不等于相对45只核心反事实的边际贡献。",
+        },
         "etf_dashboard": build_etf_dashboard(),
     })
 
@@ -223,12 +259,13 @@ HTML = r'''<!doctype html>
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;font-variant-numeric:tabular-nums}button,input,select{font:inherit}.shell{display:grid;grid-template-columns:184px 1fr;min-height:100vh}.side{position:sticky;top:0;height:100vh;padding:28px 20px;background:#fff;border-right:1px solid var(--line)}.logo{font-size:21px;font-weight:800}.logo i{font-style:normal;color:var(--red)}.side small{display:block;margin-top:5px;color:var(--muted)}.side nav{display:grid;gap:5px;margin-top:40px}.side a{padding:10px 12px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:13px}.side a:hover{background:#f4f5f7;color:var(--ink)}.content{width:min(1320px,calc(100% - 48px));margin:0 auto;padding:38px 0 64px}.head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}.head h1{margin:0;font-size:30px;letter-spacing:-.03em}.head p{margin:8px 0 0;color:var(--muted);font-size:13px}.tag{padding:8px 12px;border:1px solid #cfeee5;border-radius:999px;background:#effaf7;color:#087c61;font-size:12px}.notice{margin-top:18px;padding:11px 14px;border-radius:8px;background:#fff8e8;color:#8c641e;font-size:12px}.section{margin-top:25px}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:12px}.section-title h2{margin:0;font-size:19px}.section-title span{color:var(--muted);font-size:12px}.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}.kpis{display:grid;grid-template-columns:repeat(6,1fr);overflow:hidden}.kpi{padding:21px 18px;border-right:1px solid var(--line)}.kpi:last-child{border:0}.label{color:var(--muted);font-size:11px}.value{margin-top:8px;font-size:24px;font-weight:700;letter-spacing:-.025em}.positive{color:var(--red)}.negative{color:var(--green)}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rule{padding:18px}.rule b{display:inline-block;color:var(--blue);font-size:12px}.rule h3{margin:8px 0 6px;font-size:15px}.rule p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.chart-card{padding:18px}.chart-head{display:flex;justify-content:space-between;align-items:center;gap:14px}.chart-head h3{margin:0;font-size:14px}.controls{display:flex;flex-wrap:wrap;gap:6px}.controls label,.controls button{padding:6px 9px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--muted);font-size:11px}.controls button.active{border-color:#bfc9fb;background:#f1f3ff;color:var(--blue)}.controls input{accent-color:var(--blue)}canvas{display:block;width:100%;height:350px}.drawdown{height:125px}.tip{min-height:26px;padding-top:5px;color:var(--muted);font-size:11px}.benchmarks{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}.benchmark{padding:12px;border:1px solid var(--line);border-radius:7px}.benchmark strong{display:block;margin:4px 0;font-size:17px}.returns{display:grid;grid-template-columns:.85fr 1.15fr;gap:10px}.table-wrap{overflow:auto}.simple{width:100%;border-collapse:collapse}.simple th,.simple td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right;font-size:11px;white-space:nowrap}.simple th{color:var(--muted);font-weight:600;background:#fafbfc}.simple th:first-child,.simple td:first-child{text-align:left}.heat{padding:16px;overflow:auto}.heat-grid{display:grid;grid-template-columns:54px repeat(12,minmax(42px,1fr));gap:4px;min-width:670px}.heat-grid div{padding:7px 3px;border-radius:4px;text-align:center;font-size:10px}.heat-head{color:var(--muted)}.trade-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.trade-tools select,.trade-tools input{min-width:270px;padding:9px 10px;border:1px solid var(--line);border-radius:7px;background:#fff}.trade-grid{display:grid;grid-template-columns:360px 1fr;gap:10px}.trade-card{padding:18px}.trade-title{display:flex;justify-content:space-between;gap:10px}.trade-title h3{margin:5px 0 0}.pill{padding:3px 6px;border-radius:4px;background:#f1f3f6;color:var(--muted);font-size:10px}.pnl{font-size:19px;font-weight:700;text-align:right}.trade-meta{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:15px}.trade-meta div{padding:9px;border:1px solid var(--line);border-radius:6px}.trade-meta small{display:block;color:var(--muted)}.reason{color:var(--muted);font-size:11px;line-height:1.65}.price{height:360px}.trade-table{margin-top:10px;max-height:520px;overflow:auto}.trade-table table{min-width:950px}.trade-table thead{position:sticky;top:0;z-index:2}.trade-table tbody tr{cursor:pointer}.trade-table tbody tr:hover,.trade-table tbody tr.selected{background:#f5f7ff}.etf-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.etf-toolbar input,.etf-toolbar select{min-width:190px;padding:9px 10px;border:1px solid var(--line);border-radius:7px;background:#fff}.etf-toolbar .controls{margin-left:auto}.etf-detail{padding:18px}.etf-detail-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.etf-detail-head h3{margin:4px 0 2px;font-size:20px}.etf-badge{display:inline-block;padding:4px 7px;border-radius:5px;background:#effaf7;color:#087c61;font-size:10px}.etf-badge.fail{background:#f1f3f6;color:var(--muted)}.etf-stats{display:grid;grid-template-columns:repeat(8,1fr);gap:7px;margin:14px 0}.etf-stat{padding:10px;border:1px solid var(--line);border-radius:7px;min-width:0}.etf-stat strong{display:block;margin-top:4px;font-size:15px;overflow:hidden;text-overflow:ellipsis}.etf-trend{height:310px}.etf-table{max-height:700px;margin-top:10px}.etf-table table{min-width:1180px}.etf-table thead{position:sticky;top:0;z-index:2}.etf-table tbody tr{cursor:pointer}.etf-table tbody tr:hover,.etf-table tbody tr.selected{background:#f5f7ff}.spark{display:block;width:112px;height:30px}.status-dot{display:inline-block;width:7px;height:7px;margin-right:5px;border-radius:50%;background:#b9bec7}.status-dot.pass{background:var(--green)}.footer{margin-top:30px;padding:16px 0;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
 @media(max-width:1050px){.shell{grid-template-columns:1fr}.side{position:static;height:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}.side nav{display:flex;margin:0}.kpis{grid-template-columns:repeat(3,1fr)}.kpi:nth-child(3){border-right:0}.rules{grid-template-columns:repeat(2,1fr)}.returns,.trade-grid{grid-template-columns:1fr}.etf-stats{grid-template-columns:repeat(4,1fr)}}@media(max-width:650px){.content{width:calc(100% - 20px);padding-top:24px}.side nav{display:none}.head{display:block}.tag{display:inline-block;margin-top:10px}.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(odd){border-right:1px solid var(--line)}.kpi:nth-child(even){border-right:0}.rules{grid-template-columns:1fr}.benchmarks{grid-template-columns:repeat(2,1fr)}.chart-head{display:block}.controls{margin-top:8px}.trade-tools select,.trade-tools input,.etf-toolbar input,.etf-toolbar select{width:100%;min-width:0}.etf-toolbar .controls{margin-left:0}.etf-detail-head{display:block}.etf-stats{grid-template-columns:repeat(2,1fr)}.etf-trend{height:260px}}
 </style></head><body><div class="shell">
-<aside class="side"><div><div class="logo"><i>ye</i> strategy</div><small>ETF 轮动</small></div><nav><a href="#strategy">策略</a><a href="#backtest">回测</a><a href="#returns">收益</a><a href="#trades">逐笔</a></nav></aside>
+<aside class="side"><div><div class="logo"><i>ye</i> strategy</div><small>ETF 轮动</small></div><nav><a href="#backtest">回测</a><a href="#satelliteBacktest">卫星</a><a href="#etfDashboard">全池</a><a href="#returns">收益</a><a href="#trades">逐笔</a></nav></aside>
 <main class="content"><header class="head"><div><h1>ye ETF轮动策略</h1><p>数据区间 2018-07-02 — 2026-07-17 · 收盘后计算 · 下一交易日开盘执行</p></div><span class="tag">唯一策略 · 规则已冻结</span></header>
 <div class="notice">历史回测不代表未来收益。所有结果统一计入普通ETF单边0.15%、QDII/溢价敏感ETF单边0.30%及每笔最低5元佣金。</div>
 <section class="section" id="backtest"><div class="section-title"><h2>模拟回测</h2><span>初始资金 100,000 元</span></div><div class="card kpis" id="kpis"></div></section>
-<section class="section" id="etfDashboard"><div class="section-title"><h2>全池 ETF 观察台</h2><span>51只：45核心＋6挑战者 · 冻结评分与价格同一截止日</span></div><div class="etf-toolbar"><input id="etfSearch" placeholder="搜索代码或名称"><select id="etfCategory"><option value="">全部分类</option></select><select id="etfSort"><option value="rank">按策略排名</option><option value="return_3m">按近3月收益</option><option value="return_1y">按近1年收益</option><option value="momentum_score">按动量评分</option></select><div class="controls" id="etfRanges"><button data-etf-range="3m" class="active">近3个月</button><button data-etf-range="1y">近1年</button></div></div><article class="card etf-detail"><div id="etfDetailHead"></div><div id="etfStats" class="etf-stats"></div><canvas class="etf-trend" id="etfTrendChart"></canvas><div class="tip" id="etfTrendTip">蓝线为收盘价，橙线为 MA120；挑战者技术合格后仍需等待核心没有候选，才可补位。</div></article><div class="card table-wrap etf-table"><table class="simple"><thead><tr><th>决策排名 / ETF</th><th>走势</th><th>最新价</th><th>当日</th><th>近3月</th><th>近1年</th><th>动量分</th><th>ROC20</th><th>ROC60</th><th>MA120乖离</th><th>路径 / 结果</th></tr></thead><tbody id="etfRows"></tbody></table></div></section>
-<section class="section" id="strategy"><div class="section-title"><h2>策略规则</h2><span>45只核心＋6只挑战者 · 最多持有1只 · 无信号持有现金</span></div><div class="rules">
+<section class="section" id="satelliteBacktest"><div class="section-title"><h2>卫星策略的历史参与</h2><span>6只卫星只填补核心无候选的现金空档</span></div><div class="card kpis" id="satelliteKpis"></div><div class="card table-wrap" style="margin-top:10px"><table class="simple"><thead><tr><th>卫星ETF</th><th>完成交易</th><th>已实现净盈亏</th><th>持有天数</th><th>最近入场</th></tr></thead><tbody id="satelliteRows"></tbody></table></div><div class="tip" id="satelliteNote"></div></section>
+<section class="section" id="etfDashboard"><div class="section-title"><h2>全池 ETF 观察台</h2><span>51只：45核心＋6卫星 · 冻结评分与价格同一截止日</span></div><div class="etf-toolbar"><input id="etfSearch" placeholder="搜索代码或名称"><select id="etfCategory"><option value="">全部分类</option></select><select id="etfSort"><option value="rank">按策略排名</option><option value="return_3m">按近3月收益</option><option value="return_1y">按近1年收益</option><option value="momentum_score">按动量评分</option></select><div class="controls" id="etfRanges"><button data-etf-range="3m" class="active">近3个月</button><button data-etf-range="1y">近1年</button></div></div><article class="card etf-detail"><div id="etfDetailHead"></div><div id="etfStats" class="etf-stats"></div><canvas class="etf-trend" id="etfTrendChart"></canvas><div class="tip" id="etfTrendTip">蓝线为收盘价，橙线为 MA120；卫星技术合格后仍需等待核心没有候选，才可补位。</div></article><div class="card table-wrap etf-table"><table class="simple"><thead><tr><th>决策排名 / ETF</th><th>走势</th><th>最新价</th><th>当日</th><th>近3月</th><th>近1年</th><th>动量分</th><th>ROC20</th><th>ROC60</th><th>MA120乖离</th><th>路径 / 结果</th></tr></thead><tbody id="etfRows"></tbody></table></div></section>
+<section class="section" id="strategy"><div class="section-title"><h2>策略规则</h2><span>45只核心＋6只卫星 · 最多持有1只 · 无信号持有现金</span></div><div class="rules">
 <article class="card rule"><b>01 动量排序</b><h3>选择最强代表</h3><p>核心得分为 ROC20 + 1.5×ROC60。通常只在前5名、ROC20与ROC60均为正、价格位于MA120上方且乖离不超过9%的ETF中选择最高分。</p></article>
 <article class="card rule"><b>02 主题确认</b><h3>过滤单点假突破</h3><p>历史情绪缺失期只允许前3名且同主题至少75%的ETF保持ROC20为正；实盘AI审核不完整时不开新仓。</p></article>
 <article class="card rule"><b>03 边缘过滤</b><h3>弱动量必须有跟随</h3><p>排名4至5且ROC20低于2%时，必须同时满足题材强势股数量、热度加速与正DDE比例要求。</p></article>
@@ -244,14 +281,15 @@ HTML = r'''<!doctype html>
 const COLORS={ye:'#e34d59',etfwin:'#171a1f',nasdaq:'#4a6cf7',csi300:'#e49a34',chinext:'#8f65d8'},keys=Object.keys(COLORS);let enabled=new Set(keys),range='all',tradeIndex=DATA.trades.length-1;
 const pct=(v,d=1)=>(v*100).toFixed(d)+'%',money=v=>new Intl.NumberFormat('zh-CN',{style:'currency',currency:'CNY',maximumFractionDigits:0}).format(v),dateMs=s=>new Date(s+'T00:00:00').getTime();
 const M=DATA.metrics;document.getElementById('kpis').innerHTML=[['累计收益',pct(M.total_return),'positive'],['年化收益',pct(M.cagr),'positive'],['夏普比率',M.sharpe.toFixed(2),''],['最大回撤',pct(M.max_drawdown),'negative'],['胜率',pct(M.win_rate),''],['完成交易',M.completed_trades+' 笔','']].map(x=>`<div class="kpi"><div class="label">${x[0]}</div><div class="value ${x[2]}">${x[1]}</div></div>`).join('');
+const SAT=DATA.satellite_backtest;document.getElementById('satelliteKpis').innerHTML=[['卫星数量',SAT.configured_count+' 只',''],['有过交易',SAT.traded_symbols.length+' 只',''],['实际完成交易',SAT.completed_trades+' 笔',''],['已实现净盈亏',money(SAT.realized_net_pnl),SAT.realized_net_pnl>=0?'positive':'negative'],['平均每笔',SAT.completed_trades?money(SAT.realized_net_pnl/SAT.completed_trades):'—',SAT.realized_net_pnl>=0?'positive':'negative'],['持有天数',SAT.holding_days+' 天','']].map(x=>`<div class="kpi"><div class="label">${x[0]}</div><div class="value ${x[2]}">${x[1]}</div></div>`).join('');document.getElementById('satelliteRows').innerHTML=SAT.items.map(x=>`<tr><td><b>${x.name}</b><br><span class="label">${x.symbol}</span></td><td>${x.completed_trades}</td><td class="${x.realized_net_pnl>=0?'positive':'negative'}">${money(x.realized_net_pnl)}</td><td>${x.holding_days}</td><td>${x.last_entry_date||'—'}</td></tr>`).join('');document.getElementById('satelliteNote').textContent=SAT.note;
 const ETF=DATA.etf_dashboard.items,esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let etfRange='3m',etfSymbol=(ETF.find(x=>x.final_entry_pass)||ETF[0]).symbol;
 const signed=(v,d=1)=>v==null?'—':`${v>=0?'+':''}${pct(v,d)}`,tone=v=>v==null?'':v>=0?'positive':'negative';
 document.getElementById('etfCategory').innerHTML+=[...DATA.etf_dashboard.categories].map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');
 function etfPoints(item){return item.series.slice(etfRange==='3m'?-64:-253)}
 function sparkline(item){const pts=etfPoints(item),vals=pts.map(x=>x[1]),lo=Math.min(...vals),hi=Math.max(...vals),gap=hi-lo||1,poly=pts.map((p,i)=>`${(i/(pts.length-1)*110).toFixed(1)},${(28-(p[1]-lo)/gap*26).toFixed(1)}`).join(' '),color=vals.at(-1)>=vals[0]?'#e34d59':'#11a683';return `<svg class="spark" viewBox="0 0 112 30" aria-label="${etfRange==='3m'?'近3个月':'近1年'}走势"><polyline fill="none" stroke="${color}" stroke-width="1.8" points="${poly}"/></svg>`}
-function renderEtfDetail(){const x=ETF.find(v=>v.symbol===etfSymbol)||ETF[0],pass=x.final_entry_pass,waiting=x.technical_entry_pass&&!pass,role=x.pool_role==='challenger'?'挑战者':'核心',status=pass?'最终合格 · '+esc(x.path):waiting?'技术合格 · 等待核心空档':'当日未进入最终候选';document.getElementById('etfDetailHead').innerHTML=`<div class="etf-detail-head"><div><span class="label">${esc(x.category)} · ${esc(x.symbol)} · ${role}</span><h3>${esc(x.name)}</h3><span class="label">数据截至 ${DATA.etf_dashboard.as_of}</span></div><span class="etf-badge ${pass?'':'fail'}">${status}</span></div>`;const stats=[['最新价',x.close.toFixed(3),''],['决策排名','#'+Math.round(x.rank),''],['动量评分',signed(x.momentum_score,2),tone(x.momentum_score)],['近3月',signed(x.return_3m),tone(x.return_3m)],['近1年',signed(x.return_1y),tone(x.return_1y)],['ROC20',signed(x.roc20),tone(x.roc20)],['ROC60',signed(x.roc60),tone(x.roc60)],['MA120乖离',signed(x.ma120_bias),tone(x.ma120_bias)]];document.getElementById('etfStats').innerHTML=stats.map(s=>`<div class="etf-stat"><span class="label">${s[0]}</span><strong class="${s[2]}">${s[1]}</strong></div>`).join('');drawEtfTrend()}
+function renderEtfDetail(){const x=ETF.find(v=>v.symbol===etfSymbol)||ETF[0],pass=x.final_entry_pass,waiting=x.technical_entry_pass&&!pass,role=x.pool_role==='challenger'?'卫星':'核心',status=pass?'最终合格 · '+esc(x.path):waiting?'技术合格 · 等待核心空档':'当日未进入最终候选';document.getElementById('etfDetailHead').innerHTML=`<div class="etf-detail-head"><div><span class="label">${esc(x.category)} · ${esc(x.symbol)} · ${role}</span><h3>${esc(x.name)}</h3><span class="label">数据截至 ${DATA.etf_dashboard.as_of}</span></div><span class="etf-badge ${pass?'':'fail'}">${status}</span></div>`;const stats=[['最新价',x.close.toFixed(3),''],['决策排名','#'+Math.round(x.rank),''],['动量评分',signed(x.momentum_score,2),tone(x.momentum_score)],['近3月',signed(x.return_3m),tone(x.return_3m)],['近1年',signed(x.return_1y),tone(x.return_1y)],['ROC20',signed(x.roc20),tone(x.roc20)],['ROC60',signed(x.roc60),tone(x.roc60)],['MA120乖离',signed(x.ma120_bias),tone(x.ma120_bias)]];document.getElementById('etfStats').innerHTML=stats.map(s=>`<div class="etf-stat"><span class="label">${s[0]}</span><strong class="${s[2]}">${s[1]}</strong></div>`).join('');drawEtfTrend()}
 function drawEtfTrend(mx=null){const item=ETF.find(v=>v.symbol===etfSymbol)||ETF[0],pts=etfPoints(item),cv=document.getElementById('etfTrendChart'),{c,w,h}=prep(cv),pad={l:50,r:16,t:18,b:28},vals=pts.flatMap(p=>p[2]==null?[p[1]]:[p[1],p[2]]),lo=Math.min(...vals),hi=Math.max(...vals),gap=hi-lo||1,ymin=lo-gap*.08,ymax=hi+gap*.08,xmin=dateMs(pts[0][0]),xmax=dateMs(pts.at(-1)[0]),X=x=>pad.l+(x-xmin)/(xmax-xmin)*(w-pad.l-pad.r),Y=y=>pad.t+(ymax-y)/(ymax-ymin)*(h-pad.t-pad.b);c.clearRect(0,0,w,h);c.font='10px sans-serif';c.fillStyle='#7b818b';c.strokeStyle='#eceef2';for(let i=0;i<5;i++){const y=pad.t+i*(h-pad.t-pad.b)/4,val=ymax-i*(ymax-ymin)/4;c.beginPath();c.moveTo(pad.l,y);c.lineTo(w-pad.r,y);c.stroke();c.fillText(val.toFixed(2),5,y+3)}for(let i=0;i<5;i++){const p=pts[Math.round(i*(pts.length-1)/4)],x=pad.l+i*(w-pad.l-pad.r)/4;c.fillText(p[0].slice(5),x-14,h-8)}[[1,'#4a6cf7',2.2],[2,'#e49a34',1.5]].forEach(([idx,color,width])=>{c.beginPath();c.strokeStyle=color;c.lineWidth=width;let started=false;pts.forEach(p=>{if(p[idx]==null)return;const x=X(dateMs(p[0])),y=Y(p[idx]);started?c.lineTo(x,y):(c.moveTo(x,y),started=true)});c.stroke()});if(mx!==null&&mx>=pad.l&&mx<=w-pad.r){const ms=xmin+(mx-pad.l)/(w-pad.l-pad.r)*(xmax-xmin),p=pts.reduce((a,b)=>Math.abs(dateMs(b[0])-ms)<Math.abs(dateMs(a[0])-ms)?b:a);c.strokeStyle='#9aa0aa';c.setLineDash([3,3]);c.beginPath();c.moveTo(X(dateMs(p[0])),pad.t);c.lineTo(X(dateMs(p[0])),h-pad.b);c.stroke();c.setLineDash([]);document.getElementById('etfTrendTip').innerHTML=`${p[0]}　收盘 ${p[1].toFixed(3)}${p[2]==null?'':`　MA120 ${p[2].toFixed(3)}`}`}}
-function renderEtfRows(){const q=document.getElementById('etfSearch').value.trim().toLowerCase(),cat=document.getElementById('etfCategory').value,sort=document.getElementById('etfSort').value;let items=ETF.filter(x=>(!q||`${x.symbol}${x.name}`.toLowerCase().includes(q))&&(!cat||x.category===cat));items.sort((a,b)=>sort==='rank'?a.rank-b.rank:(b[sort]??-Infinity)-(a[sort]??-Infinity));document.getElementById('etfRows').innerHTML=items.map(x=>`<tr data-symbol="${x.symbol}" class="${x.symbol===etfSymbol?'selected':''}"><td><b>#${Math.round(x.rank)} ${esc(x.name)}</b><br><span class="label">${x.symbol} · ${esc(x.category)} · ${x.pool_role==='challenger'?'挑战者':'核心'}</span></td><td>${sparkline(x)}</td><td>${x.close.toFixed(3)}</td><td class="${tone(x.change_1d)}">${signed(x.change_1d)}</td><td class="${tone(x.return_3m)}">${signed(x.return_3m)}</td><td class="${tone(x.return_1y)}">${signed(x.return_1y)}</td><td>${signed(x.momentum_score,2)}</td><td class="${tone(x.roc20)}">${signed(x.roc20)}</td><td class="${tone(x.roc60)}">${signed(x.roc60)}</td><td class="${tone(x.ma120_bias)}">${signed(x.ma120_bias)}</td><td><span class="status-dot ${x.final_entry_pass?'pass':''}"></span>${x.final_entry_pass?esc(x.path)+' · 最终合格':x.technical_entry_pass?'技术合格 · 等待核心空档':'未通过'}</td></tr>`).join('')||'<tr><td colspan="11" class="label">没有匹配的 ETF。</td></tr>';document.querySelectorAll('#etfRows tr[data-symbol]').forEach(r=>r.onclick=()=>{etfSymbol=r.dataset.symbol;renderEtfDetail();renderEtfRows()})}
+function renderEtfRows(){const q=document.getElementById('etfSearch').value.trim().toLowerCase(),cat=document.getElementById('etfCategory').value,sort=document.getElementById('etfSort').value;let items=ETF.filter(x=>(!q||`${x.symbol}${x.name}`.toLowerCase().includes(q))&&(!cat||x.category===cat));items.sort((a,b)=>sort==='rank'?a.rank-b.rank:(b[sort]??-Infinity)-(a[sort]??-Infinity));document.getElementById('etfRows').innerHTML=items.map(x=>`<tr data-symbol="${x.symbol}" class="${x.symbol===etfSymbol?'selected':''}"><td><b>#${Math.round(x.rank)} ${esc(x.name)}</b><br><span class="label">${x.symbol} · ${esc(x.category)} · ${x.pool_role==='challenger'?'卫星':'核心'}</span></td><td>${sparkline(x)}</td><td>${x.close.toFixed(3)}</td><td class="${tone(x.change_1d)}">${signed(x.change_1d)}</td><td class="${tone(x.return_3m)}">${signed(x.return_3m)}</td><td class="${tone(x.return_1y)}">${signed(x.return_1y)}</td><td>${signed(x.momentum_score,2)}</td><td class="${tone(x.roc20)}">${signed(x.roc20)}</td><td class="${tone(x.roc60)}">${signed(x.roc60)}</td><td class="${tone(x.ma120_bias)}">${signed(x.ma120_bias)}</td><td><span class="status-dot ${x.final_entry_pass?'pass':''}"></span>${x.final_entry_pass?esc(x.path)+' · 最终合格':x.technical_entry_pass?'技术合格 · 等待核心空档':'未通过'}</td></tr>`).join('')||'<tr><td colspan="11" class="label">没有匹配的 ETF。</td></tr>';document.querySelectorAll('#etfRows tr[data-symbol]').forEach(r=>r.onclick=()=>{etfSymbol=r.dataset.symbol;renderEtfDetail();renderEtfRows()})}
 document.querySelectorAll('#etfRanges button').forEach(b=>b.onclick=()=>{etfRange=b.dataset.etfRange;document.querySelectorAll('#etfRanges button').forEach(x=>x.classList.toggle('active',x===b));renderEtfRows();drawEtfTrend()});['etfSearch','etfCategory','etfSort'].forEach(id=>document.getElementById(id).addEventListener(id==='etfSearch'?'input':'change',renderEtfRows));const etfCanvas=document.getElementById('etfTrendChart');etfCanvas.onmousemove=e=>drawEtfTrend(e.clientX-etfCanvas.getBoundingClientRect().left);etfCanvas.onmouseleave=()=>{document.getElementById('etfTrendTip').textContent='蓝线为收盘价，橙线为 MA120；点击下表任一 ETF 可切换。';drawEtfTrend()};renderEtfDetail();renderEtfRows();
 document.getElementById('legend').innerHTML=keys.map(k=>`<label><input type="checkbox" data-key="${k}" checked><span style="color:${COLORS[k]}">●</span> ${DATA.comparisons[k].name}</label>`).join('');document.querySelectorAll('#legend input').forEach(el=>el.onchange=e=>{e.target.checked?enabled.add(e.target.dataset.key):enabled.delete(e.target.dataset.key);drawEquity()});document.querySelectorAll('#ranges button').forEach(b=>b.onclick=()=>{range=b.dataset.range;document.querySelectorAll('#ranges button').forEach(x=>x.classList.toggle('active',x===b));drawEquity()});
 function prep(cv){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);const c=cv.getContext('2d');c.setTransform(d,0,0,d,0,0);return{c,w:r.width,h:r.height}}
@@ -398,6 +436,15 @@ def build_daily_page() -> str:
     score_column = "selection_score" if "selection_score" in candidates else "momentum_score"
     candidates = candidates.sort_values([score_column, "rank"], ascending=[False, True])
     current_symbol = plan.get("current_symbol")
+    satellite_mask = rankings.get("pool_role", pd.Series("core", index=rankings.index)).eq("challenger")
+    satellite_rankings = rankings.loc[satellite_mask].sort_values(["rank", "momentum_score"], ascending=[True, False])
+    core_candidates = candidates.loc[~candidates.index.isin(satellite_rankings.index)]
+    satellite_technical = satellite_rankings.loc[
+        satellite_rankings["technical_entry_pass"].map(as_bool)
+    ]
+    satellite_final = satellite_rankings.loc[
+        satellite_rankings["final_entry_pass"].map(as_bool)
+    ]
 
     def path_name(row) -> str:
         normal_value = getattr(row, "confirmed_normal_entry", getattr(row, "normal_entry", False))
@@ -415,6 +462,57 @@ def build_daily_page() -> str:
         if current_symbol == target_symbol and target_symbol:
             return "合格；现有仓位未触发退出，不换仓"
         return "合格，选择分较低" if index > 1 else "合格；当前计划未选用"
+
+    core_candidate_names = "、".join(
+        f"{row.name}（{row.symbol}）" for row in core_candidates.itertuples(index=False)
+    ) or "无"
+    satellite_technical_names = "、".join(
+        f"{row.name}（{row.symbol}）" for row in satellite_technical.itertuples(index=False)
+    ) or "无"
+    satellite_final_names = "、".join(
+        f"{row.name}（{row.symbol}）" for row in satellite_final.itertuples(index=False)
+    ) or "无"
+    if not satellite_final.empty:
+        satellite_status = f"卫星补位已启用：{satellite_final_names}进入最终候选。"
+    elif not satellite_technical.empty and not core_candidates.empty:
+        satellite_status = f"卫星待命：{satellite_technical_names}技术合格，但核心已有候选。"
+    elif not satellite_technical.empty:
+        satellite_status = f"卫星技术合格但未进入最终候选：{satellite_technical_names}。"
+    else:
+        satellite_status = f"卫星未触发：{len(satellite_rankings)}只均未通过技术入场。"
+
+    satellite_rows_html = []
+    for row in satellite_rankings.itertuples(index=False):
+        technical_ok = as_bool(row.technical_entry_pass)
+        final_ok = as_bool(row.final_entry_pass)
+        technical_label = (
+            '<span class="status-pass">通过</span>'
+            if technical_ok else '<span class="status-fail">未通过</span>'
+        )
+        if final_ok:
+            handling = "<b>最终补位候选</b>"
+        elif technical_ok and not core_candidates.empty:
+            handling = "技术通过；核心已有候选，待命"
+        elif technical_ok:
+            handling = "技术通过；未进入最终候选"
+        else:
+            blockers = []
+            if not as_bool(row.pool_eligible): blockers.append("资格不足")
+            if as_float(row.rank) > 5: blockers.append("虚拟排名&gt;5")
+            if as_float(row.roc20) <= 0: blockers.append("ROC20≤0")
+            if as_float(row.roc60) <= 0: blockers.append("ROC60≤0")
+            if not as_bool(row.above_ma120): blockers.append("MA120下方")
+            if as_float(row.ma120_bias) > .09: blockers.append("乖离&gt;9%")
+            handling = "未通过：" + "、".join(blockers[:3])
+        satellite_rows_html.append(
+            f"<tr><td><b>{html_lib.escape(str(row.name))}</b><br><span class=\"muted\">{row.symbol}</span></td>"
+            f"<td>{int(as_float(row.rank))}</td><td>{pct(as_float(row.momentum_score))}</td>"
+            f"<td>{pct(as_float(row.roc20))}</td><td>{pct(as_float(row.roc60))}</td>"
+            f"<td>{pct(as_float(row.ma120_bias))}</td>"
+            f"<td>{technical_label}</td>"
+            f"<td>{handling}</td></tr>"
+        )
+    satellite_rows_table = "".join(satellite_rows_html)
 
     candidate_rows = "".join(
         f"<tr><td>{index}</td><td><b>{html_lib.escape(str(row.name))}</b><br><span class=\"muted\">{row.symbol}</span></td><td>{int(row.rank)}</td><td>{pct(as_float(getattr(row, score_column)))}</td><td>{html_lib.escape(path_name(row))}</td><td>{candidate_handling(str(row.symbol), index)}</td></tr>"
@@ -453,7 +551,7 @@ def build_daily_page() -> str:
                 handling = "常规确认或两条例外路径未通过"
         flag = lambda ok, label: f'<span class="status-pass">{label}</span>' if ok else '<span class="status-fail">—</span>'
         rows.append(
-            f"<tr{top}><td>{int(row.rank)}</td><td><b>{html_lib.escape(str(row.name))}</b><br><span class=\"muted\">{row.symbol} · {row.category} · {'挑战者' if getattr(row, 'pool_role', 'core') == 'challenger' else '核心'}</span></td>"
+            f"<tr{top}><td>{int(row.rank)}</td><td><b>{html_lib.escape(str(row.name))}</b><br><span class=\"muted\">{row.symbol} · {row.category} · {'卫星' if getattr(row, 'pool_role', 'core') == 'challenger' else '核心'}</span></td>"
             f"<td>{flag(pool_ok, '通过')}</td><td>{pct(as_float(row.momentum_score))}</td><td>{pct(as_float(row.roc20))}</td><td>{pct(as_float(row.roc60))}</td><td>{pct(as_float(row.ma120_bias))}</td>"
             f"<td>{flag(normal_ok, '通过')}</td><td>{flag(emerging_ok, '通过')}</td><td>{flag(extension_ok, '通过')}</td><td>{handling}</td></tr>"
         )
@@ -665,6 +763,7 @@ def build_daily_page() -> str:
         f"{len(rankings)}只ETF中有{len(candidates)}只最终通过，分别是{candidate_names}。{candidate_comparison_story}，且{decision_story}前5名里，{rejected_story}；它们名次高，但当前并不是可买候选。",
         f"板块内部也有呼应：{category_peer_story}这表明{target_category}方向并非只有当前持仓走强；现有{target_name}没有触发退出，因此不会仅因出现新的合格候选而换仓。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
         f"资讯面上，{target_category}主题记录为{target_theme['positive']}条正向、{target_theme['negative']}条负向，均按专属关键词直接映射。今天最重要的洞察是：{core_insight}",
+        satellite_status,
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
@@ -673,11 +772,12 @@ def build_daily_page() -> str:
 <section class="section" id="liveReturns"><div class="card kpis" style="grid-template-columns:repeat(3,1fr)"><div class="kpi"><span class="label">策略实盘开启以来</span><strong class="value {value_class(strategy_return)}">{signed_pct(strategy_return)}</strong><p>{signed_money(strategy_pnl)} · 自 {html_lib.escape(strategy_start)}</p></div><div class="kpi"><span class="label">本次买入收益</span><strong class="value {value_class(purchase_return)}">{signed_pct(purchase_return)}</strong><p>{signed_money(purchase_pnl)} · 成本 {average_cost:.3f} 元</p></div><div class="kpi"><span class="label">今日收益</span><strong class="value {value_class(daily_return)}">{signed_pct(daily_return)}</strong><p>{signed_money(daily_pnl)} · 对比 {html_lib.escape(previous_equity_date)}</p></div></div></section>
 <section class="section" id="dailyOverview"><article class="card strategy-lead daily-overview"><span class="label">先看这里 · 约500字要点版</span><h2>今日决策路径综述</h2>{overview_html}</article></section>
 <section class="section"><div class="section-title"><h2>次日开盘计划</h2><span>{confirmation_label}</span></div><article class="card plan"><span class="label">执行结论</span><br><strong>{html_lib.escape(str(action))} {html_lib.escape(str(target_name))}</strong><p>目标仓位 {target_weight}。{html_lib.escape(order_text)}</p></article></section>
-<section class="section"><div class="section-title"><h2>今日筛选漏斗</h2><span>不仅看数量，也直接看留下了谁</span></div><div class="filter-strip"><article class="card filter-stage"><small>冻结母池</small><strong>{len(rankings)} 只</strong><p>45只核心＋{len(rankings) - 45}只挑战者；核心独立排名并拥有买入优先权。</p></article><article class="card filter-stage"><small>上市期与流动性</small><strong>{pool_count} 只</strong><p>{pool_count}只通过基础资格。</p></article><article class="card filter-stage"><small>核心优先后合格</small><strong>{len(candidates)} 只</strong><p>{html_lib.escape(candidate_names)}</p></article><article class="card filter-stage"><small>明日实际目标</small><strong>{1 if target_symbol else 0} 只</strong><p>{html_lib.escape(str(target_name))}{'（继续持有）' if current_symbol == target_symbol and target_symbol else ''}</p></article></div></section>
+<section class="section"><div class="section-title"><h2>今日筛选漏斗</h2><span>不仅看数量，也直接看留下了谁</span></div><div class="filter-strip"><article class="card filter-stage"><small>冻结母池</small><strong>{len(rankings)} 只</strong><p>45只核心＋{len(satellite_rankings)}只卫星；核心独立排名并拥有买入优先权。</p></article><article class="card filter-stage"><small>上市期与流动性</small><strong>{pool_count} 只</strong><p>{pool_count}只通过基础资格。</p></article><article class="card filter-stage"><small>核心优先后合格</small><strong>{len(candidates)} 只</strong><p>{html_lib.escape(candidate_names)}</p></article><article class="card filter-stage"><small>明日实际目标</small><strong>{1 if target_symbol else 0} 只</strong><p>{html_lib.escape(str(target_name))}{'（继续持有）' if current_symbol == target_symbol and target_symbol else ''}</p></article></div></section>
+<section class="section" id="dailySatellite"><div class="section-title"><h2>今日卫星检查</h2><span>{html_lib.escape(satellite_status)}</span></div><div class="truth-grid"><article class="card truth"><span class="num">核心候选</span><h3>{len(core_candidates)} 只</h3><p>{html_lib.escape(core_candidate_names)}</p></article><article class="card truth"><span class="num">卫星技术合格</span><h3>{len(satellite_technical)} / {len(satellite_rankings)} 只</h3><p>{html_lib.escape(satellite_technical_names)}</p></article><article class="card truth"><span class="num">卫星最终补位</span><h3>{len(satellite_final)} 只</h3><p>{html_lib.escape(satellite_final_names)}</p></article></div><div class="card table-wrap" style="margin-top:10px"><table class="simple"><thead><tr><th>卫星ETF</th><th>虚拟排名</th><th>动量分</th><th>ROC20</th><th>ROC60</th><th>MA120乖离</th><th>技术结果</th><th>当日处理</th></tr></thead><tbody>{satellite_rows_table}</tbody></table></div></section>
 <section class="section"><div class="section-title"><h2>三条技术入场路径的当日结果</h2><span>三条路径并行，不是依次放宽</span></div><div class="path-grid"><article class="card path-card"><span class="count">{normal_count}</span><span class="label">路径 A</span><h3>常规动量</h3><p>前5、双ROC为正、MA120上方、乖离≤9%；排名4—5且ROC20&lt;2%时再做热点确认。今日需弱边缘确认 {weak_edge_count} 只。</p></article><article class="card path-card"><span class="count">{emerging_count}</span><span class="label">路径 B</span><h3>新趋势例外</h3><p>排名≤15、ROC20≥3%、ROC60为-8%至0%，并通过R²、效率与热点门槛；记忆3日。</p></article><article class="card path-card"><span class="count">{extension_count}</span><span class="label">路径 C</span><h3>9%—12%质量延伸</h3><p>仅处理乖离略高但趋势质量很强的前5候选；R²、效率、ROC5和热点必须同时通过。</p></article></div></section>
-<section class="section"><div class="section-title"><h2>最终候选与唯一目标</h2><span>先核心、后挑战者；最终通过不等于同时买入</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>顺序</th><th>ETF</th><th>决策排名</th><th>选择分</th><th>通过路径</th><th>账户处理</th></tr></thead><tbody>{candidate_rows}</tbody></table></div></section>
+<section class="section"><div class="section-title"><h2>最终候选与唯一目标</h2><span>先核心、后卫星；最终通过不等于同时买入</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>顺序</th><th>ETF</th><th>决策排名</th><th>选择分</th><th>通过路径</th><th>账户处理</th></tr></thead><tbody>{candidate_rows}</tbody></table></div></section>
 <section class="section"><div class="section-title"><h2>资讯审核如何影响今天的筛选</h2><span>审核完整是硬门，热点只作用于指定路径</span></div><div class="truth-grid"><article class="card truth"><span class="num">完整性</span><h3>{reviewed}/{total} · 100%</h3><p>全部冻结记录逐条审核完成，因此新开仓资格未被数据完整性阻断。</p></article><article class="card truth"><span class="num">路径影响</span><h3>常规 {normal_count} / 新趋势 {emerging_count} / 延伸 {extension_count}</h3><p>今日最终候选全部来自常规路径，没有候选依赖新趋势或延伸例外放行。</p></article><article class="card truth"><span class="num">主题披露</span><h3>{html_lib.escape(target_category)} {target_theme['positive']}正 / {target_theme['negative']}负</h3><p>最强净正向：{html_lib.escape(str(strongest[0]))}；最大净负向：{html_lib.escape(str(riskiest[0]))}。正式规则没有全市场趋势开关，也没有统一“负面阈值”否决常规路径。</p></article></div></section>
-<section class="section"><div class="section-title"><h2>{len(rankings)}只 ETF 逐层筛选明细</h2><span>核心排名独立；挑战者仅显示相对核心的虚拟排名</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>决策排名</th><th>ETF / 池角色</th><th>资格</th><th>动量分</th><th>ROC20</th><th>ROC60</th><th>MA120乖离</th><th>常规</th><th>新趋势</th><th>延伸</th><th>最终结果</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
+<section class="section"><div class="section-title"><h2>{len(rankings)}只 ETF 逐层筛选明细</h2><span>核心排名独立；卫星仅显示相对核心的虚拟排名</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>决策排名</th><th>ETF / 池角色</th><th>资格</th><th>动量分</th><th>ROC20</th><th>ROC60</th><th>MA120乖离</th><th>常规</th><th>新趋势</th><th>延伸</th><th>最终结果</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
     return page("ye 策略今日日报", "daily", "今日日报", "收盘数据冻结后生成 · 供下一交易日开盘执行参考", "每日更新", body)
 
 

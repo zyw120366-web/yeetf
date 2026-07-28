@@ -101,6 +101,7 @@ def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
+    payload = module.build_payload()
     dashboard = module.build_etf_dashboard()
     items = dashboard["items"]
     assert len(items) == 51
@@ -117,13 +118,23 @@ def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:
         <= item.keys()
         for item in items
     )
+    satellite = payload["satellite_backtest"]
+    assert satellite["configured_count"] == 6
+    assert len(satellite["items"]) == 6
+    assert {item["symbol"] for item in satellite["items"]} == {
+        item["symbol"] for item in items if item["pool_role"] == "challenger"
+    }
+    assert "不等于相对45只核心反事实的边际贡献" in satellite["note"]
 
 
 def test_backtest_html_exposes_etf_dashboard_controls() -> None:
     backtest = (ROOT / "dashboard" / "public" / "ye-backtest.html").read_text(
         encoding="utf-8"
     )
-    for marker in ("全池 ETF 观察台", "近3个月", "近1年", "按策略排名", "etfTrendChart"):
+    for marker in (
+        "全池 ETF 观察台", "近3个月", "近1年", "按策略排名", "etfTrendChart",
+        "卫星策略的历史参与", "实际完成交易", "已实现净盈亏",
+    ):
         assert marker in backtest
 
 
@@ -142,6 +153,12 @@ def test_daily_html_opens_with_plain_language_overview() -> None:
     assert 500 <= overview_length <= 800
     for marker in ("策略实盘开启以来", "本次买入收益", "今日收益"):
         assert marker in daily
+    for marker in ("今日卫星检查", "卫星技术合格", "卫星最终补位", "虚拟排名"):
+        assert marker in daily
+    formal = yaml.safe_load((ROOT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
+    satellite_symbols = formal["enhanced_selection"]["universe_architecture"]["challenger_symbols"]
+    for symbol in satellite_symbols:
+        assert symbol in daily
     signal = json.loads(
         (ROOT / "results" / "comparison" / "latest_signals.json").read_text(
             encoding="utf-8"

@@ -11,7 +11,7 @@
   },
   "signal_date": "2026-07-28",
   "execute": "下一交易日开盘",
-  "created_at_utc": "2026-07-28T07:06:17.624882+00:00",
+  "created_at_utc": "2026-07-28T12:19:14.894693+00:00",
   "decision": {
     "current_symbol": "512010.SH",
     "target_symbol": "512010.SH",
@@ -116,7 +116,7 @@
   },
   "audit": {
     "run_manifest": "results/audit/2026-07-28_run_manifest.json",
-    "run_manifest_sha256": "75adf183d70b605a21007d0952cf4c95a5580ea03754ab41f00b38a28de094fb",
+    "run_manifest_sha256": "42364fb3a8b5c949a20a90f2340dbffcfc0072969e7d67117ecfc2a3777c7496",
     "critical_file_count": 21,
     "source_file_count": 20,
     "price_file_count": 59

@@ -94,6 +94,16 @@ def main() -> None:
     candidates = ranking.loc[ranking["final_entry_pass"].astype(bool)].sort_values(
         [score_column, "rank"], ascending=[False, True]
     )
+    satellite_ranking = ranking.loc[ranking["pool_role"].eq("challenger")].sort_values(
+        ["rank", "momentum_score"], ascending=[True, False]
+    )
+    core_candidates = candidates.loc[candidates["pool_role"].ne("challenger")]
+    satellite_technical = satellite_ranking.loc[
+        satellite_ranking["technical_entry_pass"].astype(bool)
+    ]
+    satellite_final = satellite_ranking.loc[
+        satellite_ranking["final_entry_pass"].astype(bool)
+    ]
     sentiment = pd.read_csv(ROOT / "market_data" / "sentiment" / "features" / "symbol_daily.csv")
     sentiment = sentiment.loc[sentiment["date"].eq(args.date)].set_index("symbol")
     diagnostics = pd.read_csv(ROOT / "results" / "ye_strategy" / "signal_diagnostics.csv")
@@ -124,6 +134,20 @@ def main() -> None:
     normal_count = int((confirmed_normal & pool_eligible).sum())
     emerging_count = int((ranking["emerging_entry"].astype(bool) & pool_eligible).sum())
     extension_count = int((ranking["quality_extension"].astype(bool) & pool_eligible).sum())
+    satellite_technical_names = "、".join(
+        f"{row['name']}（{row['symbol']}）" for _, row in satellite_technical.iterrows()
+    ) or "无"
+    satellite_final_names = "、".join(
+        f"{row['name']}（{row['symbol']}）" for _, row in satellite_final.iterrows()
+    ) or "无"
+    if not satellite_final.empty:
+        satellite_status = f"卫星补位已启用：{satellite_final_names}进入最终候选。"
+    elif not satellite_technical.empty and not core_candidates.empty:
+        satellite_status = f"卫星待命：{satellite_technical_names}技术合格，但核心已有候选。"
+    elif not satellite_technical.empty:
+        satellite_status = f"卫星技术合格但未进入最终候选：{satellite_technical_names}。"
+    else:
+        satellite_status = f"卫星未触发：{len(satellite_ranking)}只均未通过技术入场。"
     positions = [item for item in account.get("positions", []) if float(item.get("quantity", 0)) > 0]
     account_position = (
         "当前空仓"
@@ -259,6 +283,7 @@ def main() -> None:
         f"{len(ranking)}只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
         f"板块内部也有呼应：{category_peer_story}这说明{target_category}方向并非只有当前持仓走强；现有{target_name}没有触发退出，因此不会仅因出现新的合格候选而换仓。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
         f"资讯面上，{target_category}主题为{target_positive}条正向、{target_negative}条负向，均按专属关键词直接映射。今天的核心洞察是：{core_insight}",
+        satellite_status,
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
@@ -289,16 +314,29 @@ def main() -> None:
         "",
         f"## 二、今天怎样从 {len(ranking)} 只 ETF 得到唯一目标",
         "",
-        f"1. **冻结母池**：{len(ranking)}只ETF全部计算，其中45只核心、{len(ranking) - 45}只挑战者；核心独立排名并拥有买入优先权。",
+        f"1. **冻结母池**：{len(ranking)}只ETF全部计算，其中45只核心、{len(satellite_ranking)}只卫星；核心独立排名并拥有买入优先权。",
         f"2. **新开仓资格**：{int(pool_eligible.sum())}/{len(ranking)}只通过上市≥120日、20日成交额中位数≥2,000万元。",
         f"3. **三条路径并行**：常规动量 {normal_count} 只、新趋势例外 {emerging_count} 只、9%—12%质量延伸 {extension_count} 只。",
-        f"4. **核心优先后最终合格 {len(candidates)} 只**：{candidate_names}；只有当天没有核心候选时，挑战者才补位。",
+        f"4. **核心优先后最终合格 {len(candidates)} 只**：{candidate_names}；只有当天没有核心候选时，卫星才补位。",
         f"5. **明日实际目标 {1 if target_symbol else 0} 只**：{target_name}（{target_symbol or '现金'}）；{account_decision}",
+        "",
+        "### 今日卫星检查",
+        "",
+        f"- **结论**：{satellite_status}",
+        f"- 核心最终候选：{len(core_candidates)} 只；卫星技术合格：{len(satellite_technical)}/{len(satellite_ranking)} 只；卫星最终补位：{len(satellite_final)} 只。",
+        "",
+        "| 卫星ETF | 虚拟排名 | 动量分 | ROC20 | ROC60 | MA120乖离 | 技术结果 | 当日处理 |",
+        "|---|---:|---:|---:|---:|---:|---|---|",
+        *[
+            f"| {row['name']}（{row['symbol']}） | {int(row['rank'])} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row['technical_entry_pass'] else '未通过'} | "
+            f"{'最终补位候选' if row['final_entry_pass'] else ('技术通过；核心已有候选，待命' if row['technical_entry_pass'] and not core_candidates.empty else ('技术通过；未进入最终候选' if row['technical_entry_pass'] else entry_blockers(row)))} |"
+            for _, row in satellite_ranking.iterrows()
+        ],
         "",
         "| 最终顺序 | ETF | 池角色 | 决策排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
         "|---:|---|---|---:|---:|---:|---:|---:|---|---|",
         *[
-            f"| {index} | {row['name']}（{row['symbol']}） | {'挑战者' if row.get('pool_role') == 'challenger' else '核心'} | {int(row['rank'])} | {row[score_column]:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {entry_path(row)} | {candidate_outcome(row, target_symbol, current_symbol)} |"
+            f"| {index} | {row['name']}（{row['symbol']}） | {'卫星' if row.get('pool_role') == 'challenger' else '核心'} | {int(row['rank'])} | {row[score_column]:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {entry_path(row)} | {candidate_outcome(row, target_symbol, current_symbol)} |"
             for index, (_, row) in enumerate(candidates.iterrows(), start=1)
         ],
         "",
@@ -352,7 +390,7 @@ def main() -> None:
         "| 决策排名 | ETF | 池角色 | 资格 | 动量分 | ROC20 | ROC60 | MA120乖离 | 常规 | 新趋势 | 延伸 | 最终处理 |",
         "|---:|---|---|---|---:|---:|---:|---:|---|---|---|---|",
         *[
-            f"| {int(row['rank'])} | {row['name']}（{row['symbol']}） | {'挑战者' if row.get('pool_role') == 'challenger' else '核心'} | {'通过' if row['pool_eligible'] else '未通过'} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row.get('confirmed_normal_entry', row['normal_entry']) and row['pool_eligible'] else '—'} | {'通过' if row['emerging_entry'] and row['pool_eligible'] else '—'} | {'通过' if row['quality_extension'] and row['pool_eligible'] else '—'} | {candidate_outcome(row, target_symbol, current_symbol)} |"
+            f"| {int(row['rank'])} | {row['name']}（{row['symbol']}） | {'卫星' if row.get('pool_role') == 'challenger' else '核心'} | {'通过' if row['pool_eligible'] else '未通过'} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row.get('confirmed_normal_entry', row['normal_entry']) and row['pool_eligible'] else '—'} | {'通过' if row['emerging_entry'] and row['pool_eligible'] else '—'} | {'通过' if row['quality_extension'] and row['pool_eligible'] else '—'} | {candidate_outcome(row, target_symbol, current_symbol)} |"
             for _, row in ranking.iterrows()
         ],
     ])
