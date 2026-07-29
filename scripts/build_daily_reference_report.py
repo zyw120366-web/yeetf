@@ -346,7 +346,14 @@ def main() -> None:
         "- 数据来源：" + "；".join(f"{name} {count} 条" for name, count in source_counts(review["items"])),
         f"- **主要正向**：{strongest[0]}共 {strongest[1]} 正、{strongest[2]} 负，是当日净正向记录最集中的主题。",
         f"- **风险与分歧**：{most_negative[0]}出现 {most_negative[2]} 条负向记录；需与同主题正向记录及价格趋势合并看待。",
-        f"- **目标{target_category}主题**：共 {target_positive} 正、{target_negative} 负；目标走常规动量路径，不依赖热点例外放行。" if target_sentiment is not None else "- 目标主题没有可用的情绪映射，按未知处理。",
+        (
+            f"- **目标{target_category}主题**：共 {target_positive} 正、{target_negative} 负；"
+            + (
+                f"今日通过{entry_path(target_row.iloc[-1])}，不依赖其他例外放行。"
+                if not target_row.empty and bool(target_row.iloc[-1]["final_entry_pass"])
+                else "现有持仓未触发退出，不依赖今日新开仓路径；资讯不能覆盖价格退出规则。"
+            )
+        ) if target_sentiment is not None else "- 目标主题没有可用的情绪映射，按未知处理。",
         "- 结论：审核完整性硬门已通过；当天没有候选依赖新趋势或质量延伸例外。正式规则没有统一负面阈值去否决所有常规买点。",
         "",
         "| 主题 | 正向记录 | 负向记录 |",

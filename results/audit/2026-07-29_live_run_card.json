@@ -1,0 +1,129 @@
+{
+  "card_type": "ye_live_run_card",
+  "strategy": {
+    "id": "YE-FORMAL-2026-07-27B",
+    "name": "ye 策略",
+    "status": "frozen_for_live",
+    "effective_for_signal_dates_from": "2026-07-28",
+    "rule_source": "config/ye_strategy.yaml",
+    "execution_source": "scripts/run_after_close.py",
+    "daily_mode": "收盘后生成、下一交易日开盘执行"
+  },
+  "signal_date": "2026-07-29",
+  "execute": "下一交易日开盘",
+  "created_at_utc": "2026-07-29T07:11:31.002573+00:00",
+  "decision": {
+    "current_symbol": "512010.SH",
+    "target_symbol": "512010.SH",
+    "backtest_shadow_target_symbol": "159985.SZ",
+    "actions": [
+      {
+        "side": "hold",
+        "symbol": "512010.SH",
+        "target_weight": 1.0,
+        "reasons": []
+      }
+    ],
+    "cost": "唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径"
+  },
+  "account_state": {
+    "source": "用户此前确认仓位；2026-07-28计划无买卖订单，且截至本次运行未报告成交、出入金或未完成订单，按账户连续性滚存",
+    "as_of": "2026-07-29_close",
+    "confirmation_status": "confirmed",
+    "first_live_day": false,
+    "total_equity": 9772.6,
+    "available_cash": 0.0,
+    "performance": {
+      "strategy_start_date": "2026-07-21",
+      "net_contributed_capital": 9825.0,
+      "calculation_basis": "用户确认资金全部投入首笔买入；26200股×0.375元=9825元，后续如有出入金必须同步调整"
+    },
+    "positions": [
+      {
+        "symbol": "512010.SH",
+        "name": "医药ETF易方达",
+        "quantity": 26200,
+        "average_cost": 0.375,
+        "market_price": 0.373,
+        "market_value": 9772.6,
+        "unrealized_pnl": -52.4
+      }
+    ],
+    "pending_orders": []
+  },
+  "decision_basis": {
+    "live_position_source": "results/live/account_state.json；不得使用回测持仓代替",
+    "eligible_candidates": [
+      {
+        "symbol": "512800.SH",
+        "name": "银行ETF华宝",
+        "pool_role": "core",
+        "rank": 1,
+        "momentum_score": 0.1565448946998533,
+        "selection_score": 0.1565448946998533,
+        "entry_path": "常规动量"
+      }
+    ],
+    "selection_rule": "核心候选拥有第一买入权；只有当天无合格核心候选时，挑战者才按正式路径选择分填补空档。核心持仓未触发卖出时继续持有；挑战者持仓遇到合格核心候选时让位。",
+    "backtest_shadow_note": "回测影子持仓只用于绩效和一致性审计，不代表真实账户持仓，也不决定首次实盘买单。"
+  },
+  "cash_management": {
+    "enabled": true,
+    "product": "收盘宝",
+    "instruction": "收盘后仅对实际闲置现金执行；不改变上述ETF计划。",
+    "subscribe_window": "交易日15:00-15:30",
+    "amount_rule": "收盘可用现金大于1000元时，按1000元整数倍申报；保留无法整除的余额",
+    "fee_rate": 1e-05,
+    "annualized_yield": "下单时实时值；不得在实盘计划中写死或承诺收益",
+    "maturity": "下一交易日开盘前本金和利息回到股票账户可用资金",
+    "failure_action": "下单失败、收益率缺失、额度不足或到账异常时，保留现金；不得影响ETF卖出或买入计划"
+  },
+  "sentiment_review": {
+    "status": "complete",
+    "coverage": 1.0,
+    "reviewed_count": 190,
+    "input_count": 190,
+    "prompt_version": "ye-codex-chat-review-2026-07-22",
+    "review_metadata": {
+      "model_family": "GPT-5",
+      "model_snapshot": "not_exposed_by_codex",
+      "surface": "Codex desktop",
+      "reviewed_in_current_conversation": true
+    },
+    "review_protocol": {
+      "version": "ye-codex-chat-review-2026-07-22",
+      "files": [
+        {
+          "path": "config/sentiment_review_policy.yaml",
+          "sha256": "64cc6dd0db1d6888b47d3e15903bbfb194f23dc6495b50a9b94ab778e3275f80"
+        },
+        {
+          "path": "config/sentiment.yaml",
+          "sha256": "264703aa392f3f796635c7e62fcbd21700e2a7bf03ab379f5242c6b23f2af5a2"
+        },
+        {
+          "path": "skills/ye-daily-execution/references/review-schema.md",
+          "sha256": "3a7433d841da73e87a60ca1f559a454fa40f2568ea56ef7566ac3469d7aa1734"
+        }
+      ]
+    },
+    "protocol_status": "fingerprinted"
+  },
+  "release": {
+    "readiness": "READY",
+    "blocking_items": [],
+    "plan_is_not_fill": true
+  },
+  "audit": {
+    "run_manifest": "results/audit/2026-07-29_run_manifest.json",
+    "run_manifest_sha256": "f5a37ccba51fe46719310a6fb0f9e68010576e0e5978f327d9ada99966bd65ea",
+    "critical_file_count": 21,
+    "source_file_count": 20,
+    "price_file_count": 59
+  },
+  "execution_reconciliation": {
+    "status": "not_required",
+    "actual_fill_template": null,
+    "reconciliation_output": "results/audit/2026-07-29_execution_reconciliation.json"
+  }
+}
