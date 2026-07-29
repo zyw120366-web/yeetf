@@ -3,7 +3,12 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from .etfwin import EtfwinRules, etfwin_features, etfwin_signals
+from .etfwin import (
+    EtfwinOpportunitySwitch,
+    EtfwinRules,
+    etfwin_features,
+    etfwin_signals,
+)
 from .execution import entry_eligibility
 from .sentiment import broadcast
 
@@ -294,6 +299,16 @@ def build_ye_signals(
         hot_memory = pd.DataFrame(False, index=calendar, columns=symbols)
     soft_exit &= ~hot_memory
 
+    switch_cfg = enhanced.get("opportunity_switch", {})
+    opportunity_switch = None
+    if bool(switch_cfg.get("enabled", False)):
+        opportunity_switch = EtfwinOpportunitySwitch(
+            held_rank_must_exceed=int(switch_cfg["held_rank_must_exceed"]),
+            minimum_score_advantage=float(switch_cfg["minimum_score_advantage"]),
+            confirmation_days=int(switch_cfg["confirmation_days"]),
+            minimum_hold_days=int(switch_cfg["minimum_hold_days"]),
+        )
+
     bundle, _ = etfwin_signals(
         close,
         symbols,
@@ -309,6 +324,10 @@ def build_ye_signals(
             core_symbols if architecture_mode == "core_champion_cash_gap" else None
         ),
         preempt_for_priority_entry=architecture_mode == "core_champion_cash_gap",
+        opportunity_switch=opportunity_switch,
+        opportunity_switch_rank=decision_rank if opportunity_switch else None,
+        opportunity_switch_score=features.raw_score if opportunity_switch else None,
+        opportunity_switch_symbols=core_symbols if opportunity_switch else None,
     )
     decision = {
         "entry_gate": entry_gate,
@@ -327,6 +346,7 @@ def build_ye_signals(
         "core_symbols": core_symbols,
         "challenger_symbols": challenger_symbols,
         "universe_architecture": architecture_mode,
+        "opportunity_switch": switch_cfg,
         "r2_20": r2,
         "efficiency20": efficiency,
         "category_breadth": breadth,

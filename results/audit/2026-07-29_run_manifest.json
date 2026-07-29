@@ -1,7 +1,7 @@
 {
   "strategy": "ye 策略",
   "signal_date": "2026-07-29",
-  "created_at_utc": "2026-07-29T07:11:30.933649+00:00",
+  "created_at_utc": "2026-07-29T09:43:02.802206+00:00",
   "python": "3.13.6",
   "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
   "critical_files": [
@@ -12,8 +12,8 @@
     },
     {
       "path": "config/ye_strategy.yaml",
-      "bytes": 6907,
-      "sha256": "1e1819a80bf4fe2d31951f4a99240cab2c35572d3c341c57037287d820ac25b2"
+      "bytes": 7923,
+      "sha256": "05a323e6037d67466f24326f4e1792a87fe0a39b3615ce76ffcf90cd1fe1134f"
     },
     {
       "path": "config/etfwin_official.yaml",
@@ -32,13 +32,13 @@
     },
     {
       "path": "config/strategy_governance.yaml",
-      "bytes": 2065,
-      "sha256": "3cdf817cdeb5082972dfed8001d3c3593f660b9c299c3d489f03939ea17c8ddd"
+      "bytes": 2479,
+      "sha256": "0b75eaa8973cffbeed28adb53b6f2fa87b6d2fd64ffd84ffb4882daaa86810e2"
     },
     {
       "path": "config/research_hypotheses.yaml",
       "bytes": 316,
-      "sha256": "4a988f9e31a013362d899ed77f69df4a03bad030893b02043c7a60821b3902ae"
+      "sha256": "e6da8a317f1d1a94c169ac021f83bdc96afcb295c8eb210fe10ea8ac51df1433"
     },
     {
       "path": "market_data/sentiment/ai_review/2026-07-29.json",
@@ -52,18 +52,18 @@
     },
     {
       "path": "results/ye_strategy/summary.json",
-      "bytes": 3172,
-      "sha256": "e98a2a8d9c8bd146ae906ad34ad7bacf7691e2a41bde6adb4fe4520c2495d9b7"
+      "bytes": 3170,
+      "sha256": "056dc2b41f9c9c632db3c5620b05b1b81d503d7ee467ba4d20092464ad8f7889"
     },
     {
       "path": "results/ye_strategy/signal_weights.csv",
       "bytes": 645522,
-      "sha256": "a884f88638454f52e0e844198675454f6f613874e3cdefbd9f9b814dd0f654de"
+      "sha256": "35d7935be47cee3597e88bc48a00e5c896b78ba2bf3756239eeab9711c31cec4"
     },
     {
       "path": "results/ye_strategy/trade_audit.json",
-      "bytes": 636780,
-      "sha256": "2b61809bbc08a7f52e8dc3b9dc42690439af8fabd3cb51feb6015263509fbbd5"
+      "bytes": 647578,
+      "sha256": "eeecc1f8cadc49cf61380b8bd936bbca9ee378730d405b915350c4bcca661237"
     },
     {
       "path": "results/etfwin_reference/reference_summary.json",
@@ -72,43 +72,43 @@
     },
     {
       "path": "results/comparison/latest_signals.json",
-      "bytes": 1218,
-      "sha256": "e14ea3454db95a4525f3e145d7bcb7dc6c3164a7d7c2b7d4f1928bf0e647a9cb"
+      "bytes": 1455,
+      "sha256": "810e9b8feae11593cf776d509866e3a4f6435c0acdf09fce323196307d1466ab"
     },
     {
       "path": "results/comparison/metrics.csv",
-      "bytes": 2885,
-      "sha256": "186e064a156e5996130f4e750c8970fb6514f8d9b88087f0d0d87db0b48eff12"
+      "bytes": 2884,
+      "sha256": "6f2f9d282462c224ddeb4a8b0846497aed8807dc398c829a8ffebb936697d74e"
     },
     {
       "path": "results/live/account_state.json",
-      "bytes": 1254,
-      "sha256": "940bb2d69dd7c13c1846fdb40a5529c85310be94c085e3e06d45b8722a3744b0"
+      "bytes": 1287,
+      "sha256": "f8c86f0f5e44c87d3db208c597d575a84281d0d885fb498f8b61c3e0f12653f3"
     },
     {
       "path": "results/live/2026-07-29_order_plan.json",
-      "bytes": 3409,
-      "sha256": "0e0a5e85d0c6b9087fe6bd3ed0f03802b10d95d5bb4ecf63cac8812f1c0c952a"
+      "bytes": 4069,
+      "sha256": "e812e94d489406dde8b4d136de552ac9b2cb016bdd0c92948647ea60a3598969"
     },
     {
       "path": "results/live/readiness_report.json",
       "bytes": 1005,
-      "sha256": "7019886d20ca06cc5c48e7ecd184aadba26866f2e43f5e7d232178e6a02bb45b"
+      "sha256": "e6cfbde5729a81a167612ebf7193d2df4fc11f0a71ff3b28c232314e442e959b"
     },
     {
       "path": "dashboard/public/ye-strategy.html",
-      "bytes": 19986,
-      "sha256": "34666f01bb3fc3666d4a0bb4af5753a7be76cbb59d48dcc2c58a42d6bcdf38ab"
+      "bytes": 20107,
+      "sha256": "120ea0084555ec0a04d1fc0f96c25abdb7ffce7dbfcb3887a7ecf3fe1997f340"
     },
     {
       "path": "dashboard/public/ye-daily.html",
-      "bytes": 38027,
-      "sha256": "d8f3a2bf87b0345f39764e2db9a3bd9e840b8c83a93696e63343e9c98cc695af"
+      "bytes": 38116,
+      "sha256": "abcf574f255d13c9cb38114cd164a1110f6192e566c39cf0b73ad006464c81ba"
     },
     {
       "path": "dashboard/public/ye-backtest.html",
-      "bytes": 2175994,
-      "sha256": "b5312de74e1aa42de950080d987163bbd7ceb41940ee02c62196d003cd4dae60"
+      "bytes": 2208173,
+      "sha256": "f25fc7312ebbb589d21050d4cbe74326847daf80ad3d2a8062bedd80e8fff05b"
     }
   ],
   "source_files": [
@@ -129,8 +129,8 @@
     },
     {
       "path": "src/etf_rotation/etfwin.py",
-      "bytes": 19042,
-      "sha256": "6a7c3a0bf12b9dbfa15a5d20f6d016c9a921667da0c195298baf8f3ea4952535"
+      "bytes": 24719,
+      "sha256": "2d691d49222ee1dd08a7a628fe6f7fb5a3befcd226fca0649d4c5123e44891fb"
     },
     {
       "path": "src/etf_rotation/evaluation.py",
@@ -159,8 +159,8 @@
     },
     {
       "path": "src/etf_rotation/ye.py",
-      "bytes": 13731,
-      "sha256": "5c09c60fdc0c73cd3b13eb0ba1c1ba4ceb804f71540d65e6a74976377223c30e"
+      "bytes": 14603,
+      "sha256": "7f33da891948591182821d4efa73a64141f6173b18b79f86ea6092fe1c47daad"
     },
     {
       "path": "run_strategies.py",
@@ -179,8 +179,8 @@
     },
     {
       "path": "scripts/build_live_order_plan.py",
-      "bytes": 14229,
-      "sha256": "da5fb6d71a5c5ea0dde7456df8aaf2b48d42e5e20afaa9be9e75ffc9601c7a46"
+      "bytes": 19579,
+      "sha256": "5212f749f5c86628fb0239788ac44b0d451f07af9fea0ecdb93e05be93d8db3d"
     },
     {
       "path": "scripts/validate_live_readiness.py",
@@ -189,8 +189,8 @@
     },
     {
       "path": "scripts/build_daily_reference_report.py",
-      "bytes": 25363,
-      "sha256": "0ee78b74867a9c1f971be2e7e584c93091be0f1bbd28a484922cf5df4ea2fdb7"
+      "bytes": 27000,
+      "sha256": "5d07bd7f5072a886a7b874d8eb1c10b0b06645d098bdfd0ca46cc787af1fd5e2"
     },
     {
       "path": "scripts/build_live_run_card.py",
@@ -209,8 +209,8 @@
     },
     {
       "path": "dashboard/scripts/build_ye_strategy_html.py",
-      "bytes": 105812,
-      "sha256": "33e96d53e55b1c8c1c29e6de52aa089cbc96969479deade0ba848e0cdbf55dbc"
+      "bytes": 106340,
+      "sha256": "581d58ebbd5d8d61f81046f49407ae940871eba6f617991190e0f12391f24bcd"
     }
   ],
   "price_files": [

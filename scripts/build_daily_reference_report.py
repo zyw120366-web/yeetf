@@ -60,7 +60,7 @@ def candidate_outcome(row: pd.Series, target_symbol: str | None, current_symbol:
             return "最终合格；现有实盘持仓未触发卖出，继续作为唯一目标"
         return "最终合格且符合核心优先顺序，选为唯一目标"
     if current_symbol and current_symbol == target_symbol:
-        return "最终合格，但现有实盘持仓未触发卖出，策略不为追逐更高分而换仓"
+        return "最终合格；现有持仓尚未达到完整换仓触发，今天继续持有"
     return "最终合格，但正式路径选择分低于已选目标；不同时持有多只"
 
 
@@ -122,6 +122,16 @@ def main() -> None:
     account = plan["account_state"]
     target_symbol = plan.get("target_symbol")
     current_symbol = plan.get("current_symbol")
+    switch_status = plan.get("decision_basis", {}).get("opportunity_switch", {})
+    switch_candidate_symbol = switch_status.get("candidate_symbol")
+    switch_candidate_match = (
+        ranking.loc[ranking["symbol"].eq(switch_candidate_symbol)]
+        if switch_candidate_symbol else pd.DataFrame()
+    )
+    switch_candidate_name = (
+        str(switch_candidate_match.iloc[-1]["name"])
+        if not switch_candidate_match.empty else str(switch_candidate_symbol or "无")
+    )
     target_row = ranking.loc[ranking["symbol"].eq(target_symbol)] if target_symbol else pd.DataFrame()
     target_name = str(target_row.iloc[-1]["name"]) if not target_row.empty else "现金"
     category_rows = category_counts(review["items"])
@@ -155,7 +165,13 @@ def main() -> None:
         else f"当前持有 {positions[0]['symbol']} {int(float(positions[0]['quantity'])):,} 股"
     )
     if current_symbol and current_symbol == target_symbol:
-        account_decision = f"现有持仓 {current_symbol} 未触发卖出条件，继续持有；不因其他标的排名变化而换仓。"
+        if switch_status.get("qualifies_today"):
+            account_decision = (
+                f"现有持仓 {current_symbol} 未触发卖出；机会换仓条件今日成立，"
+                f"连续确认 {switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}，尚未触发，继续持有。"
+            )
+        else:
+            account_decision = f"现有持仓 {current_symbol} 未触发卖出，也未满足完整机会换仓，继续持有。"
     elif not current_symbol:
         account_decision = f"当前空仓，按正式路径选择分取第一名，得到唯一目标 {target_name}（{target_symbol or '现金'}）。"
     else:
@@ -260,7 +276,14 @@ def main() -> None:
     else:
         category_peer_story = f"{target_category}没有其他可比ETF。"
     if current_symbol and current_symbol == target_symbol:
-        decision_story = f"现有{target_name}仓位未触发卖出，继续持有；不因其他ETF排名更高而换仓。"
+        if switch_status.get("qualifies_today"):
+            decision_story = (
+                f"现有{target_name}仓位未触发卖出；{switch_candidate_name}满足换仓比较，但今天只记"
+                f"第{switch_status.get('confirmation_streak', 0)}次确认，未满"
+                f"{switch_status.get('required_confirmation_days', 2)}次，所以继续持有。"
+            )
+        else:
+            decision_story = f"现有{target_name}仓位未触发卖出，也未完整满足机会换仓，继续持有。"
     elif not current_symbol and target_symbol:
         decision_story = f"账户原本空仓，因此从最终合格候选中按正式选择分选出{target_name}作为唯一目标。"
     elif current_symbol and target_symbol:
@@ -281,7 +304,7 @@ def main() -> None:
         f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
         target_insight,
         f"{len(ranking)}只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}这说明{target_category}方向并非只有当前持仓走强；现有{target_name}没有触发退出，因此不会仅因出现新的合格候选而换仓。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
+        f"板块内部也有呼应：{category_peer_story}正式规则不会因单日领先立即换仓，必须同时满足掉出前5、领先5个百分点、连续2日和持有5日。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
         f"资讯面上，{target_category}主题为{target_positive}条正向、{target_negative}条负向，均按专属关键词直接映射。今天的核心洞察是：{core_insight}",
         satellite_status,
     ]
@@ -310,6 +333,12 @@ def main() -> None:
         f"- 当前权益：{account['total_equity']:,.2f} 元；{account_position}。",
         f"- 唯一目标：{target_name}（{target_symbol or '现金'}）{('，目标仓位 100%' if target_symbol else '，目标仓位 0%')}。",
         (f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。" if execution_orders else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"),
+        (
+            f"- 机会换仓：候选 {switch_status.get('candidate_symbol') or '无'}；今日是否合格"
+            f"{'是' if switch_status.get('qualifies_today') else '否'}；连续确认 "
+            f"{switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}；"
+            f"{'已触发' if switch_status.get('triggered') else '未触发'}。"
+        ),
         f"- 固定成本：{plan['cost']}。",
         "",
         f"## 二、今天怎样从 {len(ranking)} 只 ETF 得到唯一目标",

@@ -21,6 +21,7 @@
       {
         "symbol": "512010.SH",
         "name": "医药ETF易方达",
+        "opened_on": "2026-07-21",
         "quantity": 26200,
         "average_cost": 0.375,
         "market_price": 0.373,
@@ -43,7 +44,25 @@
         "entry_path": "常规动量"
       }
     ],
-    "selection_rule": "核心候选拥有第一买入权；只有当天无合格核心候选时，挑战者才按正式路径选择分填补空档。核心持仓未触发卖出时继续持有；挑战者持仓遇到合格核心候选时让位。",
+    "selection_rule": "核心候选拥有第一买入权；只有当天无合格核心候选时，挑战者才填补空档。核心旧仓先检查原卖出，再检查5/5点/2日/5日机会换仓；挑战者持仓遇到合格核心候选时让位。",
+    "opportunity_switch": {
+      "enabled": true,
+      "candidate_symbol": "512800.SH",
+      "qualifies_today": true,
+      "confirmation_streak": 1,
+      "required_confirmation_days": 2,
+      "triggered": false,
+      "status": "counting",
+      "live_confirmation_starts_on": "2026-07-29",
+      "holding_symbol": "512010.SH",
+      "holding_rank": 6.0,
+      "holding_since": "2026-07-21",
+      "held_trading_days": 7,
+      "candidate_rank": 1.0,
+      "score_gap": 0.105385557672363,
+      "minimum_score_advantage": 0.05,
+      "reset_rule": "任一条件中断或领先ETF改变，连续计数归零"
+    },
     "backtest_shadow_note": "回测影子持仓只用于绩效和一致性审计，不代表真实账户持仓，也不决定首次实盘买单。"
   },
   "actions": [

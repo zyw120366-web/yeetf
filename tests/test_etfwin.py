@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 
 from etf_rotation.etfwin import (
+    EtfwinOpportunitySwitch,
     EtfwinProfitProtection,
     EtfwinRules,
     etfwin_features,
@@ -353,3 +354,55 @@ def test_priority_candidate_preempts_challenger_and_has_first_entry_right() -> N
     assert "核心池出现合格候选" in bundle.diagnostics.loc[
         dates[-2], "exit_reasons"
     ]
+
+
+def test_opportunity_switch_requires_rank_gap_two_days_and_minimum_hold() -> None:
+    dates = pd.bdate_range("2026-01-01", periods=20)
+    close = pd.DataFrame(
+        {
+            "old": np.linspace(1.0, 1.20, len(dates)),
+            "new": np.linspace(1.0, 1.30, len(dates)),
+        },
+        index=dates,
+    )
+    rules = EtfwinRules(
+        roc_short_days=2,
+        roc_medium_days=4,
+        ma_days=5,
+        entry_rank_limit=10,
+        max_entry_ma_bias=1.0,
+        rank_change_short_days=2,
+        rank_change_long_days=4,
+        exit_on_ma_break=False,
+        exit_on_short_roc_negative=False,
+        exit_on_dual_rank_decline=False,
+    )
+    gate = pd.DataFrame(False, index=dates, columns=close.columns)
+    gate.loc[dates[5]:, "old"] = True
+    gate.loc[dates[-2]:, "new"] = True
+    entry_score = pd.DataFrame(
+        {"old": 1.0, "new": 2.0}, index=dates
+    )
+    switch_rank = pd.DataFrame(
+        {"old": 6.0, "new": 1.0}, index=dates
+    )
+    switch_score = pd.DataFrame(
+        {"old": 0.05, "new": 0.15}, index=dates
+    )
+    bundle, _ = etfwin_signals(
+        close,
+        list(close.columns),
+        rules,
+        entry_gate=gate,
+        entry_ranking_score_override=entry_score,
+        opportunity_switch=EtfwinOpportunitySwitch(5, 0.05, 2, 5),
+        opportunity_switch_rank=switch_rank,
+        opportunity_switch_score=switch_score,
+        opportunity_switch_symbols=list(close.columns),
+    )
+
+    assert bundle.weights.loc[dates[-2], "old"] == 1.0
+    assert bundle.weights.loc[dates[-1], "new"] == 1.0
+    assert bundle.diagnostics.loc[dates[-2], "opportunity_switch_qualified"]
+    assert bundle.diagnostics.loc[dates[-1], "opportunity_switch_triggered"]
+    assert "机会成本换仓" in bundle.diagnostics.loc[dates[-1], "exit_reasons"]

@@ -11,9 +11,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_formal_governance_keeps_rules_frozen() -> None:
     governance = yaml.safe_load((ROOT / "config" / "strategy_governance.yaml").read_text(encoding="utf-8"))
-    assert governance["formal_strategy"]["id"] == "YE-FORMAL-2026-07-27B"
+    assert governance["formal_strategy"]["id"] == "YE-FORMAL-2026-07-29C"
     assert governance["formal_strategy"]["status"] == "frozen_for_live"
-    assert governance["formal_strategy"]["effective_for_signal_dates_from"] == "2026-07-28"
+    assert governance["formal_strategy"]["effective_for_signal_dates_from"] == "2026-07-29"
     assert governance["live_audit"]["plan_is_not_fill"] is True
 
 

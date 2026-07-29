@@ -99,6 +99,25 @@ def test_public_html_contains_only_current_strategy_context() -> None:
         assert stale not in strategy
     assert "ye 当前完整规则" in strategy
     assert "ye 与 etfwin 规则对照" in strategy
+    for marker in (
+        "一、继续持有",
+        "二、卖出",
+        "三、主动换仓",
+        "完整合格核心ETF动量分领先至少5个百分点",
+        "连续2个收盘",
+    ):
+        assert marker in strategy
+
+
+def test_formal_opportunity_switch_parameters_are_frozen() -> None:
+    formal = yaml.safe_load((ROOT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
+    rule = formal["enhanced_selection"]["opportunity_switch"]
+    assert rule["enabled"] is True
+    assert rule["held_rank_must_exceed"] == 5
+    assert rule["minimum_score_advantage"] == pytest.approx(0.05)
+    assert rule["confirmation_days"] == 2
+    assert rule["minimum_hold_days"] == 5
+    assert rule["live_confirmation_starts_on"] == "2026-07-29"
 
 
 def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:
