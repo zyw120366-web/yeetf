@@ -166,10 +166,16 @@ def main() -> None:
     )
     if current_symbol and current_symbol == target_symbol:
         if switch_status.get("qualifies_today"):
-            account_decision = (
-                f"现有持仓 {current_symbol} 未触发卖出；机会换仓条件今日成立，"
-                f"连续确认 {switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}，尚未触发，继续持有。"
-            )
+            if switch_status.get("status") == "baseline":
+                account_decision = (
+                    f"现有持仓 {current_symbol} 未触发卖出；机会换仓条件今日成立，但今天只建立观察基线0/2，"
+                    "明日继续成立才记1/2，因此继续持有。"
+                )
+            else:
+                account_decision = (
+                    f"现有持仓 {current_symbol} 未触发卖出；机会换仓条件今日成立，"
+                    f"连续确认 {switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}，尚未触发，继续持有。"
+                )
         else:
             account_decision = f"现有持仓 {current_symbol} 未触发卖出，也未满足完整机会换仓，继续持有。"
     elif not current_symbol:
@@ -277,11 +283,17 @@ def main() -> None:
         category_peer_story = f"{target_category}没有其他可比ETF。"
     if current_symbol and current_symbol == target_symbol:
         if switch_status.get("qualifies_today"):
-            decision_story = (
-                f"现有{target_name}仓位未触发卖出；{switch_candidate_name}满足换仓比较，但今天只记"
-                f"第{switch_status.get('confirmation_streak', 0)}次确认，未满"
-                f"{switch_status.get('required_confirmation_days', 2)}次，所以继续持有。"
-            )
+            if switch_status.get("status") == "baseline":
+                decision_story = (
+                    f"现有{target_name}仓位未触发卖出；{switch_candidate_name}满足换仓比较，"
+                    "但今天只建立观察基线0/2，明日继续满足才记1/2，所以继续持有。"
+                )
+            else:
+                decision_story = (
+                    f"现有{target_name}仓位未触发卖出；{switch_candidate_name}满足换仓比较，"
+                    f"当前连续确认{switch_status.get('confirmation_streak', 0)}/"
+                    f"{switch_status.get('required_confirmation_days', 2)}，尚未触发，所以继续持有。"
+                )
         else:
             decision_story = f"现有{target_name}仓位未触发卖出，也未完整满足机会换仓，继续持有。"
     elif not current_symbol and target_symbol:
@@ -335,9 +347,13 @@ def main() -> None:
         (f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。" if execution_orders else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"),
         (
             f"- 机会换仓：候选 {switch_status.get('candidate_symbol') or '无'}；今日是否合格"
-            f"{'是' if switch_status.get('qualifies_today') else '否'}；连续确认 "
-            f"{switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}；"
-            f"{'已触发' if switch_status.get('triggered') else '未触发'}。"
+            f"{'是' if switch_status.get('qualifies_today') else '否'}；"
+            + (
+                "今天仅建立观察基线0/2，明日继续合格才记1/2；未触发。"
+                if switch_status.get("status") == "baseline"
+                else f"连续确认 {switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}；"
+                f"{'已触发' if switch_status.get('triggered') else '未触发'}。"
+            )
         ),
         f"- 固定成本：{plan['cost']}。",
         "",

@@ -1,7 +1,7 @@
 {
   "strategy": "ye 策略",
   "signal_date": "2026-07-29",
-  "created_at_utc": "2026-07-29T09:43:02.802206+00:00",
+  "created_at_utc": "2026-07-29T10:00:15.101764+00:00",
   "python": "3.13.6",
   "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
   "critical_files": [
@@ -12,8 +12,8 @@
     },
     {
       "path": "config/ye_strategy.yaml",
-      "bytes": 7923,
-      "sha256": "05a323e6037d67466f24326f4e1792a87fe0a39b3615ce76ffcf90cd1fe1134f"
+      "bytes": 7958,
+      "sha256": "8f1c05c350bd150e23fe485effd77613413c96c65844367405ce2f721b859ed5"
     },
     {
       "path": "config/etfwin_official.yaml",
@@ -32,8 +32,8 @@
     },
     {
       "path": "config/strategy_governance.yaml",
-      "bytes": 2479,
-      "sha256": "0b75eaa8973cffbeed28adb53b6f2fa87b6d2fd64ffd84ffb4882daaa86810e2"
+      "bytes": 2575,
+      "sha256": "cc8b6c5692bda1f8d94ab0929f946d68829bc6b4b6c153f6dbb9484c76a9c053"
     },
     {
       "path": "config/research_hypotheses.yaml",
@@ -87,8 +87,8 @@
     },
     {
       "path": "results/live/2026-07-29_order_plan.json",
-      "bytes": 4069,
-      "sha256": "e812e94d489406dde8b4d136de552ac9b2cb016bdd0c92948647ea60a3598969"
+      "bytes": 4109,
+      "sha256": "cebb5b686353b0b558ed26ee7f9d80cad6321bb74bd1b2b8bcd7036dde033f64"
     },
     {
       "path": "results/live/readiness_report.json",
@@ -102,8 +102,8 @@
     },
     {
       "path": "dashboard/public/ye-daily.html",
-      "bytes": 38116,
-      "sha256": "abcf574f255d13c9cb38114cd164a1110f6192e566c39cf0b73ad006464c81ba"
+      "bytes": 38200,
+      "sha256": "c4c286076b22e89850def4cabe791322648e9740a7245f9ac0f78a2e89d613ba"
     },
     {
       "path": "dashboard/public/ye-backtest.html",
@@ -179,8 +179,8 @@
     },
     {
       "path": "scripts/build_live_order_plan.py",
-      "bytes": 19579,
-      "sha256": "5212f749f5c86628fb0239788ac44b0d451f07af9fea0ecdb93e05be93d8db3d"
+      "bytes": 19851,
+      "sha256": "19fbabe94d75b5ce39c55a6274312df565a738a3773e444e6d4714eb01a0defb"
     },
     {
       "path": "scripts/validate_live_readiness.py",
@@ -189,8 +189,8 @@
     },
     {
       "path": "scripts/build_daily_reference_report.py",
-      "bytes": 27000,
-      "sha256": "5d07bd7f5072a886a7b874d8eb1c10b0b06645d098bdfd0ca46cc787af1fd5e2"
+      "bytes": 27925,
+      "sha256": "5406e4441e5dbabec404054d9a9c2a071ccac320304e1062caf18797514b6ced"
     },
     {
       "path": "scripts/build_live_run_card.py",
@@ -209,8 +209,8 @@
     },
     {
       "path": "dashboard/scripts/build_ye_strategy_html.py",
-      "bytes": 106340,
-      "sha256": "581d58ebbd5d8d61f81046f49407ae940871eba6f617991190e0f12391f24bcd"
+      "bytes": 107018,
+      "sha256": "b12fe488a80d3b2652deb3596227ed27fa81c5f154cc830028f2cd36632865c9"
     }
   ],
   "price_files": [

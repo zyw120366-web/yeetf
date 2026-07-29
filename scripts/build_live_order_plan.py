@@ -124,7 +124,8 @@ def opportunity_switch_status(
     if str(held.get("pool_role", "core")) != "core":
         return {**base, "status": "core_only"}
     starts_on = pd.Timestamp(rule["live_confirmation_starts_on"])
-    if day < starts_on:
+    baseline_on = pd.Timestamp(rule.get("live_baseline_on", starts_on))
+    if day < baseline_on:
         return {**base, "status": "not_effective_yet"}
 
     core = candidates.loc[
@@ -159,7 +160,7 @@ def opportunity_switch_status(
         )
 
     streak = 0
-    if qualifies and candidate is not None:
+    if qualifies and candidate is not None and day >= starts_on:
         streak = 1
         previous = previous_trading_day(day)
         if previous is not None and previous >= starts_on:
@@ -174,9 +175,18 @@ def opportunity_switch_status(
                 ):
                     streak = int(prior.get("confirmation_streak", 0)) + 1
     required = int(rule["confirmation_days"])
+    if day < starts_on:
+        status = "baseline"
+    elif qualifies and streak >= required:
+        status = "triggered"
+    elif qualifies:
+        status = "counting"
+    else:
+        status = "not_qualified"
     return {
         **base,
-        "status": "triggered" if qualifies and streak >= required else "counting" if qualifies else "not_qualified",
+        "status": status,
+        "live_baseline_on": str(baseline_on.date()),
         "live_confirmation_starts_on": str(starts_on.date()),
         "holding_symbol": current,
         "holding_rank": float(held["rank"]),

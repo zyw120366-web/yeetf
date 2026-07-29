@@ -117,7 +117,16 @@ def test_formal_opportunity_switch_parameters_are_frozen() -> None:
     assert rule["minimum_score_advantage"] == pytest.approx(0.05)
     assert rule["confirmation_days"] == 2
     assert rule["minimum_hold_days"] == 5
-    assert rule["live_confirmation_starts_on"] == "2026-07-29"
+    assert rule["live_baseline_on"] == "2026-07-29"
+    assert rule["live_confirmation_starts_on"] == "2026-07-30"
+    baseline_plan = json.loads(
+        (ROOT / "results" / "live" / "2026-07-29_order_plan.json").read_text(encoding="utf-8")
+    )
+    baseline = baseline_plan["decision_basis"]["opportunity_switch"]
+    assert baseline["qualifies_today"] is True
+    assert baseline["status"] == "baseline"
+    assert baseline["confirmation_streak"] == 0
+    assert baseline["triggered"] is False
 
 
 def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:

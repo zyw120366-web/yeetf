@@ -133,7 +133,8 @@ enhanced_selection:
     confirmation_days: 2
     same_candidate_required: true
     minimum_hold_days: 5
-    live_confirmation_starts_on: '2026-07-29'
+    live_baseline_on: '2026-07-29'
+    live_confirmation_starts_on: '2026-07-30'
     execution: 第2个连续确认日收盘形成信号，下一交易日开盘全仓先卖旧仓、再买新仓
     reset_rule: 任一条件中断或领先ETF改变，连续计数归零
 

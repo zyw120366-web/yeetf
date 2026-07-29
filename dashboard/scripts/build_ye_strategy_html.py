@@ -752,11 +752,17 @@ def build_daily_page() -> str:
         category_peer_story = f"{target_category}没有其他可比ETF。"
     if current_symbol and current_symbol == target_symbol:
         if switch_status.get("qualifies_today"):
-            decision_story = (
-                f"现有{target_name}未触发卖出；{switch_candidate_name}满足换仓比较，但今天只记"
-                f"第{switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}次确认，"
-                "所以继续持有。"
-            )
+            if switch_status.get("status") == "baseline":
+                decision_story = (
+                    f"现有{target_name}未触发卖出；{switch_candidate_name}满足换仓比较，但今天只建立观察基线0/2，"
+                    "明日继续满足才记1/2，所以继续持有。"
+                )
+            else:
+                decision_story = (
+                    f"现有{target_name}未触发卖出；{switch_candidate_name}满足换仓比较，"
+                    f"当前连续确认{switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}，"
+                    "尚未触发，所以继续持有。"
+                )
         else:
             decision_story = f"现有{target_name}未触发卖出，也未完整满足机会换仓，继续持有。"
     elif not current_symbol and target_symbol:
@@ -785,12 +791,19 @@ def build_daily_page() -> str:
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
     overview_html = "".join(f"<p>{html_lib.escape(paragraph)}</p>" for paragraph in overview_paragraphs)
-    switch_summary = (
-        f"机会换仓：{switch_candidate_name}；今日{'合格' if switch_status.get('qualifies_today') else '不合格'}，"
-        f"连续确认{switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}，"
-        f"{'已触发' if switch_status.get('triggered') else '未触发'}。"
-        if switch_status.get("enabled") else "机会换仓未启用。"
-    )
+    if not switch_status.get("enabled"):
+        switch_summary = "机会换仓未启用。"
+    elif switch_status.get("status") == "baseline":
+        switch_summary = (
+            f"机会换仓：{switch_candidate_name}今日合格，但今天只建立观察基线0/2；"
+            "明日继续合格才记1/2，当前未触发。"
+        )
+    else:
+        switch_summary = (
+            f"机会换仓：{switch_candidate_name}；今日{'合格' if switch_status.get('qualifies_today') else '不合格'}，"
+            f"连续确认{switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}，"
+            f"{'已触发' if switch_status.get('triggered') else '未触发'}。"
+        )
     body = f'''
 <section class="section" id="liveReturns"><div class="card kpis" style="grid-template-columns:repeat(3,1fr)"><div class="kpi"><span class="label">策略实盘开启以来</span><strong class="value {value_class(strategy_return)}">{signed_pct(strategy_return)}</strong><p>{signed_money(strategy_pnl)} · 自 {html_lib.escape(strategy_start)}</p></div><div class="kpi"><span class="label">本次买入收益</span><strong class="value {value_class(purchase_return)}">{signed_pct(purchase_return)}</strong><p>{signed_money(purchase_pnl)} · 成本 {average_cost:.3f} 元</p></div><div class="kpi"><span class="label">今日收益</span><strong class="value {value_class(daily_return)}">{signed_pct(daily_return)}</strong><p>{signed_money(daily_pnl)} · 对比 {html_lib.escape(previous_equity_date)}</p></div></div></section>
 <section class="section" id="dailyOverview"><article class="card strategy-lead daily-overview"><span class="label">先看这里 · 约500字要点版</span><h2>今日决策路径综述</h2>{overview_html}</article></section>

@@ -11,7 +11,7 @@
   },
   "signal_date": "2026-07-29",
   "execute": "下一交易日开盘",
-  "created_at_utc": "2026-07-29T09:43:02.864755+00:00",
+  "created_at_utc": "2026-07-29T10:00:15.169058+00:00",
   "decision": {
     "current_symbol": "512010.SH",
     "target_symbol": "512010.SH",
@@ -70,11 +70,12 @@
       "enabled": true,
       "candidate_symbol": "512800.SH",
       "qualifies_today": true,
-      "confirmation_streak": 1,
+      "confirmation_streak": 0,
       "required_confirmation_days": 2,
       "triggered": false,
-      "status": "counting",
-      "live_confirmation_starts_on": "2026-07-29",
+      "status": "baseline",
+      "live_baseline_on": "2026-07-29",
+      "live_confirmation_starts_on": "2026-07-30",
       "holding_symbol": "512010.SH",
       "holding_rank": 6.0,
       "holding_since": "2026-07-21",
@@ -135,7 +136,7 @@
   },
   "audit": {
     "run_manifest": "results/audit/2026-07-29_run_manifest.json",
-    "run_manifest_sha256": "672a5dbf45abe139f938bbfaa996648de69e39d691d55e09e091f556658263df",
+    "run_manifest_sha256": "4a0db29fc05abc646f4052e1d44e13b5568b8d38e25621405daca1ca6ddb8269",
     "critical_file_count": 21,
     "source_file_count": 20,
     "price_file_count": 59
