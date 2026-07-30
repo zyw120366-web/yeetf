@@ -1,17 +1,17 @@
 {
   "name": "etfwin 策略",
-  "generated_through": "2026-07-29",
+  "generated_through": "2026-07-30",
   "metrics": {
-    "total_return": 2.792671646419905,
-    "cagr": 0.1795207311357805,
-    "annual_volatility": 0.2787381130778886,
-    "sharpe": 0.754156569011782,
-    "sortino": 1.2538231285932766,
+    "total_return": 2.7179115479625686,
+    "cagr": 0.17655099559588128,
+    "annual_volatility": 0.27876431282201747,
+    "sharpe": 0.7446143600703989,
+    "sortino": 1.2377962565642224,
     "max_drawdown": -0.4998487710127286,
-    "calmar": 0.3591500900803635,
-    "annual_turnover": 35.34132160321019,
+    "calmar": 0.3532088220166604,
+    "annual_turnover": 35.32934149419215,
     "trade_count": 810.0,
-    "average_exposure": 0.8421965329584841,
+    "average_exposure": 0.8422768294854475,
     "total_fees": 11847.131663076665,
     "slippage_cost_estimate": 55964.47266351428,
     "blocked_order_count": 0.0,
@@ -21,16 +21,16 @@
   },
   "periods": {
     "全区间": {
-      "total_return": 2.792671646419905,
-      "cagr": 0.1795207311357805,
-      "annual_volatility": 0.2787381130778886,
-      "sharpe": 0.754156569011782,
-      "sortino": 1.2538231285932766,
+      "total_return": 2.7179115479625686,
+      "cagr": 0.17655099559588128,
+      "annual_volatility": 0.27876431282201747,
+      "sharpe": 0.7446143600703989,
+      "sortino": 1.2377962565642224,
       "max_drawdown": -0.4998487710127286,
-      "calmar": 0.3591500900803635,
-      "annual_turnover": 35.34132160321019,
+      "calmar": 0.3532088220166604,
+      "annual_turnover": 35.32934149419215,
       "trade_count": 810.0,
-      "average_exposure": 0.8421965329584841,
+      "average_exposure": 0.8422768294854475,
       "total_fees": 11847.131663076665,
       "slippage_cost_estimate": 55964.47266351428,
       "blocked_order_count": 0.0,
@@ -60,11 +60,11 @@
       "max_drawdown": -0.3439449725282725
     },
     "2025—2026": {
-      "total_return": 2.5607458511910655,
-      "cagr": 1.2468355003920197,
-      "annual_volatility": 0.34620742851946457,
-      "sharpe": 2.607942612755165,
-      "max_drawdown": -0.13873110904586605
+      "total_return": 2.4905574101041927,
+      "cagr": 1.2154247545765569,
+      "annual_volatility": 0.3462702334629122,
+      "sharpe": 2.5629741058418714,
+      "max_drawdown": -0.15016347629331106
     }
   },
   "timing": {

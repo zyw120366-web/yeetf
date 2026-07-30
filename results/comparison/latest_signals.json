@@ -1,5 +1,5 @@
 {
-  "signal_date": "2026-07-29",
+  "signal_date": "2026-07-30",
   "execution_rule": {
     "signal_time": "每个交易日收盘后",
     "trade_time": "下一交易日开盘",
@@ -14,24 +14,24 @@
     "status": "frozen_for_live",
     "target_portfolio": [
       {
-        "symbol": "159985.SZ",
-        "name": "豆粕ETF华夏",
+        "symbol": "512800.SH",
+        "name": "银行ETF华宝",
         "weight": 1.0
       }
     ],
     "diagnostics": {
       "mode": "offensive",
-      "selected": "159985.SZ",
-      "entered": "",
-      "exited": "",
-      "exit_reasons": "",
-      "entry_eligible_count": 1,
+      "selected": "512800.SH",
+      "entered": "512800.SH",
+      "exited": "159985.SZ",
+      "exit_reasons": "159985.SZ:跌破MA120",
+      "entry_eligible_count": 3,
       "priority_entry_available": true,
       "holding_count": 1,
-      "opportunity_switch_candidate": "512800.SH",
-      "opportunity_switch_score_gap": 0.11214647164750419,
-      "opportunity_switch_qualified": true,
-      "opportunity_switch_streak": 1,
+      "opportunity_switch_candidate": "",
+      "opportunity_switch_score_gap": null,
+      "opportunity_switch_qualified": false,
+      "opportunity_switch_streak": 0,
       "opportunity_switch_triggered": false,
       "exposure": 1.0
     },
@@ -40,13 +40,7 @@
   "reference": {
     "name": "etfwin 策略",
     "status": "reference_only_not_live",
-    "target_portfolio": [
-      {
-        "symbol": "159985.SZ",
-        "name": "豆粕",
-        "weight": 1.0
-      }
-    ],
+    "target_portfolio": [],
     "live_use_allowed": false
   }
 }
