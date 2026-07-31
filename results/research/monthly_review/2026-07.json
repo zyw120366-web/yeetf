@@ -2,21 +2,24 @@
   "status": "research_only",
   "month": "2026-07",
   "daily_execution_impact": "none",
-  "confirmed_run_days": 2,
-  "latest_run_card": "results/audit/2026-07-22_live_run_card.json",
+  "confirmed_run_days": 9,
+  "latest_run_card": "results/audit/2026-07-31_live_run_card.json",
   "strategy_ids_seen": [
     "YE-FORMAL-2026-07-19",
-    "YE-FORMAL-2026-07-22"
+    "YE-FORMAL-2026-07-22",
+    "YE-FORMAL-2026-07-27B",
+    "YE-FORMAL-2026-07-29C"
   ],
   "live": {
     "net_contributed_capital": 9825.0,
     "ending_equity": 9877.4,
     "return_since_live_start": 0.00533333333333319,
-    "observed_month_drawdown": 0.0,
+    "observed_month_drawdown": -0.03183023872679036,
     "ending_positions": [
       {
         "symbol": "512010.SH",
         "name": "医药ETF易方达",
+        "opened_on": "2026-07-21",
         "quantity": 26200,
         "average_cost": 0.375,
         "market_price": 0.377,
@@ -26,15 +29,15 @@
     ]
   },
   "shadow_same_month": {
-    "full_strategy_return": 0.010800114858282361,
-    "price_core_return": -0.003573484146818129,
-    "full_minus_price_core": 0.01437359900510049
+    "full_strategy_return": -0.043890475800749784,
+    "price_core_return": 0.0033010469059542302,
+    "full_minus_price_core": -0.047191522706704014
   },
   "discipline": {
-    "ai_review_complete_days": 2,
-    "ready_days": 2,
+    "ai_review_complete_days": 9,
+    "ready_days": 9,
     "reconciliation_statuses": {
-      "not_required": 2
+      "not_required": 9
     }
   },
   "interpretation": "月度报告只核对实盘、纪律和冻结基线差异，不据此自动调参。"
