@@ -1,5 +1,5 @@
 {
-  "signal_date": "2026-08-03",
+  "signal_date": "2026-08-04",
   "execution_rule": {
     "signal_time": "每个交易日收盘后",
     "trade_time": "下一交易日开盘",
@@ -28,8 +28,8 @@
       "entry_eligible_count": 3,
       "priority_entry_available": true,
       "holding_count": 1,
-      "opportunity_switch_candidate": "159647.SZ",
-      "opportunity_switch_score_gap": -0.09445151076136948,
+      "opportunity_switch_candidate": "512010.SH",
+      "opportunity_switch_score_gap": 0.016430849336171338,
       "opportunity_switch_qualified": false,
       "opportunity_switch_streak": 0,
       "opportunity_switch_triggered": false,
