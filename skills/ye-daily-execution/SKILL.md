@@ -18,7 +18,7 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
 - `config/strategy_governance.yaml` 定义正式冻结与放行边界；`config/research_hypotheses.yaml` 只登记独立研究，不产生任何日常信号。
 - 只使用信号日收盘数据，于下一交易日开盘执行。目标只能是现金 0% 或单一 ETF 100%。不加仓、减仓、网格、主观覆盖或分批止盈。
 - 所有资讯审核均在当前 Codex 对话中完成；不要求也不使用 `OPENAI_API_KEY`。用户可以直接要求逐条解释。
-- 订单计划不是成交。任何上一份计划中的买卖，必须向用户确认真实成交数量、价格和未完成数量；未确认时，仓位只能标注为“待确认”。
+- 用户于2026-08-06授予常设执行授权：未另行报告时，视为完整执行上一交易日的开盘计划。日线更新后先运行 `PYTHONPATH=src python3 scripts/advance_authorized_live_account.py --date YYYY-MM-DD`，以当日实际开盘价和固定成本记账；券商回单、手工成交、出入金或未完成订单一旦报告，立即覆盖该假定记录。回测影子持仓始终不得代替真实账户。
 - 严格区分正式策略与任何研究项目：正式流程不得运行 `research_*`、`summarize_*`、候选筛选或其他策略脚本。
 
 ## 收盘后固定流程
@@ -39,6 +39,12 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
    PYTHONPATH=src python3 scripts/fetch_prices.py --force
    PYTHONPATH=src python3 scripts/collect_daily_sentiment.py --date YYYY-MM-DD
    PYTHONPATH=src python3 scripts/export_sentiment_review_queue.py --date YYYY-MM-DD
+   ```
+
+   随后在常设执行授权下运行：
+
+   ```sh
+   PYTHONPATH=src python3 scripts/advance_authorized_live_account.py --date YYYY-MM-DD
    ```
 
 2. 读取 `market_data/sentiment/review_queue/YYYY-MM-DD.json`。逐行审核，包含无关资讯；保留原始 `source_hash`，不得合并、漏审、重复或补造。按 [审核草稿格式](references/review-schema.md) 用 `apply_patch` 写入 `market_data/sentiment/manual_drafts/YYYY-MM-DD.json`。
@@ -91,7 +97,7 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
 - `ai_review_complete=true`，且审核状态为 `complete`、`coverage=1.0`、输入条数等于审核条数；
 - 运行清单存在，且其中信号日期、价格快照、审核日期相互一致；
 - 每日运行卡存在，且策略标识、计划、审核覆盖率、运行清单哈希和放行状态相互一致；
-- 若上一份计划需要成交确认，对账结果必须为 `confirmed`；否则报告中明确区分确认仓位与待确认计划，并禁止新增仓位。
+- 若上一份计划需要成交确认，对账结果必须为 `confirmed` 或用户常设授权下的 `assumed_authorized`；后者必须在账户真源和日报中明确披露，券商回单优先覆盖。
 
 审核覆盖率不是“对相关资讯 100%”，而是对队列**全部行** 100%。任一资讯源失败、队列缺失、哈希不一致、草稿格式不合法或覆盖不足时，禁止新增仓位；已有仓位的价格卖出规则继续计算并如实报告。
 

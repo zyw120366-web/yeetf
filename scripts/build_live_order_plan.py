@@ -23,7 +23,7 @@ def load_account_state(day: pd.Timestamp) -> dict:
     if not ACCOUNT_STATE.exists():
         raise RuntimeError("confirmed live account state is missing; do not infer holdings from the backtest")
     account = json.loads(ACCOUNT_STATE.read_text(encoding="utf-8"))
-    if account.get("confirmation_status") != "confirmed":
+    if account.get("confirmation_status") not in {"confirmed", "assumed_authorized"}:
         raise RuntimeError("live account state is not confirmed; fail closed")
     account_day = pd.Timestamp(str(account.get("as_of", "")).split("_")[0])
     if account_day != day:
@@ -372,8 +372,8 @@ def main() -> None:
         "execution": {
             "target_policy": "策略只产生 0% 或 100% 的目标仓位，不进行主观分批建仓、加仓、减仓或止盈。",
             "order_sequence": "换仓时先卖旧仓，再买新仓；子订单只由流动性上限触发。",
-            "broker_fill_confirmation_required": True,
-            "confirmation_rule": "下一次收盘后运行前，必须以真实成交数量确认实际仓位和未完成订单；计划不得当作已成交。",
+            "broker_fill_confirmation_required": False,
+            "confirmation_rule": "用户常设执行授权已启用：未另行报告时，下一次运行按本计划完整执行、以实际开盘价和固定成本记账；券商成交回单、出入金或未完成订单优先覆盖。",
             "orders": execution_orders,
         },
         "cost": config["execution"]["cost_rule"],

@@ -31,7 +31,7 @@ def previous_execution_is_reconciled(date: str) -> bool:
     reconciliation = ROOT / "results" / "audit" / f"{plan_path.name[:10]}_execution_reconciliation.json"
     if not reconciliation.exists():
         return False
-    return json.loads(reconciliation.read_text(encoding="utf-8")).get("status") == "confirmed"
+    return json.loads(reconciliation.read_text(encoding="utf-8")).get("status") in {"confirmed", "assumed_authorized"}
 
 
 def main() -> None:
@@ -126,7 +126,7 @@ def main() -> None:
         ),
         "previous_execution_reconciled": previous_execution_is_reconciled(args.date),
         "live_account_state_confirmed": (
-            account.get("confirmation_status") == "confirmed"
+            account.get("confirmation_status") in {"confirmed", "assumed_authorized"}
             and str(account.get("as_of", "")).startswith(args.date)
             and len(confirmed_positions) <= 1
             and not account.get("pending_orders")
@@ -136,7 +136,7 @@ def main() -> None:
         "live_plan_uses_account_truth": (
             bool(plan)
             and plan.get("current_symbol") == confirmed_symbol
-            and plan.get("account_state", {}).get("confirmation_status") == "confirmed"
+            and plan.get("account_state", {}).get("confirmation_status") in {"confirmed", "assumed_authorized"}
             and float(plan.get("account_state", {}).get("total_equity", -1.0))
             == float(account.get("total_equity", -2.0))
         ),

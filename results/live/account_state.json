@@ -1,10 +1,10 @@
 {
   "account_type": "live",
-  "as_of": "2026-08-05_close",
-  "confirmation_status": "confirmed",
-  "source": "用户确认生成2026-08-05正式产物；2026-08-04计划无买卖订单，且未报告成交、出入金或未完成订单，按账户连续性滚存",
+  "as_of": "2026-08-06_close",
+  "confirmation_status": "assumed_authorized",
+  "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
   "first_live_day": false,
-  "total_equity": 10139.4,
+  "total_equity": 9929.800212,
   "available_cash": 0.0,
   "performance": {
     "strategy_start_date": "2026-07-21",
@@ -18,12 +18,18 @@
       "opened_on": "2026-07-21",
       "quantity": 26200,
       "average_cost": 0.375,
-      "market_price": 0.387,
-      "market_value": 10139.4,
-      "unrealized_pnl": 314.4
+      "market_price": 0.3790000081062317,
+      "market_value": 9929.80021238327,
+      "unrealized_pnl": 104.80021238327026
     }
   ],
   "pending_orders": [],
   "last_exit_dates": {},
-  "note": "用户确认2026-07-21以0.375成本买入26200股512010.SH并将账户资金全部投入；用户于本次运行要求生成正式产物，未报告2026-08-05成交、出入金或未完成订单，故持仓与现金滚存至2026-08-05。今日收盘价0.387，收盘总权益按持仓市值计为10139.40元。历史回测模型持仓不得作为实盘持仓。"
+  "note": "用户常设授权下的计划执行记账；若券商实际成交、出入金或未完成订单与此不同，必须立即以真实记录更正。",
+  "execution_assumption": {
+    "enabled": true,
+    "authorization_date": "2026-08-06",
+    "prior_signal_date": "2026-08-05",
+    "assumed_fills": []
+  }
 }

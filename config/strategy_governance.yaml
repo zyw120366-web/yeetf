@@ -22,9 +22,14 @@ live_audit:
   require_run_card: true
   require_previous_execution_reconciliation: true
   plan_is_not_fill: true
-  actual_fill_source: 用户或券商成交回单确认
+  actual_fill_source: 用户或券商成交回单确认；用户常设授权启用时可按计划假定完整成交，实际回单优先覆盖
   account_state_path: results/live/account_state.json
-  account_state_rule: 实盘仓位只来自用户或券商确认；历史回测影子持仓不得代替
+  account_state_rule: 实盘仓位只来自用户或券商确认或常设执行授权；历史回测影子持仓不得代替
+  standing_execution_authorization:
+    enabled: true
+    approved_by: user
+    approved_on: '2026-08-06'
+    rule: 未另行报告时，视为用户在下一交易日开盘完整执行上一日订单计划；按当日实际开盘价和固定成本记账，券商回单优先覆盖
   run_card_path: results/audit/YYYY-MM-DD_live_run_card.json
   reconciliation_path: results/audit/YYYY-MM-DD_execution_reconciliation.json
 research_review:
