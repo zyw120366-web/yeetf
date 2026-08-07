@@ -1,17 +1,17 @@
 {
   "name": "ye 策略",
-  "generated_through": "2026-08-06",
+  "generated_through": "2026-08-07",
   "metrics": {
-    "total_return": 8.156464166295178,
-    "cagr": 0.3145982814406021,
-    "annual_volatility": 0.24110847238088315,
-    "sharpe": 1.29741638597169,
-    "sortino": 2.2763274994284983,
+    "total_return": 8.076845835458881,
+    "cagr": 0.3130599808571548,
+    "annual_volatility": 0.24107338244511387,
+    "sharpe": 1.2923245868692839,
+    "sortino": 2.2674243816796333,
     "max_drawdown": -0.20906256593091377,
-    "calmar": 1.5048044590850538,
-    "annual_turnover": 16.934291241877496,
+    "calmar": 1.4974463719181927,
+    "annual_turnover": 16.928566329354886,
     "trade_count": 287.0,
-    "average_exposure": 0.5421280779002752,
+    "average_exposure": 0.5423608326057112,
     "total_fees": 8365.202913512147,
     "slippage_cost_estimate": 44547.43227852881,
     "blocked_order_count": 3.0,
@@ -20,21 +20,21 @@
     "liquidity_limited_order_count": 127.0,
     "cash_management_annual_rate": 0.015,
     "cash_interest_income": 9569.383561643857,
-    "cash_interest_calendar_days": 2957.0,
+    "cash_interest_calendar_days": 2958.0,
     "cash_management_fees": 1547.9400000000028
   },
   "periods": {
     "全区间": {
-      "total_return": 8.156464166295178,
-      "cagr": 0.3145982814406021,
-      "annual_volatility": 0.24110847238088315,
-      "sharpe": 1.29741638597169,
-      "sortino": 2.2763274994284983,
+      "total_return": 8.076845835458881,
+      "cagr": 0.3130599808571548,
+      "annual_volatility": 0.24107338244511387,
+      "sharpe": 1.2923245868692839,
+      "sortino": 2.2674243816796333,
       "max_drawdown": -0.20906256593091377,
-      "calmar": 1.5048044590850538,
-      "annual_turnover": 16.934291241877496,
+      "calmar": 1.4974463719181927,
+      "annual_turnover": 16.928566329354886,
       "trade_count": 287.0,
-      "average_exposure": 0.5421280779002752,
+      "average_exposure": 0.5423608326057112,
       "total_fees": 8365.202913512147,
       "slippage_cost_estimate": 44547.43227852881,
       "blocked_order_count": 3.0,
@@ -43,7 +43,7 @@
       "liquidity_limited_order_count": 127.0,
       "cash_management_annual_rate": 0.015,
       "cash_interest_income": 9569.383561643857,
-      "cash_interest_calendar_days": 2957.0,
+      "cash_interest_calendar_days": 2958.0,
       "cash_management_fees": 1547.9400000000028
     },
     "2018—2020": {
@@ -68,11 +68,11 @@
       "max_drawdown": -0.13582739902523422
     },
     "2025—2026": {
-      "total_return": 2.6693892018545617,
-      "cagr": 1.26431115495296,
-      "annual_volatility": 0.3434606604847116,
-      "sharpe": 2.6453668930009666,
-      "max_drawdown": -0.14786395917133643
+      "total_return": 2.6374827106441456,
+      "cagr": 1.2487747143385262,
+      "annual_volatility": 0.3431590636289403,
+      "sharpe": 2.6243504551879324,
+      "max_drawdown": -0.1510553642008613
     }
   },
   "timing": {
