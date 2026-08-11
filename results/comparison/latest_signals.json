@@ -1,5 +1,5 @@
 {
-  "signal_date": "2026-08-07",
+  "signal_date": "2026-08-10",
   "execution_rule": {
     "signal_time": "每个交易日收盘后",
     "trade_time": "下一交易日开盘",
@@ -14,25 +14,25 @@
     "status": "frozen_for_live",
     "target_portfolio": [
       {
-        "symbol": "512800.SH",
-        "name": "银行ETF华宝",
+        "symbol": "513200.SH",
+        "name": "港股通医药ETF易方达",
         "weight": 1.0
       }
     ],
     "diagnostics": {
       "mode": "offensive",
-      "selected": "512800.SH",
-      "entered": "",
-      "exited": "",
-      "exit_reasons": "",
-      "entry_eligible_count": 3,
+      "selected": "513200.SH",
+      "entered": "513200.SH",
+      "exited": "512800.SH",
+      "exit_reasons": "512800.SH:机会成本换仓",
+      "entry_eligible_count": 4,
       "priority_entry_available": true,
       "holding_count": 1,
       "opportunity_switch_candidate": "513200.SH",
-      "opportunity_switch_score_gap": 0.07284685396203683,
+      "opportunity_switch_score_gap": 0.15894500985548154,
       "opportunity_switch_qualified": true,
-      "opportunity_switch_streak": 1,
-      "opportunity_switch_triggered": false,
+      "opportunity_switch_streak": 0,
+      "opportunity_switch_triggered": true,
       "exposure": 1.0
     },
     "live_use_allowed": true

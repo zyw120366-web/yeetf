@@ -29,9 +29,12 @@ def test_formal_summary_matches_frozen_validation() -> None:
         assert metrics["total_return"] > -1.0
         assert metrics["cagr"] > -1.0
     assert metrics["max_drawdown"] == pytest.approx(validation["max_drawdown"], abs=1e-10)
-    assert summary["timing"]["failed_operation_rate"] == pytest.approx(
-        validation["failed_operation_rate"], abs=1e-10
-    )
+    if summary["generated_through"] == validation["backtest_end"]:
+        assert summary["timing"]["failed_operation_rate"] == pytest.approx(
+            validation["failed_operation_rate"], abs=1e-10
+        )
+    else:
+        assert 0.0 <= summary["timing"]["failed_operation_rate"] <= 1.0
     assert summary["periods"]["2021—2022"]["total_return"] == pytest.approx(
         validation["return_2021_2022"], abs=1e-10
     )

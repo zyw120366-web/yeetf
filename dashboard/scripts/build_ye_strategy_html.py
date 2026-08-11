@@ -784,7 +784,7 @@ def build_daily_page() -> str:
         f"今天账户变动{signed_money(daily_pnl)}，收益{signed_pct(daily_return)}；{close_story}。自{strategy_start}实盘开启以来，账户累计{signed_money(strategy_pnl)}，本次买入浮动盈亏{signed_money(purchase_pnl)}。明日结论不变：{action}{target_name}，不产生新订单。",
         target_insight_story,
         f"{len(rankings)}只ETF中有{len(candidates)}只最终通过，分别是{candidate_names}。{candidate_comparison_story}，且{decision_story}前5名里，{rejected_story}；它们名次高，但当前并不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}正式规则不会因单日领先立即换仓，必须同时满足掉出前5、领先5个百分点、连续2日和持有5日。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
+        f"板块观察：{category_peer_story}换仓必须同时满足前5外、领先5点、连续2日和持有5日。今天没有新趋势或质量延伸候选，最终候选均来自常规动量。",
         f"资讯面上，{target_category}主题记录为{target_theme['positive']}条正向、{target_theme['negative']}条负向，均按专属关键词直接映射。今天最重要的洞察是：{core_insight}",
         satellite_status,
     ]
