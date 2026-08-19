@@ -814,7 +814,7 @@ def build_daily_page() -> str:
 <section class="section"><div class="section-title"><h2>最终候选与唯一目标</h2><span>先核心、后卫星；最终通过不等于同时买入</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>顺序</th><th>ETF</th><th>决策排名</th><th>选择分</th><th>通过路径</th><th>账户处理</th></tr></thead><tbody>{candidate_rows}</tbody></table></div></section>
 <section class="section"><div class="section-title"><h2>资讯审核如何影响今天的筛选</h2><span>审核完整是硬门，热点只作用于指定路径</span></div><div class="truth-grid"><article class="card truth"><span class="num">完整性</span><h3>{reviewed}/{total} · 100%</h3><p>全部冻结记录逐条审核完成，因此新开仓资格未被数据完整性阻断。</p></article><article class="card truth"><span class="num">路径影响</span><h3>常规 {normal_count} / 新趋势 {emerging_count} / 延伸 {extension_count}</h3><p>今日最终候选全部来自常规路径，没有候选依赖新趋势或延伸例外放行。</p></article><article class="card truth"><span class="num">主题披露</span><h3>{html_lib.escape(target_category)} {target_theme['positive']}正 / {target_theme['negative']}负</h3><p>最强净正向：{html_lib.escape(str(strongest[0]))}；最大净负向：{html_lib.escape(str(riskiest[0]))}。正式规则没有全市场趋势开关，也没有统一“负面阈值”否决常规路径。</p></article></div></section>
 <section class="section"><div class="section-title"><h2>{len(rankings)}只 ETF 逐层筛选明细</h2><span>核心排名独立；卫星仅显示相对核心的虚拟排名</span></div><div class="card table-wrap"><table class="simple"><thead><tr><th>决策排名</th><th>ETF / 池角色</th><th>资格</th><th>动量分</th><th>ROC20</th><th>ROC60</th><th>MA120乖离</th><th>常规</th><th>新趋势</th><th>延伸</th><th>最终结果</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
-    return page("ye 策略今日日报", "daily", "今日日报", "收盘数据冻结后生成 · 供下一交易日开盘执行参考", "每日更新", body)
+    return page("ye 策略今日日报", "daily", "今日日报", f"信号日 {date} 收盘后生成 · 供下一交易日开盘执行参考", "每日更新", body)
 
 
 def build_strategy_page() -> str:
