@@ -1,17 +1,17 @@
 {
   "name": "ye 策略",
-  "generated_through": "2026-08-27",
+  "generated_through": "2026-08-28",
   "metrics": {
-    "total_return": 8.502927066399439,
-    "cagr": 0.3180553595792901,
-    "annual_volatility": 0.2414266349247137,
-    "sharpe": 1.3067029077152916,
-    "sortino": 2.2947536034770613,
+    "total_return": 8.39233596904455,
+    "cagr": 0.3160429974579766,
+    "annual_volatility": 0.24140944605005246,
+    "sharpe": 1.3000073931115306,
+    "sortino": 2.282888961897762,
     "max_drawdown": -0.20906256593091377,
-    "calmar": 1.521340552590337,
-    "annual_turnover": 17.0598516672613,
+    "calmar": 1.5117149072130651,
+    "annual_turnover": 17.054124963109818,
     "trade_count": 293.0,
-    "average_exposure": 0.5447501472532584,
+    "average_exposure": 0.5449798067372965,
     "total_fees": 8915.384268776183,
     "slippage_cost_estimate": 48115.77777854204,
     "blocked_order_count": 3.0,
@@ -20,21 +20,21 @@
     "liquidity_limited_order_count": 131.0,
     "cash_management_annual_rate": 0.015,
     "cash_interest_income": 9636.452054794549,
-    "cash_interest_calendar_days": 2978.0,
+    "cash_interest_calendar_days": 2979.0,
     "cash_management_fees": 1562.940000000002
   },
   "periods": {
     "全区间": {
-      "total_return": 8.502927066399439,
-      "cagr": 0.3180553595792901,
-      "annual_volatility": 0.2414266349247137,
-      "sharpe": 1.3067029077152916,
-      "sortino": 2.2947536034770613,
+      "total_return": 8.39233596904455,
+      "cagr": 0.3160429974579766,
+      "annual_volatility": 0.24140944605005246,
+      "sharpe": 1.3000073931115306,
+      "sortino": 2.282888961897762,
       "max_drawdown": -0.20906256593091377,
-      "calmar": 1.521340552590337,
-      "annual_turnover": 17.0598516672613,
+      "calmar": 1.5117149072130651,
+      "annual_turnover": 17.054124963109818,
       "trade_count": 293.0,
-      "average_exposure": 0.5447501472532584,
+      "average_exposure": 0.5449798067372965,
       "total_fees": 8915.384268776183,
       "slippage_cost_estimate": 48115.77777854204,
       "blocked_order_count": 3.0,
@@ -43,7 +43,7 @@
       "liquidity_limited_order_count": 131.0,
       "cash_management_annual_rate": 0.015,
       "cash_interest_income": 9636.452054794549,
-      "cash_interest_calendar_days": 2978.0,
+      "cash_interest_calendar_days": 2979.0,
       "cash_management_fees": 1562.940000000002
     },
     "2018—2020": {
@@ -68,23 +68,23 @@
       "max_drawdown": -0.13582739902523422
     },
     "2025—2026": {
-      "total_return": 2.8056386773592408,
-      "cagr": 1.2498905992549272,
-      "annual_volatility": 0.34113949606141336,
-      "sharpe": 2.6350867859796603,
+      "total_return": 2.7613502434351833,
+      "cagr": 1.2309921029738846,
+      "annual_volatility": 0.3409264773375363,
+      "sharpe": 2.6087760462320433,
       "max_drawdown": -0.1672076971532035
     }
   },
   "timing": {
-    "completed_round_trips": 69.0,
+    "completed_round_trips": 70.0,
     "median_entry_delay_days": 18.0,
     "median_exit_delay_days": 3.0,
-    "median_peak_giveback": -0.04393984642862092,
-    "median_move_capture_ratio": 0.6256579622884508,
-    "false_start_rate": 0.463768115942029,
-    "premature_exit_rate": 0.4492753623188406,
-    "fixed_horizon_false_buy_rate": 0.4492753623188406,
-    "material_premature_exit_rate": 0.18840579710144928,
-    "failed_operation_rate": 0.6231884057971014
+    "median_peak_giveback": -0.04360882861070664,
+    "median_move_capture_ratio": 0.622022046917583,
+    "false_start_rate": 0.4714285714285714,
+    "premature_exit_rate": 0.44285714285714284,
+    "fixed_horizon_false_buy_rate": 0.45714285714285713,
+    "material_premature_exit_rate": 0.18571428571428572,
+    "failed_operation_rate": 0.6285714285714286
   }
 }
