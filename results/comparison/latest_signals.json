@@ -1,5 +1,5 @@
 {
-  "signal_date": "2026-08-28",
+  "signal_date": "2026-08-31",
   "execution_rule": {
     "signal_time": "每个交易日收盘后",
     "trade_time": "下一交易日开盘",
@@ -25,11 +25,11 @@
       "entered": "",
       "exited": "",
       "exit_reasons": "",
-      "entry_eligible_count": 3,
+      "entry_eligible_count": 4,
       "priority_entry_available": true,
       "holding_count": 1,
-      "opportunity_switch_candidate": "512010.SH",
-      "opportunity_switch_score_gap": -0.23382182171011245,
+      "opportunity_switch_candidate": "159985.SZ",
+      "opportunity_switch_score_gap": -0.12666227495606708,
       "opportunity_switch_qualified": false,
       "opportunity_switch_streak": 0,
       "opportunity_switch_triggered": false,
@@ -42,8 +42,8 @@
     "status": "reference_only_not_live",
     "target_portfolio": [
       {
-        "symbol": "518880.SH",
-        "name": "黄金",
+        "symbol": "159985.SZ",
+        "name": "豆粕",
         "weight": 1.0
       }
     ],
