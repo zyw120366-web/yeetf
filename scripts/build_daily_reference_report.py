@@ -225,8 +225,8 @@ def main() -> None:
             score_change = float(target[score_column]) - float(previous_target[score_column])
             target_change_story = (
                 f"排名由第{int(previous_target['rank'])}变为第{int(target['rank'])}，选择分较昨日{score_change * 100:+.2f}个百分点；"
-                f"ROC20由{float(previous_target['roc20']):.2%}降至{float(target['roc20']):.2%}，"
-                f"ROC60由{float(previous_target['roc60']):.2%}降至{float(target['roc60']):.2%}。"
+                f"ROC20由{float(previous_target['roc20']):.2%}变为{float(target['roc20']):.2%}，"
+                f"ROC60由{float(previous_target['roc60']):.2%}变为{float(target['roc60']):.2%}。"
             )
             previous_close = float(previous_target["close"])
         else:
@@ -237,7 +237,10 @@ def main() -> None:
             price_frame["datetime"] = pd.to_datetime(price_frame["datetime"])
             recent_prices = price_frame.loc[price_frame["datetime"].le(pd.Timestamp(args.date))].sort_values("datetime").tail(2)
             previous_close = float(recent_prices.iloc[-2]["close"]) if len(recent_prices) >= 2 else market_price
-        close_change = market_price / previous_close - 1.0 if previous_close > 0 else 0.0
+        # The account's market_price belongs to the old live position until a planned
+        # rotation is filled. A new target must always use its own ranking close.
+        target_market_price = float(target["close"])
+        close_change = target_market_price / previous_close - 1.0 if previous_close > 0 else 0.0
         roc20 = float(target["roc20"])
         roc60 = float(target["roc60"])
         if roc20 > 0 and roc60 > 0:
@@ -247,7 +250,7 @@ def main() -> None:
         else:
             momentum_story = "ROC20已转负，需要按正式退出规则处理。"
         target_insight = (
-            f"{target_name}收于{market_price:.3f}元、较昨日{close_change:+.2%}。{target_change_story}"
+            f"{target_name}收于{target_market_price:.3f}元、较昨日{close_change:+.2%}。{target_change_story}"
             f"MA120乖离为{float(target['ma120_bias']):.2%}，价格仍在MA120上方。{momentum_story}"
         )
     else:
@@ -313,7 +316,8 @@ def main() -> None:
         core_insight = decision_story
     target_weight = "100%" if target_symbol else "0%"
     overview_paragraphs = [
-        f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
+        f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日结论：{actions}。"
+        + ("买卖计划待下一交易日真实成交确认。" if execution_orders else "无新增买卖订单。"),
         target_insight,
         f"{len(ranking)}只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
         f"板块内部也有呼应：{category_peer_story}正式规则不会因单日领先立即换仓，必须同时满足掉出前5、领先5个百分点、连续2日和持有5日。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
