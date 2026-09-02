@@ -119,6 +119,8 @@ def main() -> None:
     )
     execution = plan.get("execution", {})
     execution_orders = execution.get("orders", [])
+    readiness_status = str(readiness.get("status", "BLOCKED"))
+    plan_executable = readiness_status == "READY"
     account = plan["account_state"]
     target_symbol = plan.get("target_symbol")
     current_symbol = plan.get("current_symbol")
@@ -316,8 +318,14 @@ def main() -> None:
         core_insight = decision_story
     target_weight = "100%" if target_symbol else "0%"
     overview_paragraphs = [
-        f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日结论：{actions}。"
-        + ("买卖计划待下一交易日真实成交确认。" if execution_orders else "无新增买卖订单。"),
+        f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日策略意向：{actions}。"
+        + (
+            "买卖计划待下一交易日真实成交确认。"
+            if execution_orders and plan_executable
+            else "无新增买卖订单。"
+            if not execution_orders
+            else "当前放行BLOCKED：上一份计划已确认取消，本页仅保留策略意向，不得自动执行。"
+        ),
         target_insight,
         f"{len(ranking)}只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
         f"板块内部也有呼应：{category_peer_story}正式规则不会因单日领先立即换仓，必须同时满足掉出前5、领先5个百分点、连续2日和持有5日。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
@@ -348,7 +356,18 @@ def main() -> None:
         f"- 信号日：{args.date} 收盘后；执行：下一交易日开盘。",
         f"- 当前权益：{account['total_equity']:,.2f} 元；{account_position}。",
         f"- 唯一目标：{target_name}（{target_symbol or '现金'}）{('，目标仓位 100%' if target_symbol else '，目标仓位 0%')}。",
-        (f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。" if execution_orders else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"),
+        (
+            f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。"
+            if execution_orders and plan_executable
+            else f"- 订单动作：{actions}；本页仅记录策略意向，不得执行。"
+            if execution_orders
+            else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"
+        ),
+        (
+            "- 放行状态：READY；次日计划可执行。"
+            if plan_executable
+            else "- 放行状态：BLOCKED；上一份计划未成交且已确认取消，本页买卖仅为策略意向，不得执行。"
+        ),
         (
             f"- 机会换仓：候选 {switch_status.get('candidate_symbol') or '无'}；今日是否合格"
             f"{'是' if switch_status.get('qualifies_today') else '否'}；"
@@ -415,8 +434,10 @@ def main() -> None:
         "",
         *(
             [
+                "- **当前状态为BLOCKED：以下仅用于复核策略意向，不是可执行订单。**"
+                if not plan_executable else "- 以下订单待下一交易日真实成交确认。",
                 f"- 计划买入：{target_name}（{target_symbol}），目标仓位100%。",
-                f"- 7月20日收盘价 {buy_estimate.get('last_close', 0):.3f} 元；按固定滑点与最低佣金估算，可买约 **{int(buy_estimate.get('estimated_quantity_at_last_close', 0)):,} 份**，预计占用 {buy_estimate.get('estimated_notional', 0) + buy_estimate.get('estimated_commission', 0):,.2f} 元。",
+                f"- {args.date}收盘价 {buy_estimate.get('last_close', 0):.3f} 元；按固定滑点与最低佣金估算，可买约 **{int(buy_estimate.get('estimated_quantity_at_last_close', 0)):,} 份**，预计占用 {buy_estimate.get('estimated_notional', 0) + buy_estimate.get('estimated_commission', 0):,.2f} 元。",
                 "- 上述数量只是收盘估算。明日必须按实际开盘成交价、实际可用资金和100份整数倍重新计算，绝不允许透支。",
                 "- 成交后请提供实际数量、均价及未成交数量；在确认前，账户仍记为‘计划待成交’。",
             ] if buy_order else ["- 明日没有新买单；按计划持有或保持现金。"]

@@ -1,6 +1,6 @@
 {
-  "status": "READY",
-  "core_backtest_and_site": "PASS",
+  "status": "BLOCKED",
+  "core_backtest_and_site": "FAIL",
   "checks": {
     "single_strategy_name": true,
     "pool_architecture_reconciles": true,
@@ -12,13 +12,15 @@
     "slippage_reconciles": true,
     "html_exists": true,
     "governance_frozen": true,
-    "previous_execution_reconciled": true,
+    "previous_execution_reconciled": false,
     "live_account_state_confirmed": true,
     "live_plan_uses_account_truth": true,
     "ai_review_complete": true,
     "ai_review_protocol_requirement_satisfied": true
   },
-  "blocking_items": [],
+  "blocking_items": [
+    "previous_execution_reconciled"
+  ],
   "review_protocol": {
     "required_for_signal_date": true,
     "fingerprinted": true,

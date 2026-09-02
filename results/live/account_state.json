@@ -1,11 +1,11 @@
 {
   "account_type": "live",
   "as_of": "2026-09-02_close",
-  "confirmation_status": "assumed_authorized",
-  "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
+  "confirmation_status": "confirmed",
+  "source": "用户2026-09-02明确确认：忘记执行9月2日开盘换仓，账户仍持有原医药ETF",
   "first_live_day": false,
-  "total_equity": 9855.211168,
-  "available_cash": 38.810879,
+  "total_equity": 9877.400106,
+  "available_cash": 0.0,
   "performance": {
     "strategy_start_date": "2026-07-21",
     "net_contributed_capital": 9825.0,
@@ -13,38 +13,17 @@
   },
   "positions": [
     {
-      "symbol": "513200.SH",
-      "name": "港股通医药ETF易方达",
-      "opened_on": "2026-09-02",
-      "quantity": 9200,
-      "average_cost": 1.0698809315562248,
-      "market_price": 1.0670000314712524,
-      "market_value": 9816.400289535522,
-      "unrealized_pnl": -26.504280781745404
+      "symbol": "512010.SH",
+      "name": "医药ETF易方达",
+      "opened_on": "2026-07-21",
+      "quantity": 26200,
+      "average_cost": 0.375,
+      "market_price": 0.37700000405311584,
+      "market_value": 9877.400106141615,
+      "unrealized_pnl": 52.4001061416145
     }
   ],
   "pending_orders": [],
   "last_exit_dates": {},
-  "note": "用户常设授权下的计划执行记账；若券商实际成交、出入金或未完成订单与此不同，必须立即以真实记录更正。",
-  "execution_assumption": {
-    "enabled": true,
-    "authorization_date": "2026-08-06",
-    "prior_signal_date": "2026-09-01",
-    "assumed_fills": [
-      {
-        "side": "sell",
-        "symbol": "512010.SH",
-        "status": "filled",
-        "quantity": 26200.0,
-        "price": 0.3775463911890984
-      },
-      {
-        "side": "buy",
-        "symbol": "513200.SH",
-        "status": "filled",
-        "quantity": 9200,
-        "price": 1.0698809315562248
-      }
-    ]
-  }
+  "note": "9月1日计划的卖出512010.SH和买入513200.SH均由用户确认未执行；券商回单、出入金或未完成订单如有不同，必须立即修正。"
 }
