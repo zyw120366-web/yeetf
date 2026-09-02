@@ -1,0 +1,21 @@
+{
+  "signal_date": "2026-09-01",
+  "status": "assumed_authorized",
+  "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
+  "actual_fills": [
+    {
+      "side": "sell",
+      "symbol": "512010.SH",
+      "status": "filled",
+      "quantity": 26200.0,
+      "price": 0.3775463911890984
+    },
+    {
+      "side": "buy",
+      "symbol": "513200.SH",
+      "status": "filled",
+      "quantity": 9200,
+      "price": 1.0698809315562248
+    }
+  ]
+}
