@@ -36,6 +36,7 @@ def main() -> None:
         ROOT / "config" / "ye_strategy.yaml",
         ROOT / "config" / "etfwin_official.yaml",
         ROOT / "config" / "sentiment.yaml",
+        ROOT / "config" / "sentiment_review_policy.yaml",
         ROOT / "config" / "strategy_governance.yaml",
         ROOT / "config" / "research_hypotheses.yaml",
         ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json",
@@ -88,9 +89,7 @@ def main() -> None:
     target_dir.mkdir(parents=True, exist_ok=True)
     text = json.dumps(payload, ensure_ascii=False, indent=2)
     dated = target_dir / f"{args.date}_run_manifest.json"
-    latest = target_dir / "latest_run_manifest.json"
     dated.write_text(text, encoding="utf-8")
-    latest.write_text(text, encoding="utf-8")
     print(json.dumps({"manifest": str(dated), **payload["counts"]}, ensure_ascii=False))
 
 

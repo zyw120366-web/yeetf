@@ -1,7 +1,8 @@
 formal_strategy:
-  id: YE-FORMAL-2026-07-19
+  id: YE-FORMAL-2026-07-29C
   name: ye 策略
   status: frozen_for_live
+  effective_for_signal_dates_from: '2026-07-29'
   rule_source: config/ye_strategy.yaml
   execution_source: scripts/run_after_close.py
   daily_mode: 收盘后生成、下一交易日开盘执行
@@ -21,8 +22,35 @@ live_audit:
   require_run_card: true
   require_previous_execution_reconciliation: true
   plan_is_not_fill: true
-  actual_fill_source: 用户或券商成交回单确认
+  actual_fill_source: 用户或券商成交回单确认；用户常设授权启用时可按计划假定完整成交，实际回单优先覆盖
   account_state_path: results/live/account_state.json
-  account_state_rule: 实盘仓位只来自用户或券商确认；历史回测影子持仓不得代替
+  account_state_rule: 实盘仓位只来自用户或券商确认或常设执行授权；历史回测影子持仓不得代替
+  standing_execution_authorization:
+    enabled: true
+    approved_by: user
+    approved_on: '2026-08-06'
+    rule: 未另行报告时，视为用户在下一交易日开盘完整执行上一日订单计划；按当日实际开盘价和固定成本记账，券商回单优先覆盖
   run_card_path: results/audit/YYYY-MM-DD_live_run_card.json
   reconciliation_path: results/audit/YYYY-MM-DD_execution_reconciliation.json
+research_review:
+  cadence: monthly_only
+  daily_entry_integration: forbidden
+  ablation_entry: experiments/strategy_ablation.py
+  monthly_entry: experiments/monthly_live_review.py
+  output: results/research/
+change_history:
+  - date: '2026-07-29'
+    approved_by: user
+    scope: 新增核心ETF机会成本换仓；旧仓掉出前5、完整合格核心候选动量分领先至少5个百分点、同一候选连续2日、旧仓持有满5日后，下一开盘全仓换仓
+    unchanged: 基础买入、原卖出、核心卫星架构、单仓、成本、AI审核强度与每日人工步骤
+    effective_for_signal_dates_from: '2026-07-29'
+    live_counting_note: 2026-07-29只建立0/2观察基线；2026-07-30若继续满足才记1/2
+  - date: '2026-07-27'
+    approved_by: user
+    scope: 引入45只核心冠军加6只挑战者空档补位架构；挑战者不稀释核心排名、宽度和退出，不得替代合格核心候选，核心候选恢复时挑战者让位
+    unchanged: 动量公式、买卖阈值、单仓、成本、AI审核强度与每日人工步骤
+    effective_for_signal_dates_from: '2026-07-28'
+  - date: '2026-07-22'
+    approved_by: user
+    scope: 收紧AI审核证据映射、跨来源事件去重、完整审核协议指纹；新增与每日入口隔离的消融和月度复盘
+    unchanged: ETF池、动量参数、买卖阈值、仓位、成本、每日人工步骤

@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 
 from etf_rotation.etfwin import (
+    EtfwinOpportunitySwitch,
     EtfwinProfitProtection,
     EtfwinRules,
     etfwin_features,
@@ -197,6 +198,35 @@ def test_entry_ranking_override_changes_entry_without_replacing_exit_features() 
     )
 
 
+def test_dual_rank_decline_override_controls_rank_exit_only() -> None:
+    close = price_frame()
+    rules = EtfwinRules(
+        roc_short_days=2,
+        roc_medium_days=4,
+        ma_days=5,
+        entry_rank_limit=2,
+        max_entry_ma_bias=1.0,
+        rank_change_short_days=2,
+        rank_change_long_days=4,
+        exit_on_ma_break=False,
+        exit_on_short_roc_negative=False,
+        exit_on_dual_rank_decline=True,
+    )
+    decline = pd.DataFrame(False, index=close.index, columns=close.columns)
+    decline.loc[close.index[-1], "steady"] = True
+    bundle, _ = etfwin_signals(
+        close,
+        list(close.columns),
+        rules,
+        dual_rank_decline_override=decline,
+    )
+    assert bundle.weights.loc[close.index[-2], "steady"] == 1.0
+    assert bundle.weights.loc[close.index[-1], "steady"] == 0.0
+    assert "5日与20日排名同时下滑" in bundle.diagnostics.loc[
+        close.index[-1], "exit_reasons"
+    ]
+
+
 def test_entry_ranking_override_orders_multiple_eligible_candidates() -> None:
     close = price_frame()
     rules = EtfwinRules(
@@ -279,3 +309,100 @@ def test_reentry_cooldown_blocks_only_recently_exited_symbol() -> None:
 
     assert bundle.weights.iloc[exit_location : exit_location + 4, 0].eq(0.0).all()
     assert bundle.weights.iloc[exit_location + 4, 0] == 1.0
+
+
+def test_priority_candidate_preempts_challenger_and_has_first_entry_right() -> None:
+    dates = pd.bdate_range("2026-01-01", periods=20)
+    close = pd.DataFrame(
+        {
+            "core": np.linspace(1.0, 1.20, len(dates)),
+            "challenger": np.linspace(1.0, 1.30, len(dates)),
+        },
+        index=dates,
+    )
+    rules = EtfwinRules(
+        roc_short_days=2,
+        roc_medium_days=4,
+        ma_days=5,
+        entry_rank_limit=10,
+        max_entry_ma_bias=1.0,
+        rank_change_short_days=2,
+        rank_change_long_days=4,
+        exit_on_ma_break=False,
+        exit_on_short_roc_negative=False,
+        exit_on_dual_rank_decline=False,
+    )
+    gate = pd.DataFrame(False, index=dates, columns=close.columns)
+    gate.loc[dates[6]:, "challenger"] = True
+    gate.loc[dates[-2]:, "core"] = True
+    score = pd.DataFrame(
+        {"core": 1.0, "challenger": 2.0}, index=dates
+    )
+    bundle, _ = etfwin_signals(
+        close,
+        list(close.columns),
+        rules,
+        entry_gate=gate,
+        entry_ranking_score_override=score,
+        priority_symbols=["core"],
+        preempt_for_priority_entry=True,
+    )
+
+    assert bundle.weights.loc[dates[-3], "challenger"] == 1.0
+    assert bundle.weights.loc[dates[-2], "challenger"] == 0.0
+    assert bundle.weights.loc[dates[-2], "core"] == 1.0
+    assert "核心池出现合格候选" in bundle.diagnostics.loc[
+        dates[-2], "exit_reasons"
+    ]
+
+
+def test_opportunity_switch_requires_rank_gap_two_days_and_minimum_hold() -> None:
+    dates = pd.bdate_range("2026-01-01", periods=20)
+    close = pd.DataFrame(
+        {
+            "old": np.linspace(1.0, 1.20, len(dates)),
+            "new": np.linspace(1.0, 1.30, len(dates)),
+        },
+        index=dates,
+    )
+    rules = EtfwinRules(
+        roc_short_days=2,
+        roc_medium_days=4,
+        ma_days=5,
+        entry_rank_limit=10,
+        max_entry_ma_bias=1.0,
+        rank_change_short_days=2,
+        rank_change_long_days=4,
+        exit_on_ma_break=False,
+        exit_on_short_roc_negative=False,
+        exit_on_dual_rank_decline=False,
+    )
+    gate = pd.DataFrame(False, index=dates, columns=close.columns)
+    gate.loc[dates[5]:, "old"] = True
+    gate.loc[dates[-2]:, "new"] = True
+    entry_score = pd.DataFrame(
+        {"old": 1.0, "new": 2.0}, index=dates
+    )
+    switch_rank = pd.DataFrame(
+        {"old": 6.0, "new": 1.0}, index=dates
+    )
+    switch_score = pd.DataFrame(
+        {"old": 0.05, "new": 0.15}, index=dates
+    )
+    bundle, _ = etfwin_signals(
+        close,
+        list(close.columns),
+        rules,
+        entry_gate=gate,
+        entry_ranking_score_override=entry_score,
+        opportunity_switch=EtfwinOpportunitySwitch(5, 0.05, 2, 5),
+        opportunity_switch_rank=switch_rank,
+        opportunity_switch_score=switch_score,
+        opportunity_switch_symbols=list(close.columns),
+    )
+
+    assert bundle.weights.loc[dates[-2], "old"] == 1.0
+    assert bundle.weights.loc[dates[-1], "new"] == 1.0
+    assert bundle.diagnostics.loc[dates[-2], "opportunity_switch_qualified"]
+    assert bundle.diagnostics.loc[dates[-1], "opportunity_switch_triggered"]
+    assert "机会成本换仓" in bundle.diagnostics.loc[dates[-1], "exit_reasons"]

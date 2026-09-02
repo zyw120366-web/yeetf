@@ -1,5 +1,5 @@
 {
-  "signal_date": "2026-07-22",
+  "signal_date": "2026-09-02",
   "execution_rule": {
     "signal_time": "每个交易日收盘后",
     "trade_time": "下一交易日开盘",
@@ -14,19 +14,25 @@
     "status": "frozen_for_live",
     "target_portfolio": [
       {
-        "symbol": "159985.SZ",
-        "name": "豆粕ETF华夏",
+        "symbol": "513200.SH",
+        "name": "港股通医药ETF易方达",
         "weight": 1.0
       }
     ],
     "diagnostics": {
       "mode": "offensive",
-      "selected": "159985.SZ",
+      "selected": "513200.SH",
       "entered": "",
       "exited": "",
       "exit_reasons": "",
-      "entry_eligible_count": 2,
+      "entry_eligible_count": 3,
+      "priority_entry_available": true,
       "holding_count": 1,
+      "opportunity_switch_candidate": "159981.SZ",
+      "opportunity_switch_score_gap": -0.2699962767550289,
+      "opportunity_switch_qualified": false,
+      "opportunity_switch_streak": 0,
+      "opportunity_switch_triggered": false,
       "exposure": 1.0
     },
     "live_use_allowed": true

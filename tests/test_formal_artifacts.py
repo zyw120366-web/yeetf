@@ -29,9 +29,12 @@ def test_formal_summary_matches_frozen_validation() -> None:
         assert metrics["total_return"] > -1.0
         assert metrics["cagr"] > -1.0
     assert metrics["max_drawdown"] == pytest.approx(validation["max_drawdown"], abs=1e-10)
-    assert summary["timing"]["failed_operation_rate"] == pytest.approx(
-        validation["failed_operation_rate"], abs=1e-10
-    )
+    if summary["generated_through"] == validation["backtest_end"]:
+        assert summary["timing"]["failed_operation_rate"] == pytest.approx(
+            validation["failed_operation_rate"], abs=1e-10
+        )
+    else:
+        assert 0.0 <= summary["timing"]["failed_operation_rate"] <= 1.0
     assert summary["periods"]["2021—2022"]["total_return"] == pytest.approx(
         validation["return_2021_2022"], abs=1e-10
     )
@@ -40,7 +43,57 @@ def test_formal_summary_matches_frozen_validation() -> None:
 def test_daily_entry_does_not_call_research_scripts() -> None:
     entry = (ROOT / "scripts" / "run_after_close.py").read_text(encoding="utf-8")
     assert "research_" not in entry
+    assert "experiments/" not in entry
     assert 'run("run_strategies.py")' in entry
+
+
+def test_ablation_full_variant_matches_formal_result() -> None:
+    ablation = json.loads(
+        (ROOT / "results" / "research" / "strategy_ablation" / "summary.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    formal = json.loads(
+        (ROOT / "results" / "ye_strategy" / "summary.json").read_text(encoding="utf-8")
+    )
+    full = next(item for item in ablation["variants"] if item["variant"] == "full_strategy")
+    assert ablation["generated_through"] <= formal["generated_through"]
+    if ablation["generated_through"] == formal["generated_through"]:
+        assert full["total_return"] == pytest.approx(
+            formal["metrics"]["total_return"], abs=1e-12
+        )
+    assert ablation["daily_execution_impact"] == "none"
+
+
+def test_universe_architecture_evidence_matches_formal_result() -> None:
+    study = json.loads(
+        (ROOT / "results" / "research" / "universe_architecture_study" / "summary.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    formal = json.loads(
+        (ROOT / "results" / "ye_strategy" / "summary.json").read_text(encoding="utf-8")
+    )
+    anchor = next(
+        item for item in study["variants"]
+        if item["variant"] == "champion_cash_gap_45_plus_6"
+    )
+    assert study["same_data_cost_and_execution"] is True
+    assert study["generated_through"] <= formal["generated_through"]
+    if study["generated_through"] == formal["generated_through"]:
+        assert anchor["total_return"] == pytest.approx(
+            formal["metrics"]["total_return"], abs=1e-12
+        )
+    else:
+        assert anchor["total_return"] > -1.0
+    communication = study["communication_case"]["2026-04-07"]
+    assert communication["core_45"]["communication_rank"] == 4.0
+    assert communication["global_rank_51"]["communication_rank"] == 6.0
+    assert communication["champion_cash_gap_45_plus_6"]["communication_rank"] == 4.0
+    invariants = study["path_isolation_invariants"]
+    assert invariants["core_rank_unchanged"] is True
+    assert invariants["core_rank_exit_unchanged"] is True
+    assert invariants["challenger_held_while_core_entry_available_days"] == 0
 
 
 def test_public_html_contains_only_current_strategy_context() -> None:
@@ -49,6 +102,34 @@ def test_public_html_contains_only_current_strategy_context() -> None:
         assert stale not in strategy
     assert "ye 当前完整规则" in strategy
     assert "ye 与 etfwin 规则对照" in strategy
+    for marker in (
+        "一、继续持有",
+        "二、卖出",
+        "三、主动换仓",
+        "完整合格核心ETF动量分领先至少5个百分点",
+        "连续2个收盘",
+    ):
+        assert marker in strategy
+
+
+def test_formal_opportunity_switch_parameters_are_frozen() -> None:
+    formal = yaml.safe_load((ROOT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
+    rule = formal["enhanced_selection"]["opportunity_switch"]
+    assert rule["enabled"] is True
+    assert rule["held_rank_must_exceed"] == 5
+    assert rule["minimum_score_advantage"] == pytest.approx(0.05)
+    assert rule["confirmation_days"] == 2
+    assert rule["minimum_hold_days"] == 5
+    assert rule["live_baseline_on"] == "2026-07-29"
+    assert rule["live_confirmation_starts_on"] == "2026-07-30"
+    baseline_plan = json.loads(
+        (ROOT / "results" / "live" / "2026-07-29_order_plan.json").read_text(encoding="utf-8")
+    )
+    baseline = baseline_plan["decision_basis"]["opportunity_switch"]
+    assert baseline["qualifies_today"] is True
+    assert baseline["status"] == "baseline"
+    assert baseline["confirmation_streak"] == 0
+    assert baseline["triggered"] is False
 
 
 def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:
@@ -57,24 +138,40 @@ def test_backtest_dashboard_covers_full_pool_with_frozen_scores() -> None:
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
+    payload = module.build_payload()
     dashboard = module.build_etf_dashboard()
     items = dashboard["items"]
-    assert len(items) == 45
-    assert len({item["symbol"] for item in items}) == 45
+    assert len(items) == 51
+    assert len({item["symbol"] for item in items}) == 51
+    assert sum(item["pool_role"] == "core" for item in items) == 45
+    assert sum(item["pool_role"] == "challenger" for item in items) == 6
     assert all(len(item["series"]) >= min(int(item["listed_sessions"]), 253) for item in items)
     assert sum(item["return_1y"] is not None for item in items) >= 40
     assert all(
-        {"rank", "momentum_score", "roc20", "roc60", "ma120_bias", "final_entry_pass"}
+        {
+            "rank", "momentum_score", "roc20", "roc60", "ma120_bias",
+            "technical_entry_pass", "final_entry_pass",
+        }
         <= item.keys()
         for item in items
     )
+    satellite = payload["satellite_backtest"]
+    assert satellite["configured_count"] == 6
+    assert len(satellite["items"]) == 6
+    assert {item["symbol"] for item in satellite["items"]} == {
+        item["symbol"] for item in items if item["pool_role"] == "challenger"
+    }
+    assert "不等于相对45只核心反事实的边际贡献" in satellite["note"]
 
 
 def test_backtest_html_exposes_etf_dashboard_controls() -> None:
     backtest = (ROOT / "dashboard" / "public" / "ye-backtest.html").read_text(
         encoding="utf-8"
     )
-    for marker in ("全池 ETF 观察台", "近3个月", "近1年", "按策略排名", "etfTrendChart"):
+    for marker in (
+        "全池 ETF 观察台", "近3个月", "近1年", "按策略排名", "etfTrendChart",
+        "卫星策略的历史参与", "实际完成交易", "已实现净盈亏",
+    ):
         assert marker in backtest
 
 
@@ -93,8 +190,31 @@ def test_daily_html_opens_with_plain_language_overview() -> None:
     assert 500 <= overview_length <= 800
     for marker in ("策略实盘开启以来", "本次买入收益", "今日收益"):
         assert marker in daily
-    assert "医药ETF易方达（512010.SH）、豆粕ETF华夏（159985.SZ）" in daily
-    assert "医药ETF易方达（继续持有）" in daily
+    for marker in ("今日卫星检查", "卫星技术合格", "卫星最终补位", "虚拟排名"):
+        assert marker in daily
+    formal = yaml.safe_load((ROOT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
+    satellite_symbols = formal["enhanced_selection"]["universe_architecture"]["challenger_symbols"]
+    for symbol in satellite_symbols:
+        assert symbol in daily
+    signal = json.loads(
+        (ROOT / "results" / "comparison" / "latest_signals.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    plan = json.loads(
+        (ROOT / "results" / "live" / f"{signal['signal_date']}_order_plan.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    candidates = plan["decision_basis"]["eligible_candidates"]
+    for candidate in candidates:
+        assert f"{candidate['name']}（{candidate['symbol']}）" in daily
+    if plan["current_symbol"] == plan["target_symbol"] and plan["target_symbol"]:
+        current = next(
+            position for position in plan["account_state"]["positions"]
+            if position["symbol"] == plan["current_symbol"]
+        )
+        assert f"{current['name']}（继续持有）" in daily
     assert "决策所用账户" not in daily
     assert "放行</span>" not in daily
     assert "最终状态READY" not in daily

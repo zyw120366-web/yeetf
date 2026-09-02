@@ -52,11 +52,15 @@ def entry_blockers(row: pd.Series) -> str:
 
 def candidate_outcome(row: pd.Series, target_symbol: str | None, current_symbol: str | None) -> str:
     if not bool(row["final_entry_pass"]):
+        if bool(row.get("technical_entry_pass", False)):
+            return "技术条件已通过；当日存在核心候选，等待核心空档"
         return entry_blockers(row)
     if str(row["symbol"]) == target_symbol:
-        return "最终合格且正式路径选择分最高，选为唯一目标"
+        if current_symbol and current_symbol == target_symbol:
+            return "最终合格；现有实盘持仓未触发卖出，继续作为唯一目标"
+        return "最终合格且符合核心优先顺序，选为唯一目标"
     if current_symbol and current_symbol == target_symbol:
-        return "最终合格，但现有实盘持仓未触发卖出，策略不为追逐更高分而换仓"
+        return "最终合格；现有持仓尚未达到完整换仓触发，今天继续持有"
     return "最终合格，但正式路径选择分低于已选目标；不同时持有多只"
 
 
@@ -90,6 +94,16 @@ def main() -> None:
     candidates = ranking.loc[ranking["final_entry_pass"].astype(bool)].sort_values(
         [score_column, "rank"], ascending=[False, True]
     )
+    satellite_ranking = ranking.loc[ranking["pool_role"].eq("challenger")].sort_values(
+        ["rank", "momentum_score"], ascending=[True, False]
+    )
+    core_candidates = candidates.loc[candidates["pool_role"].ne("challenger")]
+    satellite_technical = satellite_ranking.loc[
+        satellite_ranking["technical_entry_pass"].astype(bool)
+    ]
+    satellite_final = satellite_ranking.loc[
+        satellite_ranking["final_entry_pass"].astype(bool)
+    ]
     sentiment = pd.read_csv(ROOT / "market_data" / "sentiment" / "features" / "symbol_daily.csv")
     sentiment = sentiment.loc[sentiment["date"].eq(args.date)].set_index("symbol")
     diagnostics = pd.read_csv(ROOT / "results" / "ye_strategy" / "signal_diagnostics.csv")
@@ -105,9 +119,21 @@ def main() -> None:
     )
     execution = plan.get("execution", {})
     execution_orders = execution.get("orders", [])
+    readiness_status = str(readiness.get("status", "BLOCKED"))
+    plan_executable = readiness_status == "READY"
     account = plan["account_state"]
     target_symbol = plan.get("target_symbol")
     current_symbol = plan.get("current_symbol")
+    switch_status = plan.get("decision_basis", {}).get("opportunity_switch", {})
+    switch_candidate_symbol = switch_status.get("candidate_symbol")
+    switch_candidate_match = (
+        ranking.loc[ranking["symbol"].eq(switch_candidate_symbol)]
+        if switch_candidate_symbol else pd.DataFrame()
+    )
+    switch_candidate_name = (
+        str(switch_candidate_match.iloc[-1]["name"])
+        if not switch_candidate_match.empty else str(switch_candidate_symbol or "无")
+    )
     target_row = ranking.loc[ranking["symbol"].eq(target_symbol)] if target_symbol else pd.DataFrame()
     target_name = str(target_row.iloc[-1]["name"]) if not target_row.empty else "现金"
     category_rows = category_counts(review["items"])
@@ -120,6 +146,20 @@ def main() -> None:
     normal_count = int((confirmed_normal & pool_eligible).sum())
     emerging_count = int((ranking["emerging_entry"].astype(bool) & pool_eligible).sum())
     extension_count = int((ranking["quality_extension"].astype(bool) & pool_eligible).sum())
+    satellite_technical_names = "、".join(
+        f"{row['name']}（{row['symbol']}）" for _, row in satellite_technical.iterrows()
+    ) or "无"
+    satellite_final_names = "、".join(
+        f"{row['name']}（{row['symbol']}）" for _, row in satellite_final.iterrows()
+    ) or "无"
+    if not satellite_final.empty:
+        satellite_status = f"卫星补位已启用：{satellite_final_names}进入最终候选。"
+    elif not satellite_technical.empty and not core_candidates.empty:
+        satellite_status = f"卫星待命：{satellite_technical_names}技术合格，但核心已有候选。"
+    elif not satellite_technical.empty:
+        satellite_status = f"卫星技术合格但未进入最终候选：{satellite_technical_names}。"
+    else:
+        satellite_status = f"卫星未触发：{len(satellite_ranking)}只均未通过技术入场。"
     positions = [item for item in account.get("positions", []) if float(item.get("quantity", 0)) > 0]
     account_position = (
         "当前空仓"
@@ -127,7 +167,19 @@ def main() -> None:
         else f"当前持有 {positions[0]['symbol']} {int(float(positions[0]['quantity'])):,} 股"
     )
     if current_symbol and current_symbol == target_symbol:
-        account_decision = f"现有持仓 {current_symbol} 未触发卖出条件，继续持有；不因其他标的排名变化而换仓。"
+        if switch_status.get("qualifies_today"):
+            if switch_status.get("status") == "baseline":
+                account_decision = (
+                    f"现有持仓 {current_symbol} 未触发卖出；机会换仓条件今日成立，但今天只建立观察基线0/2，"
+                    "明日继续成立才记1/2，因此继续持有。"
+                )
+            else:
+                account_decision = (
+                    f"现有持仓 {current_symbol} 未触发卖出；机会换仓条件今日成立，"
+                    f"连续确认 {switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}，尚未触发，继续持有。"
+                )
+        else:
+            account_decision = f"现有持仓 {current_symbol} 未触发卖出，也未满足完整机会换仓，继续持有。"
     elif not current_symbol:
         account_decision = f"当前空仓，按正式路径选择分取第一名，得到唯一目标 {target_name}（{target_symbol or '现金'}）。"
     else:
@@ -175,8 +227,8 @@ def main() -> None:
             score_change = float(target[score_column]) - float(previous_target[score_column])
             target_change_story = (
                 f"排名由第{int(previous_target['rank'])}变为第{int(target['rank'])}，选择分较昨日{score_change * 100:+.2f}个百分点；"
-                f"ROC20由{float(previous_target['roc20']):.2%}降至{float(target['roc20']):.2%}，"
-                f"ROC60由{float(previous_target['roc60']):.2%}降至{float(target['roc60']):.2%}。"
+                f"ROC20由{float(previous_target['roc20']):.2%}变为{float(target['roc20']):.2%}，"
+                f"ROC60由{float(previous_target['roc60']):.2%}变为{float(target['roc60']):.2%}。"
             )
             previous_close = float(previous_target["close"])
         else:
@@ -187,10 +239,21 @@ def main() -> None:
             price_frame["datetime"] = pd.to_datetime(price_frame["datetime"])
             recent_prices = price_frame.loc[price_frame["datetime"].le(pd.Timestamp(args.date))].sort_values("datetime").tail(2)
             previous_close = float(recent_prices.iloc[-2]["close"]) if len(recent_prices) >= 2 else market_price
-        close_change = market_price / previous_close - 1.0 if previous_close > 0 else 0.0
+        # The account's market_price belongs to the old live position until a planned
+        # rotation is filled. A new target must always use its own ranking close.
+        target_market_price = float(target["close"])
+        close_change = target_market_price / previous_close - 1.0 if previous_close > 0 else 0.0
+        roc20 = float(target["roc20"])
+        roc60 = float(target["roc60"])
+        if roc20 > 0 and roc60 > 0:
+            momentum_story = "ROC20、ROC60均为正，短中期动量同向。"
+        elif roc20 > 0:
+            momentum_story = "ROC20仍为正、ROC60已转负；中期动量走弱，但这不是现有仓位的独立卖出条件。"
+        else:
+            momentum_story = "ROC20已转负，需要按正式退出规则处理。"
         target_insight = (
-            f"{target_name}收于{market_price:.3f}元、较昨日{close_change:+.2%}。{target_change_story}"
-            f"MA120乖离为{float(target['ma120_bias']):.2%}，短中期动量仍同向为正，趋势没有过热或破位。"
+            f"{target_name}收于{target_market_price:.3f}元、较昨日{close_change:+.2%}。{target_change_story}"
+            f"MA120乖离为{float(target['ma120_bias']):.2%}，价格仍在MA120上方。{momentum_story}"
         )
     else:
         target_insight = "今天没有ETF成为最终目标，账户保持现金。"
@@ -205,19 +268,39 @@ def main() -> None:
             reasons.append(f"MA120乖离 {float(row['ma120_bias']):.2%}")
         rejected_details.append(f"第{int(row['rank'])}名{row['name']}因{'、'.join(reasons[:2]) or '入场条件不足'}未通过")
     rejected_story = "；".join(rejected_details) or "前5名没有额外淘汰项"
+    leading_rejection = rejected_details[0] if rejected_details else "前5名没有额外淘汰项"
     category_peers = ranking.loc[
         ranking["category"].eq(target_category) & ~ranking["symbol"].eq(target_symbol)
     ].sort_values("rank")
     if not category_peers.empty:
         peer = category_peers.iloc[0]
+        if bool(peer["final_entry_pass"]):
+            peer_result = "并已通过正式入场筛选"
+        elif float(peer["rank"]) > 5:
+            peer_result = "但未进入前5"
+        else:
+            peer_result = "但未通过完整入场条件"
         category_peer_story = (
             f"同属{target_category}的{peer['name']}排第{int(peer['rank'])}，ROC20为{float(peer['roc20']):.2%}，"
-            f"但{'未进入前5' if float(peer['rank']) > 5 else '其他条件未完全通过'}。"
+            f"{peer_result}。"
         )
     else:
         category_peer_story = f"{target_category}没有其他可比ETF。"
     if current_symbol and current_symbol == target_symbol:
-        decision_story = f"现有{target_name}仓位未触发卖出，继续持有；不因其他ETF排名更高而换仓。"
+        if switch_status.get("qualifies_today"):
+            if switch_status.get("status") == "baseline":
+                decision_story = (
+                    f"现有{target_name}仓位未触发卖出；{switch_candidate_name}满足换仓比较，"
+                    "但今天只建立观察基线0/2，明日继续满足才记1/2，所以继续持有。"
+                )
+            else:
+                decision_story = (
+                    f"现有{target_name}仓位未触发卖出；{switch_candidate_name}满足换仓比较，"
+                    f"当前连续确认{switch_status.get('confirmation_streak', 0)}/"
+                    f"{switch_status.get('required_confirmation_days', 2)}，尚未触发，所以继续持有。"
+                )
+        else:
+            decision_story = f"现有{target_name}仓位未触发卖出，也未完整满足机会换仓，继续持有。"
     elif not current_symbol and target_symbol:
         decision_story = f"账户原本空仓，因此从最终合格候选中按正式选择分选出{target_name}作为唯一目标。"
     elif current_symbol and target_symbol:
@@ -226,13 +309,28 @@ def main() -> None:
         decision_story = "旧仓已经触发退出，但今天没有新的合格候选，因此卖出后持有现金。"
     else:
         decision_story = "账户原本空仓，今天又没有新的合格候选，因此继续持有现金。"
+    if current_symbol and current_symbol == target_symbol and target_symbol:
+        core_insight = (
+            f"{target_name}虽出现单日波动，但仍未触发价格退出；{leading_rejection}，"
+            "因此继续按既定纪律持有。"
+        )
+    else:
+        core_insight = decision_story
     target_weight = "100%" if target_symbol else "0%"
     overview_paragraphs = [
-        f"今天账户增加{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮盈{purchase_pnl:+,.2f}元。明日结论不变：{actions}，不产生新订单。",
+        f"今天账户变动{daily_pnl:+,.2f}元，收益{daily_return:+.2%}；自{strategy_start}实盘开启以来累计{strategy_pnl:+,.2f}元，本次买入浮动盈亏{purchase_pnl:+,.2f}元。明日策略意向：{actions}。"
+        + (
+            "买卖计划待下一交易日真实成交确认。"
+            if execution_orders and plan_executable
+            else "无新增买卖订单。"
+            if not execution_orders
+            else "当前放行BLOCKED：上一份计划已确认取消，本页仅保留策略意向，不得自动执行。"
+        ),
         target_insight,
-        f"45只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}这说明医药方向并非只有当前持仓走强，但真正满足完整入场条件的仍是医药ETF易方达。今天没有新趋势或9%—12%质量延伸候选，两个最终候选都来自常规动量。",
-        f"资讯面上，医药医疗主题为{target_positive}条正向、{target_negative}条负向，强势主要来自创新药、中药和医疗器械个股。今天的核心洞察是：医药趋势仍在、动量保持正向、豆粕成为备选但尚不足以触发换仓，因此继续持有医药ETF。",
+        f"{len(ranking)}只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
+        f"板块内部也有呼应：{category_peer_story}正式规则不会因单日领先立即换仓，必须同时满足掉出前5、领先5个百分点、连续2日和持有5日。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
+        f"资讯面上，{target_category}主题为{target_positive}条正向、{target_negative}条负向，均按专属关键词直接映射。今天的核心洞察是：{core_insight}",
+        satellite_status,
     ]
     if len("".join(overview_paragraphs)) < 500:
         raise RuntimeError("daily plain-language overview must contain at least 500 characters")
@@ -258,21 +356,55 @@ def main() -> None:
         f"- 信号日：{args.date} 收盘后；执行：下一交易日开盘。",
         f"- 当前权益：{account['total_equity']:,.2f} 元；{account_position}。",
         f"- 唯一目标：{target_name}（{target_symbol or '现金'}）{('，目标仓位 100%' if target_symbol else '，目标仓位 0%')}。",
-        (f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。" if execution_orders else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"),
+        (
+            f"- 订单动作：{actions}；买卖计划待下一交易日真实成交确认。"
+            if execution_orders and plan_executable
+            else f"- 订单动作：{actions}；本页仅记录策略意向，不得执行。"
+            if execution_orders
+            else f"- 订单动作：{actions}；明日没有买卖订单，无需新增成交确认。"
+        ),
+        (
+            "- 放行状态：READY；次日计划可执行。"
+            if plan_executable
+            else "- 放行状态：BLOCKED；上一份计划未成交且已确认取消，本页买卖仅为策略意向，不得执行。"
+        ),
+        (
+            f"- 机会换仓：候选 {switch_status.get('candidate_symbol') or '无'}；今日是否合格"
+            f"{'是' if switch_status.get('qualifies_today') else '否'}；"
+            + (
+                "今天仅建立观察基线0/2，明日继续合格才记1/2；未触发。"
+                if switch_status.get("status") == "baseline"
+                else f"连续确认 {switch_status.get('confirmation_streak', 0)}/{switch_status.get('required_confirmation_days', 2)}；"
+                f"{'已触发' if switch_status.get('triggered') else '未触发'}。"
+            )
+        ),
         f"- 固定成本：{plan['cost']}。",
         "",
-        "## 二、今天怎样从 45 只 ETF 得到唯一目标",
+        f"## 二、今天怎样从 {len(ranking)} 只 ETF 得到唯一目标",
         "",
-        f"1. **固定母池**：45只ETF全部参与计算。",
-        f"2. **新开仓资格**：{int(pool_eligible.sum())}/45只通过上市≥120日、20日成交额中位数≥2,000万元。",
+        f"1. **冻结母池**：{len(ranking)}只ETF全部计算，其中45只核心、{len(satellite_ranking)}只卫星；核心独立排名并拥有买入优先权。",
+        f"2. **新开仓资格**：{int(pool_eligible.sum())}/{len(ranking)}只通过上市≥120日、20日成交额中位数≥2,000万元。",
         f"3. **三条路径并行**：常规动量 {normal_count} 只、新趋势例外 {emerging_count} 只、9%—12%质量延伸 {extension_count} 只。",
-        f"4. **最终合格 {len(candidates)} 只**：{candidate_names}。",
+        f"4. **核心优先后最终合格 {len(candidates)} 只**：{candidate_names}；只有当天没有核心候选时，卫星才补位。",
         f"5. **明日实际目标 {1 if target_symbol else 0} 只**：{target_name}（{target_symbol or '现金'}）；{account_decision}",
         "",
-        "| 最终顺序 | ETF | 全池排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
-        "|---:|---|---:|---:|---:|---:|---:|---|---|",
+        "### 今日卫星检查",
+        "",
+        f"- **结论**：{satellite_status}",
+        f"- 核心最终候选：{len(core_candidates)} 只；卫星技术合格：{len(satellite_technical)}/{len(satellite_ranking)} 只；卫星最终补位：{len(satellite_final)} 只。",
+        "",
+        "| 卫星ETF | 虚拟排名 | 动量分 | ROC20 | ROC60 | MA120乖离 | 技术结果 | 当日处理 |",
+        "|---|---:|---:|---:|---:|---:|---|---|",
         *[
-            f"| {index} | {row['name']}（{row['symbol']}） | {int(row['rank'])} | {row[score_column]:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {entry_path(row)} | {candidate_outcome(row, target_symbol, current_symbol)} |"
+            f"| {row['name']}（{row['symbol']}） | {int(row['rank'])} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row['technical_entry_pass'] else '未通过'} | "
+            f"{'最终补位候选' if row['final_entry_pass'] else ('技术通过；核心已有候选，待命' if row['technical_entry_pass'] and not core_candidates.empty else ('技术通过；未进入最终候选' if row['technical_entry_pass'] else entry_blockers(row)))} |"
+            for _, row in satellite_ranking.iterrows()
+        ],
+        "",
+        "| 最终顺序 | ETF | 池角色 | 决策排名 | 选择分 | ROC20 | ROC60 | MA120乖离 | 入场路径 | 处理 |",
+        "|---:|---|---|---:|---:|---:|---:|---:|---|---|",
+        *[
+            f"| {index} | {row['name']}（{row['symbol']}） | {'卫星' if row.get('pool_role') == 'challenger' else '核心'} | {int(row['rank'])} | {row[score_column]:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {entry_path(row)} | {candidate_outcome(row, target_symbol, current_symbol)} |"
             for index, (_, row) in enumerate(candidates.iterrows(), start=1)
         ],
         "",
@@ -282,7 +414,14 @@ def main() -> None:
         "- 数据来源：" + "；".join(f"{name} {count} 条" for name, count in source_counts(review["items"])),
         f"- **主要正向**：{strongest[0]}共 {strongest[1]} 正、{strongest[2]} 负，是当日净正向记录最集中的主题。",
         f"- **风险与分歧**：{most_negative[0]}出现 {most_negative[2]} 条负向记录；需与同主题正向记录及价格趋势合并看待。",
-        f"- **目标{target_category}主题**：共 {target_positive} 正、{target_negative} 负；目标走常规动量路径，不依赖热点例外放行。" if target_sentiment is not None else "- 目标主题没有可用的情绪映射，按未知处理。",
+        (
+            f"- **目标{target_category}主题**：共 {target_positive} 正、{target_negative} 负；"
+            + (
+                f"今日通过{entry_path(target_row.iloc[-1])}，不依赖其他例外放行。"
+                if not target_row.empty and bool(target_row.iloc[-1]["final_entry_pass"])
+                else "现有持仓未触发退出，不依赖今日新开仓路径；资讯不能覆盖价格退出规则。"
+            )
+        ) if target_sentiment is not None else "- 目标主题没有可用的情绪映射，按未知处理。",
         "- 结论：审核完整性硬门已通过；当天没有候选依赖新趋势或质量延伸例外。正式规则没有统一负面阈值去否决所有常规买点。",
         "",
         "| 主题 | 正向记录 | 负向记录 |",
@@ -295,8 +434,10 @@ def main() -> None:
         "",
         *(
             [
+                "- **当前状态为BLOCKED：以下仅用于复核策略意向，不是可执行订单。**"
+                if not plan_executable else "- 以下订单待下一交易日真实成交确认。",
                 f"- 计划买入：{target_name}（{target_symbol}），目标仓位100%。",
-                f"- 7月20日收盘价 {buy_estimate.get('last_close', 0):.3f} 元；按固定滑点与最低佣金估算，可买约 **{int(buy_estimate.get('estimated_quantity_at_last_close', 0)):,} 份**，预计占用 {buy_estimate.get('estimated_notional', 0) + buy_estimate.get('estimated_commission', 0):,.2f} 元。",
+                f"- {args.date}收盘价 {buy_estimate.get('last_close', 0):.3f} 元；按固定滑点与最低佣金估算，可买约 **{int(buy_estimate.get('estimated_quantity_at_last_close', 0)):,} 份**，预计占用 {buy_estimate.get('estimated_notional', 0) + buy_estimate.get('estimated_commission', 0):,.2f} 元。",
                 "- 上述数量只是收盘估算。明日必须按实际开盘成交价、实际可用资金和100份整数倍重新计算，绝不允许透支。",
                 "- 成交后请提供实际数量、均价及未成交数量；在确认前，账户仍记为‘计划待成交’。",
             ] if buy_order else ["- 明日没有新买单；按计划持有或保持现金。"]
@@ -319,14 +460,14 @@ def main() -> None:
     detail_section_number = "六" if execution_orders else "五"
     lines.extend([
         "",
-        f"## {detail_section_number}、45只ETF逐层结果",
+        f"## {detail_section_number}、{len(ranking)}只ETF逐层结果",
         "",
         "‘最终通过’只代表进入候选集合，不代表同时买入；空仓时只买最终候选中动量分最高的一只。",
         "",
-        "| 排名 | ETF | 资格 | 动量分 | ROC20 | ROC60 | MA120乖离 | 常规 | 新趋势 | 延伸 | 最终处理 |",
-        "|---:|---|---|---:|---:|---:|---:|---|---|---|---|",
+        "| 决策排名 | ETF | 池角色 | 资格 | 动量分 | ROC20 | ROC60 | MA120乖离 | 常规 | 新趋势 | 延伸 | 最终处理 |",
+        "|---:|---|---|---|---:|---:|---:|---:|---|---|---|---|",
         *[
-            f"| {int(row['rank'])} | {row['name']}（{row['symbol']}） | {'通过' if row['pool_eligible'] else '未通过'} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row.get('confirmed_normal_entry', row['normal_entry']) and row['pool_eligible'] else '—'} | {'通过' if row['emerging_entry'] and row['pool_eligible'] else '—'} | {'通过' if row['quality_extension'] and row['pool_eligible'] else '—'} | {candidate_outcome(row, target_symbol, current_symbol)} |"
+            f"| {int(row['rank'])} | {row['name']}（{row['symbol']}） | {'卫星' if row.get('pool_role') == 'challenger' else '核心'} | {'通过' if row['pool_eligible'] else '未通过'} | {row['momentum_score']:.2%} | {row['roc20']:.2%} | {row['roc60']:.2%} | {row['ma120_bias']:.2%} | {'通过' if row.get('confirmed_normal_entry', row['normal_entry']) and row['pool_eligible'] else '—'} | {'通过' if row['emerging_entry'] and row['pool_eligible'] else '—'} | {'通过' if row['quality_extension'] and row['pool_eligible'] else '—'} | {candidate_outcome(row, target_symbol, current_symbol)} |"
             for _, row in ranking.iterrows()
         ],
     ])

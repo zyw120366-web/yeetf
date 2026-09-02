@@ -1,0 +1,53 @@
+version: ye-codex-chat-review-2026-07-27
+effective_for_signal_dates_from: '2026-07-28'
+purpose: 为价格趋势已经成立的边缘买点和软退出提供可审计的题材确认；不得独立制造买入信号
+
+input_contract:
+  source: 当日收盘后冻结的 review_queue/YYYY-MM-DD.json
+  scope: 队列中的每一行均须审核，包括无关行
+  immutable_source_hash: true
+  no_external_context: 只根据冻结行文本判断，不补写未出现在文本中的事实
+
+decision_contract:
+  relevant_false: 与固定ETF池没有直接、可说明的实质关系
+  direction:
+    -2: 明确且较强的负面线索
+    -1: 短期负面或风险线索
+    0: 中性、分歧或无法判断方向
+    1: 短期正向线索
+    2: 明确且较强的正向线索
+  confidence: 判断本身的可信程度，不代表未来上涨概率
+  novelty: 相对已有冻结资讯的新信息程度
+  evidence: 必须逐字来自当前冻结行可见内容
+  uncertainty: 个股到ETF、题材到行业或短期事件到趋势的外推必须写入 risk_flags
+
+symbol_mapping_contract:
+  direct_keyword_required: true
+  category_broadcast_forbidden: true
+  rule: matched_symbols 只有在冻结行的公司名、标题或正文包含该ETF的专属关键词时才有效
+  generic_example: 黄金、石油或泛商品资讯不得映射为豆粕ETF证据
+  retained_context: matched_categories 仅作主题上下文，不自动扩散为同类别全部ETF的有效证据
+
+event_deduplication_contract:
+  review_every_source_row: true
+  feature_count_once: 同一交易日同一公司在多个来源重复出现时，题材强度只计一次
+  conservative_conflict_resolution: 同一事件方向冲突时，优先绝对方向更强、置信度更高；完全并列时优先负面
+  audit_rule: 原始行和逐行审核均保留，去重只作用于下游特征聚合
+
+fail_closed:
+  - 任一来源采集失败
+  - 审核条数与输入条数不一致
+  - source_hash 缺失、额外或重复
+  - review_metadata 缺失
+  - 审核结构不符合 schema
+
+reproducibility:
+  save_full_policy_hash: true
+  save_sentiment_config_hash: true
+  save_review_schema_hash: true
+  required_review_metadata:
+    - model_family
+    - model_snapshot
+    - surface
+    - reviewed_in_current_conversation
+  limitation: Codex 未暴露精确后端模型快照时必须明确记录 not_exposed_by_codex，不得伪造版本

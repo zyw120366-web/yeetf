@@ -3,7 +3,12 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from .etfwin import EtfwinRules, etfwin_features, etfwin_signals
+from .etfwin import (
+    EtfwinOpportunitySwitch,
+    EtfwinRules,
+    etfwin_features,
+    etfwin_signals,
+)
 from .execution import entry_eligibility
 from .sentiment import broadcast
 
@@ -37,6 +42,56 @@ def category_breadth(
             share.to_numpy()[:, None], len(members), axis=1
         )
     return output
+
+
+def anchor_category_breadth(
+    roc20: pd.DataFrame,
+    categories: dict[str, str],
+    eligibility: pd.DataFrame,
+    core_symbols: list[str],
+    challenger_symbols: list[str],
+) -> pd.DataFrame:
+    """Keep core breadth frozen and judge challengers only by core peers."""
+
+    output = pd.DataFrame(index=roc20.index, columns=roc20.columns, dtype=float)
+    groups: dict[str, list[str]] = {}
+    for symbol in core_symbols:
+        groups.setdefault(categories[symbol], []).append(symbol)
+    for members in groups.values():
+        share = roc20[members].gt(0.0).mean(axis=1)
+        output.loc[:, members] = np.repeat(
+            share.to_numpy()[:, None], len(members), axis=1
+        )
+    for symbol in challenger_symbols:
+        members = groups.get(categories[symbol], [])
+        if members:
+            output[symbol] = roc20[members].gt(0.0).mean(axis=1)
+        else:
+            # A challenger in a newly covered category cannot use itself as
+            # 100% breadth confirmation during the historical no-news regime.
+            output[symbol] = np.nan
+    return output
+
+
+def anchor_competitive_rank(
+    ranking_score: pd.DataFrame,
+    eligibility: pd.DataFrame,
+    core_symbols: list[str],
+    challenger_symbols: list[str],
+) -> pd.DataFrame:
+    """Rank core ETFs only against the core; challengers compete against that ruler."""
+
+    rank = pd.DataFrame(index=ranking_score.index, columns=ranking_score.columns, dtype=float)
+    core_scores = ranking_score[core_symbols]
+    rank.loc[:, core_symbols] = core_scores.rank(
+        axis=1, ascending=False, method="min"
+    )
+    for symbol in challenger_symbols:
+        score = ranking_score[symbol]
+        rank[symbol] = (
+            core_scores.gt(score, axis=0).sum(axis=1).astype(float) + 1.0
+        ).where(score.notna() & eligibility[symbol])
+    return rank
 
 
 def _rules(values: dict) -> EtfwinRules:
@@ -75,6 +130,7 @@ def build_ye_signals(
     sentiment_available: pd.Series,
     *,
     raw_score_override: pd.DataFrame | None = None,
+    components: dict[str, bool] | None = None,
 ):
     """Build the one frozen ye strategy from production configuration only."""
 
@@ -95,29 +151,78 @@ def build_ye_signals(
     r2 = rolling_r2(close, 20)
     efficiency = close.pct_change(20, fill_method=None).abs() / returns.abs().rolling(20).sum()
     roc5 = close.pct_change(5, fill_method=None)
-    breadth = category_breadth(features.roc_short, categories)
+    architecture = enhanced.get("universe_architecture", {})
+    architecture_mode = str(architecture.get("mode", "fixed_pool"))
+    configured_challengers = [str(symbol) for symbol in architecture.get("challenger_symbols", [])]
+    missing_challengers = set(configured_challengers) - set(symbols)
+    if missing_challengers:
+        raise KeyError(
+            "configured challenger symbols are missing from the universe: "
+            f"{sorted(missing_challengers)}"
+        )
+    challenger_symbols = [symbol for symbol in symbols if symbol in configured_challengers]
+    core_symbols = [symbol for symbol in symbols if symbol not in set(challenger_symbols)]
+    if architecture_mode in {"core_anchor_challenger", "core_champion_cash_gap"}:
+        expected_core = int(architecture["core_pool_size"])
+        if len(core_symbols) != expected_core:
+            raise ValueError(
+                f"core pool size mismatch: expected {expected_core}, got {len(core_symbols)}"
+            )
+        breadth = anchor_category_breadth(
+            features.roc_short,
+            categories,
+            eligibility,
+            core_symbols,
+            challenger_symbols,
+        )
+        decision_rank = anchor_competitive_rank(
+            features.ranking_score,
+            eligibility,
+            core_symbols,
+            challenger_symbols,
+        )
+    elif architecture_mode == "fixed_pool":
+        breadth = category_breadth(features.roc_short, categories)
+        decision_rank = features.rank
+    else:
+        raise ValueError(f"unsupported universe architecture: {architecture_mode}")
+    dual_rank_decline = (
+        decision_rank.gt(decision_rank.shift(int(values["rank_change_short_days"])))
+        & decision_rank.gt(decision_rank.shift(int(values["rank_change_long_days"])))
+    ).fillna(False)
     available = broadcast(sentiment_available, symbols)
+    component_flags = {
+        "weak_edge_filter": True,
+        "emerging_trend": True,
+        "quality_extension": True,
+        "hot_exit_protection": True,
+        **(components or {}),
+    }
 
     normal = (
         features.roc_short.gt(0.0)
         & features.roc_medium.gt(0.0)
         & features.above_ma
         & features.ma_bias.le(float(values["max_entry_ma_bias"]))
-        & features.rank.le(int(values["entry_rank_limit"]))
+        & decision_rank.le(int(values["entry_rank_limit"]))
     )
     fallback = (
         normal
-        & features.rank.le(int(fallback_cfg["entry_rank_limit"]))
+        & decision_rank.le(int(fallback_cfg["entry_rank_limit"]))
         & breadth.ge(float(fallback_cfg["category_roc20_positive_breadth_min"]))
     )
 
-    weak_edge = features.rank.ge(4) & features.roc_short.lt(0.02)
+    weak_edge = decision_rank.ge(4) & features.roc_short.lt(0.02)
     edge_following = (
         sentiment["matched_count"].ge(3)
         & sentiment["count_acceleration"].ge(0.0)
         & sentiment["positive_dde_share"].ge(0.50)
     )
-    current_normal = normal & (~weak_edge | edge_following)
+    current_normal = (
+        normal & (~weak_edge | edge_following)
+        if component_flags["weak_edge_filter"]
+        else normal.copy()
+    )
 
     emerging_cfg = live["emerging_trend"]
     emerging_trigger = (
@@ -126,7 +231,7 @@ def build_ye_signals(
         & features.roc_medium.le(float(emerging_cfg["roc60_range"][1]))
         & features.ma_bias.ge(float(emerging_cfg["ma120_bias_range"][0]))
         & features.ma_bias.le(float(emerging_cfg["ma120_bias_range"][1]))
-        & features.rank.le(int(emerging_cfg["maximum_base_rank"]))
+        & decision_rank.le(int(emerging_cfg["maximum_base_rank"]))
         & r2.ge(float(emerging_cfg["r2_20_min"]))
         & efficiency.ge(float(emerging_cfg["efficiency20_min"]))
         & sentiment["matched_count"].ge(float(emerging_cfg["matched_hot_stocks_min"]))
@@ -143,13 +248,15 @@ def build_ye_signals(
         & features.ma_bias.ge(float(emerging_cfg["ma120_bias_range"][0]))
         & features.ma_bias.le(float(live["quality_extension"]["ma120_bias_range"][1]))
     )
+    if not component_flags["emerging_trend"]:
+        emerging = pd.DataFrame(False, index=calendar, columns=symbols)
 
     extension_cfg = live["quality_extension"]
     quality_extension = (
         features.roc_short.gt(0.0)
         & features.roc_medium.gt(0.0)
         & features.above_ma
-        & features.rank.le(int(extension_cfg["base_rank_limit"]))
+        & decision_rank.le(int(extension_cfg["base_rank_limit"]))
         & features.ma_bias.gt(float(extension_cfg["ma120_bias_range"][0]))
         & features.ma_bias.le(float(extension_cfg["ma120_bias_range"][1]))
         & r2.ge(float(extension_cfg["r2_20_min"]))
@@ -159,6 +266,8 @@ def build_ye_signals(
         & sentiment["hot_score"].ge(float(extension_cfg["hot_score_min"]))
         & sentiment["count_acceleration"].ge(float(extension_cfg["count_acceleration_min"]))
     )
+    if not component_flags["quality_extension"]:
+        quality_extension = pd.DataFrame(False, index=calendar, columns=symbols)
     entry_gate = (~available & fallback) | (
         available & (current_normal | emerging | quality_extension)
     )
@@ -171,7 +280,7 @@ def build_ye_signals(
     missing_exit = fallback_cfg["soft_exit_protection"]
     missing_strong = (
         ~available
-        & features.rank.le(int(missing_exit["rank_limit"]))
+        & decision_rank.le(int(missing_exit["rank_limit"]))
         & features.roc_medium.ge(float(missing_exit["roc60_min"]))
         & features.above_ma
     )
@@ -186,7 +295,19 @@ def build_ye_signals(
     hot_memory = hot_trigger.rolling(
         int(hot["memory_days"]), min_periods=1
     ).max().fillna(False).astype(bool)
+    if not component_flags["hot_exit_protection"]:
+        hot_memory = pd.DataFrame(False, index=calendar, columns=symbols)
     soft_exit &= ~hot_memory
+
+    switch_cfg = enhanced.get("opportunity_switch", {})
+    opportunity_switch = None
+    if bool(switch_cfg.get("enabled", False)):
+        opportunity_switch = EtfwinOpportunitySwitch(
+            held_rank_must_exceed=int(switch_cfg["held_rank_must_exceed"]),
+            minimum_score_advantage=float(switch_cfg["minimum_score_advantage"]),
+            confirmation_days=int(switch_cfg["confirmation_days"]),
+            minimum_hold_days=int(switch_cfg["minimum_hold_days"]),
+        )
 
     bundle, _ = etfwin_signals(
         close,
@@ -197,7 +318,16 @@ def build_ye_signals(
         entry_gate=entry_gate,
         entry_ranking_score_override=entry_score,
         soft_exit_confirmation=soft_exit,
+        dual_rank_decline_override=dual_rank_decline,
         reentry_cooldown_days=int(enhanced["reentry_cooldown_days"]),
+        priority_symbols=(
+            core_symbols if architecture_mode == "core_champion_cash_gap" else None
+        ),
+        preempt_for_priority_entry=architecture_mode == "core_champion_cash_gap",
+        opportunity_switch=opportunity_switch,
+        opportunity_switch_rank=decision_rank if opportunity_switch else None,
+        opportunity_switch_score=features.raw_score if opportunity_switch else None,
+        opportunity_switch_symbols=core_symbols if opportunity_switch else None,
     )
     decision = {
         "entry_gate": entry_gate,
@@ -211,8 +341,15 @@ def build_ye_signals(
         "hot_exit_protection": hot_memory,
         "missing_data_soft_exit_protection": missing_strong,
         "entry_score": entry_score,
+        "entry_rank": decision_rank,
+        "dual_rank_decline": dual_rank_decline,
+        "core_symbols": core_symbols,
+        "challenger_symbols": challenger_symbols,
+        "universe_architecture": architecture_mode,
+        "opportunity_switch": switch_cfg,
         "r2_20": r2,
         "efficiency20": efficiency,
         "category_breadth": breadth,
+        "components": component_flags,
     }
     return bundle, features, eligibility, listed_sessions, trailing_amount, decision

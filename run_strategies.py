@@ -279,15 +279,8 @@ def main() -> None:
     save_frame(annual, comparison_dir / "annual.csv")
     save_frame(timing, comparison_dir / "timing.csv")
     save_frame(equity.reset_index(), comparison_dir / "equity.csv")
-    rounds = realized_round_trips(ye_result.trades, calendar)
-    if not rounds.empty:
-        rounds.insert(0, "strategy", YE_NAME)
-        rounds.insert(2, "name", rounds["symbol"].map(names))
-        rounds.insert(3, "category", rounds["symbol"].map(categories))
-    save_frame(rounds, comparison_dir / "round_trips.csv")
-
     latest = calendar[-1]
-    rank = ye_features.rank
+    rank = decision["entry_rank"]
     base_pass = (
         ye_eligibility
         & rank.le(int(ye_config["rules"]["entry_rank_limit"]))
@@ -296,6 +289,13 @@ def main() -> None:
         & ye_features.above_ma
         & ye_features.ma_bias.le(float(ye_config["rules"]["max_entry_ma_bias"]))
     )
+    technical_entry_pass = decision["entry_gate"] & ye_eligibility
+    core_entry_available = technical_entry_pass[decision["core_symbols"]].any(axis=1)
+    priority_entry_pass = technical_entry_pass.copy()
+    if decision["challenger_symbols"]:
+        priority_entry_pass.loc[:, decision["challenger_symbols"]] &= (
+            ~core_entry_available.to_numpy()[:, None]
+        )
     latest_ranking = pd.DataFrame({
         "date": str(latest.date()),
         "symbol": symbols,
@@ -315,10 +315,15 @@ def main() -> None:
         "rank": rank.loc[latest].to_numpy(),
         "rank_5d_ago": rank.shift(int(ye_config["rules"]["rank_change_short_days"])).loc[latest].to_numpy(),
         "rank_20d_ago": rank.shift(int(ye_config["rules"]["rank_change_long_days"])).loc[latest].to_numpy(),
-        "dual_rank_decline": ye_features.dual_rank_decline.loc[latest].to_numpy(),
+        "dual_rank_decline": decision["dual_rank_decline"].loc[latest].to_numpy(),
+        "pool_role": [
+            "challenger" if symbol in decision["challenger_symbols"] else "core"
+            for symbol in symbols
+        ],
         "pool_eligible": ye_eligibility.loc[latest].to_numpy(),
         "base_entry_pass": base_pass.loc[latest].to_numpy(),
-        "final_entry_pass": (decision["entry_gate"] & ye_eligibility).loc[latest].to_numpy(),
+        "technical_entry_pass": technical_entry_pass.loc[latest].to_numpy(),
+        "final_entry_pass": priority_entry_pass.loc[latest].to_numpy(),
         "normal_entry": decision["normal"].loc[latest].to_numpy(),
         "confirmed_normal_entry": decision["current_normal"].loc[latest].to_numpy(),
         "weak_edge_confirmed": decision["weak_edge_confirmed"].loc[latest].to_numpy(),

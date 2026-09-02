@@ -1,0 +1,4672 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "ee0d92e8cd36dea40511d99bedbf2f58aef4aae91f86d110644455ec43871a0b",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159981.SZ",
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：澄星股份 | 磷化工+黄磷涨价+中报预增。",
+      "evidence": [
+        "磷化工+黄磷涨价+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6290410f8ebddc2da32f412200d6b20c9519a0a2c4a8c67315a941abb959eab5",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：中电电机 | 电机+风电+储能+上游资源。",
+      "evidence": [
+        "电机+风电+储能+上游资源"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1a8fccfae9e9bf6d5954af33ed3834ec499e2688058ed983aa85bfdc9909e03e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：江钨装备 | 钨钽铌资产注入+磁选装备+江西国资。",
+      "evidence": [
+        "钨钽铌资产注入+磁选装备+江西国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9c9645c6b101403f2378addf7b0f581e02882f9e6afed580f3de7f4a32b56069",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：金诚信 | 铜+矿山服务+重大合同。",
+      "evidence": [
+        "铜+矿山服务+重大合同"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "60a8401cedea3dc0a8fbf7a134c6ac033ccdd4b3d3f6d3e0fe526155619543d4",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：*ST皇庭 | 债务化解+功率半导体+商业管理+固态电池。",
+      "evidence": [
+        "债务化解+功率半导体+商业管理+固态电池"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "fdeadde9b9918d886e75a8de807e068f89273fd132d6670bef4b0279438a78ad",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：宏和科技 | 特种电子布+PCB概念+中报预增。",
+      "evidence": [
+        "特种电子布+PCB概念+中报预增"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "4a05c3b7db55ab303014cbcca5723980ef23f50eb48413b1fcb85b55d19e8254",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：松发股份 | 船舶制造+半年报预增+定增完成。",
+      "evidence": [
+        "船舶制造+半年报预增+定增完成"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "19f15226380dfd96d7e3553483c6f0999b96f45b03ae021b38b653372e3248de",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：迪生力 | 存储芯片+收购半导体+汽车轮毂。",
+      "evidence": [
+        "存储芯片+收购半导体+汽车轮毂"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1f06e79f007ab3dab56e995b7dd9de9914238394d276c2eb7ce3c6cb34a9417a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：华盛昌 | CPO+光通信测试+AI眼镜+中报预增。",
+      "evidence": [
+        "CPO+光通信测试+AI眼镜+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ec3be529ed6ac01ecdbb8576785f12b7ed4e574f8827564845b46d3d31b78737",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：金安国纪 | 覆铜板+PCB概念+扩产+半年报预增。",
+      "evidence": [
+        "覆铜板+PCB概念+扩产+半年报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9e08beb61921db0bc3718282e74aeb40b1f3bf7cd13f47ca33f8f46af7b973cc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：福晶科技 | 光通信+中科院系。",
+      "evidence": [
+        "光通信+中科院系"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "dcd99a5d246cb9d209bc52f98bdf2d180cb41c2a42b5d983f3edd7a8ca53bb6c",
+      "relevant": false,
+      "matched_categories": [
+        "风格红利"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：中材科技 | PCB概念+特种纤维布+定增过会+央企。",
+      "evidence": [
+        "PCB概念+特种纤维布+定增过会+央企"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "45a31b1a753c37a714d5279fffe8a67f003adbd718a7b124e4a5df44b48c51c9",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：甬金股份 | 精密冷轧不锈钢+钛合金+电池壳材料。",
+      "evidence": [
+        "精密冷轧不锈钢+钛合金+电池壳材料"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "cdf997a854172cebf187596d2fb4f81b05cba65f62f1e361339c0bdc7fcfcae4",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "562500.SH",
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：科森科技 | 机器人+消费电子+AI散热+扭亏为盈。",
+      "evidence": [
+        "机器人+消费电子+AI散热+扭亏为盈"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9b6a3d49704017f5692d8c92ff1c2ad1759f52c08b29cfff668e7fdf8278dad0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：杭电股份 | 光纤光缆+定增扩产+减持完毕。",
+      "evidence": [
+        "光纤光缆+定增扩产+减持完毕"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2cb8874d075274c94e83670e41674467f641ca037f73b7141a6163343b685fa9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：长飞光纤 | 算力数据中心+半年报预增+设立产业基金+空芯光纤。",
+      "evidence": [
+        "算力数据中心+半年报预增+设立产业基金+空芯光纤"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ce18bdd71a2666cae4d65985cc2c0507782228f287d638e66540947193e1f2a0",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：宝明科技 | AI服务器+HVLP铜箔+复合铜箔。",
+      "evidence": [
+        "AI服务器+HVLP铜箔+复合铜箔"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b573b70a1add9af795dc2064d8c4b7ffbb668ed7204179ae7585e9e12b652b37",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：常青科技 | 光刻胶原料+高分子新材料+可转债过会+中报预增。",
+      "evidence": [
+        "光刻胶原料+高分子新材料+可转债过会+中报预增"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2006054d6a6becece50d83f4a4a13f1372faa5291a7e281b8e86800a60d79def",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：万集科技 | 激光雷达+车路云+机器人。",
+      "evidence": [
+        "激光雷达+车路云+机器人"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c5b0905a596f5004adc5e0d862e080407ee8181e6fea56a8328294d7152af8a5",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：华懋科技 | CPO+资产重组+光模块。",
+      "evidence": [
+        "CPO+资产重组+光模块"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "156dff7d3a6e425782c029d6a9861a1c18700ba135e33d9deace62e7ab105122",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：宝鼎科技 | 覆铜板+PCB+黄金+国企。",
+      "evidence": [
+        "覆铜板+PCB+黄金+国企"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b21b28d23ae49b7aa0210d285147f57d1651687b020c3eeb304db23f657347c2",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：皖仪科技 | 液冷服务器+科学仪器+业绩扭亏。",
+      "evidence": [
+        "液冷服务器+科学仪器+业绩扭亏"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7a6ae44edcd1c1dbd1a38d632b425d6e2d81bf1ad2a18966d2081992da5b8c76",
+      "relevant": true,
+      "matched_categories": [
+        "风格红利"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：中钨高新 | AI PCB微钻扩产+钨全产业链+央企。",
+      "evidence": [
+        "AI PCB微钻扩产+钨全产业链+央企"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9e0d65344d6b5748ca66b7bdaa3f4c1864269b385eafa20162d1c3e69fa7e3de",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：龙鑫智能 | MLCC+锂电池设备+专精特新。",
+      "evidence": [
+        "MLCC+锂电池设备+专精特新"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "2877852dee5f63e7e8b160cd394a63a2b77591b43abd9c043cb02e05e6cc1691",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：通鼎互联 | 光纤光缆+光棒扩产+中报预计扭亏。",
+      "evidence": [
+        "光纤光缆+光棒扩产+中报预计扭亏"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8d8202383e83c11fa14fb19a194ee2ea951909c71ce68e2d728de98f50fbf3d6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：平安电工 | 电子布+PCB概念+泰国建厂。",
+      "evidence": [
+        "电子布+PCB概念+泰国建厂"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d20a2d8402211d86d6b99538e2978c7b5d23980b22ec1008b04dfa2112ef3a9d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：黄河旋风 | 金刚石散热+培育钻石+许昌国资。",
+      "evidence": [
+        "金刚石散热+培育钻石+许昌国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f141ce2e8c81a5779541a7c6b95769f88bf77690c21e8adce2e2c983e8c29b46",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：中巨芯 | 六氟化钨+存储芯片+电子化学品。",
+      "evidence": [
+        "六氟化钨+存储芯片+电子化学品"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "388efb011debae8c785743e624c7e17dae6ea65b5aef1a29a3c8d91389a2c3fd",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：三祥新材 | 锆铪分离+半导体+固态电池+业绩预增。",
+      "evidence": [
+        "锆铪分离+半导体+固态电池+业绩预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7353742037c9cd5e5ce6eeab0951c310f5bba4d34e9dc3cc061449088a77c83d",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：冰轮环境 | 数据中心液冷+烟台国资+超跌反弹。",
+      "evidence": [
+        "数据中心液冷+烟台国资+超跌反弹"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "a543cbd818bd1fa13edd9cb35a262dff5ba19d4373e4916473c1043f908fb0aa",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：福达合金 | AI数据中心+电接触材料+金属回收+半年报预增。",
+      "evidence": [
+        "AI数据中心+电接触材料+金属回收+半年报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f2dc4d58996308c48290ee55ca8af66535387d53ec35ee5a8ef74ddeedcab6c3",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：金富科技 | 液冷服务器+定增扩产+中报预增+饮料瓶盖。",
+      "evidence": [
+        "液冷服务器+定增扩产+中报预增+饮料瓶盖"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0b6f70e393bf9981b49fa1537b419d19f868218ea087bae704720a0bf48ca7af",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：共达电声 | 增持+汽车电子+苹果概念+电声元器件。",
+      "evidence": [
+        "增持+汽车电子+苹果概念+电声元器件"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "88488362c6cb2e12be5a748373f2264448afecba47e8e91c7536f1296aaf63c7",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：东材科技 | 高速电子树脂+AI算力+中报预增。",
+      "evidence": [
+        "高速电子树脂+AI算力+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ca74a8048ec40410bbf5e49df4939c7e46084e82595844f682ac9cb0e2e52996",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：盛视科技 | 算力+机器人+智慧口岸+中报预增。",
+      "evidence": [
+        "算力+机器人+智慧口岸+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c7cced921721f6be9a0a2934fdec404aefded789e89ec470da08f2e3a75caa8b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：华正新材 | 覆铜板+AI算力+半年报预增。",
+      "evidence": [
+        "覆铜板+AI算力+半年报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6e8d4ddf9d719e82741dd91dc1e1af4a26501553d12a78ba01765ff8770c9018",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：红星发展 | 玻璃基板上游+MLCC上游+碳酸锶+青岛国资。",
+      "evidence": [
+        "玻璃基板上游+MLCC上游+碳酸锶+青岛国资"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b7086c59bd27515aeb92aa3019a4f47acad9f65cd635f33d10c99b166d838495",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：康强电子 | 半导体封装材料+引线框架+存储芯片+股份回购。",
+      "evidence": [
+        "半导体封装材料+引线框架+存储芯片+股份回购"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6562ca1d68867733e48091f845f4fec44bf594488389d6f19cd779e41aa5e3ab",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：华建集团 | 上海微电子相关+子公司重整获批+工程设计+上海国资。",
+      "evidence": [
+        "上海微电子相关+子公司重整获批+工程设计+上海国资"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f9313d12f35c4fc3a69b012f1984753608e7a40a5e4d27e0fe1f9857043926ec",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：正帆科技 | 转债强赎+电子特气+碳化硅陶瓷+半导体设备零部件。",
+      "evidence": [
+        "转债强赎+电子特气+碳化硅陶瓷+半导体设备零部件"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f7cf45bbd121b60b4578c0823a2a62a830063b528467cd584f8c3ee9be231ae7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：和远气体 | 六氟化钨+电子特气+大宗气体。",
+      "evidence": [
+        "六氟化钨+电子特气+大宗气体"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "034c5caa9803ea7a8c1e4030f7e52230def9a49c87dd376bd150d95fb43bd39e",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：柘中股份 | 成套开关设备+集成电路+订单新高+半年报预增。",
+      "evidence": [
+        "成套开关设备+集成电路+订单新高+半年报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f500e22c5fa38479f680019b86f0ef422c3a9afc499abc0e2ea356d722dbcc25",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：兴业科技 | 磷化铟收购+半导体+机器人电子皮肤+汽车内饰皮革。",
+      "evidence": [
+        "磷化铟收购+半导体+机器人电子皮肤+汽车内饰皮革"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "023c2b2a2b286cfdbb1d4ca7a4640119b9f3cfdae0679cd3d66f3bc9587a1c97",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：利民股份 | 农药+先正达续约+回购注销。",
+      "evidence": [
+        "农药+先正达续约+回购注销"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f815d0cd0e196b4b9ba9197ce492c89019e2793ac244e1149c3128cd83a90f88",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：浩通科技 | 小金属+贵金属回收+回购。",
+      "evidence": [
+        "小金属+贵金属回收+回购"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9ef1da67c429cd66ffaaf0b2c9065ad0a7d805e705ee0f6648e5cefafee52988",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "159851.SZ",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：金一文化 | AI应用+数字货币+黄金珠宝+海淀国资。",
+      "evidence": [
+        "AI应用+数字货币+黄金珠宝+海淀国资"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "8220979f87eacc5f95109f53fde0f7af52ce7e4e237247e0b5756cf5d393a3b8",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：翔鹭钨业 | 钨价上涨+光伏钨丝+定增获批+中报预增。",
+      "evidence": [
+        "钨价上涨+光伏钨丝+定增获批+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0d40cc6f1e747ae522485ecc57daf7ed094800c48b7fc3a6f32c6051b8540bb0",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：四川黄金 | 黄金+半年报预增+金精矿+国企。",
+      "evidence": [
+        "黄金+半年报预增+金精矿+国企"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1bf1424605f2f39348eedf42e40d32f341d37acac0cba0e70f7da84c3aa51367",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：天下秀 | AI应用+AI营销+红人经济+出海布局。",
+      "evidence": [
+        "AI应用+AI营销+红人经济+出海布局"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ee2e617ad8685dcc162f8c2884e9a301986882b9372be1764634c9656a7f4381",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513090.SH",
+        "512070.SH",
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：锦龙股份 | 证券+算力租赁+扣非扭亏。",
+      "evidence": [
+        "证券+算力租赁+扣非扭亏"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "d73d5af4d56d4c29ac51aa9045f1acc07ecb9dddfd24c28346aa9a0557eb76f3",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：盛达资源 | 白银龙头+金矿投产+铜+半年报增长。",
+      "evidence": [
+        "白银龙头+金矿投产+铜+半年报增长"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7bf0de0868c319107334e78239c251ac234b6d44a2cd705a2f91108a507e036e",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：中公教育 | 职业教育+就业培训龙头+AI应用。",
+      "evidence": [
+        "职业教育+就业培训龙头+AI应用"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "e106c5e5450a347b15a3d66c3bd795a2e2a2638b8eeced971bc0a2d5579257f1",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：春光科技 | 家庭具身机器人+小米概念+清洁电器。",
+      "evidence": [
+        "家庭具身机器人+小米概念+清洁电器"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "75d117fa6053f6e06acb46e309267e9b18bfea5914ca185e7d404ff151181dc3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：天禄科技 | TAC膜+导光板+实控人变更。",
+      "evidence": [
+        "TAC膜+导光板+实控人变更"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "08efe2871789fd1faed164d2cd89534b8690a6150b0874dae8992b5b3a7660af",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：德生科技 | AI应用+社保服务+智慧政务。",
+      "evidence": [
+        "AI应用+社保服务+智慧政务"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "522111c5c189f79730c7d9bf9ccf84863c84d8a85a081704a311852c4c7967cb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：永新光学 | 光刻机+精密光学+收购江丰生物。",
+      "evidence": [
+        "光刻机+精密光学+收购江丰生物"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5b425e1197e8974f1c551ae775761ae4b32e4ece77bdc6691530ba7de51f6508",
+      "relevant": true,
+      "matched_categories": [
+        "风格红利"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：东方钽业 | 半导体靶材+小金属+央企。",
+      "evidence": [
+        "半导体靶材+小金属+央企"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "2a55e34bf8b6c46ae47f2da85792ba5edd630aa6f79f9412a0c4873891a5120b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：博迁新材 | MLCC镍粉+AI算力+扩产+H股上市。",
+      "evidence": [
+        "MLCC镍粉+AI算力+扩产+H股上市"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "cf2a2efc2469107613b4dcfa7d018a6aa7f285ed6ba5dd7a8498fec21725100a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：宝武镁业 | 镁合金+机器人+国企改革+小金属。",
+      "evidence": [
+        "镁合金+机器人+国企改革+小金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c83fa7f421c7a283e4b6a25de08a05ffd2443bf3197b46af23106a8b877b57b1",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：环旭电子 | CPO+半年报增长+光通信+AI算力。",
+      "evidence": [
+        "CPO+半年报增长+光通信+AI算力"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "2b7fdf0056116a19c5d7a4964835c60e93d75f85304eaa4980af2edddf5dab1f",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：锌业股份 | 金属铟+锌铜冶炼+一季报增长。",
+      "evidence": [
+        "金属铟+锌铜冶炼+一季报增长"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b93f99dd5b205180aff072d63a1b74243187b37fcc7778f32aed5075260ee000",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：新开普 | AI应用+星普大模型备案+智慧校园。",
+      "evidence": [
+        "AI应用+星普大模型备案+智慧校园"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "3ac7c0d479c2bbd9414a9467d625086c99f5713395d2412bfd9bc6ba4f520ed2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：波导股份 | 参股华大北斗+汽车电子+消费电子+摘帽。",
+      "evidence": [
+        "参股华大北斗+汽车电子+消费电子+摘帽"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9bfcc17ab2292cf676442bbe8a232b71ca3c959c79d8ac4c4ed88953a7a7d1a8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：兴业股份 | 光刻胶+酚醛树脂+合成树脂。",
+      "evidence": [
+        "光刻胶+酚醛树脂+合成树脂"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "602753c0c7574a0440bac95f5efbb712fdc1fc9475c6e42bc9274800ca5cf542",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：海星股份 | AI电极箔+中报预增+产品涨价+全球龙头。",
+      "evidence": [
+        "AI电极箔+中报预增+产品涨价+全球龙头"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "5a2490934c6611e1988dada9b93ada2d01a9e3060fe9b8519b7b8d02141c9189",
+      "relevant": true,
+      "matched_categories": [
+        "风格红利"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：有研新材 | 半年报增长+半导体靶材+聚焦集成电路主业+央企。",
+      "evidence": [
+        "半年报增长+半导体靶材+聚焦集成电路主业+央企"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "af4c7136090c8e650c299f0f53e81a01c513e2912ba4ab481cc89bff2cbb6a0c",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：大为股份 | 半导体存储+锂矿审批推进+定增获批+中报预增。",
+      "evidence": [
+        "半导体存储+锂矿审批推进+定增获批+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9747db8fce31a137955bd040d3139c22a6075e96861cadb2bd8824c8cfeddcbb",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：鼎龙科技 | 商业航天+PBO单体+特种工程材料单体平台。",
+      "evidence": [
+        "商业航天+PBO单体+特种工程材料单体平台"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "459039b234ed21206893850dff08ccd265d1a1cd59a10ed4e8d090f5c09a4709",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：坤彩科技 | 钛白粉+业绩预增+萃取法工艺。",
+      "evidence": [
+        "钛白粉+业绩预增+萃取法工艺"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e069a71b490e3167f053ee8deccd7ddf7ba75913e75ff8b35338f76c2a7a0a40",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：嘉环科技 | 算力+训推一体机+AI应用。",
+      "evidence": [
+        "算力+训推一体机+AI应用"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "33a39c3e70b1c855b5179d23bfcd49fda089b94555a7598caa25d0996a577ecb",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：星网锐捷 | 数据中心交换机+CPO+福建国资。",
+      "evidence": [
+        "数据中心交换机+CPO+福建国资"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f853070458664e6b1ecec30c35ada5d15ca35f981bcaacdc48d5867fa65e6659",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：汇绿生态 | 光模块+重大资产重组+CPO+代工。",
+      "evidence": [
+        "光模块+重大资产重组+CPO+代工"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "dc910e685a425a33e2e447547e7867e2d03cf61da0a87d6586cd80939bf0d727",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：山子高科 | 先进封装+高端零部件+整车项目。",
+      "evidence": [
+        "先进封装+高端零部件+整车项目"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "85d0dc7e68d6ce0b619c24faf4a6776dd725c3130a2f4ec820caa654d32e0938",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：百合花 | 光刻胶+战略入股+PEEK材料。",
+      "evidence": [
+        "光刻胶+战略入股+PEEK材料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5ec34427ba385158e98b072c56bc9d32e53289ed15e03b4167c2e31000136f65",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：江化微 | G5级湿电子化学品+半导体+实控人拟变更+上海国资。",
+      "evidence": [
+        "G5级湿电子化学品+半导体+实控人拟变更+上海国资"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b69b2ca1434aacb1651d2bc0e3e0dc31a84726620f640a905eef41ec03dfa720",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159981.SZ",
+        "512400.SH",
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：新金路 | 钨锡钽铌+小金属+氯碱化工。",
+      "evidence": [
+        "钨锡钽铌+小金属+氯碱化工"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "2aef902d5f5ac7ea4ef61b6801666029dda933077f51b89d063e1166efcc65d6",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH",
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：沃格光电 | TGV玻璃基板+CPO+先进封装。",
+      "evidence": [
+        "TGV玻璃基板+CPO+先进封装"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1428d42ff40285eda20de856dd96f5f21d086bb6176c608c9e507b55d5656592",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：时空科技 | 存储芯片+拟收购嘉合劲威+照明工程。",
+      "evidence": [
+        "存储芯片+拟收购嘉合劲威+照明工程"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "bd14bce98d7d377b917cd59abea88b7619cf8ca475d1f139447773f462835e16",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：金海通 | 半导体测试分选机+可转债受理+中报预增。",
+      "evidence": [
+        "半导体测试分选机+可转债受理+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9f51aa4ea1a59cf20c8976e5e2e83bc1686e5d254a6682f50f4ffbf0d69c7341",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159851.SZ",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：博彦科技 | 金融科技+AI应用+IT服务。",
+      "evidence": [
+        "金融科技+AI应用+IT服务"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "d47f54215d78ad5647ec16e5599b5483eaacf5aa9cc86a8485b7d974d75e95e3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "562500.SH",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：智动力 | 拟3亿投建+光通信材料+固态电池+机器人概念。",
+      "evidence": [
+        "拟3亿投建+光通信材料+固态电池+机器人概念"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "57b00bd57f32196678ef5007593eef3daf77cb7d02b95a959e1b7e6fb05cfec7",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：科瑞技术 | 光模块设备+人形机器人+精密零部件。",
+      "evidence": [
+        "光模块设备+人形机器人+精密零部件"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ac80ecb97e53860a705e6cbbba9d9d5d720b0b3d988787a132a4ad4cc238ac4a",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：和泰机电 | 物料输送设备+一带一路+水泥建材。",
+      "evidence": [
+        "物料输送设备+一带一路+水泥建材"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "076046b488962a71661961e1fb722bbc26c5873ad7a0ed6611a0dd0764d516e2",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：利通电子 | 算力租赁+英伟达合作+中报预增。",
+      "evidence": [
+        "算力租赁+英伟达合作+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "94ba54008021a0dea9ab2689dfd38c6946ec2703f8afbe3565713184c0374709",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：常润股份 | 汽车电子+收购达峰智能+回购+跨境电商。",
+      "evidence": [
+        "汽车电子+收购达峰智能+回购+跨境电商"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "bc6b5754a0aaaf609bb594064f61bd8cdfbfc44168be58c4fbbc2d68e6517085",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：中京电子 | PCB+高阶HDI+AIPC+定增通过。",
+      "evidence": [
+        "PCB+高阶HDI+AIPC+定增通过"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "47cf00984d25c666998eb6e2402f16758f505b74058b5814b33fc2558e8d58bb",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：联创电子 | 国资入主+车载光学+CPO+机器视觉。",
+      "evidence": [
+        "国资入主+车载光学+CPO+机器视觉"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f2a121aa04182c26360879665d917a2f2d60ce2d990e80e3c7edc19950b0dcda",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：金房能源 | 磁悬浮热泵+综合能源+新能源供热。",
+      "evidence": [
+        "磁悬浮热泵+综合能源+新能源供热"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6fc40e25afe8600e511041b49f1c69b2aac3c7c3c86d6d1d5327e74ddbbf031d",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：博杰股份 | AI服务器测试+MLCC设备+英伟达+中报预增。",
+      "evidence": [
+        "AI服务器测试+MLCC设备+英伟达+中报预增"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "2097eff9a2356a3a19b24ced4f955c5f154cf34e96c823034db2a68a8a2a53e9",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：豪尔赛 | 液冷服务器+智慧灯杆+照明工程。",
+      "evidence": [
+        "液冷服务器+智慧灯杆+照明工程"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7ec30babaafb01889738d431f6892656f2ac7354afaff4e10d632efe3b078af9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：大晟文化 | 短剧+游戏+摘帽+唐山国资。",
+      "evidence": [
+        "短剧+游戏+摘帽+唐山国资"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0a6e8adaa3a6c84ccb0a0c4b6c51e425a23e57f284fa10c786be0b2df9f4db12",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：传智教育 | AI教育+具身智能+中报扭亏。",
+      "evidence": [
+        "AI教育+具身智能+中报扭亏"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "a51960158b99e132f4b7a490ae7168518f4d01b31a42ce79035fbbd8a1fefdf3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：云南锗业 | 磷化铟+重大合同+锗业龙头。",
+      "evidence": [
+        "磷化铟+重大合同+锗业龙头"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "de27c5ef2d4fe4c53291789f9aa631063299b591617ae28c8005baa59c413bb4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：兴民智通 | 无人驾驶+算力租赁+车联网。",
+      "evidence": [
+        "无人驾驶+算力租赁+车联网"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1c922af2ce2019cec644163c98e74712875613d8809fb55d7dec6888c4f2acbf",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：大众交通 | 无人驾驶+上海出租车+间接投资长江存储+算力。",
+      "evidence": [
+        "无人驾驶+上海出租车+间接投资长江存储+算力"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "31572e5afed90c7a3b8c55752b88dd9490275e2bb1e78b08ef48ba97bb8d3734",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：风范股份 | 特高压+中报预增+国企改革。",
+      "evidence": [
+        "特高压+中报预增+国企改革"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b43bec8faa3b722475fc5959d69eeab820d169eabba27b466a9862d80bc2ba9f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：百花医药 | CRO+创新药+金华国资入主。",
+      "evidence": [
+        "CRO+创新药+金华国资入主"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "8bdb62f4d622b7f55c642b6a1f04d0f1d0731b41105dd0fd1b3095caff6f078f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：欣天科技 | 控制权变更+高溢价转让+射频器件。",
+      "evidence": [
+        "控制权变更+高溢价转让+射频器件"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d2724ff1c88c79efa86c06a08458a35dac66fe6dd9525577de5e19afd8d13925",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：索菱股份 | 无人驾驶+智能舱驾+重大合同。",
+      "evidence": [
+        "无人驾驶+智能舱驾+重大合同"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e6ebc93c9b893c86b7bc5024d88b8105fc581a440ab47f64dc954692acbd990d",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：*ST大立 | 摘帽+红外热像仪+无人驾驶+新能源。",
+      "evidence": [
+        "摘帽+红外热像仪+无人驾驶+新能源"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6d7d6a5324b4db8ad3ba2e7521fd671af699cfd734f2273bbae81bfbd61bd9f8",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：凯撒文化 | 游戏IP+AI应用+半年报预计扭亏。",
+      "evidence": [
+        "游戏IP+AI应用+半年报预计扭亏"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ecebb2631ff3239f39e214f7323df9e62e317e9416de5f15a5fc1292ccffb182",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.45,
+      "summary": "冻结行显示：高乐股份 | 签署算力大单+AI玩具+塑胶玩具。",
+      "evidence": [
+        "签署算力大单+AI玩具+塑胶玩具"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "bb6b67d00c2eaccb79112910954e5f063eb19bf9588f60e6f6d1be530eeee274",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：浙江世宝 | 线控转向+无人矿卡+小米汽车+减持终止。",
+      "evidence": [
+        "线控转向+无人矿卡+小米汽车+减持终止"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "79100170a21d854dfc94d55ec3cbb2fc6aeed062f0464dac7c6bb8f6a7d63983",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.7,
+      "novelty": 0.45,
+      "summary": "冻结行显示：德龙汇能 | 举牌+天然气+氢能。",
+      "evidence": [
+        "举牌+天然气+氢能"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d5c2fa4afddc7adcd4b22c59c340817bba6cd85e1d393c193f5bb5c093e4dab6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：德龙汇能 | 燃气Ⅱ。",
+      "evidence": [
+        "燃气Ⅱ"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "6f092ac07f146757ac6754bbcb71bdc1e1e42027e2afb83beba940a968c8b88a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：大立科技 | 军工电子。",
+      "evidence": [
+        "军工电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "74c8ec464e1b74a7618d33f6808dae326fb9ff197c8a7fed51e0055ac40c9f67",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：高乐股份 | 文娱用品。",
+      "evidence": [
+        "文娱用品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "4143ee3add67646a6025a7d793a33057c7b223f2fb4cdccae4a755d419beda30",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：凯撒文化 | 游戏Ⅱ。",
+      "evidence": [
+        "游戏Ⅱ"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6fc7ff35203f36eba8ae84894dffd8ea0fbb379aa9164521bee3aea4b2f2b4ee",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：浙江世宝 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e82a4848d512180cf6cba241fdd93de0d66d255f3ca3e6f22a658a5a075332c4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：索菱股份 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "ac095339449114f8cb1d5b46422867261f99251685fda8e2be23cd7d95c0f904",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：欣天科技 | 通信设备。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c5db45190158cd00df90eb15e5803e64b2e8f46e1684756dd05a5613060021c9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：百花医药 | 医疗服务。",
+      "evidence": [
+        "医疗服务"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "65c2332f44cb398241d447a62bd3d0e3550d3fb189fdf1c08d825b7115f37af1",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：风范股份 | 电网设备。",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "84016af82c2a233d0e1a6d1bdb784398de12c4f37c09afdeb485449c2050ab3f",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：云南锗业 | 小金属。",
+      "evidence": [
+        "小金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "30c607ba271f1c8206be756ba25e5ceaa568cccff807d44a4c7168c154fda355",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：大众交通 | 铁路公路。",
+      "evidence": [
+        "铁路公路"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "89e6e6ea7aa7bd452d956eb7961f76b7ff01efe21ea54099c9e4b32304c20cb4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：兴民智通 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "11d66240ff0ac63d52ccd0524c99615b8dfc0856b6baf71415df5d4802587166",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：盛视科技 | 计算机设。",
+      "evidence": [
+        "计算机设"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "cf15e922a3848b516c5dc444abba22f4d8dea44845b29cb93a4da61c98e46c58",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：万集科技 | 计算机设。",
+      "evidence": [
+        "计算机设"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "047235cf0591b670d854e822468a6eefc24e29b76489a7b25bccc0e02d712abe",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：传智教育 | 教育。",
+      "evidence": [
+        "教育"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f326d438bed8a908a08b998ccb4bcd35831a9db8100a0a39afe5d32fb43cb6f6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：大晟文化 | 游戏Ⅱ。",
+      "evidence": [
+        "游戏Ⅱ"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9b2d7d1a9f24b50bc651d91a8fd1c71c767c183f61762de4746b9d5c511f258a",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：博杰股份 | 自动化设。",
+      "evidence": [
+        "自动化设"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "5bcc46aeff0ea39a4aae34d64ea41a60eabe5b75fbb1cc85cf8ac840b49ad778",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：豪尔赛 | 装修装饰。",
+      "evidence": [
+        "装修装饰"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8f3870867555f808e3029af810dc27783a41beffe68a366629841fe9a12dedd9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中京电子 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "abf3c1c5ba6daff08b1417ece731c8cee68039382830d6855e1eb5434de46e28",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：联创电子 | 光学光电。",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "0807bb44155df8be885e7d03705ca5917d9950fdcaf0d564242abc7cd0e078f3",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：金房能源 | 电力。",
+      "evidence": [
+        "电力"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7f700f42cdf8ccfcefdf4a0d5db13190a7a606a73323db946565e0c58284e5f2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：常润股份 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "adcc9f52dfa04baf3b6e15c18dbe437574e7870e02ed045fdd1fbb3f92d3ec2e",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：利通电子 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "39f008d61900bf3c6e76a4ab6cc9576dd3c51f3eb41dabec4ca8636b74151275",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：科瑞技术 | 自动化设。",
+      "evidence": [
+        "自动化设"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "03be074af9c417b35ef1cb0c9962cb99fd0e997b2a1a420412182aabcdd086a4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：和泰机电 | 专用设备。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "57fafa71b8ef2ce128744ebe14bc3e9518529fb43903071aef1cfcaa7b42d957",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：智动力 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6922fbed0e8e64e8f631fd6e5ad80d4544753138e7fa274bb2af48a6c4819db0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：沃格光电 | 光学光电。",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "459ce523522907cc94640c61294e7963c8f8c7e7421ab83140c1f855a0b36682",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：金海通 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "4c2953288cef5c36a85966d7b0bbd1564b28e8a1b9e0267bf7ebee553ca9a896",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：时空科技 | 专业工程。",
+      "evidence": [
+        "专业工程"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c91bef84cc07bc996af6ef2e141fe4839df8c545f6972dc192cc222fc71663e7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：博彦科技 | IT服务Ⅱ。",
+      "evidence": [
+        "IT服务Ⅱ"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c16d37cd7c931359479d7d73b0917357e18b66f18051facc2669d17b660a97dd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：新金路 | 化学原料。",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8abb6b75da57c8ea190da7abbf484d4f41d676efc2903c9484af10db83f9eeda",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：江化微 | 电子化学。",
+      "evidence": [
+        "电子化学"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a32cec21820d98ec1e02fec3c1dc2dceb9446a58ede4d8a65b1ee612eab4997a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：百合花 | 化学制品。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5c5f4093510c06040ed4dfd6417b37937664a32a4f5c8ba53db6a87280e73762",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：汇绿生态 | 通信设备。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c3eea3e96673acd969ecb7f86c6025a4ec934f1cb721569fd3eddf2a2759223d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：山子高科 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "b581ac0a1f67cdc6e0a46e7fe50c78518b7d5767b0f3771e1f7a8c42142653ec",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：星网锐捷 | 通信设备。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "84e1fcbbad9461a84d49d85fcd7380876176e3895b3cddfb370edea070833d96",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：嘉环科技 | 通信服务。",
+      "evidence": [
+        "通信服务"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f3c4c3f3fd619b0899503a4ba436a8f0bdbcf4bf171b3ca150aabc803d43746c",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：坤彩科技 | 非金属材。",
+      "evidence": [
+        "非金属材"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "507bc9ea32a751c7e0f3b6d0cab790fcf222706ad800d55915ceef9c51099c6d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：鼎龙科技 | 化学制品。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "881959f0be19c13cdb367c96377375d83266d0243f9df8f634ca429dd57d597f",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：大为股份 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "a7198f48938b724b896796dab61efbbd4d0b75e30d30d0e58b5770a8a7e7bf5b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：兴业股份 | 塑料。",
+      "evidence": [
+        "塑料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d9d13feac0c2ed149a80339ad788df1f695f62454b5a4c95689599c6e05823c6",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：有研新材 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "321c81cb9de2f809993e754a926f108a22a637431252707c61f40768f46fa88f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：海星股份 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "bd8d60f4b0e1bebb89ff4d13ada26d2863b337b0627925244ad1cd5bf81b4c3b",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：波导股份 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c865024947e77280be7029c0d0d7214300addd2582c3f216f41e39a37c988bb0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：新开普 | 计算机设。",
+      "evidence": [
+        "计算机设"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8c9ad945456c3f913ffcc464382426c75f8a117d4473c55c7f0b8fa23cd29833",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：锌业股份 | 工业金属。",
+      "evidence": [
+        "工业金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1a4048dc5ce374994c604ad723e9d0b2666fee89743fb9940162750e49b31048",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：宝武镁业 | 小金属。",
+      "evidence": [
+        "小金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0ccc893145ea00b20e995a3350549bb9e1d7abfef2da3db8524f5831ea994fc0",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：环旭电子 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "5d4bd3409c6df82b4238c3f0f5431594429d53aaec6454dac466aeb7bdb177fd",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：东方钽业 | 小金属。",
+      "evidence": [
+        "小金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c22c1bea9640749d4c051c86a83a1a608fb3d5c1e82377137cc3800e2679d46c",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：博迁新材 | 金属新材。",
+      "evidence": [
+        "金属新材"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "e30c08fc96643a144b721b90c3d19154f86e778f04570ed5cda4b42564124be3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：永新光学 | 光学光电。",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "423750b0e3086e7bd9e470c972b41d464df3664d3da57033d31fbdab9c8ec999",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：德生科技 | IT服务Ⅱ。",
+      "evidence": [
+        "IT服务Ⅱ"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "48c5c80540abcff21e8ccdf21620f49716359a3f8c9340170896b5d23e589a17",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：华正新材 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c4bd83ed35f924960c9daf32ca3ff1962cfa82485e21774a968958542f210071",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：天禄科技 | 光学光电。",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9e90de3a94d4134c9c0124b8afe3930b007d14d471c0bbb5503e4a14ee182333",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：正帆科技 | 专用设备。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "aee541849da8d93e644f523deaf72f0fd62370f7b96b88850883f483ca995762",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：春光科技 | 家电零部。",
+      "evidence": [
+        "家电零部"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1202e98086def92712b8de98d55bec4c85e630eca98098c47c27415cf0b9ed11",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中公教育 | 教育。",
+      "evidence": [
+        "教育"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a65f481a6f854aeb2ede3cc5b6b0382d61aaa5e5bc51a72c56770be2b347f832",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：盛达资源 | 贵金属。",
+      "evidence": [
+        "贵金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "44231d7f252a9918d9728eb7fe78f343db8048d8d935680d5d5181a1a7ec5864",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：天下秀 | 广告营销。",
+      "evidence": [
+        "广告营销"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "26a45092153ffab09c33bec80a52dc60da15199bce48f69a8ea387580c184b48",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "513090.SH",
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：锦龙股份 | 证券Ⅱ。",
+      "evidence": [
+        "证券Ⅱ"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "e594bd525069147f2bd55a070ffef9bf42214207b95dc90191fbfa08b5c641e8",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：四川黄金 | 贵金属。",
+      "evidence": [
+        "贵金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f79c56ed33e610cebd8fa741c9ec45d17c8140a940f3e479704fa52c20da667a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：红星发展 | 化学原料。",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "33e06c475e15e1ba041b9def24b1e12f1e1f3778c42398f5e1edff34e2e4b1c9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：金一文化 | 饰品。",
+      "evidence": [
+        "饰品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "678a15cc31d8452e0dad030111c54a71aebab249a19019abbb239b73fda8ae5f",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：翔鹭钨业 | 小金属。",
+      "evidence": [
+        "小金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6d9759412cedd41c966fb2726109f2431c452136c5d79a5c3a7e50433b5912e9",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：浩通科技 | 小金属。",
+      "evidence": [
+        "小金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7ee314310047dfc2a70898b407f38540b694b75eae28bc88fa6606a28083dd49",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：利民股份 | 农化制品。",
+      "evidence": [
+        "农化制品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "34f4c740486503db90a75db7d11ab68c81246f1a861ee4b19e1f556377388597",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：兴业科技 | 纺织制造。",
+      "evidence": [
+        "纺织制造"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f3fcae8cb68f88d7bb130f13c1a7d4b684e90a389111c5f0057056899faa76e3",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：柘中股份 | 电网设备。",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b458d6a9bb842ba86a9add8d7018e3a851d67368af69af23a6a3283efa597845",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：和远气体 | 化学制品。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2a30938fdb68667ddd2175fd79f474b3aeb4c602d45066d43af5b01457706a07",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：华建集团 | 工程咨询。",
+      "evidence": [
+        "工程咨询"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "75cd0debca099f319b27d00e99cd1d6f9b3375ca10303ef0dbee142e01f498cc",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：康强电子 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9a390cbe5560ae3be342113923baec278caa47ccfec91a7201a519853cb477da",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：冰轮环境 | 通用设备。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "da9f1a3ba28f98f237543b5ea18699073c66908d37832c3d1d1952f30f663918",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：东材科技 | 塑料。",
+      "evidence": [
+        "塑料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a90b22bd9962ba82b0d1d8ccea1a3ba951f219479f925ee2d893b779beddfeb2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：共达电声 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "14d69cc9a4ac929929b9169968fcf1aac191dad619e31bfc372e81746e2e9f64",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：金富科技 | 包装印刷。",
+      "evidence": [
+        "包装印刷"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "069f3cb3c6909c53280073655f7ddd49edc864d971bca1b6756e94f0de96ca14",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：福达合金 | 金属新材。",
+      "evidence": [
+        "金属新材"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "bdffe19b603bdd2b116b1c38c3f49c7f94dac32317a5c4bfa0cba1b37c9db0b2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：三祥新材 | 化学原料。",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "69637db8e35eac6525d199db093e33234ec7d9f08940fe3510e177eb9d87fd13",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中巨芯-U | 电子化学。",
+      "evidence": [
+        "电子化学"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f5d0ae4998a6cc71e0167fb07888200c458e80ce0688b53b90f6cfbb1dfc870c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：黄河旋风 | 通用设备。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "3db8e880c0ceaa5afe45545fcaf930d23e4fa3172a079317c7a4a7e2cb61bf92",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：平安电工 | 塑料。",
+      "evidence": [
+        "塑料"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "7afc0ad8baf9db1d566079c7745fb96b6c106764da43c690a4546cda2dd2193e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：通鼎互联 | 通信设备。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "df99d30ab7b96cf7277daa6581293dd19a85980c2e4d5dc7d3557ce3e9c9c1f7",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中钨高新 | 小金属。",
+      "evidence": [
+        "小金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6b86229acb0e8c741494c4e4a03a6844188f877700f2b46a5f46187f72d95ab7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：皖仪科技 | 通用设备。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "0ea6f71f43d79a22b00e824ce510debc7573967ea37de529fea21f7d6c7234e4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：龙鑫智能 | 通用设备。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "837a9c5139cf18e36fb9da8582b3f9d40de35f80f7706aa43fc7aef2d1d94bed",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：宝鼎科技 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "923a9764519ac6770889426ceddea8a27c44a1f19fedb80b864cc32707253672",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：华懋科技 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "b2632d8a6eba75749aa411033adeba25d095f04973f25707155b354dd902a026",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：宝明科技 | 光学光电。",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "be27319a2a6b69771184f4a788face011ed12435e9fd758cecd4282a14830638",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：科森科技 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0dcd0e7fab9b6db4f434c8ef161774ac5c8542b191320fbcf72181d4547c0625",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：长飞光纤 | 通信设备。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "db66cdb2505ce7e1b12e9720313bb25bfd220ba1a933d27e46c5fcdf1df75e04",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：常青科技 | 化学制品。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d1065346c48ba35d9e14361e930d1fb99a88a83271bd53e9d4043bd5da217d10",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "515210.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：甬金股份 | 特钢Ⅱ。",
+      "evidence": [
+        "特钢Ⅱ"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "3d4220b133b9afd37716799edad7acb3e49007d8e1245a5c0e8f747d8c4dde28",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：杭电股份 | 电网设备。",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "aa0b460f7479af0c0f73f694da8999788e841eb8f691eff5818824caa98384a6",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中材科技 | 玻璃玻纤。",
+      "evidence": [
+        "玻璃玻纤"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "bdc53ed4a33b46603679df4db54b355ac0b15c1f8bc51e9104e48b750c4d5e95",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：工业富联 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0c95804dceb60e2e72b53b7992ff18e68092ba8b7d3c1f804770e98c617289a0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：金安国纪 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c8057c8c6165a7536232dad0581cde9940ed606624273e3139973d54c0b64bed",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：福晶科技 | 光学光电。",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "edd02ad1b750a0409c2cde68529000b029e4351e67b3652ef4fd0c4376d9bab0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：迪生力 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "4ea74d47d26432e34806105d046a9f0226446b6d33d0921c0e1f2eb96e0d3329",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：华盛昌 | 电网设备。",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "2742b681fd248434bed61c6a223c9f14b26ce3247f77757ded802c53ac504bf6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：松发股份 | 航海装备。",
+      "evidence": [
+        "航海装备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2ce62bfd99367cb6c16796feef742bb1a148b3c390ab4dd017e92d45b4fc9062",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：宏和科技 | 玻璃玻纤。",
+      "evidence": [
+        "玻璃玻纤"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "3055ab102e9fa7537a7632a215e95ece4e30627ef8419702caa7acb795da34c8",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：金诚信 | 工业金属。",
+      "evidence": [
+        "工业金属"
+      ],
+      "risk_flags": [
+        "个股或单日异动，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c27f9c4c4ad78ebbb993c99c694eca3c38847beaab421fafad1389c8a2414a96",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：江钨装备 | 专用设备。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "1968cfc995b07b133867f8c398b6c07b0f8397545bde321ff30b5a1eae14327a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中电电机 | 电机Ⅱ。",
+      "evidence": [
+        "电机Ⅱ"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "17ec93882b99256dae2fd1dd8b5206f5b24c627b9686601d226fff9425c15728",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：澄星股份 | 农化制品。",
+      "evidence": [
+        "农化制品"
+      ],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "511e8fb0a65b18acaf1f9d37bfbcb85940048983b61a1608df20b6a5e09ab96c",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：新能股份 | 电力。",
+      "evidence": [
+        "电力"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ead8b145a3bc66e84422a61b50ca1af5902cda7e77faabffb5feeaea43a93985",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：锦江在线 | 铁路公路。",
+      "evidence": [
+        "铁路公路"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "6ca65cfda41b997421071e99794deeef4ecc8b1acaf1049e2f264dbbdc545ff9",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：南宁百货 | 一般零售。",
+      "evidence": [
+        "一般零售"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "a15f4da7a0f4aea8a17422df0d340ba469a00a0601e27d309bec91a29bed6fe3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：通宇通讯 | 通信设备。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9fdb48e46c76eab8d643b67788d2e966c88aa708bc56c795ebf9440bd42e2470",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：西大门 | 家居用品。",
+      "evidence": [
+        "家居用品"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "66fb3a7a90d901477e535cd3d03319e919b3e6afe0b464e9ae69ce9a87e7b2a3",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：粤 传 媒 | 出版。",
+      "evidence": [
+        "出版"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0f91b12c345fdb230f4b868d3114b96570304e3df7206c4ecd1428935beac457",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：紫光股份 | IT服务Ⅱ。",
+      "evidence": [
+        "IT服务Ⅱ"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "1757b233cd8ede623fa862dcb4cb6ccb5f179979f04a5d918504890e9aff760c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：竞业达 | IT服务Ⅱ。",
+      "evidence": [
+        "IT服务Ⅱ"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "12f071aabfb9b63fa5e17faf026e74128b2ef35197e896fcfadaa2228e6146c8",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：博通集成 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "725e16b7b9741a13e540487d78446043573db495b2df4336b6e681a870863435",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：泛微网络 | 软件开发。",
+      "evidence": [
+        "软件开发"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "3111ab455b7484abd34c7118e0fc003d73c3657fe3083965d100d5b979b557b0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：恒银科技 | 计算机设。",
+      "evidence": [
+        "计算机设"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "fc64b7c8dfdec643ea90e88b824713b26c2cd31222da18a5a995386ba515af69",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：金证股份 | IT服务Ⅱ。",
+      "evidence": [
+        "IT服务Ⅱ"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "fe75db6e826de9df247e8f5271c4de1ada6410c406d7e2db0feadf5f0efabc1a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：火炬电子 | 军工电子。",
+      "evidence": [
+        "军工电子"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7874d88a90a26270460c0aefe1216bb2b410f3dad543020c8c330a18925569fd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：高争民爆 | 化学制品。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "b58b46d9b62f41e80af68c6f8a28df0fad0e6a8d015ccebca6cf555521289733",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：飞龙股份 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "61e202acf5016145306b16e69c2e44687135dd837ef5ed524f314249778ddf7c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：魅视科技 | 计算机设。",
+      "evidence": [
+        "计算机设"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "6b4e7704dd5ac995c1e65ac84f806e41e09f81748c6b06fd4107f539f8542150",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：旭光电子 | 其他电子。",
+      "evidence": [
+        "其他电子"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "5173d9f8ea3ae00b91974a57da65712e59f84ac6f873d661b5a85fd4aa615a3a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：铖昌科技 | 军工电子。",
+      "evidence": [
+        "军工电子"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "43fb2aefeeb47f2f062d6bf70604dd8397a2273f60abf40bbe1c913b8fc1b0fc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：江海股份 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "8e254f34a0b44065753b2389fb369d90d453f0267097e239a0f72dd099330ab7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：洁美科技 | 其他电子。",
+      "evidence": [
+        "其他电子"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "f1bcd843067d617824a9d9125aacdfd29c5fa030a4572a0d0602e8afcdbbe2a3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中持股份 | 环境治理。",
+      "evidence": [
+        "环境治理"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "034f7e2689d187a3d18b2daf0af95bf13b78fed362b27f1de87e2a2825f6c3ce",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：五洋自控 | 通用设备。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "a75fe7e26dd8cafdfbf2750ea856f82d7b3dcdcd46f1a45a9d99bb36fe79bc7e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：麦格米特 | 其他电源。",
+      "evidence": [
+        "其他电源"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "25edb3fdf4b5cc841698921bcf36bec579e42f1db780887781c546693bb9071f",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：中国巨石 | 玻璃玻纤。",
+      "evidence": [
+        "玻璃玻纤"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1fb6c2b94adbbe07c6812f76ec783cb4cc35ba7d655357abed3c3e0c69035366",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：亨通光电 | 通信设备。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "31f7ba2d3a5e887165d57b7b6e393e751b906323f28bdf5ae0cd33df733ad9d0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：艾华集团 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "7ffc320514910ad7c7f4b4da2d283e4617b135bf3f308970f611fc25830bc8fd",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：先导基电 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9cfe107d7c94c8aa7f025d0d0f019495ece5492b68c6c27aff7a6700189ba7c2",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：雅克科技 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "d34d20a1b07897e485fc8f7acad8da015fd6a09d2667d255f87e0ad13c5135b3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：天通股份 | 电子化学。",
+      "evidence": [
+        "电子化学"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "040cfaecda8ec303882dfee81afba3834f610dc95f85f2f51dfc5c0da68dfd53",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：风华高科 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "7528a3e324eda58c3259bbc98fd466e09f62c60aed4fcbb82d6993d8dca8245e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：生益科技 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "58b91f99404df57b6a2d8ca03f1b8bb741ac6bac18c560c55f4068f4365d1e11",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：汉鑫科技 | IT服务Ⅱ。",
+      "evidence": [
+        "IT服务Ⅱ"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "0ef308c53124ce4ee241258e38e24118558dc0acc77734e3d29210f4f8938be3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：方正科技 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "d9f6cae0226ee7f093a6d9a8b286ebe9844f7c3a3d51533bde13ca0126192f48",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：太极实业 | 工程咨询。",
+      "evidence": [
+        "工程咨询"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "75f8b9c90668665b669e73f84c18a4fa99455f426e3e2a387b4fb99dce98092d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：嘉德利 | 电子化学。",
+      "evidence": [
+        "电子化学"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "2214afd599c5f3baa5f50a0ae9297cae100091c2df155329cb6cc24a0577e711",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：亚翔集成 | 专业工程。",
+      "evidence": [
+        "专业工程"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "f4315798d7b03f379219d33fc2bb8c3b09c32b10b82be5cd36b37b74885d0e33",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：奥士康 | 元件。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "d1a7b9c2f3502f4087e7d1ee1197ce1d96c693bb9bfd977011acec4bcd9f3dd0",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：有研硅 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "36d8b555067de246671f2be1d3691ef95ce85eee036cdb7f285f6efcc3c04263",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：长源东谷 | 汽车零部。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "20d22775b6955ffb360503ecef96676046c7655195688057678af21220fa72d9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：亚太实业 | 化学原料。",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认"
+      ]
+    },
+    {
+      "source_hash": "2b427299ab55305e13d3a5d21eb787d49294d187325ff7e3b00e54f8c246e53a",
+      "relevant": true,
+      "matched_categories": [],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：立昂微 | 半导体。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "da93706ca95dad53eecdd82e08c9f7b6da67a954878e17409edf7a0d62225741",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "冻结行显示：南卫股份 | 医疗器械。",
+      "evidence": [
+        "医疗器械"
+      ],
+      "risk_flags": [
+        "炸板或未封板，强度未确认",
+        "个股事件，不能直接外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "d3204352ee54474c5495a67910d0d517c828297dfae13fbf8f82a64df3c10e18",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "冻结行显示：联创光电 | 消费电子。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "跌停事件，短线风险线索",
+        "个股事件，不能直接外推至ETF"
+      ]
+    }
+  ]
+}
+

@@ -1,9 +1,9 @@
 {
-  "status": "READY",
-  "core_backtest_and_site": "PASS",
+  "status": "BLOCKED",
+  "core_backtest_and_site": "FAIL",
   "checks": {
     "single_strategy_name": true,
-    "pool_is_45": true,
+    "pool_architecture_reconciles": true,
     "ordinary_cost_reconciles": true,
     "premium_cost_reconciles": true,
     "equity_return_reconciles": true,
@@ -12,16 +12,24 @@
     "slippage_reconciles": true,
     "html_exists": true,
     "governance_frozen": true,
-    "previous_execution_reconciled": true,
+    "previous_execution_reconciled": false,
     "live_account_state_confirmed": true,
     "live_plan_uses_account_truth": true,
-    "ai_review_complete": true
+    "ai_review_complete": true,
+    "ai_review_protocol_requirement_satisfied": true
   },
-  "blocking_items": [],
+  "blocking_items": [
+    "previous_execution_reconciled"
+  ],
+  "review_protocol": {
+    "required_for_signal_date": true,
+    "fingerprinted": true,
+    "status": "fingerprinted"
+  },
   "reconciliation": {
-    "realized_round_trip_pnl": 546701.4825765907,
-    "open_position_pnl": 15965.000779444828,
-    "cash_management_net": 7124.492465753447,
-    "terminal_reconstructed_equity": 669790.975821789
+    "realized_round_trip_pnl": 804586.5514860774,
+    "open_position_pnl": -4902.316336388196,
+    "cash_management_net": 8073.512054794546,
+    "terminal_reconstructed_equity": 907757.7472044837
   }
 }

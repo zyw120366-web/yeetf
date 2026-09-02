@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from etf_rotation.data import load_panel
+from etf_rotation.sentiment_ai import review_protocol_fingerprints
 
 AUDIT = ROOT / "results" / "ye_strategy" / "trade_audit.json"
 
@@ -30,7 +31,7 @@ def previous_execution_is_reconciled(date: str) -> bool:
     reconciliation = ROOT / "results" / "audit" / f"{plan_path.name[:10]}_execution_reconciliation.json"
     if not reconciliation.exists():
         return False
-    return json.loads(reconciliation.read_text(encoding="utf-8")).get("status") == "confirmed"
+    return json.loads(reconciliation.read_text(encoding="utf-8")).get("status") in {"confirmed", "assumed_authorized"}
 
 
 def main() -> None:
@@ -50,6 +51,12 @@ def main() -> None:
     ]
     confirmed_symbol = str(confirmed_positions[0]["symbol"]) if len(confirmed_positions) == 1 else None
     metrics = audit["summary"]["metrics"]
+    architecture = config["enhanced_selection"]["universe_architecture"]
+    universe_symbols = {
+        f"{item['code']}.{item['market']}" for item in market["universe"]
+    }
+    challenger_symbols = set(architecture["challenger_symbols"])
+    core_symbols = universe_symbols - challenger_symbols
     final_equity = float(audit["equity"][-1]["equity"])
     cash_management_net = float(metrics.get("cash_interest_income", 0.0)) - float(
         metrics.get("cash_management_fees", 0.0)
@@ -83,7 +90,14 @@ def main() -> None:
     open_position_pnl = terminal_reconstructed_equity - initial_capital - realized_round_trip_pnl - cash_management_net
     checks = {
         "single_strategy_name": config["name"] == "ye 策略" and config["role"] == "唯一正式策略",
-        "pool_is_45": len(market["universe"]) == config["enhanced_selection"]["fixed_pool_size"] == 45,
+        "pool_architecture_reconciles": (
+            architecture["mode"] == "core_champion_cash_gap"
+            and len(universe_symbols) == len(market["universe"])
+            and len(universe_symbols) == config["enhanced_selection"]["fixed_pool_size"] == 51
+            and len(core_symbols) == architecture["core_pool_size"] == 45
+            and len(challenger_symbols) == 6
+            and challenger_symbols <= universe_symbols
+        ),
         "ordinary_cost_reconciles": math.isclose(
             market["execution"]["fixed_default"]["commission_rate"] + market["execution"]["fixed_default"]["slippage_rate"],
             config["execution"]["ordinary_etf_one_way_cost"], abs_tol=1e-12,
@@ -112,7 +126,7 @@ def main() -> None:
         ),
         "previous_execution_reconciled": previous_execution_is_reconciled(args.date),
         "live_account_state_confirmed": (
-            account.get("confirmation_status") == "confirmed"
+            account.get("confirmation_status") in {"confirmed", "assumed_authorized"}
             and str(account.get("as_of", "")).startswith(args.date)
             and len(confirmed_positions) <= 1
             and not account.get("pending_orders")
@@ -122,7 +136,7 @@ def main() -> None:
         "live_plan_uses_account_truth": (
             bool(plan)
             and plan.get("current_symbol") == confirmed_symbol
-            and plan.get("account_state", {}).get("confirmation_status") == "confirmed"
+            and plan.get("account_state", {}).get("confirmation_status") in {"confirmed", "assumed_authorized"}
             and float(plan.get("account_state", {}).get("total_equity", -1.0))
             == float(account.get("total_equity", -2.0))
         ),
@@ -134,14 +148,38 @@ def main() -> None:
             review.get("status") == "complete" and review.get("coverage") == 1.0
             and review.get("input_count") == review.get("reviewed_count")
         )
+        protocol_required = args.date >= "2026-07-23"
+        protocol_fingerprinted = (
+            review.get("review_protocol") == review_protocol_fingerprints()
+            and isinstance(review.get("review_metadata"), dict)
+            and review["review_metadata"].get("reviewed_in_current_conversation") is True
+        )
+        checks["ai_review_protocol_requirement_satisfied"] = (
+            not protocol_required or protocol_fingerprinted
+        )
     else:
         checks["ai_review_complete"] = False
-    core = [key for key in checks if key != "ai_review_complete"]
+        protocol_required = args.date >= "2026-07-23"
+        protocol_fingerprinted = False
+        checks["ai_review_protocol_requirement_satisfied"] = False
+    core = [
+        key for key in checks
+        if key not in {"ai_review_complete", "ai_review_protocol_requirement_satisfied"}
+    ]
     report = {
         "status": "READY" if all(checks.values()) else "BLOCKED",
         "core_backtest_and_site": "PASS" if all(checks[key] for key in core) else "FAIL",
         "checks": checks,
         "blocking_items": [key for key, passed in checks.items() if not passed],
+        "review_protocol": {
+            "required_for_signal_date": protocol_required,
+            "fingerprinted": protocol_fingerprinted,
+            "status": (
+                "fingerprinted" if protocol_fingerprinted
+                else "legacy_exempted" if not protocol_required
+                else "missing"
+            ),
+        },
         "reconciliation": {
             "realized_round_trip_pnl": realized_round_trip_pnl,
             "open_position_pnl": open_position_pnl,

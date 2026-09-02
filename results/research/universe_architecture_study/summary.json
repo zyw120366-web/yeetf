@@ -1,0 +1,152 @@
+{
+  "status": "research_evidence_for_user_approved_change",
+  "generated_through": "2026-07-28",
+  "same_data_cost_and_execution": true,
+  "variants": [
+    {
+      "variant": "core_45",
+      "total_return": 5.419517735131328,
+      "cagr": 0.2590633305190324,
+      "annual_volatility": 0.22326984477248676,
+      "sharpe": 1.1825756631104145,
+      "sortino": 2.0360074122090714,
+      "max_drawdown": -0.2218193578066835,
+      "calmar": 1.167902265521872,
+      "annual_turnover": 16.158252022237747,
+      "trade_count": 256.0,
+      "average_exposure": 0.5185918740008136,
+      "total_fees": 6417.139758380486,
+      "slippage_cost_estimate": 34933.2207946086,
+      "blocked_order_count": 0.0,
+      "limit_blocked_order_count": 0.0,
+      "eligibility_blocked_order_count": 0.0,
+      "liquidity_limited_order_count": 110.0,
+      "cash_management_annual_rate": 0.015,
+      "cash_interest_income": 8495.342465753449,
+      "cash_interest_calendar_days": 2948.0,
+      "cash_management_fees": 1370.8500000000026,
+      "return_2025_2026": 2.8247614071769283,
+      "max_drawdown_2025_2026": -0.12533203900561152
+    },
+    {
+      "variant": "global_rank_51",
+      "total_return": 2.0695315704696258,
+      "cagr": 0.149071476241859,
+      "annual_volatility": 0.21497026370564123,
+      "sharpe": 0.7783677851223008,
+      "sortino": 1.2454984731253773,
+      "max_drawdown": -0.34535564498805904,
+      "calmar": 0.43164627075087564,
+      "annual_turnover": 15.821046790470344,
+      "trade_count": 251.0,
+      "average_exposure": 0.4326658622732396,
+      "total_fees": 4919.898459131841,
+      "slippage_cost_estimate": 29371.43944570722,
+      "blocked_order_count": 0.0,
+      "limit_blocked_order_count": 0.0,
+      "eligibility_blocked_order_count": 0.0,
+      "liquidity_limited_order_count": 108.0,
+      "cash_management_annual_rate": 0.015,
+      "cash_interest_income": 8852.671232876744,
+      "cash_interest_calendar_days": 2948.0,
+      "cash_management_fees": 1439.23000000001,
+      "return_2025_2026": 1.5524502745655533,
+      "max_drawdown_2025_2026": -0.13641747174070662
+    },
+    {
+      "variant": "anchor_45_plus_6",
+      "total_return": 4.591449421051664,
+      "cagr": 0.23770301123022008,
+      "annual_volatility": 0.23242489376943626,
+      "sharpe": 1.068594470165831,
+      "sortino": 1.7927860134279778,
+      "max_drawdown": -0.2531344160704029,
+      "calmar": 0.9390386930401003,
+      "annual_turnover": 16.649968825077153,
+      "trade_count": 256.0,
+      "average_exposure": 0.5121556306597621,
+      "total_fees": 6206.4031838911615,
+      "slippage_cost_estimate": 35089.76986631156,
+      "blocked_order_count": 0.0,
+      "limit_blocked_order_count": 0.0,
+      "eligibility_blocked_order_count": 0.0,
+      "liquidity_limited_order_count": 103.0,
+      "cash_management_annual_rate": 0.015,
+      "cash_interest_income": 8085.821917808227,
+      "cash_interest_calendar_days": 2948.0,
+      "cash_management_fees": 1304.6300000000138,
+      "return_2025_2026": 2.8372684234253023,
+      "max_drawdown_2025_2026": -0.12533599645475135
+    },
+    {
+      "variant": "champion_cash_gap_45_plus_6",
+      "total_return": 5.570097875389576,
+      "cagr": 0.2626853860802112,
+      "annual_volatility": 0.223430030570158,
+      "sharpe": 1.1952494683986101,
+      "sortino": 2.0591402639652805,
+      "max_drawdown": -0.20906256593091377,
+      "calmar": 1.2564917344744417,
+      "annual_turnover": 16.327286731042594,
+      "trade_count": 264.0,
+      "average_exposure": 0.5193471548895954,
+      "total_fees": 6588.810666412409,
+      "slippage_cost_estimate": 35773.73721643926,
+      "blocked_order_count": 0.0,
+      "limit_blocked_order_count": 0.0,
+      "eligibility_blocked_order_count": 0.0,
+      "liquidity_limited_order_count": 113.0,
+      "cash_management_annual_rate": 0.015,
+      "cash_interest_income": 8605.972602739756,
+      "cash_interest_calendar_days": 2948.0,
+      "cash_management_fees": 1388.3800000000065,
+      "return_2025_2026": 2.822938563066504,
+      "max_drawdown_2025_2026": -0.125341390811315
+    }
+  ],
+  "communication_case": {
+    "2026-04-07": {
+      "core_45": {
+        "communication_rank": 4.0,
+        "communication_entry_gate": true
+      },
+      "global_rank_51": {
+        "communication_rank": 6.0,
+        "communication_entry_gate": false
+      },
+      "anchor_45_plus_6": {
+        "communication_rank": 4.0,
+        "communication_entry_gate": true
+      },
+      "champion_cash_gap_45_plus_6": {
+        "communication_rank": 4.0,
+        "communication_entry_gate": true
+      }
+    },
+    "2026-04-28": {
+      "core_45": {
+        "communication_rank": 1.0,
+        "communication_entry_gate": false
+      },
+      "global_rank_51": {
+        "communication_rank": 1.0,
+        "communication_entry_gate": false
+      },
+      "anchor_45_plus_6": {
+        "communication_rank": 1.0,
+        "communication_entry_gate": false
+      },
+      "champion_cash_gap_45_plus_6": {
+        "communication_rank": 1.0,
+        "communication_entry_gate": false
+      }
+    }
+  },
+  "path_isolation_invariants": {
+    "core_rank_unchanged": true,
+    "core_rank_exit_unchanged": true,
+    "challenger_held_while_core_entry_available_days": 0
+  },
+  "decision": "采用45只核心冠军＋6只挑战者空档补位；拒绝51只全局混排和挑战者与核心平权竞争。",
+  "reason": "新增ETF不能改变核心排名和退出，也不能在已有合格核心候选时替代核心路径；挑战者只填补核心无候选的现金空档，并在核心候选恢复时让位。"
+}

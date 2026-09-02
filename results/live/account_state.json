@@ -1,10 +1,10 @@
 {
   "account_type": "live",
-  "as_of": "2026-07-22_close",
+  "as_of": "2026-09-02_close",
   "confirmation_status": "confirmed",
-  "source": "前日用户确认仓位；上一计划无买卖订单，按账户连续性滚存",
+  "source": "用户2026-09-02明确确认：忘记执行9月2日开盘换仓，账户仍持有原医药ETF",
   "first_live_day": false,
-  "total_equity": 9877.4,
+  "total_equity": 9877.400106,
   "available_cash": 0.0,
   "performance": {
     "strategy_start_date": "2026-07-21",
@@ -15,14 +15,15 @@
     {
       "symbol": "512010.SH",
       "name": "医药ETF易方达",
+      "opened_on": "2026-07-21",
       "quantity": 26200,
       "average_cost": 0.375,
-      "market_price": 0.377,
-      "market_value": 9877.4,
-      "unrealized_pnl": 52.4
+      "market_price": 0.37700000405311584,
+      "market_value": 9877.400106141615,
+      "unrealized_pnl": 52.4001061416145
     }
   ],
   "pending_orders": [],
   "last_exit_dates": {},
-  "note": "用户确认2026-07-21以0.375成本买入26200股512010.SH并将账户资金全部投入；2026-07-21计划无买卖订单，故持仓与现金滚存至2026-07-22。今日收盘价0.377，收盘总权益按持仓市值计为9877.40元。历史回测模型持仓不得作为实盘持仓。"
+  "note": "9月1日计划的卖出512010.SH和买入513200.SH均由用户确认未执行；券商回单、出入金或未完成订单如有不同，必须立即修正。"
 }
