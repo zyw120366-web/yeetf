@@ -1,10 +1,10 @@
 {
   "account_type": "live",
-  "as_of": "2026-09-03_open",
+  "as_of": "2026-09-03_close",
   "confirmation_status": "confirmed",
   "source": "用户2026-09-03明确确认的实际成交",
   "first_live_day": false,
-  "total_equity": 9946.0,
+  "total_equity": 9964.200495,
   "available_cash": 17.9,
   "performance": {
     "strategy_start_date": "2026-07-21",
@@ -18,9 +18,9 @@
       "opened_on": "2026-09-03",
       "quantity": 9100,
       "average_cost": 1.091,
-      "market_price": 1.091,
-      "market_value": 9928.1,
-      "unrealized_pnl": 0.0
+      "market_price": 1.093000054359436,
+      "market_value": 9946.300494670868,
+      "unrealized_pnl": 18.200494670868196
     }
   ],
   "pending_orders": [],
@@ -31,8 +31,20 @@
     "signal_date": "2026-09-02",
     "execution_date": "2026-09-03",
     "fills": [
-      {"side": "sell", "symbol": "512010.SH", "quantity": 26200, "price": 0.38, "commission_assumed": 5.0},
-      {"side": "buy", "symbol": "513200.SH", "quantity": 9100, "price": 1.091, "commission_assumed": 5.0}
+      {
+        "side": "sell",
+        "symbol": "512010.SH",
+        "quantity": 26200,
+        "price": 0.38,
+        "commission_assumed": 5.0
+      },
+      {
+        "side": "buy",
+        "symbol": "513200.SH",
+        "quantity": 9100,
+        "price": 1.091,
+        "commission_assumed": 5.0
+      }
     ]
   },
   "note": "用户确认9月3日已按实际价格完成换仓。未提供券商手续费，暂按正式固定口径每笔最低佣金5元记账；券商回单、出入金或未完成订单如有不同，必须立即修正。"
