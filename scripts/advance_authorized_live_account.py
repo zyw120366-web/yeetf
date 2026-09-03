@@ -53,7 +53,25 @@ def main() -> None:
     account = json.loads(ACCOUNT.read_text(encoding="utf-8"))
     account_day = pd.Timestamp(str(account["as_of"]).split("_")[0])
     if account_day == day:
-        print(json.dumps({"status": "already_current", "date": args.date}, ensure_ascii=False))
+        # A user-confirmed fill may already have set today's opening position.
+        # At the post-close run, mark that verified position to the frozen close
+        # without re-applying the prior plan or changing its confirmation source.
+        positions = [p for p in account.get("positions", []) if float(p.get("quantity", 0)) > 0]
+        if len(positions) > 1:
+            raise RuntimeError("only one live ETF position is supported")
+        for position in positions:
+            _, close = quote(str(position["symbol"]), day)
+            position["market_price"] = close
+            position["market_value"] = float(position["quantity"]) * close
+            position["unrealized_pnl"] = float(position["quantity"]) * (close - float(position["average_cost"]))
+        account["as_of"] = f"{args.date}_close"
+        account["total_equity"] = round(
+            float(account.get("available_cash", 0.0))
+            + sum(float(position["market_value"]) for position in positions),
+            6,
+        )
+        ACCOUNT.write_text(json.dumps(account, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps({"status": "marked_to_close", "date": args.date, "equity": account["total_equity"]}, ensure_ascii=False))
         return
     dates = trading_dates()
     prior_dates = dates[dates < day]
