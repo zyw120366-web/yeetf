@@ -1,10 +1,10 @@
 {
   "account_type": "live",
-  "as_of": "2026-09-03_close",
-  "confirmation_status": "confirmed",
-  "source": "用户2026-09-03明确确认的实际成交",
+  "as_of": "2026-09-07_close",
+  "confirmation_status": "assumed_authorized",
+  "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
   "first_live_day": false,
-  "total_equity": 9964.200495,
+  "total_equity": 9800.400434,
   "available_cash": 17.9,
   "performance": {
     "strategy_start_date": "2026-07-21",
@@ -18,9 +18,9 @@
       "opened_on": "2026-09-03",
       "quantity": 9100,
       "average_cost": 1.091,
-      "market_price": 1.093000054359436,
-      "market_value": 9946.300494670868,
-      "unrealized_pnl": 18.200494670868196
+      "market_price": 1.0750000476837158,
+      "market_value": 9782.500433921814,
+      "unrealized_pnl": -145.59956607818577
     }
   ],
   "pending_orders": [],
@@ -47,5 +47,11 @@
       }
     ]
   },
-  "note": "用户确认9月3日已按实际价格完成换仓。未提供券商手续费，暂按正式固定口径每笔最低佣金5元记账；券商回单、出入金或未完成订单如有不同，必须立即修正。"
+  "note": "用户常设授权下的计划执行记账；若券商实际成交、出入金或未完成订单与此不同，必须立即以真实记录更正。",
+  "execution_assumption": {
+    "enabled": true,
+    "authorization_date": "2026-08-06",
+    "prior_signal_date": "2026-09-04",
+    "assumed_fills": []
+  }
 }
