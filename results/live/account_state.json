@@ -1,10 +1,10 @@
 {
   "account_type": "live",
-  "as_of": "2026-09-07_close",
+  "as_of": "2026-09-08_close",
   "confirmation_status": "assumed_authorized",
   "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
   "first_live_day": false,
-  "total_equity": 9800.400434,
+  "total_equity": 9845.900391,
   "available_cash": 17.9,
   "performance": {
     "strategy_start_date": "2026-07-21",
@@ -18,9 +18,9 @@
       "opened_on": "2026-09-03",
       "quantity": 9100,
       "average_cost": 1.091,
-      "market_price": 1.0750000476837158,
-      "market_value": 9782.500433921814,
-      "unrealized_pnl": -145.59956607818577
+      "market_price": 1.0800000429153442,
+      "market_value": 9828.000390529633,
+      "unrealized_pnl": -100.09960947036716
     }
   ],
   "pending_orders": [],
@@ -51,7 +51,7 @@
   "execution_assumption": {
     "enabled": true,
     "authorization_date": "2026-08-06",
-    "prior_signal_date": "2026-09-04",
+    "prior_signal_date": "2026-09-07",
     "assumed_fills": []
   }
 }
