@@ -1,0 +1,518 @@
+{
+  "strategy": "ye 策略",
+  "signal_date": "2026-09-09",
+  "created_at_utc": "2026-09-09T07:12:05.400122+00:00",
+  "python": "3.13.6",
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "critical_files": [
+    {
+      "path": "config/market.yaml",
+      "bytes": 5607,
+      "sha256": "2fd99facc5f8441027124be207772855315517676978c0498f9508af59b5e3a7"
+    },
+    {
+      "path": "config/ye_strategy.yaml",
+      "bytes": 7958,
+      "sha256": "8f1c05c350bd150e23fe485effd77613413c96c65844367405ce2f721b859ed5"
+    },
+    {
+      "path": "config/etfwin_official.yaml",
+      "bytes": 2691,
+      "sha256": "28dcd0215e15a17677cb99ec0a78451c7bb8f811369bf9830f1af9329c7e54a7"
+    },
+    {
+      "path": "config/sentiment.yaml",
+      "bytes": 5078,
+      "sha256": "264703aa392f3f796635c7e62fcbd21700e2a7bf03ab379f5242c6b23f2af5a2"
+    },
+    {
+      "path": "config/sentiment_review_policy.yaml",
+      "bytes": 2399,
+      "sha256": "64cc6dd0db1d6888b47d3e15903bbfb194f23dc6495b50a9b94ab778e3275f80"
+    },
+    {
+      "path": "config/strategy_governance.yaml",
+      "bytes": 2965,
+      "sha256": "135c4c5522ebd1aff9488c2e0a35454852e88f05912fc25fb6bc7a4d6dfdb1db"
+    },
+    {
+      "path": "config/research_hypotheses.yaml",
+      "bytes": 316,
+      "sha256": "e6da8a317f1d1a94c169ac021f83bdc96afcb295c8eb210fe10ea8ac51df1433"
+    },
+    {
+      "path": "market_data/sentiment/ai_review/2026-09-09.json",
+      "bytes": 179347,
+      "sha256": "d1af58f20a4a925d464f67beed2e8c7515c74175cc32b64c7fae2534654742ec"
+    },
+    {
+      "path": "market_data/sentiment/features/symbol_daily.csv",
+      "bytes": 6409736,
+      "sha256": "60f0a8bf10679f1286d30e09d5f85cbe1ff05942612294281ede394feb8e7299"
+    },
+    {
+      "path": "results/ye_strategy/summary.json",
+      "bytes": 3167,
+      "sha256": "4ae93c98d675074af5189269a7f99c3beb9a3c35e82cb307b58e785d629f781a"
+    },
+    {
+      "path": "results/ye_strategy/signal_weights.csv",
+      "bytes": 645737,
+      "sha256": "592174f9f429dd89a9cf1ca3bd8b2d6403e39b914fa9b7e123e2ce1939ed9229"
+    },
+    {
+      "path": "results/ye_strategy/trade_audit.json",
+      "bytes": 661657,
+      "sha256": "ac91f58e0b2a85d0716a72b8cc3f58ae5c100823a4d11c61f096f868c034fc12"
+    },
+    {
+      "path": "results/etfwin_reference/reference_summary.json",
+      "bytes": 3033,
+      "sha256": "5fb581b64d5beb47d290971b627a08078adf93d00440762aa946d3dbaf83964e"
+    },
+    {
+      "path": "results/comparison/latest_signals.json",
+      "bytes": 1490,
+      "sha256": "5d61e815e0fc0373116b6055fea31e88ffa37c5d5cabf0416fba6380a336379d"
+    },
+    {
+      "path": "results/comparison/metrics.csv",
+      "bytes": 2886,
+      "sha256": "655b6c7136a89b31e9d2d072ad25c45820eed439f896d9f664f1612b3849b1be"
+    },
+    {
+      "path": "results/live/account_state.json",
+      "bytes": 1726,
+      "sha256": "89a41a74e140ac4af2d7e72516649f0335886a5579e1180f87da541cdd7adf88"
+    },
+    {
+      "path": "results/live/2026-09-09_order_plan.json",
+      "bytes": 6071,
+      "sha256": "dad8df15500b8655529aebbe378a879cfd281b74a02e2a1f82e530cac4d9c447"
+    },
+    {
+      "path": "results/live/readiness_report.json",
+      "bytes": 1005,
+      "sha256": "9bd108775c2128cd44d34272e318adc03a201ee95aa50c4f935e13bec66c9f81"
+    },
+    {
+      "path": "dashboard/public/ye-strategy.html",
+      "bytes": 20107,
+      "sha256": "11ae98519b1e3d0d3c5821dc8ac60517edcdd4e6d00725f96e8d4e15f9185c32"
+    },
+    {
+      "path": "dashboard/public/ye-daily.html",
+      "bytes": 38084,
+      "sha256": "ad061c9cf94ae7578ec2def5ba2e97eb3cead7bd5c17788e88af8969ebc687fd"
+    },
+    {
+      "path": "dashboard/public/ye-backtest.html",
+      "bytes": 2234379,
+      "sha256": "705cf257e46bad01cef24e14f9bd22cb0043a2483e74a805ff3c11c83af99cf6"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "src/etf_rotation/__init__.py",
+      "bytes": 81,
+      "sha256": "848c21f15c1db0813019e00a150941d567cc3787d207d3050c85f2238cae1bfe"
+    },
+    {
+      "path": "src/etf_rotation/backtest.py",
+      "bytes": 15977,
+      "sha256": "9146de526f675a63252f5c7a94173e74c8252439f1ebd75bca8d1dc49c15f0ca"
+    },
+    {
+      "path": "src/etf_rotation/data.py",
+      "bytes": 5850,
+      "sha256": "8531fdce63f617cd7f57972e1c725abbfdbec46ec4586ce3fa83a8f09ccb9d81"
+    },
+    {
+      "path": "src/etf_rotation/etfwin.py",
+      "bytes": 24719,
+      "sha256": "2d691d49222ee1dd08a7a628fe6f7fb5a3befcd226fca0649d4c5123e44891fb"
+    },
+    {
+      "path": "src/etf_rotation/evaluation.py",
+      "bytes": 13619,
+      "sha256": "f251141d2561dfba6bea12c9cb113f18b6d8a9429bd0db59a7223f9b61989079"
+    },
+    {
+      "path": "src/etf_rotation/execution.py",
+      "bytes": 3432,
+      "sha256": "71a856d7dfd65f6a322d43684307ece7a9727ba5bba25b658e9d5788ab1e7214"
+    },
+    {
+      "path": "src/etf_rotation/sentiment.py",
+      "bytes": 1071,
+      "sha256": "e3f64a1f10eafdc931d3faa9698c6de9e018a406ceaaec50a321583c4c230d9c"
+    },
+    {
+      "path": "src/etf_rotation/sentiment_ai.py",
+      "bytes": 13429,
+      "sha256": "af5b686f6c2b1142c2079b21033d57f9dbe8b7d4100ac3a24d266a8a00a11e79"
+    },
+    {
+      "path": "src/etf_rotation/strategy.py",
+      "bytes": 204,
+      "sha256": "0fb67acd5d58f5a6ad5f985ff2245590850dacc39cc6c963d0943066be09c755"
+    },
+    {
+      "path": "src/etf_rotation/ye.py",
+      "bytes": 14603,
+      "sha256": "7f33da891948591182821d4efa73a64141f6173b18b79f86ea6092fe1c47daad"
+    },
+    {
+      "path": "run_strategies.py",
+      "bytes": 15807,
+      "sha256": "3ce5e241402472442a2074bd25e5cf43b049ee2fb224fc927380318dcb911570"
+    },
+    {
+      "path": "scripts/build_sentiment_features.py",
+      "bytes": 7897,
+      "sha256": "61d7a0f27e779be47dacf8d65585bd6d74b5edf1e9cb252ca8c30995228c3693"
+    },
+    {
+      "path": "scripts/build_trade_audit.py",
+      "bytes": 17769,
+      "sha256": "6c1ed088b37f50c9e7cb89c80e3b25b4ce85891a4d586086fbf8172719b8c726"
+    },
+    {
+      "path": "scripts/build_live_order_plan.py",
+      "bytes": 19958,
+      "sha256": "46522c0f3858c298bb03fe6679cc0993557a1d27e537bc14a7a6ba285cbd6603"
+    },
+    {
+      "path": "scripts/validate_live_readiness.py",
+      "bytes": 9809,
+      "sha256": "4d2a8acbafd9b731e2cd5a142d7adc7884b1f750132ec1b78f3a1c583253c184"
+    },
+    {
+      "path": "scripts/build_daily_reference_report.py",
+      "bytes": 29260,
+      "sha256": "06c17138d368a37993bf36f200285061f80de8ebb88a911a0227e735cba990af"
+    },
+    {
+      "path": "scripts/build_live_run_card.py",
+      "bytes": 4469,
+      "sha256": "160569a89120d179e9d160b811494c7920bc3987b6a4d05ac4bf39feed659792"
+    },
+    {
+      "path": "scripts/reconcile_actual_fills.py",
+      "bytes": 3238,
+      "sha256": "0fa4506edf2cc7c7fa63cd9f2b70128480b38a99767ebb2206bf6538d952b88c"
+    },
+    {
+      "path": "scripts/run_after_close.py",
+      "bytes": 2832,
+      "sha256": "11fcc003e09d75c94dc2516f5f7bdf0ca6e00bb382f51722ce55325cb1cf9118"
+    },
+    {
+      "path": "dashboard/scripts/build_ye_strategy_html.py",
+      "bytes": 106949,
+      "sha256": "35edabb65b217262ce777892a4ac75ce8ba573fbce6e4af0c191e46084c3482a"
+    }
+  ],
+  "price_files": [
+    {
+      "path": "market_data/prices/159611.SZ.csv",
+      "bytes": 136765,
+      "sha256": "2b7322d7d91f29e0b36c3c9be40f1fb586c259a5af9a52de33dd5b941ec20241"
+    },
+    {
+      "path": "market_data/prices/159647.SZ.csv",
+      "bytes": 121750,
+      "sha256": "f34fe61f38b5600025369d783ff00efcc0087eefa7ecb08538a39dcc513d4a0e"
+    },
+    {
+      "path": "market_data/prices/159745.SZ.csv",
+      "bytes": 153028,
+      "sha256": "a50c2cc87e47712e5ef127b9cf885fe1d4dad9f42caac30333a2d6d027e97e8c"
+    },
+    {
+      "path": "market_data/prices/159755.SZ.csv",
+      "bytes": 153823,
+      "sha256": "a18526c9cc3b66db3cfc3db41dd549a4dc004a1bf8a72d9378b909f84557ad94"
+    },
+    {
+      "path": "market_data/prices/159766.SZ.csv",
+      "bytes": 151276,
+      "sha256": "c638907a7e91747b61627acf8822ddab7c2ef3d41721ba62c1dd4120072c4f26"
+    },
+    {
+      "path": "market_data/prices/159819.SZ.csv",
+      "bytes": 171989,
+      "sha256": "c644a8b9d6088c3a5ccf43a0ce16ce97ae59b72ed92195656515585375336c51"
+    },
+    {
+      "path": "market_data/prices/159851.SZ.csv",
+      "bytes": 161776,
+      "sha256": "66b15e7fc101e447b1b9759d4bcdf994175e59d18e649b1f56a0e67670e8cb14"
+    },
+    {
+      "path": "market_data/prices/159865.SZ.csv",
+      "bytes": 160180,
+      "sha256": "95a46a6b605a1e2b9dbaf5589182b091642c6125350453f7746637cd81c9040b"
+    },
+    {
+      "path": "market_data/prices/159869.SZ.csv",
+      "bytes": 162199,
+      "sha256": "d08af525532a632532759002bd1673fa7cb88bad465994d60328b2e4d6aed592"
+    },
+    {
+      "path": "market_data/prices/159870.SZ.csv",
+      "bytes": 156446,
+      "sha256": "bde0d9eea64b082b22293543a0b2b8a9325c4e2ea818f258c5182891e838ccab"
+    },
+    {
+      "path": "market_data/prices/159915.SZ.csv",
+      "bytes": 358089,
+      "sha256": "f6b28025610dcc05c773999eb82529cc680412b53ef4e5619d65ebfd52baefbc"
+    },
+    {
+      "path": "market_data/prices/159920.SZ.csv",
+      "bytes": 362544,
+      "sha256": "568dfaae5104709ea863dc77862e8dff05af1e0591c99f035428717722a2e11b"
+    },
+    {
+      "path": "market_data/prices/159941.SZ.csv",
+      "bytes": 320970,
+      "sha256": "f67293d51f43f1230981c948a5dc422fa74ab6591d71631467cbd74073a8b654"
+    },
+    {
+      "path": "market_data/prices/159981.SZ.csv",
+      "bytes": 192032,
+      "sha256": "bd5e1d72a4fa2ca8be05ee455b0610a02d155fc56c85c73132c50fc9af8187bc"
+    },
+    {
+      "path": "market_data/prices/159985.SZ.csv",
+      "bytes": 197544,
+      "sha256": "83e6622554aed02afe5c7c17adb553081f4714b7c78ade75c7becfabd8c73305"
+    },
+    {
+      "path": "market_data/prices/159996.SZ.csv",
+      "bytes": 193246,
+      "sha256": "3440418fe2f9d8a1d9725e3c01211450745502b386be3cebe4d2ae5088e05fc5"
+    },
+    {
+      "path": "market_data/prices/510300.SH.csv",
+      "bytes": 359695,
+      "sha256": "4a6c7299be5b92d8816e0dbf6590ba8e5a69261d20c0fadc222f449425ce8247"
+    },
+    {
+      "path": "market_data/prices/510500.SH.csv",
+      "bytes": 353380,
+      "sha256": "87800ff010207ab7c2c23468fffb65460b9b192e7f4ca42b69bbde06b62bb887"
+    },
+    {
+      "path": "market_data/prices/510630.SH.csv",
+      "bytes": 360849,
+      "sha256": "09fb8d927df636db51f2c0029afed7582f4e848512f3ba01f95a818ce7c1f681"
+    },
+    {
+      "path": "market_data/prices/510880.SH.csv",
+      "bytes": 357413,
+      "sha256": "848429ec10b35db5a93e85fbb448861e37e7f2eddaae3aea4bd09a8fdf23b4c6"
+    },
+    {
+      "path": "market_data/prices/512010.SH.csv",
+      "bytes": 355107,
+      "sha256": "0155a7bd9182f552c584089b79297cee3b3ab40faed1ba00dc8d71c52c799139"
+    },
+    {
+      "path": "market_data/prices/512040.SH.csv",
+      "bytes": 227219,
+      "sha256": "f347eaecbc9b04fa0768442e5e8e162f881af0a5c084859b15b946aa8a8423a5"
+    },
+    {
+      "path": "market_data/prices/512070.SH.csv",
+      "bytes": 349015,
+      "sha256": "22e2dc474e3b2be9b3dbef8de7a0f1f1fae8eb4086156b8bbbaeb7becb8d337b"
+    },
+    {
+      "path": "market_data/prices/512100.SH.csv",
+      "bytes": 281624,
+      "sha256": "b92afa450ac2a2c58c2941ede638ec7ecbc8673142ad75006341a1c3f03e7276"
+    },
+    {
+      "path": "market_data/prices/512170.SH.csv",
+      "bytes": 206728,
+      "sha256": "fbc7577a29aab1ebdeb4283c4a72ef537695c81b1242db6a6f68f827dc474c6c"
+    },
+    {
+      "path": "market_data/prices/512200.SH.csv",
+      "bytes": 261365,
+      "sha256": "6d0a2e0616deaede0711372f487a99e528f8f2b0e9d1e51c4a12a55b7273c070"
+    },
+    {
+      "path": "market_data/prices/512400.SH.csv",
+      "bytes": 263398,
+      "sha256": "3e1f605c9e7ad9be20691288a876d2a4cabe9193ceb735a6791734a99472ff3d"
+    },
+    {
+      "path": "market_data/prices/512660.SH.csv",
+      "bytes": 289341,
+      "sha256": "2fea46714f32c299eff976639230f63debdb31465c7ce0c431fcbb3c318f506a"
+    },
+    {
+      "path": "market_data/prices/512690.SH.csv",
+      "bytes": 214506,
+      "sha256": "e1e1abc0789ba6922b83e831cbba5d7ab426508500d3c5956693a3781926b3f4"
+    },
+    {
+      "path": "market_data/prices/512760.SH.csv",
+      "bytes": 214982,
+      "sha256": "5cd5b7e607d39114b05d6b46245e328c986198b489627c9ec6244a7186798b99"
+    },
+    {
+      "path": "market_data/prices/512800.SH.csv",
+      "bytes": 264749,
+      "sha256": "c6db2518397af3d098e6b2a22878beaa3692dabb6aa71c172ce13cd1cc9822b7"
+    },
+    {
+      "path": "market_data/prices/512880.SH.csv",
+      "bytes": 290307,
+      "sha256": "a9616b6d0c45364e0a2542959628c9e1b92865c7e7efbd748afdbdb1ecd0a46a"
+    },
+    {
+      "path": "market_data/prices/512980.SH.csv",
+      "bytes": 252694,
+      "sha256": "95e5d555edd3a7c546e7ea4b8f22195fe8f6a4e01524b189c14b3f7622ecedb1"
+    },
+    {
+      "path": "market_data/prices/513030.SH.csv",
+      "bytes": 353968,
+      "sha256": "90b9917fe70f7c47c54f8c6bbd381aab080ad650b5bfe867e605253896121fcf"
+    },
+    {
+      "path": "market_data/prices/513090.SH.csv",
+      "bytes": 191586,
+      "sha256": "167c0b7b573bdf6c921fcc59d17b6d5c10bcd1e5bd8beef5d718dfb002d37857"
+    },
+    {
+      "path": "market_data/prices/513120.SH.csv",
+      "bytes": 117756,
+      "sha256": "c4b11a79169686b8275b243b72fbebbafc544b79f46312980da06d502d362c3a"
+    },
+    {
+      "path": "market_data/prices/513130.SH.csv",
+      "bytes": 155833,
+      "sha256": "6cda35e8a6089e570fa90de804ae66c77dddb30e3133175a2947161222d7d985"
+    },
+    {
+      "path": "market_data/prices/513200.SH.csv",
+      "bytes": 136854,
+      "sha256": "f363a9d1f1f635e88dcf94e79aaa527ed06647d0a6719d9cdf92b1b7d99362e9"
+    },
+    {
+      "path": "market_data/prices/513310.SH.csv",
+      "bytes": 110256,
+      "sha256": "a52a2337306dd753d2cec171a0e8db625cdf598a54e6c6c0b3ddf0b604f21ebf"
+    },
+    {
+      "path": "market_data/prices/513500.SH.csv",
+      "bytes": 359022,
+      "sha256": "fb6608616963497d5b87bc16c72bfbe635944b3808b0bb3c9c515fb54d483921"
+    },
+    {
+      "path": "market_data/prices/513520.SH.csv",
+      "bytes": 210107,
+      "sha256": "0d9dbd5e7b3d6300dbffdeea6079403fc8edcc042bc17c825834873373a11546"
+    },
+    {
+      "path": "market_data/prices/513530.SH.csv",
+      "bytes": 126555,
+      "sha256": "11c3ab9366dee698bcd58a3208b764f3c51f88679462150d2a6fdad0a1b176bd"
+    },
+    {
+      "path": "market_data/prices/515030.SH.csv",
+      "bytes": 188181,
+      "sha256": "4a3761960193dc4571ec8a96735067dfd87946d0dd6c0ff739ee9b02f23cc2fb"
+    },
+    {
+      "path": "market_data/prices/515050.SH.csv",
+      "bytes": 200963,
+      "sha256": "b479fe60bdf6bf1dac0433bb67ae40a91c0d28d8d08fe628e889470ee18b5623"
+    },
+    {
+      "path": "market_data/prices/515210.SH.csv",
+      "bytes": 191795,
+      "sha256": "53b03b63b449ef2609f82648d5c0d328acad3f0b388c1420d194379df7ada6f1"
+    },
+    {
+      "path": "market_data/prices/515220.SH.csv",
+      "bytes": 192267,
+      "sha256": "cb84336fbad50d9b119f3e0f0d55a0b5cf3706b13e128f680933ccb4e84c6eab"
+    },
+    {
+      "path": "market_data/prices/515790.SH.csv",
+      "bytes": 168042,
+      "sha256": "35e236b69e255e28d3647d74ce9b7ea36fff3423ba2246c93e3e80ec59378cfd"
+    },
+    {
+      "path": "market_data/prices/515880.SH.csv",
+      "bytes": 199132,
+      "sha256": "948ebcffb373a2b997dd5c269f1b2d26e53063112a5a318aedcd1bd876339335"
+    },
+    {
+      "path": "market_data/prices/516020.SH.csv",
+      "bytes": 159588,
+      "sha256": "3a331ba84054a3736d63979d19a24584a0f395019cdcfd3a48ec752bc4b31333"
+    },
+    {
+      "path": "market_data/prices/516150.SH.csv",
+      "bytes": 159748,
+      "sha256": "65db340097a175cbeb0b37c677247b7931228cd6d765db2d2ef31c8efe32d4bd"
+    },
+    {
+      "path": "market_data/prices/516970.SH.csv",
+      "bytes": 148691,
+      "sha256": "8b57b65c1e72bfb5a5ab818eaac4534129090fc4e9a9a32fbd1ade3da08c949b"
+    },
+    {
+      "path": "market_data/prices/518880.SH.csv",
+      "bytes": 359651,
+      "sha256": "724335f464f95a5fb03d84982717c7dcc285a0d165ad08154bcb71e69d83dae6"
+    },
+    {
+      "path": "market_data/prices/560280.SH.csv",
+      "bytes": 84167,
+      "sha256": "94129239d0fa19b60ccd1dde4f253c9788d7483e33b6e0b03cff7434945e225e"
+    },
+    {
+      "path": "market_data/prices/561360.SH.csv",
+      "bytes": 84223,
+      "sha256": "b5fc4e16aa64e57ab86dc7d4ad919cb3b11d7747bfdd8960c770cbe05db3e68b"
+    },
+    {
+      "path": "market_data/prices/561380.SH.csv",
+      "bytes": 49549,
+      "sha256": "36e6bc259aa6d19f01e8ebd2d649f4d0afcc3b582ae187ff9e111fc6899ac615"
+    },
+    {
+      "path": "market_data/prices/562500.SH.csv",
+      "bytes": 136689,
+      "sha256": "b9c062488005b0c8a61b95da8371232df6ef96bfa5bdde09aa87f7dedd14ca4a"
+    },
+    {
+      "path": "market_data/prices/562600.SH.csv",
+      "bytes": 80862,
+      "sha256": "f60b7541d5becce92ea87bd3138d473a94fa5f4d7344e6d2ee5bf9c8a03ba258"
+    },
+    {
+      "path": "market_data/prices/563380.SH.csv",
+      "bytes": 23769,
+      "sha256": "c573b03723584538bd7ef08dce36261f2fafd5463169de65a902fb4dabd39dbe"
+    },
+    {
+      "path": "market_data/prices/588200.SH.csv",
+      "bytes": 108351,
+      "sha256": "d475806533225e4230aaa4c43c51358d757f87bb57ec0f669a8d8731b075b6d3"
+    }
+  ],
+  "counts": {
+    "critical_files": 21,
+    "source_files": 20,
+    "price_files": 59
+  }
+}

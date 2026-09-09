@@ -1,5 +1,5 @@
 {
-  "signal_date": "2026-09-08",
+  "signal_date": "2026-09-09",
   "execution_rule": {
     "signal_time": "每个交易日收盘后",
     "trade_time": "下一交易日开盘",
@@ -14,22 +14,22 @@
     "status": "frozen_for_live",
     "target_portfolio": [
       {
-        "symbol": "513200.SH",
-        "name": "港股通医药ETF易方达",
+        "symbol": "159865.SZ",
+        "name": "养殖ETF国泰",
         "weight": 1.0
       }
     ],
     "diagnostics": {
       "mode": "offensive",
-      "selected": "513200.SH",
-      "entered": "",
-      "exited": "",
-      "exit_reasons": "",
-      "entry_eligible_count": 2,
+      "selected": "159865.SZ",
+      "entered": "159865.SZ",
+      "exited": "513200.SH",
+      "exit_reasons": "513200.SH:5日与20日排名同时下滑",
+      "entry_eligible_count": 3,
       "priority_entry_available": true,
       "holding_count": 1,
-      "opportunity_switch_candidate": "159865.SZ",
-      "opportunity_switch_score_gap": -0.1577604923779995,
+      "opportunity_switch_candidate": "",
+      "opportunity_switch_score_gap": null,
       "opportunity_switch_qualified": false,
       "opportunity_switch_streak": 0,
       "opportunity_switch_triggered": false,
