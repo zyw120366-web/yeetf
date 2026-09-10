@@ -1,6 +1,6 @@
 {
   "signal_date": "2026-09-09",
-  "status": "exception",
+  "status": "baseline_confirmed",
   "expected_orders": [
     {
       "side": "sell",
@@ -32,5 +32,15 @@
   "all_filled": false,
   "source": "用户2026-09-10明确确认：没有执行上一日换仓计划，一直持有港股通医药ETF易方达",
   "note": "用户确认9月10日未换仓；真实账户继续持有513200.SH 9,100股，未发生卖出或买入。",
-  "created_at_utc": "2026-09-10T07:13:27.749107+00:00"
+  "created_at_utc": "2026-09-10T09:00:56.357844+00:00",
+  "baseline_acceptance": {
+    "date": "2026-09-10",
+    "status": "confirmed",
+    "account_source": "results/live/account_state.json",
+    "account_confirmation_source": "用户2026-09-10明确确认：未执行9月10日换仓计划，真实账户继续持有513200.SH",
+    "account_as_of": "2026-09-10_close",
+    "account_symbol": "513200.SH",
+    "accepted_at_utc": "2026-09-10T09:00:56.358286+00:00",
+    "note": "原计划未成交记录完整保留；用户确认的真实账户被接受为后续执行基线。"
+  }
 }

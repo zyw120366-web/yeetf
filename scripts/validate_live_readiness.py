@@ -16,6 +16,7 @@ from etf_rotation.data import load_panel
 from etf_rotation.sentiment_ai import review_protocol_fingerprints
 
 AUDIT = ROOT / "results" / "ye_strategy" / "trade_audit.json"
+RECONCILED_EXECUTION_STATUSES = {"confirmed", "assumed_authorized", "baseline_confirmed"}
 
 
 def previous_execution_is_reconciled(date: str) -> bool:
@@ -31,7 +32,10 @@ def previous_execution_is_reconciled(date: str) -> bool:
     reconciliation = ROOT / "results" / "audit" / f"{plan_path.name[:10]}_execution_reconciliation.json"
     if not reconciliation.exists():
         return False
-    return json.loads(reconciliation.read_text(encoding="utf-8")).get("status") in {"confirmed", "assumed_authorized"}
+    return (
+        json.loads(reconciliation.read_text(encoding="utf-8")).get("status")
+        in RECONCILED_EXECUTION_STATUSES
+    )
 
 
 def main() -> None:
