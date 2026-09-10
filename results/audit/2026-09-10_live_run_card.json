@@ -11,7 +11,7 @@
   },
   "signal_date": "2026-09-10",
   "execute": "下一交易日开盘",
-  "created_at_utc": "2026-09-10T09:27:48.434600+00:00",
+  "created_at_utc": "2026-09-10T10:16:35.057415+00:00",
   "decision": {
     "current_symbol": "513200.SH",
     "target_symbol": "159985.SZ",
@@ -168,9 +168,9 @@
   },
   "audit": {
     "run_manifest": "results/audit/2026-09-10_run_manifest.json",
-    "run_manifest_sha256": "08d260462702b091b8b53cc1b9144f3a613157464782e787a6f471a466263955",
+    "run_manifest_sha256": "6d7bcc0a2fc6537ca7bbfc502d3c73e7caf01dc361fd47f3eddc11d7381a5706",
     "critical_file_count": 24,
-    "source_file_count": 24,
+    "source_file_count": 25,
     "price_file_count": 59
   },
   "execution_reconciliation": {

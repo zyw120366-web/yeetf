@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import sys
 from pathlib import Path
 
@@ -11,12 +12,14 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT))
 
 from etf_rotation.backtest import run_backtest
 from etf_rotation.data import load_panel, symbol_key, universe_keys
 from etf_rotation.execution import execution_project, period_metrics
 from etf_rotation.sentiment import load_sentiment_matrices
 from etf_rotation.ye import build_ye_signals
+from scripts.build_sentiment_features import source_regimes
 
 
 FEATURES = ROOT / "market_data" / "sentiment" / "features" / "symbol_daily.csv"
@@ -91,6 +94,7 @@ def main() -> None:
     symbols = universe_keys(market)
     categories = {symbol_key(item): item["category"] for item in market["universe"]}
     calendar = panel["close"].index
+    regimes = source_regimes(calendar[(calendar >= pd.Timestamp(market["project"]["backtest_start"]))])
     sentiment, available = load_sentiment_matrices(FEATURES, calendar, symbols)
     start = str(market["project"]["backtest_start"])
     end = str(market["project"]["data_end"])
@@ -155,11 +159,30 @@ def main() -> None:
         "status": "research_only",
         "generated_through": end,
         "comparison_start": start,
-        "ai_attribution_window": ["2024-01-01", end],
+        "sentiment_comparison_window": ["2024-01-01", end],
         "same_data_cost_and_execution": True,
         "daily_execution_impact": "none",
         "variants": clean(metrics.to_dict(orient="records")),
+        "source_regimes": [
+            {"regime": label, "dates": len(group), "start": str(group["date"].min().date()),
+             "end": str(group["date"].max().date())}
+            for label, group in regimes.groupby("regime", sort=False)
+        ],
         "interpretation_rule": "只比较同日期组件增量；结果不自动修改正式策略。",
+    }
+    phase_rows = []
+    for phase in payload["source_regimes"]:
+        for variant, curve in equity.items():
+            values = period_metrics(curve, phase["start"], phase["end"], capital)
+            # The short AI window is not evidence of annualized ability.
+            if phase["regime"] == "ai_review":
+                values = {key: values[key] for key in ("total_return", "max_drawdown")}
+            phase_rows.append({"variant": variant, **phase,
+                               **values})
+    payload["regime_performance"] = clean(phase_rows)
+    payload["input_sha256"] = {
+        str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in [FEATURES, ROOT / "config/ye_strategy.yaml", ROOT / "config/market.yaml", Path(__file__)]
     }
     (OUTPUT / "summary.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -176,16 +199,34 @@ def main() -> None:
     markdown = "\n".join([
         "# ye 策略组件消融",
         "",
-        "四个版本使用同一日期、ETF数据、成本和次日开盘执行模型；2024年前保持相同的历史缺失期回退规则。",
+        f"截止{end}。四个版本使用同一日期、ETF数据、成本和次日开盘执行模型；2024年前保持相同的历史缺失期回退规则。机会换仓在所有版本保持相同配置。",
         "",
         *table_lines,
         "",
-        "当前样本中，新趋势/质量延伸提供了主要机械增量；弱边缘过滤单独使用降低收益，热点退出保护略降收益并改善回撤。",
-        "这些结果仍来自2024年以来同一强行情样本，只用于归因，不构成独立样本证明，也不会自动修改正式策略。",
+        *component_effects(payload["variants"]),
+        "",
+        "以上为按固定顺序添加组件的条件增量，不代表组件的独立因果效果，也不代表当前AI能力。",
+        "",
+        "## 数据制度与分段收益",
+        "",
+        "| 计算口径 | 区间 | 日期数 | 版本 | 区间收益 | 最大回撤 |",
+        "|---|---|---:|---|---:|---:|",
+        *[f"| {row['regime']} | {row['start']}—{row['end']} | {row['dates']} | {VARIANTS[row['variant']]['label']} | {row['total_return']:.2%} | {row['max_drawdown']:.2%} |" for row in phase_rows],
+        "",
+        "price_fallback=价格回退；keyword_proxy=历史关键词代理；ai_review=逐条AI审核。区间收益包含此前策略持仓的延续，不是每段重新空仓投资；短期AI段不年化、不称独立样本。历史已反复观察，研究不会自动修改正式策略。",
         "",
     ])
     (OUTPUT / "summary.md").write_text(markdown, encoding="utf-8")
     print(json.dumps(payload, ensure_ascii=False, indent=2))
+
+
+def component_effects(rows: list[dict]) -> list[str]:
+    effects = []
+    for prior, current in zip(rows, rows[1:]):
+        delta = (current["return_since_2024"] - prior["return_since_2024"]) * 100
+        risk = (current["max_drawdown_since_2024"] - prior["max_drawdown_since_2024"]) * 100
+        effects.append(f"- {prior['label']} → {current['label']}：2024年以来累计收益差{delta:+.2f}个百分点，最大回撤差{risk:+.2f}个百分点（正值表示回撤减轻）。")
+    return effects
 
 
 if __name__ == "__main__":

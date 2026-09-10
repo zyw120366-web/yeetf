@@ -22,6 +22,7 @@ live_audit:
   require_run_card: true
   require_previous_execution_reconciliation: true
   plan_is_not_fill: true
+  release_scope: READY放行完整计划；SELL_ONLY仅放行独立校验并绑定哈希的现有持仓卖单、随后持有现金；BLOCKED不放行
   actual_fill_source: 用户或券商成交回单确认；用户常设授权启用时可按计划假定完整成交，实际回单优先覆盖
   account_state_path: results/live/account_state.json
   account_state_rule: 实盘仓位只来自用户或券商确认或常设执行授权；历史回测影子持仓不得代替
@@ -39,6 +40,10 @@ research_review:
   monthly_entry: experiments/monthly_live_review.py
   output: results/research/
 change_history:
+  - date: '2026-09-10'
+    approved_by: user
+    scope: 执行异常安全发布和研究证据口径修复；只卖不买的独立风险校验、三种历史数据制度披露、动态组件归因
+    unchanged: 正式策略标识、ETF池、买卖阈值、仓位、成本、AI审核强度；排名退出候选未通过且未晋升
   - date: '2026-07-29'
     approved_by: user
     scope: 新增核心ETF机会成本换仓；旧仓掉出前5、完整合格核心候选动量分领先至少5个百分点、同一候选连续2日、旧仓持有满5日后，下一开盘全仓换仓

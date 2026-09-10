@@ -38,6 +38,13 @@ def main() -> None:
             execute(args)
         except Exception as exc:
             publish_blocked(ROOT, args.date, f"{type(exc).__name__}: {exc}")
+            from etf_rotation.risk_release import publish_sell_only
+            try:
+                if publish_sell_only(ROOT, args.date, str(exc)):
+                    print("SELL_ONLY：仅风险卖出放行，禁止新买入")
+                    return
+            except Exception as risk_exc:
+                publish_blocked(ROOT, args.date, f"完整运行失败：{exc}；独立卖出发布失败：{risk_exc}")
             raise SystemExit(2) from exc
 
 

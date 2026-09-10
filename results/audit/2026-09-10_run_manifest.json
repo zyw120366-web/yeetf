@@ -1,7 +1,7 @@
 {
   "strategy": "ye 策略",
   "signal_date": "2026-09-10",
-  "created_at_utc": "2026-09-10T09:27:48.371766+00:00",
+  "created_at_utc": "2026-09-10T10:16:34.651822+00:00",
   "python": "3.13.6",
   "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
   "critical_files": [
@@ -32,8 +32,8 @@
     },
     {
       "path": "config/strategy_governance.yaml",
-      "bytes": 2965,
-      "sha256": "135c4c5522ebd1aff9488c2e0a35454852e88f05912fc25fb6bc7a4d6dfdb1db"
+      "bytes": 3448,
+      "sha256": "9aba4125dca9bc6ca7627f03a927135634da6206200662a9b70f9fb3a560f82f"
     },
     {
       "path": "config/research_hypotheses.yaml",
@@ -107,8 +107,8 @@
     },
     {
       "path": "dashboard/public/ye-strategy.html",
-      "bytes": 20107,
-      "sha256": "ea335edd849221bfe343424ccb233212d67119353f73b493b99a6025e9534b47"
+      "bytes": 20662,
+      "sha256": "40dbed18a9039a8530a6dd13abd7d2c7050e6f371bcdfa126679ab28f9f098ab"
     },
     {
       "path": "dashboard/public/ye-daily.html",
@@ -117,8 +117,8 @@
     },
     {
       "path": "dashboard/public/ye-backtest.html",
-      "bytes": 2235292,
-      "sha256": "3792da9195ed7964fec3cb17da8c49ed03ca95516a74e475d6625b70ff1d5be4"
+      "bytes": 2235846,
+      "sha256": "e2bc0e5085d427eedea57e236ec99e8fef97dce6c4731c8c7ece1c7d3a9b9371"
     },
     {
       "path": "results/audit/2026-09-09_execution_reconciliation.json",
@@ -139,8 +139,8 @@
     },
     {
       "path": "src/etf_rotation/data.py",
-      "bytes": 6968,
-      "sha256": "fadb4e1a8af71c1fee03686e53c17e2c2175d614e8d30494bc59e5eed0bc9b85"
+      "bytes": 6983,
+      "sha256": "8884d5bc5269af13a07d1681197e403678f0ff1bc8f3c436bcc24804a1bd8385"
     },
     {
       "path": "src/etf_rotation/etfwin.py",
@@ -159,13 +159,18 @@
     },
     {
       "path": "src/etf_rotation/live.py",
-      "bytes": 14951,
-      "sha256": "38790e3d9861d5836ead59ad78bee11c3de0e7b19a6b1d94f2e3b9f3d75963a8"
+      "bytes": 15351,
+      "sha256": "bc2da800c96b2ee73f835bd775e11d0b59578b02cb3281742696a49f5d60618c"
+    },
+    {
+      "path": "src/etf_rotation/risk_release.py",
+      "bytes": 10702,
+      "sha256": "bff2199a11ffd1f056d189e05e58b3ba0fb570c95e2a5d0549bb4aa1d4792f6b"
     },
     {
       "path": "src/etf_rotation/sentiment.py",
-      "bytes": 1071,
-      "sha256": "e3f64a1f10eafdc931d3faa9698c6de9e018a406ceaaec50a321583c4c230d9c"
+      "bytes": 1320,
+      "sha256": "92339a3958b90ba7231f840aa91ae59bb4ebe7d36610d6e92932f42a3b761239"
     },
     {
       "path": "src/etf_rotation/sentiment_ai.py",
@@ -189,8 +194,8 @@
     },
     {
       "path": "scripts/build_sentiment_features.py",
-      "bytes": 7897,
-      "sha256": "61d7a0f27e779be47dacf8d65585bd6d74b5edf1e9cb252ca8c30995228c3693"
+      "bytes": 9042,
+      "sha256": "3ebe7596d9383419e86eb2ed9e105e8b5eff067415dac510a8f13ad71320d4c8"
     },
     {
       "path": "scripts/build_trade_audit.py",
@@ -204,8 +209,8 @@
     },
     {
       "path": "scripts/validate_live_readiness.py",
-      "bytes": 13544,
-      "sha256": "507fc44d8e2c3dc91e1bcac12e5db2c1d29ed85b7498908d68af39f5a637ff29"
+      "bytes": 13594,
+      "sha256": "99824c810b88a3a0ee53f4851465b40a54d10fec5fbcc3b3bfbdb46415339b58"
     },
     {
       "path": "scripts/build_daily_reference_report.py",
@@ -239,13 +244,13 @@
     },
     {
       "path": "scripts/run_after_close.py",
-      "bytes": 3678,
-      "sha256": "29992b1725ce3ecc2675d77da5578f90fe356f2a91ab32d7002cf23fd6520186"
+      "bytes": 4098,
+      "sha256": "82a3bd8a184c64132f15e97648f2acacb573bdeb965b5b0e97c12f8ab227b982"
     },
     {
       "path": "dashboard/scripts/build_ye_strategy_html.py",
-      "bytes": 107518,
-      "sha256": "077267dae2cc66f06b68f1c834ff2831790543590fd7e4579e43dcf6b466f48d"
+      "bytes": 109411,
+      "sha256": "21fa29ed0b04e89d64ba65eaa2a43511ed55315468fa1c7282b850aa31052071"
     }
   ],
   "price_files": [
@@ -547,7 +552,7 @@
   ],
   "counts": {
     "critical_files": 24,
-    "source_files": 24,
+    "source_files": 25,
     "price_files": 59
   }
 }

@@ -19,6 +19,13 @@ def load_sentiment_matrices(
     """Load reviewed daily sentiment features without inventing missing days."""
 
     frame = pd.read_csv(path)
+    return sentiment_matrices_from_frame(frame, calendar, symbols)
+
+
+def sentiment_matrices_from_frame(
+    frame: pd.DataFrame, calendar: pd.DatetimeIndex, symbols: list[str]
+) -> tuple[dict[str, pd.DataFrame], pd.Series]:
+    frame = frame.copy()
     frame["date"] = pd.to_datetime(frame["date"])
     matrices = {
         field: frame.pivot(index="date", columns="symbol", values=field).reindex(

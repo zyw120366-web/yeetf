@@ -392,6 +392,15 @@ def build_daily_page() -> str:
     )
     plan = json.loads(plan_path.read_text(encoding="utf-8")) if plan_path.exists() else {}
     readiness = json.loads(readiness_path.read_text(encoding="utf-8")) if readiness_path.exists() else {}
+    if readiness.get("status") == "SELL_ONLY" and readiness.get("signal_date") == date:
+        from etf_rotation.live import validate_authorized_plan, blocked_html
+        from etf_rotation.risk_release import sell_only_html
+        try:
+            account = json.loads((PROJECT / "results/live/account_state.json").read_text())
+            validate_authorized_plan(PROJECT, plan, account, date)
+            return sell_only_html(date, plan, "；".join(readiness.get("blocking_items", [])))
+        except Exception as exc:
+            return blocked_html(date, [f"仅卖出计划核验失败：{exc}"], plan.get("account_state", {}))
     if readiness.get("status") != "READY" or readiness.get("signal_date") != date:
         from etf_rotation.live import blocked_html
         return blocked_html(date, readiness.get("blocking_items") or ["本次检查未通过或日期不一致"], plan.get("account_state", {}))
@@ -824,6 +833,20 @@ def build_daily_page() -> str:
     return page("ye 策略今日日报", "daily", "今日日报", f"信号日 {date} 收盘后生成 · 供下一交易日开盘执行参考", "每日更新", body)
 
 
+def historical_source_note() -> str:
+    summary_path = PROJECT / "market_data/sentiment/features/summary.json"
+    summary = json.loads(summary_path.read_text()) if summary_path.exists() else {}
+    phases = summary.get("source_regimes", {})
+    labels = {"keyword_proxy": "历史关键词代理", "ai_review": "逐条AI审核"}
+    descriptions = [f"{labels[key]}：{value['first_date']}至{value['last_date']}（{value['dates']}个数据日）"
+                    for key, value in phases.items() if key in labels]
+    detail = "；".join(descriptions) or "数据来源阶段尚未生成，不能推断AI有效区间"
+    return ('<section class="section"><article class="card callout"><h3>回测含三种数据口径，不是多年AI实绩</h3>'
+            '<p>无资讯的早期区间使用价格回退；之后分别使用历史关键词代理与逐条AI审核。'
+            + html_lib.escape(detail) + '。关键词效果不能归功于AI；AI段样本很短，不能证明长期增益。'
+            '整条曲线为历史模拟，不是你的真实账户收益，也不是未来收益承诺。</p></article></section>')
+
+
 def build_strategy_page() -> str:
     market = yaml.safe_load((PROJECT / "config" / "market.yaml").read_text(encoding="utf-8"))
     data_end = str(market["project"]["data_end"])
@@ -851,6 +874,7 @@ def build_strategy_page() -> str:
 <section class="section"><div class="section-title"><h2>AI、资讯和市场判断的边界</h2><span>这里最容易被误解</span></div><div class="truth-grid"><article class="card truth"><span class="num">资讯完整性</span><h3>全部行必须审核</h3><p>漏审、重复、来源失败或覆盖不足100%，一律禁止新开仓；已有仓位的价格卖出仍执行。</p></article><article class="card truth"><span class="num">AI的作用</span><h3>确认指定路径，不凭新闻造趋势</h3><p>热点指标用于弱边缘、新趋势、质量延伸和软退出保护，但不能改变核心优先级。正式规则没有统一“负面风险阈值”否决所有常规买点。</p></article><article class="card truth"><span class="num">全市场趋势</span><h3>没有独立大盘开关</h3><p>策略判断单只ETF趋势和主题热点；不要求沪深300站上均线，也没有risk-on/risk-off或防守ETF切换。</p></article></div></section>
 <section class="section"><div class="section-title"><h2>指标翻译</h2><span>读日报时只需理解这五项</span></div><div class="card table-wrap"><table class="simple execution-table"><thead><tr><th>指标</th><th>白话含义</th><th>用途</th></tr></thead><tbody><tr><td>ROC20 / ROC60</td><td>过去20日、60日涨跌幅。</td><td>构成核心动量分，也参与买卖门槛。</td></tr><tr><td>MA120乖离</td><td>当前价格离120日均线有多远。</td><td>判断长期趋势和是否追得过高。</td></tr><tr><td>R²20</td><td>最近20日趋势是否平滑、连贯。</td><td>只用于新趋势和质量延伸。</td></tr><tr><td>效率20</td><td>净涨幅相对每日波动总和的比例。</td><td>排除来回震荡造成的假趋势。</td></tr><tr><td>热点评分 / DDE</td><td>主题强势股数量、加速程度和资金方向的结构化结果。</td><td>只确认指定例外和软退出保护。</td></tr></tbody></table></div></section>
 <section class="section"><article class="card callout"><h3>历史缺失期与实盘不同</h3><p>早期回测没有完整资讯时，只允许常规基础排名前3、且同主题ROC20为正比例≥75%的候选；强持仓还可按价格条件保护软退出。这个回退只用于历史复现。实盘资讯审核不完整时直接禁止新开仓。</p></article></section>
+{historical_source_note()}
 <section class="section"><div class="section-title"><h2>ye 与 etfwin 规则对照</h2><span>etfwin 为公开指南的本地量化代理，仅作对照</span></div><div class="card table-wrap"><table class="simple execution-table"><thead><tr><th>项目</th><th>ye 策略</th><th>etfwin 参考策略</th></tr></thead><tbody><tr><td>ETF 池</td><td>45只核心＋6只卫星；核心冠军优先，卫星只补空档</td><td>公开指南对应的固定 20 只参考池</td></tr><tr><td>核心评分</td><td>ROC20 + 1.5 × ROC60</td><td>ROC20 + 1.5 × ROC60</td></tr><tr><td>通常买入</td><td>前 5、双 ROC 为正、MA120 上方、乖离≤9%</td><td>前 5、双 ROC 为正、MA120 上方、乖离≤15%</td></tr><tr><td>增强判断</td><td>主题广度、AI弱边缘、新趋势、质量延伸、热点保护与严格机会换仓</td><td>无本地增强模块</td></tr><tr><td>卖出 / 换仓</td><td>原三项退出；另有前5外＋领先5点＋连续2日＋持有5日的核心换仓</td><td>MA120破位 / ROC20转负 / 5日与20日排名双降</td></tr><tr><td>仓位与执行</td><td>一只 ETF 或现金；T+1 开盘</td><td>同样按一只 ETF 或现金、T+1 开盘重建对照</td></tr></tbody></table></div></section>
 <section class="section"><div class="section-title"><h2>同口径回测</h2><span>2018-07-02 至 {data_end} · 初始资金 10 万元</span></div><div class="card kpis"><div class="kpi"><span class="label">ye 累计收益</span><strong class="value positive">{pct(ym['total_return'])}</strong></div><div class="kpi"><span class="label">etfwin 累计收益</span><strong class="value">{pct(rm['total_return'])}</strong></div><div class="kpi"><span class="label">ye 年化</span><strong class="value positive">{pct(ym['cagr'])}</strong></div><div class="kpi"><span class="label">etfwin 年化</span><strong class="value">{pct(rm['cagr'])}</strong></div></div><div class="card table-wrap" style="margin-top:10px"><table class="simple"><thead><tr><th>指标/区间</th><th>ye</th><th>etfwin</th></tr></thead><tbody><tr><td>最大回撤</td><td>{pct(ym['max_drawdown'])}</td><td>{pct(rm['max_drawdown'])}</td></tr><tr><td>夏普比率</td><td>{ym['sharpe']:.2f}</td><td>{rm['sharpe']:.2f}</td></tr><tr><td>失败操作率</td><td>{pct(ye['timing']['failed_operation_rate'])}</td><td>{pct(reference['timing']['failed_operation_rate'])}</td></tr>{period_rows}</tbody></table></div></section>
 <section class="section"><article class="card callout"><h3>成本与回测口径</h3><p>普通 ETF 单边固定成本 0.15%，QDII/溢价敏感 ETF 单边固定成本 0.30%，每笔最低佣金 5 元。两套策略使用同一日线快照、同一 T+1 开盘成交逻辑和同一成本模型。超过统一流动性参与上限时只做机械子订单拆分，不代表策略重复发出买卖信号。</p></article></section>'''
@@ -899,6 +923,7 @@ def main() -> None:
         .replace("2026-07-17", data_end)
         .replace("__DATA__", data)
     )
+    backtest_html = backtest_html.replace('</main>', historical_source_note() + '</main>', 1)
     PUBLIC_HTML.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_HTML.parent.mkdir(parents=True, exist_ok=True)
     PUBLIC_HTML.write_text(strategy_html, encoding="utf-8")

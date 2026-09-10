@@ -22,8 +22,9 @@ AUDIT = ROOT / "results" / "ye_strategy" / "trade_audit.json"
 RECONCILED_EXECUTION_STATUSES = {"confirmed", "assumed_authorized", "baseline_confirmed"}
 
 
-def previous_execution_is_reconciled(date: str) -> bool:
-    plans = sorted((ROOT / "results" / "live").glob("*_order_plan.json"))
+def previous_execution_is_reconciled(date: str, root: Path | None = None) -> bool:
+    root = root or ROOT
+    plans = sorted((root / "results" / "live").glob("*_order_plan.json"))
     previous = [path for path in plans if path.name[:10] < date]
     if not previous:
         return True
@@ -32,12 +33,12 @@ def previous_execution_is_reconciled(date: str) -> bool:
     requires_confirmation = any(item["side"] in {"buy", "sell"} for item in plan["actions"])
     if not requires_confirmation:
         return True
-    reconciliation = ROOT / "results" / "audit" / f"{plan_path.name[:10]}_execution_reconciliation.json"
+    reconciliation = root / "results" / "audit" / f"{plan_path.name[:10]}_execution_reconciliation.json"
     if not reconciliation.exists():
         return False
     record = json.loads(reconciliation.read_text(encoding="utf-8"))
     if record.get("status") == "baseline_confirmed":
-        account = json.loads((ROOT / "results/live/account_state.json").read_text(encoding="utf-8"))
+        account = json.loads((root / "results/live/account_state.json").read_text(encoding="utf-8"))
         baseline = record.get("baseline_acceptance", {})
         return baseline.get("date") == date and baseline.get("account_sha256") == fingerprint(account)
     if record.get("status") not in RECONCILED_EXECUTION_STATUSES:
@@ -46,7 +47,7 @@ def previous_execution_is_reconciled(date: str) -> bool:
         validate_fills({"signal_date": record.get("signal_date"), "fills": record.get("actual_fills", [])}, plan, plan_path.name[:10])
         if not all(row.get("status") == "filled" for row in record["actual_fills"]):
             return False
-        account = json.loads((ROOT / "results/live/account_state.json").read_text(encoding="utf-8"))
+        account = json.loads((root / "results/live/account_state.json").read_text(encoding="utf-8"))
         buys = [row for row in record["actual_fills"] if row["side"] == "buy"]
         positions = account.get("positions", [])
         if buys:

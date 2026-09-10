@@ -145,8 +145,15 @@ def validate_authorized_plan(root: Path, plan: dict, account: dict, prior: str) 
     """Never apply a draft, a changed plan or an existing execution twice."""
     card_path = root / "results" / "audit" / f"{prior}_live_run_card.json"
     card = json.loads(card_path.read_text(encoding="utf-8"))
-    if card.get("signal_date") != prior or card.get("release", {}).get("readiness") != "READY":
+    release = card.get("release", {}).get("readiness")
+    if card.get("signal_date") != prior or release not in {"READY", "SELL_ONLY"}:
         raise ValueError("上一计划未放行，禁止假定成交")
+    if release == "SELL_ONLY":
+        actions = plan.get("actions", [])
+        if (not actions or any(x.get("side") != "sell" for x in actions)
+                or plan.get("target_symbol") is not None
+                or card.get("decision", {}).get("actions") != actions):
+            raise ValueError("仅卖出放行不允许任何买单或目标仓位")
     if plan.get("signal_date") != prior or card.get("decision", {}).get("target_symbol") != plan.get("target_symbol"):
         raise ValueError("计划日期或目标与运行卡不一致")
     manifest = json.loads((root / card["audit"]["run_manifest"]).read_text(encoding="utf-8"))

@@ -71,7 +71,7 @@ def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
     completed = []
     for card_path in cards:
         card = json.loads(card_path.read_text(encoding="utf-8"))
-        if (card.get("release", {}).get("readiness") == "READY"
+        if (card.get("release", {}).get("readiness") in {"READY", "SELL_ONLY"}
                 and card_path.name[:10] <= complete_through.isoformat()):
             completed.append(card_path.name[:10])
     frozen_through = completed[-1] if completed else "1900-01-01"
