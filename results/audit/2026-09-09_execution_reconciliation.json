@@ -1,21 +1,36 @@
 {
   "signal_date": "2026-09-09",
-  "status": "assumed_authorized",
-  "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
+  "status": "exception",
+  "expected_orders": [
+    {
+      "side": "sell",
+      "symbol": "513200.SH"
+    },
+    {
+      "side": "buy",
+      "symbol": "159865.SZ"
+    }
+  ],
   "actual_fills": [
     {
       "side": "sell",
       "symbol": "513200.SH",
-      "status": "filled",
-      "quantity": 9100.0,
-      "price": 1.0521514476895333
+      "status": "cancelled",
+      "quantity": 0,
+      "price": 0
     },
     {
       "side": "buy",
       "symbol": "159865.SZ",
-      "status": "filled",
-      "quantity": 16700,
-      "price": 0.5706839928388596
+      "status": "cancelled",
+      "quantity": 0,
+      "price": 0
     }
-  ]
+  ],
+  "confirmation_status": "complete",
+  "matched_plan": true,
+  "all_filled": false,
+  "source": "用户2026-09-10明确确认：没有执行上一日换仓计划，一直持有港股通医药ETF易方达",
+  "note": "用户确认9月10日未换仓；真实账户继续持有513200.SH 9,100股，未发生卖出或买入。",
+  "created_at_utc": "2026-09-10T07:13:27.749107+00:00"
 }

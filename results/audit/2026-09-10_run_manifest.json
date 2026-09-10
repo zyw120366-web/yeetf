@@ -1,7 +1,7 @@
 {
   "strategy": "ye 策略",
   "signal_date": "2026-09-10",
-  "created_at_utc": "2026-09-10T07:06:46.107319+00:00",
+  "created_at_utc": "2026-09-10T07:14:50.012876+00:00",
   "python": "3.13.6",
   "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
   "critical_files": [
@@ -82,18 +82,18 @@
     },
     {
       "path": "results/live/account_state.json",
-      "bytes": 2066,
-      "sha256": "a6205c01b970155216e0aaa977d50d6c1e6879cd64ce7c63ae182854fba880c9"
+      "bytes": 1701,
+      "sha256": "2859eb87e784c41fae8bb52be95ed66d9020c5583cac56260abb782053506e2c"
     },
     {
       "path": "results/live/2026-09-10_order_plan.json",
-      "bytes": 4765,
-      "sha256": "431a71399becfa9b6c15c45689010a811f1edcfb636fe6e2ef8b9d635f5fb5ef"
+      "bytes": 6281,
+      "sha256": "9597eaa696e85ef397bb0e9826b9fcfc1610601620eb7d478f4a079077e88abd"
     },
     {
       "path": "results/live/readiness_report.json",
-      "bytes": 1006,
-      "sha256": "49a1ea889cd0ad3a13017a40cafc20079b741221cd72818c391a85beec32ceba"
+      "bytes": 1048,
+      "sha256": "92ebe5456ecae2740432a5fd225b5cbb93358cee7d6ea5933fcbaf22fe49a786"
     },
     {
       "path": "dashboard/public/ye-strategy.html",
@@ -102,8 +102,8 @@
     },
     {
       "path": "dashboard/public/ye-daily.html",
-      "bytes": 38331,
-      "sha256": "b16d8dc1359e770d994273b397c8ed03ce610ffce38cb5b1a3335a09e4e4e983"
+      "bytes": 38129,
+      "sha256": "364b6dd76aca9f3857f58ca547631d2030f33d2d06993bba999b8d21635be57f"
     },
     {
       "path": "dashboard/public/ye-backtest.html",
