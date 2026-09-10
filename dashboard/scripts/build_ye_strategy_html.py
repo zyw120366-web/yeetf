@@ -392,6 +392,9 @@ def build_daily_page() -> str:
     )
     plan = json.loads(plan_path.read_text(encoding="utf-8")) if plan_path.exists() else {}
     readiness = json.loads(readiness_path.read_text(encoding="utf-8")) if readiness_path.exists() else {}
+    if readiness.get("status") != "READY" or readiness.get("signal_date") != date:
+        from etf_rotation.live import blocked_html
+        return blocked_html(date, readiness.get("blocking_items") or ["本次检查未通过或日期不一致"], plan.get("account_state", {}))
     actions = plan.get("actions", []) or []
     first_action = actions[0] if actions else {}
     sides = [item.get("side") for item in actions]
@@ -413,6 +416,10 @@ def build_daily_page() -> str:
     target_name = str(target_match.iloc[0]["name"]) if not target_match.empty else "现金"
     review = plan.get("ai_review", plan.get("sentiment_review", {})) or {}
     account = plan.get("account_state", {}) or {}
+    basis = plan.get("decision_basis", {})
+    rankings["live_cooldown_blocked"] = rankings["symbol"].isin(basis.get("live_cooldown_blocked_symbols", []))
+    if "live_eligible_symbols" in basis:
+        rankings["final_entry_pass"] = rankings["symbol"].isin(basis["live_eligible_symbols"])
     orders = plan.get("execution", {}).get("orders", []) or []
     buy_order = next((item for item in orders if item.get("side") == "buy"), {})
     buy_estimate = buy_order.get("buy_estimate", {}) or {}

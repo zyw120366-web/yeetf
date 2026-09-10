@@ -18,7 +18,7 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
 - `config/strategy_governance.yaml` 定义正式冻结与放行边界；`config/research_hypotheses.yaml` 只登记独立研究，不产生任何日常信号。
 - 只使用信号日收盘数据，于下一交易日开盘执行。目标只能是现金 0% 或单一 ETF 100%。不加仓、减仓、网格、主观覆盖或分批止盈。
 - 所有资讯审核均在当前 Codex 对话中完成；不要求也不使用 `OPENAI_API_KEY`。用户可以直接要求逐条解释。
-- 用户于2026-08-06授予常设执行授权：未另行报告时，视为完整执行上一交易日的开盘计划。日线更新后先运行 `PYTHONPATH=src python3 scripts/advance_authorized_live_account.py --date YYYY-MM-DD`，以当日实际开盘价和固定成本记账；券商回单、手工成交、出入金或未完成订单一旦报告，立即覆盖该假定记录。回测影子持仓始终不得代替真实账户。
+- 用户于2026-08-06授予常设执行授权：未另行报告时，视为完整执行上一交易日已放行的开盘计划。正式入口内置账户推进，以当日不复权开盘价和固定成本记账；无需另外调用推进脚本。券商回单、手工成交、出入金或未完成订单一旦报告，立即优先处理；回测影子持仓始终不得代替真实账户。
 - 常设授权只适用于上一日运行卡为`READY`且明确可执行的计划。若上一日为`BLOCKED`、计划正文写明不得执行，或对账状态为`pending`/`exception`，不得调用账户推进脚本执行买卖；必须保留真实原持仓并报告阻断，等待用户或券商事实。
 - 严格区分正式策略与任何研究项目：正式流程不得运行 `research_*`、`summarize_*`、候选筛选或其他策略脚本。
 
@@ -32,7 +32,7 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
    PYTHONPATH=src python3 scripts/reconcile_actual_fills.py --date 上一信号日
    ```
 
-   未提供成交确认时，明确标记“待确认”，不得把计划当作持仓；后续 `READY` 会禁止新增仓位。
+   没有新报告时按常设授权由正式入口核验上一计划后记账，明确标记假定执行；有实际成交、取消或异常记录时不得自动覆盖，先处理事实。不要每天重复要求用户确认。
 
    若用户明确确认上一计划全部取消或未成交，同时确认了当前账户持仓、现金、权益和无待处理订单，并明确要求从该真实账户继续运行，则保留原取消记录并接受当前账户为新的审计基线：
 
@@ -50,11 +50,7 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
    PYTHONPATH=src python3 scripts/export_sentiment_review_queue.py --date YYYY-MM-DD
    ```
 
-   随后在常设执行授权下运行：
-
-   ```sh
-   PYTHONPATH=src python3 scripts/advance_authorized_live_account.py --date YYYY-MM-DD
-   ```
+   行情刷新同时保存不复权实盘报价。未完成的当日数据可以重采；已放行历史信号价格保持冻结。账户估值、成交假定和买入数量估算不得使用历史复权缩放价格。
 
 2. 读取 `market_data/sentiment/review_queue/YYYY-MM-DD.json`。逐行审核，包含无关资讯；保留原始 `source_hash`，不得合并、漏审、重复或补造。按 [审核草稿格式](references/review-schema.md) 用 `apply_patch` 写入 `market_data/sentiment/manual_drafts/YYYY-MM-DD.json`。
 
@@ -66,7 +62,7 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
    PYTHONPATH=src python3 scripts/commit_manual_sentiment_review.py --date YYYY-MM-DD --reviews market_data/sentiment/manual_drafts/YYYY-MM-DD.json
    ```
 
-4. 运行唯一正式入口。它会更新当天数据截止日、重建正式回测/信号、交易审计、订单计划、日报、三个 HTML、上线检查、SHA-256 清单与每日运行卡：
+4. 运行唯一正式入口。它先在互斥锁内推进或重估账户，再更新数据截止日、重建正式回测/信号、交易审计与订单；校验通过后发布日报、三个 HTML、SHA-256 清单与运行卡。失败也发布当天明确标识的阻断日报和运行卡，不保留旧页面冒充成功：
 
    ```sh
    PYTHONPATH=src python3 scripts/run_after_close.py --date YYYY-MM-DD --skip-collect
@@ -106,6 +102,9 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
 
 - `readiness_report.json` 的状态为 `READY`；
 - `ai_review_complete=true`，且审核状态为 `complete`、`coverage=1.0`、输入条数等于审核条数；
+- 资讯队列非空、必需来源成功，冻结原文哈希与逐条审核内容一致；不能只信任汇总的100%；
+- 账户现金、市值、权益可核算且按当日不复权收盘价估值；成交日期、正数数量和价格有效。基线确认必须绑定完整账户快照；
+- 实盘候选执行配置中的卖出后冷却期，不能直接把研究排名表的通过标记当最终买入资格；
 - 运行清单存在，且其中信号日期、价格快照、审核日期相互一致；
 - 每日运行卡存在，且策略标识、计划、审核覆盖率、运行清单哈希和放行状态相互一致；
 - 若上一份计划需要成交确认，对账结果必须为 `confirmed`、用户常设授权下的 `assumed_authorized`，或在上一计划全部取消且用户明确确认当前真实账户后生成的 `baseline_confirmed`。后两者必须在账户真源和日报中明确披露，券商回单优先覆盖。

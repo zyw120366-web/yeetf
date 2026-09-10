@@ -26,12 +26,18 @@
         "average_cost": 1.091,
         "market_price": 1.0329999923706055,
         "market_value": 9400.29993057251,
-        "unrealized_pnl": -527.8000694274906
+        "unrealized_pnl": -527.8000694274899
       }
     ],
     "pending_orders": []
   },
   "decision_basis": {
+    "live_cooldown_blocked_symbols": [],
+    "live_eligible_symbols": [
+      "159985.SZ",
+      "515220.SH",
+      "510880.SH"
+    ],
     "live_position_source": "results/live/account_state.json；不得使用回测持仓代替",
     "eligible_candidates": [
       {
@@ -136,7 +142,8 @@
           "quantity_rule": "下一交易日开盘按实际可用现金、实际开盘成交价、100份整数倍和最低佣金重新计算；估算数量不是预先成交。"
         }
       }
-    ]
+    ],
+    "release_required": true
   },
   "cost": "唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径",
   "cash_management": {

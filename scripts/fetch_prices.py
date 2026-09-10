@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 import yaml
+import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +23,10 @@ def main() -> None:
     )
     data_dir = ROOT / "market_data" / "prices"
     fetch_easy_tdx(config, data_dir, force=args.force)
+    from fetch_live_quotes import fetch
+    benchmark = config["benchmark"]
+    frame = pd.read_csv(data_dir / f"{benchmark['code']}.{benchmark['market']}.csv")
+    fetch(str(pd.to_datetime(frame["datetime"]).max().date()))
 
 
 if __name__ == "__main__":

@@ -40,6 +40,8 @@ def main() -> None:
         ROOT / "config" / "strategy_governance.yaml",
         ROOT / "config" / "research_hypotheses.yaml",
         ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json",
+        ROOT / "market_data" / "sentiment" / f"{args.date}.json",
+        ROOT / "market_data" / "live_quotes" / f"{args.date}.json",
         ROOT / "market_data" / "sentiment" / "features" / "symbol_daily.csv",
         ROOT / "results" / "ye_strategy" / "summary.json",
         ROOT / "results" / "ye_strategy" / "signal_weights.csv",
@@ -58,6 +60,11 @@ def main() -> None:
     if missing:
         raise FileNotFoundError("missing manifest inputs: " + ", ".join(map(str, missing)))
     price_files = sorted((ROOT / "market_data" / "prices").glob("*.csv"))
+    previous = sorted(p for p in (ROOT / "results/live").glob("*_order_plan.json") if p.name[:10] < args.date)
+    if previous:
+        rec = ROOT / "results/audit" / f"{previous[-1].name[:10]}_execution_reconciliation.json"
+        if rec.exists():
+            critical.append(rec)
     source_files = sorted((ROOT / "src" / "etf_rotation").glob("*.py")) + [
         ROOT / "run_strategies.py",
         ROOT / "scripts" / "build_sentiment_features.py",
@@ -67,6 +74,9 @@ def main() -> None:
         ROOT / "scripts" / "build_daily_reference_report.py",
         ROOT / "scripts" / "build_live_run_card.py",
         ROOT / "scripts" / "reconcile_actual_fills.py",
+        ROOT / "scripts" / "advance_authorized_live_account.py",
+        ROOT / "scripts" / "fetch_live_quotes.py",
+        ROOT / "scripts" / "fetch_prices.py",
         ROOT / "scripts" / "run_after_close.py",
         ROOT / "dashboard" / "scripts" / "build_ye_strategy_html.py",
     ]

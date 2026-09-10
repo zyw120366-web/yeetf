@@ -6,6 +6,8 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from etf_rotation.live import atomic_json, fingerprint, validate_account, validate_fills, live_lock
+
 
 ROOT = Path(__file__).resolve().parents[1]
 RECONCILED_STATUSES = {"confirmed", "not_required", "baseline_confirmed"}
@@ -32,6 +34,9 @@ def accept_confirmed_account_baseline(
     new starting point for subsequent plans.
     """
     records = report.get("actual_fills", [])
+    validate_account(account, baseline_date)
+    if baseline_date <= str(report.get("signal_date", "")):
+        raise ValueError("账户基线日必须晚于订单信号日")
     zero_fill_exception = (
         report.get("status") == "exception"
         and report.get("confirmation_status") == "complete"
@@ -66,6 +71,8 @@ def accept_confirmed_account_baseline(
         "account_source": account_source,
         "account_confirmation_source": account.get("source", "unknown"),
         "account_as_of": account.get("as_of"),
+        "account_snapshot": account,
+        "account_sha256": fingerprint(account),
         "account_symbol": (
             str(positive_positions[0].get("symbol")) if positive_positions else None
         ),
@@ -75,7 +82,7 @@ def accept_confirmed_account_baseline(
     return accepted
 
 
-def main() -> None:
+def reconcile() -> None:
     parser = argparse.ArgumentParser(description="Reconcile confirmed broker fills with a ye plan")
     parser.add_argument("--date", required=True, help="signal date of the order plan")
     parser.add_argument("--fills", type=Path, help="defaults to results/live/YYYY-MM-DD_actual_fills.json")
@@ -105,6 +112,7 @@ def main() -> None:
         }
     else:
         fills = json.loads(fills_path.read_text(encoding="utf-8"))
+        validate_fills(fills, plan, args.date)
         records = fills.get("fills", [])
         actual = [(str(item.get("side")), str(item.get("symbol"))) for item in records]
         statuses = {str(item.get("status")) for item in records}
@@ -140,9 +148,18 @@ def main() -> None:
     output_dir = ROOT / "results" / "audit"
     output_dir.mkdir(parents=True, exist_ok=True)
     output = output_dir / f"{args.date}_execution_reconciliation.json"
-    output.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    if output.exists() and not args.accept_account_baseline_date:
+        existing = json.loads(output.read_text(encoding="utf-8"))
+        if existing.get("status") == "baseline_confirmed" and existing.get("actual_fills") == report.get("actual_fills"):
+            report = existing
+    atomic_json(output, report)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     raise SystemExit(0 if report["status"] in RECONCILED_STATUSES else 2)
+
+
+def main() -> None:
+    with live_lock(ROOT):
+        reconcile()
 
 
 if __name__ == "__main__":

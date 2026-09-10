@@ -11,7 +11,7 @@
   },
   "signal_date": "2026-09-10",
   "execute": "下一交易日开盘",
-  "created_at_utc": "2026-09-10T09:01:17.908835+00:00",
+  "created_at_utc": "2026-09-10T09:27:48.434600+00:00",
   "decision": {
     "current_symbol": "513200.SH",
     "target_symbol": "159985.SZ",
@@ -55,12 +55,18 @@
         "average_cost": 1.091,
         "market_price": 1.0329999923706055,
         "market_value": 9400.29993057251,
-        "unrealized_pnl": -527.8000694274906
+        "unrealized_pnl": -527.8000694274899
       }
     ],
     "pending_orders": []
   },
   "decision_basis": {
+    "live_cooldown_blocked_symbols": [],
+    "live_eligible_symbols": [
+      "159985.SZ",
+      "515220.SH",
+      "510880.SH"
+    ],
     "live_position_source": "results/live/account_state.json；不得使用回测持仓代替",
     "eligible_candidates": [
       {
@@ -162,9 +168,9 @@
   },
   "audit": {
     "run_manifest": "results/audit/2026-09-10_run_manifest.json",
-    "run_manifest_sha256": "047861d898927583a913a27efcedd6219cc84cbcc546b5b87ccc344733c1f799",
-    "critical_file_count": 21,
-    "source_file_count": 20,
+    "run_manifest_sha256": "08d260462702b091b8b53cc1b9144f3a613157464782e787a6f471a466263955",
+    "critical_file_count": 24,
+    "source_file_count": 24,
     "price_file_count": 59
   },
   "execution_reconciliation": {

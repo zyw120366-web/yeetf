@@ -27,11 +27,43 @@ REQUIRED_REVIEW_FIELDS = {
     "horizon", "confidence", "novelty", "summary", "evidence", "risk_flags",
 }
 VALID_HORIZONS = {"intraday", "1-3d", "1-4w", "structural", "unknown"}
+REQUIRED_LIVE_SOURCES = {"ths_hot_reason", "eastmoney_limit_up", "eastmoney_broken_board", "eastmoney_limit_down"}
 
 
 def canonical_hash(value: object) -> str:
     raw = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def validate_live_review(root: Path, date: str) -> dict:
+    """Recheck the actual frozen evidence, not just its coverage label."""
+    folder = root / "market_data" / "sentiment"
+    snapshot = json.loads((folder / f"{date}.json").read_text(encoding="utf-8"))
+    review = json.loads((folder / "ai_review" / f"{date}.json").read_text(encoding="utf-8"))
+    sources = snapshot.get("sources", {})
+    if not REQUIRED_LIVE_SOURCES <= sources.keys():
+        raise ValueError("缺少必需资讯来源")
+    if any(block.get("ok") is not True or not isinstance(block.get("rows"), list) for block in sources.values()):
+        raise ValueError("资讯来源采集失败或内容格式错误")
+    inputs = normalize_snapshot(snapshot)
+    items = review.get("items", [])
+    if not inputs or snapshot.get("date") != date or review.get("date") != date:
+        raise ValueError("资讯为空或日期不一致")
+    if review.get("snapshot_hash") != canonical_hash(snapshot):
+        raise ValueError("审核不对应当前冻结资讯")
+    if review.get("status") != "complete" or review.get("coverage") != 1.0 or review.get("input_count") != len(inputs) or review.get("reviewed_count") != len(items):
+        raise ValueError("审核统计与实际条数不一致")
+    validate_coverage(inputs, items)
+    validate_coverage(inputs, [item["ai"] for item in items])
+    validate_review_items([item["ai"] for item in items])
+    original = {item["source_hash"]: item for item in inputs}
+    for item in items:
+        if any(item.get(k) != v for k, v in original[item["source_hash"]].items()):
+            raise ValueError("审核中的原始资讯被修改")
+    validate_review_metadata(review.get("review_metadata", {}))
+    if date >= "2026-07-23" and review.get("review_protocol") != review_protocol_fingerprints():
+        raise ValueError("审核协议指纹不一致")
+    return review
 
 
 def file_sha256(path: Path) -> str:
@@ -222,6 +254,8 @@ def review_snapshot(
 ) -> dict:
     """Build a complete audit payload from a reviewer supplied by the current chat."""
     inputs = normalize_snapshot(snapshot)
+    if not inputs:
+        raise ValueError("空资讯不能生成100%审核")
     reviews: list[dict] = []
     for start in range(0, len(inputs), batch_size):
         batch = inputs[start : start + batch_size]

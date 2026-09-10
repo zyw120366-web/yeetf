@@ -8,6 +8,9 @@ from pathlib import Path
 import pandas as pd
 import yaml
 
+from etf_rotation.live import apply_live_cooldown, raw_quote, validate_account
+from etf_rotation.sentiment_ai import validate_live_review
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FORMAL = ROOT / "results" / "ye_strategy"
@@ -23,6 +26,7 @@ def load_account_state(day: pd.Timestamp) -> dict:
     if not ACCOUNT_STATE.exists():
         raise RuntimeError("confirmed live account state is missing; do not infer holdings from the backtest")
     account = json.loads(ACCOUNT_STATE.read_text(encoding="utf-8"))
+    validate_account(account, str(day.date()))
     if account.get("confirmation_status") not in {"confirmed", "assumed_authorized"}:
         raise RuntimeError("live account state is not confirmed; fail closed")
     account_day = pd.Timestamp(str(account.get("as_of", "")).split("_")[0])
@@ -209,7 +213,7 @@ def estimate_buy(symbol: str, available_cash: float, day: pd.Timestamp, market: 
     row = frame.loc[frame["datetime"].eq(day)]
     if row.empty:
         raise RuntimeError(f"missing last close for {symbol} on {day.date()}")
-    close = float(row.iloc[-1]["close"])
+    _, close = raw_quote(ROOT, symbol, str(day.date()))
     premium = symbol.split(".")[0].startswith("513") or symbol == "159941.SZ"
     cost = market["execution"]["fixed_premium_sensitive" if premium else "fixed_default"]
     commission_rate = float(cost["commission_rate"])
@@ -262,7 +266,7 @@ def main() -> None:
     review_path = ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json"
     if not review_path.exists():
         raise RuntimeError("AI review is missing; fail closed and do not create a buy plan")
-    review = json.loads(review_path.read_text(encoding="utf-8"))
+    review = validate_live_review(ROOT, args.date)
     if review.get("status") != "complete" or review.get("coverage") != 1.0:
         raise RuntimeError("AI review is incomplete; fail closed and do not create a buy plan")
     weights = pd.read_csv(FORMAL / "signal_weights.csv", index_col=0)
@@ -278,6 +282,9 @@ def main() -> None:
     ranking = ranking.loc[ranking["date"].eq(args.date)].copy()
     if ranking.empty:
         raise RuntimeError(f"missing live ranking for {args.date}")
+    config = yaml.safe_load((ROOT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
+    calendar = pd.DatetimeIndex(pd.read_csv(ROOT / "market_data/prices/510300.SH.csv", parse_dates=["datetime"])["datetime"])
+    ranking = apply_live_cooldown(ranking, account, args.date, calendar, int(config["enhanced_selection"]["reentry_cooldown_days"]))
     candidates = order_candidates(
         ranking.loc[ranking["final_entry_pass"].astype(bool)]
     )
@@ -353,6 +360,8 @@ def main() -> None:
             "pending_orders": account.get("pending_orders", []),
         },
         "decision_basis": {
+            "live_cooldown_blocked_symbols": list(ranking.loc[ranking["live_cooldown_blocked"], "symbol"]),
+            "live_eligible_symbols": list(ranking.loc[ranking["final_entry_pass"], "symbol"]),
             "live_position_source": "results/live/account_state.json；不得使用回测持仓代替",
             "eligible_candidates": [
                 {
@@ -375,6 +384,7 @@ def main() -> None:
             "broker_fill_confirmation_required": False,
             "confirmation_rule": "用户常设执行授权已启用：未另行报告时，下一次运行按本计划完整执行、以实际开盘价和固定成本记账；券商成交回单、出入金或未完成订单优先覆盖。",
             "orders": execution_orders,
+            "release_required": True,
         },
         "cost": config["execution"]["cost_rule"],
         "cash_management": {

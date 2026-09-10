@@ -1,7 +1,15 @@
 {
+  "signal_date": "2026-09-10",
+  "integrity_errors": [],
   "status": "READY",
   "core_backtest_and_site": "PASS",
   "checks": {
+    "account_balances_reconcile": true,
+    "review_evidence_valid": true,
+    "unadjusted_live_quotes_valid": true,
+    "signal_dates_match": true,
+    "ranking_complete": true,
+    "all_daily_prices_complete": true,
     "single_strategy_name": true,
     "pool_architecture_reconciles": true,
     "ordinary_cost_reconciles": true,

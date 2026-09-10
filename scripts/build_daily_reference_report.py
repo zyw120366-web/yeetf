@@ -35,6 +35,8 @@ def category_counts(items: list[dict]) -> list[tuple[str, int, int]]:
 
 def entry_blockers(row: pd.Series) -> str:
     reasons: list[str] = []
+    if bool(row.get("live_cooldown_blocked", False)):
+        reasons.append("真实卖出后5日冷却期内")
     if not bool(row["pool_eligible"]):
         reasons.append("流动性或上市期不足")
     if int(row["rank"]) > 5:
@@ -90,6 +92,10 @@ def main() -> None:
     )
     if ranking.empty:
         raise RuntimeError(f"missing momentum ranking for {args.date}")
+    basis = plan.get("decision_basis", {})
+    ranking["live_cooldown_blocked"] = ranking["symbol"].isin(basis.get("live_cooldown_blocked_symbols", []))
+    if "live_eligible_symbols" in basis:
+        ranking["final_entry_pass"] = ranking["symbol"].isin(basis["live_eligible_symbols"])
     score_column = "selection_score" if "selection_score" in ranking.columns else "momentum_score"
     candidates = ranking.loc[ranking["final_entry_pass"].astype(bool)].sort_values(
         [score_column, "rank"], ascending=[False, True]
@@ -328,7 +334,10 @@ def main() -> None:
         ),
         target_insight,
         f"{len(ranking)}只ETF中最终通过{len(candidates)}只，分别是{candidate_names}。{decision_story}前5名里，{rejected_story}；它们名次高，但当前不是可买候选。",
-        f"板块内部也有呼应：{category_peer_story}正式规则不会因单日领先立即换仓，必须同时满足掉出前5、领先5个百分点、连续2日和持有5日。今天没有新趋势或9%—12%质量延伸候选，最终候选都来自常规动量。",
+        f"板块对照：{category_peer_story}"
+        + ("本次是旧仓触发卖出后重新选择，不需要等待机会换仓的两日确认。"
+           if current_symbol and current_symbol != target_symbol and not switch_status.get("triggered")
+           else "机会换仓是否成立，以今天持仓与候选的比较和连续确认记录为准。"),
         f"资讯面上，{target_category}主题为{target_positive}条正向、{target_negative}条负向，均按专属关键词直接映射。今天的核心洞察是：{core_insight}",
         satellite_status,
     ]

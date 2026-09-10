@@ -26,7 +26,8 @@ def confirmed_account() -> dict:
         "confirmation_status": "confirmed",
         "total_equity": 9418.2,
         "available_cash": 17.9,
-        "positions": [{"symbol": "513200.SH", "quantity": 9100}],
+        "positions": [{"symbol": "513200.SH", "quantity": 9100, "opened_on": "2026-09-03",
+                       "average_cost": 1.091, "market_price": 1.033, "market_value": 9400.3}],
         "pending_orders": [],
     }
 

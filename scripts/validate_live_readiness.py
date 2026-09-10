@@ -14,6 +14,9 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from etf_rotation.data import load_panel
 from etf_rotation.sentiment_ai import review_protocol_fingerprints
+from etf_rotation.sentiment_ai import validate_live_review
+from etf_rotation.live import fingerprint, validate_account, raw_quote, validate_fills
+import pandas as pd
 
 AUDIT = ROOT / "results" / "ye_strategy" / "trade_audit.json"
 RECONCILED_EXECUTION_STATUSES = {"confirmed", "assumed_authorized", "baseline_confirmed"}
@@ -32,10 +35,25 @@ def previous_execution_is_reconciled(date: str) -> bool:
     reconciliation = ROOT / "results" / "audit" / f"{plan_path.name[:10]}_execution_reconciliation.json"
     if not reconciliation.exists():
         return False
-    return (
-        json.loads(reconciliation.read_text(encoding="utf-8")).get("status")
-        in RECONCILED_EXECUTION_STATUSES
-    )
+    record = json.loads(reconciliation.read_text(encoding="utf-8"))
+    if record.get("status") == "baseline_confirmed":
+        account = json.loads((ROOT / "results/live/account_state.json").read_text(encoding="utf-8"))
+        baseline = record.get("baseline_acceptance", {})
+        return baseline.get("date") == date and baseline.get("account_sha256") == fingerprint(account)
+    if record.get("status") not in RECONCILED_EXECUTION_STATUSES:
+        return False
+    try:
+        validate_fills({"signal_date": record.get("signal_date"), "fills": record.get("actual_fills", [])}, plan, plan_path.name[:10])
+        if not all(row.get("status") == "filled" for row in record["actual_fills"]):
+            return False
+        account = json.loads((ROOT / "results/live/account_state.json").read_text(encoding="utf-8"))
+        buys = [row for row in record["actual_fills"] if row["side"] == "buy"]
+        positions = account.get("positions", [])
+        if buys:
+            return len(positions) == 1 and positions[0]["symbol"] == buys[-1]["symbol"] and float(positions[0]["quantity"]) == float(buys[-1]["quantity"])
+        return not positions
+    except (ValueError, KeyError, TypeError):
+        return False
 
 
 def main() -> None:
@@ -50,10 +68,35 @@ def main() -> None:
     plan_path = ROOT / "results" / "live" / f"{args.date}_order_plan.json"
     account = json.loads(account_path.read_text(encoding="utf-8")) if account_path.exists() else {}
     plan = json.loads(plan_path.read_text(encoding="utf-8")) if plan_path.exists() else {}
+    integrity_errors = []
+    try:
+        validate_account(account, args.date)
+    except (ValueError, TypeError, KeyError) as exc:
+        integrity_errors.append(f"account: {exc}")
+    account_valid = not integrity_errors
+    try:
+        validate_live_review(ROOT, args.date)
+        evidence_valid = True
+    except (ValueError, TypeError, KeyError, OSError) as exc:
+        integrity_errors.append(f"review: {exc}")
+        evidence_valid = False
+    try:
+        for symbol in {x.get("symbol") for x in plan.get("actions", [])} | {x["symbol"] for x in account.get("positions", [])}:
+            if symbol:
+                raw_quote(ROOT, symbol, args.date)
+        for position in account.get("positions", []):
+            _, close = raw_quote(ROOT, position["symbol"], args.date)
+            if not math.isclose(float(position["market_price"]), close, abs_tol=1e-8):
+                raise ValueError("账户估值未使用当日不复权收盘价")
+        quotes_valid = True
+    except (ValueError, TypeError, KeyError, OSError) as exc:
+        integrity_errors.append(f"live_quotes: {exc}")
+        quotes_valid = False
     confirmed_positions = [
         item for item in account.get("positions", []) if float(item.get("quantity", 0.0)) > 0
     ]
     confirmed_symbol = str(confirmed_positions[0]["symbol"]) if len(confirmed_positions) == 1 else None
+    ranking = pd.read_csv(ROOT / "results/comparison/latest_ranking.csv")
     metrics = audit["summary"]["metrics"]
     architecture = config["enhanced_selection"]["universe_architecture"]
     universe_symbols = {
@@ -93,6 +136,17 @@ def main() -> None:
     realized_round_trip_pnl = sum(float(row["net_pnl"]) for row in audit["round_trips"])
     open_position_pnl = terminal_reconstructed_equity - initial_capital - realized_round_trip_pnl - cash_management_net
     checks = {
+        "account_balances_reconcile": account_valid,
+        "review_evidence_valid": evidence_valid,
+        "unadjusted_live_quotes_valid": quotes_valid,
+        "signal_dates_match": plan.get("signal_date") == args.date == str(market["project"]["data_end"]),
+        "ranking_complete": (len(ranking) == 51 and set(ranking["date"]) == {args.date}
+                             and set(ranking["symbol"]) == universe_symbols
+                             and ranking["pool_role"].value_counts().to_dict() == {"core": 45, "challenger": 6}),
+        "all_daily_prices_complete": (pd.Timestamp(args.date) in panel["close"].index
+            and all(math.isfinite(float(panel[field].at[pd.Timestamp(args.date), symbol]))
+                    and float(panel[field].at[pd.Timestamp(args.date), symbol]) > 0
+                    for symbol in universe_symbols for field in ("open", "high", "low", "close"))),
         "single_strategy_name": config["name"] == "ye 策略" and config["role"] == "唯一正式策略",
         "pool_architecture_reconciles": (
             architecture["mode"] == "core_champion_cash_gap"
@@ -143,6 +197,8 @@ def main() -> None:
             and plan.get("account_state", {}).get("confirmation_status") in {"confirmed", "assumed_authorized"}
             and float(plan.get("account_state", {}).get("total_equity", -1.0))
             == float(account.get("total_equity", -2.0))
+            and plan.get("account_state", {}).get("positions") == account.get("positions")
+            and plan.get("account_state", {}).get("available_cash") == account.get("available_cash")
         ),
     }
     review_path = ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json"
@@ -171,6 +227,8 @@ def main() -> None:
         if key not in {"ai_review_complete", "ai_review_protocol_requirement_satisfied"}
     ]
     report = {
+        "signal_date": args.date,
+        "integrity_errors": integrity_errors,
         "status": "READY" if all(checks.values()) else "BLOCKED",
         "core_backtest_and_site": "PASS" if all(checks[key] for key in core) else "FAIL",
         "checks": checks,

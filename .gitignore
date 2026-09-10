@@ -25,5 +25,6 @@ work/
 scratch/
 *.tmp
 *.log
+.live-run.lock
 
 outputs/*.zip

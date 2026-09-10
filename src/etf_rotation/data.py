@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import time
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from typing import Iterable
 
@@ -23,7 +25,7 @@ def all_instruments(config: dict) -> list[dict]:
     return list(merged.values())
 
 
-def merge_frozen_history(cached: pd.DataFrame, downloaded: pd.DataFrame) -> pd.DataFrame:
+def merge_frozen_history(cached: pd.DataFrame, downloaded: pd.DataFrame, finalized_through: str | None = None) -> pd.DataFrame:
     """Keep audited bars immutable and append only genuinely new sessions.
 
     TDX recalculates the full QFQ history after corporate actions.  The latest
@@ -32,6 +34,8 @@ def merge_frozen_history(cached: pd.DataFrame, downloaded: pd.DataFrame) -> pd.D
     """
     cached = cached.sort_values("datetime").drop_duplicates("datetime", keep="last")
     downloaded = downloaded.sort_values("datetime").drop_duplicates("datetime", keep="last")
+    if finalized_through is not None:
+        cached = cached.loc[pd.to_datetime(cached["datetime"]) <= pd.Timestamp(finalized_through)]
     if cached.empty:
         return downloaded
 
@@ -42,6 +46,8 @@ def merge_frozen_history(cached: pd.DataFrame, downloaded: pd.DataFrame) -> pd.D
 
     cached_close = cached.loc[pd.to_datetime(cached["datetime"]) == last_frozen, "close"].iloc[-1]
     overlap = downloaded.loc[pd.to_datetime(downloaded["datetime"]) == last_frozen, "close"]
+    if overlap.empty or float(overlap.iloc[-1]) <= 0:
+        raise ValueError("新旧复权行情没有有效重叠日，禁止拼接")
     if not overlap.empty and float(overlap.iloc[-1]) != 0.0:
         scale = float(cached_close) / float(overlap.iloc[-1])
         for field in PRICE_FIELDS:
@@ -59,6 +65,16 @@ def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
     count = int(config["project"].get("data_count", 800))
     manifest: dict[str, dict] = {}
     client = UnifiedTdxClient(timeout=20)
+    now = datetime.now(ZoneInfo("Asia/Shanghai"))
+    complete_through = now.date() if now.hour >= 15 else now.date() - timedelta(days=1)
+    cards = sorted((data_dir.parents[1] / "results/audit").glob("*_live_run_card.json"))
+    completed = []
+    for card_path in cards:
+        card = json.loads(card_path.read_text(encoding="utf-8"))
+        if (card.get("release", {}).get("readiness") == "READY"
+                and card_path.name[:10] <= complete_through.isoformat()):
+            completed.append(card_path.name[:10])
+    frozen_through = completed[-1] if completed else "1900-01-01"
     try:
         for item in all_instruments(config):
             key = symbol_key(item)
@@ -83,8 +99,9 @@ def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
                         if downloaded.empty:
                             raise RuntimeError(f"empty bars for {key}")
                         downloaded = downloaded.sort_values("datetime").drop_duplicates("datetime")
+                        downloaded = downloaded.loc[pd.to_datetime(downloaded["datetime"]) <= pd.Timestamp(complete_through)]
                         frame = (
-                            merge_frozen_history(cached, downloaded)
+                            merge_frozen_history(cached, downloaded, frozen_through)
                             if cached is not None
                             else downloaded
                         )
