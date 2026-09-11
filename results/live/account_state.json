@@ -1,7 +1,7 @@
 {
   "account_type": "live",
   "as_of": "2026-09-10_close",
-  "confirmation_status": "confirmed",
+  "confirmation_status": "pending",
   "source": "用户2026-09-10明确确认：未执行9月10日换仓计划，真实账户继续持有513200.SH",
   "first_live_day": false,
   "total_equity": 9418.199931,
@@ -47,7 +47,7 @@
       }
     ]
   },
-  "note": "用户已明确覆盖常设授权假定成交：9月10日未换仓，继续持有513200.SH 9,100股。",
+  "note": "以下持仓、现金、权益仅为2026-09-10最后完整对账快照，不代表9月11日当前账户。用户已报告9月11日买入豆粕6500股、成本2.350元，详见2026-09-10_actual_fills.json；旧仓卖出、新增入金、剩余现金及费用待核。暂停授权记账，禁止按旧快照出单或把资金差额计作收益。",
   "execution_assumption": {
     "enabled": false,
     "authorization_date": "2026-08-06",

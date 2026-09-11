@@ -1,0 +1,77 @@
+{
+  "card_type": "ye_live_run_card",
+  "signal_date": "2026-09-11",
+  "account_state": {
+    "account_type": "live",
+    "as_of": "2026-09-10_close",
+    "confirmation_status": "pending",
+    "source": "用户2026-09-10明确确认：未执行9月10日换仓计划，真实账户继续持有513200.SH",
+    "first_live_day": false,
+    "total_equity": 9418.199931,
+    "available_cash": 17.9,
+    "performance": {
+      "strategy_start_date": "2026-07-21",
+      "net_contributed_capital": 9825.0,
+      "calculation_basis": "用户确认资金全部投入首笔买入；26200股×0.375元=9825元，后续如有出入金必须同步调整"
+    },
+    "positions": [
+      {
+        "symbol": "513200.SH",
+        "name": "港股通医药ETF易方达",
+        "opened_on": "2026-09-03",
+        "quantity": 9100,
+        "average_cost": 1.091,
+        "market_price": 1.0329999923706055,
+        "market_value": 9400.29993057251,
+        "unrealized_pnl": -527.8000694274899
+      }
+    ],
+    "pending_orders": [],
+    "last_exit_dates": {
+      "512010.SH": "2026-09-03"
+    },
+    "actual_execution": {
+      "signal_date": "2026-09-02",
+      "execution_date": "2026-09-03",
+      "fills": [
+        {
+          "side": "sell",
+          "symbol": "512010.SH",
+          "quantity": 26200,
+          "price": 0.38,
+          "commission_assumed": 5.0
+        },
+        {
+          "side": "buy",
+          "symbol": "513200.SH",
+          "quantity": 9100,
+          "price": 1.091,
+          "commission_assumed": 5.0
+        }
+      ]
+    },
+    "note": "以下持仓、现金、权益仅为2026-09-10最后完整对账快照，不代表9月11日当前账户。用户已报告9月11日买入豆粕6500股、成本2.350元，详见2026-09-10_actual_fills.json；旧仓卖出、新增入金、剩余现金及费用待核。暂停授权记账，禁止按旧快照出单或把资金差额计作收益。",
+    "execution_assumption": {
+      "enabled": false,
+      "authorization_date": "2026-08-06",
+      "prior_signal_date": "2026-09-09",
+      "assumed_fills": [],
+      "override": "用户2026-09-10确认未执行计划"
+    }
+  },
+  "release": {
+    "readiness": "BLOCKED",
+    "blocking_items": [
+      "用户已报告9月11日买入159985.SZ豆粕ETF6500股、成本2.350元（金额15275元，未计手续费）；513200.SH卖出数量与价格、新增入金、剩余现金及费用待核。下列港股通医药持仓与价格风险仅对应9月10日历史账户快照，不代表当前持仓或卖出指令。完整账户及仓位、收益暂不可确定；禁止授权记账覆盖真实报告，暂无可执行订单。今日资讯尚未采集审核，覆盖率不可用，未完成正式筛选。"
+    ],
+    "plan_is_not_fill": true
+  },
+  "decision": {
+    "actions": [],
+    "target_symbol": null
+  },
+  "price_risk_check": [
+    "513200.SH：ROC20转负，触发软退出价格条件"
+  ],
+  "error": "用户已报告9月11日买入159985.SZ豆粕ETF6500股、成本2.350元（金额15275元，未计手续费）；513200.SH卖出数量与价格、新增入金、剩余现金及费用待核。下列港股通医药持仓与价格风险仅对应9月10日历史账户快照，不代表当前持仓或卖出指令。完整账户及仓位、收益暂不可确定；禁止授权记账覆盖真实报告，暂无可执行订单。今日资讯尚未采集审核，覆盖率不可用，未完成正式筛选。"
+}

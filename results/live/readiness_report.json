@@ -1,41 +1,8 @@
 {
-  "signal_date": "2026-09-10",
-  "integrity_errors": [],
-  "status": "READY",
-  "core_backtest_and_site": "PASS",
-  "checks": {
-    "account_balances_reconcile": true,
-    "review_evidence_valid": true,
-    "unadjusted_live_quotes_valid": true,
-    "signal_dates_match": true,
-    "ranking_complete": true,
-    "all_daily_prices_complete": true,
-    "single_strategy_name": true,
-    "pool_architecture_reconciles": true,
-    "ordinary_cost_reconciles": true,
-    "premium_cost_reconciles": true,
-    "equity_return_reconciles": true,
-    "round_trip_pnl_reconciles": true,
-    "fees_reconcile": true,
-    "slippage_reconciles": true,
-    "html_exists": true,
-    "governance_frozen": true,
-    "previous_execution_reconciled": true,
-    "live_account_state_confirmed": true,
-    "live_plan_uses_account_truth": true,
-    "ai_review_complete": true,
-    "ai_review_protocol_requirement_satisfied": true
-  },
-  "blocking_items": [],
-  "review_protocol": {
-    "required_for_signal_date": true,
-    "fingerprinted": true,
-    "status": "fingerprinted"
-  },
-  "reconciliation": {
-    "realized_round_trip_pnl": 804586.5514860774,
-    "open_position_pnl": -34274.072206183184,
-    "cash_management_net": 8073.512054794546,
-    "terminal_reconstructed_equity": 878385.9913346887
-  }
+  "signal_date": "2026-09-11",
+  "status": "BLOCKED",
+  "blocking_items": [
+    "用户已报告9月11日买入159985.SZ豆粕ETF6500股、成本2.350元（金额15275元，未计手续费）；513200.SH卖出数量与价格、新增入金、剩余现金及费用待核。下列港股通医药持仓与价格风险仅对应9月10日历史账户快照，不代表当前持仓或卖出指令。完整账户及仓位、收益暂不可确定；禁止授权记账覆盖真实报告，暂无可执行订单。今日资讯尚未采集审核，覆盖率不可用，未完成正式筛选。"
+  ],
+  "error": "用户已报告9月11日买入159985.SZ豆粕ETF6500股、成本2.350元（金额15275元，未计手续费）；513200.SH卖出数量与价格、新增入金、剩余现金及费用待核。下列港股通医药持仓与价格风险仅对应9月10日历史账户快照，不代表当前持仓或卖出指令。完整账户及仓位、收益暂不可确定；禁止授权记账覆盖真实报告，暂无可执行订单。今日资讯尚未采集审核，覆盖率不可用，未完成正式筛选。"
 }
