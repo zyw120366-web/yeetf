@@ -98,7 +98,18 @@ def test_failed_news_still_reports_price_exit_conditions():
 
 
 def account():
-    return json.loads((ROOT / "results/live/account_state.json").read_text())
+    # These cases exercise the September 10 plan, not today's mutable account.
+    plan = json.loads((ROOT / "results/live/2026-09-10_order_plan.json").read_text())
+    return copy.deepcopy(plan["account_state"])
+
+
+def test_unknown_cash_after_confirmed_trade_is_not_zero_or_executable():
+    value = account()
+    value.update(confirmation_status="pending", available_cash=None, total_equity=None)
+    before = copy.deepcopy(value)
+    with pytest.raises(ValueError, match="账户状态未确认"):
+        validate_account(value)
+    assert value == before
 
 
 def test_blocked_plan_cannot_advance_even_if_it_contains_orders(tmp_path):

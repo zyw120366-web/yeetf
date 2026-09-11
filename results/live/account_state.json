@@ -56,6 +56,9 @@
   },
   "cash_reconciliation": {
     "status": "pending",
+    "deposit_reported": true,
+    "deposit_amount": null,
+    "user_instruction": "用户确认有新增资金，但未提供金额；要求先生成今日日报。金额保持未知，不能当盈利。",
     "previous_cash": 17.9,
     "previous_net_contributed_capital": 9825,
     "sell_notional": 9263.8,

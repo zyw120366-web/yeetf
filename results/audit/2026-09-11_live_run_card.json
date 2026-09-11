@@ -59,6 +59,9 @@
     },
     "cash_reconciliation": {
       "status": "pending",
+      "deposit_reported": true,
+      "deposit_amount": null,
+      "user_instruction": "用户确认有新增资金，但未提供金额；要求先生成今日日报。金额保持未知，不能当盈利。",
       "previous_cash": 17.9,
       "previous_net_contributed_capital": 9825,
       "sell_notional": 9263.8,
@@ -70,7 +73,7 @@
   "release": {
     "readiness": "BLOCKED",
     "blocking_items": [
-      "已确认港股通医药513200.SH 9100股以1.018元全部卖出；当前持有豆粕159985.SZ 6500股、成本2.350元。两笔成交对账confirmed；仅新增入金、剩余现金和费用待核，账户pending不是持仓未知。当前总权益及累计收益暂不计算；今日资讯审核尚未开展，暂无放行计划。"
+      "用户确认新增本金但金额、余款及费用待核，账户总权益和累计收益未知；行情与119条资讯已完整复核。当前豆粕6500股未触发卖出/换仓，仅为持仓观察结论；不放行新订单。"
     ],
     "plan_is_not_fill": true
   },
@@ -79,7 +82,19 @@
     "target_symbol": null
   },
   "price_risk_check": [
-    "未触发价格退出条件；这不等于完整策略已放行"
+    "豆粕未触发MA120、ROC20或双排名卖出条件；机会换仓不成立。资金待核，正式订单未放行。"
   ],
-  "error": "已确认港股通医药513200.SH 9100股以1.018元全部卖出；当前持有豆粕159985.SZ 6500股、成本2.350元。两笔成交对账confirmed；仅新增入金、剩余现金和费用待核，账户pending不是持仓未知。当前总权益及累计收益暂不计算；今日资讯审核尚未开展，暂无放行计划。"
+  "error": "用户确认新增本金但金额、余款及费用待核，账户总权益和累计收益未知；行情与119条资讯已完整复核。当前豆粕6500股未触发卖出/换仓，仅为持仓观察结论；不放行新订单。",
+  "ai_review": {
+    "input_count": 119,
+    "reviewed_count": 119,
+    "coverage": 1,
+    "status": "complete"
+  },
+  "observation": {
+    "source": "results/live/2026-09-11_observation.json",
+    "technical_target": "159985.SZ",
+    "holding_action": "hold",
+    "not_executable": true
+  }
 }
