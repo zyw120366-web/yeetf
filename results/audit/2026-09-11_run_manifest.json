@@ -1,23 +1,23 @@
 {
   "signal_date": "2026-09-11",
   "status": "BLOCKED",
-  "error": "用户已报告9月11日买入159985.SZ豆粕ETF6500股、成本2.350元（金额15275元，未计手续费）；513200.SH卖出数量与价格、新增入金、剩余现金及费用待核。下列港股通医药持仓与价格风险仅对应9月10日历史账户快照，不代表当前持仓或卖出指令。完整账户及仓位、收益暂不可确定；禁止授权记账覆盖真实报告，暂无可执行订单。今日资讯尚未采集审核，覆盖率不可用，未完成正式筛选。",
+  "error": "已确认港股通医药513200.SH 9100股以1.018元全部卖出；当前持有豆粕159985.SZ 6500股、成本2.350元。两笔成交对账confirmed；仅新增入金、剩余现金和费用待核，账户pending不是持仓未知。当前总权益及累计收益暂不计算；今日资讯审核尚未开展，暂无放行计划。",
   "critical_files": [
     {
       "path": "results/live/readiness_report.json",
-      "sha256": "88f567184273f2565ca52391f2b68e3ed3949e16b5f9a1990922ac316ffc21fd"
+      "sha256": "6ee7a9210b31680d24d22a1400f7b4b37b574022d28491d26d5a79625c936c14"
     },
     {
       "path": "results/live/account_state.json",
-      "sha256": "ba2e0a8aa291a485d113bdbead9e3421bbf35e8d994be8026b8a05786c58814c"
+      "sha256": "7b365830adc512d146a68e4735c848d0bb0f5c9b6658670f5498a5ba97f1984b"
     },
     {
       "path": "results/live/2026-09-11_daily_report.md",
-      "sha256": "800d06e13f019462303d2f6f019ac08165ad08fda309d4bb47192f5c3987b5b6"
+      "sha256": "a8951774223d680e7f8e3ef82065bd37f1fd0e85314fb5c97816277ef8b70574"
     },
     {
       "path": "outputs/ETF轮动策略_今日日报.html",
-      "sha256": "48b8af111e3a05e7b928499d2725203d6bac97f0a8d41ec53427d582dd9492c1"
+      "sha256": "46ad44bd47c54de9f10a809a16466e6531afab9fd8f72dcbecf013d5c4a164d8"
     }
   ]
 }

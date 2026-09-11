@@ -2,12 +2,23 @@
   "strategy": "ye 策略",
   "signal_date": "2026-09-11",
   "status": "BLOCKED",
-  "current_symbol": null,
+  "current_symbol": "159985.SZ",
   "target_symbol": null,
   "actions": [],
-  "execution": {"orders": [], "executable": false},
-  "reported_buy": {"symbol": "159985.SZ", "quantity": 6500, "price": 2.35},
-  "account_reconciliation_status": "pending",
-  "ai_review": {"status": "not_started", "coverage": null},
-  "note": "用户已报告9月11日买入159985.SZ豆粕ETF6500股、成本2.350元（金额15275元，未计手续费）；513200.SH卖出数量与价格、新增入金、剩余现金及费用待核。下列港股通医药持仓与价格风险仅对应9月10日历史账户快照，不代表当前持仓或卖出指令。完整账户及仓位、收益暂不可确定；禁止授权记账覆盖真实报告，暂无可执行订单。今日资讯尚未采集审核，覆盖率不可用，未完成正式筛选。"
+  "execution": {
+    "orders": [],
+    "executable": false
+  },
+  "reported_buy": {
+    "symbol": "159985.SZ",
+    "quantity": 6500,
+    "price": 2.35
+  },
+  "account_reconciliation_status": "cash_pending",
+  "ai_review": {
+    "status": "not_started",
+    "coverage": null
+  },
+  "note": "已确认港股通医药513200.SH 9100股以1.018元全部卖出；当前持有豆粕159985.SZ 6500股、成本2.350元。两笔成交对账confirmed；仅新增入金、剩余现金和费用待核，账户pending不是持仓未知。当前总权益及累计收益暂不计算；今日资讯审核尚未开展，暂无放行计划。",
+  "trade_reconciliation_status": "confirmed"
 }
