@@ -1,0 +1,47 @@
+{
+  "strategy": "ye 策略",
+  "signal_date": "2026-09-14",
+  "status": "BLOCKED",
+  "current_symbol": "159985.SZ",
+  "target_symbol": null,
+  "actions": [],
+  "execution": {
+    "orders": [],
+    "executable": false
+  },
+  "trade_reconciliation_status": "confirmed",
+  "account_reconciliation_status": "cash_pending",
+  "ai_review": {
+    "input_count": 157,
+    "reviewed_count": 157,
+    "coverage": 1,
+    "status": "complete"
+  },
+  "note": "真实买卖已确认；新增入金、剩余现金及费用未核，无法确定账户总权益和可用资金。",
+  "observation": {
+    "technical_target": "159985.SZ",
+    "holding_action": "hold",
+    "quantity": 6500,
+    "exit_reasons": [],
+    "opportunity_switch": {
+      "enabled": true,
+      "candidate_symbol": "512800.SH",
+      "qualifies_today": false,
+      "confirmation_streak": 0,
+      "required_confirmation_days": 2,
+      "triggered": false,
+      "status": "not_qualified",
+      "live_baseline_on": "2026-07-29",
+      "live_confirmation_starts_on": "2026-07-30",
+      "holding_symbol": "159985.SZ",
+      "holding_rank": 3,
+      "holding_since": "2026-09-11",
+      "held_trading_days": 2,
+      "candidate_rank": 4,
+      "score_gap": -0.05308332797550219,
+      "minimum_score_advantage": 0.05,
+      "reset_rule": "任一条件中断或领先ETF改变，连续计数归零"
+    },
+    "executable": false
+  }
+}
