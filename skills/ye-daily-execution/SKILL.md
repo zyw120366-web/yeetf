@@ -1,48 +1,30 @@
 ---
 name: ye-daily-execution
-description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略。用户提出“运行 ye”“复核今天盘面与新闻”“生成明日 ETF 计划”“生成今日日报”“查看实盘订单、运行卡、成交对账或审核状态”时使用：核对实际成交，冻结日线与资讯，在当前对话逐条审核全部资讯，覆盖率不足 100% 或前一订单未对账时禁止新增仓位，再生成、校验并报告下一交易日开盘计划、日报、HTML、运行审计与实盘偏差状态；不需要外部 API 密钥。
+description: 运行ye收盘流程、生成日报与次日ETF计划、核对实盘成交或查看运行结果时使用。只查看已有报告时不重跑；策略研究和规则修改不属于每日执行。
 ---
 
 # ye 每日执行
 
-## 目标与边界
+在含 `config/ye_strategy.yaml` 的项目根目录工作。全局Skill是项目目录的链接，项目版本是唯一维护源。使用已验证环境；本Mac为 `PYTHONPATH=src python3`，不在日运行中安装或升级依赖。
 
-在包含 `config/ye_strategy.yaml` 的 yeetf 仓库根目录运行。项目可以位于任意本地路径；找不到时先定位该配置文件，仍找不到才询问用户。
+## 先分清用户要什么
 
-在本 macOS 工作区使用 `PYTHONPATH=src python3` 执行 Python 命令。若项目目录中另有已验证的 `.venv-review`，可改用其解释器，但不得安装、升级或替换依赖来改变正式运行环境。
+- **查看日报/链接/状态**：读取指定日现有日报与运行卡，直接交付；过期或缺失须说明，不把旧页当今天。
+- **运行/补跑**：读取精简的 `RESEARCH_MEMORY.md`、`RESEARCH_STATUS.md`、账户真源与上一计划，执行下方流程。历史档案仅在追溯或研究时按需读。
+- **报告真实成交或未执行**：用户事实优先；按 [成交确认](references/execution-confirmation-schema.md) 处理后再运行。不要重复追问已确认买卖，也不要猜未知资金。
 
-每次运行前必须完整读取 `RESEARCH_MEMORY.md` 和 `RESEARCH_STATUS.md`。前者保存长期结论与变更记录，后者只保存当前冻结状态和账户事实；两者都不得覆盖配置和账户真源。
+## 不可省略的边界
 
-- `config/ye_strategy.yaml` 是唯一正式策略规则；日常执行不得修改规则、ETF 池、成本、研究参数或网页口径。
-- 正式母池为45只核心冠军＋6只挑战者空档补位。核心池独立形成排名、类别宽度和核心持仓的排名退出，并拥有第一买入权；只有当天无合格核心候选时，挑战者才可参与；挑战者持仓遇合格核心候选时下一开盘让位。核心旧仓还须检查正式机会换仓：掉出前5、完整合格核心候选动量分领先至少5个百分点、同一候选连续2日、旧仓持有满5日时，下一开盘全仓换仓。不得在日报或人工判断中改回51只全局混排或核心/挑战者平权竞争。
-- `config/strategy_governance.yaml` 定义正式冻结与放行边界；`config/research_hypotheses.yaml` 只登记独立研究，不产生任何日常信号。
-- 只使用信号日收盘数据，于下一交易日开盘执行。目标只能是现金 0% 或单一 ETF 100%。不加仓、减仓、网格、主观覆盖或分批止盈。
-- 所有资讯审核均在当前 Codex 对话中完成；不要求也不使用 `OPENAI_API_KEY`。用户可以直接要求逐条解释。
-- 用户于2026-08-06授予常设执行授权：未另行报告时，视为完整执行上一交易日已放行的开盘计划。正式入口内置账户推进，以当日不复权开盘价和固定成本记账；无需另外调用推进脚本。券商回单、手工成交、出入金或未完成订单一旦报告，立即优先处理；回测影子持仓始终不得代替真实账户。
-- 常设授权只适用于上一日运行卡为`READY`且明确可执行的计划；`SELL_ONLY`只允许已独立核验并绑定计划哈希的现有持仓卖单，卖出后保持现金，绝不新增仓位。若上一日为`BLOCKED`、计划正文写明不得执行，或对账状态为`pending`/`exception`，不得调用账户推进脚本执行买卖；必须保留真实原持仓并报告阻断，等待用户或券商事实。
-- 严格区分正式策略与任何研究项目：正式流程不得运行 `research_*`、`summarize_*`、候选筛选或其他策略脚本。
+- 策略、ETF池、仓位、成本只读配置；不在日报中主观改买卖、不运行研究脚本、不用回测持仓代替实盘。
+- 账户来自 `results/live/account_state.json` 和真实成交。常设授权只由唯一入口核验上一日已放行且绑定哈希的计划后记账为 `assumed_authorized`；不要另跑账户推进脚本。
+- 用户/券商的成交、取消、入金或异常优先于假定记录；BLOCKED、pending/exception不可假定买卖。SELL_ONLY仅卖已核验持仓并转现金。
+- 未知现金/本金保持null；已确认股数可计算持仓观察，但不能伪造账户总收益或可执行仓位。分析完成与订单放行是两件事。
+- 信号只用该日及以前数据，下一交易日开盘执行；实际估值与假定成交使用不复权报价。已审计历史不得用事后行情或新闻补写。
 
-## 收盘后固定流程
+## 唯一日运行流程
 
-将 `YYYY-MM-DD` 替换为已收盘的交易日。先读取上一交易日的 `results/live/*_order_plan.json`，记录用户确认的实际成交；没有确认时继续数据与风控复核，但不虚构实际仓位。
-
-0. 若上一份计划含买入或卖出，先读取 [成交确认格式](references/execution-confirmation-schema.md)。在用户提供券商成交数量、价格和未完成数量后，用 `apply_patch` 写入 `results/live/上一信号日_actual_fills.json`，再运行：
-
-   ```sh
-   PYTHONPATH=src python3 scripts/reconcile_actual_fills.py --date 上一信号日
-   ```
-
-   没有新报告时按常设授权由正式入口核验上一计划后记账，明确标记假定执行；有实际成交、取消或异常记录时不得自动覆盖，先处理事实。不要每天重复要求用户确认。
-
-   若用户明确确认上一计划全部取消或未成交，同时确认了当前账户持仓、现金、权益和无待处理订单，并明确要求从该真实账户继续运行，则保留原取消记录并接受当前账户为新的审计基线：
-
-   ```sh
-   PYTHONPATH=src python3 scripts/reconcile_actual_fills.py --date 上一信号日 --accept-account-baseline-date 当前信号日
-   ```
-
-   成功状态为 `baseline_confirmed`。它只表示真实账户已成为后续起点，不得把取消订单改写为成交；部分成交、账户日期不符、账户未经用户确认或仍有待处理订单时禁止使用。
-
-1. 确认该日存在于基准交易日历，刷新日线并冻结资讯：
+1. 确认信号日已收盘且为中国市场交易日；休市只记录“休市，未生成信号”。基准日线缺失可能是数据失败，不可直接当休市。补跑按交易日顺序处理，禁止用今天的账户倒推过去。
+2. 刷新行情、冻结资讯、导出审核队列：
 
    ```sh
    PYTHONPATH=src python3 scripts/fetch_prices.py --force
@@ -50,95 +32,30 @@ description: 在中国市场收盘后执行唯一正式的 ye ETF 轮动策略�
    PYTHONPATH=src python3 scripts/export_sentiment_review_queue.py --date YYYY-MM-DD
    ```
 
-   行情刷新同时保存不复权实盘报价。未完成的当日数据可以重采；已放行历史信号价格保持冻结。账户估值、成交假定和买入数量估算不得使用历史复权缩放价格。
-
-2. 读取 `market_data/sentiment/review_queue/YYYY-MM-DD.json`。逐行审核，包含无关资讯；保留原始 `source_hash`，不得合并、漏审、重复或补造。按 [审核草稿格式](references/review-schema.md) 用 `apply_patch` 写入 `market_data/sentiment/manual_drafts/YYYY-MM-DD.json`。
-
-   审核时禁止把类别标签自动扩散到同类全部 ETF；`matched_symbols` 必须获得冻结行中专属关键词的直接支持。同一公司跨来源重复时仍逐行审核，系统在下游特征层自动只计一次。草稿必须记录当前 Codex 的模型家族、可见快照信息与使用界面；精确快照未暴露时如实记录 `not_exposed_by_codex`。
-
-3. 提交并验证审核记录；失败不得绕过：
+3. 读取 `market_data/sentiment/review_queue/YYYY-MM-DD.json` 全部行。在当前对话逐条审核（含无关和跨源重复行），按 [审核格式](references/review-schema.md) 用 `apply_patch` 写 `market_data/sentiment/manual_drafts/YYYY-MM-DD.json`。机械整理可脚本化，但不能用关键词批处理代替语义审核。专属原文证据才可映射ETF，不扩散类别；保留哈希和真实可见模型信息，不需要外部API密钥。
 
    ```sh
    PYTHONPATH=src python3 scripts/commit_manual_sentiment_review.py --date YYYY-MM-DD --reviews market_data/sentiment/manual_drafts/YYYY-MM-DD.json
-   ```
-
-4. 运行唯一正式入口。它先在互斥锁内推进或重估账户，再更新数据截止日、重建正式回测/信号、交易审计与订单；校验通过后发布日报、三个 HTML、SHA-256 清单与运行卡。失败也发布当天明确标识的阻断日报和运行卡，不保留旧页面冒充成功：
-
-   ```sh
    PYTHONPATH=src python3 scripts/run_after_close.py --date YYYY-MM-DD --skip-collect
    ```
 
-   ETF计划生成后，于15:00—15:30核对收盘宝自动申报状态。它只管理实际闲置现金：大于1,000元时按1,000元整数倍参与1天期通用回购，手续费十万分之一；记录下单时实时年化。下一交易日开盘前本息应可用。任何产品异常均保留现金，不得改动ETF计划。
-
-5. 阅读并交叉核对以下文件，再回答用户：
-
-   - `results/live/YYYY-MM-DD_order_plan.json`
-   - `results/live/YYYY-MM-DD_daily_report.md`
-   - `results/live/readiness_report.json`
-   - `results/audit/YYYY-MM-DD_run_manifest.json`
-   - `results/audit/YYYY-MM-DD_live_run_card.json`
-   - `results/comparison/latest_signals.json`
-
-   同时确认 `latest_ranking.csv` 恰有51只、`pool_role` 为45个 `core` 与6个 `challenger`；任一不符视为池架构校验失败，不能放行新仓。
-
-   **日报可打开校验**：还必须确认 `outputs/ETF轮动策略_今日日报.html` 是非空常规文件，并且页面正文包含该信号日。该文件是用户阅读日报的唯一稳定入口；不得只报告 `results/live/YYYY-MM-DD_daily_report.md`，也不得只给相对路径或纯文本路径。
-
-6. 用 `apply_patch` 维护 `RESEARCH_STATUS.md` 的当前快照，并在 `RESEARCH_MEMORY.md` 的变更记录中增加一条简洁的当日运行或实质改动。没有写入记忆的项目改动不算完成；不得把详细日报复制进记忆。
-
-7. 正式校验通过并完成上述记忆维护后，检查 Git 差异，确认不含 token、密码、`.env`、缓存、临时文件或 ZIP。由Agent按改动重要性自主判断是否提交并推送：正式日运行、规则/代码或账户真源等关键节点通常同步；过程性研究不要求单独推送。需要同步时使用：
+4. 入口处理账户、正式信号、订单与报告。审核失败/覆盖不足禁止新增；原有独立风险卖出核验不变。READY、SELL_ONLY、BLOCKED共用日报生成器；数据充足时即使资金待核也输出完整观察，证据不足的部分明确标未知。不得为补日报手写第二套筛选、订单或HTML，不得把退出码2当作无需交付。
+5. 读取当日 `*_daily_report.json` 与 `*_order_plan.json`，核对用户事实、关键退出/换仓理由。入口所有状态均内置机器交付检查；需要单独复核时：
 
    ```sh
-   git status --short --branch
-   git add -A
-   git commit -m "daily: run YYYY-MM-DD close"
-   git push origin HEAD
+   PYTHONPATH=src python3 scripts/validate_daily_delivery.py --date YYYY-MM-DD
    ```
 
-   没有新差异时不制造空提交。无论是否选择推送，都要如实说明同步状态；推送失败不改变已经生成的交易信号或 `READY/SELL_ONLY/BLOCKED`，但必须向用户明确报告“日报已完成、GitHub 未同步”及失败原因。
+   它检查日期、51池角色、状态、清单哈希、HTML和链接。PASS表示交付一致，不等于交易READY；任何校验错误须报告，不手工改状态放行。
+6. 更新当前状态和一条简短记忆；检查差异与敏感文件，只提交本任务改动。正式日运行及实质修改通常推送当前分支，过程研究无需单独推送。无差异不造空提交；同步失败不改变交易结论。
 
-## 强制放行规则
+## 给用户的结果
 
-只有下列条件同时满足，才可称“完整次日计划可执行”：
+先写次日动作（受阻时写“持仓观察，订单未放行”），再给真实股数、可确认的收益、关键理由、审核覆盖及资金/放行状态、GitHub同步。说今日洞察，不复述整套规则，无字数下限。
 
-- `readiness_report.json` 的状态为 `READY`；
-- `ai_review_complete=true`，且审核状态为 `complete`、`coverage=1.0`、输入条数等于审核条数；
-- 资讯队列非空、必需来源成功，冻结原文哈希与逐条审核内容一致；不能只信任汇总的100%；
-- 账户现金、市值、权益可核算且按当日不复权收盘价估值；成交日期、正数数量和价格有效。基线确认必须绑定完整账户快照；
-- 实盘候选执行配置中的卖出后冷却期，不能直接把研究排名表的通过标记当最终买入资格；
-- 运行清单存在，且其中信号日期、价格快照、审核日期相互一致；
-- 每日运行卡存在，且策略标识、计划、审核覆盖率、运行清单哈希和放行状态相互一致；
-- 若上一份计划需要成交确认，对账结果必须为 `confirmed`、用户常设授权下的 `assumed_authorized`，或在上一计划全部取消且用户明确确认当前真实账户后生成的 `baseline_confirmed`。后两者必须在账户真源和日报中明确披露，券商回单优先覆盖。
+每次运行或查看日报都交付绝对Markdown文件链接：`[今日日报](绝对路径) · [回测](绝对路径) · [运行卡](当日绝对路径)`。稳定日报为 `outputs/ETF轮动策略_今日日报.html`；先确认文件存在。普通消息放末尾；heartbeat链接放XML之外，不能塞进message。路径有空格用尖括号包裹。不要新建会话、不要用HTML源码面板充当预览，不声称未经验证的页面已渲染。
 
-审核覆盖率不是“对相关资讯 100%”，而是对队列**全部行** 100%。任一资讯源失败、队列缺失、哈希不一致、草稿格式不合法或覆盖不足时，禁止新增仓位；已有仓位的价格卖出规则继续计算并如实报告。
+## 条件性事项
 
-完整流程失败时，入口自动独立核验风险卖出：账户、上一订单对账、当日不复权估值和持仓完整日线全部可信，且触发MA120硬退出，才可不依赖资讯发布`SELL_ONLY`；ROC20/排名软退出还必须验证最近2日完整审核、确认没有热点保护，排名退出另需全池当日行情。仅放行卖出已有数量并转现金，不运行机会换仓或新增买单。证据不足则`BLOCKED`，只提示风险，不把未知状态视为不受保护。独立发布失败也必须退回`BLOCKED`。上述状态、计划、清单、运行卡与日报必须一致；不得将`SELL_ONLY`说成完整`READY`。
-
-## 审核判断原则
-
-- 与固定 ETF 池无实质关系：`relevant=false`，但仍填写全部字段。
-- 相关资讯仅根据冻结文本识别主题、ETF、方向、期限、证据和风险；不确定时降低置信度并写入风险。
-- 情绪只能确认或否决边缘买点、识别新趋势、允许高质量延伸，或短暂保护性退出；不能推翻 MA120 硬退出，也不能凭新闻制造价格趋势。
-- 不把叙事、传闻或盘中波动写成事实；证据字段必须可追溯至原队列文本。
-
-## 对用户的简洁交付格式
-
-第一句直接写：`次日开盘：买入 / 卖出 / 换仓 / 持有 / 空仓`。
-
-随后按固定顺序列出：实盘股数、账户权益与累计收益；当日关键排名与持有/卖出/换仓结论；实际成交确认/对账状态；AI 审核覆盖率；`READY/SELL_ONLY/BLOCKED`；GitHub 同步结果与提交号。计划待成交确认时必须写“计划待成交确认”。
-
-**链接是每次正式日运行的必交付物**：稳定入口为 `outputs/ETF轮动策略_今日日报.html`。使用无空格的绝对 Markdown 文件链接，固定给出 `[今日日报](...) · [回测](...) · [运行卡](...)`；不得只给相对路径、纯文本路径或“日报已生成”的空泛说明。
-
-- 普通对话：把三个链接放在回复末尾。
-- heartbeat 自动任务：Markdown 放进 `<message>` 后不会渲染，必须把三个链接作为普通 Markdown 单独放在 heartbeat XML 块之前；XML 的 `<message>` 只保留简短结论。
-- 禁止用 `open_in_codex` 的文件面板打开 HTML，因为那会展示源码；也不得声称本地 `file://` 页面已被自动渲染打开。审核细节保留在日报和审计文件中。
-
-## 月度复盘（不属于每日流程）
-
-仅在月末收盘后或用户明确要求时运行：
-
-```sh
-PYTHONPATH=src python3 experiments/strategy_ablation.py
-PYTHONPATH=src python3 experiments/monthly_live_review.py --month YYYY-MM
-```
-
-月度复盘比较正式策略、纯价格核心和实盘账户路径，只输出研究报告，不修改正式信号、订单、日报或任何参数。不得把月度研究脚本接入 `scripts/run_after_close.py`。
+- 收盘宝仅按券商实际回单核验；无访问条件或超出申报时段记录未核，不阻断ETF日报，不推算真实到账利息。历史回测现金规则不变。
+- 月末或用户要求复盘时才运行 `experiments/strategy_ablation.py` 与 `experiments/monthly_live_review.py --month YYYY-MM`；只输出研究，不改正式订单。不要把研究放进每日入口。

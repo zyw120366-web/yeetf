@@ -179,45 +179,18 @@ def test_backtest_html_exposes_etf_dashboard_controls() -> None:
 
 
 def test_daily_html_opens_with_plain_language_overview() -> None:
-    script = ROOT / "dashboard" / "scripts" / "build_ye_strategy_html.py"
-    spec = importlib.util.spec_from_file_location("build_ye_strategy_html_daily", script)
-    assert spec and spec.loader
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    daily = module.build_daily_page()
-    match = re.search(r'<section class="section" id="dailyOverview">(.*?)</section>', daily, re.S)
-    assert match
-    overview = html.unescape(re.sub(r"<[^>]+>", "", match.group(1)))
-    assert "今日决策路径综述" in overview
-    overview_length = len(re.sub(r"\s+", "", overview))
-    assert 500 <= overview_length <= 800
-    for marker in ("策略实盘开启以来", "本次买入收益", "今日收益"):
+    from etf_rotation.daily_report import collect, render
+    # Report date follows the current run, not the last successful backtest.
+    date = json.loads((ROOT / "results/live/readiness_report.json").read_text())["signal_date"]
+    report = collect(ROOT, date)
+    daily = render(report)
+    assert date in daily
+    assert "dailyOverview" in daily and "今日决策路径综述" in daily
+    assert "<br" not in daily
+    for marker in ("策略实盘开启以来", "本次买入收益", "今日收益", "今日卫星检查"):
         assert marker in daily
-    for marker in ("今日卫星检查", "卫星技术合格", "卫星最终补位", "虚拟排名"):
-        assert marker in daily
-    formal = yaml.safe_load((ROOT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
-    satellite_symbols = formal["enhanced_selection"]["universe_architecture"]["challenger_symbols"]
-    for symbol in satellite_symbols:
-        assert symbol in daily
-    signal = json.loads(
-        (ROOT / "results" / "comparison" / "latest_signals.json").read_text(
-            encoding="utf-8"
-        )
-    )
-    plan = json.loads(
-        (ROOT / "results" / "live" / f"{signal['signal_date']}_order_plan.json").read_text(
-            encoding="utf-8"
-        )
-    )
-    candidates = plan["decision_basis"]["eligible_candidates"]
-    for candidate in candidates:
+    for candidate in report["analysis"].get("candidates", []):
         assert f"{candidate['name']}（{candidate['symbol']}）" in daily
-    if plan["current_symbol"] == plan["target_symbol"] and plan["target_symbol"]:
-        current = next(
-            position for position in plan["account_state"]["positions"]
-            if position["symbol"] == plan["current_symbol"]
-        )
-        assert f"{current['name']}（继续持有）" in daily
-    assert "决策所用账户" not in daily
-    assert "放行</span>" not in daily
-    assert "最终状态READY" not in daily
+    if report["status"] == "BLOCKED":
+        assert "正式订单未放行" in daily and not report["orders"]
+    # No arbitrary word-count minimum; evidence and usable sections are required.

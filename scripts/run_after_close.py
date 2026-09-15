@@ -90,10 +90,10 @@ def run_pipeline(args) -> None:
     run("scripts/build_trade_audit.py")
     run("scripts/build_live_order_plan.py", "--date", args.date)
     run("scripts/validate_live_readiness.py", "--date", args.date)
-    run("scripts/build_daily_reference_report.py", "--date", args.date)
     run("dashboard/scripts/build_ye_strategy_html.py")
     run("scripts/build_run_manifest.py", "--date", args.date)
     run("scripts/build_live_run_card.py", "--date", args.date)
+    run("scripts/validate_daily_delivery.py", "--date", args.date)
 
 
 if __name__ == "__main__":

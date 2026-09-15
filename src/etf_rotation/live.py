@@ -6,7 +6,6 @@ import json
 import math
 import os
 import tempfile
-import html
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -232,38 +231,45 @@ def price_risk_check(root: Path, date: str, account: dict) -> list[str]:
         return [f"价格风控未完成：{exc}；不得把运行失败解释为继续持有"]
 
 
-def blocked_html(date: str, reasons: list[str], account: dict, risks: list[str] | None = None) -> str:
-    holdings = "、".join(f"{p.get('name', p.get('symbol'))}（{p.get('symbol')}）{p.get('quantity')}份" for p in account.get("positions", [])) or "空仓"
-    return ('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>ye 策略今日日报</title>'
-            '<body style="max-width:850px;margin:50px auto;font:18px/1.8 sans-serif;padding:20px">'
-            f'<h1>ye 策略日报 · {html.escape(date)}</h1><h2>本次未放行，暂无可执行买入计划</h2>'
-            f'<p>当前记录持仓：{html.escape(holdings)}</p><p>阻断原因：{html.escape("；".join(reasons))}</p>'
-            f'<p>价格风控：{html.escape("；".join(risks or ["未完成，不能据此判断继续持有"]))}</p>'
-            '<p>软退出仍需完整策略确认；以上不是换仓放行，不得执行新增买单。</p>'
-            '<p>旧日报和旧买单不代表今天的决定。待本次数据与账户检查通过后重新生成计划。</p></body></html>')
-
-
 def publish_blocked(root: Path, date: str, reason: str) -> None:
+    from .daily_report import publish, read_json, validate_delivery
     live = root / "results/live"
-    account_path = live / "account_state.json"
-    account = json.loads(account_path.read_text(encoding="utf-8")) if account_path.exists() else {}
-    ready_path = live / "readiness_report.json"
-    previous = json.loads(ready_path.read_text(encoding="utf-8")) if ready_path.exists() else {}
-    readiness = previous if previous.get("signal_date") == date else {}
-    readiness.update(signal_date=date, status="BLOCKED", error=reason)
-    readiness["blocking_items"] = readiness.get("blocking_items") or [reason]
-    atomic_json(ready_path, readiness)
-    risks = price_risk_check(root, date, account)
-    body = blocked_html(date, readiness["blocking_items"], account, risks)
-    for path in (root / "outputs/ETF轮动策略_今日日报.html", root / "dashboard/public/ye-daily.html"):
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(body, encoding="utf-8")
-    (live / f"{date}_daily_report.md").write_text(f"# ye 策略日报｜{date}\n\nBLOCKED：本次未放行，无可执行买入计划。\n\n{reason}\n\n价格风控：{'；'.join(risks)}。软退出仍需完整策略确认。\n", encoding="utf-8")
-    card = {"card_type": "ye_live_run_card", "signal_date": date, "account_state": account,
-            "release": {"readiness": "BLOCKED", "blocking_items": readiness["blocking_items"], "plan_is_not_fill": True},
-            "decision": {"actions": [], "target_symbol": None}, "price_risk_check": risks, "error": reason}
-    atomic_json(root / "results/audit" / f"{date}_live_run_card.json", card)
-    paths = [ready_path, account_path, live / f"{date}_daily_report.md", root / "outputs/ETF轮动策略_今日日报.html"]
-    atomic_json(root / "results/audit" / f"{date}_run_manifest.json", {
-        "signal_date": date, "status": "BLOCKED", "error": reason,
-        "critical_files": [{"path": str(p.relative_to(root)), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in paths if p.exists()]})
+    account = read_json(live / "account_state.json")
+    cash_pending = account.get("cash_reconciliation", {}).get("status") == "pending"
+    detail = ("真实成交已记录；新增入金、余款及费用待核，不能核定账户权益与可用资金。"
+              if cash_pending and "账户" in reason else reason)
+    ready = {"signal_date": date, "status": "BLOCKED", "blocking_items": [detail],
+             "error": reason, "buy_allowed": False, "sell_allowed": False}
+    atomic_json(live / "readiness_report.json", ready)
+    # Replace any stale same-day order; a failed rerun must not leave a buy plan.
+    plan = {"strategy": "ye 策略", "signal_date": date, "status": "BLOCKED",
+            "current_symbol": (account.get("positions") or [{}])[0].get("symbol"),
+            "target_symbol": None, "actions": [], "account_state": account,
+            "execution": {"orders": [], "executable": False}, "blocking_items": [detail]}
+    atomic_json(live / f"{date}_order_plan.json", plan)
+    report = publish(root, date)
+    audit = root / "results/audit"
+    paths = [live / "readiness_report.json", live / "account_state.json",
+             live / f"{date}_order_plan.json", live / f"{date}_daily_report.json",
+             live / f"{date}_daily_report.md", root / "outputs/ETF轮动策略_今日日报.html",
+             root / "dashboard/public/ye-daily.html"]
+    paths += list((root / "config").glob("*.yaml"))
+    paths += list((root / "market_data/prices").glob("*.csv"))
+    paths += list((root / "src/etf_rotation").glob("*.py"))
+    for relative in (f"market_data/live_quotes/{date}.json", f"market_data/sentiment/{date}.json",
+                     f"market_data/sentiment/ai_review/{date}.json",
+                     "scripts/build_live_order_plan.py", "scripts/build_sentiment_features.py"):
+        paths.append(root / relative)
+    manifest_path = audit / f"{date}_run_manifest.json"
+    atomic_json(manifest_path, {"signal_date": date, "status": "BLOCKED",
+        "critical_files": [{"path": str(p.relative_to(root)),
+                           "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+                          for p in paths if p.exists()]})
+    atomic_json(audit / f"{date}_live_run_card.json", {
+        "card_type": "ye_live_run_card", "signal_date": date, "account_state": account,
+        "release": {"readiness": "BLOCKED", "blocking_items": [detail], "plan_is_not_fill": True},
+        "decision": {"current_symbol": plan["current_symbol"], "target_symbol": None, "actions": []},
+        "observation": report["analysis"], "sentiment_review": report["review"],
+        "error": reason, "audit": {"run_manifest": str(manifest_path.relative_to(root)),
+        "run_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest()}})
+    validate_delivery(root, date)

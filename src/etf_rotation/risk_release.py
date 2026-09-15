@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import hashlib
-import html
 import json
 import math
 from pathlib import Path
@@ -109,13 +108,6 @@ def assess_sell_only(root: Path, date: str) -> dict:
                  "instruction": "仅卖出已核对的现有持仓，卖出后保持现金；禁止买入或借券卖空"}]}}
 
 
-def sell_only_html(date: str, plan: dict, failure: str) -> str:
-    action = plan["actions"][0]
-    quantity = plan["execution"]["orders"][0]["confirmed_quantity"]
-    message = f"次日开盘：仅卖出{action['symbol']} {quantity:g}份，卖出后持有现金；禁止买入。"
-    return f'<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>ye策略日报</title><body><h1>{html.escape(date)} 日报</h1><h2>{html.escape(message)}</h2><p>原因：{html.escape("；".join(action["reasons"]))}</p><p>完整运行未通过：{html.escape(failure)}</p><p>仅卖出放行（SELL_ONLY）；计划不是成交。</p></body></html>'
-
-
 def publish_sell_only(root: Path, date: str, failure: str) -> bool:
     """Called only after ordinary publication failed and BLOCKED was saved."""
     try:
@@ -124,25 +116,21 @@ def publish_sell_only(root: Path, date: str, failure: str) -> bool:
         return False
     live, audit = root / "results/live", root / "results/audit"
     action = plan["actions"][0]
-    quantity = plan["execution"]["orders"][0]["confirmed_quantity"]
-    message = f"次日开盘：仅卖出{action['symbol']} {quantity:g}份，卖出后持有现金；禁止买入。"
     ready = {"signal_date": date, "status": "SELL_ONLY", "buy_allowed": False, "sell_allowed": True,
              "blocking_items": [failure], "sell_reasons": action["reasons"],
              "note": "只放行独立校验的风险卖单，不代表完整策略READY"}
     atomic_json(live / f"{date}_order_plan.json", plan)
     atomic_json(live / "readiness_report.json", ready)
-    text = f"# ye策略日报｜{date}\n\n{message}\n\n原因：{'；'.join(action['reasons'])}。\n\n完整运行未通过：{failure}\n\n仅卖出放行（SELL_ONLY），计划不是成交。\n"
-    (live / f"{date}_daily_report.md").write_text(text)
-    page = sell_only_html(date, plan, failure)
-    for path in (root / "outputs/ETF轮动策略_今日日报.html", root / "dashboard/public/ye-daily.html"):
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(page)
+    from .daily_report import publish, validate_delivery
+    report = publish(root, date)
     template = {"signal_date": date, "confirmation_status": "pending", "fills": [
         {"side": "sell", "symbol": action["symbol"], "status": "unfilled", "quantity": 0, "price": 0}]}
     atomic_json(live / f"{date}_actual_fills.template.json", template)
     paths = [live / f"{date}_order_plan.json", live / "account_state.json",
              live / "readiness_report.json", live / f"{date}_daily_report.md",
-             root / "market_data/live_quotes" / f"{date}.json"]
+             root / "market_data/live_quotes" / f"{date}.json",
+             live / f"{date}_daily_report.json", root / "outputs/ETF轮动策略_今日日报.html",
+             root / "dashboard/public/ye-daily.html"]
     paths += list((root / "config").glob("*.yaml"))
     paths += list((root / "market_data/prices").glob("*.csv"))
     paths += list((root / "src/etf_rotation").glob("*.py"))
@@ -162,8 +150,9 @@ def publish_sell_only(root: Path, date: str, failure: str) -> bool:
     atomic_json(audit / f"{date}_live_run_card.json", {
         "card_type": "ye_live_run_card", "signal_date": date,
         "release": {"readiness": "SELL_ONLY", "buy_allowed": False, "sell_allowed": True, "plan_is_not_fill": True},
-        "account_state": plan["account_state"], "decision": {
+        "account_state": plan["account_state"], "sentiment_review": report["review"], "decision": {
             "current_symbol": plan["current_symbol"], "target_symbol": None, "actions": plan["actions"]},
         "audit": {"run_manifest": str(manifest_path.relative_to(root)),
                   "run_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest()}})
+    validate_delivery(root, date)
     return True

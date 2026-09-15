@@ -36,7 +36,8 @@ def risk_env(tmp_path, monkeypatch):
             target.symlink_to(path)
     for name in ("live_quotes", "sentiment"):
         (tmp_path / "market_data" / name).symlink_to(ROOT / "market_data" / name, target_is_directory=True)
-    state = json.loads((ROOT / "results/live/account_state.json").read_text())
+    # A fixed historical fixture, not the user's changing real account.
+    state = json.loads((ROOT / "results/live/2026-09-10_order_plan.json").read_text())["account_state"]
     atomic_json(tmp_path / "results/live/account_state.json", state)
     market = yaml.safe_load((ROOT / "config/market.yaml").read_text())
     panel = load_panel(market, ROOT / "market_data/prices")

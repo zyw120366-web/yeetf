@@ -88,12 +88,13 @@ def order_candidates(candidates: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def previous_trading_day(day: pd.Timestamp) -> pd.Timestamp | None:
+def previous_trading_day(day: pd.Timestamp, *, root=None) -> pd.Timestamp | None:
+    root = ROOT if root is None else root
     calendar_path = next(
         (
             path for path in (
-                ROOT / "market_data" / "prices" / "000001.SH.csv",
-                ROOT / "market_data" / "prices" / "510300.SH.csv",
+                root / "market_data" / "prices" / "000001.SH.csv",
+                root / "market_data" / "prices" / "510300.SH.csv",
             )
             if path.exists()
         ),
@@ -113,7 +114,9 @@ def opportunity_switch_status(
     candidates: pd.DataFrame,
     account: dict,
     config: dict,
+    *, root=None,
 ) -> dict:
+    root = ROOT if root is None else root
     rule = config["enhanced_selection"].get("opportunity_switch", {})
     base = {
         "enabled": bool(rule.get("enabled", False)),
@@ -146,8 +149,8 @@ def opportunity_switch_status(
     )
     calendar_path = next(
         path for path in (
-            ROOT / "market_data" / "prices" / "000001.SH.csv",
-            ROOT / "market_data" / "prices" / "510300.SH.csv",
+            root / "market_data" / "prices" / "000001.SH.csv",
+            root / "market_data" / "prices" / "510300.SH.csv",
         ) if path.exists()
     )
     calendar = pd.read_csv(calendar_path, parse_dates=["datetime"])["datetime"]
@@ -166,9 +169,9 @@ def opportunity_switch_status(
     streak = 0
     if qualifies and candidate is not None and day >= starts_on:
         streak = 1
-        previous = previous_trading_day(day)
+        previous = previous_trading_day(day, root=root)
         if previous is not None and previous >= starts_on:
-            prior_path = ROOT / "results" / "live" / f"{previous.date()}_order_plan.json"
+            prior_path = root / "results" / "live" / f"{previous.date()}_order_plan.json"
             if prior_path.exists():
                 prior_plan = json.loads(prior_path.read_text(encoding="utf-8"))
                 prior = prior_plan.get("decision_basis", {}).get("opportunity_switch", {})
@@ -259,6 +262,33 @@ def liquidity_instruction(symbol: str, side: str, day: pd.Timestamp, market: dic
     }
 
 
+def holding_decision(day, current, ranking, candidates, account, config, *, root=None):
+    held_exit_reasons: list[str] = []
+    held_row: pd.Series | None = None
+    if current:
+        held = ranking.loc[ranking["symbol"].eq(current)]
+        if held.empty:
+            raise RuntimeError(f"confirmed live holding {current} is outside the fixed ETF pool")
+        held_row = held.iloc[-1]
+        held_exit_reasons = exit_reasons(held_row)
+        core_available = bool(
+            candidates["pool_role"].eq("core").any()
+            if "pool_role" in candidates.columns else len(candidates)
+        )
+        held_is_challenger = str(held.iloc[-1].get("pool_role", "core")) == "challenger"
+        if held_is_challenger and core_available:
+            held_exit_reasons.append("核心池出现合格候选（挑战者让位）")
+    switch_status = opportunity_switch_status(
+        day, current, held_row, candidates, account, config, root=root
+    )
+    if current and not held_exit_reasons and switch_status["triggered"]:
+        held_exit_reasons.append(
+            "机会成本换仓：旧仓掉出前5，完整合格核心候选动量分领先至少5个百分点，连续2日确认且旧仓已持有满5日"
+        )
+    target = choose_live_target(current, candidates, held_exit_reasons)
+    return target, held_row, held_exit_reasons, switch_status
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build the next-open ye order plan")
     parser.add_argument("--date", required=True)
@@ -289,29 +319,9 @@ def main() -> None:
         ranking.loc[ranking["final_entry_pass"].astype(bool)]
     )
     config = yaml.safe_load((ROOT / "config" / "ye_strategy.yaml").read_text(encoding="utf-8"))
-    held_exit_reasons: list[str] = []
-    held_row: pd.Series | None = None
-    if current:
-        held = ranking.loc[ranking["symbol"].eq(current)]
-        if held.empty:
-            raise RuntimeError(f"confirmed live holding {current} is outside the fixed ETF pool")
-        held_row = held.iloc[-1]
-        held_exit_reasons = exit_reasons(held_row)
-        core_available = bool(
-            candidates["pool_role"].eq("core").any()
-            if "pool_role" in candidates.columns else len(candidates)
-        )
-        held_is_challenger = str(held.iloc[-1].get("pool_role", "core")) == "challenger"
-        if held_is_challenger and core_available:
-            held_exit_reasons.append("核心池出现合格候选（挑战者让位）")
-    switch_status = opportunity_switch_status(
-        day, current, held_row, candidates, account, config
+    target, held_row, held_exit_reasons, switch_status = holding_decision(
+        day, current, ranking, candidates, account, config,
     )
-    if current and not held_exit_reasons and switch_status["triggered"]:
-        held_exit_reasons.append(
-            "机会成本换仓：旧仓掉出前5，完整合格核心候选动量分领先至少5个百分点，连续2日确认且旧仓已持有满5日"
-        )
-    target = choose_live_target(current, candidates, held_exit_reasons)
     actions: list[dict] = []
     if current and current != target:
         actions.append({"side": "sell", "symbol": current, "target_weight": 0.0, "reasons": held_exit_reasons})
