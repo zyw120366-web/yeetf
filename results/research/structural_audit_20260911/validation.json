@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-11",
+  "research_status": "complete_no_promotion",
+  "backtest_runs": 65,
+  "first_phase_runs": 44,
+  "price_followup_runs": 21,
+  "research_tests": {"passed": 7, "failed": 0},
+  "full_suite": {
+    "passed": 93,
+    "failed": 6,
+    "failure_groups": {
+      "test_risk_release_and_research uses mutable pending live-account fixture": 5,
+      "test_formal_artifacts expects READY daily page during BLOCKED state": 1
+    }
+  },
+  "project_hygiene": "PASS",
+  "git_diff_check": "PASS",
+  "formal_guard_114_files_changed": [],
+  "price_guard_63_files_changed": [],
+  "report_broken_local_links": [],
+  "production_changes": false,
+  "cash_reconciliation_changes": false,
+  "warning": "Research findings are not executable trading orders or validated future performance."
+}

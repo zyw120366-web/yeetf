@@ -1,6 +1,6 @@
 name: ye 题材情绪审核
 status: frozen_for_live
-frozen_on: '2026-07-18'
+frozen_on: '2026-07-22'
 execution: 每个交易日收盘后采集并冻结；只允许用于下一交易日开盘信号
 sources:
   strong_theme: 同花顺强势股题材归因
@@ -14,6 +14,9 @@ features:
   - 全市场炸板率、跌停数和连板高度
 rules:
   immutable_raw_snapshots: true
+  cross_source_event_deduplication: 同一交易日同一公司逐行审核但题材强度只计一次
+  category_broadcast_to_symbols: false
+  direct_symbol_keyword_required: true
   missing_source_means_unknown_not_zero: true
   historical_backfill_for_2021_2022_forbidden: true
   historical_features_available_from: '2024-01-01'
@@ -30,19 +33,22 @@ ai_review:
   review_mode: each collected row is reviewed and written by Codex in the current conversation
   required_environment: none
   audit_fields: [source_hash, relevant, matched_categories, matched_symbols, direction, horizon, confidence, novelty, summary, evidence, risk_flags]
+  protocol: config/sentiment_review_policy.yaml
+  reproducibility_fields: [model_family, model_snapshot, surface, reviewed_in_current_conversation, protocol_sha256, sentiment_config_sha256, review_schema_sha256]
 category_keywords:
   宽基: [权重, 指数, 蓝筹]
   风格红利: [红利, 高股息, 央企]
   商品: [黄金, 豆粕, 化工, 能源]
   美股: [纳指, 标普, 美股]
-  港股与亚洲: [港股, 恒生, 日韩]
+  港股与亚洲: [港股, 恒生, 日韩, 日本, 日经]
+  海外欧洲: [欧洲, 欧股, 德国, 德股, DAX]
   医药医疗: [医药, 创新药, 医疗, 中药]
   金融地产: [银行, 证券, 保险, 地产, 金融科技]
   科技数字: [通信, 算力, 人工智能, 芯片, 游戏, 传媒]
-  高端制造: [军工, 机器人, 电池, 光伏, 航空航天]
-  周期资源: [有色, 钢铁, 煤炭, 稀土, 化工]
+  高端制造: [军工, 机器人, 电池, 光伏, 航空航天, 工程机械]
+  周期资源: [有色, 钢铁, 煤炭, 稀土, 化工, 石油, 油气]
   消费农业: [消费, 白酒, 家电, 养殖, 旅游, 农业]
-  基建公用: [电力, 基建, 建材, 公用事业]
+  基建公用: [电力, 基建, 建材, 公用事业, 电网, 特高压]
 symbol_keywords:
   518880.SH: [黄金, 金矿, 贵金属]
   159981.SZ: [能源化工, 石化, 石油, 化工]
@@ -52,7 +58,7 @@ symbol_keywords:
   513530.SH: [港股红利, 央企红利, 高股息]
   513200.SH: [创新药, 医药, 生物科技]
   513310.SH: [半导体, 芯片]
-  512010.SH: [医药, 创新药, 生物医药, CXO]
+  512010.SH: [医药, 创新药, 生物医药, CXO, 中药, 化学制药, 医疗器械]
   562600.SH: [医疗器械, 医疗设备, 医疗]
   159647.SZ: [中药, 中成药]
   512070.SH: [券商, 证券, 保险]
@@ -81,3 +87,9 @@ symbol_keywords:
   159611.SZ: [电力, 火电, 水电, 核电, 绿电]
   516970.SH: [基建, 建筑, 工程机械]
   159745.SZ: [建材, 水泥, 玻璃]
+  560280.SH: [工程机械, 挖掘机, 起重机, 装载机]
+  561380.SH: [电网设备, 电力设备, 特高压, 输变电, 变压器]
+  512980.SH: [传媒, 影视, 电影, 广告, 出版, 短剧]
+  513520.SH: [日本, 日经, 日本股市, 日股]
+  513030.SH: [德国, 德股, DAX, 德国股市]
+  561360.SH: [石油, 油气, 石化, 油服]

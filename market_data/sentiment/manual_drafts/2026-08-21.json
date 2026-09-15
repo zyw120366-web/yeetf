@@ -1,0 +1,2810 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "cb9d95f49b0dbee99eb8b51c559890a28cb1244cbb1c952bbd370bf7ce2514b3",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "肯特股份出现强势股/涨停名单，冻结文本涉及周期资源。",
+      "evidence": [
+        "PCB覆铜板+PEEK材料+高性能工程塑料"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "0124fa79a174f9fc5c024e00a0cc707ccf80e663845268cd36e06dfe92e0a476",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "石墨烯+家居+半年报预计减亏"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "382d6cfbd4abb08dcd593171c427cf67f2155ade78adccb2a79ee0c923f75f30",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "沃特股份出现强势股/涨停名单，冻结文本涉及高端制造。",
+      "evidence": [
+        "PTFE薄膜+PCB概念+人形机器人+半年报增长"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "9dcf9bc5aedc99e52c8efd91646c86e9e39228c10b44993ae97e9ae82a579edf",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "北陆药业出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "集采拟中选+化药+中药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "b1e2b0056c494d4eed1c3dc89c5d36d549c5e1d923327a755e5b590f735a525b",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "通鼎互联出现强势股/涨停名单，冻结文本涉及高端制造。",
+      "evidence": [
+        "中报扭亏+光纤光缆+储能安防"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "df31d0ec7a13b9baa62f6f81ec64e19fa4ed197acfba0dbc89031ae807bed826",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "国光电器出现强势股/涨停名单，冻结文本涉及高端制造、科技数字。",
+      "evidence": [
+        "AI眼镜+智能音箱+PCB概念+锂电池"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "a8c82d46e058a7233ec627df8f7e65edd8e74fbcc5318cd371a4f8a0259ffe20",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "勤上股份出现强势股/涨停名单，冻结文本涉及科技数字、高端制造。",
+      "evidence": [
+        "半导体照明+LED照明+车路云协同+储能"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "f230bc44cc086d44dbb65ef81e4768db3a102ce0998696c8b97ea61b5a606553",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "盛达资源出现强势股/涨停名单，冻结文本涉及商品、周期资源。",
+      "evidence": [
+        "黄金+白银龙头+铜金矿投产+半年报增长"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "75cd3da00355654f1e6eb597eb5d3bee96840c5c7b7b1f71002da30f70550356",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "秦安股份出现强势股/涨停名单，冻结文本涉及高端制造。",
+      "evidence": [
+        "人形机器人+汽车零部件+真空镀膜+超跌反弹"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "dd16a6b8249cee120f7976717d01b0070ae37369a800b631a0e4fbce8075aeed",
+      "relevant": true,
+      "matched_categories": [
+        "海外欧洲",
+        "高端制造",
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "159755.SZ",
+        "512400.SH",
+        "513030.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "诺德股份出现强势股/涨停名单，冻结文本涉及海外欧洲、高端制造、科技数字、周期资源。",
+      "evidence": [
+        "铜箔+AI服务器+固态电池+半年报扭亏"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "8bf4f89346752db86f7fddb8a867e50526e1e084a5caf34c60ca2f5e54e8260e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "预重整+智慧城市+深圳国资"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f4b9193cb6fa1ec6e6cf259494f702fd905b28b86f53211a667c022d6e4febb6",
+      "relevant": true,
+      "matched_categories": [
+        "风格红利",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "中瓷电子出现强势股/涨停名单，冻结文本涉及风格红利、科技数字。",
+      "evidence": [
+        "CPO+电子陶瓷+央企"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "043cce14a8e22322911972e240a75f9c0dfe4c88d2c50e54590ac5eb276675cc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "深科达出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "半导体设备+存储芯片+CPO+中报增长"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "93693b0e44efb8900a0ca7e4ee151b9ef61712d4447f50fbdac5663f570948c6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "Micro LED+光耦+先进光电封装+广东国资"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ca16179a629f91a431f108b73b1eebb119dee4077a4a968d84d786f565fc89eb",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "宇环数控出现强势股/涨停名单，冻结文本涉及高端制造、消费农业。",
+      "evidence": [
+        "机器人+消费电子+数控机床"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "b396caa43f986b54a4832246a206e23890d4429e11e3b013c0f28c69a1b11f05",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "高新发展出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "功率半导体+此前拟收购华鲲振宇股权+虚拟电厂+成都国资"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "a344d24a9d0566912eb0abe798b9929a8dcae98cc3290f491c5df49c25435fd7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "摘帽申请+锆钛矿+陶瓷"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c7f445830b665f6714dd1efb95d03d34f76f93c2271352910f4265b45ed0105a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "半年报增长+白银+湖南国资"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "3b5e1dc295ae4e752e877ca14664a1321d65495ccb95f4a027079a9eb59b58dd",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "精达股份出现强势股/涨停名单，冻结文本涉及高端制造、科技数字。",
+      "evidence": [
+        "电磁线+人形机器人+数据中心+可转债赎回完成"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "456de37ed23ae1eb2ef5cfbb26c8aed9eb8723bf004b0bcb12bde388f6a12de1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "mRNA肿瘤疫苗+合成生物+mRNA原料酶"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b2c8a586a4720d43fd1578977373ad567a9dca0c3d1550ea336bfde2c9204100",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "日科化学出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "半年报增长+算力租赁+电解液+拟收购亘元新材"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "cc4e66a8760e3e96e12943e65138368d8459ac4eec6d89dc2bace8250dac35fb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "锂矿+半年报增长+实控人增持"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "48c38376ba4984584e723a9073093be3a4fc35e32f2d905eac5f8ff07020f2d2",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "天洋新材出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "CPO+电子胶+半年报预盈+超跌反弹"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "e5c741e460fd440f51c7b676e5b9e9fa08da2b28db7ed7e62e6c0ab26aab4794",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "福达合金出现强势股/涨停名单，冻结文本涉及商品、科技数字。",
+      "evidence": [
+        "AI数据中心+电接触材料+黄金概念+半年报预增"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "0919f5e23aaa46fe5936c1055338c79562f2fea13af8f81c15baa8690ef469f7",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "豪美新材出现强势股/涨停名单，冻结文本涉及高端制造、科技数字。",
+      "evidence": [
+        "机器人轻量化+AI产业基金+汽车轻量化"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "29c41c897c272cbc7c82d7e2b78b39ed3ce0eafef77d0cf67ba4b244a471e7ce",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "钨钽铌资产注入+磁选装备+江西国资"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ab0a03965870464334a528c917a2003815f6aacb4f6d31b6b010968ec586690a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "共达电声出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "AI算力+电声元器件+苹果概念+汽车电子"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "bf1de5ef8ca5426468c6d1feffc40bf429a6b11b6b148345f498ad88c8473eff",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "旭光电子出现强势股/涨停名单，冻结文本涉及周期资源。",
+      "evidence": [
+        "氮化铝+真空灭弧室+可控核聚变+定增过会"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "c32f9c0453c21d744510cd27b9d14194ef4b5319525ce52bfecacd29fef6a7c6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "博汇股份出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "液冷算力+燃料油深加工+项目投资"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "464eaaf684acfa7e700070d6745321f2a31ad74d7afbee1674d3bcf8793c7637",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "磷化铟衬底+光稳定剂"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "dc942fe8ed48b7544857d14878e01ad8d425c3d5bad265d6961b6c5a044866b6",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "159755.SZ",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "白银有色出现强势股/涨停名单，冻结文本涉及商品、周期资源、高端制造。",
+      "evidence": [
+        "白银+黄金+多金属综合+锂电材料"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "7eed07d2dab0aa51000cb3b11201ca853297dd6e37bca7c01edcc0228766310b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "金富科技出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "液冷服务器+定增扩产+中报预增"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "079b7fcbe810d40e56f09fd940439dc0318c1e9d325e60fe2246a560fc4e5e7f",
+      "relevant": true,
+      "matched_categories": [
+        "风格红利",
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "东信和平出现强势股/涨停名单，冻结文本涉及风格红利、金融地产。",
+      "evidence": [
+        "数字货币+eSIM+央企"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "9be7e04e71f5bc2e72c8665c271f4ffc7f1718b69c5f95adf840551418eb3696",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "星网锐捷出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "数据中心交换机+CPO+半年报增长+福建国资"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "422fdb9328aa263d3aa8c5d9c328f402f912b41fff3db22864f8a97dd9043520",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "瑞斯康达出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "光网络+算力+半年报减亏"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "33be1d447fa9f285ed8340c508debb5850ffd2a48df60096288bf4e108f093d7",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "飞龙股份出现强势股/涨停名单，冻结文本涉及高端制造、科技数字。",
+      "evidence": [
+        "液冷服务器+汽车热管理+机器人"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "ed0f8cbd26eeeb4cf41fb04fc53a8e40919ed633fb93a3e69b2b30bed394f222",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "可川科技出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "硅光芯片+CPO+功能性器件"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "9c4a53ea85a0ddb5e75c0026f2148b0f30ca6a5fc80086f4181d96b64d2eaa18",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "氦气+燃气轮机+天然气+山东国资"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "43df0e31ca47aca733f6cc23a81d375b5f517c254828211e4f8f47f41f87db44",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "维生素+合成生物+生物保鲜剂+回购"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1d30ffa28529591c7cd4c66fd5acdaf923852234738be0762f9dd2e2f9e908a5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "士兰微出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "SiC+功率半导体+IDM模式"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "c4945b9405100fe8d9f0ba3b54b046af10faa4c2a902c5528a5f332efa023019",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "越剑智能出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "AI验布机+纺织机械+高端装备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "60cd4f6147327056a5b40b803e6cc5e0405e792330e2f2ed12d8db37ba92b063",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "科森科技出现强势股/涨停名单，冻结文本涉及高端制造、消费农业。",
+      "evidence": [
+        "折叠屏+机器人+消费电子+中报扭亏"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "91261b69a200b72def1cd0175ac00f3aed1dfe24d23722f66764581351f93677",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "定增获批+电子特气+大宗气体"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "beba9a47470141133ac6c3348f506c166e21cbed9c1a8db8994e92da704aa1d6",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "哈森股份出现强势股/涨停名单，冻结文本涉及高端制造。",
+      "evidence": [
+        "苹果产业链+机器人概念+重组+中报预计扭亏"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "aa4f9eb3b17fe73e1ff46f7839ff01fa5a803b325d8988b399fcf698e060c34f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "定增落地+特种电缆+电子级氢氟酸"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0655a40c7556c58e6d348f653ef3874978a8b7b2935ea58bceef7ce2693ea91f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "亿利达出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "控制权变更+数据中心+风机龙头+国企改革"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "c6639196afa9004c1db02e089fd649870f6e934162c52adfd7d45d3104a791f9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "楚天龙出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "数字人民币+AI应用+数字政务"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "9f38b72717bb19c10b5bdb5ac146b8a1893f60a073c72adfec119a045747bb38",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "中关村出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "mRNA疫苗平台+创新药+麻精镇痛+药品获批"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "84bba12c210b3dccd3bfc244717f0d9ea80fecc92cfc4dbac01ba2585628a34a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "杭齿前进出现强势股/涨停名单，冻结文本涉及高端制造。",
+      "evidence": [
+        "半年报增长+机器人关节+齿轮箱龙头+杭州国资"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "f4e81cf5d8099b2d62475b0908ee697aaf625c52ca9cd50963911cb65ab3516a",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562600.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "贝瑞基因出现强势股/涨停名单，冻结文本涉及医药医疗、科技数字。",
+      "evidence": [
+        "AI医疗+基因测序+三代测序"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "1a4b07eed3000d4ee7ed98582e13503c1b08e6dfd7be1a1ef3a7908025b24935",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "键凯科技出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "mRNA疫苗+LNP递送+聚乙二醇+创新药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "f27f6274d4e2728fbcfa9ff2e3e78c2e5edd9c03d43d7cd3e28d9b391174f4e7",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH",
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "汉森制药出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "创新药+中药+中报预增"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "6e5a6e12548f44106f7077b995c164f08c50daf299fe8b8d4adc6917080c1924",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "达意隆出现强势股/涨停名单，冻结文本涉及高端制造。",
+      "evidence": [
+        "半年报增长+机器人+液态包装装备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "021671c3fe6a5b29bf29fab95a671371d8a3665245ba8e4cf6d3e749b3eb483d",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "双鹭药业出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "mRNA平台+GLP-1+创新药+国企改革"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "1a92a228a7166b55bb4d245b82ba433bc0014a9b5d73ab22254676bc61cb45d1",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "深中华A出现强势股/涨停名单，冻结文本涉及商品。",
+      "evidence": [
+        "黄金珠宝+黄金涨价+年报增长"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "415378a84536231b330d33db38ea4b6b9115f57b30dcfea07f9fc95e2cd69f0f",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "新华百货出现强势股/涨停名单，冻结文本涉及消费农业。",
+      "evidence": [
+        "回购+新质零售+区域零售"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "12d64050054b106031522ba2e9aed628d00479c475d375f66ef8a98bfa9e56c5",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "*ST威领出现强势股/涨停名单，冻结文本涉及高端制造、周期资源。",
+      "evidence": [
+        "要约收购+钨锡铅锌矿+锂电原料"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "46f4f480007cd42ccc2b8b7b8a8deab5b960f73fabfe53e048642d601bfcbbdb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "饰品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0268e23d016c5890b6015c6cef7697b2cc50e8945fb1e2da60ba5139fe44faeb",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "双鹭药业出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "化学制药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "f2e07b4705fd2fa2c77d39beaf6840b9c8cbad7d465540c6ee309f84dc248c6d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "dd618e094d4fa15f8c5dc5b4f1372ad30f98679a99dfe84709a8b280956c2bd9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "汉森制药出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "中药Ⅱ"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "4a21509b4c39952fe5cf87b521ef2299ab562d093070de129c2efa43428b27c4",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "新华百货出现强势股/涨停名单，冻结文本涉及消费农业。",
+      "evidence": [
+        "一般零售"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "cb670d47a529b742a8c16d5c0064284f97ebd5c449284830d0560d141577b624",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "键凯科技出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "化学制药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "d237e9e24aa7c4e1e37fe3b15b75fc543b68727163df1f64cdb9b5ec1e3d6e03",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "中 关 村出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "化学制药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "93074ef4df0ece3d3e104c8e31e695277a34b1a9320c7f93711401dc18ba3903",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "361b3a981b56afecd2737fe6d45db5be591f43d413f6c33cd1ee055fb3a6aead",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "贝瑞基因出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "医疗服务"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "6521e13ace0cb79635cff7fce4cde96674f962095e4ab070a42194a9651a8e83",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "楚天龙出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "7e39852428100a01d5b1d16995a8108675810ac8acc63500928cc14805d5d316",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "服装家纺"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "fc5190ae8feb603fe0fb3e1110952d9dd1b9b3c1768178167f4f6d0a3a86337c",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "福华尚纬出现强势股/涨停名单，冻结文本涉及基建公用。",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "465ffb9777f566d8211e3930653742b7e3033a434df1b07c748cdd4fe4bd9d46",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "56b644f3c46b5d809f752b9c32588d69e8210d58ea8431140a945ac63bdbfb00",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "5c7bf69a2ee64cb2e654290b9a26be121cbe2242767762ccbce80f9eefa9bd8b",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "科森科技出现强势股/涨停名单，冻结文本涉及消费农业。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "1e5b37094278a4f2c0d2f22a1443be8a5bd1e6c066f9c0e504f07064cb9db6c8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "49c10c275237053462459e17f0bc9f645b1396c9225676cc4e6e0ff80781e8a1",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "士兰微出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "36b3d67f98daf33159ad24759a842c7fbdc26ba115c6ae5343cb54085aba433e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "3a9e17fd6c028e7edbc74fcfdabcd54494fc0ae9e3762f3128e856d5f21b7cb0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "燃气Ⅱ"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "857321af066971ead1b9c5826bde3e8119e89ef5526b3c7a17978c11d66fa941",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "可川科技出现强势股/涨停名单，冻结文本涉及消费农业。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "b2b7ac46cff7ecc9467921984a6529ac9fc1449657256d200674d67564f9117e",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "白银有色出现强势股/涨停名单，冻结文本涉及周期资源。",
+      "evidence": [
+        "工业金属"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "3aaca1f7fc1c1f61dcabb6fe0138e4dbe08f399f558e0093df0deedb2cce7d19",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "d71db4f0b4497b1b9437f405b8ddee04667322fe622dfdd8711c2767071a7531",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "瑞斯康达出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "62e5c5921392ed77cc7a6dd66f7f59cd54522e73ff52dd38898826a7e0ff2f33",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "星网锐捷出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "5e1b678bccc30084e681ba74346adfb02b10b4cf70e0b5299f01fe87e814d075",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "包装印刷"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "62ce184379aef61bd4d2efc097224ab2514554cb4dad63e7daf7e2bf6872dd5d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "东信和平出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "bdf2febb4a47785ef084ce4258c6ff9af036dc5e405d62ae7cc92b74c3e4a89f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "18a0dffe07bd7d6ac56c731e1985de0dfe57f6042f745410964601fa1d2a45cf",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "985e14fe8e1df7dda4f11523ee00896623eff461ed104b60ad688c45034247d9",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "福达合金出现强势股/涨停名单，冻结文本涉及周期资源。",
+      "evidence": [
+        "金属新材"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "1bbb59db27cdd32e82efcc2df00a29cdd163e9716a94bf86b84b34afc4bb2a27",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "炼化及贸"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "2ad86450dc830b90b184bdadb0d1b7f9e87c70bbd2fded506300b3fd5da00710",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "其他电子"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "9924e07913f3588e33c846dcd4415593939cce8c06b339c57ff6570fb8ddd0df",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "共达电声出现强势股/涨停名单，冻结文本涉及消费农业。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "19df0ae2c82748cfc41604a230129e9ca1a9bb5950381562ac94b18ce11c0395",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "豪美新材出现强势股/涨停名单，冻结文本涉及周期资源。",
+      "evidence": [
+        "工业金属"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "2959cca6f0d265c082c813b178df66c6050cce7e1a97cbeef4ea8ebc12ec4b5d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "塑料"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0ebffaadcb38db5dc064648c60e75d5ba647fa2f46076f85d3cd452bb40522d3",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "融捷股份出现强势股/涨停名单，冻结文本涉及商品、周期资源。",
+      "evidence": [
+        "能源金属"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "1587187df1120a1d351b1db6d2cd052ddb632309105f774e45e6a68c65430bc6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "6f9c3feaa53032bdab46a9c91c7fa97202cf2444a274b24c61cba7a222a60450",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "生物制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "e0167a689410af12df8b3b976ce39f64c59549136cd06a84eaf0b9e7ed9bd1d1",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "精达股份出现强势股/涨停名单，冻结文本涉及基建公用。",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "ae17c2a78b7990b6eb1838e648001d7c684a095d7493c37f533c536c7bb9358d",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "湖南白银出现强势股/涨停名单，冻结文本涉及商品、周期资源。",
+      "evidence": [
+        "贵金属"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "6476313e751534626ab62d00392c3152b00adc0f0fa34aaba67e2cae9438c90c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "房屋建设"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "d0ecfa708983ab7900ff16c515a4ab3e534916fca70c59a98c2c78ba58a42a8f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "806c1d7fc1248f0d9025c13d53db3da3dfa49dc1988218b00cd69e308d5344db",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "94c603338094ecf00c1c262489cc08dd132c0b871fff467ce75c6db907d796dc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "cfb7f1b65937befa8a72c0039cda5ae186a7d04ef16545e73184566368e372a9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "中瓷电子出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "61912db2b241ed29c532bb2fe0c966f2b86c214725bf7a94bd3691ae4df57fb7",
+      "relevant": true,
+      "matched_categories": [
+        "海外欧洲",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "513030.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "诺德股份出现强势股/涨停名单，冻结文本涉及海外欧洲、高端制造。",
+      "evidence": [
+        "电池"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "e0c2bb281c698ad8777043701e7d76b85488052f85bae5d33890adb47e887d88",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "3676e4738e1b69c9a9d299e5b0d164fe9c56a81bcba4b69899737693f583183e",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "盛达资源出现强势股/涨停名单，冻结文本涉及商品、周期资源。",
+      "evidence": [
+        "贵金属"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "2960e7372b13884d5fdb0a3ae71260931ad4fcc97fb9f74a7fa348ee36c8ee9b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "照明设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c4dec1b45b8348f70336bc2379e621524fbcf4d829999c643429c5da25fda530",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "国光电器出现强势股/涨停名单，冻结文本涉及消费农业。",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "86cd7ccdefe514b00af0d76c1072fb2c74f37ecc5760d720fe9a8f728985b427",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "通鼎互联出现强势股/涨停名单，冻结文本涉及科技数字。",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "87025a65f7decb69aeb1720a278427268c3e91e799bc62137ac346990c645e99",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "北陆药业出现强势股/涨停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "化学制药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "93f291c4dc6e620f05543990bde26da10bba01e2c6828fc43a5060eafbb7722a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "塑料"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "b86b1debc7901c4d8a5b88455715754064cbb12c2bd1c4bea3d297041af46c35",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "家居用品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "da727fb15ad8bb5eeb149421113a9820bd3b2f89b11a7a3f756757b263699543",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "塑料"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "5656c874f834b78712886bf57da743b61ee1bc2a2604622a5dd51895a00a758d",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "南京商旅出现炸板/跌停名单，冻结文本涉及消费农业。",
+      "evidence": [
+        "旅游及景"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "89948caad5a5f859bb34533e9d10fcae0abcff1ceb6fb72eb2f9cf1dac965bcb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "家居用品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "ad00fcc55035f7956e112aea29a1f35abb59ca3ccb530995686ceaf3c83b2c70",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "汽车服务"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "861cb73c037418553ea3c9070c685b52c63b83444a6a3cd2278bde440374b9b7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0d992e12a32206944539aa332cce039ca9b6f71722fd1da33b14e6625c37331f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "海森药业出现炸板/跌停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "化学制药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "3569418e6693c83bf80f43facd740d866f0d92e5a443b6c0b5107cc62e170646",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "79bec3e90817203207f38d32756658e7ecee9fde88dbaeed24e09377ee7ad147",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "e86bd7465a19043479b8125a25babb367609543d25742a7303dd0339463521b7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f9b5b972386c67aa451d5537ca4063dce547ed38f091ffac21873698d34f6075",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1eb356e2ce44a33e0313dec80473551e3f1d265d4712e2ae814ef6d1d63601a5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "塑料"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "77d21b9df75e47d6ededbf1ecf223ffd509d83f05b5dd6712c100ea3b36eec13",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "88af5a4a6d90c8796d7f01accb7531950c154f142f892187d4c37166d8b2074d",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "华盛昌出现炸板/跌停名单，冻结文本涉及基建公用。",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "9a558aa8bf15db8972e5a4f5ad51e92213294eb51530b89de836a8ed0ff0a45c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "56e081b441efabb4a5d89408407a781dd77bc386a172a8a8e9e1af8a85691ada",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "冶钢原料"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "1cf7449a27d8918be6d58eba4d8954c24401f1ced183ea146554747be608bac8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "生物制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "4e1af4eb8fd5894a36d58f4c56c59d45c40d244ca79330a3dc4255b83420f6e2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "78a20ff84f6aad96e1c32a2e7375bb8d99c91e66a5ea1e74b124415a7f7847c6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "a06f1285afd02b84722e320f9600f1895324d84332bb749919a06f82bb119158",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "f531cfd0b96be54ef9a3a65a466fad7f9b7f9fda4b7e484411e7ac08f7bea71a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "食品加工"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "e257b9e39351141b0d98c8d619047f0eb3fc00543dab7940f637cd84eb45817b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学纤维"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "7d83ab7912c0c6fccf83bce1982aca4f163ae38d6396226f79f08570d1ca80f5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "种植业"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c7c2c23e5456bd54ade165d32db198e5902e50a64202c8fe092f61c832bea99c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "综合Ⅱ"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "c8e0bd9fdbe76723586ba3aeb4540c44f37633bf4c8a53313b68c54a87e6d8c6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "农产品加"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "87c087358348887fccc0f1b89dc4c640a33ce4aab7a64694c7e33872aa83027b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "农化制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "41952299b2c58fe64ac6f1ce23652cd24d4653f796bf5bcc4c97a2894887a8cf",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "哈三联出现炸板/跌停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "化学制药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "8d4241fd9d1e0e839c9aaaee9ae4567923f57691812345f19dfb1969cf4d8f27",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "教育"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "a8ee59b0b8a8f5b242bf521607dbcc9e30675dfab0397688f220c3a70ed53ed6",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "宝泰隆出现炸板/跌停名单，冻结文本涉及周期资源。",
+      "evidence": [
+        "焦炭Ⅱ"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "4acf1270af1983ea58a122bc1decea559265ffe94cca4beb8c58369e2469c0ad",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "饮料乳品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    },
+    {
+      "source_hash": "0bab2ee2c521cd0e93fb3ea5f93463721435222b93321370cc325954e1d106c9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "美诺华出现炸板/跌停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "化学制药"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "a280e702e9e5446a241cead31a4da40388fb41b966a8d45641475de6b182a525",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "开开实业出现炸板/跌停名单，冻结文本涉及医药医疗。",
+      "evidence": [
+        "医药商业"
+      ],
+      "risk_flags": [
+        "个股题材到ETF外推有限"
+      ]
+    },
+    {
+      "source_hash": "f8b1de52b51bedfc79417031b7fa6ffddce977c4add971e5014c3b86c1755aaa",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "冻结文本未出现正式ETF池的类别或专属关键词。",
+      "evidence": [
+        "化学制品"
+      ],
+      "risk_flags": [
+        "未外推至ETF"
+      ]
+    }
+  ]
+}

@@ -121,6 +121,7 @@ def main() -> None:
     quality_extension = decision["quality_extension"]
     hot_exit_protect = decision["hot_exit_protection"]
     missing_strong = decision["missing_data_soft_exit_protection"]
+    strategy_rank = decision["entry_rank"]
 
     timing = pd.read_csv(BEST / "timing.csv")
     rounds = pd.read_csv(BEST / "round_trips.csv").merge(
@@ -199,7 +200,7 @@ def main() -> None:
             failure_type = "否"
 
         entry_reason = (
-            f"{entry_type}；排名{fmt_number(value(base.rank, entry_signal, symbol), 0)}，"
+            f"{entry_type}；排名{fmt_number(value(strategy_rank, entry_signal, symbol), 0)}，"
             f"ROC20={fmt_percent(value(base.roc_short, entry_signal, symbol))}，"
             f"ROC60={fmt_percent(value(base.roc_medium, entry_signal, symbol))}，"
             f"MA120乖离={fmt_percent(value(base.ma_bias, entry_signal, symbol))}"
@@ -245,7 +246,7 @@ def main() -> None:
                 "holding_mae": mae,
                 "peak_date": peak_date,
                 "trough_date": trough_date,
-                "entry_rank": value(base.rank, entry_signal, symbol),
+                "entry_rank": value(strategy_rank, entry_signal, symbol),
                 "entry_roc20": value(base.roc_short, entry_signal, symbol),
                 "entry_roc60": value(base.roc_medium, entry_signal, symbol),
                 "entry_ma120_bias": value(base.ma_bias, entry_signal, symbol),
@@ -259,7 +260,7 @@ def main() -> None:
                 "entry_positive_dde_share": value(sentiment["positive_dde_share"], entry_signal, symbol),
                 "entry_gate_pass": value(gate, entry_signal, symbol),
                 "entry_eligible_count": int(diag_entry["entry_eligible_count"]),
-                "exit_rank": value(base.rank, exit_signal, symbol),
+                "exit_rank": value(strategy_rank, exit_signal, symbol),
                 "exit_roc20": value(base.roc_short, exit_signal, symbol),
                 "exit_roc60": value(base.roc_medium, exit_signal, symbol),
                 "exit_ma120_bias": value(base.ma_bias, exit_signal, symbol),

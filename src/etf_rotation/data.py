@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import time
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from typing import Iterable
 
@@ -9,6 +11,7 @@ import pandas as pd
 
 
 FIELDS = ("open", "high", "low", "close", "vol", "amount")
+PRICE_FIELDS = ("open", "high", "low", "close")
 
 
 def symbol_key(item: dict) -> str:
@@ -22,26 +25,69 @@ def all_instruments(config: dict) -> list[dict]:
     return list(merged.values())
 
 
+def merge_frozen_history(cached: pd.DataFrame, downloaded: pd.DataFrame, finalized_through: str | None = None) -> pd.DataFrame:
+    """Keep audited bars immutable and append only genuinely new sessions.
+
+    TDX recalculates the full QFQ history after corporate actions.  The latest
+    overlap ratio converts new OHLC bars to the already-frozen price scale so a
+    routine refresh cannot rewrite prior signals or create an artificial jump.
+    """
+    cached = cached.sort_values("datetime").drop_duplicates("datetime", keep="last")
+    downloaded = downloaded.sort_values("datetime").drop_duplicates("datetime", keep="last")
+    if finalized_through is not None:
+        cached = cached.loc[pd.to_datetime(cached["datetime"]) <= pd.Timestamp(finalized_through)]
+    if cached.empty:
+        return downloaded
+
+    last_frozen = pd.to_datetime(cached["datetime"]).max()
+    new_rows = downloaded[pd.to_datetime(downloaded["datetime"]) > last_frozen].copy()
+    if new_rows.empty:
+        return cached
+
+    cached_close = cached.loc[pd.to_datetime(cached["datetime"]) == last_frozen, "close"].iloc[-1]
+    overlap = downloaded.loc[pd.to_datetime(downloaded["datetime"]) == last_frozen, "close"]
+    if overlap.empty or float(overlap.iloc[-1]) <= 0:
+        raise ValueError("新旧复权行情没有有效重叠日，禁止拼接")
+    if not overlap.empty and float(overlap.iloc[-1]) != 0.0:
+        scale = float(cached_close) / float(overlap.iloc[-1])
+        for field in PRICE_FIELDS:
+            if field in new_rows:
+                new_rows[field] = new_rows[field].astype(float) * scale
+
+    return pd.concat([cached, new_rows], ignore_index=True).sort_values("datetime")
+
+
 def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
-    """Download QFQ daily bars through easy-tdx and cache one CSV per ETF."""
+    """Download QFQ bars while preserving every previously audited session."""
     from easy_tdx import Adjust, Market, Period, UnifiedTdxClient
 
     data_dir.mkdir(parents=True, exist_ok=True)
     count = int(config["project"].get("data_count", 800))
     manifest: dict[str, dict] = {}
     client = UnifiedTdxClient(timeout=20)
+    now = datetime.now(ZoneInfo("Asia/Shanghai"))
+    complete_through = now.date() if now.hour >= 15 else now.date() - timedelta(days=1)
+    cards = sorted((data_dir.parents[1] / "results/audit").glob("*_live_run_card.json"))
+    completed = []
+    for card_path in cards:
+        card = json.loads(card_path.read_text(encoding="utf-8"))
+        if (card.get("release", {}).get("readiness") in {"READY", "SELL_ONLY"}
+                and card_path.name[:10] <= complete_through.isoformat()):
+            completed.append(card_path.name[:10])
+    frozen_through = completed[-1] if completed else "1900-01-01"
     try:
         for item in all_instruments(config):
             key = symbol_key(item)
             path = data_dir / f"{key}.csv"
+            cached = pd.read_csv(path, parse_dates=["datetime"]) if path.exists() else None
             if path.exists() and not force:
-                frame = pd.read_csv(path, parse_dates=["datetime"])
+                frame = cached
             else:
                 market = Market.SH.value if item["market"] == "SH" else Market.SZ.value
                 last_error: Exception | None = None
                 for attempt in range(3):
                     try:
-                        frame = client.get_stock_kline(
+                        downloaded = client.get_stock_kline(
                             market,
                             item["code"],
                             Period.DAILY,
@@ -50,9 +96,15 @@ def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
                             2,
                             Adjust.QFQ,
                         )
-                        if frame.empty:
+                        if downloaded.empty:
                             raise RuntimeError(f"empty bars for {key}")
-                        frame = frame.sort_values("datetime").drop_duplicates("datetime")
+                        downloaded = downloaded.sort_values("datetime").drop_duplicates("datetime")
+                        downloaded = downloaded.loc[pd.to_datetime(downloaded["datetime"]) <= pd.Timestamp(complete_through)]
+                        frame = (
+                            merge_frozen_history(cached, downloaded, frozen_through)
+                            if cached is not None
+                            else downloaded
+                        )
                         frame.to_csv(path, index=False, encoding="utf-8-sig")
                         break
                     except Exception as exc:  # network endpoints can fail transiently

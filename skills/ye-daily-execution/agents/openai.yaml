@@ -1,4 +1,4 @@
 interface:
   display_name: "ye 每日执行"
-  short_description: "收盘后审核资讯、对账成交并生成可审计的次日 ETF 计划"
-  default_prompt: "使用 $ye-daily-execution 核对上一计划的实际成交，复核今日收盘数据和全部资讯，并生成带运行卡的次日开盘计划与日报。"
+  short_description: "生成ye收盘日报与可审计计划；区分持仓观察、资金对账和订单放行"
+  default_prompt: "使用 $ye-daily-execution 完成今日收盘流程，交付真实持仓结论、日报链接和订单放行状态。"

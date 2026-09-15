@@ -36,9 +36,12 @@ def main() -> None:
         ROOT / "config" / "ye_strategy.yaml",
         ROOT / "config" / "etfwin_official.yaml",
         ROOT / "config" / "sentiment.yaml",
+        ROOT / "config" / "sentiment_review_policy.yaml",
         ROOT / "config" / "strategy_governance.yaml",
         ROOT / "config" / "research_hypotheses.yaml",
         ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json",
+        ROOT / "market_data" / "sentiment" / f"{args.date}.json",
+        ROOT / "market_data" / "live_quotes" / f"{args.date}.json",
         ROOT / "market_data" / "sentiment" / "features" / "symbol_daily.csv",
         ROOT / "results" / "ye_strategy" / "summary.json",
         ROOT / "results" / "ye_strategy" / "signal_weights.csv",
@@ -48,6 +51,9 @@ def main() -> None:
         ROOT / "results" / "comparison" / "metrics.csv",
         ROOT / "results" / "live" / "account_state.json",
         ROOT / "results" / "live" / f"{args.date}_order_plan.json",
+        ROOT / "results" / "live" / f"{args.date}_daily_report.json",
+        ROOT / "results" / "live" / f"{args.date}_daily_report.md",
+        ROOT / "outputs" / "ETF轮动策略_今日日报.html",
         ROOT / "results" / "live" / "readiness_report.json",
         ROOT / "dashboard" / "public" / "ye-strategy.html",
         ROOT / "dashboard" / "public" / "ye-daily.html",
@@ -57,6 +63,11 @@ def main() -> None:
     if missing:
         raise FileNotFoundError("missing manifest inputs: " + ", ".join(map(str, missing)))
     price_files = sorted((ROOT / "market_data" / "prices").glob("*.csv"))
+    previous = sorted(p for p in (ROOT / "results/live").glob("*_order_plan.json") if p.name[:10] < args.date)
+    if previous:
+        rec = ROOT / "results/audit" / f"{previous[-1].name[:10]}_execution_reconciliation.json"
+        if rec.exists():
+            critical.append(rec)
     source_files = sorted((ROOT / "src" / "etf_rotation").glob("*.py")) + [
         ROOT / "run_strategies.py",
         ROOT / "scripts" / "build_sentiment_features.py",
@@ -65,7 +76,11 @@ def main() -> None:
         ROOT / "scripts" / "validate_live_readiness.py",
         ROOT / "scripts" / "build_daily_reference_report.py",
         ROOT / "scripts" / "build_live_run_card.py",
+        ROOT / "scripts" / "validate_daily_delivery.py",
         ROOT / "scripts" / "reconcile_actual_fills.py",
+        ROOT / "scripts" / "advance_authorized_live_account.py",
+        ROOT / "scripts" / "fetch_live_quotes.py",
+        ROOT / "scripts" / "fetch_prices.py",
         ROOT / "scripts" / "run_after_close.py",
         ROOT / "dashboard" / "scripts" / "build_ye_strategy_html.py",
     ]
@@ -88,9 +103,7 @@ def main() -> None:
     target_dir.mkdir(parents=True, exist_ok=True)
     text = json.dumps(payload, ensure_ascii=False, indent=2)
     dated = target_dir / f"{args.date}_run_manifest.json"
-    latest = target_dir / "latest_run_manifest.json"
     dated.write_text(text, encoding="utf-8")
-    latest.write_text(text, encoding="utf-8")
     print(json.dumps({"manifest": str(dated), **payload["counts"]}, ensure_ascii=False))
 
 

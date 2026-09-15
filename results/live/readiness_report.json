@@ -1,27 +1,17 @@
 {
-  "status": "READY",
-  "core_backtest_and_site": "PASS",
-  "checks": {
-    "single_strategy_name": true,
-    "pool_is_45": true,
-    "ordinary_cost_reconciles": true,
-    "premium_cost_reconciles": true,
-    "equity_return_reconciles": true,
-    "round_trip_pnl_reconciles": true,
-    "fees_reconcile": true,
-    "slippage_reconciles": true,
-    "html_exists": true,
-    "governance_frozen": true,
-    "previous_execution_reconciled": true,
-    "live_account_state_confirmed": true,
-    "live_plan_uses_account_truth": true,
-    "ai_review_complete": true
+  "signal_date": "2026-09-14",
+  "status": "BLOCKED",
+  "blocking_items": [
+    "真实买卖已确认；新增入金、剩余现金及费用未核，无法确定账户总权益和可用资金。"
+  ],
+  "error": "cash_reconciliation_pending",
+  "observation_status": "complete",
+  "ai_review": {
+    "input_count": 157,
+    "reviewed_count": 157,
+    "coverage": 1,
+    "status": "complete"
   },
-  "blocking_items": [],
-  "reconciliation": {
-    "realized_round_trip_pnl": 546701.4825765907,
-    "open_position_pnl": 15965.000779444828,
-    "cash_management_net": 7124.492465753447,
-    "terminal_reconstructed_equity": 669790.975821789
-  }
+  "account_trade_status": "confirmed",
+  "account_cash_status": "pending"
 }

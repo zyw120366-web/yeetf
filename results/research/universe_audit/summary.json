@@ -1,0 +1,93 @@
+{
+  "status": "completed_with_known_limitation",
+  "as_of": "2026-07-22",
+  "configured_pool_size": 45,
+  "point_in_time_listing_gate": true,
+  "listing_warmup_sessions": 120,
+  "point_in_time_liquidity_gate": true,
+  "symbols_ending_before_data_end": 0,
+  "symbols_with_internal_price_gaps": 3,
+  "active_counts": [
+    {
+      "year": 2014,
+      "date": "2014-12-31",
+      "priced_symbols": 9,
+      "entry_eligible_symbols": 5
+    },
+    {
+      "year": 2015,
+      "date": "2015-12-31",
+      "priced_symbols": 10,
+      "entry_eligible_symbols": 4
+    },
+    {
+      "year": 2016,
+      "date": "2016-12-30",
+      "priced_symbols": 12,
+      "entry_eligible_symbols": 4
+    },
+    {
+      "year": 2017,
+      "date": "2017-12-29",
+      "priced_symbols": 15,
+      "entry_eligible_symbols": 4
+    },
+    {
+      "year": 2018,
+      "date": "2018-12-28",
+      "priced_symbols": 16,
+      "entry_eligible_symbols": 6
+    },
+    {
+      "year": 2019,
+      "date": "2019-12-31",
+      "priced_symbols": 20,
+      "entry_eligible_symbols": 10
+    },
+    {
+      "year": 2020,
+      "date": "2020-12-31",
+      "priced_symbols": 27,
+      "entry_eligible_symbols": 21
+    },
+    {
+      "year": 2021,
+      "date": "2021-12-31",
+      "priced_symbols": 38,
+      "entry_eligible_symbols": 31
+    },
+    {
+      "year": 2022,
+      "date": "2022-12-30",
+      "priced_symbols": 43,
+      "entry_eligible_symbols": 37
+    },
+    {
+      "year": 2023,
+      "date": "2023-12-29",
+      "priced_symbols": 44,
+      "entry_eligible_symbols": 37
+    },
+    {
+      "year": 2024,
+      "date": "2024-12-31",
+      "priced_symbols": 44,
+      "entry_eligible_symbols": 42
+    },
+    {
+      "year": 2025,
+      "date": "2025-12-31",
+      "priced_symbols": 45,
+      "entry_eligible_symbols": 43
+    },
+    {
+      "year": 2026,
+      "date": "2026-07-22",
+      "priced_symbols": 45,
+      "entry_eligible_symbols": 45
+    }
+  ],
+  "finding": "现有45只池内没有价格序列提前终止的产品；上市满120个交易日和20日成交额门槛均按历史日期执行。",
+  "known_limitation": "本仓库只有当前配置的45只产品，无法观察历史上已清盘、合并且未进入当前池的ETF；因此只能确认点时上市/流动性门槛有效，不能宣称已消除当前存续池选择偏差。",
+  "daily_execution_impact": "none"
+}

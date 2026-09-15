@@ -1,0 +1,24 @@
+{
+  "signal_date": "2026-09-02",
+  "confirmation_status": "pending",
+  "source": "用户或券商成交回单确认",
+  "fills": [
+    {
+      "side": "sell",
+      "symbol": "512010.SH",
+      "status": "pending",
+      "quantity": null,
+      "price": null,
+      "broker_order_id": null
+    },
+    {
+      "side": "buy",
+      "symbol": "513200.SH",
+      "status": "pending",
+      "quantity": null,
+      "price": null,
+      "broker_order_id": null
+    }
+  ],
+  "note": "按本计划的下一交易日真实成交填写；计划和估算数量都不是成交。"
+}
