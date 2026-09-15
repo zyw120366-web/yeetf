@@ -1,17 +1,10 @@
 {
-  "signal_date": "2026-09-14",
+  "signal_date": "2026-09-15",
   "status": "BLOCKED",
   "blocking_items": [
-    "真实买卖已确认；新增入金、剩余现金及费用未核，无法确定账户总权益和可用资金。"
+    "真实成交已记录；新增入金、余款及费用待核，不能核定账户权益与可用资金。"
   ],
-  "error": "cash_reconciliation_pending",
-  "observation_status": "complete",
-  "ai_review": {
-    "input_count": 157,
-    "reviewed_count": 157,
-    "coverage": 1,
-    "status": "complete"
-  },
-  "account_trade_status": "confirmed",
-  "account_cash_status": "pending"
+  "error": "ValueError: 账户状态未确认",
+  "buy_allowed": false,
+  "sell_allowed": false
 }
