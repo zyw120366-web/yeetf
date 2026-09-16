@@ -141,6 +141,47 @@ def test_report_text_escapes_untrusted_failure(tmp_path):
     assert "<script>" not in page and "&lt;script&gt;" in page
 
 
+def test_receipt_links_are_plain_markdown_and_only_point_to_real_files(report_root, monkeypatch):
+    monkeypatch.setattr(daily_report, "analyze", lambda *_: {"status": "unavailable", "ranking": [], "candidates": []})
+    page = report_root / "outputs/ETF轮动策略_回测.html"
+    page.parent.mkdir(exist_ok=True)
+    page.write_text("<html>historical backtest</html>")
+    publish_blocked(report_root, DATE, "资金待核")
+    before = (report_root / "results/live/account_state.json").read_bytes()
+    receipt = daily_report.delivery_receipt(report_root, DATE)
+    assert "<heartbeat>" not in receipt and "<message>" not in receipt and "```" not in receipt
+    assert "订单：BLOCKED" in receipt and "资金待核" in receipt
+    assert "159985.SZ" in receipt and "6500股" in receipt
+    assert "目标仓位100%" not in receipt  # Unknown cash cannot become a full-weight order.
+    assert "GitHub" not in receipt  # Git synchronization must be checked separately.
+    for label, path in [("今日日报", report_root / "outputs/ETF轮动策略_今日日报.html"),
+                        ("回测", page),
+                        ("运行卡", report_root / f"results/audit/{DATE}_live_run_card.json")]:
+        assert f"[{label}](<{path}>)" in receipt and path.is_file()
+    assert (report_root / "results/live/account_state.json").read_bytes() == before
+
+
+def test_receipt_omits_missing_backtest_and_rejects_wrong_day(tmp_path):
+    root = tmp_path / "project with spaces"
+    publish_blocked(root, DATE, "数据未到齐")
+    receipt = daily_report.delivery_receipt(root, DATE)
+    assert "回测文件缺失" in receipt and "[回测]" not in receipt
+    assert f"[今日日报](<{root}/outputs/ETF轮动策略_今日日报.html>)" in receipt
+    with pytest.raises(ValueError, match="日期不一致"):
+        daily_report.delivery_receipt(root, "2026-09-15")
+
+
+@pytest.mark.parametrize("field", ["account", "target_symbol", "orders"])
+def test_delivery_rejects_report_plan_fact_mismatch(tmp_path, field):
+    publish_blocked(tmp_path, DATE, "测试")
+    path = tmp_path / f"results/live/{DATE}_daily_report.json"
+    report = daily_report.read_json(path)
+    report[field] = {"positions": []} if field == "account" else "159985.SZ" if field == "target_symbol" else [{"side": "buy"}]
+    atomic_json(path, report)
+    with pytest.raises(ValueError, match="不一致"):
+        daily_report.delivery_receipt(tmp_path, DATE)
+
+
 def test_official_entry_cash_pending_delivers_without_mutating_account(tmp_path):
     # Real entry in a disposable checkout: no market fetch or production writes.
     for name in ("config", "src", "scripts", "skills"):
@@ -163,6 +204,13 @@ def test_official_entry_cash_pending_delivers_without_mutating_account(tmp_path)
     assert report["analysis"]["held"]["symbol"] == "159985.SZ"
     assert not report["orders"]
     assert daily_report.validate_delivery(tmp_path, DATE)["delivery"] == "PASS"
+    receipt = subprocess.run(
+        [sys.executable, "scripts/validate_daily_delivery.py", "--date", DATE, "--format", "markdown"],
+        cwd=tmp_path, env={**os.environ, "PYTHONPATH": str(tmp_path / "src")},
+        capture_output=True, text=True, timeout=20)
+    assert receipt.returncode == 0, receipt.stderr
+    assert "订单：BLOCKED" in receipt.stdout and "[今日日报](<" in receipt.stdout
+    assert account_path.read_bytes() == before
 
 
 def test_ready_pipeline_renders_and_binds_deliverables_in_isolated_checkout(tmp_path):

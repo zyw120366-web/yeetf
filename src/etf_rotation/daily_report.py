@@ -372,8 +372,21 @@ def validate_delivery(root: Path, date: str) -> dict:
         if item.get("signal_date") != date:
             raise ValueError("交付物日期不一致")
     status = ready.get("status")
+    if status not in {"READY", "SELL_ONLY", "BLOCKED"}:
+        raise ValueError("交付放行状态不是终态")
     if report.get("status") != status or card.get("release", {}).get("readiness") != status:
         raise ValueError("日报、订单放行与运行卡不一致")
+    # Plans intentionally omit ancillary account notes and authorization logs.
+    # Compare financial facts, not the shape of those two representations.
+    account_fields = ("as_of", "confirmation_status", "positions", "available_cash",
+                      "total_equity", "performance", "pending_orders")
+    accounts = [item or {} for item in (report.get("account"), plan.get("account_state"), card.get("account_state"))]
+    if any(accounts[0].get(key) != account.get(key) for account in accounts[1:] for key in account_fields):
+        raise ValueError("日报、计划与运行卡的账户快照不一致")
+    if report.get("target_symbol") != plan.get("target_symbol") or report.get("target_symbol") != card.get("decision", {}).get("target_symbol"):
+        raise ValueError("日报、计划与运行卡的目标不一致")
+    if report.get("orders") != plan.get("execution", {}).get("orders", []):
+        raise ValueError("日报与计划的订单不一致")
     if status == "BLOCKED" and (plan.get("actions") or plan.get("execution", {}).get("orders") or report.get("orders")):
         raise ValueError("阻断状态不得留有可执行订单")
     if status == "SELL_ONLY" and (plan.get("target_symbol") is not None or any(x.get("side") != "sell" for x in report["orders"])):
@@ -407,3 +420,39 @@ def validate_delivery(root: Path, date: str) -> dict:
         raise ValueError("运行卡未绑定当前清单")
     return {"delivery": "PASS", "signal_date": date, "release": status,
             "analysis": report["analysis"]["status"], "daily_report": str(root / "outputs/ETF轮动策略_今日日报.html")}
+
+
+def delivery_receipt(root: Path, date: str) -> str:
+    """Read-only, validated user reply; no XML wrapper or guessed Git status."""
+    validate_delivery(root, date)
+    report = read_json(root / f"results/live/{date}_daily_report.json")
+    v, review, account = report["valuation"], report["review"], report["account"]
+    lines = [f"{date} 收盘日报", describe_action(report)]
+    if v.get("symbol"):
+        lines.append(f"持仓：{v['name']}（{v['symbol']}）{v['quantity']:g}股；今日{money(v['daily_pnl'])}，本次{money(v['purchase_pnl'])}（{pct(v['purchase_return'])}，未计费用）。")
+    else:
+        lines.append("持仓与收益：见日报可用证据，缺失项待核。")
+    held = report["analysis"].get("held")
+    if held and number(held.get("rank")) is not None:
+        reason = "；".join(report["analysis"].get("exit_reasons", [])) or "未触发卖出或换仓"
+        lines.append(f"持仓核心/参考排名第{held['rank']:g}；{reason}。")
+    if number(v.get("account_equity")) is not None:
+        lines.append(f"账户权益：{v['account_equity']:,.2f}元；累计{pct(v.get('account_return'))}。")
+    state = str(account.get("confirmation_status", "未知"))
+    if account.get("cash_reconciliation", {}).get("status") == "pending":
+        state += "（资金待核，不代表已确认成交未记录）"
+    coverage = "未核验" if number(review.get("coverage")) is None else f"{review['coverage']:.0%}"
+    lines += [f"对账：{state}；AI审核{review.get('reviewed_count', '—')}/{review.get('input_count', '—')}，覆盖{coverage}。",
+              f"订单：{report['status']}；交付检查：PASS。"]
+    if report["status"] != "READY":
+        lines.append("原因：" + "；".join(report.get("blocking_items", [])))
+    links = []
+    for label, relative in [("今日日报", "outputs/ETF轮动策略_今日日报.html"),
+                            ("回测", "outputs/ETF轮动策略_回测.html"),
+                            ("运行卡", f"results/audit/{date}_live_run_card.json")]:
+        path = root / relative
+        if path.is_file():
+            links.append(f"[{label}](<{path.absolute()}>)")
+        else:
+            lines.append(f"{label}文件缺失，未生成链接。")
+    return "\n\n".join(lines + [" · ".join(links)]) + "\n"

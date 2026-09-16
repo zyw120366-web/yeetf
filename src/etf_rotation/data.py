@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import time
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -57,6 +58,38 @@ def merge_frozen_history(cached: pd.DataFrame, downloaded: pd.DataFrame, finaliz
     return pd.concat([cached, new_rows], ignore_index=True).sort_values("datetime")
 
 
+def audited_price_cutoff(root: Path, complete_through: str) -> str:
+    """Freeze published evidence, not just days on which trading was allowed.
+
+    Cash reconciliation can block orders while a complete observation report
+    still uses that day's bars. Later downloads must not rewrite those bars.
+    Unfinished/partial reports do not freeze a new session.
+    """
+    for path in sorted((root / "results/audit").glob("*_live_run_card.json"), reverse=True):
+        date = path.name[:10]
+        if date > complete_through:
+            continue
+        card = json.loads(path.read_text(encoding="utf-8"))
+        status = card.get("release", {}).get("readiness")
+        if card.get("signal_date") != date or status not in {"READY", "SELL_ONLY", "BLOCKED"}:
+            continue
+        if status == "BLOCKED" and card.get("observation", {}).get("status") != "complete":
+            continue
+        manifest_path = root / "results/audit" / f"{date}_run_manifest.json"
+        content = manifest_path.read_bytes()
+        if hashlib.sha256(content).hexdigest() != card.get("audit", {}).get("run_manifest_sha256"):
+            raise ValueError(f"{date} 运行清单绑定失效，停止行情刷新以保护已审计历史")
+        manifest = json.loads(content)
+        records = manifest.get("price_files", []) + manifest.get("critical_files", [])
+        if manifest.get("signal_date") != date or not any(
+            r.get("path", "").startswith("market_data/prices/") and r["path"].endswith(".csv")
+            for r in records
+        ):
+            raise ValueError(f"{date} 运行清单缺少行情证据，不能确定冻结边界")
+        return date
+    return "1900-01-01"
+
+
 def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
     """Download QFQ bars while preserving every previously audited session."""
     from easy_tdx import Adjust, Market, Period, UnifiedTdxClient
@@ -64,17 +97,10 @@ def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
     data_dir.mkdir(parents=True, exist_ok=True)
     count = int(config["project"].get("data_count", 800))
     manifest: dict[str, dict] = {}
-    client = UnifiedTdxClient(timeout=20)
     now = datetime.now(ZoneInfo("Asia/Shanghai"))
     complete_through = now.date() if now.hour >= 15 else now.date() - timedelta(days=1)
-    cards = sorted((data_dir.parents[1] / "results/audit").glob("*_live_run_card.json"))
-    completed = []
-    for card_path in cards:
-        card = json.loads(card_path.read_text(encoding="utf-8"))
-        if (card.get("release", {}).get("readiness") in {"READY", "SELL_ONLY"}
-                and card_path.name[:10] <= complete_through.isoformat()):
-            completed.append(card_path.name[:10])
-    frozen_through = completed[-1] if completed else "1900-01-01"
+    frozen_through = audited_price_cutoff(data_dir.parents[1], complete_through.isoformat())
+    client = UnifiedTdxClient(timeout=20)
     try:
         for item in all_instruments(config):
             key = symbol_key(item)
