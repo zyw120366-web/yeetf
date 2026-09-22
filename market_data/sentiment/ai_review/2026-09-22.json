@@ -1,0 +1,6084 @@
+{
+  "date": "2026-09-22",
+  "status": "complete",
+  "policy": "every_collected_row_reviewed_in_codex_chat_fail_closed",
+  "prompt_version": "ye-codex-chat-review-2026-07-22",
+  "reviewer": "codex_chat",
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "review_protocol": {
+    "version": "ye-codex-chat-review-2026-07-22",
+    "files": [
+      {
+        "path": "config/sentiment_review_policy.yaml",
+        "sha256": "64cc6dd0db1d6888b47d3e15903bbfb194f23dc6495b50a9b94ab778e3275f80"
+      },
+      {
+        "path": "config/sentiment.yaml",
+        "sha256": "264703aa392f3f796635c7e62fcbd21700e2a7bf03ab379f5242c6b23f2af5a2"
+      },
+      {
+        "path": "skills/ye-daily-execution/references/review-schema.md",
+        "sha256": "3a7433d841da73e87a60ca1f559a454fa40f2568ea56ef7566ac3469d7aa1734"
+      }
+    ]
+  },
+  "reviewed_at_utc": "2026-09-22T07:08:20.669731+00:00",
+  "snapshot_hash": "d69d350198cfebba013e3cbbf67768d12c59c70c2a2b0ae4ad49a6d03ca280fb",
+  "input_count": 149,
+  "reviewed_count": 149,
+  "relevant_count": 87,
+  "coverage": 1.0,
+  "items": [
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94493073",
+      "published_at": "2026-09-22",
+      "name": "千金药业",
+      "title": "千金药业 | 女性健康+创新药+药材种植+中报增长",
+      "body": "女性健康+创新药+药材种植+中报增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "c80212f91b6423824c0de8629fce5e0c357797bc0a905ec2c7c41cca5bfa1782",
+      "normalization": {
+        "event_key": "7676ae8b2e641e9c4296cf179a174f1768910669009c2d5259e62f5e96b12320",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c80212f91b6423824c0de8629fce5e0c357797bc0a905ec2c7c41cca5bfa1782",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.45,
+        "summary": "千金药业创新药和中报增长提供医药题材线索。",
+        "evidence": [
+          "千金药业 | 女性健康+创新药+药材种植+中报增长"
+        ],
+        "risk_flags": [
+          "药材种植不补写中药关键词，增长不代表新药成功",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94491708",
+      "published_at": "2026-09-22",
+      "name": "华丽家族",
+      "title": "华丽家族 | 房地产+创新药+机器人+“华”字辈",
+      "body": "房地产+创新药+机器人+“华”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "4c79f08db3700b86d0d78e8e9ffe2775af2411ef9b6bbc5d7933adb43c652417",
+      "normalization": {
+        "event_key": "a48070c8d20169f0135b89ac42b0af41512c8b4380a3b92920ba962906c8810d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH",
+          "512010.SH",
+          "513200.SH",
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4c79f08db3700b86d0d78e8e9ffe2775af2411ef9b6bbc5d7933adb43c652417",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产",
+          "医药医疗",
+          "港股与亚洲",
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512200.SH",
+          "512010.SH",
+          "513200.SH",
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.65,
+        "novelty": 0.3,
+        "summary": "华丽家族同时涉及房地产、创新药及机器人归因。",
+        "evidence": [
+          "华丽家族 | 房地产+创新药+机器人+“华”字辈"
+        ],
+        "risk_flags": [
+          "多题材及名字炒作缺少业务贡献验证",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94488002",
+      "published_at": "2026-09-22",
+      "name": "江淮汽车",
+      "title": "江淮汽车 | 汽车整车+尊界高端+华为合作+智能制造",
+      "body": "汽车整车+尊界高端+华为合作+智能制造",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6cf6b6a5780995b668322bb1ee58283cc048223e406c48a7c90dc976b49ecd32",
+      "normalization": {
+        "event_key": "bc98864304e8705cbfa493d1c5d87957201755c4641605e6b697b98be9b86357",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6cf6b6a5780995b668322bb1ee58283cc048223e406c48a7c90dc976b49ecd32",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.4,
+        "summary": "江淮汽车整车及合作主题未明确新能源车或自动化配置词。",
+        "evidence": [
+          "江淮汽车 | 汽车整车+尊界高端+华为合作+智能制造"
+        ],
+        "risk_flags": [
+          "智能制造不能直接改写机器人",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94485908",
+      "published_at": "2026-09-22",
+      "name": "中新赛克",
+      "title": "中新赛克 | AI安全+网络安全+间接投资机器人+深圳国资",
+      "body": "AI安全+网络安全+间接投资机器人+深圳国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "203a40856859d853c30713c69ff9f9c2cd37cbab691e292a94a53e337ecf33fc",
+      "normalization": {
+        "event_key": "9a2d9b992ae34ee45b4206d1f19fa89e8fab5ff2b471fcfe39849692716aa614",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "203a40856859d853c30713c69ff9f9c2cd37cbab691e292a94a53e337ecf33fc",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.4,
+        "summary": "中新赛克AI安全和间接机器人投资受题材关注。",
+        "evidence": [
+          "中新赛克 | AI安全+网络安全+间接投资机器人+深圳国资"
+        ],
+        "risk_flags": [
+          "间接投资与主营盈利贡献不同",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94485524",
+      "published_at": "2026-09-22",
+      "name": "新能股份",
+      "title": "新能股份 | 风光储+装机增长+国资增持",
+      "body": "风光储+装机增长+国资增持",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "0281831db83f85b32db8ff76e545b41aceb6827faa39ffb7af0a9136a7d29299",
+      "normalization": {
+        "event_key": "376b6047f7676d6723cea6a562d4fd0553c8ea8bb36e34bb7b0dc0e0c28d215d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0281831db83f85b32db8ff76e545b41aceb6827faa39ffb7af0a9136a7d29299",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.4,
+        "summary": "新能股份风光储、装机增长和增持归因未含现行完整映射词。",
+        "evidence": [
+          "新能股份 | 风光储+装机增长+国资增持"
+        ],
+        "risk_flags": [
+          "不能自行展开简称替换冻结证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94481141",
+      "published_at": "2026-09-22",
+      "name": "大亚圣象",
+      "title": "大亚圣象 | 七腾机器人+PCB概念+铝板带+电池箔",
+      "body": "七腾机器人+PCB概念+铝板带+电池箔",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "d6bafc47ceafb45570998052b60cf49eb8c024ef87174c918c8e8e3fa5f15f4f",
+      "normalization": {
+        "event_key": "00eaae824f91cbc975c813fa2fbc42efd8549656bf9f908b35f0b58c92825327",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH",
+          "512400.SH",
+          "159755.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d6bafc47ceafb45570998052b60cf49eb8c024ef87174c918c8e8e3fa5f15f4f",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "周期资源",
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "562500.SH",
+          "512400.SH",
+          "159755.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.69,
+        "novelty": 0.4,
+        "summary": "大亚圣象涉及机器人、铝板带及电池箔配套。",
+        "evidence": [
+          "大亚圣象 | 七腾机器人+PCB概念+铝板带+电池箔"
+        ],
+        "risk_flags": [
+          "材料及概念归因不代表机器人或电池收入已兑现",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94481108",
+      "published_at": "2026-09-22",
+      "name": "东江环保",
+      "title": "东江环保 | 危废资源化+稀贵金属回收+含氟废液资源化",
+      "body": "危废资源化+稀贵金属回收+含氟废液资源化",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6eac729051724f15b4ec397daab18e9687960d6033d0918ce85f09623de464d6",
+      "normalization": {
+        "event_key": "6a1f1321ac1ed555ba7230a8c6eb01152e8dcb2662158505592fb84a49a3a0af",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6eac729051724f15b4ec397daab18e9687960d6033d0918ce85f09623de464d6",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.4,
+        "summary": "东江环保稀贵金属回收为金属资源循环利用线索。",
+        "evidence": [
+          "东江环保 | 危废资源化+稀贵金属回收+含氟废液资源化"
+        ],
+        "risk_flags": [
+          "金属回收不能直接证明黄金价格上涨",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94480460",
+      "published_at": "2026-09-22",
+      "name": "国恩股份",
+      "title": "国恩股份 | 化工新材料+人形机器人+业绩增长",
+      "body": "化工新材料+人形机器人+业绩增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e7b13290a5495bded255ae61db206dbda6c40b1f53aa820928986fc5b134ba85",
+      "normalization": {
+        "event_key": "5b6164dc8d574805ef0665f218da0f280f788af0c1d85044d885ce5c5e0a8e59",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159981.SZ",
+          "516020.SH",
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e7b13290a5495bded255ae61db206dbda6c40b1f53aa820928986fc5b134ba85",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "周期资源",
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159981.SZ",
+          "516020.SH",
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.45,
+        "summary": "国恩股份化工新材料、人形机器人与业绩增长受关注。",
+        "evidence": [
+          "国恩股份 | 化工新材料+人形机器人+业绩增长"
+        ],
+        "risk_flags": [
+          "新材料企业上涨不代表能源化工期货价格",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94480025",
+      "published_at": "2026-09-22",
+      "name": "大有能源",
+      "title": "大有能源 | 煤炭+产销增长+吸收合并",
+      "body": "煤炭+产销增长+吸收合并",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2feecd1ab3896f11b0d8fa4462275e171b9057bc48b23ac964851c114b723eec",
+      "normalization": {
+        "event_key": "1190051a5c3c6665527fa8ff5627ef2443634cf7f06d89857de0ff8b3fa58197",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515220.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2feecd1ab3896f11b0d8fa4462275e171b9057bc48b23ac964851c114b723eec",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "515220.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.74,
+        "novelty": 0.45,
+        "summary": "大有能源煤炭产销增长及合并事项提供煤炭线索。",
+        "evidence": [
+          "大有能源 | 煤炭+产销增长+吸收合并"
+        ],
+        "risk_flags": [
+          "产量增长与煤价上涨不等同",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94479820",
+      "published_at": "2026-09-22",
+      "name": "厦工股份",
+      "title": "厦工股份 | 工程机械+智能矿卡+盾构机",
+      "body": "工程机械+智能矿卡+盾构机",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "365df848d98b6fb0dfc63c6f03e1a58583747d9b3930b0269a863a8bd521bea3",
+      "normalization": {
+        "event_key": "44d5efd60fe38b8f87e1f615071ea23df98a59959c95809c739cd2825bf0a9bb",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "560280.SH",
+          "516970.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "365df848d98b6fb0dfc63c6f03e1a58583747d9b3930b0269a863a8bd521bea3",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造",
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "560280.SH",
+          "516970.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.4,
+        "summary": "厦工股份工程机械、矿卡与盾构机形成机械配套线索。",
+        "evidence": [
+          "厦工股份 | 工程机械+智能矿卡+盾构机"
+        ],
+        "risk_flags": [
+          "个股产品布局不代表行业订单普增",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94469243",
+      "published_at": "2026-09-22",
+      "name": "协和电子",
+      "title": "协和电子 | PCB+高频通讯+新能源电池",
+      "body": "PCB+高频通讯+新能源电池",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "f1105c78de178a1227b7a3b778ffcd0535a9017cb29ed93f4d5c4eb803d09926",
+      "normalization": {
+        "event_key": "e53f702d3a6af060d4f3734e6efbaaa7d73c035cf6212bd33595e96d4d0b9b0e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159755.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f1105c78de178a1227b7a3b778ffcd0535a9017cb29ed93f4d5c4eb803d09926",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "159755.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.4,
+        "summary": "协和电子新能源电池配套题材受到关注。",
+        "evidence": [
+          "协和电子 | PCB+高频通讯+新能源电池"
+        ],
+        "risk_flags": [
+          "通讯未含通信配置词，电池配套不作光伏证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94468675",
+      "published_at": "2026-09-22",
+      "name": "中持股份",
+      "title": "中持股份 | 半导体设备+污水处理+芯长征入主",
+      "body": "半导体设备+污水处理+芯长征入主",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "efbd782e1242b60d68231199c66251a0849ccd75cc2955471bd8682184556ec9",
+      "normalization": {
+        "event_key": "daca14f25656ed47b58d5ee2ecef0f73ccbffa58cf95a0653837921ae9718564",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "efbd782e1242b60d68231199c66251a0849ccd75cc2955471bd8682184556ec9",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.45,
+        "summary": "中持股份半导体设备与股东入主形成芯片设备线索。",
+        "evidence": [
+          "中持股份 | 半导体设备+污水处理+芯长征入主"
+        ],
+        "risk_flags": [
+          "入主事项不等于设备业务已规模盈利",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94468666",
+      "published_at": "2026-09-22",
+      "name": "澳弘电子",
+      "title": "澳弘电子 | PCB+HDI板+服务器电源",
+      "body": "PCB+HDI板+服务器电源",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "5946babb5c1d113a174a73df592d38c01e9b01dd59a2c649d9a389d37c22fbfd",
+      "normalization": {
+        "event_key": "3dc913b4058d89174030fc72e90c95e247ddf247e203ba049bb02d160abbe0e9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5946babb5c1d113a174a73df592d38c01e9b01dd59a2c649d9a389d37c22fbfd",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.69,
+        "novelty": 0.4,
+        "summary": "澳弘电子服务器电源PCB配套提供服务器产业线索。",
+        "evidence": [
+          "澳弘电子 | PCB+HDI板+服务器电源"
+        ],
+        "risk_flags": [
+          "普通PCB不额外映射芯片或AI",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94466369",
+      "published_at": "2026-09-22",
+      "name": "坤泰股份",
+      "title": "坤泰股份 | 汽车软内饰+新能源客户+海外产能",
+      "body": "汽车软内饰+新能源客户+海外产能",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "29a34c46e1021328b343dd09899d8cfa2adb277f4abc64aa766def69712af522",
+      "normalization": {
+        "event_key": "23eb54807f2eec684e6a8762ac76e3e9541e761909f74fa95330d7e94f85abeb",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "29a34c46e1021328b343dd09899d8cfa2adb277f4abc64aa766def69712af522",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.87,
+        "novelty": 0.4,
+        "summary": "坤泰股份为汽车内饰和新能源客户配套。",
+        "evidence": [
+          "坤泰股份 | 汽车软内饰+新能源客户+海外产能"
+        ],
+        "risk_flags": [
+          "未明确新能源车配置词，内饰不代表光伏能源景气",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94466236",
+      "published_at": "2026-09-22",
+      "name": "视涯科技",
+      "title": "视涯科技 | AI眼镜+硅基OLED+营收增长+次新股",
+      "body": "AI眼镜+硅基OLED+营收增长+次新股",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "a78154c03805f7efacb4d145316aa834aaf428d7364211f6e96dcc312318ea01",
+      "normalization": {
+        "event_key": "299dfab50f1557a0b8f1a54f17214b79e9c06f4eeeaf22cccbbc275fc9e1504e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a78154c03805f7efacb4d145316aa834aaf428d7364211f6e96dcc312318ea01",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.72,
+        "novelty": 0.45,
+        "summary": "视涯科技AI眼镜与营收增长形成端侧应用线索。",
+        "evidence": [
+          "视涯科技 | AI眼镜+硅基OLED+营收增长+次新股"
+        ],
+        "risk_flags": [
+          "OLED不直接等同半导体配置证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94465137",
+      "published_at": "2026-09-22",
+      "name": "华仁药业",
+      "title": "华仁药业 | 化学制药+精麻药品+腹膜透析+“华”字辈",
+      "body": "化学制药+精麻药品+腹膜透析+“华”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2dba23240f003089aa92c2f3e0a3881c98ef71405f23eae8ad858eb8452b70b1",
+      "normalization": {
+        "event_key": "1484d415b7de05cb99fae331593742af099a0e607410b2f0b8ef1393b68f3190",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2dba23240f003089aa92c2f3e0a3881c98ef71405f23eae8ad858eb8452b70b1",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.35,
+        "summary": "华仁药业化学制药及透析用药归因支持医药线索。",
+        "evidence": [
+          "华仁药业 | 化学制药+精麻药品+腹膜透析+“华”字辈"
+        ],
+        "risk_flags": [
+          "名字主题与医药经营改善须区分",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94464749",
+      "published_at": "2026-09-22",
+      "name": "百花医药",
+      "title": "百花医药 | 医药研发服务+复杂制剂+国资背景",
+      "body": "医药研发服务+复杂制剂+国资背景",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "17eeee92d8832366a4a983093c0cdbe7927f58296cec2ef9410868a3bb70c358",
+      "normalization": {
+        "event_key": "37a667793ae2209b22be8dcb661db6f3ed0ef4446b46ced1af95cdca5334d890",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "17eeee92d8832366a4a983093c0cdbe7927f58296cec2ef9410868a3bb70c358",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.72,
+        "novelty": 0.4,
+        "summary": "百花医药研发服务及复杂制剂提供医药线索。",
+        "evidence": [
+          "百花医药 | 医药研发服务+复杂制剂+国资背景"
+        ],
+        "risk_flags": [
+          "研发服务不代表创新药临床成功",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94464351",
+      "published_at": "2026-09-22",
+      "name": "一鸣食品",
+      "title": "一鸣食品 | 低温乳品+大消费+业绩改善",
+      "body": "低温乳品+大消费+业绩改善",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "06124d3855340768d3abf93504e31e2cb73447f49bbce04076380261d3c44c2f",
+      "normalization": {
+        "event_key": "adde119600a0bc961883037d5577e735824f963d4b1f4fb9e295f702b019401f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "510630.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "06124d3855340768d3abf93504e31e2cb73447f49bbce04076380261d3c44c2f",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.45,
+        "summary": "一鸣食品低温乳品、大消费与业绩改善提供消费线索。",
+        "evidence": [
+          "一鸣食品 | 低温乳品+大消费+业绩改善"
+        ],
+        "risk_flags": [
+          "个股经营改善不等于消费总量复苏",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94463554",
+      "published_at": "2026-09-22",
+      "name": "泛微网络",
+      "title": "泛微网络 | AI应用+协同办公+鸿蒙办公",
+      "body": "AI应用+协同办公+鸿蒙办公",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "34aae01aea9c3ebac01f835427e0aaba478437ccfa618b8ac2a711f4cc304f9b",
+      "normalization": {
+        "event_key": "2ff1e17f9c4ec2841d4544ed720458a1124b7ec3b1168750d1e62defa5482187",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "34aae01aea9c3ebac01f835427e0aaba478437ccfa618b8ac2a711f4cc304f9b",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.4,
+        "summary": "泛微网络AI协同办公应用受到关注。",
+        "evidence": [
+          "泛微网络 | AI应用+协同办公+鸿蒙办公"
+        ],
+        "risk_flags": [
+          "鸿蒙应用标签缺少商业化增量",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94463062",
+      "published_at": "2026-09-22",
+      "name": "南兴股份",
+      "title": "南兴股份 | AI智算+AIDC+家具智能装备",
+      "body": "AI智算+AIDC+家具智能装备",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b91046a1d2ec6eb0b28596f16bdbf3bdc7fb8a77ad466e59fe57642018a92359",
+      "normalization": {
+        "event_key": "900f99630ff0d9a6666c8a4333ee2bac5a50efe0d04339308b460e83be1a40d1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b91046a1d2ec6eb0b28596f16bdbf3bdc7fb8a77ad466e59fe57642018a92359",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.69,
+        "novelty": 0.4,
+        "summary": "南兴股份AI智算及AIDC形成AI基础设施线索。",
+        "evidence": [
+          "南兴股份 | AI智算+AIDC+家具智能装备"
+        ],
+        "risk_flags": [
+          "不把简称补写为数据中心，不映射普通家具设备",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94462522",
+      "published_at": "2026-09-22",
+      "name": "升达林业",
+      "title": "升达林业 | 天然气+LNG加工+LNG重卡",
+      "body": "天然气+LNG加工+LNG重卡",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "4bf3644fc8faa3d28ce2a6a06fad45bcfefbe68846799443fee49c49696127cc",
+      "normalization": {
+        "event_key": "5ec1a5e7025a6b95e8a31dc34a8c509d0ce9b5e2c0fa53d87b531e97f95a54ef",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4bf3644fc8faa3d28ce2a6a06fad45bcfefbe68846799443fee49c49696127cc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.35,
+        "summary": "升达林业天然气与LNG加工未含石油油气配置词。",
+        "evidence": [
+          "升达林业 | 天然气+LNG加工+LNG重卡"
+        ],
+        "risk_flags": [
+          "天然气相关个股不直接代表石油价格",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94462424",
+      "published_at": "2026-09-22",
+      "name": "ST万邦",
+      "title": "ST万邦 | 创新药+神经用药+中报增长",
+      "body": "创新药+神经用药+中报增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "9bbd38fab02c67d0109714ae14a70c9b97a1009299aea6e5a7e72f5704ecde27",
+      "normalization": {
+        "event_key": "1d54996a3a0d961fbb0f04dd0a7d26abab3bdd760a213a1efe05199eb503910c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9bbd38fab02c67d0109714ae14a70c9b97a1009299aea6e5a7e72f5704ecde27",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.66,
+        "novelty": 0.45,
+        "summary": "ST万邦创新药和中报增长提供医药题材线索。",
+        "evidence": [
+          "ST万邦 | 创新药+神经用药+中报增长"
+        ],
+        "risk_flags": [
+          "ST风险保留，不能把增长当作风险解除",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94462356",
+      "published_at": "2026-09-22",
+      "name": "中国出版",
+      "title": "中国出版 | AI出版+图书出版+中国出版集团",
+      "body": "AI出版+图书出版+中国出版集团",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2c92a434e4ce0feebfa95eebff0aea9191af5fbdfa8d5ba7edd5f1c8b269c482",
+      "normalization": {
+        "event_key": "ff5d93e3d992cb5921a03366fa5258a6e6ce645118b3462abc345b16133f37a0",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2c92a434e4ce0feebfa95eebff0aea9191af5fbdfa8d5ba7edd5f1c8b269c482",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.4,
+        "summary": "中国出版AI出版及图书业务形成AI传媒应用线索。",
+        "evidence": [
+          "中国出版 | AI出版+图书出版+中国出版集团"
+        ],
+        "risk_flags": [
+          "出版应用不代表游戏行业业绩",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94462321",
+      "published_at": "2026-09-22",
+      "name": "新炬网络",
+      "title": "新炬网络 | AI运维+数据中心运维+短剧营销",
+      "body": "AI运维+数据中心运维+短剧营销",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "4a2d6fb3afcc9c9436bc9f5d0d3e16cdf4a368b080cdb3ca27ef014fd869c458",
+      "normalization": {
+        "event_key": "4f16bb4c14941e2688d9b86bb6a47f587d141399fa30764f8b1a935ba299f06d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "515050.SH",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4a2d6fb3afcc9c9436bc9f5d0d3e16cdf4a368b080cdb3ca27ef014fd869c458",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "515050.SH",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.69,
+        "novelty": 0.4,
+        "summary": "新炬网络AI、数据中心运维和短剧营销同时出现。",
+        "evidence": [
+          "新炬网络 | AI运维+数据中心运维+短剧营销"
+        ],
+        "risk_flags": [
+          "多题材需区分主营贡献，运维不等同算力扩产",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94461418",
+      "published_at": "2026-09-22",
+      "name": "天威视讯",
+      "title": "天威视讯 | 文化传媒+数据中心+深圳国资",
+      "body": "文化传媒+数据中心+深圳国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "466a3b7b3d7b426f0a9ef8538667ebe8e2bf120edb53169ed29319c1e653d777",
+      "normalization": {
+        "event_key": "e0ce16a063721e0f2c512e17152128a8cac01700e01f81030ef28a7066086bca",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159869.SZ",
+          "512980.SH",
+          "159819.SZ",
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "466a3b7b3d7b426f0a9ef8538667ebe8e2bf120edb53169ed29319c1e653d777",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159869.SZ",
+          "512980.SH",
+          "159819.SZ",
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.4,
+        "summary": "天威视讯文化传媒和数据中心题材受到关注。",
+        "evidence": [
+          "天威视讯 | 文化传媒+数据中心+深圳国资"
+        ],
+        "risk_flags": [
+          "国资背景不等同利润保障",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460690",
+      "published_at": "2026-09-22",
+      "name": "时空科技",
+      "title": "时空科技 | 存储芯片+拟收购嘉合劲威+照明工程",
+      "body": "存储芯片+拟收购嘉合劲威+照明工程",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "a08605628eb8f8f3f651512fc5a078f34907a8e3dd9a2c69310557ca9ac806e5",
+      "normalization": {
+        "event_key": "4374f4180496de00a8201674df2710da6679130fd22414059243d398d8422b08",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a08605628eb8f8f3f651512fc5a078f34907a8e3dd9a2c69310557ca9ac806e5",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.67,
+        "novelty": 0.45,
+        "summary": "时空科技拟收购存储芯片资产形成并购题材。",
+        "evidence": [
+          "时空科技 | 存储芯片+拟收购嘉合劲威+照明工程"
+        ],
+        "risk_flags": [
+          "拟收购尚非完成，不能视作主营已转型",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460643",
+      "published_at": "2026-09-22",
+      "name": "宏英智能",
+      "title": "宏英智能 | 液冷储能+智能电控+业绩增长",
+      "body": "液冷储能+智能电控+业绩增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e4d17baa4855208d2008176004b0fb31b61cf40d30eb2222752095d4a877d1e1",
+      "normalization": {
+        "event_key": "4665c9a7f860f3dda31483625436bfa0741c8bdcb50db70e89ae95f8a27fa375",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159755.SZ",
+          "515790.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e4d17baa4855208d2008176004b0fb31b61cf40d30eb2222752095d4a877d1e1",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "159755.SZ",
+          "515790.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.45,
+        "summary": "宏英智能液冷储能与业绩增长提供储能产业线索。",
+        "evidence": [
+          "宏英智能 | 液冷储能+智能电控+业绩增长"
+        ],
+        "risk_flags": [
+          "液冷储能不自动映射AI服务器",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460475",
+      "published_at": "2026-09-22",
+      "name": "凯华材料",
+      "title": "凯华材料 | 半导体材料+环氧包封料+业绩增长+“华”字辈",
+      "body": "半导体材料+环氧包封料+业绩增长+“华”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "5d03f1660f8ba217ec2693c5e78e768c6508b77c64a05e1f8f172fa0bfc93500",
+      "normalization": {
+        "event_key": "af73ae416b3ba8ed700bd3a74d2114fd6864ec2222c1d3274dac0e38a4260b3b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5d03f1660f8ba217ec2693c5e78e768c6508b77c64a05e1f8f172fa0bfc93500",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.72,
+        "novelty": 0.45,
+        "summary": "凯华材料半导体封装材料及业绩增长受关注。",
+        "evidence": [
+          "凯华材料 | 半导体材料+环氧包封料+业绩增长+“华”字辈"
+        ],
+        "risk_flags": [
+          "名字题材与业绩因果分开看",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460454",
+      "published_at": "2026-09-22",
+      "name": "博通集成",
+      "title": "博通集成 | 端侧AI+无线芯片+业绩增长",
+      "body": "端侧AI+无线芯片+业绩增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "297a266047e05c2ba91f2cae47b3e4ee9fd911ae842fd568f7451f9ec1f6900c",
+      "normalization": {
+        "event_key": "ace58bf76a61c027d92dabe3cd61f4f71bcfda9c5fffbdbb19dec08e101f6d19",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "297a266047e05c2ba91f2cae47b3e4ee9fd911ae842fd568f7451f9ec1f6900c",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.4,
+        "summary": "博通集成端侧AI与无线芯片形成科技线索。",
+        "evidence": [
+          "博通集成 | 端侧AI+无线芯片+业绩增长"
+        ],
+        "risk_flags": [
+          "增长来源和AI收入占比未披露",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460435",
+      "published_at": "2026-09-22",
+      "name": "五洲医疗",
+      "title": "五洲医疗 | 医疗耗材+芯片并购+电机控制芯片+净利增长",
+      "body": "医疗耗材+芯片并购+电机控制芯片+净利增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "dd16d186bcb44ba21f454952e8692664ad8b9f3ecfef8c30e38aa994b3c23f26",
+      "normalization": {
+        "event_key": "a4ab4fecabf71bc70da6b5f7de86d374f069218146a2fa4e09e5e00cd508b9c2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562600.SH",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dd16d186bcb44ba21f454952e8692664ad8b9f3ecfef8c30e38aa994b3c23f26",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗",
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "562600.SH",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.45,
+        "summary": "五洲医疗医疗耗材和芯片并购受关注。",
+        "evidence": [
+          "五洲医疗 | 医疗耗材+芯片并购+电机控制芯片+净利增长"
+        ],
+        "risk_flags": [
+          "并购执行与利润贡献待核，医疗耗材不自行写器械",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460427",
+      "published_at": "2026-09-22",
+      "name": "日海智能",
+      "title": "日海智能 | 端侧AI智能模组+机器人+半年报扭亏+珠海国资",
+      "body": "端侧AI智能模组+机器人+半年报扭亏+珠海国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b11242ae37b1104b1b050e79d311d7a16655a4b3ee9c69025384cb6a202b6ed1",
+      "normalization": {
+        "event_key": "7eda3abc9bfd9bed736eac3b5a6e703b1ec689699b1c13ffe02d2f99342f269c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b11242ae37b1104b1b050e79d311d7a16655a4b3ee9c69025384cb6a202b6ed1",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.45,
+        "summary": "日海智能端侧AI模组、机器人与扭亏提供应用线索。",
+        "evidence": [
+          "日海智能 | 端侧AI智能模组+机器人+半年报扭亏+珠海国资"
+        ],
+        "risk_flags": [
+          "扭亏持续性及题材收入占比未知",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460365",
+      "published_at": "2026-09-22",
+      "name": "旋极信息",
+      "title": "旋极信息 | AI芯片+行业数据智能+可信大模型",
+      "body": "AI芯片+行业数据智能+可信大模型",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "5dae64f6e5426891181fa4ab416bc8d05e6df205af09bc3095875def6f4368e1",
+      "normalization": {
+        "event_key": "5db29a5adbeedd993885902542da201bf7f4925b088b9031970d371e3c7204a6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5dae64f6e5426891181fa4ab416bc8d05e6df205af09bc3095875def6f4368e1",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.4,
+        "summary": "旋极信息AI芯片和大模型形成直接科技线索。",
+        "evidence": [
+          "旋极信息 | AI芯片+行业数据智能+可信大模型"
+        ],
+        "risk_flags": [
+          "产品标签不代表商业订单或盈利已确认",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460355",
+      "published_at": "2026-09-22",
+      "name": "齐心集团",
+      "title": "齐心集团 | AI应用+B2B集采+MRO工业品",
+      "body": "AI应用+B2B集采+MRO工业品",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "d61e3e5ba85a830452560e61d240f8bcf2068ce6ab71953f07c943b2dff6ba1f",
+      "normalization": {
+        "event_key": "d3aae03635a96d4434625020f54c8d90f8748718617ec74a4af2de180c410b8a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d61e3e5ba85a830452560e61d240f8bcf2068ce6ab71953f07c943b2dff6ba1f",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.4,
+        "summary": "齐心集团AI应用与集采业务形成企业应用线索。",
+        "evidence": [
+          "齐心集团 | AI应用+B2B集采+MRO工业品"
+        ],
+        "risk_flags": [
+          "集采规模不等同AI收入",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460187",
+      "published_at": "2026-09-22",
+      "name": "瑞芯微",
+      "title": "瑞芯微 | 端侧AI+AIoT芯片+业绩增长",
+      "body": "端侧AI+AIoT芯片+业绩增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "60bc0f119269db568e615af867d2ef3c61971957f171e1f8f860729c688a759f",
+      "normalization": {
+        "event_key": "e9f244d9c972952dc39a40b825176649fda29dfe10a336cebd535f9cebd1c8f2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "60bc0f119269db568e615af867d2ef3c61971957f171e1f8f860729c688a759f",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.74,
+        "novelty": 0.45,
+        "summary": "瑞芯微端侧AI芯片与业绩增长提供芯片线索。",
+        "evidence": [
+          "瑞芯微 | 端侧AI+AIoT芯片+业绩增长"
+        ],
+        "risk_flags": [
+          "个股业绩不保证行业趋势延续",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94460076",
+      "published_at": "2026-09-22",
+      "name": "箭牌家居",
+      "title": "箭牌家居 | 智能卫浴+鸿蒙智选+智能马桶",
+      "body": "智能卫浴+鸿蒙智选+智能马桶",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b9372f0276060c212db651179da72a7e123d31a24733fec83d84b909c5934748",
+      "normalization": {
+        "event_key": "3fa96b20d226cd3caa7e83a777b5ffe817ae11da193a473c9b49fa4701ce6288",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b9372f0276060c212db651179da72a7e123d31a24733fec83d84b909c5934748",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.4,
+        "summary": "箭牌家居智能卫浴与马桶未含智能家居或家电配置词。",
+        "evidence": [
+          "箭牌家居 | 智能卫浴+鸿蒙智选+智能马桶"
+        ],
+        "risk_flags": [
+          "家居名称不能自动等于家电行业",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459808",
+      "published_at": "2026-09-22",
+      "name": "引力传媒",
+      "title": "引力传媒 | AI营销+AI短剧+全域营销",
+      "body": "AI营销+AI短剧+全域营销",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2542266955d7df1d03c6f35c5a1ab97ab3ab904254854a351fb0202e2a0a6d06",
+      "normalization": {
+        "event_key": "29c2753cf851cd55e327ee376c087e93f2d021055d3dc4fc641c4e9df3e4c89a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2542266955d7df1d03c6f35c5a1ab97ab3ab904254854a351fb0202e2a0a6d06",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.4,
+        "summary": "引力传媒AI营销和短剧构成传媒应用线索。",
+        "evidence": [
+          "引力传媒 | AI营销+AI短剧+全域营销"
+        ],
+        "risk_flags": [
+          "AI标签尚未量化盈利贡献",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459795",
+      "published_at": "2026-09-22",
+      "name": "爱丽家居",
+      "title": "爱丽家居 | 存储测试+拟收欧康诺+弹性地板",
+      "body": "存储测试+拟收欧康诺+弹性地板",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b1819224f01be238dbf128bacd39069b2ac82489a58f4ece51a5a6d514cd82c2",
+      "normalization": {
+        "event_key": "2af48e60e61d7e5dbeef41ed43ebdc8277a4c634a453872b07bae540dda09350",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b1819224f01be238dbf128bacd39069b2ac82489a58f4ece51a5a6d514cd82c2",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.45,
+        "summary": "爱丽家居拟收购与存储测试线索未明确芯片或半导体词。",
+        "evidence": [
+          "爱丽家居 | 存储测试+拟收欧康诺+弹性地板"
+        ],
+        "risk_flags": [
+          "拟并购尚非完成，不能补写目标行业",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459747",
+      "published_at": "2026-09-22",
+      "name": "艾艾精工",
+      "title": "艾艾精工 | 控制权拟变更+精密金属结构件+轻型输送带",
+      "body": "控制权拟变更+精密金属结构件+轻型输送带",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2eec2a471fd627dcd105541ccd947a62f544e654364608b0fd9e5c9cb9eaeac7",
+      "normalization": {
+        "event_key": "1161042e4a07227e359b0a1605257bc77001295633b175ed43efb3ae75f8a2ee",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2eec2a471fd627dcd105541ccd947a62f544e654364608b0fd9e5c9cb9eaeac7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.4,
+        "summary": "艾艾精工涉及控制权及精密金属结构件。",
+        "evidence": [
+          "艾艾精工 | 控制权拟变更+精密金属结构件+轻型输送带"
+        ],
+        "risk_flags": [
+          "机械结构件不直接证明上游有色价格上涨",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459545",
+      "published_at": "2026-09-22",
+      "name": "联合精密",
+      "title": "联合精密 | 航空制造+精密零部件+拟定增",
+      "body": "航空制造+精密零部件+拟定增",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "d26df50f5ccae36d0ba9cb2cb5ed5f2dd73d54395af0be42fc2d82e84be26b0c",
+      "normalization": {
+        "event_key": "f10b446aa157ee5bf702a0913dbd108a6c32e7fed7bd027b583c47ae7cee1079",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d26df50f5ccae36d0ba9cb2cb5ed5f2dd73d54395af0be42fc2d82e84be26b0c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.45,
+        "summary": "联合精密航空制造及拟定增未含航空航天或军工配置词。",
+        "evidence": [
+          "联合精密 | 航空制造+精密零部件+拟定增"
+        ],
+        "risk_flags": [
+          "不从公司名称或产品用途推断军工身份",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459396",
+      "published_at": "2026-09-22",
+      "name": "延华智能",
+      "title": "延华智能 | AI医疗+智慧城市+智慧康养+”华“字辈",
+      "body": "AI医疗+智慧城市+智慧康养+”华“字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "ac2bb6f25624f58ca4fd079222dda17cb13a3a88555e55ff6a3ec875f8a850ea",
+      "normalization": {
+        "event_key": "7c758360b1d3cc4bd8283974be6cef812150ca39abd712df72d783eadfd07217",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ac2bb6f25624f58ca4fd079222dda17cb13a3a88555e55ff6a3ec875f8a850ea",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.35,
+        "summary": "延华智能AI医疗及智慧康养题材受关注。",
+        "evidence": [
+          "延华智能 | AI医疗+智慧城市+智慧康养+”华“字辈"
+        ],
+        "risk_flags": [
+          "名字炒作不等于医疗经营改善",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459394",
+      "published_at": "2026-09-22",
+      "name": "贤丰控股",
+      "title": "贤丰控股 | 覆铜板+印制电路板+动物保健",
+      "body": "覆铜板+印制电路板+动物保健",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "67c7b27a4a89092551f88c64e9d86345a00c0079e43df0871256621f63a5b13f",
+      "normalization": {
+        "event_key": "4fe4cb38b9484542cbddbebcc5b1e8a1a3fec20ddda337f374ed4f726cda250e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "67c7b27a4a89092551f88c64e9d86345a00c0079e43df0871256621f63a5b13f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.4,
+        "summary": "贤丰控股覆铜板和动物保健归因未形成现池直接ETF证据。",
+        "evidence": [
+          "贤丰控股 | 覆铜板+印制电路板+动物保健"
+        ],
+        "risk_flags": [
+          "覆铜板不代表铜价上涨，动物保健不等同养殖或豆粕",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459266",
+      "published_at": "2026-09-22",
+      "name": "梦天家居",
+      "title": "梦天家居 | 功率半导体投资+全屋定制+智能制造",
+      "body": "功率半导体投资+全屋定制+智能制造",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "49d29ba4dc0e79b7ba9620b70b56f15cd88b2916a02b951597de3fe309a708d3",
+      "normalization": {
+        "event_key": "0e8fa7a413ec10d4d103514088eb5443ef0fd8d69368468053dfeea018aa041d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "49d29ba4dc0e79b7ba9620b70b56f15cd88b2916a02b951597de3fe309a708d3",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.66,
+        "novelty": 0.45,
+        "summary": "梦天家居功率半导体投资构成芯片题材线索。",
+        "evidence": [
+          "梦天家居 | 功率半导体投资+全屋定制+智能制造"
+        ],
+        "risk_flags": [
+          "投资主题与主营半导体收入不同",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459265",
+      "published_at": "2026-09-22",
+      "name": "爱普股份",
+      "title": "爱普股份 | 半导体材料+香精香料+鱼油原料",
+      "body": "半导体材料+香精香料+鱼油原料",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "aeef949e1a384ed2169241a5c267b1ed4495b876584e153324b627d3e3aa13ce",
+      "normalization": {
+        "event_key": "7203058052af8434c2afccf9fcd4300b53dbde77283619f768dc74b12a252f4b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "aeef949e1a384ed2169241a5c267b1ed4495b876584e153324b627d3e3aa13ce",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.67,
+        "novelty": 0.4,
+        "summary": "爱普股份半导体材料题材与原有香料业务同时出现。",
+        "evidence": [
+          "爱普股份 | 半导体材料+香精香料+鱼油原料"
+        ],
+        "risk_flags": [
+          "需区分主题与实际业务占比",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459191",
+      "published_at": "2026-09-22",
+      "name": "内蒙新华",
+      "title": "内蒙新华 | 新华字辈+出版发行+文化消费+”华“字辈",
+      "body": "新华字辈+出版发行+文化消费+”华“字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "385bc6a35dde7b655ef6e769121d81783bfd7ebbba6f4072935e9cfdd9f956bc",
+      "normalization": {
+        "event_key": "1849b38dcacbd6ae2c97aa43521284cbeb1c6f2655f03cdc735f982f88eede0c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH",
+          "510630.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "385bc6a35dde7b655ef6e769121d81783bfd7ebbba6f4072935e9cfdd9f956bc",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512980.SH",
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.65,
+        "novelty": 0.3,
+        "summary": "内蒙新华出版发行和文化消费受到题材关注。",
+        "evidence": [
+          "内蒙新华 | 新华字辈+出版发行+文化消费+”华“字辈"
+        ],
+        "risk_flags": [
+          "名字炒作并非经营利好，文化消费代表性有限",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459176",
+      "published_at": "2026-09-22",
+      "name": "天沃科技",
+      "title": "天沃科技 | 光热风电+电力设计+高端装备",
+      "body": "光热风电+电力设计+高端装备",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "87b4393dcb60a32b7172c07409843973a9c5ba3eb2f73d771ccee3e8deb6b13b",
+      "normalization": {
+        "event_key": "bfa4e25f2c3832cd43c9b87a2b79c6266132e9667e1fa6edca1f8196859492a9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515790.SH",
+          "159611.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "87b4393dcb60a32b7172c07409843973a9c5ba3eb2f73d771ccee3e8deb6b13b",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造",
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "515790.SH",
+          "159611.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.4,
+        "summary": "天沃科技风电和电力设计构成能源项目配套线索。",
+        "evidence": [
+          "天沃科技 | 光热风电+电力设计+高端装备"
+        ],
+        "risk_flags": [
+          "设计业务不等于发电收益",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459098",
+      "published_at": "2026-09-22",
+      "name": "二六三",
+      "title": "二六三 | AI智能通信+云网融合+跨境通信",
+      "body": "AI智能通信+云网融合+跨境通信",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "12821ce8ab4937cd86d48c3b21c5745b120eaff542cd09bcbc17416309c0dc64",
+      "normalization": {
+        "event_key": "3ce99e928ad6ac54c01570d90b244e5882d0b35beb0e4450b80a53f4cdc6537b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "12821ce8ab4937cd86d48c3b21c5745b120eaff542cd09bcbc17416309c0dc64",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.4,
+        "summary": "二六三AI智能通信及云网融合形成通信应用线索。",
+        "evidence": [
+          "二六三 | AI智能通信+云网融合+跨境通信"
+        ],
+        "risk_flags": [
+          "AI贡献和跨境需求没有量化数据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459091",
+      "published_at": "2026-09-22",
+      "name": "三羊马",
+      "title": "三羊马 | ”羊“字辈+汽车物流+多式联运+国际物流",
+      "body": "”羊“字辈+汽车物流+多式联运+国际物流",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "aec1a8030cc2e79a6ea1464f4d6f3e1d254631950382bfe0f056ca29f432121a",
+      "normalization": {
+        "event_key": "3f770c469f5758c67d5fa78dbf9b7270f67479db0249bbb98c9dd2c74e71929c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "aec1a8030cc2e79a6ea1464f4d6f3e1d254631950382bfe0f056ca29f432121a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.3,
+        "summary": "三羊马物流及名字题材没有池内专属证据。",
+        "evidence": [
+          "三羊马 | ”羊“字辈+汽车物流+多式联运+国际物流"
+        ],
+        "risk_flags": [
+          "名字中的羊不构成养殖或饲料证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459059",
+      "published_at": "2026-09-22",
+      "name": "哈药股份",
+      "title": "哈药股份 | 创新药+医药工业+业绩增长",
+      "body": "创新药+医药工业+业绩增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "977dc51749b1005667265f80b12f7b2e838a4b076ebea021627d00ee6c0389b6",
+      "normalization": {
+        "event_key": "0bf3789cb6002831f40400338ed02dd898ed8921e35af5096660050aacade49e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "977dc51749b1005667265f80b12f7b2e838a4b076ebea021627d00ee6c0389b6",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.73,
+        "novelty": 0.4,
+        "summary": "哈药股份创新药、医药工业和业绩增长形成医药线索。",
+        "evidence": [
+          "哈药股份 | 创新药+医药工业+业绩增长"
+        ],
+        "risk_flags": [
+          "研发进展与已实现收入须区分",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459040",
+      "published_at": "2026-09-22",
+      "name": "伟时电子",
+      "title": "伟时电子 | 背光显示模组+MiniLED+车载显示",
+      "body": "背光显示模组+MiniLED+车载显示",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6657e23abf395ae6f07a544f0cb24e1e32a1567fc9e5f97622cf4c0ffd210b36",
+      "normalization": {
+        "event_key": "b4b0bd28e5180094cae683a7c9134cba87545edd0650e0583da77ef3151a7c97",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6657e23abf395ae6f07a544f0cb24e1e32a1567fc9e5f97622cf4c0ffd210b36",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.35,
+        "summary": "伟时电子背光显示和MiniLED未明确半导体或消费电子词。",
+        "evidence": [
+          "伟时电子 | 背光显示模组+MiniLED+车载显示"
+        ],
+        "risk_flags": [
+          "车载显示不等于新能源车专属证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459027",
+      "published_at": "2026-09-22",
+      "name": "先导基电",
+      "title": "先导基电 | 半导体材料+离子注入机+半年报增长",
+      "body": "半导体材料+离子注入机+半年报增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "4c3f6f4ece5313a01b129fa460d75141706194eeae569395b85beda64cfe37d7",
+      "normalization": {
+        "event_key": "9d5f7d6bfc5ab46530e6488ba0c03e66908709236314bdc97a1118e3a3085fac",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4c3f6f4ece5313a01b129fa460d75141706194eeae569395b85beda64cfe37d7",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.74,
+        "novelty": 0.45,
+        "summary": "先导基电半导体材料和离子注入设备伴随中报增长。",
+        "evidence": [
+          "先导基电 | 半导体材料+离子注入机+半年报增长"
+        ],
+        "risk_flags": [
+          "单公司业绩不能代表整个半导体周期",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459021",
+      "published_at": "2026-09-22",
+      "name": "智度股份",
+      "title": "智度股份 | 数字营销+人工智能+中报增长",
+      "body": "数字营销+人工智能+中报增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "ce620082f04d9bb1f66c448e82570f022bbb99afd4997db69556bd9b7b851672",
+      "normalization": {
+        "event_key": "f7596eead4b2742e0bc755565a069a2546f08b59cae1c964f02632da2823e105",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ce620082f04d9bb1f66c448e82570f022bbb99afd4997db69556bd9b7b851672",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.72,
+        "novelty": 0.45,
+        "summary": "智度股份人工智能与数字营销形成应用线索。",
+        "evidence": [
+          "智度股份 | 数字营销+人工智能+中报增长"
+        ],
+        "risk_flags": [
+          "数字营销不自行补写广告行业配置词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94459014",
+      "published_at": "2026-09-22",
+      "name": "我爱我家",
+      "title": "我爱我家 | 房产经纪+AI应用+净利增长",
+      "body": "房产经纪+AI应用+净利增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b0e476f469894301a4dfc2154fe5aced341ea5be8537f8695188bfb32b985ec6",
+      "normalization": {
+        "event_key": "ab7ba951314a42970e8f6352cb3e610bf0b686979c6c6ed1aef01fadadbbd33f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b0e476f469894301a4dfc2154fe5aced341ea5be8537f8695188bfb32b985ec6",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.4,
+        "summary": "我爱我家AI应用和净利增长受到关注。",
+        "evidence": [
+          "我爱我家 | 房产经纪+AI应用+净利增长"
+        ],
+        "risk_flags": [
+          "房产经纪未含地产配置词，不凭常识补词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458992",
+      "published_at": "2026-09-22",
+      "name": "美盈森",
+      "title": "美盈森 | 导热凝胶+模切业务+消费电子包装+海外产能",
+      "body": "导热凝胶+模切业务+消费电子包装+海外产能",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6c943294fecb479d3ae53e7e882478d41b18a7b598642a8f6180805cc8ea8bc0",
+      "normalization": {
+        "event_key": "ebd381b95dc5993f65e5bbf92b46da8a6bd3bfde3ee3c9e58bdd867fc275321e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6c943294fecb479d3ae53e7e882478d41b18a7b598642a8f6180805cc8ea8bc0",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.66,
+        "novelty": 0.4,
+        "summary": "美盈森消费电子包装属于终端配套线索。",
+        "evidence": [
+          "美盈森 | 导热凝胶+模切业务+消费电子包装+海外产能"
+        ],
+        "risk_flags": [
+          "包装及导热凝胶不能代表终端销量普增",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458989",
+      "published_at": "2026-09-22",
+      "name": "泰慕士",
+      "title": "泰慕士 | 针织服装+服装贴牌+广州国资入主",
+      "body": "针织服装+服装贴牌+广州国资入主",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6849b774c8de039a9c50aed167e02f0a5881885e1dcc0487cfe1ddcba0548df1",
+      "normalization": {
+        "event_key": "8e5ef2f53ea881b6b14837f3ef269cc2447d3f79917eeb9bd3e7dc2e1d81de45",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6849b774c8de039a9c50aed167e02f0a5881885e1dcc0487cfe1ddcba0548df1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.35,
+        "summary": "泰慕士服装贴牌及国资入主未含池内专属词。",
+        "evidence": [
+          "泰慕士 | 针织服装+服装贴牌+广州国资入主"
+        ],
+        "risk_flags": [
+          "控制权变更为公司事件，不扩散至消费ETF",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458889",
+      "published_at": "2026-09-22",
+      "name": "南威软件",
+      "title": "南威软件 | AI应用出海+算力租赁+政务数字化",
+      "body": "AI应用出海+算力租赁+政务数字化",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "8e2ccdcd28cd9edcb5caf22a94b1804a762be440bac86b38dd1b9d187841596b",
+      "normalization": {
+        "event_key": "38e8baa9eda0e3d3a82198c429bd4aed9fe10ef5829376b2f7a4aa47f4a4c811",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8e2ccdcd28cd9edcb5caf22a94b1804a762be440bac86b38dd1b9d187841596b",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.72,
+        "novelty": 0.4,
+        "summary": "南威软件AI出海、算力租赁提供AI和算力配套线索。",
+        "evidence": [
+          "南威软件 | AI应用出海+算力租赁+政务数字化"
+        ],
+        "risk_flags": [
+          "出海和租赁盈利质量未披露",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458887",
+      "published_at": "2026-09-22",
+      "name": "新华文轩",
+      "title": "新华文轩 | 拟收购民族出版社+教科书发行+数字教育+“华”字辈",
+      "body": "拟收购民族出版社+教科书发行+数字教育+“华”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6417c2c5adadac7ee9c2cd1c6043da745848dcb662010c73e26bbd56071067a9",
+      "normalization": {
+        "event_key": "eed93b51c1be15c7f0b4b6420313f6e95a2e3639d5ef511c0163325b80d103d6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6417c2c5adadac7ee9c2cd1c6043da745848dcb662010c73e26bbd56071067a9",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.69,
+        "novelty": 0.45,
+        "summary": "新华文轩拟收购出版社和教科书发行构成出版线索。",
+        "evidence": [
+          "新华文轩 | 拟收购民族出版社+教科书发行+数字教育+“华”字辈"
+        ],
+        "risk_flags": [
+          "拟收购尚未完成，名字题材不算经营改善",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458885",
+      "published_at": "2026-09-22",
+      "name": "新华传媒",
+      "title": "新华传媒 | 资产重组+图书发行+上海国资+“华”字辈",
+      "body": "资产重组+图书发行+上海国资+“华”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "c4f91d0d466cd4a474310f0206e5fc8dbaae8bd43c2d48f25c6cf7d938e440d5",
+      "normalization": {
+        "event_key": "a215ef97b355c3d98854e0c0be1529382b0672f4d4c87510eccb2d939a579c03",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH",
+          "159869.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c4f91d0d466cd4a474310f0206e5fc8dbaae8bd43c2d48f25c6cf7d938e440d5",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH",
+          "159869.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.66,
+        "novelty": 0.35,
+        "summary": "新华传媒图书发行和重组受到题材关注。",
+        "evidence": [
+          "新华传媒 | 资产重组+图书发行+上海国资+“华”字辈"
+        ],
+        "risk_flags": [
+          "国资与名字炒作不是全行业利好保证",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458881",
+      "published_at": "2026-09-22",
+      "name": "综艺股份",
+      "title": "综艺股份 | 参股神州龙芯（CPU）+功率半导体IDM+金刚石散热",
+      "body": "参股神州龙芯（CPU）+功率半导体IDM+金刚石散热",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "5dab39352d1971c30e549de82f77369666a893c072f932e1c41b15d5c46f8264",
+      "normalization": {
+        "event_key": "5a2249434b22f2ba38f01311bf9fcca5e342e81caa5848a470958520a14efc09",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5dab39352d1971c30e549de82f77369666a893c072f932e1c41b15d5c46f8264",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.45,
+        "summary": "综艺股份功率半导体及参股CPU形成芯片产业线索。",
+        "evidence": [
+          "综艺股份 | 参股神州龙芯（CPU）+功率半导体IDM+金刚石散热"
+        ],
+        "risk_flags": [
+          "参股与直接主营收入需区分",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458879",
+      "published_at": "2026-09-22",
+      "name": "华远控股",
+      "title": "华远控股 | 控股股东拟变更+物业管理+酒店管理",
+      "body": "控股股东拟变更+物业管理+酒店管理",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "91192b5e932e893861a45bbb2266951c120441ee6719512a38fb7fe84c7b72a4",
+      "normalization": {
+        "event_key": "1b6f512620bf713f3207fc783cb84193b23bb058e4ca0e509be28d33145748ef",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH",
+          "159766.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "91192b5e932e893861a45bbb2266951c120441ee6719512a38fb7fe84c7b72a4",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512200.SH",
+          "159766.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.4,
+        "summary": "华远控股物业、酒店与拟变更股东形成运营链线索。",
+        "evidence": [
+          "华远控股 | 控股股东拟变更+物业管理+酒店管理"
+        ],
+        "risk_flags": [
+          "拟变更股东不代表地产销售好转",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458877",
+      "published_at": "2026-09-22",
+      "name": "奥佳华",
+      "title": "奥佳华 | 股份转让+健康机器人+按摩椅+”华“字辈",
+      "body": "股份转让+健康机器人+按摩椅+”华“字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2a7b0b5d6bea72125bc228d06a3e6e393489bead461a433049407829681d0b3e",
+      "normalization": {
+        "event_key": "95180a02790f33190ed333c7483f2924353c7ab9a0a77eeb5c402a7e7e33ac9e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2a7b0b5d6bea72125bc228d06a3e6e393489bead461a433049407829681d0b3e",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.65,
+        "novelty": 0.35,
+        "summary": "奥佳华健康机器人和股份转让受到关注。",
+        "evidence": [
+          "奥佳华 | 股份转让+健康机器人+按摩椅+”华“字辈"
+        ],
+        "risk_flags": [
+          "按摩椅标签不等于人形机器人订单，名字题材需谨慎",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458875",
+      "published_at": "2026-09-22",
+      "name": "禾盛新材",
+      "title": "禾盛新材 | 参股CPU+算力+家电复材",
+      "body": "参股CPU+算力+家电复材",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "0940e2ddaab6639d277bec1bc01a6785d9e3e6f5c8fd20a1b800b15cff4a6040",
+      "normalization": {
+        "event_key": "3cb72ab2a9064de488ab9fa522adc63bf60c26a7b1814011b0d0d813fd35d455",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0940e2ddaab6639d277bec1bc01a6785d9e3e6f5c8fd20a1b800b15cff4a6040",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.69,
+        "novelty": 0.4,
+        "summary": "禾盛新材算力和家电复材形成产业配套线索。",
+        "evidence": [
+          "禾盛新材 | 参股CPU+算力+家电复材"
+        ],
+        "risk_flags": [
+          "CPU参股不补写芯片配置词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458873",
+      "published_at": "2026-09-22",
+      "name": "华瓷股份",
+      "title": "华瓷股份 | 氧化锆粉体+MLCC验证+日用陶瓷+”华“字辈",
+      "body": "氧化锆粉体+MLCC验证+日用陶瓷+”华“字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "666546c205fc7a575619294212e57e9cf0cde871c22ce6a318de35c527c71c37",
+      "normalization": {
+        "event_key": "11f1196a1af58c56772d2fcd52357cf32d5fec8629f225ee0bc71a9e79225033",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "666546c205fc7a575619294212e57e9cf0cde871c22ce6a318de35c527c71c37",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.35,
+        "summary": "华瓷股份氧化锆与MLCC验证未含半导体等专属词。",
+        "evidence": [
+          "华瓷股份 | 氧化锆粉体+MLCC验证+日用陶瓷+”华“字辈"
+        ],
+        "risk_flags": [
+          "日用陶瓷不自动等于家电，名字题材不作行业证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458871",
+      "published_at": "2026-09-22",
+      "name": "华媒控股",
+      "title": "华媒控股 | 文化传媒+AI应用+杭州日报+国企",
+      "body": "文化传媒+AI应用+杭州日报+国企",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2abc08cd285e7d61ae74046f4997613a6e18dcc84f9147ac299ce64092b2e3dd",
+      "normalization": {
+        "event_key": "e9dcf5a2175befbebed643d7ea4329582aff0450fa66371e4d5310e6f437245e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH",
+          "159869.SZ",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2abc08cd285e7d61ae74046f4997613a6e18dcc84f9147ac299ce64092b2e3dd",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH",
+          "159869.SZ",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.4,
+        "summary": "华媒控股文化传媒及AI应用受到关注。",
+        "evidence": [
+          "华媒控股 | 文化传媒+AI应用+杭州日报+国企"
+        ],
+        "risk_flags": [
+          "报业背景不代表AI收入已兑现",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458868",
+      "published_at": "2026-09-22",
+      "name": "南华生物",
+      "title": "南华生物 | 细胞医疗+再生资源+中报扭亏+“华”字辈",
+      "body": "细胞医疗+再生资源+中报扭亏+“华”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "00780c990f8368c6903f19470e6fe6909d207e8b35b4d26873479443b26b7d82",
+      "normalization": {
+        "event_key": "1b8844be2a14386dd5b7ed3003556e29313f07454444e574b1f07a75ac0c2d0e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "00780c990f8368c6903f19470e6fe6909d207e8b35b4d26873479443b26b7d82",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.69,
+        "novelty": 0.4,
+        "summary": "南华生物细胞医疗与中报扭亏提供医疗线索。",
+        "evidence": [
+          "南华生物 | 细胞医疗+再生资源+中报扭亏+“华”字辈"
+        ],
+        "risk_flags": [
+          "再生资源不改写为再生医学，名字题材不算基本面",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "94458866",
+      "published_at": "2026-09-22",
+      "name": "新华制药",
+      "title": "新华制药 | 药品注册+阿尔茨海默病+解热镇痛+”华“字辈",
+      "body": "药品注册+阿尔茨海默病+解热镇痛+”华“字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "9bea70df25e110867707eda4ed01b6dbfd1d3bd61eb10f00e11a3a734ead77d0",
+      "normalization": {
+        "event_key": "3f98c9cc4e8db1f5f476a1a8d7313462251c6b5948ea5ce22bdd4983fa184b3b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9bea70df25e110867707eda4ed01b6dbfd1d3bd61eb10f00e11a3a734ead77d0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.35,
+        "summary": "新华制药药品注册和解热镇痛题材未含配置专属词。",
+        "evidence": [
+          "新华制药 | 药品注册+阿尔茨海默病+解热镇痛+”华“字辈"
+        ],
+        "risk_flags": [
+          "不补写化学制药或创新药获批",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000504",
+      "published_at": null,
+      "name": "南华生物",
+      "title": "南华生物 | 医疗服务",
+      "body": "医疗服务",
+      "return_pct": 9.990917205810547,
+      "turnover": 71297625.0,
+      "dde_net": null,
+      "source_hash": "f311dbac931d91364a2b77d6ce94fad1b547cb5a2d8d5b53defad41a2344b438",
+      "normalization": {
+        "event_key": "1b8844be2a14386dd5b7ed3003556e29313f07454444e574b1f07a75ac0c2d0e",
+        "duplicate_of": "00780c990f8368c6903f19470e6fe6909d207e8b35b4d26873479443b26b7d82",
+        "effective_matched_symbols": [
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f311dbac931d91364a2b77d6ce94fad1b547cb5a2d8d5b53defad41a2344b438",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.78,
+        "novelty": 0.25,
+        "summary": "南华生物医疗服务涨约9.99%，当日医疗线索正向。",
+        "evidence": [
+          "南华生物 | 医疗服务"
+        ],
+        "risk_flags": [
+          "同公司跨源重复不增加事件数量",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000607",
+      "published_at": null,
+      "name": "华媒控股",
+      "title": "华媒控股 | 广告营销",
+      "body": "广告营销",
+      "return_pct": 9.933774948120117,
+      "turnover": 99855708.0,
+      "dde_net": null,
+      "source_hash": "63ec02abec367a97a672a8a3da615b8e07630cf9e194cd18596cb1ab5da0770c",
+      "normalization": {
+        "event_key": "e9dcf5a2175befbebed643d7ea4329582aff0450fa66371e4d5310e6f437245e",
+        "duplicate_of": "2abc08cd285e7d61ae74046f4997613a6e18dcc84f9147ac299ce64092b2e3dd",
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "63ec02abec367a97a672a8a3da615b8e07630cf9e194cd18596cb1ab5da0770c",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.78,
+        "novelty": 0.25,
+        "summary": "华媒控股广告营销涨约9.93%，支持传媒广告线索。",
+        "evidence": [
+          "华媒控股 | 广告营销"
+        ],
+        "risk_flags": [
+          "当前行不含AI，不能借另一来源补入",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000756",
+      "published_at": null,
+      "name": "新华制药",
+      "title": "新华制药 | 化学制药",
+      "body": "化学制药",
+      "return_pct": 10.0204496383667,
+      "turnover": 1563389472.0,
+      "dde_net": null,
+      "source_hash": "83d44cf72a04b9a0830a05ec3d26d0361d9e83fbee498fc8d8b6daa707c0cc73",
+      "normalization": {
+        "event_key": "3f98c9cc4e8db1f5f476a1a8d7313462251c6b5948ea5ce22bdd4983fa184b3b",
+        "duplicate_of": "9bea70df25e110867707eda4ed01b6dbfd1d3bd61eb10f00e11a3a734ead77d0",
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "83d44cf72a04b9a0830a05ec3d26d0361d9e83fbee498fc8d8b6daa707c0cc73",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "新华制药化学制药涨约10.02%，成交约15.63亿元。",
+        "evidence": [
+          "新华制药 | 化学制药"
+        ],
+        "risk_flags": [
+          "本行未提创新药，不外推港股创新药业绩",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001216",
+      "published_at": null,
+      "name": "华瓷股份",
+      "title": "华瓷股份 | 家居用品",
+      "body": "家居用品",
+      "return_pct": 10.01662540435791,
+      "turnover": 48414477.0,
+      "dde_net": null,
+      "source_hash": "aab8e9c0c3051906401e6fe21486b8320e4db94aaea4be6f802065bd532ec432",
+      "normalization": {
+        "event_key": "11f1196a1af58c56772d2fcd52357cf32d5fec8629f225ee0bc71a9e79225033",
+        "duplicate_of": "666546c205fc7a575619294212e57e9cf0cde871c22ce6a318de35c527c71c37",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "aab8e9c0c3051906401e6fe21486b8320e4db94aaea4be6f802065bd532ec432",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "华瓷股份家居用品涨停，不构成家电直接证据。",
+        "evidence": [
+          "华瓷股份 | 家居用品"
+        ],
+        "risk_flags": [
+          "家居用品与家电不可混同",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002290",
+      "published_at": null,
+      "name": "禾盛新材",
+      "title": "禾盛新材 | 家电零部",
+      "body": "家电零部",
+      "return_pct": 10.004239082336426,
+      "turnover": 270355616.0,
+      "dde_net": null,
+      "source_hash": "8074c471826393648f9094a34e51b4b2cb4765ba55ecf3f72b6c179734b5197b",
+      "normalization": {
+        "event_key": "3cb72ab2a9064de488ab9fa522adc63bf60c26a7b1814011b0d0d813fd35d455",
+        "duplicate_of": "0940e2ddaab6639d277bec1bc01a6785d9e3e6f5c8fd20a1b800b15cff4a6040",
+        "effective_matched_symbols": [
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8074c471826393648f9094a34e51b4b2cb4765ba55ecf3f72b6c179734b5197b",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "禾盛新材家电零部件涨约10%，家电配套活跃。",
+        "evidence": [
+          "禾盛新材 | 家电零部"
+        ],
+        "risk_flags": [
+          "本行未含算力，跨源主题不能移植",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002614",
+      "published_at": null,
+      "name": "奥佳华",
+      "title": "奥佳华 | 其他家电",
+      "body": "其他家电",
+      "return_pct": 10.079999923706055,
+      "turnover": 82802947.0,
+      "dde_net": null,
+      "source_hash": "d87ae35142fb98bdc843bd47f30d50949be5f2cd11d30b5c1e1e11de513ff0b7",
+      "normalization": {
+        "event_key": "95180a02790f33190ed333c7483f2924353c7ab9a0a77eeb5c402a7e7e33ac9e",
+        "duplicate_of": "2a7b0b5d6bea72125bc228d06a3e6e393489bead461a433049407829681d0b3e",
+        "effective_matched_symbols": [
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d87ae35142fb98bdc843bd47f30d50949be5f2cd11d30b5c1e1e11de513ff0b7",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "奥佳华其他家电涨约10.08%，形成家电价格线索。",
+        "evidence": [
+          "奥佳华 | 其他家电"
+        ],
+        "risk_flags": [
+          "此行没有机器人词，不自动沿用另一行",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600743",
+      "published_at": null,
+      "name": "华远控股",
+      "title": "华远控股 | 房地产服",
+      "body": "房地产服",
+      "return_pct": 9.871244430541992,
+      "turnover": 23129316.0,
+      "dde_net": null,
+      "source_hash": "ee690e9d2262b7244fccf2c0404cc58ccb36ba0eb60d4639052fb41d3e9df3a5",
+      "normalization": {
+        "event_key": "1b6f512620bf713f3207fc783cb84193b23bb058e4ca0e509be28d33145748ef",
+        "duplicate_of": "91192b5e932e893861a45bbb2266951c120441ee6719512a38fb7fe84c7b72a4",
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ee690e9d2262b7244fccf2c0404cc58ccb36ba0eb60d4639052fb41d3e9df3a5",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.78,
+        "novelty": 0.25,
+        "summary": "华远控股房地产服务涨约9.87%，地产链个股活跃。",
+        "evidence": [
+          "华远控股 | 房地产服"
+        ],
+        "risk_flags": [
+          "本行未提酒店，不补写酒店管理",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600770",
+      "published_at": null,
+      "name": "综艺股份",
+      "title": "综艺股份 | 综合Ⅱ",
+      "body": "综合Ⅱ",
+      "return_pct": 9.950248718261719,
+      "turnover": 135485349.0,
+      "dde_net": null,
+      "source_hash": "e046a27c11608037578432606995157fb870c8a56d286c484bd275edc9582120",
+      "normalization": {
+        "event_key": "5a2249434b22f2ba38f01311bf9fcca5e342e81caa5848a470958520a14efc09",
+        "duplicate_of": "5dab39352d1971c30e549de82f77369666a893c072f932e1c41b15d5c46f8264",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e046a27c11608037578432606995157fb870c8a56d286c484bd275edc9582120",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "综艺股份综合行业涨停，当前行没有半导体直接词。",
+        "evidence": [
+          "综艺股份 | 综合Ⅱ"
+        ],
+        "risk_flags": [
+          "不能把名称综艺当作影视业务",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600825",
+      "published_at": null,
+      "name": "新华传媒",
+      "title": "新华传媒 | 出版",
+      "body": "出版",
+      "return_pct": 9.931507110595703,
+      "turnover": 22383972.0,
+      "dde_net": null,
+      "source_hash": "4144bb4b65a762acf8741ad8fa02a6bfef32533d9c71538c1e2fc1395b179cc7",
+      "normalization": {
+        "event_key": "a215ef97b355c3d98854e0c0be1529382b0672f4d4c87510eccb2d939a579c03",
+        "duplicate_of": "c4f91d0d466cd4a474310f0206e5fc8dbaae8bd43c2d48f25c6cf7d938e440d5",
+        "effective_matched_symbols": [
+          "512980.SH",
+          "159869.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4144bb4b65a762acf8741ad8fa02a6bfef32533d9c71538c1e2fc1395b179cc7",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH",
+          "159869.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.78,
+        "novelty": 0.25,
+        "summary": "新华传媒出版涨约9.93%，形成出版传媒线索。",
+        "evidence": [
+          "新华传媒 | 出版"
+        ],
+        "risk_flags": [
+          "出版上涨不代表游戏业绩改善",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "601811",
+      "published_at": null,
+      "name": "新华文轩",
+      "title": "新华文轩 | 出版",
+      "body": "出版",
+      "return_pct": 10.006540298461914,
+      "turnover": 68201736.0,
+      "dde_net": null,
+      "source_hash": "3d39cf295db5b1b7186b77930bd6515d6423ba07077174088d5a4d08e2c89494",
+      "normalization": {
+        "event_key": "eed93b51c1be15c7f0b4b6420313f6e95a2e3639d5ef511c0163325b80d103d6",
+        "duplicate_of": "6417c2c5adadac7ee9c2cd1c6043da745848dcb662010c73e26bbd56071067a9",
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3d39cf295db5b1b7186b77930bd6515d6423ba07077174088d5a4d08e2c89494",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "新华文轩出版涨约10.01%，支持出版板块活跃。",
+        "evidence": [
+          "新华文轩 | 出版"
+        ],
+        "risk_flags": [
+          "该行未含传媒或消费词，映射仅出版",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603636",
+      "published_at": null,
+      "name": "南威软件",
+      "title": "南威软件 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 10.027472496032715,
+      "turnover": 136712405.0,
+      "dde_net": null,
+      "source_hash": "d85515d40b7b1ff3e1ab849d1c82a7ccd61cb54b3998cba44f2442b7c5e894a1",
+      "normalization": {
+        "event_key": "38e8baa9eda0e3d3a82198c429bd4aed9fe10ef5829376b2f7a4aa47f4a4c811",
+        "duplicate_of": "8e2ccdcd28cd9edcb5caf22a94b1804a762be440bac86b38dd1b9d187841596b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d85515d40b7b1ff3e1ab849d1c82a7ccd61cb54b3998cba44f2442b7c5e894a1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "南威软件IT服务涨停，本行未提AI算力。",
+        "evidence": [
+          "南威软件 | IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "不从题材行转移关键词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001234",
+      "published_at": null,
+      "name": "泰慕士",
+      "title": "泰慕士 | 服装家纺",
+      "body": "服装家纺",
+      "return_pct": 10.00376033782959,
+      "turnover": 126493342.0,
+      "dde_net": null,
+      "source_hash": "d5483c0280e8a21aaf8822d654eea905f914edae600fdf7640c8916e28f4dd52",
+      "normalization": {
+        "event_key": "8e5ef2f53ea881b6b14837f3ef269cc2447d3f79917eeb9bd3e7dc2e1d81de45",
+        "duplicate_of": "6849b774c8de039a9c50aed167e02f0a5881885e1dcc0487cfe1ddcba0548df1",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d5483c0280e8a21aaf8822d654eea905f914edae600fdf7640c8916e28f4dd52",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "泰慕士服装家纺涨停，无现池直接词。",
+        "evidence": [
+          "泰慕士 | 服装家纺"
+        ],
+        "risk_flags": [
+          "单股强势不扩大映射宽消费",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002303",
+      "published_at": null,
+      "name": "美盈森",
+      "title": "美盈森 | 包装印刷",
+      "body": "包装印刷",
+      "return_pct": 10.047846794128418,
+      "turnover": 450105648.0,
+      "dde_net": null,
+      "source_hash": "6907dfce4c8d95ff40f0bc9f4ddbe78cd060a224f49fc9e5ddbca767784d8cdc",
+      "normalization": {
+        "event_key": "ebd381b95dc5993f65e5bbf92b46da8a6bd3bfde3ee3c9e58bdd867fc275321e",
+        "duplicate_of": "6c943294fecb479d3ae53e7e882478d41b18a7b598642a8f6180805cc8ea8bc0",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6907dfce4c8d95ff40f0bc9f4ddbe78cd060a224f49fc9e5ddbca767784d8cdc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "美盈森包装印刷涨停，当前行无消费电子证据。",
+        "evidence": [
+          "美盈森 | 包装印刷"
+        ],
+        "risk_flags": [
+          "不得借另一来源扩充本行",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605218",
+      "published_at": null,
+      "name": "伟时电子",
+      "title": "伟时电子 | 光学光电",
+      "body": "光学光电",
+      "return_pct": 10.006901741027832,
+      "turnover": 172916000.0,
+      "dde_net": null,
+      "source_hash": "314e0d8d5500ca490992dfaf2451e4fd2d5a7a78706bab0084f75dfe1e68cb60",
+      "normalization": {
+        "event_key": "b4b0bd28e5180094cae683a7c9134cba87545edd0650e0583da77ef3151a7c97",
+        "duplicate_of": "6657e23abf395ae6f07a544f0cb24e1e32a1567fc9e5f97622cf4c0ffd210b36",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "314e0d8d5500ca490992dfaf2451e4fd2d5a7a78706bab0084f75dfe1e68cb60",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "伟时电子光学光电涨停，无芯片直接词。",
+        "evidence": [
+          "伟时电子 | 光学光电"
+        ],
+        "risk_flags": [
+          "光电不是半导体同义词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000676",
+      "published_at": null,
+      "name": "智度股份",
+      "title": "智度股份 | 广告营销",
+      "body": "广告营销",
+      "return_pct": 10.044313430786133,
+      "turnover": 1277652016.0,
+      "dde_net": null,
+      "source_hash": "eecda540a615e38e891b2744eb20f90e63cc87a74e4b765a980f3934835ebd87",
+      "normalization": {
+        "event_key": "f7596eead4b2742e0bc755565a069a2546f08b59cae1c964f02632da2823e105",
+        "duplicate_of": "ce620082f04d9bb1f66c448e82570f022bbb99afd4997db69556bd9b7b851672",
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "eecda540a615e38e891b2744eb20f90e63cc87a74e4b765a980f3934835ebd87",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "智度股份广告营销涨约10.04%，成交约12.78亿元。",
+        "evidence": [
+          "智度股份 | 广告营销"
+        ],
+        "risk_flags": [
+          "本行未提人工智能，不跨来源映射",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600641",
+      "published_at": null,
+      "name": "先导基电",
+      "title": "先导基电 | 半导体",
+      "body": "半导体",
+      "return_pct": 10.01006031036377,
+      "turnover": 2552043488.0,
+      "dde_net": null,
+      "source_hash": "1a8093dc90a4189e28f7ca200e4bb4bbfc03738cb82be4a9b22643629b858310",
+      "normalization": {
+        "event_key": "9d5f7d6bfc5ab46530e6488ba0c03e66908709236314bdc97a1118e3a3085fac",
+        "duplicate_of": "4c3f6f4ece5313a01b129fa460d75141706194eeae569395b85beda64cfe37d7",
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1a8093dc90a4189e28f7ca200e4bb4bbfc03738cb82be4a9b22643629b858310",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "先导基电半导体涨约10.01%，成交约25.52亿元。",
+        "evidence": [
+          "先导基电 | 半导体"
+        ],
+        "risk_flags": [
+          "成交活跃不等于大单净流入已确认",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600664",
+      "published_at": null,
+      "name": "哈药股份",
+      "title": "哈药股份 | 化学制药",
+      "body": "化学制药",
+      "return_pct": 10.060606002807617,
+      "turnover": 2779141472.0,
+      "dde_net": null,
+      "source_hash": "f883fba87b0197a4d4317330a248d3a975f9bac3ce084a68c81a29c7c7caccab",
+      "normalization": {
+        "event_key": "0bf3789cb6002831f40400338ed02dd898ed8921e35af5096660050aacade49e",
+        "duplicate_of": "977dc51749b1005667265f80b12f7b2e838a4b076ebea021627d00ee6c0389b6",
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f883fba87b0197a4d4317330a248d3a975f9bac3ce084a68c81a29c7c7caccab",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "哈药股份化学制药涨约10.06%，医药价格线索正向。",
+        "evidence": [
+          "哈药股份 | 化学制药"
+        ],
+        "risk_flags": [
+          "本行没有创新药词，不沿用另一来源",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000560",
+      "published_at": null,
+      "name": "我爱我家",
+      "title": "我爱我家 | 房地产服",
+      "body": "房地产服",
+      "return_pct": 10.031347274780273,
+      "turnover": 1412921344.0,
+      "dde_net": null,
+      "source_hash": "40b9c9b4e4711d0def86bc0d02b2b1b553d41188319ff73eb040744323659584",
+      "normalization": {
+        "event_key": "ab7ba951314a42970e8f6352cb3e610bf0b686979c6c6ed1aef01fadadbbd33f",
+        "duplicate_of": "b0e476f469894301a4dfc2154fe5aced341ea5be8537f8695188bfb32b985ec6",
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "40b9c9b4e4711d0def86bc0d02b2b1b553d41188319ff73eb040744323659584",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "我爱我家房地产服务涨约10.03%，地产服务活跃。",
+        "evidence": [
+          "我爱我家 | 房地产服"
+        ],
+        "risk_flags": [
+          "涨停不等于成交量持续改善",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001317",
+      "published_at": null,
+      "name": "三羊马",
+      "title": "三羊马 | 铁路公路",
+      "body": "铁路公路",
+      "return_pct": 10.006670951843262,
+      "turnover": 494426464.0,
+      "dde_net": null,
+      "source_hash": "346ce4e8aefe69dd48c24474f366d8e3ed8306283ad85a85872c008dd05666a5",
+      "normalization": {
+        "event_key": "3f770c469f5758c67d5fa78dbf9b7270f67479db0249bbb98c9dd2c74e71929c",
+        "duplicate_of": "aec1a8030cc2e79a6ea1464f4d6f3e1d254631950382bfe0f056ca29f432121a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "346ce4e8aefe69dd48c24474f366d8e3ed8306283ad85a85872c008dd05666a5",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "三羊马铁路公路涨停，未出现现池专属词。",
+        "evidence": [
+          "三羊马 | 铁路公路"
+        ],
+        "risk_flags": [
+          "运输服务不是基建投资直接证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002467",
+      "published_at": null,
+      "name": "二六三",
+      "title": "二六三 | 通信服务",
+      "body": "通信服务",
+      "return_pct": 9.935205459594727,
+      "turnover": 518071168.0,
+      "dde_net": null,
+      "source_hash": "4b8483267870bd1c786da6d0082bf78bbe6297ec38a32064f5408eaa11d8e8bf",
+      "normalization": {
+        "event_key": "3ce99e928ad6ac54c01570d90b244e5882d0b35beb0e4450b80a53f4cdc6537b",
+        "duplicate_of": "12821ce8ab4937cd86d48c3b21c5745b120eaff542cd09bcbc17416309c0dc64",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4b8483267870bd1c786da6d0082bf78bbe6297ec38a32064f5408eaa11d8e8bf",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.78,
+        "novelty": 0.25,
+        "summary": "二六三通信服务涨约9.94%，提供通信方向线索。",
+        "evidence": [
+          "二六三 | 通信服务"
+        ],
+        "risk_flags": [
+          "当前行无AI词，不跨源复制",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603020",
+      "published_at": null,
+      "name": "爱普股份",
+      "title": "爱普股份 | 化学制品",
+      "body": "化学制品",
+      "return_pct": 10.023866653442383,
+      "turnover": 353265040.0,
+      "dde_net": null,
+      "source_hash": "ec99e5ac005f2eb17b97c19922059c732e40cfe93bfb32c1f3ff9d32f1cac15f",
+      "normalization": {
+        "event_key": "7203058052af8434c2afccf9fcd4300b53dbde77283619f768dc74b12a252f4b",
+        "duplicate_of": "aeef949e1a384ed2169241a5c267b1ed4495b876584e153324b627d3e3aa13ce",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ec99e5ac005f2eb17b97c19922059c732e40cfe93bfb32c1f3ff9d32f1cac15f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "爱普股份化学制品涨停，本行没有半导体或配置化工词。",
+        "evidence": [
+          "爱普股份 | 化学制品"
+        ],
+        "risk_flags": [
+          "不从题材行搬运半导体材料",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001266",
+      "published_at": null,
+      "name": "宏英智能",
+      "title": "宏英智能 | 自动化设",
+      "body": "自动化设",
+      "return_pct": 9.994172096252441,
+      "turnover": 325215664.0,
+      "dde_net": null,
+      "source_hash": "c0df975af61fe8babeb1342c1ae3cd745f901a9b490c33d94d1f760955ea083e",
+      "normalization": {
+        "event_key": "4665c9a7f860f3dda31483625436bfa0741c8bdcb50db70e89ae95f8a27fa375",
+        "duplicate_of": "e4d17baa4855208d2008176004b0fb31b61cf40d30eb2222752095d4a877d1e1",
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c0df975af61fe8babeb1342c1ae3cd745f901a9b490c33d94d1f760955ea083e",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "宏英智能自动化设备涨约9.99%，自动化配套活跃。",
+        "evidence": [
+          "宏英智能 | 自动化设"
+        ],
+        "risk_flags": [
+          "自动化设备不等于人形机器人已量产",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603230",
+      "published_at": null,
+      "name": "内蒙新华",
+      "title": "内蒙新华 | 出版",
+      "body": "出版",
+      "return_pct": 9.97977066040039,
+      "turnover": 622024368.0,
+      "dde_net": null,
+      "source_hash": "8d6cbca377b81943b834df1827bfbe4f3fed14c416988ea1df223077330a6e7b",
+      "normalization": {
+        "event_key": "1849b38dcacbd6ae2c97aa43521284cbeb1c6f2655f03cdc735f982f88eede0c",
+        "duplicate_of": "385bc6a35dde7b655ef6e769121d81783bfd7ebbba6f4072935e9cfdd9f956bc",
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8d6cbca377b81943b834df1827bfbe4f3fed14c416988ea1df223077330a6e7b",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "内蒙新华出版涨约9.98%，传媒出版线索正向。",
+        "evidence": [
+          "内蒙新华 | 出版"
+        ],
+        "risk_flags": [
+          "本行不含消费词，不增加宽消费映射",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002564",
+      "published_at": null,
+      "name": "天沃科技",
+      "title": "天沃科技 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 10.1010103225708,
+      "turnover": 136531456.0,
+      "dde_net": null,
+      "source_hash": "f2421e589eb0007d19a608fdf98f0ff61ecc7b58cc95ebe0589622c2c10722aa",
+      "normalization": {
+        "event_key": "bfa4e25f2c3832cd43c9b87a2b79c6266132e9667e1fa6edca1f8196859492a9",
+        "duplicate_of": "87b4393dcb60a32b7172c07409843973a9c5ba3eb2f73d771ccee3e8deb6b13b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f2421e589eb0007d19a608fdf98f0ff61ecc7b58cc95ebe0589622c2c10722aa",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "天沃科技专用设备涨停，无直接能源配置词。",
+        "evidence": [
+          "天沃科技 | 专用设备"
+        ],
+        "risk_flags": [
+          "不能把另一来源的风电主题搬入",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002141",
+      "published_at": null,
+      "name": "贤丰控股",
+      "title": "贤丰控股 | 元件",
+      "body": "元件",
+      "return_pct": 10.074073791503906,
+      "turnover": 2052062960.0,
+      "dde_net": null,
+      "source_hash": "78a5576d0a5bc276c45c7ad07e7ac4fee4d8fe42c6318f3077e08595fffbeed0",
+      "normalization": {
+        "event_key": "4fe4cb38b9484542cbddbebcc5b1e8a1a3fec20ddda337f374ed4f726cda250e",
+        "duplicate_of": "67c7b27a4a89092551f88c64e9d86345a00c0079e43df0871256621f63a5b13f",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "78a5576d0a5bc276c45c7ad07e7ac4fee4d8fe42c6318f3077e08595fffbeed0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "贤丰控股元件涨停，未含芯片专属词。",
+        "evidence": [
+          "贤丰控股 | 元件"
+        ],
+        "risk_flags": [
+          "元件种类宽，不能自动归入半导体",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603216",
+      "published_at": null,
+      "name": "梦天家居",
+      "title": "梦天家居 | 家居用品",
+      "body": "家居用品",
+      "return_pct": 10.009671211242676,
+      "turnover": 212778852.0,
+      "dde_net": null,
+      "source_hash": "52b90d8454f42dc4afad858f03713970ac286aea16ea02d414679b7ef8eadd12",
+      "normalization": {
+        "event_key": "0e8fa7a413ec10d4d103514088eb5443ef0fd8d69368468053dfeea018aa041d",
+        "duplicate_of": "49d29ba4dc0e79b7ba9620b70b56f15cd88b2916a02b951597de3fe309a708d3",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "52b90d8454f42dc4afad858f03713970ac286aea16ea02d414679b7ef8eadd12",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "梦天家居家居用品涨停，不补半导体投资题材。",
+        "evidence": [
+          "梦天家居 | 家居用品"
+        ],
+        "risk_flags": [
+          "家居不等于家电，跨源独立审核",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002178",
+      "published_at": null,
+      "name": "延华智能",
+      "title": "延华智能 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 10.039369583129883,
+      "turnover": 678728960.0,
+      "dde_net": null,
+      "source_hash": "a53724bff58dceefad92ea80c9f6737a99f5317df2336f7bcdfd464c040aa405",
+      "normalization": {
+        "event_key": "7c758360b1d3cc4bd8283974be6cef812150ca39abd712df72d783eadfd07217",
+        "duplicate_of": "ac2bb6f25624f58ca4fd079222dda17cb13a3a88555e55ff6a3ec875f8a850ea",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a53724bff58dceefad92ea80c9f6737a99f5317df2336f7bcdfd464c040aa405",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "延华智能软件开发涨停，没有AI医疗原文。",
+        "evidence": [
+          "延华智能 | 软件开发"
+        ],
+        "risk_flags": [
+          "不得借用其他行的AI词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001268",
+      "published_at": null,
+      "name": "联合精密",
+      "title": "联合精密 | 家电零部",
+      "body": "家电零部",
+      "return_pct": 10.02070426940918,
+      "turnover": 243366479.0,
+      "dde_net": null,
+      "source_hash": "55d9a300cabdefb12300706d48de742564c7957941279ad8805d15adbeeb3bdb",
+      "normalization": {
+        "event_key": "f10b446aa157ee5bf702a0913dbd108a6c32e7fed7bd027b583c47ae7cee1079",
+        "duplicate_of": "d26df50f5ccae36d0ba9cb2cb5ed5f2dd73d54395af0be42fc2d82e84be26b0c",
+        "effective_matched_symbols": [
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "55d9a300cabdefb12300706d48de742564c7957941279ad8805d15adbeeb3bdb",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "联合精密家电零部件涨约10.02%，家电配套正向。",
+        "evidence": [
+          "联合精密 | 家电零部"
+        ],
+        "risk_flags": [
+          "当前行未提航空制造，不补军工属性",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603580",
+      "published_at": null,
+      "name": "艾艾精工",
+      "title": "艾艾精工 | 塑料",
+      "body": "塑料",
+      "return_pct": 9.995805740356445,
+      "turnover": 636186000.0,
+      "dde_net": null,
+      "source_hash": "32bb9b9dc2fbf3212617d74e545e36e3d72e739e12f2bac900ae6cb81797860f",
+      "normalization": {
+        "event_key": "1161042e4a07227e359b0a1605257bc77001295633b175ed43efb3ae75f8a2ee",
+        "duplicate_of": "2eec2a471fd627dcd105541ccd947a62f544e654364608b0fd9e5c9cb9eaeac7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "32bb9b9dc2fbf3212617d74e545e36e3d72e739e12f2bac900ae6cb81797860f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "艾艾精工塑料涨停，无现池直接词。",
+        "evidence": [
+          "艾艾精工 | 塑料"
+        ],
+        "risk_flags": [
+          "塑料行业不能泛化成能源化工涨价",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603221",
+      "published_at": null,
+      "name": "爱丽家居",
+      "title": "爱丽家居 | 家居用品",
+      "body": "家居用品",
+      "return_pct": 10.0,
+      "turnover": 495512816.0,
+      "dde_net": null,
+      "source_hash": "9e7bc713cd85b70a5fde929bb171a5c6e8f62df806e6c4943a9b05d8375b8701",
+      "normalization": {
+        "event_key": "2af48e60e61d7e5dbeef41ed43ebdc8277a4c634a453872b07bae540dda09350",
+        "duplicate_of": "b1819224f01be238dbf128bacd39069b2ac82489a58f4ece51a5a6d514cd82c2",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9e7bc713cd85b70a5fde929bb171a5c6e8f62df806e6c4943a9b05d8375b8701",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "爱丽家居家居用品涨10%，无芯片或家电直接证据。",
+        "evidence": [
+          "爱丽家居 | 家居用品"
+        ],
+        "risk_flags": [
+          "拟并购不能替代此行原文",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603598",
+      "published_at": null,
+      "name": "引力传媒",
+      "title": "引力传媒 | 广告营销",
+      "body": "广告营销",
+      "return_pct": 9.976798057556152,
+      "turnover": 625033584.0,
+      "dde_net": null,
+      "source_hash": "52172983fc023f44e40c7331f3dd201056b86b635ac2f43422b4baae9ad46393",
+      "normalization": {
+        "event_key": "29c2753cf851cd55e327ee376c087e93f2d021055d3dc4fc641c4e9df3e4c89a",
+        "duplicate_of": "2542266955d7df1d03c6f35c5a1ab97ab3ab904254854a351fb0202e2a0a6d06",
+        "effective_matched_symbols": [
+          "512980.SH",
+          "159869.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "52172983fc023f44e40c7331f3dd201056b86b635ac2f43422b4baae9ad46393",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH",
+          "159869.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "引力传媒广告营销涨约9.98%，传媒线索正向。",
+        "evidence": [
+          "引力传媒 | 广告营销"
+        ],
+        "risk_flags": [
+          "名称含传媒，但没有AI证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001322",
+      "published_at": null,
+      "name": "箭牌家居",
+      "title": "箭牌家居 | 家居用品",
+      "body": "家居用品",
+      "return_pct": 9.968354225158691,
+      "turnover": 110541571.0,
+      "dde_net": null,
+      "source_hash": "5671a243da0814e469ec30a7acaea800071dc3f7dce3fea0e07f36b403b97964",
+      "normalization": {
+        "event_key": "3fa96b20d226cd3caa7e83a777b5ffe817ae11da193a473c9b49fa4701ce6288",
+        "duplicate_of": "b9372f0276060c212db651179da72a7e123d31a24733fec83d84b909c5934748",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5671a243da0814e469ec30a7acaea800071dc3f7dce3fea0e07f36b403b97964",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "箭牌家居家居用品涨停，不作为家电直接证据。",
+        "evidence": [
+          "箭牌家居 | 家居用品"
+        ],
+        "risk_flags": [
+          "家居类别与家电区别保留",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002313",
+      "published_at": null,
+      "name": "日海智能",
+      "title": "日海智能 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 10.059171676635742,
+      "turnover": 165603337.0,
+      "dde_net": null,
+      "source_hash": "13c0e6fe6fac92da56fda4713ef22e33c9c339f60e689cc6fc3746dfec2fbdd5",
+      "normalization": {
+        "event_key": "7eda3abc9bfd9bed736eac3b5a6e703b1ec689699b1c13ffe02d2f99342f269c",
+        "duplicate_of": "b11242ae37b1104b1b050e79d311d7a16655a4b3ee9c69025384cb6a202b6ed1",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "13c0e6fe6fac92da56fda4713ef22e33c9c339f60e689cc6fc3746dfec2fbdd5",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "日海智能通信设备涨约10.06%，通信当日活跃。",
+        "evidence": [
+          "日海智能 | 通信设备"
+        ],
+        "risk_flags": [
+          "不沿用另一行机器人和AI主题",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300324",
+      "published_at": null,
+      "name": "旋极信息",
+      "title": "旋极信息 | 计算机设",
+      "body": "计算机设",
+      "return_pct": 20.0,
+      "turnover": 1162992704.0,
+      "dde_net": null,
+      "source_hash": "33bd49ea23784eed6c3c5240269618795e6c8dfd70740b24173e6f0c5f59c712",
+      "normalization": {
+        "event_key": "5db29a5adbeedd993885902542da201bf7f4925b088b9031970d371e3c7204a6",
+        "duplicate_of": "5dae64f6e5426891181fa4ab416bc8d05e6df205af09bc3095875def6f4368e1",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "33bd49ea23784eed6c3c5240269618795e6c8dfd70740b24173e6f0c5f59c712",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "旋极信息计算机设备涨20%，标签截断且无芯片词。",
+        "evidence": [
+          "旋极信息 | 计算机设"
+        ],
+        "risk_flags": [
+          "普通设备不能直接等同AI芯片",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002301",
+      "published_at": null,
+      "name": "齐心集团",
+      "title": "齐心集团 | 文娱用品",
+      "body": "文娱用品",
+      "return_pct": 9.964412689208984,
+      "turnover": 247296628.0,
+      "dde_net": null,
+      "source_hash": "6587f49b38e594aff3e77e97b9db7a90f1f255e2b63dd3dac8dce8b090237997",
+      "normalization": {
+        "event_key": "d3aae03635a96d4434625020f54c8d90f8748718617ec74a4af2de180c410b8a",
+        "duplicate_of": "d61e3e5ba85a830452560e61d240f8bcf2068ce6ab71953f07c943b2dff6ba1f",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6587f49b38e594aff3e77e97b9db7a90f1f255e2b63dd3dac8dce8b090237997",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "齐心集团文娱用品涨停，无传媒游戏专属词。",
+        "evidence": [
+          "齐心集团 | 文娱用品"
+        ],
+        "risk_flags": [
+          "文具和文娱用品不等于游戏影视业务",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603068",
+      "published_at": null,
+      "name": "博通集成",
+      "title": "博通集成 | 半导体",
+      "body": "半导体",
+      "return_pct": 10.002284049987793,
+      "turnover": 1374616704.0,
+      "dde_net": null,
+      "source_hash": "85bb461593f9228ba0caa18ea6c108f41a2202d0953242a84bb74f048e8a2ada",
+      "normalization": {
+        "event_key": "ace58bf76a61c027d92dabe3cd61f4f71bcfda9c5fffbdbb19dec08e101f6d19",
+        "duplicate_of": "297a266047e05c2ba91f2cae47b3e4ee9fd911ae842fd568f7451f9ec1f6900c",
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "85bb461593f9228ba0caa18ea6c108f41a2202d0953242a84bb74f048e8a2ada",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "博通集成半导体涨约10%，成交约13.75亿元。",
+        "evidence": [
+          "博通集成 | 半导体"
+        ],
+        "risk_flags": [
+          "同公司重复事件不增加题材数量",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "301234",
+      "published_at": null,
+      "name": "五洲医疗",
+      "title": "五洲医疗 | 医疗器械",
+      "body": "医疗器械",
+      "return_pct": 20.0,
+      "turnover": 682924432.0,
+      "dde_net": null,
+      "source_hash": "d1aa3b653bc2a36fc5f6a0d9eab49b86e374d9b5ae7e4c3542f08536e2b20580",
+      "normalization": {
+        "event_key": "a4ab4fecabf71bc70da6b5f7de86d374f069218146a2fa4e09e5e00cd508b9c2",
+        "duplicate_of": "dd16d186bcb44ba21f454952e8692664ad8b9f3ecfef8c30e38aa994b3c23f26",
+        "effective_matched_symbols": [
+          "512010.SH",
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d1aa3b653bc2a36fc5f6a0d9eab49b86e374d9b5ae7e4c3542f08536e2b20580",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "五洲医疗医疗器械涨20%，形成直接器械线索。",
+        "evidence": [
+          "五洲医疗 | 医疗器械"
+        ],
+        "risk_flags": [
+          "不同涨跌幅制度不代表更高持续上涨概率",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "920526",
+      "published_at": null,
+      "name": "凯华材料",
+      "title": "凯华材料 | 电子化学",
+      "body": "电子化学",
+      "return_pct": 29.985082626342773,
+      "turnover": 334439248.0,
+      "dde_net": null,
+      "source_hash": "1c980486785e6d4bc5391cc75d29d0f2093e801eaa83ad3cc34738155479e0f5",
+      "normalization": {
+        "event_key": "af73ae416b3ba8ed700bd3a74d2114fd6864ec2222c1d3274dac0e38a4260b3b",
+        "duplicate_of": "5d03f1660f8ba217ec2693c5e78e768c6508b77c64a05e1f8f172fa0bfc93500",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1c980486785e6d4bc5391cc75d29d0f2093e801eaa83ad3cc34738155479e0f5",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "凯华材料电子化学涨约29.99%，本行无半导体配置词。",
+        "evidence": [
+          "凯华材料 | 电子化学"
+        ],
+        "risk_flags": [
+          "不能从另一来源补材料用途",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605178",
+      "published_at": null,
+      "name": "时空科技",
+      "title": "时空科技 | 专业工程",
+      "body": "专业工程",
+      "return_pct": 10.001470565795898,
+      "turnover": 287303456.0,
+      "dde_net": null,
+      "source_hash": "aad312f9d79563b1d07044ae71f63d51c0653a3e25a946d98fbffa15c9949a5e",
+      "normalization": {
+        "event_key": "4374f4180496de00a8201674df2710da6679130fd22414059243d398d8422b08",
+        "duplicate_of": "a08605628eb8f8f3f651512fc5a078f34907a8e3dd9a2c69310557ca9ac806e5",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "aad312f9d79563b1d07044ae71f63d51c0653a3e25a946d98fbffa15c9949a5e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "时空科技专业工程涨停，本行未提芯片。",
+        "evidence": [
+          "时空科技 | 专业工程"
+        ],
+        "risk_flags": [
+          "拟并购主题不能当作本行证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002238",
+      "published_at": null,
+      "name": "天威视讯",
+      "title": "天威视讯 | 电视广播",
+      "body": "电视广播",
+      "return_pct": 9.952607154846191,
+      "turnover": 73660723.0,
+      "dde_net": null,
+      "source_hash": "193031efce53eb94f2971a7c88940eda96c4a9fc8f320b69e2376405c89c7835",
+      "normalization": {
+        "event_key": "e0ce16a063721e0f2c512e17152128a8cac01700e01f81030ef28a7066086bca",
+        "duplicate_of": "466a3b7b3d7b426f0a9ef8538667ebe8e2bf120edb53169ed29319c1e653d777",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "193031efce53eb94f2971a7c88940eda96c4a9fc8f320b69e2376405c89c7835",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "天威视讯电视广播涨停，未含现行传媒影视配置词。",
+        "evidence": [
+          "天威视讯 | 电视广播"
+        ],
+        "risk_flags": [
+          "不自行扩展当前映射词表",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605398",
+      "published_at": null,
+      "name": "新炬网络",
+      "title": "新炬网络 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 10.009310722351074,
+      "turnover": 226993226.0,
+      "dde_net": null,
+      "source_hash": "7f0c16830a43531c9cb956324d0f3b876a1c12ada6d001588813a5efca55191f",
+      "normalization": {
+        "event_key": "4f16bb4c14941e2688d9b86bb6a47f587d141399fa30764f8b1a935ba299f06d",
+        "duplicate_of": "4a2d6fb3afcc9c9436bc9f5d0d3e16cdf4a368b080cdb3ca27ef014fd869c458",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7f0c16830a43531c9cb956324d0f3b876a1c12ada6d001588813a5efca55191f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "新炬网络IT服务涨停，本行无AI或短剧。",
+        "evidence": [
+          "新炬网络 | IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "跨源语义独立保留",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "601949",
+      "published_at": null,
+      "name": "中国出版",
+      "title": "中国出版 | 出版",
+      "body": "出版",
+      "return_pct": 9.966776847839355,
+      "turnover": 568227936.0,
+      "dde_net": null,
+      "source_hash": "c4b6f81e55d00ab3328f5cf550833d4fafa165423595af23c71420de2d623008",
+      "normalization": {
+        "event_key": "ff5d93e3d992cb5921a03366fa5258a6e6ce645118b3462abc345b16133f37a0",
+        "duplicate_of": "2c92a434e4ce0feebfa95eebff0aea9191af5fbdfa8d5ba7edd5f1c8b269c482",
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c4b6f81e55d00ab3328f5cf550833d4fafa165423595af23c71420de2d623008",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "中国出版出版业务涨约9.97%，出版方向活跃。",
+        "evidence": [
+          "中国出版 | 出版"
+        ],
+        "risk_flags": [
+          "当前行无AI，不沿用题材源",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002259",
+      "published_at": null,
+      "name": "升达林业",
+      "title": "升达林业 | 燃气Ⅱ",
+      "body": "燃气Ⅱ",
+      "return_pct": 9.955751419067383,
+      "turnover": 305286208.0,
+      "dde_net": null,
+      "source_hash": "78643a30f875f7fcd1ca6545a76fb7f9d9d6045d9b3492eb8348b81c7a055cd6",
+      "normalization": {
+        "event_key": "5ec1a5e7025a6b95e8a31dc34a8c509d0ce9b5e2c0fa53d87b531e97f95a54ef",
+        "duplicate_of": "4bf3644fc8faa3d28ce2a6a06fad45bcfefbe68846799443fee49c49696127cc",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "78643a30f875f7fcd1ca6545a76fb7f9d9d6045d9b3492eb8348b81c7a055cd6",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "升达林业燃气涨停，不直接映射石油。",
+        "evidence": [
+          "升达林业 | 燃气Ⅱ"
+        ],
+        "risk_flags": [
+          "天然气经营与石油ETF并非同一暴露",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002757",
+      "published_at": null,
+      "name": "南兴股份",
+      "title": "南兴股份 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 10.027700424194336,
+      "turnover": 762325872.0,
+      "dde_net": null,
+      "source_hash": "2850c57759ed4cea28e3d8547e3e96ee368320746bb40af7ceef5176c2eb7ccb",
+      "normalization": {
+        "event_key": "900f99630ff0d9a6666c8a4333ee2bac5a50efe0d04339308b460e83be1a40d1",
+        "duplicate_of": "b91046a1d2ec6eb0b28596f16bdbf3bdc7fb8a77ad466e59fe57642018a92359",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2850c57759ed4cea28e3d8547e3e96ee368320746bb40af7ceef5176c2eb7ccb",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "南兴股份专用设备涨停，本行无AI智算词。",
+        "evidence": [
+          "南兴股份 | 专用设备"
+        ],
+        "risk_flags": [
+          "不能把智能家具设备自动当机器人",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603039",
+      "published_at": null,
+      "name": "泛微网络",
+      "title": "泛微网络 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 10.002771377563477,
+      "turnover": 1439688240.0,
+      "dde_net": null,
+      "source_hash": "bc5098f4a74527d68813e392760c828e714fa5f4eb0317c83fad8a61801f709d",
+      "normalization": {
+        "event_key": "2ff1e17f9c4ec2841d4544ed720458a1124b7ec3b1168750d1e62defa5482187",
+        "duplicate_of": "34aae01aea9c3ebac01f835427e0aaba478437ccfa618b8ac2a711f4cc304f9b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bc5098f4a74527d68813e392760c828e714fa5f4eb0317c83fad8a61801f709d",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "泛微网络软件开发涨停，当前行无AI证据。",
+        "evidence": [
+          "泛微网络 | 软件开发"
+        ],
+        "risk_flags": [
+          "不能跨源复制办公AI题材",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605179",
+      "published_at": null,
+      "name": "一鸣食品",
+      "title": "一鸣食品 | 饮料乳品",
+      "body": "饮料乳品",
+      "return_pct": 9.996337890625,
+      "turnover": 688891872.0,
+      "dde_net": null,
+      "source_hash": "0b8d7fb3b34b368fb1de2956a39e142f6757d20b369d3a40d84e2174ad126aec",
+      "normalization": {
+        "event_key": "adde119600a0bc961883037d5577e735824f963d4b1f4fb9e295f702b019401f",
+        "duplicate_of": "06124d3855340768d3abf93504e31e2cb73447f49bbce04076380261d3c44c2f",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0b8d7fb3b34b368fb1de2956a39e142f6757d20b369d3a40d84e2174ad126aec",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "一鸣食品饮料乳品涨停，本行未含食品饮料或消费完整配置词。",
+        "evidence": [
+          "一鸣食品 | 饮料乳品"
+        ],
+        "risk_flags": [
+          "不补行业近义词以扩大映射",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600721",
+      "published_at": null,
+      "name": "百花医药",
+      "title": "百花医药 | 医疗服务",
+      "body": "医疗服务",
+      "return_pct": 10.038022994995117,
+      "turnover": 2739441728.0,
+      "dde_net": null,
+      "source_hash": "95334d1e23faec4f8541e6736cb690f0184085173991da21c189bc7a0911febb",
+      "normalization": {
+        "event_key": "37a667793ae2209b22be8dcb661db6f3ed0ef4446b46ced1af95cdca5334d890",
+        "duplicate_of": "17eeee92d8832366a4a983093c0cdbe7927f58296cec2ef9410868a3bb70c358",
+        "effective_matched_symbols": [
+          "512010.SH",
+          "513200.SH",
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "95334d1e23faec4f8541e6736cb690f0184085173991da21c189bc7a0911febb",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "513200.SH",
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "百花医药医疗服务涨约10.04%，成交约27.39亿元。",
+        "evidence": [
+          "百花医药 | 医疗服务"
+        ],
+        "risk_flags": [
+          "医药研发服务股上涨不等于新药临床成功",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300110",
+      "published_at": null,
+      "name": "华仁药业",
+      "title": "华仁药业 | 化学制药",
+      "body": "化学制药",
+      "return_pct": 20.060789108276367,
+      "turnover": 1285470560.0,
+      "dde_net": null,
+      "source_hash": "d8fc0ddb2782858319ee0ac4fa76be5e3dcce8a6f149f522b3140153ef58860f",
+      "normalization": {
+        "event_key": "1484d415b7de05cb99fae331593742af099a0e607410b2f0b8ef1393b68f3190",
+        "duplicate_of": "2dba23240f003089aa92c2f3e0a3881c98ef71405f23eae8ad858eb8452b70b1",
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d8fc0ddb2782858319ee0ac4fa76be5e3dcce8a6f149f522b3140153ef58860f",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "华仁药业化学制药涨约20.06%，医药当日正向。",
+        "evidence": [
+          "华仁药业 | 化学制药"
+        ],
+        "risk_flags": [
+          "涨幅制度差异不构成额外趋势确认",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "688781",
+      "published_at": null,
+      "name": "视涯科技-UW",
+      "title": "视涯科技-UW | 光学光电",
+      "body": "光学光电",
+      "return_pct": 20.004619598388672,
+      "turnover": 576188208.0,
+      "dde_net": null,
+      "source_hash": "7328ba9985eb31050724337eda41f6062cc35c385c8ac072068623aef71065af",
+      "normalization": {
+        "event_key": "08de8ffd2ad02098f3267e4e6fa0e246bfef1960338fc074168114a0cc5c8c9b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7328ba9985eb31050724337eda41f6062cc35c385c8ac072068623aef71065af",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "视涯科技光学光电涨约20%，本行未提AI眼镜。",
+        "evidence": [
+          "视涯科技-UW | 光学光电"
+        ],
+        "risk_flags": [
+          "名称与题材来源不同，不能强加AI映射",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001260",
+      "published_at": null,
+      "name": "坤泰股份",
+      "title": "坤泰股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 9.978307723999023,
+      "turnover": 119919520.0,
+      "dde_net": null,
+      "source_hash": "0ce66eb4d86725a38393a1ce5f39ea05cb5f76b7344c87b390a1987912f92d3c",
+      "normalization": {
+        "event_key": "23eb54807f2eec684e6a8762ac76e3e9541e761909f74fa95330d7e94f85abeb",
+        "duplicate_of": "29a34c46e1021328b343dd09899d8cfa2adb277f4abc64aa766def69712af522",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0ce66eb4d86725a38393a1ce5f39ea05cb5f76b7344c87b390a1987912f92d3c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "坤泰股份汽车零部件涨停，无新能源车配置词。",
+        "evidence": [
+          "坤泰股份 | 汽车零部"
+        ],
+        "risk_flags": [
+          "汽配不是新能源或机器人直接证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605058",
+      "published_at": null,
+      "name": "澳弘电子",
+      "title": "澳弘电子 | 元件",
+      "body": "元件",
+      "return_pct": 9.993805885314941,
+      "turnover": 1302590688.0,
+      "dde_net": null,
+      "source_hash": "506025e7120c8b1eaf8e23333329e928a21b131688448d52ee5b0d45ab25d14c",
+      "normalization": {
+        "event_key": "3dc913b4058d89174030fc72e90c95e247ddf247e203ba049bb02d160abbe0e9",
+        "duplicate_of": "5946babb5c1d113a174a73df592d38c01e9b01dd59a2c649d9a389d37c22fbfd",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "506025e7120c8b1eaf8e23333329e928a21b131688448d52ee5b0d45ab25d14c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "澳弘电子元件涨停，未提服务器。",
+        "evidence": [
+          "澳弘电子 | 元件"
+        ],
+        "risk_flags": [
+          "不能从题材源复制服务器电源",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603903",
+      "published_at": null,
+      "name": "中持股份",
+      "title": "中持股份 | 环境治理",
+      "body": "环境治理",
+      "return_pct": 10.014410018920898,
+      "turnover": 289022448.0,
+      "dde_net": null,
+      "source_hash": "f7a654369179bb19584dd838bf59e3b366fb8b2a38a2c78a8716a7c301fc6289",
+      "normalization": {
+        "event_key": "daca14f25656ed47b58d5ee2ecef0f73ccbffa58cf95a0653837921ae9718564",
+        "duplicate_of": "efbd782e1242b60d68231199c66251a0849ccd75cc2955471bd8682184556ec9",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f7a654369179bb19584dd838bf59e3b366fb8b2a38a2c78a8716a7c301fc6289",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "中持股份环境治理涨停，未直接对应现池主题。",
+        "evidence": [
+          "中持股份 | 环境治理"
+        ],
+        "risk_flags": [
+          "环境治理不是半导体设备经营证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605258",
+      "published_at": null,
+      "name": "协和电子",
+      "title": "协和电子 | 元件",
+      "body": "元件",
+      "return_pct": 9.992173194885254,
+      "turnover": 314011968.0,
+      "dde_net": null,
+      "source_hash": "47131d53a01eb76e348bc76c68816c52f7d6785c6c73ff99785e3ef4f5d79d5c",
+      "normalization": {
+        "event_key": "e53f702d3a6af060d4f3734e6efbaaa7d73c035cf6212bd33595e96d4d0b9b0e",
+        "duplicate_of": "f1105c78de178a1227b7a3b778ffcd0535a9017cb29ed93f4d5c4eb803d09926",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "47131d53a01eb76e348bc76c68816c52f7d6785c6c73ff99785e3ef4f5d79d5c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "协和电子元件涨停，本行无电池或通信词。",
+        "evidence": [
+          "协和电子 | 元件"
+        ],
+        "risk_flags": [
+          "元件类别不能自动扩散映射",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600815",
+      "published_at": null,
+      "name": "厦工股份",
+      "title": "厦工股份 | 工程机械",
+      "body": "工程机械",
+      "return_pct": 9.973752975463867,
+      "turnover": 428779360.0,
+      "dde_net": null,
+      "source_hash": "775e2ee5add1da5e8aedbc8fe7250b3bf6965ba7b8737f867d5ccb4c0a6e067e",
+      "normalization": {
+        "event_key": "44d5efd60fe38b8f87e1f615071ea23df98a59959c95809c739cd2825bf0a9bb",
+        "duplicate_of": "365df848d98b6fb0dfc63c6f03e1a58583747d9b3930b0269a863a8bd521bea3",
+        "effective_matched_symbols": [
+          "560280.SH",
+          "516970.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "775e2ee5add1da5e8aedbc8fe7250b3bf6965ba7b8737f867d5ccb4c0a6e067e",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造",
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "560280.SH",
+          "516970.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "厦工股份工程机械涨约9.97%，支持机械方向活跃。",
+        "evidence": [
+          "厦工股份 | 工程机械"
+        ],
+        "risk_flags": [
+          "个股涨停不证明基建订单普增",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600403",
+      "published_at": null,
+      "name": "大有能源",
+      "title": "大有能源 | 煤炭开采",
+      "body": "煤炭开采",
+      "return_pct": 9.985527992248535,
+      "turnover": 793350768.0,
+      "dde_net": null,
+      "source_hash": "d4f7b6de45ecaf2652bed50be36d23a8b861379b328e6fffb4fca55377d7a301",
+      "normalization": {
+        "event_key": "1190051a5c3c6665527fa8ff5627ef2443634cf7f06d89857de0ff8b3fa58197",
+        "duplicate_of": "2feecd1ab3896f11b0d8fa4462275e171b9057bc48b23ac964851c114b723eec",
+        "effective_matched_symbols": [
+          "515220.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d4f7b6de45ecaf2652bed50be36d23a8b861379b328e6fffb4fca55377d7a301",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "515220.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.25,
+        "summary": "大有能源煤炭开采涨约9.99%，煤炭方向正向。",
+        "evidence": [
+          "大有能源 | 煤炭开采"
+        ],
+        "risk_flags": [
+          "开采股涨停不直接证明煤价提升",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002768",
+      "published_at": null,
+      "name": "国恩股份",
+      "title": "国恩股份 | 塑料",
+      "body": "塑料",
+      "return_pct": 10.007347106933594,
+      "turnover": 997160960.0,
+      "dde_net": null,
+      "source_hash": "671c724822ebdd3091558281a28fec5c0b3e7c9823c6fda86d213176701ba635",
+      "normalization": {
+        "event_key": "5b6164dc8d574805ef0665f218da0f280f788af0c1d85044d885ce5c5e0a8e59",
+        "duplicate_of": "e7b13290a5495bded255ae61db206dbda6c40b1f53aa820928986fc5b134ba85",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "671c724822ebdd3091558281a28fec5c0b3e7c9823c6fda86d213176701ba635",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "国恩股份塑料行业涨停，本行没有化工或机器人专属词。",
+        "evidence": [
+          "国恩股份 | 塑料"
+        ],
+        "risk_flags": [
+          "不得把另一来源人形机器人主题复制进来",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002672",
+      "published_at": null,
+      "name": "东江环保",
+      "title": "东江环保 | 环境治理",
+      "body": "环境治理",
+      "return_pct": 10.10929012298584,
+      "turnover": 64664566.0,
+      "dde_net": null,
+      "source_hash": "b74cc8801c65951cd5f744f21261f793c12d3e20378a648ac8f401c5d29a843e",
+      "normalization": {
+        "event_key": "6a1f1321ac1ed555ba7230a8c6eb01152e8dcb2662158505592fb84a49a3a0af",
+        "duplicate_of": "6eac729051724f15b4ec397daab18e9687960d6033d0918ce85f09623de464d6",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b74cc8801c65951cd5f744f21261f793c12d3e20378a648ac8f401c5d29a843e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "东江环保环境治理涨停，本行没有金属回收证据。",
+        "evidence": [
+          "东江环保 | 环境治理"
+        ],
+        "risk_flags": [
+          "环保并非黄金或有色涨价同义词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000910",
+      "published_at": null,
+      "name": "大亚圣象",
+      "title": "大亚圣象 | 家居用品",
+      "body": "家居用品",
+      "return_pct": 10.063898086547852,
+      "turnover": 373106272.0,
+      "dde_net": null,
+      "source_hash": "4406d6a720f7324aa0ebe7a87c642a9cd97a05b510bb412ae8528c89eda5018c",
+      "normalization": {
+        "event_key": "00eaae824f91cbc975c813fa2fbc42efd8549656bf9f908b35f0b58c92825327",
+        "duplicate_of": "d6bafc47ceafb45570998052b60cf49eb8c024ef87174c918c8e8e3fa5f15f4f",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4406d6a720f7324aa0ebe7a87c642a9cd97a05b510bb412ae8528c89eda5018c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "大亚圣象家居用品涨停，无家电或机器人直接词。",
+        "evidence": [
+          "大亚圣象 | 家居用品"
+        ],
+        "risk_flags": [
+          "跨来源主题独立保留",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000595",
+      "published_at": null,
+      "name": "新能股份",
+      "title": "新能股份 | 电力",
+      "body": "电力",
+      "return_pct": 9.962406158447266,
+      "turnover": 292121520.0,
+      "dde_net": null,
+      "source_hash": "b011c8c1915620e8816a6b8b373b14ac2256e4b2ebd83c7a964f87dcabfc5962",
+      "normalization": {
+        "event_key": "376b6047f7676d6723cea6a562d4fd0553c8ea8bb36e34bb7b0dc0e0c28d215d",
+        "duplicate_of": "0281831db83f85b32db8ff76e545b41aceb6827faa39ffb7af0a9136a7d29299",
+        "effective_matched_symbols": [
+          "159611.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b011c8c1915620e8816a6b8b373b14ac2256e4b2ebd83c7a964f87dcabfc5962",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159611.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "新能股份电力涨约9.96%，提供电力方向直接线索。",
+        "evidence": [
+          "新能股份 | 电力"
+        ],
+        "risk_flags": [
+          "电力标签不自动扩充为风电储能",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002912",
+      "published_at": null,
+      "name": "中新赛克",
+      "title": "中新赛克 | 计算机设",
+      "body": "计算机设",
+      "return_pct": 10.008339881896973,
+      "turnover": 788692592.0,
+      "dde_net": null,
+      "source_hash": "632c7fe08d8dae1a6436c4e51b075fce00d830b3ff26a69ecca94d7625658760",
+      "normalization": {
+        "event_key": "9a2d9b992ae34ee45b4206d1f19fa89e8fab5ff2b471fcfe39849692716aa614",
+        "duplicate_of": "203a40856859d853c30713c69ff9f9c2cd37cbab691e292a94a53e337ecf33fc",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "632c7fe08d8dae1a6436c4e51b075fce00d830b3ff26a69ecca94d7625658760",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "中新赛克计算机设备涨停，本行无AI和机器人词。",
+        "evidence": [
+          "中新赛克 | 计算机设"
+        ],
+        "risk_flags": [
+          "设备大类不等于人工智能业务",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600418",
+      "published_at": null,
+      "name": "江淮汽车",
+      "title": "江淮汽车 | 商用车",
+      "body": "商用车",
+      "return_pct": 10.010319709777832,
+      "turnover": 2914330912.0,
+      "dde_net": null,
+      "source_hash": "ef575471b6c3acc8cee37a586377b73bfbcc127089da927f741075e341d47f22",
+      "normalization": {
+        "event_key": "bc98864304e8705cbfa493d1c5d87957201755c4641605e6b697b98be9b86357",
+        "duplicate_of": "6cf6b6a5780995b668322bb1ee58283cc048223e406c48a7c90dc976b49ecd32",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ef575471b6c3acc8cee37a586377b73bfbcc127089da927f741075e341d47f22",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.25,
+        "summary": "江淮汽车商用车涨停，未明确新能源车。",
+        "evidence": [
+          "江淮汽车 | 商用车"
+        ],
+        "risk_flags": [
+          "不能把汽车全行业等同新能源",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600503",
+      "published_at": null,
+      "name": "华丽家族",
+      "title": "华丽家族 | 房地产开",
+      "body": "房地产开",
+      "return_pct": 9.876543045043945,
+      "turnover": 482275936.0,
+      "dde_net": null,
+      "source_hash": "24b50623aa8a6b5c7a05a7eee1ac5491801e2c93ff58c8e0aaf980f58cc63fb0",
+      "normalization": {
+        "event_key": "a48070c8d20169f0135b89ac42b0af41512c8b4380a3b92920ba962906c8810d",
+        "duplicate_of": "4c79f08db3700b86d0d78e8e9ffe2775af2411ef9b6bbc5d7933adb43c652417",
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "24b50623aa8a6b5c7a05a7eee1ac5491801e2c93ff58c8e0aaf980f58cc63fb0",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.78,
+        "novelty": 0.25,
+        "summary": "华丽家族房地产开发涨约9.88%，地产当日活跃。",
+        "evidence": [
+          "华丽家族 | 房地产开"
+        ],
+        "risk_flags": [
+          "不沿用题材源中的创新药机器人",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600479",
+      "published_at": null,
+      "name": "千金药业",
+      "title": "千金药业 | 中药Ⅱ",
+      "body": "中药Ⅱ",
+      "return_pct": 9.967584609985352,
+      "turnover": 1254824528.0,
+      "dde_net": null,
+      "source_hash": "d78f8101fa6e61ec6909dda20a94e8ea5af4d2e5bc3c137b249daa00c2ebc73d",
+      "normalization": {
+        "event_key": "7676ae8b2e641e9c4296cf179a174f1768910669009c2d5259e62f5e96b12320",
+        "duplicate_of": "c80212f91b6423824c0de8629fce5e0c357797bc0a905ec2c7c41cca5bfa1782",
+        "effective_matched_symbols": [
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d78f8101fa6e61ec6909dda20a94e8ea5af4d2e5bc3c137b249daa00c2ebc73d",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.3,
+        "summary": "千金药业中药涨约9.97%，支持中药板块线索。",
+        "evidence": [
+          "千金药业 | 中药Ⅱ"
+        ],
+        "risk_flags": [
+          "本行没有创新药证据，不扩展港股映射",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "000066",
+      "published_at": null,
+      "name": "中国长城",
+      "title": "中国长城 | 计算机设",
+      "body": "计算机设",
+      "return_pct": 6.940701007843018,
+      "turnover": 6638845184.0,
+      "dde_net": null,
+      "source_hash": "4a5fcbe879802da0e3b902c79b4837fe1d31e960d16190d99065f2a5bbc72cfa",
+      "normalization": {
+        "event_key": "cefb66886686da2dfe39734e12eca7cad90b032790a79037a65801ec6d5aeb91",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4a5fcbe879802da0e3b902c79b4837fe1d31e960d16190d99065f2a5bbc72cfa",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "中国长城计算机设备炸板后涨约6.94%，本行未指明算力。",
+        "evidence": [
+          "中国长城 | 计算机设"
+        ],
+        "risk_flags": [
+          "成交活跃和设备标签不能替代AI直接证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001389",
+      "published_at": null,
+      "name": "广合科技",
+      "title": "广合科技 | 元件",
+      "body": "元件",
+      "return_pct": 6.841283798217773,
+      "turnover": 5542927360.0,
+      "dde_net": null,
+      "source_hash": "5eb8f0d624a5f49322600d971cc776d9e572c8c24c98b73253d9d0d472f3e2db",
+      "normalization": {
+        "event_key": "52d4100a217fb186857d3d814b4d36866c7c0d73d391f64e870eef3b2a5d4f7e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5eb8f0d624a5f49322600d971cc776d9e572c8c24c98b73253d9d0d472f3e2db",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "广合科技元件炸板后涨约6.84%，无直接池内词。",
+        "evidence": [
+          "广合科技 | 元件"
+        ],
+        "risk_flags": [
+          "不能用昨天算力题材补写今天冻结行",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600630",
+      "published_at": null,
+      "name": "龙头股份",
+      "title": "龙头股份 | 服装家纺",
+      "body": "服装家纺",
+      "return_pct": 3.9473681449890137,
+      "turnover": 1351039408.0,
+      "dde_net": null,
+      "source_hash": "2e73859b8d11c872d851a897a03fe6f9e763a0aa51246b0e1f3ece3b8161379b",
+      "normalization": {
+        "event_key": "0338ba15d0539b48084a963b1306b44184f871d96845beb219ab181d6a3582c2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2e73859b8d11c872d851a897a03fe6f9e763a0aa51246b0e1f3ece3b8161379b",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "龙头股份服装家纺炸板后涨约3.95%，无直接池内匹配。",
+        "evidence": [
+          "龙头股份 | 服装家纺"
+        ],
+        "risk_flags": [
+          "冲板回落为个股分歧，不扩散行业映射",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603256",
+      "published_at": null,
+      "name": "宏和科技",
+      "title": "宏和科技 | 玻璃玻纤",
+      "body": "玻璃玻纤",
+      "return_pct": 6.916464805603027,
+      "turnover": 7893546752.0,
+      "dde_net": null,
+      "source_hash": "f3213ae62caecb1bd435cfb4ebc0f9c250adcb54f5a75201d3f2b3e9a1e77ca9",
+      "normalization": {
+        "event_key": "347541cf56ca740c46fbea7480942e59bcf6606accbe440aa93e768c7563c35b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159745.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f3213ae62caecb1bd435cfb4ebc0f9c250adcb54f5a75201d3f2b3e9a1e77ca9",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159745.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.4,
+        "summary": "宏和科技玻璃玻纤炸板后涨约6.92%，材料个股仍强。",
+        "evidence": [
+          "宏和科技 | 玻璃玻纤"
+        ],
+        "risk_flags": [
+          "玻纤与建筑玻璃需求不同，未封板有分歧",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603353",
+      "published_at": null,
+      "name": "和顺石油",
+      "title": "和顺石油 | 炼化及贸",
+      "body": "炼化及贸",
+      "return_pct": 6.6824750900268555,
+      "turnover": 738641616.0,
+      "dde_net": null,
+      "source_hash": "bdaf3ea3b1bb3cf6fc051f72c4efbb986f793815f754d1d264f3df26d12d2191",
+      "normalization": {
+        "event_key": "3daab645c27cce1017d8cd5a84fcc74336ace67b61a5df3a984d79ddb78cb1f1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159981.SZ",
+          "561360.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bdaf3ea3b1bb3cf6fc051f72c4efbb986f793815f754d1d264f3df26d12d2191",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "159981.SZ",
+          "561360.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.72,
+        "novelty": 0.4,
+        "summary": "和顺石油炼化贸易炸板后涨约6.68%，石油相关个股正向。",
+        "evidence": [
+          "和顺石油 | 炼化及贸"
+        ],
+        "risk_flags": [
+          "贸易企业上涨不等于原油或化工期货上涨",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002989",
+      "published_at": null,
+      "name": "中天精装",
+      "title": "中天精装 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": 2.458686113357544,
+      "turnover": 439290016.0,
+      "dde_net": null,
+      "source_hash": "1ae6b8e5e8884bdbffb1b60a8da6807b117b37de441c40788bd5ac9d5a098447",
+      "normalization": {
+        "event_key": "e63bf0667f34620ed5b617910385f0458b36bc8d23ea7b9f2a70d9687e840169",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1ae6b8e5e8884bdbffb1b60a8da6807b117b37de441c40788bd5ac9d5a098447",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "中天精装装修装饰冲板回落至约2.46%，无现池直接词。",
+        "evidence": [
+          "中天精装 | 装修装饰"
+        ],
+        "risk_flags": [
+          "装修不自动等于地产开发或建筑配置词",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603893",
+      "published_at": null,
+      "name": "瑞芯微",
+      "title": "瑞芯微 | 半导体",
+      "body": "半导体",
+      "return_pct": 10.0,
+      "turnover": 5462671104.0,
+      "dde_net": null,
+      "source_hash": "84d1de26250caaad60f503e5c1473c8dd6d31b3b9f94f1be94fec194ae1b637e",
+      "normalization": {
+        "event_key": "e9f244d9c972952dc39a40b825176649fda29dfe10a336cebd535f9cebd1c8f2",
+        "duplicate_of": "60bc0f119269db568e615af867d2ef3c61971957f171e1f8f860729c688a759f",
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "84d1de26250caaad60f503e5c1473c8dd6d31b3b9f94f1be94fec194ae1b637e",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.35,
+        "summary": "瑞芯微半导体涨10%但被列入炸板池，芯片线索正向。",
+        "evidence": [
+          "瑞芯微 | 半导体"
+        ],
+        "risk_flags": [
+          "价格与来源标签并存，不能宣称已稳定封板",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002827",
+      "published_at": null,
+      "name": "高争民爆",
+      "title": "高争民爆 | 化学制品",
+      "body": "化学制品",
+      "return_pct": 4.5460944175720215,
+      "turnover": 1650208592.0,
+      "dde_net": null,
+      "source_hash": "32887bc77e143ee617e4d20ca60af372125873ccb205b80ba3ff35e1306f6063",
+      "normalization": {
+        "event_key": "9d10042708cc6f03858d10a7d3c68283378f5ab6f279639612fe73732e567fa6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "32887bc77e143ee617e4d20ca60af372125873ccb205b80ba3ff35e1306f6063",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "高争民爆化学制品炸板后涨约4.55%，缺少配置专属词。",
+        "evidence": [
+          "高争民爆 | 化学制品"
+        ],
+        "risk_flags": [
+          "不由民爆身份补写化工或军工",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002164",
+      "published_at": null,
+      "name": "宁波东力",
+      "title": "宁波东力 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 5.765766143798828,
+      "turnover": 755696448.0,
+      "dde_net": null,
+      "source_hash": "ff0c415aedaf767c016f6032bd7e4abf9175a386c193d138f5bc1235c6478251",
+      "normalization": {
+        "event_key": "0b8fd204d999e49bde588f6d6be204b776e09324b19eca60992a00a559c67153",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ff0c415aedaf767c016f6032bd7e4abf9175a386c193d138f5bc1235c6478251",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "宁波东力通用设备炸板后涨约5.77%，无机器人直接证据。",
+        "evidence": [
+          "宁波东力 | 通用设备"
+        ],
+        "risk_flags": [
+          "通用设备不等于机器人",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600246",
+      "published_at": null,
+      "name": "万通发展",
+      "title": "万通发展 | 房地产开",
+      "body": "房地产开",
+      "return_pct": 3.6827194690704346,
+      "turnover": 3044710576.0,
+      "dde_net": null,
+      "source_hash": "f8a0f4d5216a6d8cb60f13c45d7bf07dabdc7901029e0e30d33a031c0bb0fe10",
+      "normalization": {
+        "event_key": "87c708413bfda82dbd9cfae6e75dbd13c417811eaf4fcc8c12fe876529ecfdf5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f8a0f4d5216a6d8cb60f13c45d7bf07dabdc7901029e0e30d33a031c0bb0fe10",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.74,
+        "novelty": 0.4,
+        "summary": "万通发展地产开发冲板后仅涨约3.68%，呈现明显分歧。",
+        "evidence": [
+          "万通发展 | 房地产开"
+        ],
+        "risk_flags": [
+          "炸板回落不算稳定强势确认，也非全面地产转弱",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "301047",
+      "published_at": null,
+      "name": "义翘神州",
+      "title": "义翘神州 | 生物制品",
+      "body": "生物制品",
+      "return_pct": 16.089994430541992,
+      "turnover": 2454359056.0,
+      "dde_net": null,
+      "source_hash": "f5068a7db61e883401763c080a9895f79ba454622fa7574a9700cee8a160cef7",
+      "normalization": {
+        "event_key": "716ff38663092501c2b112a273d24981c43f93ac111ed4e61a7a9889432140e8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f5068a7db61e883401763c080a9895f79ba454622fa7574a9700cee8a160cef7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "义翘神州生物制品炸板后涨约16.09%，未含配置专属词。",
+        "evidence": [
+          "义翘神州 | 生物制品"
+        ],
+        "risk_flags": [
+          "不补写生物医药或生物科技",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "688365",
+      "published_at": null,
+      "name": "光云科技",
+      "title": "光云科技 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 13.915416717529297,
+      "turnover": 919358864.0,
+      "dde_net": null,
+      "source_hash": "c95b059830191a975cfbdb6ed5e7089ea7c8a527ab3d901304af8f629c80e469",
+      "normalization": {
+        "event_key": "03015b75bdcca58b0019b9b18ecf25c1997ca1f9f5adf7d5c4b0bd5729109170",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c95b059830191a975cfbdb6ed5e7089ea7c8a527ab3d901304af8f629c80e469",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "光云科技IT服务炸板后涨约13.92%，没有AI原文。",
+        "evidence": [
+          "光云科技 | IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "软件服务强势不能自动作AI证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "605056",
+      "published_at": null,
+      "name": "咸亨国际",
+      "title": "咸亨国际 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 3.4008681774139404,
+      "turnover": 266224039.0,
+      "dde_net": null,
+      "source_hash": "4334ad7109d64072c3ffa1e10524d7960beb2549cbf9fd771e5745faf257b81e",
+      "normalization": {
+        "event_key": "db0c1293e50ede6fdb177d018bd166f0b025bcddb86bcd46000ae2c6b7afd25b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4334ad7109d64072c3ffa1e10524d7960beb2549cbf9fd771e5745faf257b81e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "咸亨国际通用设备冲板回落至约3.40%，无直接池内词。",
+        "evidence": [
+          "咸亨国际 | 通用设备"
+        ],
+        "risk_flags": [
+          "设备标签不足以判断特高压或工程机械",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "003032",
+      "published_at": null,
+      "name": "传智教育",
+      "title": "传智教育 | 教育",
+      "body": "教育",
+      "return_pct": 6.070287704467773,
+      "turnover": 763753072.0,
+      "dde_net": null,
+      "source_hash": "2ab5ad981377b9fcf03203e66061b4932db3cfb5140935d2737b52ebd3ea643a",
+      "normalization": {
+        "event_key": "30e1184a6ad6cef0f4918e9834ecc69b1a47acf474c67c110941498eee382389",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2ab5ad981377b9fcf03203e66061b4932db3cfb5140935d2737b52ebd3ea643a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "传智教育教育行业炸板后涨约6.07%，不直接匹配现池。",
+        "evidence": [
+          "传智教育 | 教育"
+        ],
+        "risk_flags": [
+          "教育培训不是传媒或AI直接证据",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "688105",
+      "published_at": null,
+      "name": "诺唯赞",
+      "title": "诺唯赞 | 生物制品",
+      "body": "生物制品",
+      "return_pct": 15.502182960510254,
+      "turnover": 987247152.0,
+      "dde_net": null,
+      "source_hash": "b13b29fd536fd23296419e0b3ac1a5ca5056fb0aacd9dc8a7f8f5b143430d8ca",
+      "normalization": {
+        "event_key": "410835541ef1e41d59514bd1e0571878b95956d62e62843b395f5e66e0cf206b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b13b29fd536fd23296419e0b3ac1a5ca5056fb0aacd9dc8a7f8f5b143430d8ca",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.88,
+        "novelty": 0.4,
+        "summary": "诺唯赞生物制品炸板后涨约15.50%，无现行专属匹配词。",
+        "evidence": [
+          "诺唯赞 | 生物制品"
+        ],
+        "risk_flags": [
+          "不能补写创新药经营或医药主题",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603341",
+      "published_at": null,
+      "name": "龙旗科技",
+      "title": "龙旗科技 | 消费电子",
+      "body": "消费电子",
+      "return_pct": 6.130165100097656,
+      "turnover": 1197908336.0,
+      "dde_net": null,
+      "source_hash": "92d3ac3aca5206747fe7522738b8dc9376490cf26452633ee9d70b82deb54ec1",
+      "normalization": {
+        "event_key": "4d4a0579dc6ae38c2bd682f8b3513ff3c9822d52bf7ff51c4c4e4dc428975b81",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "92d3ac3aca5206747fe7522738b8dc9376490cf26452633ee9d70b82deb54ec1",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.72,
+        "novelty": 0.4,
+        "summary": "龙旗科技消费电子炸板后涨约6.13%，终端配套线索正向。",
+        "evidence": [
+          "龙旗科技 | 消费电子"
+        ],
+        "risk_flags": [
+          "未封板有分歧，不能视作终端需求确定改善",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600540",
+      "published_at": null,
+      "name": "新赛股份",
+      "title": "新赛股份 | 种植业",
+      "body": "种植业",
+      "return_pct": 6.725663661956787,
+      "turnover": 862524880.0,
+      "dde_net": null,
+      "source_hash": "43766b46e8aba05c84fb371b7cd64677e7b124bdb205f1db192536fac9953732",
+      "normalization": {
+        "event_key": "52c176d125ebcaf44232927d4655d026272129ce8de5476d9330da97372c39c8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "43766b46e8aba05c84fb371b7cd64677e7b124bdb205f1db192536fac9953732",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.89,
+        "novelty": 0.4,
+        "summary": "新赛股份种植业炸板后涨约6.73%，未明确大豆。",
+        "evidence": [
+          "新赛股份 | 种植业"
+        ],
+        "risk_flags": [
+          "泛种植不能映射豆粕或养殖",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600792",
+      "published_at": null,
+      "name": "云煤能源",
+      "title": "云煤能源 | 焦炭Ⅱ",
+      "body": "焦炭Ⅱ",
+      "return_pct": 5.3113555908203125,
+      "turnover": 1033002304.0,
+      "dde_net": null,
+      "source_hash": "ec760b9767b269c5f8f229d97e8cf324e3c76b602090c11948689ab2c36b2bca",
+      "normalization": {
+        "event_key": "5025638991bfcfdd2ef2d22fb640c94553ebe10a8f13df4bdec84918d4dbae84",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515220.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ec760b9767b269c5f8f229d97e8cf324e3c76b602090c11948689ab2c36b2bca",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "515220.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.71,
+        "novelty": 0.4,
+        "summary": "云煤能源焦炭炸板后涨约5.31%，煤炭产业链线索正向。",
+        "evidence": [
+          "云煤能源 | 焦炭Ⅱ"
+        ],
+        "risk_flags": [
+          "焦炭股价与煤价并非同一收益",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "000668",
+      "published_at": null,
+      "name": "荣丰控股",
+      "title": "荣丰控股 | 房地产开",
+      "body": "房地产开",
+      "return_pct": -9.974160194396973,
+      "turnover": 201315381.0,
+      "dde_net": null,
+      "source_hash": "9d4a89e03d5d270a62b9478b3a3d721bf192abf3df552ab6e2b6638f077d2660",
+      "normalization": {
+        "event_key": "7c868f529c7ba4aeb0ab5fb6d678245265e4a93d91eea9c5a9a2118b558882b8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9d4a89e03d5d270a62b9478b3a3d721bf192abf3df552ab6e2b6638f077d2660",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.79,
+        "novelty": 0.45,
+        "summary": "荣丰控股地产开发跌约9.97%进入跌停池，地产存在个股风险。",
+        "evidence": [
+          "荣丰控股 | 房地产开"
+        ],
+        "risk_flags": [
+          "缺少事件原因，不外推所有地产公司",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603375",
+      "published_at": null,
+      "name": "盛景微",
+      "title": "盛景微 | 半导体",
+      "body": "半导体",
+      "return_pct": -10.0,
+      "turnover": 466901024.0,
+      "dde_net": null,
+      "source_hash": "16abd6fff41106f6fa4ba6bba8383cefa8826a523868856df980696220f7ea57",
+      "normalization": {
+        "event_key": "d56c7ea86e33e8f043f16306ed1463bf4d78e7fbc4b25a7f94b2f9f0809f8a16",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "16abd6fff41106f6fa4ba6bba8383cefa8826a523868856df980696220f7ea57",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "港股与亚洲"
+        ],
+        "matched_symbols": [
+          "512760.SH",
+          "513310.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.8,
+        "novelty": 0.45,
+        "summary": "盛景微半导体跌10%，芯片板块存在明显个股分歧。",
+        "evidence": [
+          "盛景微 | 半导体"
+        ],
+        "risk_flags": [
+          "单股跌停不能否定全部芯片趋势",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603226",
+      "published_at": null,
+      "name": "菲林格尔",
+      "title": "菲林格尔 | 家居用品",
+      "body": "家居用品",
+      "return_pct": -10.008203506469727,
+      "turnover": 380653488.0,
+      "dde_net": null,
+      "source_hash": "7c8609b3003ce84bcd8e346d0c03317a83b640e948806139e22476f00ebce609",
+      "normalization": {
+        "event_key": "183d30c7e8f980b0dbcd4f81c3edc31969b23a8d3d88aa6997acd6601e0c8d47",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7c8609b3003ce84bcd8e346d0c03317a83b640e948806139e22476f00ebce609",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.9,
+        "novelty": 0.45,
+        "summary": "菲林格尔家居用品跌约10.01%，不据此映射家电利空。",
+        "evidence": [
+          "菲林格尔 | 家居用品"
+        ],
+        "risk_flags": [
+          "家居与家电不同，个股负面不扩散",
+          "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+        ]
+      }
+    }
+  ]
+}
