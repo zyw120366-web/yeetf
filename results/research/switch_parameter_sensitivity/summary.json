@@ -1,0 +1,44 @@
+{
+  "status": "research_only",
+  "generated_through": "2026-07-29",
+  "formal_strategy_changed": false,
+  "base_rule": {
+    "rank": 5,
+    "margin": 0.05,
+    "confirm": 2,
+    "hold": 5
+  },
+  "recommendation": {
+    "rank_cutoff": 5,
+    "score_margin": 0.05,
+    "confirmation_days": 2,
+    "minimum_hold_days": 5,
+    "formal_strategy_changed": false,
+    "reason": "排名5、确认2日和持有5日均在相邻数值比较中有清楚的平衡；3%与5%分差路径相同，选择5%是更保守的稳定平台。8%仅是孤立高点，10%在统一价格代理中恶化。"
+  },
+  "one_factor_only": true,
+  "base_path_consistent_across_repeated_rows": true,
+  "selection_principle": "优先选择有清晰业务含义且处于相邻结果平台的数值，不按最高累计收益选择。",
+  "baseline": {
+    "total_return": 5.597971070322513,
+    "cagr": 0.26324771668052227,
+    "annual_volatility": 0.22337591195052947,
+    "sharpe": 1.1973709525768594,
+    "sortino": 2.0627451443276428,
+    "max_drawdown": -0.20906256593091377,
+    "calmar": 1.2591815063033063,
+    "annual_turnover": 16.321750180777745,
+    "trade_count": 264.0,
+    "average_exposure": 0.519592280712369,
+    "total_fees": 6588.810666412409,
+    "slippage_cost_estimate": 35773.73721643926,
+    "blocked_order_count": 0.0,
+    "limit_blocked_order_count": 0.0,
+    "eligibility_blocked_order_count": 0.0,
+    "liquidity_limited_order_count": 113.0,
+    "cash_management_annual_rate": 0.015,
+    "cash_interest_income": 8605.972602739756,
+    "cash_interest_calendar_days": 2949.0,
+    "cash_management_fees": 1388.3800000000065
+  }
+}

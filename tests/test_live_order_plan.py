@@ -47,3 +47,28 @@ def test_candidates_use_path_specific_selection_score() -> None:
     )
     ordered = order_candidates(mixed)
     assert list(ordered["symbol"]) == ["normal", "emerging"]
+
+
+def test_core_candidate_has_priority_over_higher_scoring_challenger() -> None:
+    mixed = pd.DataFrame(
+        [
+            {
+                "symbol": "challenger",
+                "pool_role": "challenger",
+                "rank": 1,
+                "momentum_score": 0.40,
+                "selection_score": 0.40,
+            },
+            {
+                "symbol": "core",
+                "pool_role": "core",
+                "rank": 4,
+                "momentum_score": 0.20,
+                "selection_score": 0.20,
+            },
+        ]
+    )
+
+    ordered = order_candidates(mixed)
+
+    assert list(ordered["symbol"]) == ["core", "challenger"]

@@ -1,0 +1,36 @@
+{
+  "signal_date": "2026-09-02",
+  "status": "confirmed",
+  "expected_orders": [
+    {
+      "side": "sell",
+      "symbol": "512010.SH"
+    },
+    {
+      "side": "buy",
+      "symbol": "513200.SH"
+    }
+  ],
+  "actual_fills": [
+    {
+      "side": "sell",
+      "symbol": "512010.SH",
+      "status": "filled",
+      "quantity": 26200,
+      "price": 0.38
+    },
+    {
+      "side": "buy",
+      "symbol": "513200.SH",
+      "status": "filled",
+      "quantity": 9100,
+      "price": 1.091
+    }
+  ],
+  "confirmation_status": "complete",
+  "matched_plan": true,
+  "all_filled": true,
+  "source": "用户2026-09-03明确确认的实际成交",
+  "note": "用户未提供券商手续费；账户暂按正式固定口径的每笔最低佣金5元记账，券商回单优先覆盖。",
+  "created_at_utc": "2026-09-03T06:44:38.471679+00:00"
+}

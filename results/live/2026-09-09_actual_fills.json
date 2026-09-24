@@ -1,0 +1,22 @@
+{
+  "signal_date": "2026-09-09",
+  "confirmation_status": "complete",
+  "source": "用户2026-09-10明确确认：没有执行上一日换仓计划，一直持有港股通医药ETF易方达",
+  "fills": [
+    {
+      "side": "sell",
+      "symbol": "513200.SH",
+      "status": "cancelled",
+      "quantity": 0,
+      "price": 0
+    },
+    {
+      "side": "buy",
+      "symbol": "159865.SZ",
+      "status": "cancelled",
+      "quantity": 0,
+      "price": 0
+    }
+  ],
+  "note": "用户确认9月10日未换仓；真实账户继续持有513200.SH 9,100股，未发生卖出或买入。"
+}

@@ -91,7 +91,7 @@
   },
   "execution_reconciliation": {
     "status": "not_required",
-    "actual_fill_template": "results/live/2026-07-21_actual_fills.template.json",
+    "actual_fill_template": null,
     "reconciliation_output": "results/audit/2026-07-21_execution_reconciliation.json"
   }
 }
