@@ -4,7 +4,7 @@ import pandas as pd
 import hashlib
 import pytest
 
-from etf_rotation.data import audited_price_cutoff, merge_frozen_history
+from etf_rotation.data import audited_price_cutoff, merge_frozen_history, write_price_frame
 from etf_rotation.live import atomic_json
 
 
@@ -87,3 +87,36 @@ def test_actual_latest_observation_sets_freeze_boundary():
     from pathlib import Path
     root = Path(__file__).resolve().parents[1]
     assert audited_price_cutoff(root, "2026-09-15") == "2026-09-15"
+
+
+def test_complete_prices_freeze_even_if_news_analysis_is_partial(tmp_path):
+    freeze_fixture(tmp_path, "2026-10-08", "BLOCKED", complete=False)
+    path = tmp_path / "results/audit/2026-10-08_live_run_card.json"
+    import json
+    card = json.loads(path.read_text())
+    card["observation"].update(status="partial", prices_status="complete")
+    atomic_json(path, card)
+    assert audited_price_cutoff(tmp_path, "2026-10-08") == "2026-10-08"
+
+
+def test_price_writer_preserves_frozen_numeric_text_and_appends(tmp_path):
+    path = tmp_path / "x.csv"
+    text = "datetime,close,amount\n2026-09-30,2.267000000000000349,123.45000000000002\n"
+    path.write_text(text, encoding="utf-8-sig")
+    old = path.read_bytes()
+    frame = pd.read_csv(path, parse_dates=["datetime"])
+    frame = pd.concat([frame, pd.DataFrame({"datetime": [pd.Timestamp("2026-10-08")], "close": [2.27], "amount": [123.45]})])
+    write_price_frame(path, frame, "2026-09-30")
+    assert path.read_bytes().startswith(old)
+    stable = path.read_bytes()
+    write_price_frame(path, pd.read_csv(path, parse_dates=["datetime"]), "2026-10-08")
+    assert path.read_bytes() == stable
+
+
+def test_price_writer_rejects_dropped_frozen_dates(tmp_path):
+    path = tmp_path / "x.csv"
+    path.write_text("datetime,close\n2026-09-30,2.267\n", encoding="utf-8-sig")
+    before = path.read_bytes()
+    with pytest.raises(ValueError, match="禁止删除"):
+        write_price_frame(path, pd.DataFrame({"datetime": ["2026-10-08"], "close": [2.27]}), "2026-09-30")
+    assert path.read_bytes() == before

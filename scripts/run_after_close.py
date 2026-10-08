@@ -7,9 +7,11 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 from etf_rotation.live import atomic_json, publish_blocked, live_lock
 from etf_rotation.sentiment_ai import validate_live_review
+from etf_rotation.evidence import review_context
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,8 +72,22 @@ def run_pipeline(args) -> None:
         raise RuntimeError(f"{args.date} is not present in the benchmark trading calendar")
     if not (ROOT / "market_data/live_quotes" / f"{args.date}.json").exists():
         run("scripts/fetch_live_quotes.py", "--date", args.date)
+    # A missed run is not a missing market close. Capture the exact prior
+    # session's unadjusted quote for observation, never use QFQ or an older day.
+    previous = benchmark.loc[benchmark.datetime.lt(pd.Timestamp(args.date)), "datetime"].sort_values()
+    if not previous.empty:
+        previous_date = str(previous.iloc[-1].date())
+        if not (ROOT / f"market_data/live_quotes/{previous_date}.json").exists():
+            try:
+                run("scripts/fetch_live_quotes.py", "--date", previous_date)
+            except subprocess.CalledProcessError:
+                print(f"{previous_date}不复权报价未取到：仅当日持仓盈亏待核，不取消日报")
     from scripts.advance_authorized_live_account import advance
     advance(args.date)
+    config = yaml.safe_load((ROOT / "config/ye_strategy.yaml").read_text())
+    context = review_context(ROOT, args.date, benchmark.datetime, config)
+    if context["status"] != "complete":
+        raise ValueError("；".join(context["issues"]))
     updated, count = re.subn(r"(?m)^(\s*data_end:\s*)['\"]?\d{4}-\d{2}-\d{2}['\"]?\s*$", rf"\g<1>'{args.date}'", text, count=1)
     if count != 1:
         raise RuntimeError("could not update config/market.yaml project.data_end")

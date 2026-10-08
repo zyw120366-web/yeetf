@@ -16,6 +16,7 @@ import yaml
 
 from .live import atomic_json, apply_live_cooldown, raw_quote, validate_account, price_risk_check
 from .sentiment_ai import validate_live_review
+from .evidence import review_context
 
 
 def read_json(path: Path, default=None):
@@ -80,7 +81,7 @@ def analyze(root: Path, date: str, account: dict) -> dict:
     from .ye import build_ye_signals
     from .sentiment import sentiment_matrices_from_frame
     from scripts.build_sentiment_features import build
-    from scripts.build_live_order_plan import holding_decision, order_candidates
+    from scripts.build_live_order_plan import holding_decision, order_candidates, exit_reasons
 
     market = yaml.safe_load((root / "config/market.yaml").read_text())
     config = yaml.safe_load((root / "config/ye_strategy.yaml").read_text())
@@ -98,11 +99,18 @@ def analyze(root: Path, date: str, account: dict) -> dict:
             raise ValueError(f"{s} 缺少当日有效日线")
     panel = load_panel(market, root / "market_data/prices")
     calendar = panel["close"].index
-    validate_live_review(root, date)
-    memory = int(config["enhanced_selection"]["sentiment_available"]["hot_exit_protection"]["memory_days"])
-    for previous in calendar[calendar <= day][-memory:]:
-        validate_live_review(root, str(previous.date()))
-    sentiment, available = sentiment_matrices_from_frame(build(root=root), calendar, symbols)
+    evidence = review_context(root, date, calendar, config, validator=validate_live_review)
+    try:
+        news = build(root=root)
+        bad_dates = [pd.Timestamp(d) for d, c in evidence["checks"].items() if c["status"] != "complete"]
+        news = news.loc[news.date.le(day) & ~news.date.isin(bad_dates)]
+    except (ValueError, OSError, KeyError, TypeError) as exc:
+        from .sentiment import SENTIMENT_FIELDS
+        news = pd.DataFrame(columns=["date", "symbol", *SENTIMENT_FIELDS])
+        evidence["status"] = "partial"
+        evidence["issues"].append("资讯特征构建失败；价格指标仍单独展示")
+        evidence["diagnostic"] = f"{type(exc).__name__}: {exc}"
+    sentiment, available = sentiment_matrices_from_frame(news, calendar, symbols)
     names = {symbol_key(x): x["name"] for x in market["universe"]}
     categories = {symbol_key(x): x["category"] for x in market["universe"]}
     bundle, features, eligible, listed, amount, decision = build_ye_signals(
@@ -111,8 +119,20 @@ def analyze(root: Path, date: str, account: dict) -> dict:
                               features, eligible, listed, amount, decision, sentiment, day)
     ranking = apply_live_cooldown(ranking, account, date, calendar,
                                  int(config["enhanced_selection"]["reentry_cooldown_days"]))
-    candidates = order_candidates(ranking.loc[ranking.final_entry_pass])
-    result = {"status": "complete", "ranking": ranking.to_dict("records"),
+    complete = evidence["status"] == "complete"
+    if not complete:
+        # Keep the exact formal price projection, but NEVER expose fallback
+        # decisions computed with absent news as live candidates or protection.
+        for field in ("selection_score", "technical_entry_pass", "final_entry_pass",
+                      "confirmed_normal_entry", "weak_edge_confirmed", "historical_fallback",
+                      "emerging_entry", "quality_extension", "missing_data_soft_exit_protection", "target_weight"):
+            ranking[field] = None
+        if not evidence["complete"]["soft_exit"] or "diagnostic" in evidence:
+            ranking["hot_exit_protection"] = None
+            ranking["soft_exit_confirmation"] = None
+    candidates = order_candidates(ranking.loc[ranking.final_entry_pass.eq(True)])
+    result = {"status": "complete" if complete else "partial", "prices_status": "complete",
+              "news_dependencies": evidence, "ranking": ranking.to_dict("records"),
               "candidates": candidates[["symbol", "name", "rank"]].to_dict("records"),
               "market": {"up": int(ranking.change_1d.gt(0).sum()),
                          "down": int(ranking.change_1d.lt(0).sum()),
@@ -122,10 +142,25 @@ def analyze(root: Path, date: str, account: dict) -> dict:
     try:
         position = known_position(account, date)
         current = position["symbol"] if position else None
-        target, held, reasons, switch = holding_decision(
-            day, current, ranking, candidates, account, config, root=root)
-        result.update(held=None if held is None else held.to_dict(), exit_reasons=reasons,
-                      opportunity_switch=switch, technical_target=target, holding_trusted=True)
+        if complete:
+            target, held, reasons, switch = holding_decision(
+                day, current, ranking, candidates, account, config, root=root)
+            result.update(held=None if held is None else held.to_dict(), exit_reasons=reasons,
+                          opportunity_switch=switch, technical_target=target,
+                          holding_trusted=True, holding_decision_status="complete")
+        else:
+            held = ranking.loc[ranking.symbol.eq(current)]
+            reasons = []
+            if len(held):
+                checked = held.iloc[0].copy()
+                # Unknown protection cannot approve a soft exit; a known MA
+                # break remains visible independent of candidate selection.
+                if checked["soft_exit_confirmation"] is None:
+                    checked["soft_exit_confirmation"] = False
+                reasons = exit_reasons(checked)
+            result.update(held=held.iloc[0].to_dict() if len(held) else None,
+                          holding_trusted=True, holding_decision_status="unknown",
+                          exit_reasons=reasons, opportunity_switch={"status": "unknown"}, technical_target=None)
     except (ValueError, KeyError, RuntimeError) as exc:
         result.update(holding_trusted=False, holding_error=str(exc), technical_target=None)
     return clean(result)
@@ -142,13 +177,18 @@ def valuation(root: Path, date: str, account: dict) -> dict:
             result.update(symbol=p["symbol"], name=p.get("name", p["symbol"]), quantity=qty,
                           close=close, cost=cost, market_value=qty * close,
                           purchase_pnl=qty * (close - cost), purchase_return=close / cost - 1)
-            prior = sorted(x for x in (root / "market_data/live_quotes").glob("*.json") if x.stem < date)
+            result["source_files"] = [f"market_data/live_quotes/{date}.json"]
             calendar = pd.read_csv(root / "market_data/prices/510300.SH.csv")["datetime"]
             previous_days = calendar[calendar < date]
             previous = previous_days.iloc[-1] if len(previous_days) else None
-            if str(p["opened_on"]) < date and prior and prior[-1].stem == previous:
-                _, old_close = raw_quote(root, p["symbol"], previous)
-                result.update(daily_pnl=qty * (close - old_close), daily_return=close / old_close - 1)
+            if str(p["opened_on"]) < date and previous:
+                try:
+                    _, old_close = raw_quote(root, p["symbol"], previous)
+                    result.update(daily_pnl=qty * (close - old_close), daily_return=close / old_close - 1,
+                                  daily_basis=f"已确认持仓按上一交易日{previous}不复权收盘至今日收盘计算")
+                    result["source_files"].append(f"market_data/live_quotes/{previous}.json")
+                except (OSError, ValueError, KeyError) as exc:
+                    result["daily_limitation"] = f"缺少{previous}有效不复权收盘报价"
             elif str(p["opened_on"]) == date:
                 result.update(daily_pnl=result["purchase_pnl"], daily_return=result["purchase_return"],
                               daily_basis="今日新买入，按成交价至收盘计算")
@@ -158,7 +198,9 @@ def valuation(root: Path, date: str, account: dict) -> dict:
         if capital is not None and capital > 0:
             result["account_return"] = result["account_equity"] / capital - 1
     except (ValueError, KeyError, OSError, IndexError) as exc:
-        result["limitation"] = str(exc)
+        result["limitation"] = ("持仓已确认；新增入金、现金及费用待核，仅账户整体收益未知"
+                                if result.get("symbol") and account.get("cash_reconciliation", {}).get("status") == "pending"
+                                else str(exc))
     return clean(result)
 
 
@@ -191,9 +233,13 @@ def collect(root: Path, date: str) -> dict:
         analysis = analyze(root, date, account)
     except Exception as exc:
         analysis["error"] = f"{type(exc).__name__}: {exc}"
+        analysis["issues"] = ["价格或配置证据不足；已确认持仓与可用估值仍单独展示"]
     snapshot = read_json(root / f"market_data/sentiment/{date}.json")
     sources = {k: {"ok": v.get("ok"), "rows": len(v.get("rows") or [])}
                for k, v in snapshot.get("sources", {}).items()}
+    dde_available = any(number(row.get("dde_net", row.get("ddejingliang"))) is not None
+                        for source in snapshot.get("sources", {}).values()
+                        for row in source.get("rows", []) or [])
     # Never show an order from a failed or mismatched release as executable.
     orders = plan.get("execution", {}).get("orders", []) if status in {"READY", "SELL_ONLY"} else []
     if status == "SELL_ONLY" and any(x.get("side") != "sell" for x in orders):
@@ -201,6 +247,8 @@ def collect(root: Path, date: str) -> dict:
     return clean({"schema_version": 1, "signal_date": date, "status": status,
                   "blocking_items": reasons, "account": account, "valuation": valuation(root, date, account),
                   "analysis": analysis, "review": review, "sources": sources,
+                  "news_data_quality": {"dde_available": dde_available},
+                  "backtest_as_of": read_json(root / "results/comparison/latest_signals.json").get("signal_date"),
                   "orders": orders, "actions": plan.get("actions", []) if status != "BLOCKED" else [],
                   "price_risk_check": price_risk_check(root, date, account),
                   "available_links": [p for p in ["outputs/ETF轮动策略_回测.html", "outputs/ETF轮动策略_策略与回测.html",
@@ -223,8 +271,12 @@ def describe_action(report: dict) -> str:
     if status == "BLOCKED":
         if a.get("holding_trusted") and a.get("held"):
             held = a["held"]
-            detail = "；".join(a.get("exit_reasons", [])) or "未触发卖出或换仓，观察持有"
-            return f"持仓观察：{held['name']}，{detail}。正式订单未放行，暂无可执行买入计划。"
+            detail = "；".join(a.get("exit_reasons", []))
+            if a.get("holding_decision_status") == "unknown":
+                detail = detail + "；换仓待核" if detail else "完整退出与换仓结论待核"
+            else:
+                detail = detail or "未触发卖出或换仓，观察持有"
+            return f"持仓观察：{held['name']}，{detail}。正式订单未放行（买卖均禁止），暂无可执行买入计划。"
         return "正式订单未放行，暂无可执行买入计划；持仓结论见可用证据。"
     actions = report["actions"]
     labels = {"buy": "买入", "sell": "卖出", "hold": "持有"}
@@ -251,7 +303,10 @@ def sections(report: dict):
         m = a["market"]
         overview.append(f"全池{m['up']}涨、{m['down']}跌、{m['flat']}平；沪深300ETF {pct(m['benchmark_change'])}，在MA120{'上' if m['benchmark_above_ma'] else '下'}方。市场判断只作背景，不新增择时开关。")
     if report["status"] == "BLOCKED":
-        overview.append("订单阻断原因：" + "；".join(report["blocking_items"]) + "。已确认持仓与未知现金分开处理，未知账户收益不填零。")
+        overview.append("尚需核清：" + "；".join(x.rstrip("。；") for x in report["blocking_items"]) + "。")
+    limitations = a.get("news_dependencies", {}).get("issues", []) or a.get("issues", [])
+    if limitations:
+        overview.append("数据缺口：" + "；".join(limitations) + ("。价格排名可看；依赖这些资讯的判断显示待核，不当作不通过。" if a.get("ranking") else "。不沿用旧日结论。"))
     ranking = a.get("ranking", [])
     def names(rows):
         return "、".join(f"{r['name']}（{r['symbol']}）" for r in rows) or "无"
@@ -260,33 +315,47 @@ def sections(report: dict):
         tech = [r for r in ranking if r["technical_entry_pass"]]
         final = [r for r in ranking if r["final_entry_pass"]]
         blocked = [r for r in ranking if r.get("live_cooldown_blocked")]
+        price_pass = [r for r in ranking if r["base_entry_pass"]]
         funnel = [f"固定池{len(ranking)}只：45核心＋6卫星；基础资格{sum(bool(r['pool_eligible']) for r in ranking)}只通过。",
-                  "核心前5：" + names(core_top), f"技术门槛通过{len(tech)}只：" + names(tech),
-                  f"真实冷却与核心优先后{len(final)}只：" + names(final), "真实卖出冷却排除：" + names(blocked),
-                  "候选合格不等于重买；先检查旧仓退出及换仓条件，正式动作以放行计划为准。"]
+                  "核心前5：" + names(core_top),
+                  f"常规价格条件通过{len(price_pass)}只（尚非买入结论）：" + names(price_pass)]
+        if a["status"] == "complete":
+            funnel += [f"技术与资讯门槛通过{len(tech)}只：" + names(tech),
+                       f"真实冷却与核心优先后{len(final)}只：" + names(final)]
+        else:
+            funnel += ["资讯确认、新趋势记忆及最终候选待核；不能把未知候选写成0只，也不能据此买入。"]
+        funnel += ["真实卖出冷却排除：" + names(blocked), "候选合格不等于买入，仍须检查旧仓退出与换仓，并通过订单核验。"]
         satellites = [r for r in ranking if r["pool_role"] == "challenger"]
         satellite = ["6只卫星：" + names(satellites),
-                     "卫星技术合格：" + names([r for r in satellites if r["technical_entry_pass"]]),
-                     "卫星最终补位：" + names([r for r in satellites if r["final_entry_pass"]]),
-                     "卫星使用相对核心的虚拟排名，核心有合格候选时不补位。"]
+                     "卫星常规价格条件通过：" + names([r for r in satellites if r["base_entry_pass"]])]
+        satellite += (["卫星技术合格：" + names([r for r in satellites if r["technical_entry_pass"]]),
+                       "卫星最终补位：" + names([r for r in satellites if r["final_entry_pass"]])]
+                      if a["status"] == "complete" else ["卫星资讯确认及最终补位待核，不生成新增订单。"])
     else:
-        funnel = ["全池筛选暂不可确认：" + a.get("error", "证据不足") + "。不使用旧排名或价格回退冒充今日完整筛选。"]
+        funnel = ["全池价格筛选暂不可确认，缺少有效价格或配置证据。具体诊断已保存在运行卡，不以旧日排名代替。"]
         satellite = ["今日卫星条件未知，不生成新增订单。"]
     checks = []
-    if held:
+    if held and a.get("holding_decision_status") != "unknown":
         switch = a.get("opportunity_switch", {})
         checks = [f"持有：{held['name']}；收盘在MA120{'上' if held['above_ma120'] else '下'}方。",
                   "退出/让位：" + ("；".join(a.get("exit_reasons", [])) or "未触发"),
                   f"机会换仓：{switch.get('confirmation_streak', 0)}/{switch.get('required_confirmation_days', 2)}，持有{switch.get('held_trading_days', '—')}个交易日；候选分差{pct(switch.get('score_gap'))}。"]
     else:
-        checks = [a.get("holding_error") or "无已确认持仓或完整持仓指标不可用；不能据此称继续持有已获放行。"]
+        checks = ([f"持仓事实：{v['name']} {v['quantity']:g}股已确认；分析不完整不表示没有持仓。"]
+                  if v.get("symbol") else ["持仓事实尚未核清。"])
         checks += report.get("price_risk_check", [])
-        checks += ["价格提示不等于退出已放行；软退出仍需核验近期资讯保护。"]
-    news = [f"审核：{review.get('reviewed_count', '—')}/{review.get('input_count', '—')}，覆盖{pct(review.get('coverage'))}；{review['status']}。",
+        soft_known = a.get("news_dependencies", {}).get("complete", {}).get("soft_exit") and "diagnostic" not in a.get("news_dependencies", {})
+        checks += [("卖出：" + ("；".join(a.get("exit_reasons", [])) or "已核验的退出条件未触发") + "；是否可执行仍以订单放行为准。" if soft_known else "卖出：软退出的近期资讯保护待核，不能把未知当作保护不存在；价格硬退出仍由独立核验处理。"),
+                   "换仓：完整合格候选和连续确认待核，不累计未经核验的确认天数。"]
+    coverage = "待核" if number(review.get("coverage")) is None else f"{review['coverage']:.0%}"
+    news = [f"当日逐条审核：{review.get('reviewed_count', '—')}/{review.get('input_count', '—')}，覆盖{coverage}。",
             "；".join(f"{k}：{v['rows']}条，{'成功' if v['ok'] else '失败'}" for k, v in report["sources"].items()),
             "审核覆盖是对已采集条目的覆盖，不是全网新闻完整性；DDE缺失不能当作已证实的零资金流。"]
     if held:
-        news.append(f"持仓直接匹配数量：{held.get('sentiment_matched_count', '—')}；正DDE占比：{pct(held.get('sentiment_positive_dde_share'))}。不把泛行业题材扩散到不相关ETF。")
+        dde = pct(held.get("sentiment_positive_dde_share")) if report.get("news_data_quality", {}).get("dde_available") else "未知（来源未提供）"
+        news.append(f"持仓直接匹配数量：{held.get('sentiment_matched_count', '—')}；正DDE占比：{dde}。不把泛行业题材扩散到不相关ETF。")
+    if limitations:
+        news.append("近期连续证据：" + "；".join(limitations))
     return [("今日决策路径综述", overview), ("今日筛选漏斗", funnel),
             ("持有、卖出与换仓", checks), ("今日卫星检查", satellite), ("资讯审核", news)]
 
@@ -299,6 +368,8 @@ def render(report: dict, *, public=False) -> str:
     navigation = []
     for target, label in [("outputs/ETF轮动策略_回测.html", "回测"), ("outputs/ETF轮动策略_策略与回测.html", "策略介绍")]:
         if target in links:
+            if label == "回测" and report.get("backtest_as_of"):
+                label += f"（截至{report['backtest_as_of']}）"
             navigation.append(f'<a href="{root}{target}">{label}</a>')
     navigation.append(f'<a href="{root}results/audit/{date}_live_run_card.json">运行卡</a>')
     evidence = (f'<a href="{root}market_data/sentiment/ai_review/{date}.json">逐条审核证据</a> · '
@@ -308,14 +379,15 @@ def render(report: dict, *, public=False) -> str:
     for i, (title, paragraphs) in enumerate(sections(report)):
         blocks.append(f'<section class="section" id="{"dailyOverview" if i == 0 else "detail" + str(i)}"><h2>{title}</h2>' + "".join(f"<p>{esc(p)}</p>" for p in paragraphs if p) + "</section>")
     rows = []
+    def gate(value):
+        return "待核" if value is None else "通过" if value else "未通过"
     for r in report["analysis"].get("ranking", []):
         cells = [r["name"] + "（" + r["symbol"] + "）", "核心" if r["pool_role"] == "core" else "卫星",
                  str(r["rank"]), pct(r["change_1d"]), pct(r["momentum_score"]), pct(r["roc20"]), pct(r["roc60"]), pct(r["ma120_bias"]),
-                 "通过" if r["pool_eligible"] else "未通过", "通过" if r["normal_entry"] else "未通过",
-                 "通过" if r["emerging_entry"] else "未通过", "通过" if r["quality_extension"] else "未通过",
-                 "冷却排除" if r.get("live_cooldown_blocked") else "观察候选" if r["final_entry_pass"] else "未入选"]
+                 gate(r["pool_eligible"]), gate(r["normal_entry"]), gate(r["emerging_entry"]), gate(r["quality_extension"]),
+                 "冷却排除" if r.get("live_cooldown_blocked") else "待核" if r["final_entry_pass"] is None else "观察候选" if r["final_entry_pass"] else "未入选"]
         rows.append("<tr>" + "".join(f"<td>{esc(x)}</td>" for x in cells) + "</tr>")
-    headers = ["ETF", "角色", "排名", "今日", "动量分", "ROC20", "ROC60", "MA120乖离", "资格", "常规", "新趋势", "延伸", "筛选结果"]
+    headers = ["ETF", "角色", "排名", "今日", "动量分", "ROC20", "ROC60", "MA120乖离", "资格", "常规价格", "新趋势", "延伸", "筛选结果"]
     table = '<section class="section"><h2>全池逐层筛选明细</h2><div class="scroll"><table><thead><tr>' + "".join(f"<th>{x}</th>" for x in headers) + "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div></section>"
     orders = '<section class="section"><h2>执行边界</h2><p>' + esc(report["status"]) + "：" + esc(describe_action(report)) + "</p>"
     for order in report["orders"]:
@@ -392,9 +464,20 @@ def validate_delivery(root: Path, date: str) -> dict:
     if status == "SELL_ONLY" and (plan.get("target_symbol") is not None or any(x.get("side") != "sell" for x in report["orders"])):
         raise ValueError("仅卖出交付含新增目标")
     ranking = report.get("analysis", {}).get("ranking", [])
-    if report.get("analysis", {}).get("status") == "complete":
+    analysis = report.get("analysis", {})
+    if analysis.get("status") in {"complete", "partial"}:
         if len(ranking) != 51 or len({x["symbol"] for x in ranking}) != 51 or sum(x["pool_role"] == "core" for x in ranking) != 45:
             raise ValueError("完整日报池角色或数量不符")
+    if status == "READY" and analysis.get("status") != "complete":
+        raise ValueError("完整放行不可使用部分分析")
+    if analysis.get("status") == "partial":
+        if analysis.get("candidates") or analysis.get("technical_target") is not None or any(r.get("final_entry_pass") is not None for r in ranking):
+            raise ValueError("部分资讯分析不得伪装成完整候选")
+    required_evidence = (report.get("valuation", {}).get("source_files", [])
+                         + analysis.get("news_dependencies", {}).get("files", []))
+    bound = {r["path"] for key in ("critical_files", "source_files", "price_files") for r in manifest.get(key, [])}
+    if not set(required_evidence).issubset(bound):
+        raise ValueError("估值或资讯依赖未纳入清单")
     class Links(HTMLParser):
         def __init__(self):
             super().__init__()
@@ -407,6 +490,8 @@ def validate_delivery(root: Path, date: str) -> dict:
         text = path.read_text(encoding="utf-8")
         if date not in text or "dailyOverview" not in text or "<br" in text:
             raise ValueError("日报日期、正文或格式不合格")
+        if analysis.get("status") in {"complete", "partial"} and any(r["symbol"] not in text for r in ranking):
+            raise ValueError("日报未显示完整51池价格明细")
         parser = Links()
         parser.feed(text)
         for target in parser.targets:
@@ -434,8 +519,12 @@ def delivery_receipt(root: Path, date: str) -> str:
         lines.append("持仓与收益：见日报可用证据，缺失项待核。")
     held = report["analysis"].get("held")
     if held and number(held.get("rank")) is not None:
-        reason = "；".join(report["analysis"].get("exit_reasons", [])) or "未触发卖出或换仓"
+        reason = ("完整退出/换仓结论待核" if report["analysis"].get("holding_decision_status") == "unknown"
+                  else "；".join(report["analysis"].get("exit_reasons", [])) or "未触发卖出或换仓")
         lines.append(f"持仓核心/参考排名第{held['rank']:g}；{reason}。")
+    if report["analysis"].get("status") == "partial":
+        lines.append("连续资讯缺口：" + "；".join(report["analysis"]["news_dependencies"]["issues"]))
+        lines.extend(report.get("price_risk_check", []))
     if number(v.get("account_equity")) is not None:
         lines.append(f"账户权益：{v['account_equity']:,.2f}元；累计{pct(v.get('account_return'))}。")
     state = str(account.get("confirmation_status", "未知"))
@@ -445,7 +534,7 @@ def delivery_receipt(root: Path, date: str) -> str:
     lines += [f"对账：{state}；AI审核{review.get('reviewed_count', '—')}/{review.get('input_count', '—')}，覆盖{coverage}。",
               f"订单：{report['status']}；交付检查：PASS。"]
     if report["status"] != "READY":
-        lines.append("原因：" + "；".join(report.get("blocking_items", [])))
+        lines.append("原因：" + "；".join(x.rstrip("。；") for x in report.get("blocking_items", [])))
     links = []
     for label, relative in [("今日日报", "outputs/ETF轮动策略_今日日报.html"),
                             ("回测", "outputs/ETF轮动策略_回测.html"),

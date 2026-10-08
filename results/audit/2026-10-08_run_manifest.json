@@ -4,7 +4,7 @@
   "critical_files": [
     {
       "path": "results/live/readiness_report.json",
-      "sha256": "dfa39a8c0ba946bd226e609013a9678257e2554ace0c8a1a116399eb8361f029"
+      "sha256": "1cb319362d8e538a13cc90adb8d29358c60b9c9b0501ece1e9624e0c6a2b84eb"
     },
     {
       "path": "results/live/account_state.json",
@@ -12,23 +12,23 @@
     },
     {
       "path": "results/live/2026-10-08_order_plan.json",
-      "sha256": "48c60273c13f688b485e15c8281b63a602c24b980f1a7c59347655f6a9320fbf"
+      "sha256": "4586c70685626cd407b5428d4c8077c3a6d7bb8d75d30a13b30e5cc9a594ac4f"
     },
     {
       "path": "results/live/2026-10-08_daily_report.json",
-      "sha256": "52202129609fb221022b0d4832b2acbae186e38b0b9d06107a143e7e73522784"
+      "sha256": "1f82457082270dd2cc2d3e97de0057609424d6a15f827210802b1c4f44c63590"
     },
     {
       "path": "results/live/2026-10-08_daily_report.md",
-      "sha256": "8571963789d8cdee98c3f873eeb6aeb1ca6f6f9b3d87e5100abacb8e074a817c"
+      "sha256": "b4b08899d820ad98b0c95181927c3ae2a742b61ddbad1a7662997f0c9e94363f"
     },
     {
       "path": "outputs/ETF轮动策略_今日日报.html",
-      "sha256": "f0bd4b3bdc34879b86392c24a229913104a6c0d5c67819b065da5497202bf9fc"
+      "sha256": "aaf813385fa18fac525fabf35f8a83d1cce7aa4e10f5120e9dd5185e71bea7d8"
     },
     {
       "path": "dashboard/public/ye-daily.html",
-      "sha256": "d09cffa65f838aec5e4a428352e441b5f3dc4aee34d1727412dd6e00e3e9dbe2"
+      "sha256": "75a98ca6c265556a4d7d9de9778f5cf84f9245ca5eb38db7b6191141a1d5edb2"
     },
     {
       "path": "config/strategy_governance.yaml",
@@ -300,7 +300,7 @@
     },
     {
       "path": "src/etf_rotation/daily_report.py",
-      "sha256": "13536a4850095784c0843265deb4beae0fd11b365860eb7f9d9b394d26dc3a08"
+      "sha256": "72ea177fc05220bbbe002abcb5fc45e70dbf8aa274b5d1865b4f43829e70d542"
     },
     {
       "path": "src/etf_rotation/execution.py",
@@ -308,7 +308,7 @@
     },
     {
       "path": "src/etf_rotation/risk_release.py",
-      "sha256": "33ddbb18fdb68482714b2262cea2422301d0787e761b7a9882bb4bd17870a2db"
+      "sha256": "f38fd35cad484bef3d577eb16d07f9df8cab64742ad55b4d5865d3c1c1ab4a17"
     },
     {
       "path": "src/etf_rotation/ye.py",
@@ -336,7 +336,7 @@
     },
     {
       "path": "src/etf_rotation/live.py",
-      "sha256": "3445ac908bbb553712d4f141353158187e4955a0aec155567de84f93b69b1012"
+      "sha256": "8e73b316a033d8e7a6abacf4d7ec25707a3eb57e7672dcfad5ba5f4a9f1a448d"
     },
     {
       "path": "src/etf_rotation/etfwin.py",
@@ -347,12 +347,20 @@
       "sha256": "9146de526f675a63252f5c7a94173e74c8252439f1ebd75bca8d1dc49c15f0ca"
     },
     {
+      "path": "src/etf_rotation/evidence.py",
+      "sha256": "22b9d2f8f95984218852eeb32142749878cdb6336ddd412ce3764b8b3f8743e4"
+    },
+    {
       "path": "src/etf_rotation/data.py",
-      "sha256": "7b19aaa236fd640f0b31b776cc3ab98cc57cce8d88ee6b3c188f3c63fd5914f2"
+      "sha256": "aa3422552685a6ae814fa76d0614dfcaccdd85c1aab24b0659cadec4f4afcad2"
     },
     {
       "path": "market_data/live_quotes/2026-10-08.json",
       "sha256": "46a60d6bdf7938780f5e9ecc31b35ddbe5f72bd9b291c1e9fc9b2f9acda00e6c"
+    },
+    {
+      "path": "market_data/live_quotes/2026-09-30.json",
+      "sha256": "925205d15499926ed2b811549e6c58bb805e87dde692ab4e95ab512a1c153346"
     },
     {
       "path": "market_data/sentiment/2026-10-08.json",

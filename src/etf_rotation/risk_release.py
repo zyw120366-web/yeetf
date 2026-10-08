@@ -134,6 +134,8 @@ def publish_sell_only(root: Path, date: str, failure: str) -> bool:
     paths += list((root / "config").glob("*.yaml"))
     paths += list((root / "market_data/prices").glob("*.csv"))
     paths += list((root / "src/etf_rotation").glob("*.py"))
+    paths += [root / p for p in report["valuation"].get("source_files", [])]
+    paths += [root / p for p in report["analysis"].get("news_dependencies", {}).get("files", [])]
     paths += [root / "scripts/build_sentiment_features.py", root / "scripts/validate_live_readiness.py"]
     for d in plan["review_dates_required"]:
         paths += [root / "market_data/sentiment" / f"{d}.json", root / "market_data/sentiment/ai_review" / f"{d}.json"]
@@ -146,7 +148,7 @@ def publish_sell_only(root: Path, date: str, failure: str) -> bool:
     def record(p):
         return {"path": str(p.relative_to(root)), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
     manifest_path = audit / f"{date}_run_manifest.json"
-    atomic_json(manifest_path, {"signal_date": date, "status": "SELL_ONLY", "critical_files": [record(p) for p in paths]})
+    atomic_json(manifest_path, {"signal_date": date, "status": "SELL_ONLY", "critical_files": [record(p) for p in dict.fromkeys(paths)]})
     atomic_json(audit / f"{date}_live_run_card.json", {
         "card_type": "ye_live_run_card", "signal_date": date,
         "release": {"readiness": "SELL_ONLY", "buy_allowed": False, "sell_allowed": True, "plan_is_not_fill": True},

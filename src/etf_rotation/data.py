@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import hashlib
+import csv
 import time
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -58,12 +59,44 @@ def merge_frozen_history(cached: pd.DataFrame, downloaded: pd.DataFrame, finaliz
     return pd.concat([cached, new_rows], ignore_index=True).sort_values("datetime")
 
 
+def write_price_frame(path: Path, frame: pd.DataFrame, frozen_through: str) -> None:
+    """Retain frozen CSV lines byte-for-byte, including floating-point text."""
+    content = frame.to_csv(index=False)
+    if path.exists():
+        with path.open(encoding="utf-8-sig", newline="") as handle:
+            original = handle.read().splitlines(keepends=True)
+        fresh = content.splitlines(keepends=True)
+        if not original or original[0].rstrip() != fresh[0].rstrip():
+            raise ValueError("行情列结构变化，不能静默重写已冻结文件")
+        column = next(csv.reader([original[0]])).index("datetime")
+        saved = {}
+        for line in original[1:]:
+            day = next(csv.reader([line]))[column]
+            if day[:10] <= frozen_through:
+                if day in saved:
+                    raise ValueError("已冻结行情存在重复日期")
+                saved[day] = line
+        seen = set()
+        for i, line in enumerate(fresh[1:], 1):
+            day = next(csv.reader([line]))[column]
+            if day in saved:
+                fresh[i] = saved[day]
+                seen.add(day)
+        if seen != set(saved):
+            raise ValueError("禁止删除已冻结行情日期")
+        content = "".join(fresh)
+    temporary = path.with_suffix(".csv.tmp")
+    with temporary.open("w", encoding="utf-8-sig", newline="") as handle:
+        handle.write(content)
+    temporary.replace(path)
+
+
 def audited_price_cutoff(root: Path, complete_through: str) -> str:
     """Freeze published evidence, not just days on which trading was allowed.
 
     Cash reconciliation can block orders while a complete observation report
     still uses that day's bars. Later downloads must not rewrite those bars.
-    Unfinished/partial reports do not freeze a new session.
+    A partial-news report still freezes its independently complete prices.
     """
     for path in sorted((root / "results/audit").glob("*_live_run_card.json"), reverse=True):
         date = path.name[:10]
@@ -73,8 +106,10 @@ def audited_price_cutoff(root: Path, complete_through: str) -> str:
         status = card.get("release", {}).get("readiness")
         if card.get("signal_date") != date or status not in {"READY", "SELL_ONLY", "BLOCKED"}:
             continue
-        if status == "BLOCKED" and card.get("observation", {}).get("status") != "complete":
-            continue
+        if status == "BLOCKED":
+            observation = card.get("observation", {})
+            if observation.get("status") != "complete" and observation.get("prices_status") != "complete":
+                continue
         manifest_path = root / "results/audit" / f"{date}_run_manifest.json"
         content = manifest_path.read_bytes()
         if hashlib.sha256(content).hexdigest() != card.get("audit", {}).get("run_manifest_sha256"):
@@ -131,7 +166,7 @@ def fetch_easy_tdx(config: dict, data_dir: Path, force: bool = False) -> dict:
                             if cached is not None
                             else downloaded
                         )
-                        frame.to_csv(path, index=False, encoding="utf-8-sig")
+                        write_price_frame(path, frame, frozen_through)
                         break
                     except Exception as exc:  # network endpoints can fail transiently
                         last_error = exc

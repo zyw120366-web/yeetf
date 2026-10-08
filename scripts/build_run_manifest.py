@@ -59,6 +59,10 @@ def main() -> None:
         ROOT / "dashboard" / "public" / "ye-daily.html",
         ROOT / "dashboard" / "public" / "ye-backtest.html",
     ]
+    report = json.loads((ROOT / f"results/live/{args.date}_daily_report.json").read_text())
+    critical += [ROOT / p for p in report["valuation"].get("source_files", [])]
+    critical += [ROOT / p for p in report["analysis"].get("news_dependencies", {}).get("files", [])]
+    critical = list(dict.fromkeys(critical))
     missing = [path for path in critical if not path.exists()]
     if missing:
         raise FileNotFoundError("missing manifest inputs: " + ", ".join(map(str, missing)))

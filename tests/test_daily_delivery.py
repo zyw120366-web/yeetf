@@ -64,11 +64,80 @@ def test_missing_evidence_is_partial_not_fallback_buy(report_root, monkeypatch):
     monkeypatch.setattr(daily_report, "validate_live_review", missing)
     publish_blocked(report_root, DATE, "审核原文哈希不符")
     report = daily_report.read_json(report_root / f"results/live/{DATE}_daily_report.json")
-    assert report["analysis"]["status"] == "unavailable"
+    assert report["analysis"]["status"] == "partial"
+    assert len(report["analysis"]["ranking"]) == 51
+    assert all(r["final_entry_pass"] is None for r in report["analysis"]["ranking"])
     assert report["review"]["coverage"] is None
     assert report["analysis"]["candidates"] == []
     assert report["valuation"]["purchase_pnl"] is not None
     assert daily_report.validate_delivery(report_root, DATE)["release"] == "BLOCKED"
+
+
+def test_missing_history_keeps_prices_and_known_position_without_fake_decisions(report_root):
+    day = "2026-10-08"
+    before = (report_root / "results/live/account_state.json").read_bytes()
+    publish_blocked(report_root, day, "账户状态未确认")
+    report = daily_report.read_json(report_root / f"results/live/{day}_daily_report.json")
+    analysis = report["analysis"]
+    assert analysis["status"] == "partial" and analysis["prices_status"] == "complete"
+    assert len(analysis["ranking"]) == 51
+    assert analysis["held"]["rank"] == 10
+    assert analysis["held"]["roc20"] == pytest.approx(-.0315700158)
+    assert analysis["holding_trusted"] and analysis["holding_decision_status"] == "unknown"
+    assert analysis["technical_target"] is None and analysis["candidates"] == []
+    assert set(analysis["news_dependencies"]["required_dates"]["emerging"]) == {"2026-09-29", "2026-09-30", day}
+    assert len(report["blocking_items"]) == 3
+    assert not report["orders"] and report["target_is_executable"] is False
+    assert (report_root / "results/live/account_state.json").read_bytes() == before
+    page = (report_root / "outputs/ETF轮动策略_今日日报.html").read_text()
+    assert "FileNotFoundError" not in page and "No such file" not in page
+    assert "未触发卖出或换仓" not in page and "0/2" not in page
+    assert "已确认" in page and "全池13涨、36跌、2平" in page
+    assert all(r["symbol"] in page for r in analysis["ranking"])
+    assert daily_report.validate_delivery(report_root, day)["delivery"] == "PASS"
+
+
+def test_daily_pnl_uses_exact_previous_unadjusted_session_without_previous_report(tmp_path):
+    state = daily_report.read_json(ROOT / f"results/audit/{DATE}_live_run_card.json")["account_state"]
+    prices = tmp_path / "market_data/prices/510300.SH.csv"
+    prices.parent.mkdir(parents=True)
+    prices.write_text("datetime,close\n2026-09-30,1\n2026-10-08,1\n")
+    for day, price in [("2026-09-30", 2.267), ("2026-10-08", 2.270)]:
+        atomic_json(tmp_path / f"market_data/live_quotes/{day}.json", {
+            "date": day, "adjust": "NONE", "final": True,
+            "quotes": {"159985.SZ": {"open": price, "close": price}}})
+    value = daily_report.valuation(tmp_path, "2026-10-08", state)
+    assert value["daily_pnl"] == pytest.approx(19.5)
+    assert value["purchase_pnl"] == pytest.approx(-520)
+    assert value["account_equity"] is None and value["account_return"] is None
+    assert "2026-09-30" in value["daily_basis"]
+    (tmp_path / "market_data/live_quotes/2026-09-30.json").unlink()
+    value = daily_report.valuation(tmp_path, "2026-10-08", state)
+    assert value["daily_pnl"] is None and value["purchase_pnl"] == pytest.approx(-520)
+
+
+def test_older_quote_never_substitutes_for_previous_trading_day(tmp_path):
+    state = daily_report.read_json(ROOT / f"results/audit/{DATE}_live_run_card.json")["account_state"]
+    prices = tmp_path / "market_data/prices/510300.SH.csv"
+    prices.parent.mkdir(parents=True)
+    prices.write_text("datetime,close\n2026-09-24,1\n2026-09-30,1\n2026-10-08,1\n")
+    for day in ("2026-09-24", "2026-10-08"):
+        atomic_json(tmp_path / f"market_data/live_quotes/{day}.json", {
+            "date": day, "adjust": "NONE", "final": True,
+            "quotes": {"159985.SZ": {"open": 2.27, "close": 2.27}}})
+    value = daily_report.valuation(tmp_path, "2026-10-08", state)
+    assert value["daily_pnl"] is None and "2026-09-30" in value["daily_limitation"]
+
+
+def test_partial_candidates_cannot_pass_delivery(report_root):
+    day = "2026-10-08"
+    publish_blocked(report_root, day, "资金待核")
+    path = report_root / f"results/live/{day}_daily_report.json"
+    report = daily_report.read_json(path)
+    report["analysis"]["ranking"][0]["final_entry_pass"] = True
+    atomic_json(path, report)
+    with pytest.raises(ValueError, match="部分资讯"):
+        daily_report.validate_delivery(report_root, day)
 
 
 def test_missing_everything_still_has_dated_report(tmp_path):

@@ -248,6 +248,14 @@ def publish_blocked(root: Path, date: str, reason: str) -> None:
             "execution": {"orders": [], "executable": False}, "blocking_items": [detail]}
     atomic_json(live / f"{date}_order_plan.json", plan)
     report = publish(root, date)
+    # Report all independently found gaps, not just the first thrown error.
+    issues = report["analysis"].get("news_dependencies", {}).get("issues", [])
+    if issues:
+        details = list(dict.fromkeys([detail, *issues]))
+        ready["blocking_items"] = plan["blocking_items"] = report["blocking_items"] = details
+        atomic_json(live / "readiness_report.json", ready)
+        atomic_json(live / f"{date}_order_plan.json", plan)
+        report = publish(root, date)
     audit = root / "results/audit"
     paths = [live / "readiness_report.json", live / "account_state.json",
              live / f"{date}_order_plan.json", live / f"{date}_daily_report.json",
@@ -256,6 +264,8 @@ def publish_blocked(root: Path, date: str, reason: str) -> None:
     paths += list((root / "config").glob("*.yaml"))
     paths += list((root / "market_data/prices").glob("*.csv"))
     paths += list((root / "src/etf_rotation").glob("*.py"))
+    paths += [root / p for p in report["valuation"].get("source_files", [])]
+    paths += [root / p for p in report["analysis"].get("news_dependencies", {}).get("files", [])]
     for relative in (f"market_data/live_quotes/{date}.json", f"market_data/sentiment/{date}.json",
                      f"market_data/sentiment/ai_review/{date}.json",
                      "scripts/build_live_order_plan.py", "scripts/build_sentiment_features.py"):
@@ -264,10 +274,10 @@ def publish_blocked(root: Path, date: str, reason: str) -> None:
     atomic_json(manifest_path, {"signal_date": date, "status": "BLOCKED",
         "critical_files": [{"path": str(p.relative_to(root)),
                            "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
-                          for p in paths if p.exists()]})
+                          for p in dict.fromkeys(paths) if p.exists()]})
     atomic_json(audit / f"{date}_live_run_card.json", {
         "card_type": "ye_live_run_card", "signal_date": date, "account_state": account,
-        "release": {"readiness": "BLOCKED", "blocking_items": [detail], "plan_is_not_fill": True},
+        "release": {"readiness": "BLOCKED", "blocking_items": ready["blocking_items"], "plan_is_not_fill": True},
         "decision": {"current_symbol": plan["current_symbol"], "target_symbol": None, "actions": []},
         "observation": report["analysis"], "sentiment_review": report["review"],
         "error": reason, "audit": {"run_manifest": str(manifest_path.relative_to(root)),
