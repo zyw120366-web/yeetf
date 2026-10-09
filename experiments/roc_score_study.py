@@ -21,7 +21,7 @@ from etf_rotation.ye import build_ye_signals
 
 
 STUDY = Path(__file__).with_suffix(".yaml")
-OUTPUT_DIR = ROOT / "results" / "audit" / "roc_score_study"
+OUTPUT_DIR = ROOT / "results" / "research" / "roc_score_study"
 SENTIMENT_FEATURES = (
     ROOT / "market_data" / "sentiment" / "features" / "symbol_daily.csv"
 )
@@ -317,12 +317,6 @@ def main() -> None:
     (OUTPUT_DIR / "report.json").write_text(
         json.dumps(clean(report), ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    for candidate_id, timing in timing_frames.items():
-        timing.to_csv(
-            OUTPUT_DIR / f"timing_{candidate_id}.csv",
-            index=False,
-            encoding="utf-8-sig",
-        )
     print(summary.to_string(float_format=lambda value: f"{value:.6f}"))
     print(json.dumps(clean({key: report[key] for key in (
         "local_weight_best_cagr",

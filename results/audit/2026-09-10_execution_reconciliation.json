@@ -1,0 +1,36 @@
+{
+  "signal_date": "2026-09-10",
+  "status": "confirmed",
+  "expected_orders": [
+    {
+      "side": "sell",
+      "symbol": "513200.SH"
+    },
+    {
+      "side": "buy",
+      "symbol": "159985.SZ"
+    }
+  ],
+  "actual_fills": [
+    {
+      "side": "sell",
+      "symbol": "513200.SH",
+      "status": "filled",
+      "quantity": 9100,
+      "price": 1.018
+    },
+    {
+      "side": "buy",
+      "symbol": "159985.SZ",
+      "status": "filled",
+      "quantity": 6500,
+      "price": 2.35
+    }
+  ],
+  "confirmation_status": "complete",
+  "matched_plan": true,
+  "all_filled": true,
+  "source": "用户本会话确认：港股通医药以1.018卖光（原9100股）；豆粕买入6500股，成本2.350",
+  "note": "两笔实际成交已确认；卖出金额9263.80元、买入金额15275元（均未扣费用）。现金、新增入金与费用待核，与成交事实确认分开，不再要求用户重复确认买卖。",
+  "created_at_utc": "2026-09-11T07:16:44.184341+00:00"
+}

@@ -13,6 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from etf_rotation.data import symbol_key
+from etf_rotation.sentiment_ai import (
+    canonical_event_key,
+    deduplicate_reviewed_rows,
+    effective_symbol_mapping,
+)
 
 
 def keyword_match(text: str, keywords: list[str]) -> bool:
@@ -20,8 +25,8 @@ def keyword_match(text: str, keywords: list[str]) -> bool:
     return any(str(keyword).casefold() in folded for keyword in keywords)
 
 
-def load_rows() -> tuple[pd.DatetimeIndex, dict[pd.Timestamp, list[dict]]]:
-    raw_dir = ROOT / "market_data" / "sentiment" / "ths_hot_reason"
+def load_rows(*, use_ai_reviews: bool = True, root: Path = ROOT) -> tuple[pd.DatetimeIndex, dict[pd.Timestamp, list[dict]]]:
+    raw_dir = root / "market_data" / "sentiment" / "ths_hot_reason"
     by_date: dict[pd.Timestamp, list[dict]] = {}
     for path in sorted(raw_dir.glob("*.json")):
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -31,8 +36,8 @@ def load_rows() -> tuple[pd.DatetimeIndex, dict[pd.Timestamp, list[dict]]]:
     # A complete AI review replaces the legacy keyword-only mapping for that
     # date. Incomplete files are ignored, so a partial review can never leak
     # into a live feature set.
-    ai_dir = ROOT / "market_data" / "sentiment" / "ai_review"
-    for path in sorted(ai_dir.glob("*.json")):
+    ai_dir = root / "market_data" / "sentiment" / "ai_review"
+    for path in sorted(ai_dir.glob("*.json")) if use_ai_reviews else []:
         payload = json.loads(path.read_text(encoding="utf-8"))
         if payload.get("status") != "complete" or payload.get("coverage") != 1.0:
             continue
@@ -44,10 +49,22 @@ def load_rows() -> tuple[pd.DatetimeIndex, dict[pd.Timestamp, list[dict]]]:
     return pd.DatetimeIndex(sorted(by_date)), by_date
 
 
-def build() -> pd.DataFrame:
-    config = yaml.safe_load((ROOT / "config" / "sentiment.yaml").read_text(encoding="utf-8"))
-    market = yaml.safe_load((ROOT / "config" / "market.yaml").read_text(encoding="utf-8"))
-    dates, rows_by_date = load_rows()
+def source_regimes(calendar: pd.DatetimeIndex) -> pd.DataFrame:
+    """Describe the computation path, without claiming historical AI review."""
+    _, rows = load_rows()
+    records = []
+    for day in calendar:
+        source = rows.get(pd.Timestamp(day))
+        regime = ("price_fallback" if source is None else
+                  "ai_review" if source and source[0].get("_ai_reviewed") else "keyword_proxy")
+        records.append({"date": pd.Timestamp(day), "regime": regime})
+    return pd.DataFrame(records)
+
+
+def build(*, use_ai_reviews: bool = True, root: Path = ROOT) -> pd.DataFrame:
+    config = yaml.safe_load((root / "config" / "sentiment.yaml").read_text(encoding="utf-8"))
+    market = yaml.safe_load((root / "config" / "market.yaml").read_text(encoding="utf-8"))
+    dates, rows_by_date = load_rows(use_ai_reviews=use_ai_reviews, root=root)
     symbol_keywords = {str(k): list(v) for k, v in config["symbol_keywords"].items()}
     categories = {symbol_key(item): str(item["category"]) for item in market["universe"]}
     category_keywords = {str(k): list(v) for k, v in config["category_keywords"].items()}
@@ -56,10 +73,27 @@ def build() -> pd.DataFrame:
     for day in dates:
         source_rows = rows_by_date[day]
         ai_day = bool(source_rows and source_rows[0].get("_ai_reviewed"))
+        if ai_day:
+            normalized_rows = []
+            for row in source_rows:
+                effective, rejected = effective_symbol_mapping(
+                    row, row["ai"], symbol_keywords
+                )
+                normalization = {
+                    **row.get("normalization", {}),
+                    "event_key": row.get("normalization", {}).get("event_key")
+                    or canonical_event_key(row),
+                    "effective_matched_symbols": effective,
+                    "rejected_matched_symbols": rejected,
+                }
+                normalized_rows.append({**row, "normalization": normalization})
+            source_rows = normalized_rows
         positive_market = [
             row for row in source_rows
             if not ai_day or (row["ai"]["relevant"] and int(row["ai"]["direction"]) > 0)
         ]
+        if ai_day:
+            positive_market = deduplicate_reviewed_rows(positive_market)
         market_count = len(positive_market)
         market_turnover = sum(float(row.get("turnover") or row.get("chengjiaoe") or 0.0) for row in positive_market)
         for symbol, category in categories.items():
@@ -70,11 +104,9 @@ def build() -> pd.DataFrame:
                 related = [
                     row for row in source_rows
                     if row["ai"]["relevant"]
-                    and (
-                        symbol in row["ai"]["matched_symbols"]
-                        or category in row["ai"]["matched_categories"]
-                    )
+                    and symbol in row["normalization"]["effective_matched_symbols"]
                 ]
+                related = deduplicate_reviewed_rows(related)
                 matched = [row for row in related if int(row["ai"]["direction"]) > 0]
                 negative = [row for row in related if int(row["ai"]["direction"]) < 0]
             else:
@@ -141,6 +173,13 @@ def main() -> None:
         "rows": int(len(frame)),
         "nonzero_symbol_days": int(frame["matched_count"].gt(0).sum()),
     }
+    regimes = source_regimes(pd.DatetimeIndex(sorted(frame["date"].unique())))
+    summary["source_regimes"] = {
+        label: {"dates": len(group), "first_date": str(group["date"].min().date()),
+                "last_date": str(group["date"].max().date())}
+        for label, group in regimes.groupby("regime")
+    }
+    summary["interpretation"] = "keyword_proxy是历史关键词代理，不是逐条AI审核；特征存在不等于当时已完成实盘审核"
     (output.parent / "summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8"
     )

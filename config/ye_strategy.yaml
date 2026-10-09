@@ -1,7 +1,7 @@
 name: ye 策略
 role: 唯一正式策略
 status: frozen_for_live
-frozen_on: '2026-07-18'
+frozen_on: '2026-07-29'
 
 execution:
   signal_time: 每个交易日收盘后
@@ -61,7 +61,21 @@ rules:
   defensive_etf: null
 
 enhanced_selection:
-  fixed_pool_size: 45
+  fixed_pool_size: 51
+  universe_architecture:
+    mode: core_champion_cash_gap
+    core_pool_size: 45
+    challenger_symbols:
+      - 560280.SH
+      - 561380.SH
+      - 512980.SH
+      - 513520.SH
+      - 513030.SH
+      - 561360.SH
+    entry_rule: 核心45只继续独立形成前5/前3强度标尺并拥有第一买入权；只有当天没有任何合格核心候选时，完整合格的挑战者才按相对核心池的虚拟排名竞争
+    isolation_rule: 挑战者不得稀释核心类别宽度、不得占据核心排名名额、不得改变核心持仓的排名退出；持有挑战者时一旦出现合格核心候选，下一开盘让位；挑战者只能影响核心原本没有候选的空档
+    live_selection_order: 先检查旧仓卖出；核心旧仓未卖出时再检查正式机会换仓，未满足则继续持有；空仓时核心候选优先；无核心候选才选挑战者；挑战者持仓遇核心候选时先卖挑战者再买核心
+    promotion_rule: 挑战者只在半年或年度池版本复核中考虑晋升；每日执行不得调整核心池或挑战者清单
   price_only_for_historical_dates_without_sentiment:
     entry_rank_limit: 3
     category_roc20_positive_breadth_min: 0.75
@@ -69,11 +83,12 @@ enhanced_selection:
       rank_limit: 3
       roc60_min: 0.08
       require_above_ma120: true
-    note: 仅用于历史缺失期复现；实盘情绪审核不完整时不开新仓
+    note: 仅用于历史缺失期复现；挑战者宽度只取核心池同类，核心无同类时不得自我确认；实盘情绪审核不完整时不开新仓
   sentiment_available:
     source: a-stock-data盘面数据 + 财联社快讯，经AI逐条结构化审核
     ai_review_required: true
     ai_review_mode: current Codex chat reviews every collected row; no external API key
+    evidence_normalization: 每行保留审核；ETF映射必须有专属关键词直接支持；同日同公司跨来源在特征层只计一次
     incomplete_review_action: 不开新仓；既有仓位的价格卖出规则继续执行
     weak_edge_filter:
       applies_when: 基础排名4至5且ROC20低于2%
@@ -108,23 +123,38 @@ enhanced_selection:
       protects: ROC20转负与排名衰退两类软退出
       never_protects: MA120破位
   reentry_cooldown_days: 5
+  opportunity_switch:
+    enabled: true
+    applies_to: 仅允许核心ETF换到另一只核心ETF；卫星继续遵守核心恢复即让位
+    held_rank_must_exceed: 5
+    candidate_requirement: 另一只核心ETF必须完整通过当天正式买入条件
+    minimum_score_advantage: 0.05
+    score_definition: ROC20 + 1.5 × ROC60；比较原始动量分，不使用新趋势专属选择分
+    confirmation_days: 2
+    same_candidate_required: true
+    minimum_hold_days: 5
+    live_baseline_on: '2026-07-29'
+    live_confirmation_starts_on: '2026-07-30'
+    execution: 第2个连续确认日收盘形成信号，下一交易日开盘全仓先卖旧仓、再买新仓
+    reset_rule: 任一条件中断或领先ETF改变，连续计数归零
 
 plain_language:
-  score: ROC20 × 1.0 + ROC60 × 1.5；趋势质量与情绪只作门槛或例外，不替代核心动量评分
-  buy: 固定45只池中，通常要求排名前5、ROC20和ROC60均为正、位于MA120上方且乖离不超过9%，再买合格标的中得分最高的1只
-  hold: 最多持有1只；没有合格标的时持有现金
+  score: ROC20 × 1.0 + ROC60 × 1.5；45只核心池形成冻结强度标尺，6只挑战者用相同分数与核心标尺比较
+  buy: 核心池照旧要求前5、双ROC为正、位于MA120上方且乖离不超过9%，并拥有第一买入权；只有当天无合格核心候选时，挑战者才可在完整通过上市、流动性、价格与AI路径后填补空档；核心候选恢复时挑战者让位
+  hold: 最多持有1只；旧仓未触发卖出且未满足机会换仓时继续持有；没有合格标的时持有现金
   sell: 跌破MA120、ROC20转负、或当前排名同时差于5日前和20日前，任一触发即退出；只有已审核热点可短暂保护软退出，MA120破位不延迟
+  switch: 核心旧仓掉出前5、另一只完整合格核心ETF的动量分领先至少5个百分点、同一候选连续2日成立，且旧仓已持有满5个交易日时，下一开盘全仓换入；任一条件中断即重新计数
   news: 所有已采集盘面与新闻逐条由AI审核；漏审、重复或来源失败均视为情绪数据不可用，禁止部分数据进入买入信号
 
 validation:
   backtest_start: '2018-07-02'
-  backtest_end: '2026-07-20'
-  total_return: 5.6033282055
-  cagr: 0.2642791940
-  max_drawdown: -0.2218193578
-  failed_operation_rate: 0.6875
-  return_2021_2022: 0.2055634199
-  return_2025_2026: 2.9342760502
+  backtest_end: '2026-07-29'
+  total_return: 8.636409561411659
+  cagr: 0.3239249257301313
+  max_drawdown: -0.20906256593091377
+  failed_operation_rate: 0.6268656716417911
+  return_2021_2022: 0.23620671475347677
+  return_2025_2026: 2.861723974135203
   live_use_allowed: true
-  live_condition: 参数冻结；每日数据、AI审核覆盖率、次日开盘执行与固定成本记录全部通过检查
-  parameter_note: 规则已冻结；实盘中不得根据单笔盈亏临时改阈值
+  live_condition: 核心池与挑战者清单冻结；每日数据、AI审核覆盖率、次日开盘执行与固定成本记录全部通过检查
+  parameter_note: 2026-07-29新增核心间机会成本换仓；扩池隔离、基础买入、原卖出、成本、单仓与AI审核强度不变

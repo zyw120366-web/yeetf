@@ -21,7 +21,8 @@ def main() -> None:
         default=Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")),
     )
     args = parser.parse_args()
-    target = args.codex_home.expanduser().resolve() / "skills" / SOURCE.name
+    codex_root = args.codex_home.expanduser().resolve()
+    target = codex_root / "skills" / SOURCE.name
     if not SOURCE.is_dir():
         raise FileNotFoundError(f"repository skill is missing: {SOURCE}")
     if target.is_symlink() and target.resolve() == SOURCE.resolve():
@@ -29,8 +30,10 @@ def main() -> None:
         return
     backup = None
     if target.exists() or target.is_symlink():
-        stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-        backup = target.with_name(f"{target.name}.backup-{stamp}")
+        stamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+        # A backup under skills/ is still discoverable and creates two SOPs.
+        backup = codex_root / "skill-archives" / f"{target.name}.backup-{stamp}"
+        backup.parent.mkdir(parents=True, exist_ok=True)
         target.rename(backup)
     target.parent.mkdir(parents=True, exist_ok=True)
     try:

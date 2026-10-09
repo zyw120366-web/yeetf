@@ -1,0 +1,235 @@
+{
+  "schema_version": 2,
+  "signal_date": "2026-10-09",
+  "status": "BLOCKED",
+  "created_at_utc": "2026-10-09T16:01:17.070885+00:00",
+  "code_revision": "abbda70de44713d2e0a81f5c2a576c13f76802c5",
+  "uncommitted_code": [],
+  "scope": "只绑定当日计划与日报；行情/资讯记录路径，不重复全库哈希。历史代码及输入版本追溯Git。",
+  "critical_files": [
+    {
+      "path": "results/live/2026-10-09_order_plan.json",
+      "sha256": "498780b37830089d3128485595b597ae89cdf7df89ea89447a27761b4288feb0"
+    },
+    {
+      "path": "results/live/2026-10-09_daily_report.json",
+      "sha256": "3efa3114d2f08d8dedd2dc91800a1d50dee98267c60e0a33e4b13f163e962062"
+    },
+    {
+      "path": "results/live/2026-10-09_daily_report.md",
+      "sha256": "3a8b9dc1bbcb0d17b0bb29802b214d688066c4b02511adbd99addf9c227d4f80"
+    },
+    {
+      "path": "outputs/ETF轮动策略_今日日报.html",
+      "sha256": "c0127fdc93ae4718e4b2d9a055310503ab0d7d537caaeb71fb079f7b9b8c183e"
+    },
+    {
+      "path": "dashboard/public/ye-daily.html",
+      "sha256": "89edde55cfa28cd77606a03eeb476cad19fb8b8b0809241fcb07c7bf43387cee"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "market_data/live_quotes/2026-10-09.json"
+    },
+    {
+      "path": "market_data/live_quotes/2026-10-08.json"
+    },
+    {
+      "path": "market_data/sentiment/2026-10-08.json"
+    },
+    {
+      "path": "market_data/sentiment/ai_review/2026-10-08.json"
+    },
+    {
+      "path": "market_data/sentiment/2026-10-09.json"
+    },
+    {
+      "path": "market_data/sentiment/ai_review/2026-10-09.json"
+    }
+  ],
+  "price_files": [
+    {
+      "path": "market_data/prices/159611.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159647.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159745.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159755.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159766.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159819.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159851.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159865.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159869.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159870.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159915.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159920.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159941.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159981.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159985.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159996.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/510300.SH.csv"
+    },
+    {
+      "path": "market_data/prices/510500.SH.csv"
+    },
+    {
+      "path": "market_data/prices/510630.SH.csv"
+    },
+    {
+      "path": "market_data/prices/510880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512010.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512040.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512070.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512100.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512170.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512200.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512400.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512660.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512690.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512760.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512800.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512980.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513030.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513090.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513120.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513130.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513200.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513310.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513500.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513520.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513530.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515030.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515050.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515210.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515220.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515790.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/516020.SH.csv"
+    },
+    {
+      "path": "market_data/prices/516150.SH.csv"
+    },
+    {
+      "path": "market_data/prices/516970.SH.csv"
+    },
+    {
+      "path": "market_data/prices/518880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/560280.SH.csv"
+    },
+    {
+      "path": "market_data/prices/561360.SH.csv"
+    },
+    {
+      "path": "market_data/prices/561380.SH.csv"
+    },
+    {
+      "path": "market_data/prices/562500.SH.csv"
+    },
+    {
+      "path": "market_data/prices/562600.SH.csv"
+    },
+    {
+      "path": "market_data/prices/563380.SH.csv"
+    },
+    {
+      "path": "market_data/prices/588200.SH.csv"
+    }
+  ],
+  "counts": {
+    "critical_files": 5,
+    "source_files": 0,
+    "price_files": 59
+  }
+}

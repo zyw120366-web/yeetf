@@ -1,6 +1,6 @@
 {
   "study_id": "H-2026-07-20-01",
-  "generated_on": "2026-07-20",
+  "generated_on": "2026-07-22",
   "status": "incorporated_formal_backtest",
   "formal_strategy_unchanged": false,
   "assumption": {
@@ -13,47 +13,47 @@
   },
   "data": {
     "start": "2018-07-02",
-    "end": "2026-07-17",
+    "end": "2026-07-22",
     "initial_capital": 100000.0
   },
   "baseline": {
-    "total_return": 5.249275629005599,
-    "cagr": 0.2559450746526102,
-    "annual_volatility": 0.2224422867711686,
-    "sharpe": 1.1743446236233255,
-    "sortino": 2.0369011293257757,
+    "total_return": 5.410460336102823,
+    "cagr": 0.2594342171380979,
+    "annual_volatility": 0.22236411566577857,
+    "sharpe": 1.1878227649767685,
+    "sortino": 2.060562223443564,
     "max_drawdown": -0.22632838451238413,
-    "calmar": 1.1308571622778738,
-    "annual_turnover": 16.103233865660595,
-    "trade_count": 247.0,
-    "average_exposure": 0.5173558187433323,
-    "total_fees": 5997.381786747105,
-    "slippage_cost_estimate": 33031.294291793725
+    "calmar": 1.146273445538168,
+    "annual_turnover": 16.198734676490584,
+    "trade_count": 249.0,
+    "average_exposure": 0.5178675065938187,
+    "total_fees": 6186.882460239727,
+    "slippage_cost_estimate": 33791.722230611456
   },
   "cash_managed": {
-    "total_return": 5.532929535480433,
-    "cagr": 0.26289756672439046,
-    "annual_volatility": 0.22229698672524215,
-    "sharpe": 1.2007763592897176,
-    "sortino": 2.081700238047506,
+    "total_return": 5.697909758217876,
+    "cagr": 0.2663115253036332,
+    "annual_volatility": 0.22221365708135485,
+    "sharpe": 1.2139514206532174,
+    "sortino": 2.104776956275001,
     "max_drawdown": -0.2218193578066835,
-    "calmar": 1.1851876649715432,
-    "annual_turnover": 16.09558734174046,
-    "trade_count": 254.0,
-    "average_exposure": 0.5171007959550586,
-    "total_fees": 6219.41148625895,
-    "slippage_cost_estimate": 34139.95695561647,
-    "cash_interest_income": 8401.808219178101,
-    "cash_management_fees": 1361.3300000000015,
-    "cash_interest_calendar_days": 2937.0,
-    "average_close_cash_weight": 0.4826441812566678
+    "calmar": 1.2005783802499548,
+    "annual_turnover": 16.191205629353117,
+    "trade_count": 256.0,
+    "average_exposure": 0.5176073124349493,
+    "total_fees": 6417.139758380486,
+    "slippage_cost_estimate": 34933.2207946086,
+    "cash_interest_income": 8495.342465753449,
+    "cash_management_fees": 1370.8500000000026,
+    "cash_interest_calendar_days": 2942.0,
+    "average_close_cash_weight": 0.4821324934061813
   },
   "difference": {
-    "final_equity": 28365.390647483408,
-    "total_return_pct_points": 28.3653906474834,
-    "cagr_pct_points": 0.6952492071780281,
+    "final_equity": 28744.94221150526,
+    "total_return_pct_points": 28.744942211505276,
+    "cagr_pct_points": 0.6877308165535334,
     "max_drawdown_pct_points": 0.4509026705700636,
-    "sharpe": 0.02643173566639212,
+    "sharpe": 0.026128655676448842,
     "trade_count": 7.0
   },
   "periods": {
@@ -68,14 +68,14 @@
       "difference_pct_points": 1.2683455239835162
     },
     "2023—2024": {
-      "baseline_total_return": 0.3756018380535733,
-      "cash_managed_total_return": 0.38460637539670084,
-      "difference_pct_points": 0.9004537343127561
+      "baseline_total_return": 0.3768436705376612,
+      "cash_managed_total_return": 0.3857913052219748,
+      "difference_pct_points": 0.8947634684313588
     },
     "2025—2026": {
-      "baseline_total_return": 2.88006038150061,
-      "cash_managed_total_return": 2.8956633951105006,
-      "difference_pct_points": 1.5603013609890581
+      "baseline_total_return": 2.976547152843907,
+      "cash_managed_total_return": 2.990627927046517,
+      "difference_pct_points": 1.4080774202609891
     }
   },
   "conclusion": "现金管理已纳入正式回测口径，只提高闲置资金收益，不改变任何ETF买卖信号；实盘仍以每日实际下单年化和券商回单为准。"

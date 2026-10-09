@@ -70,6 +70,26 @@ class EtfwinProfitProtection:
 
 
 @dataclass(frozen=True)
+class EtfwinOpportunitySwitch:
+    """Allow one fully qualified holding to replace a weaker existing one."""
+
+    held_rank_must_exceed: int
+    minimum_score_advantage: float
+    confirmation_days: int
+    minimum_hold_days: int
+
+    def __post_init__(self) -> None:
+        if self.held_rank_must_exceed < 1:
+            raise ValueError("opportunity-switch rank threshold must be positive")
+        if self.minimum_score_advantage < 0:
+            raise ValueError("opportunity-switch score advantage cannot be negative")
+        if self.confirmation_days < 1:
+            raise ValueError("opportunity-switch confirmation must be positive")
+        if self.minimum_hold_days < 0:
+            raise ValueError("opportunity-switch minimum hold cannot be negative")
+
+
+@dataclass(frozen=True)
 class EtfwinFeatures:
     roc_short: pd.DataFrame
     roc_medium: pd.DataFrame
@@ -151,12 +171,19 @@ def etfwin_signals(
     raw_score_override: pd.DataFrame | None = None,
     entry_ranking_score_override: pd.DataFrame | None = None,
     soft_exit_confirmation: pd.DataFrame | None = None,
+    dual_rank_decline_override: pd.DataFrame | None = None,
     emergency_exit: pd.DataFrame | None = None,
     atr: pd.DataFrame | None = None,
     profit_protection: EtfwinProfitProtection | None = None,
     profit_confirmation: pd.DataFrame | None = None,
     rank_only_entry_eligible: bool = False,
     reentry_cooldown_days: int = 0,
+    priority_symbols: list[str] | None = None,
+    preempt_for_priority_entry: bool = False,
+    opportunity_switch: EtfwinOpportunitySwitch | None = None,
+    opportunity_switch_rank: pd.DataFrame | None = None,
+    opportunity_switch_score: pd.DataFrame | None = None,
+    opportunity_switch_symbols: list[str] | None = None,
 ) -> tuple[SignalBundle, EtfwinFeatures]:
     """Run an ETFWin-core rotation strategy without look-ahead.
 
@@ -176,6 +203,25 @@ def etfwin_signals(
     missing = set(symbols) - set(close.columns)
     if missing:
         raise KeyError(f"missing close series: {sorted(missing)}")
+    priority = set(priority_symbols or [])
+    missing_priority = priority - set(symbols)
+    if missing_priority:
+        raise KeyError(f"priority symbols are missing: {sorted(missing_priority)}")
+    if preempt_for_priority_entry and not priority:
+        raise ValueError("priority symbols are required when preemption is enabled")
+    switch_symbols = set(opportunity_switch_symbols or [])
+    if opportunity_switch is not None:
+        if rules.holdings_num != 1:
+            raise ValueError("opportunity switching requires exactly one holding")
+        if opportunity_switch_rank is None or opportunity_switch_score is None:
+            raise ValueError("opportunity switching requires rank and score matrices")
+        missing_switch_symbols = switch_symbols - set(symbols)
+        if missing_switch_symbols:
+            raise KeyError(
+                f"opportunity-switch symbols are missing: {sorted(missing_switch_symbols)}"
+            )
+        if not switch_symbols:
+            raise ValueError("opportunity switching requires an allowed symbol set")
     prices = close[symbols]
     features = etfwin_features(
         prices, rules, raw_score_override=raw_score_override
@@ -223,6 +269,18 @@ def etfwin_signals(
             exit_rank.gt(exit_rank.shift(rules.rank_change_short_days))
             & exit_rank.gt(exit_rank.shift(rules.rank_change_long_days))
         ).fillna(False)
+    if dual_rank_decline_override is not None:
+        missing_decline = set(symbols) - set(dual_rank_decline_override.columns)
+        if missing_decline:
+            raise KeyError(
+                "dual-rank-decline override is missing symbols: "
+                f"{sorted(missing_decline)}"
+            )
+        dual_rank_decline = (
+            dual_rank_decline_override.reindex(index=prices.index, columns=symbols)
+            .fillna(False)
+            .astype(bool)
+        )
     if entry_gate is None:
         entry_gate = pd.DataFrame(True, index=prices.index, columns=symbols)
     else:
@@ -231,6 +289,14 @@ def etfwin_signals(
             .fillna(False)
             .astype(bool)
         )
+    if opportunity_switch_rank is not None:
+        opportunity_switch_rank = opportunity_switch_rank.reindex(
+            index=prices.index, columns=symbols
+        ).astype(float)
+    if opportunity_switch_score is not None:
+        opportunity_switch_score = opportunity_switch_score.reindex(
+            index=prices.index, columns=symbols
+        ).astype(float)
     if soft_exit_confirmation is None:
         soft_exit_confirmation = pd.DataFrame(
             True, index=prices.index, columns=symbols
@@ -287,11 +353,23 @@ def etfwin_signals(
     entry_atr = {symbol: np.nan for symbol in symbols}
     highest_close = {symbol: np.nan for symbol in symbols}
     last_exit_location = {symbol: -10_000_000 for symbol in symbols}
+    entered_location = {symbol: -10_000_000 for symbol in symbols}
+    switch_streak_symbol: str | None = None
+    switch_streak_count = 0
     rows: list[dict[str, object]] = []
 
     for location, date in enumerate(prices.index):
         exited: list[str] = []
         reasons: dict[str, str] = {}
+        switch_candidate: str | None = None
+        switch_score_gap = np.nan
+        switch_qualified = False
+        switch_triggered = False
+        priority_available = any(
+            bool(entry.loc[date, symbol])
+            and location - last_exit_location[symbol] > reentry_cooldown_days
+            for symbol in priority
+        )
         for symbol in list(selected):
             price = float(prices.loc[date, symbol])
             if np.isfinite(price):
@@ -354,7 +432,9 @@ def etfwin_signals(
                     and bool(profit_confirmation.loc[date, symbol])  # type: ignore[union-attr]
                 )
             reason = None
-            if emergency_exit.loc[date, symbol]:
+            if preempt_for_priority_entry and symbol not in priority and priority_available:
+                reason = "核心池出现合格候选"
+            elif emergency_exit.loc[date, symbol]:
                 reason = "附加紧急风险退出"
             elif ma_break:
                 reason = "跌破MA120"
@@ -379,6 +459,74 @@ def etfwin_signals(
                 exited.append(symbol)
                 reasons[symbol] = reason
 
+        if exited:
+            switch_streak_symbol = None
+            switch_streak_count = 0
+
+        if opportunity_switch is not None and selected:
+            held = selected[0]
+            if held in switch_symbols:
+                candidates = (
+                    entry_ranking_score.loc[date]
+                    .where(entry.loc[date])
+                    .dropna()
+                    .loc[lambda row: row.index.isin(switch_symbols)]
+                    .drop(index=held, errors="ignore")
+                    .sort_values(ascending=False)
+                )
+                candidates = candidates.loc[
+                    [
+                        symbol
+                        for symbol in candidates.index
+                        if location - last_exit_location[str(symbol)]
+                        > reentry_cooldown_days
+                    ]
+                ]
+                if not candidates.empty:
+                    switch_candidate = str(candidates.index[0])
+                    switch_score_gap = float(
+                        opportunity_switch_score.loc[date, switch_candidate]
+                        - opportunity_switch_score.loc[date, held]
+                    )
+                    switch_qualified = bool(
+                        opportunity_switch_rank.loc[date, held]
+                        > opportunity_switch.held_rank_must_exceed
+                        and switch_score_gap
+                        >= opportunity_switch.minimum_score_advantage
+                        and location - entered_location[held]
+                        >= opportunity_switch.minimum_hold_days
+                    )
+            if switch_qualified and switch_candidate is not None:
+                if switch_streak_symbol == switch_candidate:
+                    switch_streak_count += 1
+                else:
+                    switch_streak_symbol = switch_candidate
+                    switch_streak_count = 1
+            else:
+                switch_streak_symbol = None
+                switch_streak_count = 0
+
+            if (
+                switch_qualified
+                and switch_candidate is not None
+                and switch_streak_count >= opportunity_switch.confirmation_days
+            ):
+                old = held
+                selected.remove(old)
+                last_exit_location[old] = location
+                entered_location[old] = -10_000_000
+                roc_weak_streak[old] = 0
+                rank_weak_streak[old] = 0
+                ma_break_streak[old] = 0
+                entry_price[old] = np.nan
+                entry_atr[old] = np.nan
+                highest_close[old] = np.nan
+                exited.append(old)
+                reasons[old] = "机会成本换仓"
+                switch_triggered = True
+                switch_streak_symbol = None
+                switch_streak_count = 0
+
         entered: list[str] = []
         if len(selected) < rules.holdings_num:
             candidates = (
@@ -387,6 +535,8 @@ def etfwin_signals(
                 .dropna()
                 .sort_values(ascending=False)
             )
+            if priority_available:
+                candidates = candidates.loc[candidates.index.isin(priority)]
             for symbol in candidates.index:
                 symbol = str(symbol)
                 if symbol in selected or symbol in exited:
@@ -394,6 +544,7 @@ def etfwin_signals(
                 if location - last_exit_location[symbol] <= reentry_cooldown_days:
                     continue
                 selected.append(symbol)
+                entered_location[symbol] = location
                 roc_weak_streak[symbol] = 0
                 rank_weak_streak[symbol] = 0
                 ma_break_streak[symbol] = 0
@@ -424,7 +575,13 @@ def etfwin_signals(
                     f"{symbol}:{reason}" for symbol, reason in reasons.items()
                 ),
                 "entry_eligible_count": int(entry.loc[date].sum()),
+                "priority_entry_available": bool(priority_available),
                 "holding_count": len(selected),
+                "opportunity_switch_candidate": switch_candidate or "",
+                "opportunity_switch_score_gap": switch_score_gap,
+                "opportunity_switch_qualified": bool(switch_qualified),
+                "opportunity_switch_streak": int(switch_streak_count),
+                "opportunity_switch_triggered": bool(switch_triggered),
             }
         )
 

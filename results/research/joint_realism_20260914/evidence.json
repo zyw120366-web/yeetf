@@ -1,0 +1,23 @@
+{
+  "audit_scope": "positive-market aggregate before symbol-specific filtering; not a return counterfactual",
+  "days": 40,
+  "rows": 7671,
+  "no_dde_days": 36,
+  "field_losses": 526,
+  "order_recoverable_field_losses": 525,
+  "losses_by_field": {
+    "turnover": 526
+  },
+  "source_code_sha256": {
+    "experiments/joint_realism_evidence.py": "e01ecd3b7929bbe686936eea181ebcc0ae2123218e0ce78d987c0ef8693b23a4",
+    "src/etf_rotation/sentiment_ai.py": "ac5420268d63e238d519af09aa5c4204992ec0f349ada3929cf608a4147c0142",
+    "scripts/build_sentiment_features.py": "3ebe7596d9383419e86eb2ed9e105e8b5eff067415dac510a8f13ad71320d4c8"
+  },
+  "permutation_hot_score_changed_symbol_days": 1069,
+  "permutation_hot_score_changed_days": 24,
+  "permutation_max_abs_hot_score_difference": 0.22499999999999998,
+  "permutation_gate_changes": 14,
+  "permutation_signal_weight_changed_days": 0,
+  "permutation_signal_basis": "unchanged formal frozen prices and config; recomputed features, order-only perturbation; no account or execution changes",
+  "window_caveat": "consecutive differing holdings; not matched independent trades, not additive contributions; endpoints include execution days"
+}

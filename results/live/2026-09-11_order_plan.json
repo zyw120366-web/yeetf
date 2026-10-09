@@ -1,0 +1,51 @@
+{
+  "strategy": "ye 策略",
+  "signal_date": "2026-09-11",
+  "status": "BLOCKED",
+  "current_symbol": "159985.SZ",
+  "target_symbol": null,
+  "actions": [],
+  "execution": {
+    "orders": [],
+    "executable": false
+  },
+  "reported_buy": {
+    "symbol": "159985.SZ",
+    "quantity": 6500,
+    "price": 2.35
+  },
+  "account_reconciliation_status": "cash_pending",
+  "ai_review": {
+    "input_count": 119,
+    "reviewed_count": 119,
+    "coverage": 1,
+    "status": "complete"
+  },
+  "note": "用户确认新增本金但金额、余款及费用待核，账户总权益和累计收益未知；行情与119条资讯已完整复核。当前豆粕6500股未触发卖出/换仓，仅为持仓观察结论；不放行新订单。",
+  "trade_reconciliation_status": "confirmed",
+  "observation": {
+    "technical_target": "159985.SZ",
+    "holding_action": "hold",
+    "exit_reasons": [],
+    "opportunity_switch": {
+      "enabled": true,
+      "candidate_symbol": "512800.SH",
+      "qualifies_today": false,
+      "confirmation_streak": 0,
+      "required_confirmation_days": 2,
+      "triggered": false,
+      "status": "not_qualified",
+      "live_baseline_on": "2026-07-29",
+      "live_confirmation_starts_on": "2026-07-30",
+      "holding_symbol": "159985.SZ",
+      "holding_rank": 2,
+      "holding_since": "2026-09-11",
+      "held_trading_days": 1,
+      "candidate_rank": 4,
+      "score_gap": -0.1058745912085669,
+      "minimum_score_advantage": 0.05,
+      "reset_rule": "任一条件中断或领先ETF改变，连续计数归零"
+    },
+    "executable": false
+  }
+}
