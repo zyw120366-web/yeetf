@@ -216,9 +216,21 @@ def collect(root: Path, date: str) -> dict:
         reasons = ["放行日期与日报日期不一致"]
     if plan.get("signal_date") != date:
         status, reasons, plan = "BLOCKED", ["缺少当日订单计划"], {}
+    analysis = {"status": "unavailable", "ranking": [], "candidates": []}
     try:
-        review = validate_live_review(root, date)
-        review = {k: review.get(k) for k in ("status", "input_count", "reviewed_count", "coverage", "snapshot_hash")}
+        analysis = analyze(root, date, account)
+    except Exception as exc:
+        analysis["error"] = f"{type(exc).__name__}: {exc}"
+        analysis["issues"] = ["价格或配置证据不足；已确认持仓与可用估值仍单独展示"]
+    checked = analysis.get("news_dependencies", {}).get("checks", {}).get(date)
+    try:
+        if checked:
+            if checked["status"] != "complete":
+                raise ValueError(checked["message"])
+            review = checked["review"]
+        else:
+            review = validate_live_review(root, date)
+            review = {k: review.get(k) for k in ("status", "input_count", "reviewed_count", "coverage", "snapshot_hash")}
     except (ValueError, OSError, KeyError, RuntimeError) as exc:
         review = {"status": "unverified", "coverage": None, "error": str(exc)}
     if status in {"READY", "SELL_ONLY"}:
@@ -228,12 +240,6 @@ def collect(root: Path, date: str) -> dict:
                 raise ValueError("完整计划缺少有效资讯审核")
         except ValueError as exc:
             status, reasons = "BLOCKED", [str(exc)]
-    analysis = {"status": "unavailable", "ranking": [], "candidates": []}
-    try:
-        analysis = analyze(root, date, account)
-    except Exception as exc:
-        analysis["error"] = f"{type(exc).__name__}: {exc}"
-        analysis["issues"] = ["价格或配置证据不足；已确认持仓与可用估值仍单独展示"]
     snapshot = read_json(root / f"market_data/sentiment/{date}.json")
     sources = {k: {"ok": v.get("ok"), "rows": len(v.get("rows") or [])}
                for k, v in snapshot.get("sources", {}).items()}
@@ -250,7 +256,7 @@ def collect(root: Path, date: str) -> dict:
                   "news_data_quality": {"dde_available": dde_available},
                   "backtest_as_of": read_json(root / "results/comparison/latest_signals.json").get("signal_date"),
                   "orders": orders, "actions": plan.get("actions", []) if status != "BLOCKED" else [],
-                  "price_risk_check": price_risk_check(root, date, account),
+                  "price_risk_check": price_risk_check(root, date, account, ranking=analysis.get("ranking")),
                   "available_links": [p for p in ["outputs/ETF轮动策略_回测.html", "outputs/ETF轮动策略_策略与回测.html",
                                       f"market_data/sentiment/ai_review/{date}.json"] if (root / p).is_file()],
                   "target_symbol": plan.get("target_symbol") if status != "BLOCKED" else None,
@@ -417,8 +423,8 @@ def render_markdown(report: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
-def publish(root: Path, date: str) -> dict:
-    report = collect(root, date)
+def publish(root: Path, date: str, *, report: dict | None = None) -> dict:
+    report = collect(root, date) if report is None else report
     atomic_json(root / f"results/live/{date}_daily_report.json", report)
     for relative, content in [(f"results/live/{date}_daily_report.md", render_markdown(report)),
                               ("outputs/ETF轮动策略_今日日报.html", render(report)),
@@ -431,8 +437,9 @@ def publish(root: Path, date: str) -> dict:
     return report
 
 
-def validate_delivery(root: Path, date: str) -> dict:
-    """Validate the deliverable, independently of permission to trade."""
+def validate_delivery(root: Path, date: str, *, deep: bool = False) -> dict:
+    """Validate decisions and delivery; legacy whole-tree hashes are opt-in."""
+    from .run_record import delivery_files
     from html.parser import HTMLParser
     report = read_json(root / f"results/live/{date}_daily_report.json")
     plan = read_json(root / f"results/live/{date}_order_plan.json")
@@ -475,7 +482,7 @@ def validate_delivery(root: Path, date: str) -> dict:
             raise ValueError("部分资讯分析不得伪装成完整候选")
     required_evidence = (report.get("valuation", {}).get("source_files", [])
                          + analysis.get("news_dependencies", {}).get("files", []))
-    bound = {r["path"] for key in ("critical_files", "source_files", "price_files") for r in manifest.get(key, [])}
+    bound = {r["path"] for key in ("critical_files", "evidence_files", "price_files") for r in manifest.get(key, [])}
     if not set(required_evidence).issubset(bound):
         raise ValueError("估值或资讯依赖未纳入清单")
     class Links(HTMLParser):
@@ -497,19 +504,27 @@ def validate_delivery(root: Path, date: str) -> dict:
         for target in parser.targets:
             if not (path.parent / target).is_file():
                 raise ValueError(f"日报链接不存在：{target}")
-    for key in ("critical_files", "source_files", "price_files"):
-        for record in manifest.get(key, []):
-            if hashlib.sha256((root / record["path"]).read_bytes()).hexdigest() != record["sha256"]:
-                raise ValueError(f"清单哈希不一致：{record['path']}")
+    records = {r["path"]: r for key in ("critical_files", "source_files", "price_files") for r in manifest.get(key, [])}
+    if not set(delivery_files(date)).issubset(records):
+        raise ValueError("清单缺少当日计划或日报绑定")
+    # Code changes and newly appended price bars do not invalidate yesterday's
+    # frozen decision. Deep verification only makes sense in its Git snapshot.
+    checked = list(records) if deep else delivery_files(date)
+    for relative in checked:
+        expected = records[relative].get("sha256")
+        if expected is not None and hashlib.sha256((root / relative).read_bytes()).hexdigest() != expected:
+            raise ValueError(f"清单哈希不一致：{relative}")
+        if relative in delivery_files(date) and expected is None:
+            raise ValueError(f"当日交付缺少绑定：{relative}")
     if card.get("audit", {}).get("run_manifest_sha256") != hashlib.sha256(manifest_path.read_bytes()).hexdigest():
         raise ValueError("运行卡未绑定当前清单")
     return {"delivery": "PASS", "signal_date": date, "release": status,
             "analysis": report["analysis"]["status"], "daily_report": str(root / "outputs/ETF轮动策略_今日日报.html")}
 
 
-def delivery_receipt(root: Path, date: str) -> str:
+def delivery_receipt(root: Path, date: str, *, deep: bool = False) -> str:
     """Read-only, validated user reply; no XML wrapper or guessed Git status."""
-    validate_delivery(root, date)
+    validate_delivery(root, date, deep=deep)
     report = read_json(root / f"results/live/{date}_daily_report.json")
     v, review, account = report["valuation"], report["review"], report["account"]
     lines = [f"{date} 收盘日报", describe_action(report)]

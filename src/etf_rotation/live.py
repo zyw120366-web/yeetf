@@ -189,11 +189,17 @@ def apply_live_cooldown(ranking: pd.DataFrame, account: dict, day: str,
     return result
 
 
-def price_risk_check(root: Path, date: str, account: dict) -> list[str]:
+def price_risk_check(root: Path, date: str, account: dict, *, ranking: list | None = None) -> list[str]:
     """Keep price warnings visible when the news/publication stage fails."""
     if not account.get("positions"):
         return ["账户记录为空仓"]
     try:
+        if ranking:
+            rows = {r["symbol"]: r for r in ranking if r.get("date") == date}
+            return price_risk_warnings([
+                (p["symbol"], rows[p["symbol"]]["close"], rows[p["symbol"]]["ma120"],
+                 rows[p["symbol"]]["roc20"], rows[p["symbol"]]["dual_rank_decline"])
+                for p in account["positions"]])
         import yaml
         from .data import load_panel, universe_keys
         from .ye import _rules, anchor_competitive_rank
@@ -213,26 +219,34 @@ def price_risk_check(root: Path, date: str, account: dict) -> list[str]:
         ranks = anchor_competitive_rank(features.ranking_score, eligible,
                                         [s for s in symbols if s not in satellites], satellites)
         dual = ranks.gt(ranks.shift(values["rank_change_short_days"])) & ranks.gt(ranks.shift(values["rank_change_long_days"]))
-        warnings = []
+        rows = []
         for position in account["positions"]:
             symbol = position["symbol"]
             price, ma = close.at[day, symbol], close[symbol].rolling(values["ma_days"]).mean().at[day]
             roc = features.roc_short.at[day, symbol]
-            if not all(valid_number(x, positive=True) for x in (price, ma)) or not math.isfinite(roc):
-                raise ValueError("持仓价格历史不完整")
-            if price < ma:
-                warnings.append(f"{symbol}：跌破MA120，触发价格硬退出")
-            if roc < 0:
-                warnings.append(f"{symbol}：ROC20转负，触发软退出价格条件")
-            if dual.at[day, symbol]:
-                warnings.append(f"{symbol}：5日与20日排名同时下滑，触发软退出价格条件")
-        return warnings or ["未触发价格退出条件；这不等于完整策略已放行"]
+            rows.append((symbol, price, ma, roc, dual.at[day, symbol]))
+        return price_risk_warnings(rows)
     except Exception as exc:
         return [f"价格风控未完成：{exc}；不得把运行失败解释为继续持有"]
 
 
-def publish_blocked(root: Path, date: str, reason: str) -> None:
-    from .daily_report import publish, read_json, validate_delivery
+def price_risk_warnings(rows) -> list[str]:
+    warnings = []
+    for symbol, price, ma, roc, dual in rows:
+        if not all(valid_number(x, positive=True) for x in (price, ma)) or roc is None or not math.isfinite(roc) or dual is None:
+            raise ValueError("持仓价格历史不完整")
+        if price < ma:
+            warnings.append(f"{symbol}：跌破MA120，触发价格硬退出")
+        if roc < 0:
+            warnings.append(f"{symbol}：ROC20转负，触发软退出价格条件")
+        if dual:
+            warnings.append(f"{symbol}：5日与20日排名同时下滑，触发软退出价格条件")
+    return warnings or ["未触发价格退出条件；这不等于完整策略已放行"]
+
+
+def block_orders(root: Path, date: str, reason: str) -> tuple[dict, dict]:
+    """Revoke stale orders immediately; do not calculate/render a report yet."""
+    from .daily_report import read_json
     live = root / "results/live"
     account = read_json(live / "account_state.json")
     cash_pending = account.get("cash_reconciliation", {}).get("status") == "pending"
@@ -247,39 +261,22 @@ def publish_blocked(root: Path, date: str, reason: str) -> None:
             "target_symbol": None, "actions": [], "account_state": account,
             "execution": {"orders": [], "executable": False}, "blocking_items": [detail]}
     atomic_json(live / f"{date}_order_plan.json", plan)
-    report = publish(root, date)
+    return ready, plan
+
+
+def publish_blocked(root: Path, date: str, reason: str) -> str:
+    from .daily_report import collect, publish, delivery_receipt
+    from .run_record import write_run_record
+    live = root / "results/live"
+    ready, plan = block_orders(root, date, reason)
+    report = collect(root, date)
     # Report all independently found gaps, not just the first thrown error.
     issues = report["analysis"].get("news_dependencies", {}).get("issues", [])
     if issues:
-        details = list(dict.fromkeys([detail, *issues]))
+        details = list(dict.fromkeys([*ready["blocking_items"], *issues]))
         ready["blocking_items"] = plan["blocking_items"] = report["blocking_items"] = details
         atomic_json(live / "readiness_report.json", ready)
         atomic_json(live / f"{date}_order_plan.json", plan)
-        report = publish(root, date)
-    audit = root / "results/audit"
-    paths = [live / "readiness_report.json", live / "account_state.json",
-             live / f"{date}_order_plan.json", live / f"{date}_daily_report.json",
-             live / f"{date}_daily_report.md", root / "outputs/ETF轮动策略_今日日报.html",
-             root / "dashboard/public/ye-daily.html"]
-    paths += list((root / "config").glob("*.yaml"))
-    paths += list((root / "market_data/prices").glob("*.csv"))
-    paths += list((root / "src/etf_rotation").glob("*.py"))
-    paths += [root / p for p in report["valuation"].get("source_files", [])]
-    paths += [root / p for p in report["analysis"].get("news_dependencies", {}).get("files", [])]
-    for relative in (f"market_data/live_quotes/{date}.json", f"market_data/sentiment/{date}.json",
-                     f"market_data/sentiment/ai_review/{date}.json",
-                     "scripts/build_live_order_plan.py", "scripts/build_sentiment_features.py"):
-        paths.append(root / relative)
-    manifest_path = audit / f"{date}_run_manifest.json"
-    atomic_json(manifest_path, {"signal_date": date, "status": "BLOCKED",
-        "critical_files": [{"path": str(p.relative_to(root)),
-                           "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
-                          for p in dict.fromkeys(paths) if p.exists()]})
-    atomic_json(audit / f"{date}_live_run_card.json", {
-        "card_type": "ye_live_run_card", "signal_date": date, "account_state": account,
-        "release": {"readiness": "BLOCKED", "blocking_items": ready["blocking_items"], "plan_is_not_fill": True},
-        "decision": {"current_symbol": plan["current_symbol"], "target_symbol": None, "actions": []},
-        "observation": report["analysis"], "sentiment_review": report["review"],
-        "error": reason, "audit": {"run_manifest": str(manifest_path.relative_to(root)),
-        "run_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest()}})
-    validate_delivery(root, date)
+    publish(root, date, report=report)
+    write_run_record(root, date)
+    return delivery_receipt(root, date)

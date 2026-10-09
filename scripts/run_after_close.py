@@ -9,8 +9,8 @@ from pathlib import Path
 import pandas as pd
 import yaml
 
-from etf_rotation.live import atomic_json, publish_blocked, live_lock
-from etf_rotation.sentiment_ai import validate_live_review
+from etf_rotation.live import atomic_json, block_orders, publish_blocked, live_lock
+from etf_rotation.daily_report import delivery_receipt
 from etf_rotation.evidence import review_context
 
 
@@ -20,7 +20,11 @@ sys.path.insert(0, str(ROOT))
 
 
 def run(*args: str) -> None:
-    subprocess.run([PYTHON, *args], cwd=ROOT, check=True)
+    result = subprocess.run([PYTHON, *args], cwd=ROOT, capture_output=True, text=True)
+    if result.returncode:
+        print((result.stdout + result.stderr)[-4000:])
+        result.check_returncode()
+    print(f"完成：{args[0]}")
 
 
 def execute(args) -> None:
@@ -38,15 +42,19 @@ def main() -> None:
     with live_lock(ROOT):
         try:
             execute(args)
+            print(delivery_receipt(ROOT, args.date), end="")
         except Exception as exc:
-            publish_blocked(ROOT, args.date, f"{type(exc).__name__}: {exc}")
+            reason = f"{type(exc).__name__}: {exc}"
+            block_orders(ROOT, args.date, reason)
             from etf_rotation.risk_release import publish_sell_only
             try:
-                if publish_sell_only(ROOT, args.date, str(exc)):
-                    print("SELL_ONLY：仅风险卖出放行，禁止新买入")
+                receipt = publish_sell_only(ROOT, args.date, str(exc))
+                if receipt:
+                    print(receipt, end="")
                     return
             except Exception as risk_exc:
-                publish_blocked(ROOT, args.date, f"完整运行失败：{exc}；独立卖出发布失败：{risk_exc}")
+                reason = f"完整运行失败：{exc}；独立卖出发布失败：{risk_exc}"
+            print(publish_blocked(ROOT, args.date, reason), end="")
             raise SystemExit(2) from exc
 
 
@@ -84,6 +92,8 @@ def run_pipeline(args) -> None:
                 print(f"{previous_date}不复权报价未取到：仅当日持仓盈亏待核，不取消日报")
     from scripts.advance_authorized_live_account import advance
     advance(args.date)
+    if not args.skip_collect:
+        run("scripts/collect_daily_sentiment.py", "--date", args.date)
     config = yaml.safe_load((ROOT / "config/ye_strategy.yaml").read_text())
     context = review_context(ROOT, args.date, benchmark.datetime, config)
     if context["status"] != "complete":
@@ -92,24 +102,13 @@ def run_pipeline(args) -> None:
     if count != 1:
         raise RuntimeError("could not update config/market.yaml project.data_end")
     market_path.write_text(updated, encoding="utf-8")
-    if not args.skip_collect:
-        run("scripts/collect_daily_sentiment.py", "--date", args.date)
-    review_path = ROOT / "market_data" / "sentiment" / "ai_review" / f"{args.date}.json"
-    if not review_path.exists():
-        raise RuntimeError(
-            "Codex chat review is missing. Export the review queue, review every row in this conversation, "
-            "then run commit_manual_sentiment_review.py before finalizing the order plan."
-        )
-    validate_live_review(ROOT, args.date)
     run("scripts/build_sentiment_features.py")
     run("run_strategies.py")
     run("scripts/build_trade_audit.py")
     run("scripts/build_live_order_plan.py", "--date", args.date)
     run("scripts/validate_live_readiness.py", "--date", args.date)
     run("dashboard/scripts/build_ye_strategy_html.py")
-    run("scripts/build_run_manifest.py", "--date", args.date)
     run("scripts/build_live_run_card.py", "--date", args.date)
-    run("scripts/validate_daily_delivery.py", "--date", args.date)
 
 
 if __name__ == "__main__":

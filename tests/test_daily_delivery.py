@@ -73,7 +73,13 @@ def test_missing_evidence_is_partial_not_fallback_buy(report_root, monkeypatch):
     assert daily_report.validate_delivery(report_root, DATE)["release"] == "BLOCKED"
 
 
-def test_missing_history_keeps_prices_and_known_position_without_fake_decisions(report_root):
+def test_missing_history_keeps_prices_and_known_position_without_fake_decisions(report_root, monkeypatch):
+    calls = []
+    validate = daily_report.validate_live_review
+    def counted(root, day):
+        calls.append(day)
+        return validate(root, day)
+    monkeypatch.setattr(daily_report, "validate_live_review", counted)
     day = "2026-10-08"
     before = (report_root / "results/live/account_state.json").read_bytes()
     publish_blocked(report_root, day, "账户状态未确认")
@@ -83,6 +89,10 @@ def test_missing_history_keeps_prices_and_known_position_without_fake_decisions(
     assert len(analysis["ranking"]) == 51
     assert analysis["held"]["rank"] == 10
     assert analysis["held"]["roc20"] == pytest.approx(-.0315700158)
+    frozen = daily_report.read_json(ROOT / f"results/live/{day}_daily_report.json")
+    assert analysis["ranking"] == frozen["analysis"]["ranking"]
+    assert report["valuation"] == frozen["valuation"]
+    assert report["price_risk_check"] == frozen["price_risk_check"]
     assert analysis["holding_trusted"] and analysis["holding_decision_status"] == "unknown"
     assert analysis["technical_target"] is None and analysis["candidates"] == []
     assert set(analysis["news_dependencies"]["required_dates"]["emerging"]) == {"2026-09-29", "2026-09-30", day}
@@ -95,6 +105,9 @@ def test_missing_history_keeps_prices_and_known_position_without_fake_decisions(
     assert "已确认" in page and "全池13涨、36跌、2平" in page
     assert all(r["symbol"] in page for r in analysis["ranking"])
     assert daily_report.validate_delivery(report_root, day)["delivery"] == "PASS"
+    assert calls == ["2026-09-29", "2026-09-30", day]  # one report and one validation per news day
+    from etf_rotation.data import audited_price_cutoff
+    assert audited_price_cutoff(report_root, day) == day
 
 
 def test_daily_pnl_uses_exact_previous_unadjusted_session_without_previous_report(tmp_path):
@@ -266,6 +279,7 @@ def test_official_entry_cash_pending_delivers_without_mutating_account(tmp_path)
         cwd=tmp_path, env={**os.environ, "PYTHONPATH": str(tmp_path / "src")},
         capture_output=True, text=True, timeout=60)
     assert result.returncode == 2, result.stdout + result.stderr
+    assert "[今日日报](<" in result.stdout  # the entry itself delivers; no second command required
     assert account_path.read_bytes() == before
     assert (tmp_path / "config/market.yaml").read_bytes() == market_before
     report = daily_report.read_json(tmp_path / f"results/live/{DATE}_daily_report.json")

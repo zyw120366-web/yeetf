@@ -18,8 +18,9 @@ def review_context(root: Path, date: str, calendar, config: dict, *, validator=N
     checks = {}
     for day in sorted({d for dates in required.values() for d in dates}):
         try:
-            validator(root, day)
-            checks[day] = {"status": "complete"}
+            review = validator(root, day)
+            checks[day] = {"status": "complete", "review": {k: review.get(k) for k in
+                ("status", "input_count", "reviewed_count", "coverage", "snapshot_hash")}}
         except (OSError, ValueError, KeyError, RuntimeError, TypeError) as exc:
             missing = not (root / f"market_data/sentiment/{day}.json").is_file()
             checks[day] = {"status": "missing" if missing else "invalid",

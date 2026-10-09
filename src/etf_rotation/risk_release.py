@@ -1,7 +1,6 @@
 """Independent, authenticated sell-only release. Never selects or buys an ETF."""
 from __future__ import annotations
 
-import hashlib
 import json
 import math
 from pathlib import Path
@@ -108,53 +107,24 @@ def assess_sell_only(root: Path, date: str) -> dict:
                  "instruction": "仅卖出已核对的现有持仓，卖出后保持现金；禁止买入或借券卖空"}]}}
 
 
-def publish_sell_only(root: Path, date: str, failure: str) -> bool:
-    """Called only after ordinary publication failed and BLOCKED was saved."""
+def publish_sell_only(root: Path, date: str, failure: str) -> str | None:
+    """Assess before rendering; return a checked receipt only if risk is released."""
     try:
         plan = assess_sell_only(root, date)
     except Exception:
-        return False
-    live, audit = root / "results/live", root / "results/audit"
+        return None
+    live = root / "results/live"
     action = plan["actions"][0]
     ready = {"signal_date": date, "status": "SELL_ONLY", "buy_allowed": False, "sell_allowed": True,
              "blocking_items": [failure], "sell_reasons": action["reasons"],
              "note": "只放行独立校验的风险卖单，不代表完整策略READY"}
     atomic_json(live / f"{date}_order_plan.json", plan)
     atomic_json(live / "readiness_report.json", ready)
-    from .daily_report import publish, validate_delivery
-    report = publish(root, date)
+    from .daily_report import publish, delivery_receipt
+    from .run_record import write_run_record
+    publish(root, date)
     template = {"signal_date": date, "confirmation_status": "pending", "fills": [
         {"side": "sell", "symbol": action["symbol"], "status": "unfilled", "quantity": 0, "price": 0}]}
     atomic_json(live / f"{date}_actual_fills.template.json", template)
-    paths = [live / f"{date}_order_plan.json", live / "account_state.json",
-             live / "readiness_report.json", live / f"{date}_daily_report.md",
-             root / "market_data/live_quotes" / f"{date}.json",
-             live / f"{date}_daily_report.json", root / "outputs/ETF轮动策略_今日日报.html",
-             root / "dashboard/public/ye-daily.html"]
-    paths += list((root / "config").glob("*.yaml"))
-    paths += list((root / "market_data/prices").glob("*.csv"))
-    paths += list((root / "src/etf_rotation").glob("*.py"))
-    paths += [root / p for p in report["valuation"].get("source_files", [])]
-    paths += [root / p for p in report["analysis"].get("news_dependencies", {}).get("files", [])]
-    paths += [root / "scripts/build_sentiment_features.py", root / "scripts/validate_live_readiness.py"]
-    for d in plan["review_dates_required"]:
-        paths += [root / "market_data/sentiment" / f"{d}.json", root / "market_data/sentiment/ai_review" / f"{d}.json"]
-    previous = sorted(p for p in live.glob("*_order_plan.json") if p.name[:10] < date)
-    if previous:
-        paths.append(previous[-1])
-        rec = audit / f"{previous[-1].name[:10]}_execution_reconciliation.json"
-        if rec.exists():
-            paths.append(rec)
-    def record(p):
-        return {"path": str(p.relative_to(root)), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
-    manifest_path = audit / f"{date}_run_manifest.json"
-    atomic_json(manifest_path, {"signal_date": date, "status": "SELL_ONLY", "critical_files": [record(p) for p in dict.fromkeys(paths)]})
-    atomic_json(audit / f"{date}_live_run_card.json", {
-        "card_type": "ye_live_run_card", "signal_date": date,
-        "release": {"readiness": "SELL_ONLY", "buy_allowed": False, "sell_allowed": True, "plan_is_not_fill": True},
-        "account_state": plan["account_state"], "sentiment_review": report["review"], "decision": {
-            "current_symbol": plan["current_symbol"], "target_symbol": None, "actions": plan["actions"]},
-        "audit": {"run_manifest": str(manifest_path.relative_to(root)),
-                  "run_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest()}})
-    validate_delivery(root, date)
-    return True
+    write_run_record(root, date)
+    return delivery_receipt(root, date)
