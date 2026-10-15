@@ -1,0 +1,2380 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-6",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "675bae655e0a7461e211441809b900b728c7e40544b657a54c8bba8b8ee8f98f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.73,
+      "novelty": 0.3,
+      "summary": "新华文轩延续出版传媒、数字教育及收购线索。",
+      "evidence": [
+        "新华文轩 | 出版传媒+数字教育+民族出版收购",
+        "出版传媒+数字教育+民族出版收购"
+      ],
+      "risk_flags": [
+        "并购贡献未知",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "c172f9942cd1e5734b56f2a24b3fc00a1c18f3b48f2578cb1d0d13c8fde124ef",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.5,
+      "summary": "上海洗霸涉及固态电池和数据中心液冷。",
+      "evidence": [
+        "上海洗霸 | 固态电池+水处理+数据中心液冷",
+        "固态电池+水处理+数据中心液冷"
+      ],
+      "risk_flags": [
+        "水处理不自动代表公用事业",
+        "题材到业绩外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "2446b2f84c397275c3c82f5c52a9775b25b30af9fd49598b59cbb0a2043bccf0",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.55,
+      "summary": "万丰股份涉及分散染料、产能翻番及业绩增长。",
+      "evidence": [
+        "万丰股份 | 分散染料+产能翻番+业绩增长",
+        "分散染料+产能翻番+业绩增长"
+      ],
+      "risk_flags": [
+        "新增产能不等于已兑现需求",
+        "未出现化工专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "25c9741685e30b2a7bc9405777994e1e9117db61ca75f35ac40e6648c9c67ded",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.67,
+      "novelty": 0.3,
+      "summary": "世龙实业涉及染料产业链、氯化亚砜和中报增长。",
+      "evidence": [
+        "世龙实业 | 染料产业链+氯化亚砜+中报增长",
+        "染料产业链+氯化亚砜+中报增长"
+      ],
+      "risk_flags": [
+        "未出现化工专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "372d30d175f9380555d705a5a02e4750a320d9baeb210626371fc4a4739d5101",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.67,
+      "novelty": 0.5,
+      "summary": "上海雅仕涉及供应链物流、硫磺涨价及业绩增长。",
+      "evidence": [
+        "上海雅仕 | 供应链物流+硫磺涨价+业绩增长",
+        "供应链物流+硫磺涨价+业绩增长"
+      ],
+      "risk_flags": [
+        "物流到商品价格为间接暴露",
+        "无池内专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "96a6990e98bb030510f3b4abcbf079d12534f2ea0937dc1ca4ca36f3c162ec2d",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "众望布艺涉及装饰面料、外销与股权激励。",
+      "evidence": [
+        "众望布艺 | 装饰面料+外销+股权激励",
+        "装饰面料+外销+股权激励"
+      ],
+      "risk_flags": [
+        "无池内专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "1c7f00b74f60146119562dbcaf9e48557bc3227112a5c5eba0f1cd2045eb3987",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "嘉诚国际涉及跨境物流、海南仓储和高端制造。",
+      "evidence": [
+        "嘉诚国际 | 跨境物流+海南仓储+高端制造",
+        "跨境物流+海南仓储+高端制造"
+      ],
+      "risk_flags": [
+        "高端制造表述未指明细分ETF",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "6a72c7b85049e16d24be89d18898d954b74e620f506805060ed2c602b3019d4e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "新宏泽涉及烟标印刷、多元化及未减持，缺少池内直接证据。",
+      "evidence": [
+        "新宏泽 | 烟标印刷+多元化布局+未减持",
+        "烟标印刷+多元化布局+未减持"
+      ],
+      "risk_flags": [
+        "未减持不代表新增盈利",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "8d62a43882f7dc8615aad5d69a5ef6276d008c374bb7d98108cfd06092428838",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512070.SH",
+        "513090.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.5,
+      "summary": "华林证券涉及券商、财富管理及AI金融。",
+      "evidence": [
+        "华林证券 | 西藏券商+财富管理+AI金融",
+        "西藏券商+财富管理+AI金融"
+      ],
+      "risk_flags": [
+        "A股券商到跨境券商ETF外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "edbdf65f09e5f7b17b26a6c17a058afaf2be236fe677e48ad723b0df69ff7a49",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH",
+        "513310.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.5,
+      "summary": "东方嘉盛涉及半导体设备服务和跨境物流。",
+      "evidence": [
+        "东方嘉盛 | 半导体设备服务+跨境物流+智能报关",
+        "半导体设备服务+跨境物流+智能报关"
+      ],
+      "risk_flags": [
+        "服务业务到半导体需求为间接证据",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "1a64b6edec41c5efb78a169880da699a0161c68ca79ef6381625cd8ff1134d55",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "华北制药涉及抗感染药、鼠疫适应症及创新药研发。",
+      "evidence": [
+        "华北制药 | 抗感染药+鼠疫适应症+创新药研发",
+        "抗感染药+鼠疫适应症+创新药研发"
+      ],
+      "risk_flags": [
+        "适应症不等于订单增长",
+        "A股到港股医药外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "926f5d2b4c85fee032ca325c99281ae21b0bcc6619bd6c8b9deb7a5e20a9444a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.4,
+      "summary": "澳弘电子涉及AI服务器电源、PCB及汽车电子。",
+      "evidence": [
+        "澳弘电子 | PCB+AI服务器电源+汽车电子",
+        "PCB+AI服务器电源+汽车电子"
+      ],
+      "risk_flags": [
+        "汽车电子未区分新能源路线",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "abbc64773e91c5df188f6617e2d64c93ac3cfdadb4a928ba2e870e626d8f5144",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH",
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "尖峰集团涉及医药、水泥熟料及原料药。",
+      "evidence": [
+        "尖峰集团 | 医药+水泥熟料+原料药",
+        "医药+水泥熟料+原料药"
+      ],
+      "risk_flags": [
+        "跨业务公司不能视为多家公司证据",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "644dbf6a5a10587d9f9774e2236d70e94ed37227e06b2c5f36748530cd23a404",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH",
+        "513310.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.74,
+      "novelty": 0.5,
+      "summary": "至纯科技涉及半导体湿法设备、HBM及高纯工艺。",
+      "evidence": [
+        "至纯科技 | 半导体湿法设备+HBM+高纯工艺系统",
+        "半导体湿法设备+HBM+高纯工艺系统"
+      ],
+      "risk_flags": [
+        "设备景气到ETF趋势外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "65ad708abc4c7d677ab77e2a7937d06dd49f27c136da20dfb8357c84717c49c3",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.4,
+      "summary": "华阳新材涉及贵金属回收、新品研发及国资。",
+      "evidence": [
+        "华阳新材 | 贵金属回收+新品研发+山西国资",
+        "贵金属回收+新品研发+山西国资"
+      ],
+      "risk_flags": [
+        "未指明金属种类，不能确认黄金价格转强",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "6282e37ded7f3d829e76633117f6a83dfeee3ca7350937299c4dfcb117946bda",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "骏亚科技涉及PCB、高多层HDI及人形机器人。",
+      "evidence": [
+        "骏亚科技 | PCB+高多层HDI+人形机器人",
+        "PCB+高多层HDI+人形机器人"
+      ],
+      "risk_flags": [
+        "概念到订单未知",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "6399d21edeb038c7217304ae5cef2a2ae0b273fc5e8b9a9b2e8f7a04dcb9ff15",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "五芳斋涉及粽子食品、连锁餐饮及精品商超。",
+      "evidence": [
+        "五芳斋 | 粽子食品+连锁餐饮+精品商超",
+        "粽子食品+连锁餐饮+精品商超"
+      ],
+      "risk_flags": [
+        "未出现食品饮料或零售专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "e019bd910c0d916667f80ed4dc424ef7f20400d27ea820fb646fc48c3b1598e0",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.5,
+      "summary": "向日葵涉及抗感染药、医药产业链及药品获批。",
+      "evidence": [
+        "向日葵 | 抗感染药+医药产业链+药品获批",
+        "抗感染药+医药产业链+药品获批"
+      ],
+      "risk_flags": [
+        "未给出批准药品和销售贡献",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "77b28076fc69571b59db9e3c7d1b05bfa5d9dc71c4e1955816670142db60453e",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159851.SZ",
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "吉大正元涉及数字货币、商业航天及密码安全。",
+      "evidence": [
+        "吉大正元 | 密码安全+数字货币+商业航天",
+        "密码安全+数字货币+商业航天"
+      ],
+      "risk_flags": [
+        "题材到经营贡献未量化",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "423c5d1741005730b912211ab1a42d2a7dc15cb9f72bb219b06558134820ef77",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.4,
+      "summary": "内蒙新华涉及出版发行、教材教辅及文化消费。",
+      "evidence": [
+        "内蒙新华 | 出版发行+教材教辅+文化消费",
+        "出版发行+教材教辅+文化消费"
+      ],
+      "risk_flags": [
+        "文化消费不等于消费全面复苏",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "ca57025ae8d92f04ce8524865dd0b65871114a8f41c453a718270eaea5c21d62",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.5,
+      "summary": "百花医药涉及医药研发、复杂制剂及国资。",
+      "evidence": [
+        "百花医药 | 医药研发+复杂制剂+金华国资",
+        "医药研发+复杂制剂+金华国资"
+      ],
+      "risk_flags": [
+        "未量化研发商业化收益",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "8bdcb63957297afe3b28c7bcf55094ff540b6e87b3e3336031adeaa375fa5c68",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "万和电气涉及热水采暖、空气能热泵和海外布局。",
+      "evidence": [
+        "万和电气 | 热水采暖+空气能热泵+海外布局",
+        "热水采暖+空气能热泵+海外布局"
+      ],
+      "risk_flags": [
+        "未出现家电专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "8b0a9014ac61831ba7116a39b8286f75cbaf2b24f383357c7c55112fbad03f7c",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "512690.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "皇台酒业延续白酒、区域品牌及老窖池线索。",
+      "evidence": [
+        "皇台酒业 | 白酒+区域品牌+老窖池",
+        "白酒+区域品牌+老窖池"
+      ],
+      "risk_flags": [
+        "无新增销量数据",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "e1cbb0cd1f8232f546b295c46023f6ae4f8396268cf847256605983eccd2cbd9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.67,
+      "novelty": 0.5,
+      "summary": "天津普林涉及PCB、股票期权及产能释放。",
+      "evidence": [
+        "天津普林 | PCB+股票期权+产能释放",
+        "PCB+股票期权+产能释放"
+      ],
+      "risk_flags": [
+        "产能不等于订单",
+        "无半导体或算力专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "90b09fa8a41140b30b7a5c071f1d3fe43c35fbb6302e0582457566964257e741",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "广博股份涉及国网入围、IP卡牌和文教用品。",
+      "evidence": [
+        "广博股份 | 国网入围+IP卡牌+文教用品",
+        "国网入围+IP卡牌+文教用品"
+      ],
+      "risk_flags": [
+        "国网采购入围不证明电网设备业务",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "5ede0a63a9c6e89b7bcffaf4fd83f8333eea940612a73c96312af80c124f730a",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.5,
+      "summary": "湖南发展涉及业绩预增及水力发电。",
+      "evidence": [
+        "湖南发展 | 业绩预增+水力发电",
+        "业绩预增+水力发电"
+      ],
+      "risk_flags": [
+        "水力发电未直接出现水电或电力专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "5202ea651b11dbf9dd6d704adbaed1879826c984d5de6a14c47df37aa6754775",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.73,
+      "novelty": 0.5,
+      "summary": "金禄电子涉及AI算力PCB、业绩预增及汽车PCB。",
+      "evidence": [
+        "金禄电子 | AI算力PCB+业绩预增+汽车PCB",
+        "AI算力PCB+业绩预增+汽车PCB"
+      ],
+      "risk_flags": [
+        "预增幅度未知",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "ab5625b8023e66a17226611cb1f6b1f9451301fb0305b3add27d9ddef2c3ce45",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.73,
+      "novelty": 0.5,
+      "summary": "读者传媒涉及出版发行、人工智能及品牌。",
+      "evidence": [
+        "读者传媒 | 出版发行+人工智能+读者品牌",
+        "出版发行+人工智能+读者品牌"
+      ],
+      "risk_flags": [
+        "题材到收入未知",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "c6cd2a15a1e0ee6e046279c4dcb30359a68817e332364e27fc411f9ea288cb98",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "和泰机电涉及物料输送设备及水泥建材。",
+      "evidence": [
+        "和泰机电 | 物料输送设备+一带一路+水泥建材",
+        "物料输送设备+一带一路+水泥建材"
+      ],
+      "risk_flags": [
+        "设备订单不能等同建材价格",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "e0d2453ea6fc4e4aea8b72d1d03cb00060b38ca7b0b323ea6d003fecff536b36",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "阳光乳业延续乳制品、冷链配送与研发线索。",
+      "evidence": [
+        "阳光乳业 | 乳制品+冷链配送+新品研发",
+        "乳制品+冷链配送+新品研发"
+      ],
+      "risk_flags": [
+        "未出现食品饮料专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "3858d28fa242881d8d08d8d4e2f03bfa792b117d4b16c24de8f3569dbbe65b12",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "冰山冷热延续数据中心液冷及储能温控。",
+      "evidence": [
+        "冰山冷热 | 冰雪工程+数据中心液冷+储能温控+冷热设备",
+        "冰雪工程+数据中心液冷+储能温控+冷热设备"
+      ],
+      "risk_flags": [
+        "冰雪工程不自动映射旅游",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "9f47b449d115f2612a63d13eedf19f1f1d0ca81527abf14a0f81fb38b22bb4fb",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.3,
+      "summary": "百洋股份延续水产饲料、鱼粉涨价及名字题材。",
+      "evidence": [
+        "百洋股份 | 水产饲料+鱼粉涨价+青岛国资+“羊”字辈",
+        "水产饲料+鱼粉涨价+青岛国资+“羊”字辈"
+      ],
+      "risk_flags": [
+        "名字题材无基本面意义",
+        "不证明豆粕期货方向",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "6ec296f251c74f7d3568b65c7cf0ce7c0cc7ecc9d99264d07b8476ba445af071",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.73,
+      "novelty": 0.3,
+      "summary": "慈文传媒延续微短剧及影视IP。",
+      "evidence": [
+        "慈文传媒 | 微短剧+影视IP+江西国资",
+        "微短剧+影视IP+江西国资"
+      ],
+      "risk_flags": [
+        "无新增经营数据",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "809cedc070c2589d1c12899a90936eb71000d8df85b470435d34478c698cc038",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159647.SZ",
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.66,
+      "novelty": 0.5,
+      "summary": "远大控股涉及预增、大宗贸易及中药材种业。",
+      "evidence": [
+        "远大控股 | 业绩预增+大宗贸易+中药材种业",
+        "业绩预增+大宗贸易+中药材种业"
+      ],
+      "risk_flags": [
+        "药材种业到药企盈利间接外推",
+        "大宗贸易不等于豆粕",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "83ff0ded7162dfd361b19be1e836a8ad96fd79be8b451c1e498ac9c96798faca",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源",
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.67,
+      "novelty": 0.3,
+      "summary": "富春染织延续预增、筒子纱、染料及PEEK线索。",
+      "evidence": [
+        "富春染织 | 业绩预增+筒子纱+染料+PEEK材料",
+        "业绩预增+筒子纱+染料+PEEK材料"
+      ],
+      "risk_flags": [
+        "无化工专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "e6f5f9f2dbe92a52cd21a91489b6f4523251e596cd3ab7e29ee0c2b7812be7f2",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.5,
+      "summary": "崇达技术涉及业绩预增、高端PCB及服务器PCB。",
+      "evidence": [
+        "崇达技术 | 业绩预增+高端PCB+服务器PCB",
+        "业绩预增+高端PCB+服务器PCB"
+      ],
+      "risk_flags": [
+        "服务器PCB到算力趋势外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "4a3a772aed99931019b40b1e44820f62ec61ee6a9f0f5937d2ff7dda51567e38",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "崇达技术涨停，仅元件分类不足以映射服务器。",
+      "evidence": [
+        "崇达技术 | 元件",
+        "元件"
+      ],
+      "risk_flags": [
+        "不跨行补词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "e991b89610c4267d573a076b7aeb389c062f3d369c78d312bbd404da775a7e77",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "远大控股涨停，本行仅物流分类，缺少池内直接证据。",
+      "evidence": [
+        "远大控股 | 物流",
+        "物流"
+      ],
+      "risk_flags": [
+        "不跨行借中药词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "066e8f01f7b3503d72487fd3a80bc82b0b6d2403fa5b108c14545a2349b49daf",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.78,
+      "novelty": 0.3,
+      "summary": "百洋股份涨停，饲料分类明确。",
+      "evidence": [
+        "百洋股份 | 饲料",
+        "饲料"
+      ],
+      "risk_flags": [
+        "饲料股上涨不确认豆粕期货转强",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "014b9c41c0200bd1a0abc1a1bbfbff99fdc658a53af6bbf2a7d2032e7d62f463",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "慈文传媒涨停，影视院线明确。",
+      "evidence": [
+        "慈文传媒 | 影视院线",
+        "影视院线"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "1814925b0c368b35d2ea0f0037a14772a70a41764c48656fe5267905e0785bc2",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "冰山冷热涨停，本行通用设备未指明储能或算力。",
+      "evidence": [
+        "冰山冷热 | 通用设备",
+        "通用设备"
+      ],
+      "risk_flags": [
+        "不跨行补词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "be1edd992fb92d21a8e5c2b2480709dbb01ce99824559837cb1a289316360c54",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "富春染织涨停，纺织制造未直接对应专属词。",
+      "evidence": [
+        "富春染织 | 纺织制造",
+        "纺织制造"
+      ],
+      "risk_flags": [
+        "不泛映射消费",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "f10208c16b3eb46feec1f4d753513a13e6f122b445e77d7f58160d89f59ab750",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "阳光乳业涨停，饮料乳品未出现食品饮料专属词。",
+      "evidence": [
+        "阳光乳业 | 饮料乳品",
+        "饮料乳品"
+      ],
+      "risk_flags": [
+        "不补写合并词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "a77ab90e9090e80cb0a533c752c93e94e969ad543f6d4bd1c59b8e2469dc41c1",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "读者传媒涨停，出版与名称传媒支持映射。",
+      "evidence": [
+        "读者传媒 | 出版",
+        "出版"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "2f586a5c07cf6463f9c1ef1c5b2752d3dcbc0956f3d0e06ff21dec0d80d55b58",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "和泰机电涨停，仅专用设备分类。",
+      "evidence": [
+        "和泰机电 | 专用设备",
+        "专用设备"
+      ],
+      "risk_flags": [
+        "不借其他行水泥词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "4691982f25c3ffc4cda22411cd8a62afd28c544b0c74fe2672797ab5edf6d70c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.78,
+      "novelty": 0.3,
+      "summary": "金禄电子涨停20%，本行仅元件分类。",
+      "evidence": [
+        "金禄电子 | 元件",
+        "元件"
+      ],
+      "risk_flags": [
+        "不跨行补AI词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "55d9f16a72cbb56af815fe1d49ba40472cf5f66b529a10f0dcca0f1e87067570",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "湖南发展涨停，本行电力分类明确。",
+      "evidence": [
+        "湖南发展 | 电力",
+        "电力"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "b46b486c2ac3d812df65afb781b1c7bc801cdc4f109ad0375ffdad6657aab854",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "广博股份涨停，文娱用品未提供传媒或AI专属证据。",
+      "evidence": [
+        "广博股份 | 文娱用品",
+        "文娱用品"
+      ],
+      "risk_flags": [
+        "不跨行补词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "8285880397d5606c21de08b8265243f5ed7e2ebb658e630207d3bf11382e099b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "天津普林涨停，元件分类未提供半导体关键词。",
+      "evidence": [
+        "天津普林 | 元件",
+        "元件"
+      ],
+      "risk_flags": [
+        "不据常识扩展",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "1dd93dd4c77e2a15874da5a3096c460db4ca2ea2c98c699b0f2568af64ed30b6",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "512690.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "皇台酒业涨停，白酒分类明确。",
+      "evidence": [
+        "皇台酒业 | 白酒Ⅱ",
+        "白酒Ⅱ"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "bc01561c9624b8e5ab57c288580a197ff4613a7de4aeed50321c2ff1802d56cf",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "万和电气涨停，厨卫电器未出现家电专属词。",
+      "evidence": [
+        "万和电气 | 厨卫电器",
+        "厨卫电器"
+      ],
+      "risk_flags": [
+        "不改写冻结词条",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "0ca005c7dbac0e6f455ea61a81d98f54c35123176d102308d7f98915e9c0312a",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.78,
+      "novelty": 0.3,
+      "summary": "百花医药涨停，名称医药及医疗服务分类明确。",
+      "evidence": [
+        "百花医药 | 医疗服务",
+        "医疗服务"
+      ],
+      "risk_flags": [
+        "医疗服务到医疗器械间接外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "ba5a5357c7c587a12c8b871dee89e7eb2481a0205c8d103dca3adb81aa45f6ba",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "内蒙新华涨停，出版分类明确。",
+      "evidence": [
+        "内蒙新华 | 出版",
+        "出版"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "66d08df235ed8adaccfb7620286e2424ef781da30a9c5b56bb26fc8d1e7b98fc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "吉大正元涨停，仅软件开发分类。",
+      "evidence": [
+        "吉大正元 | 软件开发",
+        "软件开发"
+      ],
+      "risk_flags": [
+        "不跨行补航天或数字货币词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "cad66423b1026c93a5223498b67b80559054df422a9bb5f2b26f3b36eb91aebe",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.83,
+      "novelty": 0.3,
+      "summary": "向日葵涨停约20%，化学制药分类明确。",
+      "evidence": [
+        "向日葵 | 化学制药",
+        "化学制药"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "89dab3dd9f4d4da81352e80afc86a49ea607ef76594ca1a494d7729ab27dcd97",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "五芳斋涨停，食品加工未出现食品饮料专属词。",
+      "evidence": [
+        "五芳斋 | 食品加工",
+        "食品加工"
+      ],
+      "risk_flags": [
+        "不改写冻结词条",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "e4a89c30fd3a8a7f340674765dcadc68251e582c4dbb2a540132ded07a0c67d6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "骏亚科技涨停，仅元件分类。",
+      "evidence": [
+        "骏亚科技 | 元件",
+        "元件"
+      ],
+      "risk_flags": [
+        "不跨行补机器人",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "2cf76588ff0337b7156d47f7ab887241dc67f021e511ad7438dfed3a43a42973",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "华阳新材涨停，小金属分类明确。",
+      "evidence": [
+        "华阳新材 | 小金属",
+        "小金属"
+      ],
+      "risk_flags": [
+        "不据此推断黄金方向",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "4ebd3f309eb5193d6b28259e892d1ae1f826a59d10d70280a143415f070b3ba8",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "尖峰集团涨停，本行水泥分类明确。",
+      "evidence": [
+        "尖峰集团 | 水泥",
+        "水泥"
+      ],
+      "risk_flags": [
+        "不跨行补医药词",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "ae18396587556e99aa4cc9798be089426b9194262fc60cb997c86b7155d099fb",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH",
+        "513310.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "至纯科技涨停，半导体分类明确。",
+      "evidence": [
+        "至纯科技 | 半导体",
+        "半导体"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "9dc70d37343f30623f1703089596447810c82e9fcc3b01588109845b6ec22187",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "澳弘电子涨停，本行仅元件分类。",
+      "evidence": [
+        "澳弘电子 | 元件",
+        "元件"
+      ],
+      "risk_flags": [
+        "不跨行补服务器或AI词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "de397ab2f61e44a3303e920baad4287136e99d6ee7be68578132de18cb9bbe6f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "华北制药涨停，化学制药分类明确。",
+      "evidence": [
+        "华北制药 | 化学制药",
+        "化学制药"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "0e426faf5d1444038b78934683ccaaf91c0a71e277db72db3eee506b3f22aff4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "东方嘉盛涨停，本行仅物流分类。",
+      "evidence": [
+        "东方嘉盛 | 物流",
+        "物流"
+      ],
+      "risk_flags": [
+        "不借另一行半导体词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "e991d7f6a1e1b5f9192dc7363735f8b87625d6cc99b6e0a646321b21bf624381",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512070.SH",
+        "513090.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "华林证券涨停，证券行业明确。",
+      "evidence": [
+        "华林证券 | 证券Ⅱ",
+        "证券Ⅱ"
+      ],
+      "risk_flags": [
+        "A股到跨境券商ETF外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "9243d71baeeef4411bd55e626832eb2f6d277b30bab75c19d946fe5451e8c733",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "新宏泽涨停，包装印刷不直接代表出版内容。",
+      "evidence": [
+        "新宏泽 | 包装印刷",
+        "包装印刷"
+      ],
+      "risk_flags": [
+        "不映射传媒",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "3c0b42eb5f85d2e2cba9808fdaff08e7262826ce87e27cf82ad6d3e00c5be25b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "嘉诚国际涨停，物流未直接对应当前池。",
+      "evidence": [
+        "嘉诚国际 | 物流",
+        "物流"
+      ],
+      "risk_flags": [
+        "不强行映射高端制造",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "4aa119173b8197319b94708039dac5b12f0742b69bcd3fa7a655d0fc64719715",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "众望布艺涨停，服装家纺未出现专属词。",
+      "evidence": [
+        "众望布艺 | 服装家纺",
+        "服装家纺"
+      ],
+      "risk_flags": [
+        "不泛映射消费",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "d026fb6a7ddba80084278ff0aa29e83c1dea5d6cd722e3d84123b5a43caa0796",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "上海雅仕涨停，本行仅物流分类。",
+      "evidence": [
+        "上海雅仕 | 物流",
+        "物流"
+      ],
+      "risk_flags": [
+        "不跨行借硫磺涨价",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "c574cdef0f9547a32b156b9e83369d04d35e36d5b44ca4396f000f607239a6c9",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "世龙实业涨停，化学原料未出现化工专属词。",
+      "evidence": [
+        "世龙实业 | 化学原料",
+        "化学原料"
+      ],
+      "risk_flags": [
+        "不补写冻结文本",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "b097c804b84f2448b4ad0f146704eddad79b0f4de863d3d4d394912de1da37f7",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "万丰股份涨停，化学制品分类较泛。",
+      "evidence": [
+        "万丰股份 | 化学制品",
+        "化学制品"
+      ],
+      "risk_flags": [
+        "不自行补化工词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "d0e4c393fddab12c44d3955218e119f00bc093d8299e662a666154aeaf9d0e4d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "上海洗霸涨停，本行环境治理不对应池内专属证据。",
+      "evidence": [
+        "上海洗霸 | 环境治理",
+        "环境治理"
+      ],
+      "risk_flags": [
+        "不跨行借固态电池",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "14ce4779289d0fdd320c7e4671b4ba757e33810cfbc8ba7651d2f5834de0cf5d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "新华文轩涨停，出版分类明确。",
+      "evidence": [
+        "新华文轩 | 出版",
+        "出版"
+      ],
+      "risk_flags": [
+        "跨源同公司去重",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "d6a6be5d116500a47e68952cd37170b277b09e4715c13512ec04398b3d32df6a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ"
+      ],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.78,
+      "novelty": 0.5,
+      "summary": "电魂网络炸板后涨约4.09%，游戏股有分歧。",
+      "evidence": [
+        "电魂网络 | 游戏Ⅱ",
+        "游戏Ⅱ"
+      ],
+      "risk_flags": [
+        "未持续封板",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "aaa698c0f407445c74e6e60af52216fa1819bc8cea381dced6bba5cb6915d5f8",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.76,
+      "novelty": 0.5,
+      "summary": "贝瑞基因炸板后涨约4.17%，医疗服务冲高回落。",
+      "evidence": [
+        "贝瑞基因 | 医疗服务",
+        "医疗服务"
+      ],
+      "risk_flags": [
+        "医疗服务到器械ETF为间接证据",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "b06c389c00928988238c4000d25e973a9415e8a0079b7aa9b10512d225fd8a05",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.78,
+      "novelty": 0.5,
+      "summary": "欢瑞世纪炸板后涨约6.24%，影视院线有抛压。",
+      "evidence": [
+        "欢瑞世纪 | 影视院线",
+        "影视院线"
+      ],
+      "risk_flags": [
+        "未持续封板",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "81419a006f3c6a5a6b219bbbfa01cc727ea4a0fe2f147d65de4419e97471f4c4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.78,
+      "novelty": 0.5,
+      "summary": "读客文化炸板后涨约7.42%，出版板块分歧。",
+      "evidence": [
+        "读客文化 | 出版",
+        "出版"
+      ],
+      "risk_flags": [
+        "未持续封板",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "43948d09ece1eb6051e21611d4b79d677bf10fc0766cd560bb5c908fd7c63d4a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "掌阅科技炸板后跌约3.04%，数字媒体短期承压。",
+      "evidence": [
+        "掌阅科技 | 数字媒体",
+        "数字媒体"
+      ],
+      "risk_flags": [
+        "不借旧日AI短剧词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "7dc5f1ab663d42e1d94290726d5ad39f65c2ccb6700c5a35f05cb2c6a80c6cb7",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.78,
+      "novelty": 0.5,
+      "summary": "惠天热电炸板后涨约4.65%，电力股冲高回落。",
+      "evidence": [
+        "惠天热电 | 电力",
+        "电力"
+      ],
+      "risk_flags": [
+        "未持续封板",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "72cdb5cc7b365813e7c870c629eba8a79d092e83dc29b815b7e4a22e19ff7fe2",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "1-3d",
+      "confidence": 0.75,
+      "novelty": 0.5,
+      "summary": "中邮科技炸板后涨约12.78%，专用设备未封住涨停。",
+      "evidence": [
+        "中邮科技 | 专用设备",
+        "专用设备"
+      ],
+      "risk_flags": [
+        "无细分ETF专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "48a1e9beda6f414ff94184b7df2e04559138ab4d906d973deb9c731a08b0b310",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "云煤能源跌停，焦炭链短期承压。",
+      "evidence": [
+        "云煤能源 | 焦炭Ⅱ",
+        "焦炭Ⅱ"
+      ],
+      "risk_flags": [
+        "焦炭不代表整个煤炭行业",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "6aa18038b013812445bd582027b37a874238fd4f67522957a3d376f449116844",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.3,
+      "summary": "天马科技跌停，饲料链继续分化。",
+      "evidence": [
+        "天马科技 | 饲料",
+        "饲料"
+      ],
+      "risk_flags": [
+        "饲料股不直接代表豆粕期货",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "12b860406b64ab1a0b4d88b0b54e43b7676555190d0a5633aecf1e8b08df8707",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "星德胜跌停，电机分类未明确机器人或新能源车。",
+      "evidence": [
+        "星德胜 | 电机Ⅱ",
+        "电机Ⅱ"
+      ],
+      "risk_flags": [
+        "不自行扩展题材",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "33c694c7a78cbd7a5ad897574b4f8c9dd50fb435c268177876c9a899996528ea",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "招商南油跌停，航运港口缺当前池的直接暴露。",
+      "evidence": [
+        "招商南油 | 航运港口",
+        "航运港口"
+      ],
+      "risk_flags": [
+        "公司名含油不能当石油证据",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "d6a2f7c21bce68d677592cc79468e817ef97fcbcbdc8c44ce7c68a04641fcc0d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "中远海能跌停，航运港口缺当前池直接暴露。",
+      "evidence": [
+        "中远海能 | 航运港口",
+        "航运港口"
+      ],
+      "risk_flags": [
+        "不把运输下跌当油价下跌",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "1323cfd1fcaa3012d4aeb22f9a1ecbb4d48a39b448d0b7a234ed3c862a2493e2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "海南橡胶跌停，种植业承压。",
+      "evidence": [
+        "海南橡胶 | 种植业",
+        "种植业"
+      ],
+      "risk_flags": [
+        "橡胶和泛种植不映射大豆",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "6601ec2708ebeeccb42ad5747b498f8f75c1b7d43f31391a5af7d1c6a5ed9881",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "光华科技跌停，电子化学分类未出现芯片或化工词。",
+      "evidence": [
+        "光华科技 | 电子化学",
+        "电子化学"
+      ],
+      "risk_flags": [
+        "不据常识补词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "dc0f5916d37b3dd16d39ddc97c5fec769971d0172f2eddce2652d4f53d65f03f",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "哈空调跌停，通用设备承压。",
+      "evidence": [
+        "哈空调 | 通用设备",
+        "通用设备"
+      ],
+      "risk_flags": [
+        "工业空冷不代表家电",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "283f851ee3ab465c4591385fc37ea6f171e765c8017527d03d37c8e357a60603",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.3,
+      "summary": "远程股份跌停，电网设备继续承压。",
+      "evidence": [
+        "远程股份 | 电网设备",
+        "电网设备"
+      ],
+      "risk_flags": [
+        "不推断经营原因",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "8bf182750dd6313a9e947b13670075238483f42369ac2f7aaaaddba8ae8b24d6",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "龙江交通跌停，铁路公路分类未直接涉及旅游。",
+      "evidence": [
+        "龙江交通 | 铁路公路",
+        "铁路公路"
+      ],
+      "risk_flags": [
+        "不借旧日旅游词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "b7f10e8ce075e971e94a17d26323000ffbcbd82b1eacdee8e3a03b2e71e77012",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "华纬科技跌停，汽车零部件承压。",
+      "evidence": [
+        "华纬科技 | 汽车零部",
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "分类截断，未区分新能源",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "ffe0b7c212d2c5b9267f9450e4363c8cf043a49c6d74006b9cfeddc95d6d6976",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "运机集团跌停，专用设备承压。",
+      "evidence": [
+        "运机集团 | 专用设备",
+        "专用设备"
+      ],
+      "risk_flags": [
+        "不由名称推导工程机械",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "4c09c095d7a21435ec8b478350a8a0fb59b7ea627fa9cc0b5add257243ed6646",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "醋化股份跌停，与同花顺题材正向线索形成冲突。",
+      "evidence": [
+        "醋化股份 | 化学制品",
+        "化学制品"
+      ],
+      "risk_flags": [
+        "量价负面优先保留",
+        "本行没有饲料词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "61895ed18843c005b997055a635a7e628f89cf54048e272020ff5fedc5a60df3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "招商轮船跌停，航运港口未对应当前池专属词。",
+      "evidence": [
+        "招商轮船 | 航运港口",
+        "航运港口"
+      ],
+      "risk_flags": [
+        "不强行映射油气",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "f753f0707f0d0228ce8e4a12b7061e28780a0f40221d04aa1f4d2b972c199ff6",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "平安电工跌停，塑料领域承压。",
+      "evidence": [
+        "平安电工 | 塑料",
+        "塑料"
+      ],
+      "risk_flags": [
+        "电工名称不代表电网设备",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "3577e5dc1aa75a4c827e37cd0492ed475414f71279e3746ea21d5f60e67b664d",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "远信工业跌停约20%，专用设备承压。",
+      "evidence": [
+        "远信工业 | 专用设备",
+        "专用设备"
+      ],
+      "risk_flags": [
+        "缺少具体ETF题材",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "080105c52d1277051a4781466f430b2837054cc7ae3a2172b0ce0e7171004739",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "华通线缆跌停，电网设备短期承压。",
+      "evidence": [
+        "华通线缆 | 电网设备",
+        "电网设备"
+      ],
+      "risk_flags": [
+        "单股到行业外推",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "2823c6513e2746d8739367db3e34ab2e539d463bd36916020536c6ee40c530a2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "京基智农跌停，养殖链负面线索。",
+      "evidence": [
+        "京基智农 | 养殖业",
+        "养殖业"
+      ],
+      "risk_flags": [
+        "养殖股下跌不直接确定豆粕价格方向",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "c25e84e59d9f7e288ae6ed98b2aeebf78a9ed0e061e99c48bbca87e79d6b4dae",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "东百集团跌停，零售表现转弱。",
+      "evidence": [
+        "东百集团 | 一般零售",
+        "一般零售"
+      ],
+      "risk_flags": [
+        "不继承此前芯片并购词",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "e294eceb13416891e1010718846d33aed1cff0746dcd2c01037f82880cdaeb01",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "金奥博跌停，化学制品短期承压。",
+      "evidence": [
+        "金奥博 | 化学制品",
+        "化学制品"
+      ],
+      "risk_flags": [
+        "不继承旧日军工题材",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "d74030c8b69fa6534ece802f9d69a0a2970bbf5aaa8f570d217ef742dfffad80",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "路畅科技跌停，汽车零部件承压。",
+      "evidence": [
+        "路畅科技 | 汽车零部",
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "分类截断，不自动代表新能源车",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "27671975656d73e8628cd76a3886028da3a7a3d5a6fea6783065070d11dd8dbc",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.5,
+      "summary": "宏润建设跌停，基础建设出现负面量价线索。",
+      "evidence": [
+        "宏润建设 | 基础建设",
+        "基础建设"
+      ],
+      "risk_flags": [
+        "基础建设不改写为基建或建筑专属词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "042bc46a7fc39bd9503674b7b3d8c84948d92344e48ec97cc36094edb557b507",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.84,
+      "novelty": 0.5,
+      "summary": "荣丰控股跌停，房地产分类明确。",
+      "evidence": [
+        "荣丰控股 | 房地产开",
+        "房地产开"
+      ],
+      "risk_flags": [
+        "分类截断",
+        "此前股权事件不延用为利好",
+        "DDE缺失，不判断净流入",
+        "个股到ETF趋势存在外推不确定性"
+      ]
+    },
+    {
+      "source_hash": "b6a8088db5a7e979c85530eb9fbe12800c9bc829f52c7dcacc376153996fa7d7",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "农心科技跌停，农化制品继续承压。",
+      "evidence": [
+        "农心科技 | 农化制品",
+        "农化制品"
+      ],
+      "risk_flags": [
+        "不借旧日农药关键词",
+        "DDE缺失，不判断净流入"
+      ]
+    },
+    {
+      "source_hash": "ec7037677893e0c8e3818d7ea1cf364d7281079c2829216f39813e040fa8cd34",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "仁东控股跌停，多元金融承压。",
+      "evidence": [
+        "仁东控股 | 多元金融",
+        "多元金融"
+      ],
+      "risk_flags": [
+        "多元金融不自动映射银行或券商",
+        "DDE缺失，不判断净流入"
+      ]
+    }
+  ]
+}
