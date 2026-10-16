@@ -1,0 +1,110 @@
+{
+  "strategy": "ye 策略",
+  "signal_date": "2026-08-13",
+  "execute": "下一交易日开盘",
+  "current_symbol": "512010.SH",
+  "target_symbol": "512010.SH",
+  "backtest_shadow_target_symbol": "513200.SH",
+  "account_state": {
+    "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
+    "as_of": "2026-08-13_close",
+    "confirmation_status": "assumed_authorized",
+    "first_live_day": false,
+    "total_equity": 10506.199819,
+    "available_cash": 0.0,
+    "performance": {
+      "strategy_start_date": "2026-07-21",
+      "net_contributed_capital": 9825.0,
+      "calculation_basis": "用户确认资金全部投入首笔买入；26200股×0.375元=9825元，后续如有出入金必须同步调整"
+    },
+    "positions": [
+      {
+        "symbol": "512010.SH",
+        "name": "医药ETF易方达",
+        "opened_on": "2026-07-21",
+        "quantity": 26200,
+        "average_cost": 0.375,
+        "market_price": 0.4009999930858612,
+        "market_value": 10506.199818849564,
+        "unrealized_pnl": 681.1998188495636
+      }
+    ],
+    "pending_orders": []
+  },
+  "decision_basis": {
+    "live_position_source": "results/live/account_state.json；不得使用回测持仓代替",
+    "eligible_candidates": [
+      {
+        "symbol": "513200.SH",
+        "name": "港股通医药ETF易方达",
+        "pool_role": "core",
+        "rank": 2,
+        "momentum_score": 0.2546077477211854,
+        "selection_score": 0.2546077477211854,
+        "entry_path": "常规动量"
+      },
+      {
+        "symbol": "512800.SH",
+        "name": "银行ETF华宝",
+        "pool_role": "core",
+        "rank": 5,
+        "momentum_score": 0.0952134881276092,
+        "selection_score": 0.0952134881276092,
+        "entry_path": "常规动量"
+      }
+    ],
+    "selection_rule": "核心候选拥有第一买入权；只有当天无合格核心候选时，挑战者才填补空档。核心旧仓先检查原卖出，再检查5/5点/2日/5日机会换仓；挑战者持仓遇到合格核心候选时让位。",
+    "opportunity_switch": {
+      "enabled": true,
+      "candidate_symbol": "513200.SH",
+      "qualifies_today": false,
+      "confirmation_streak": 0,
+      "required_confirmation_days": 2,
+      "triggered": false,
+      "status": "not_qualified",
+      "live_baseline_on": "2026-07-29",
+      "live_confirmation_starts_on": "2026-07-30",
+      "holding_symbol": "512010.SH",
+      "holding_rank": 1.0,
+      "holding_since": "2026-07-21",
+      "held_trading_days": 18,
+      "candidate_rank": 2.0,
+      "score_gap": -0.0396681702235715,
+      "minimum_score_advantage": 0.05,
+      "reset_rule": "任一条件中断或领先ETF改变，连续计数归零"
+    },
+    "backtest_shadow_note": "回测影子持仓只用于绩效和一致性审计，不代表真实账户持仓，也不决定首次实盘买单。"
+  },
+  "actions": [
+    {
+      "side": "hold",
+      "symbol": "512010.SH",
+      "target_weight": 1.0
+    }
+  ],
+  "execution": {
+    "target_policy": "策略只产生 0% 或 100% 的目标仓位，不进行主观分批建仓、加仓、减仓或止盈。",
+    "order_sequence": "换仓时先卖旧仓，再买新仓；子订单只由流动性上限触发。",
+    "broker_fill_confirmation_required": false,
+    "confirmation_rule": "用户常设执行授权已启用：未另行报告时，下一次运行按本计划完整执行、以实际开盘价和固定成本记账；券商成交回单、出入金或未完成订单优先覆盖。",
+    "orders": []
+  },
+  "cost": "唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径",
+  "cash_management": {
+    "enabled": true,
+    "product": "收盘宝",
+    "instruction": "收盘后仅对实际闲置现金执行；不改变上述ETF计划。",
+    "subscribe_window": "交易日15:00-15:30",
+    "amount_rule": "收盘可用现金大于1000元时，按1000元整数倍申报；保留无法整除的余额",
+    "fee_rate": 1e-05,
+    "annualized_yield": "下单时实时值；不得在实盘计划中写死或承诺收益",
+    "maturity": "下一交易日开盘前本金和利息回到股票账户可用资金",
+    "failure_action": "下单失败、收益率缺失、额度不足或到账异常时，保留现金；不得影响ETF卖出或买入计划"
+  },
+  "ai_review": {
+    "reviewer": "codex_chat",
+    "input_count": 161,
+    "reviewed_count": 161,
+    "coverage": 1.0
+  }
+}

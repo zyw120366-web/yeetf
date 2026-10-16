@@ -1,0 +1,19 @@
+{
+  "target_variant": "champion_cash_gap_51",
+  "invariants": {
+    "I1_decoy_equity_unchanged": true,
+    "I1_decoy_weights_unchanged": true,
+    "I2_challenger_order_invariant": true,
+    "I2b_full_universe_order_invariant": true,
+    "I3_core_rank_unchanged": true,
+    "I3_core_rank_exit_unchanged": true,
+    "I4_challenger_held_while_core_available_days": true,
+    "I5_theme_clone_no_double_weight": true
+  },
+  "invariant_values": {
+    "I4_challenger_held_while_core_available_days": 0,
+    "I5_theme_clone_no_double_weight": 1.0
+  },
+  "champion_vs_core45_signal_diff_days": 4,
+  "all_invariants_pass": true
+}

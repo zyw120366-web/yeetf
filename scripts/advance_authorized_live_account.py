@@ -1,0 +1,174 @@
+"""Advance the live account under the user's standing execution authorization."""
+from __future__ import annotations
+
+import argparse
+import json
+import math
+from pathlib import Path
+
+import pandas as pd
+import yaml
+
+from etf_rotation.live import atomic_json, raw_quote, validate_account, validate_authorized_plan, live_lock, fingerprint
+
+
+ROOT = Path(__file__).resolve().parents[1]
+ACCOUNT = ROOT / "results" / "live" / "account_state.json"
+
+
+def trading_dates() -> pd.DatetimeIndex:
+    frame = pd.read_csv(ROOT / "market_data" / "prices" / "510300.SH.csv", parse_dates=["datetime"])
+    return pd.DatetimeIndex(frame["datetime"])
+
+
+def quote(symbol: str, day: pd.Timestamp) -> tuple[float, float]:
+    return raw_quote(ROOT, symbol, str(day.date()))
+
+
+def costs(symbol: str, market: dict) -> tuple[float, float, float]:
+    premium = symbol.split(".")[0].startswith("513") or symbol == "159941.SZ"
+    item = market["execution"]["fixed_premium_sensitive" if premium else "fixed_default"]
+    return float(item["commission_rate"]), float(item["slippage_rate"]), float(market["execution"]["minimum_commission"])
+
+
+def instrument_name(symbol: str, market: dict) -> str:
+    for item in market["universe"]:
+        candidate = f"{item['code']}.{item['market']}"
+        if candidate == symbol:
+            return str(item["name"])
+    return symbol
+
+
+def advance(date: str | None = None) -> None:
+    if date is None:
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--date", required=True)
+        args = parser.parse_args()
+    else:
+        args = argparse.Namespace(date=date)
+    day = pd.Timestamp(args.date)
+    governance = yaml.safe_load((ROOT / "config" / "strategy_governance.yaml").read_text(encoding="utf-8"))
+    authorization = governance["live_audit"].get("standing_execution_authorization", {})
+    if not authorization.get("enabled"):
+        raise RuntimeError("standing execution authorization is disabled")
+    account = json.loads(ACCOUNT.read_text(encoding="utf-8"))
+    validate_account(account)
+    before_hash = fingerprint(account)
+    account_day = pd.Timestamp(str(account["as_of"]).split("_")[0])
+    if account_day == day:
+        # A user-confirmed fill may already have set today's opening position.
+        # At the post-close run, mark that verified position to the frozen close
+        # without re-applying the prior plan or changing its confirmation source.
+        positions = [p for p in account.get("positions", []) if float(p.get("quantity", 0)) > 0]
+        if len(positions) > 1:
+            raise RuntimeError("only one live ETF position is supported")
+        for position in positions:
+            _, close = quote(str(position["symbol"]), day)
+            position["market_price"] = close
+            position["market_value"] = float(position["quantity"]) * close
+            position["unrealized_pnl"] = float(position["quantity"]) * (close - float(position["average_cost"]))
+        account["as_of"] = f"{args.date}_close"
+        account["total_equity"] = round(
+            float(account.get("available_cash", 0.0))
+            + sum(float(position["market_value"]) for position in positions),
+            6,
+        )
+        atomic_json(ACCOUNT, account)
+        print(json.dumps({"status": "marked_to_close", "date": args.date, "equity": account["total_equity"]}, ensure_ascii=False))
+        return
+    dates = trading_dates()
+    prior_dates = dates[dates < day]
+    if day not in dates or not len(prior_dates) or account_day != prior_dates[-1]:
+        raise RuntimeError("account may only advance one confirmed trading session")
+    prior = str(prior_dates[-1].date())
+    receipt = ROOT / "results/audit" / f"{prior}_execution_reconciliation.json"
+    if receipt.exists():
+        saved = json.loads(receipt.read_text(encoding="utf-8"))
+        if (saved.get("status") == "assumed_authorized" and saved.get("execution_date") == args.date
+                and saved.get("account_before_sha256") == before_hash and saved.get("account_after")
+                and not (ROOT / "results/live" / f"{prior}_actual_fills.json").exists()):
+            validate_account(saved["account_after"], args.date)
+            atomic_json(ACCOUNT, saved["account_after"])
+            print("Recovered committed accounting receipt; no second execution")
+            return
+    plan_path = ROOT / "results" / "live" / f"{prior}_order_plan.json"
+    if not plan_path.exists():
+        raise RuntimeError(f"missing prior order plan: {plan_path.name}")
+    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    validate_authorized_plan(ROOT, plan, account, prior)
+    if account.get("pending_orders"):
+        raise RuntimeError("pending broker orders require explicit correction")
+    market = yaml.safe_load((ROOT / "config" / "market.yaml").read_text(encoding="utf-8"))
+    lot = int(market["project"]["lot_size"])
+    positions = [p for p in account.get("positions", []) if float(p.get("quantity", 0)) > 0]
+    if len(positions) > 1:
+        raise RuntimeError("only one live ETF position is supported")
+    position = positions[0] if positions else None
+    cash = float(account["available_cash"])
+    fills: list[dict] = []
+    for action in plan["actions"]:
+        side, symbol = action["side"], action.get("symbol")
+        if side == "hold":
+            continue
+        if side == "sell":
+            if not position or position["symbol"] != symbol:
+                raise RuntimeError("planned sell does not match the live account")
+            opening, _ = quote(symbol, day)
+            rate, slip, minimum = costs(symbol, market)
+            price = opening * (1 - slip)
+            quantity = float(position["quantity"])
+            gross = quantity * price
+            fee = max(minimum, gross * rate)
+            cash += gross - fee
+            fills.append({"side": "sell", "symbol": symbol, "status": "filled", "quantity": quantity, "price": price})
+            account.setdefault("last_exit_dates", {})[symbol] = args.date
+            position = None
+        if side == "buy":
+            if position:
+                raise RuntimeError("旧仓尚未卖出，禁止覆盖持仓")
+            opening, _ = quote(symbol, day)
+            rate, slip, minimum = costs(symbol, market)
+            price = opening * (1 + slip)
+            quantity = math.floor(cash / price / lot) * lot
+            while quantity and quantity * price + max(minimum, quantity * price * rate) > cash:
+                quantity -= lot
+            if quantity <= 0:
+                raise RuntimeError("资金不足一手，不能标记为完整成交")
+            gross = quantity * price
+            fee = max(minimum, gross * rate) if quantity else 0.0
+            cash -= gross + fee
+            position = {"symbol": symbol, "name": instrument_name(symbol, market), "opened_on": str(day.date()), "quantity": quantity, "average_cost": price}
+            fills.append({"side": "buy", "symbol": symbol, "status": "filled", "quantity": quantity, "price": price})
+    output_positions: list[dict] = []
+    if position and float(position["quantity"]) > 0:
+        _, close = quote(str(position["symbol"]), day)
+        position["market_price"] = close
+        position["market_value"] = float(position["quantity"]) * close
+        position["unrealized_pnl"] = float(position["quantity"]) * (close - float(position["average_cost"]))
+        output_positions = [position]
+    account.update({
+        "as_of": f"{args.date}_close",
+        "confirmation_status": "assumed_authorized",
+        "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
+        "available_cash": round(cash, 6),
+        "total_equity": round(cash + sum(float(p["market_value"]) for p in output_positions), 6),
+        "positions": output_positions,
+        "pending_orders": [],
+        "execution_assumption": {"enabled": True, "authorization_date": "2026-08-06", "prior_signal_date": prior, "assumed_fills": fills},
+    })
+    account["note"] = "用户常设授权下的计划执行记账；若券商实际成交、出入金或未完成订单与此不同，必须立即以真实记录更正。"
+    validate_account(account, args.date)
+    reconciliation = {"signal_date": prior, "execution_date": args.date, "status": "assumed_authorized", "source": account["source"], "actual_fills": fills, "account_before_sha256": before_hash, "account_after": account}
+    audit = ROOT / "results" / "audit" / f"{prior}_execution_reconciliation.json"
+    atomic_json(audit, reconciliation)
+    atomic_json(ACCOUNT, account)
+    print(json.dumps({"status": "advanced", "date": args.date, "fills": fills, "equity": account["total_equity"]}, ensure_ascii=False))
+
+
+def main() -> None:
+    with live_lock(ROOT):
+        advance()
+
+
+if __name__ == "__main__":
+    main()

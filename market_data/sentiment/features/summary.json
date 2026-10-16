@@ -1,8 +1,21 @@
 {
   "first_date": "2024-01-02",
-  "last_date": "2026-07-22",
-  "source_days": 617,
-  "symbols": 45,
-  "rows": 27765,
-  "nonzero_symbol_days": 21266
+  "last_date": "2026-09-10",
+  "source_days": 653,
+  "symbols": 51,
+  "rows": 33303,
+  "nonzero_symbol_days": 24787,
+  "source_regimes": {
+    "ai_review": {
+      "dates": 40,
+      "first_date": "2026-07-17",
+      "last_date": "2026-09-10"
+    },
+    "keyword_proxy": {
+      "dates": 613,
+      "first_date": "2024-01-02",
+      "last_date": "2026-07-16"
+    }
+  },
+  "interpretation": "keyword_proxy是历史关键词代理，不是逐条AI审核；特征存在不等于当时已完成实盘审核"
 }

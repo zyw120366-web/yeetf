@@ -1,0 +1,84 @@
+{
+  "strategy": "ye 策略",
+  "signal_date": "2026-09-15",
+  "status": "BLOCKED",
+  "current_symbol": "159985.SZ",
+  "target_symbol": null,
+  "actions": [],
+  "account_state": {
+    "account_type": "live",
+    "as_of": "2026-09-11_close",
+    "confirmation_status": "pending",
+    "source": "用户确认9月11日以1.018元卖光513200.SH 9100股，以2.350元买入159985.SZ 6500股",
+    "first_live_day": false,
+    "total_equity": null,
+    "available_cash": null,
+    "performance": {
+      "strategy_start_date": "2026-07-21",
+      "net_contributed_capital": null,
+      "calculation_basis": "9月10日前净投入9825元；本次新增入金待核，暂停账户收益计算"
+    },
+    "positions": [
+      {
+        "symbol": "159985.SZ",
+        "name": "豆粕ETF华夏",
+        "opened_on": "2026-09-11",
+        "quantity": 6500,
+        "average_cost": 2.35,
+        "market_price": 2.325000047683716,
+        "market_value": 15112.500309944153,
+        "unrealized_pnl": -162.49969005584774
+      }
+    ],
+    "pending_orders": [],
+    "last_exit_dates": {
+      "512010.SH": "2026-09-03",
+      "513200.SH": "2026-09-11"
+    },
+    "actual_execution": {
+      "signal_date": "2026-09-10",
+      "execution_date": "2026-09-11",
+      "fills": [
+        {
+          "side": "sell",
+          "symbol": "513200.SH",
+          "quantity": 9100,
+          "price": 1.018
+        },
+        {
+          "side": "buy",
+          "symbol": "159985.SZ",
+          "quantity": 6500,
+          "price": 2.35
+        }
+      ]
+    },
+    "note": "当前持仓及两笔成交已由用户确认，医药已清仓。pending只指新增入金、剩余现金与费用未核；空值表示未知而非零，不得计算总权益及累计收益或假定执行。上一完整快照保存在9月10日计划的account_state。",
+    "execution_assumption": {
+      "enabled": false,
+      "authorization_date": "2026-08-06",
+      "prior_signal_date": "2026-09-09",
+      "assumed_fills": [],
+      "override": "9月11日真实成交优先；资金对账待补"
+    },
+    "cash_reconciliation": {
+      "status": "pending",
+      "deposit_reported": true,
+      "deposit_amount": null,
+      "user_instruction": "用户确认有新增资金，但未提供金额；要求先生成今日日报。金额保持未知，不能当盈利。",
+      "previous_cash": 17.9,
+      "previous_net_contributed_capital": 9825,
+      "sell_notional": 9263.8,
+      "buy_notional": 15275,
+      "net_deposit_less_fees_less_ending_cash": 5993.3,
+      "note": "新增净入金=5993.30元+当次买卖费用+剩余现金；不推定具体入金或现金"
+    }
+  },
+  "execution": {
+    "orders": [],
+    "executable": false
+  },
+  "blocking_items": [
+    "真实成交已记录；新增入金、余款及费用待核，不能核定账户权益与可用资金。"
+  ]
+}

@@ -1,0 +1,3588 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "5ed1871d879252f074472539a0baf5229b7a1bc8093816421b54d25a9534d489",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.2,
+      "summary": "天然橡胶题材，无固定池专属ETF关键词，不推成豆粕或能源化工信号。",
+      "evidence": [
+        "海南橡胶 | 天然橡胶+全产业链+橡胶科技",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "缺少专属映射"
+      ]
+    },
+    {
+      "source_hash": "99fdd88ed0572d27cfcc7f2e728af06973485becb93d99abf84a4fa3edee582e",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.67,
+      "novelty": 0.3,
+      "summary": "红豆股份涉及养老机器人，兼有持股与服装因素。",
+      "evidence": [
+        "红豆股份 | 牛散持股+服装+养老机器人",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "题材兼营",
+        "机器人不是全部业务"
+      ]
+    },
+    {
+      "source_hash": "30c0fbfb08f52a4234407a0561c0847ce0586f3904d3d6949a88d370ce02eaa3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.4,
+      "summary": "澳弘电子归因包含AI服务器电源，关联AI与算力硬件。",
+      "evidence": [
+        "澳弘电子 | PCB+AI服务器电源+具身智能",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "PCB不等于半导体",
+        "个股不能代表板块"
+      ]
+    },
+    {
+      "source_hash": "baf0c8cb5246a539d556d6d9d5eda471fe816e06c94c7b8c6270c2185fcd3f70",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.3,
+      "summary": "ST沐邦含光伏硅片题材，但重整是并列因素。",
+      "evidence": [
+        "*ST沐邦 | 重整投资+光伏硅片+益智玩具",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "ST及重整风险",
+        "题材归因混杂"
+      ]
+    },
+    {
+      "source_hash": "f84ce9f6f67b42ee175d8f14116539bac1d975adbe341a6285c80c92eec6f7ed",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "中交发展为物业服务和轻资产运营题材。",
+      "evidence": [
+        "中交发展 | 轻资产运营+物业服务+中交集团协同",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "个股事件外推有限"
+      ]
+    },
+    {
+      "source_hash": "ebc76889a8e806362297b0a9d9ba9aa52c9e56ea69ebb51412ee72ec57e8ba5a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.4,
+      "summary": "文投控股涉及AI漫剧与影视院线。",
+      "evidence": [
+        "文投控股 | AI漫剧+影视院线+北京国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "内容应用不等于算力业绩"
+      ]
+    },
+    {
+      "source_hash": "e5d860d6856f0fd4edc198e8bb67ea5e022faa63896069693685c4edda681a2a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.57,
+      "novelty": 0.3,
+      "summary": "梦天家居仅提功率半导体投资，并非主营芯片证据。",
+      "evidence": [
+        "梦天家居 | 全屋定制+智能制造+功率半导体投资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "投资概念",
+        "不能外推主营转型"
+      ]
+    },
+    {
+      "source_hash": "dd6c6894ef4adcd4189ed23b17301842dbf8cb3adefe57be8ba6c092df96ce68",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.4,
+      "summary": "雷赛智能涉及人形机器人、伺服系统与半年报增长。",
+      "evidence": [
+        "雷赛智能 | 人形机器人+伺服系统+半年报增长",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "未披露增长幅度"
+      ]
+    },
+    {
+      "source_hash": "1bc00b3b7583f676a9040c6af421491678929d8fd938d53530d730a4c38632ff",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.71,
+      "novelty": 0.4,
+      "summary": "三人行包含数据中心和AI营销，属于两类并列题材。",
+      "evidence": [
+        "三人行 | 数据中心+AI营销+体育营销",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "未披露订单与收入"
+      ]
+    },
+    {
+      "source_hash": "fe70a247ee18ded8e020b1d2b8d565086b0f3949a6048f9ac7dfd5a74c183f00",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.4,
+      "summary": "芒果超媒涉及AIGC长剧和微短剧。",
+      "evidence": [
+        "芒果超媒 | AIGC长剧+微短剧+长视频",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "应用热度不等于盈利"
+      ]
+    },
+    {
+      "source_hash": "2e1eaa6c9f3e4008027f55fe6a782739ef34ac2090ba2377a281c45e84a70efc",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "商品"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.67,
+      "novelty": 0.3,
+      "summary": "百洋股份有水产饲料与加工题材，可作饲料链线索。",
+      "evidence": [
+        "百洋股份 | 水产品加工+水产饲料+青岛国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "饲料企业走强不等于豆粕期货上涨",
+        "不能反推豆粕供需"
+      ]
+    },
+    {
+      "source_hash": "fc1b42b1b7bd7567d19a643853b4f92c1a06681b31b97b8487fd1c9f2001c73b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.4,
+      "summary": "慈文传媒涉及微短剧与影视IP。",
+      "evidence": [
+        "慈文传媒 | 微短剧+影视IP+泛文化",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "题材热度与业绩分离"
+      ]
+    },
+    {
+      "source_hash": "bd4af3a9291a321aac7c9b029eb7947fef0979ab2e41e9be4ae7344c22a31475",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.4,
+      "summary": "博纳影业包含AI短剧、AIGC和电影制作。",
+      "evidence": [
+        "博纳影业 | AI短剧+AIGC+电影制作+院线影院",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "内容应用不等于业绩确认"
+      ]
+    },
+    {
+      "source_hash": "4ae26177194b27fa5b0521878b7c5d2cc9f94e650498bc39265eb3be5dcc03d0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.2,
+      "summary": "麒麟信安为信息安全与国产系统；智算一体机文字不足以直接映射现有专属关键词。",
+      "evidence": [
+        "麒麟信安 | 信息安全+国产操作系统+智算一体机",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "未作AI或通信扩散映射"
+      ]
+    },
+    {
+      "source_hash": "b12f29436882692282c7846769edf45954ad5f64114a3dfcdba7105de1934ab5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.4,
+      "summary": "粤传媒涉及AI视频、微短剧与体育传媒。",
+      "evidence": [
+        "粤传媒 | AI视频+微短剧+体育传媒",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "题材归因非基本面验证"
+      ]
+    },
+    {
+      "source_hash": "c8f1c50806df0b534895ce0ec3d0ad470d988019894cb25c27dbcd226138e76f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.4,
+      "summary": "掌阅科技涉及AI短剧和短剧出海。",
+      "evidence": [
+        "掌阅科技 | AI短剧+短剧出海+数字阅读",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "未披露业务收入"
+      ]
+    },
+    {
+      "source_hash": "37019af5e5dd391acc68a8feb09d90f3058b1390249a79b6783d45094ad783a4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.4,
+      "summary": "中文在线涉及AI视频和海外短剧。",
+      "evidence": [
+        "中文在线 | AI短剧+AI视频+海外短剧",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "应用热度非业绩保证"
+      ]
+    },
+    {
+      "source_hash": "29bb13dd89eb162bc418507b48ee7899d0c570cde4e0554c364560c309129488",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.4,
+      "summary": "众生药业为减肥药、脂肪肝药及创新药题材。",
+      "evidence": [
+        "众生药业 | 减肥药+脂肪肝药+创新药",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "无临床结果细节",
+        "A股线索不等于港股同步"
+      ]
+    },
+    {
+      "source_hash": "534839808a747dc901e71c57dba8da9d254c42ba1ead620ec84744d2c26ba0b6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.2,
+      "summary": "新华文轩仅有教科书发行和教育整合表述，暂不补写出版ETF专属文字。",
+      "evidence": [
+        "新华文轩 | 教科书发行+数字教育+收购整合",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "不借其他来源补该行证据"
+      ]
+    },
+    {
+      "source_hash": "d66d72097ecb3d869bae50061f85491569491c2d299393a36044188f510602c3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.4,
+      "summary": "格尔软件为AI安全与抗量子密码题材。",
+      "evidence": [
+        "格尔软件 | AI安全+抗量子密码+PKI安全",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "安全应用不代表整个AI板块"
+      ]
+    },
+    {
+      "source_hash": "d0e38ec7833194878c7149b5c6c4b29a8b46cafb7481d9da14e9e0c09aa700d6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.4,
+      "summary": "欢瑞世纪涉及AI漫剧及影视制作。",
+      "evidence": [
+        "欢瑞世纪 | AI漫剧+互动影游+影视制作",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "影视题材不能外推盈利"
+      ]
+    },
+    {
+      "source_hash": "2c0ea83b78f18267a3238fdddf55e79a79c47c94805bcc8214af51e73b7ea05e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.66,
+      "novelty": 0.3,
+      "summary": "贝瑞基因含AI医疗和测序，不据此认定为医疗器械主业。",
+      "evidence": [
+        "贝瑞基因 | AI医疗+三代测序+基因检测",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "医疗服务不直接映射器械ETF"
+      ]
+    },
+    {
+      "source_hash": "567e8534a9e1126e1a90cae19eb385f6e72d63a46c2bc50a1da305f4271aba7b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.4,
+      "summary": "新经典涉及图书出版、AI应用和内容IP。",
+      "evidence": [
+        "新经典 | 图书出版+AI应用+内容IP",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "AI落地规模不明"
+      ]
+    },
+    {
+      "source_hash": "fd601777bedfc02c87673ea229f47817f143613ee96990158764c2052b3236f5",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.52,
+      "novelty": 0.3,
+      "summary": "ST万邦涉及创新药与神经用药，另有协议转让。",
+      "evidence": [
+        "ST万邦 | 创新药+神经用药+协议转让",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "ST风险",
+        "股权事项混杂",
+        "跨市场外推"
+      ]
+    },
+    {
+      "source_hash": "48c6f9766632d4548b187eeddd93f0bb81c966fd041c378d0c97dd7aa818c489",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.78,
+      "novelty": 0.2,
+      "summary": "ST四通为陶瓷、锆钛精炼与摘帽事项，无直接专属映射。",
+      "evidence": [
+        "*ST四通 | 陶瓷制造+锆钛精炼+摘帽申请",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "ST及摘帽不确定性"
+      ]
+    },
+    {
+      "source_hash": "a829b3d16be29f13edd20a902d5b9cce8cd27604961b4779205cb3a7a58af875",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "515050.SH",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.4,
+      "summary": "吉视传媒同时涉及AI微短剧与算力租赁。",
+      "evidence": [
+        "吉视传媒 | 智慧广电+AI微短剧+AI应用+算力租赁",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "多题材",
+        "无业务体量"
+      ]
+    },
+    {
+      "source_hash": "545ecf9e55443db8aebf3bf0458ff21cd95a8891917e7b1eca18de22f259b5aa",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.4,
+      "summary": "上海电影涉及AI影视及知识产权运营。",
+      "evidence": [
+        "上海电影 | AI影视+知识产权运营+院线经营",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "题材不能等同利润"
+      ]
+    },
+    {
+      "source_hash": "7ad6923e9ee14ff4726c2d10b96bdc933acaedfbee0ef1d72bc966cc5e0c992e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.4,
+      "summary": "龙版传媒涉及AI漫剧与出版发行。",
+      "evidence": [
+        "龙版传媒 | AI漫剧+出版发行+黑龙江国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "AI商业化尚未量化"
+      ]
+    },
+    {
+      "source_hash": "dd2625008b5d0713ca7fb87d47a2e1a7d435284a77c85c4fafda4b5c468c2c3f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.55,
+      "novelty": 0.3,
+      "summary": "郑中设计为半导体投资与室内设计并列归因。",
+      "evidence": [
+        "郑中设计 | 半导体投资+室内设计+软装增长",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "参股投资不是芯片主营"
+      ]
+    },
+    {
+      "source_hash": "58ddbf121b4655a0781a6aede007dd6a72e0c3dafa5f15173acd93dd6b3c6f58",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "516970.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.64,
+      "novelty": 0.3,
+      "summary": "德才股份包含AI漫剧和建筑装饰，不能补成已落地影视收入。",
+      "evidence": [
+        "德才股份 | AI漫剧+火山引擎合作+建筑装饰",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "跨界题材",
+        "无合作金额"
+      ]
+    },
+    {
+      "source_hash": "a8b01e1422ec04f1133a655bf9bfa6f21f2e37c67d6f938218517411d0f919d0",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "九牧王有零售消费归因。",
+      "evidence": [
+        "九牧王 | 男裤龙头+零售消费+太空裤",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "太空裤是产品描述而非航空航天"
+      ]
+    },
+    {
+      "source_hash": "3bb620f9e915b1c4d7ba358994606d838dba0f9acb0f120b1c7294d4c51b8e93",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.3,
+      "summary": "东亚药业为抗生素及头孢题材，当前行不扩展不存在的医药ETF专属词。",
+      "evidence": [
+        "东亚药业 | 抗生素+头孢产品+制剂一体化",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "该行无有效专属映射"
+      ]
+    },
+    {
+      "source_hash": "9ffbec9fddfbc5f27d9e4aca66b794d124a01594a4dcd90a65f5f799ee5bd147",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.4,
+      "summary": "中新赛克涉及AI安全及网络数据安全。",
+      "evidence": [
+        "中新赛克 | AI安全+网络安全+数据安全",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "无订单规模"
+      ]
+    },
+    {
+      "source_hash": "9cdf3e16827726d389fe99acfa48a05939fa0d264054e5581a83722969f8953c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.4,
+      "summary": "大智慧涉及互联网金融、人工智能与合并事项。",
+      "evidence": [
+        "大智慧 | 互联网金融+湘财吸收合并+人工智能",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "合并进展不明",
+        "不能当证券经营业绩"
+      ]
+    },
+    {
+      "source_hash": "3db684e3268296f23e2270b0a822ff2be17db71295c48a899aa3cf06c60044d6",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512070.SH",
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "华鑫股份涉及证券经纪与金融科技。",
+      "evidence": [
+        "华鑫股份 | 证券经纪+金融科技+上海国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "个股归因不足证明板块持续性"
+      ]
+    },
+    {
+      "source_hash": "82719e2e8cd62ed9ce0885907a6c21bdd1c0ebddb7bf3db00f8b5bcd2c03b708",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.83,
+      "novelty": 0.2,
+      "summary": "敦煌种业是玉米种业，不应映射豆粕、大豆或养殖。",
+      "evidence": [
+        "敦煌种业 | 玉米种业+核心品种+商业化育种",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "品种不匹配"
+      ]
+    },
+    {
+      "source_hash": "51c7d1212e842b1579cea57b74cb7d643f461908c59f6fbc999d88e754670e80",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.2,
+      "summary": "吉林化纤涉及碳纤维和粘胶，没有直接专属关键词。",
+      "evidence": [
+        "吉林化纤 | 碳纤维+粘胶长丝+国企",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "不推成化工ETF信号"
+      ]
+    },
+    {
+      "source_hash": "20266f6dc8ea7401f036d3e57a90b73ca04382f70ec0d6c12e80b99b9363b4a9",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.4,
+      "summary": "西部黄金包含黄金业务及业绩增长。",
+      "evidence": [
+        "西部黄金 | 黄金业务+股东合并+业绩增长",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "金矿股不等同黄金现货"
+      ]
+    },
+    {
+      "source_hash": "12ab6e1cb48e8d30b42edfe35bf02df89e62da83ec085a02b7541ce5e6810d43",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.3,
+      "summary": "振华股份含金属铬业务，可作金属行业个股线索。",
+      "evidence": [
+        "振华股份 | SOFC+金属铬+铬盐龙头",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "铬盐不代表全有色板块"
+      ]
+    },
+    {
+      "source_hash": "9d382b39510348a920fc8b42104474b6a0d8e4d0be20b364d9903f7167deb407",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.3,
+      "summary": "国光连锁涉及零售和半年报增长。",
+      "evidence": [
+        "国光连锁 | 零售主业+商业综合体+半年报增长",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "公司经营不能代表消费全行业"
+      ]
+    },
+    {
+      "source_hash": "f12b9f420f86a8ac9492dc253a38106f46754491e63c4e0695554cab2db4aae4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.4,
+      "summary": "天融信涉及人工智能安全与智算云。",
+      "evidence": [
+        "天融信 | 人工智能安全+智算云+网络安全",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "不能补写算力订单"
+      ]
+    },
+    {
+      "source_hash": "7384f3cfbb0e4e590a680b69336522981c8305d7d279a2b3c4b513fcb1f27ceb",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "妙可蓝多为奶酪深加工及业绩增长，无专属消费ETF关键词。",
+      "evidence": [
+        "妙可蓝多 | 业绩增长+奶酪深加工+奶酪产品",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "保留消费背景但不广播映射"
+      ]
+    },
+    {
+      "source_hash": "11bb61b8d3640bd3a69a83096c7becedda025c5f66c689624ad19e93c24a0259",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.71,
+      "novelty": 0.3,
+      "summary": "百大集团有商业零售和物业租赁，政府补助也是归因。",
+      "evidence": [
+        "百大集团 | 商业零售+物业租赁+政府补助",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "非经常性收益因素"
+      ]
+    },
+    {
+      "source_hash": "22af919af5138a5416e859c7f166e25261084d525197268ca3c29a6f727ef538",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.4,
+      "summary": "绿盟科技含人工智能安全及智算中心。",
+      "evidence": [
+        "绿盟科技 | 人工智能安全+智算中心+网络安全",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "仅归因标签"
+      ]
+    },
+    {
+      "source_hash": "cf3a2c54cb055ca91ec51fac11cec89441bb14a4284510a5d22f3fb48ff4e3f4",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.61,
+      "novelty": 0.3,
+      "summary": "新筑股份涉及清洁能源及重大重组，未直接指明电力或新能源ETF关键词。",
+      "evidence": [
+        "新筑股份 | 清洁能源+重大重组+四川国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "重组不确定性",
+        "不泛化至电力"
+      ]
+    },
+    {
+      "source_hash": "432c1a652e7b66eb11bc30d0d6ad5cb7c6b2eec72ab189830752c1583e9e45e8",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.63,
+      "novelty": 0.3,
+      "summary": "金圆股份为盐湖提锂与固废资源化，未将锂资源机械视为电池成品。",
+      "evidence": [
+        "金圆股份 | 盐湖提锂+锂矿布局+固废危废资源化",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "上游资源不直接映射电池"
+      ]
+    },
+    {
+      "source_hash": "0ba345b4f9bdbf303975f746ea75cc8ada4e10d5fb2a928c46cbe8b40c9f3e9c",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "中红医疗为医用手套和业绩增长线索。",
+      "evidence": [
+        "中红医疗 | 医用手套+业绩高增+海外产能",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "公司产品不代表全部器械"
+      ]
+    },
+    {
+      "source_hash": "e8f39240b5e469649d7b2c4c992ede7741cf8539ff660a3b4c0e5f19d7301428",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.3,
+      "summary": "安泰集团包含焦炭及煤气制氢。",
+      "evidence": [
+        "安泰集团 | 焦炭+焦炉煤气制氢+型钢",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "无氢能专属池",
+        "不外推能源化工"
+      ]
+    },
+    {
+      "source_hash": "a54a3721da013a483349ce4adaaf3310084363d3b7b8f9b89d3048c87101c8d2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.3,
+      "summary": "汇嘉时代涉及新疆零售和超市调改。",
+      "evidence": [
+        "汇嘉时代 | 超市调改+新疆零售+商业综合体",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "区域个股线索"
+      ]
+    },
+    {
+      "source_hash": "6fb6053f5e640840c652f12badbca4154bb4216997ff1dfed1a35213e19df2cc",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.4,
+      "summary": "东诚药业有核医药、创新药和股份回购。",
+      "evidence": [
+        "东诚药业 | 核医药+创新药+股份回购",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "无新药审批细节",
+        "跨市场外推"
+      ]
+    },
+    {
+      "source_hash": "a93af0ced81db7f4288669bb2289526b1cb134d59786e07f16290a44019e1b71",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.83,
+      "novelty": 0.2,
+      "summary": "万向德农为玉米育种，不等于大豆、豆粕或畜禽养殖。",
+      "evidence": [
+        "万向德农 | 玉米种业+转基因玉米+新品研发",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "农产品品种不可替代"
+      ]
+    },
+    {
+      "source_hash": "843d86efe5f74ce7fa206611926618bafedd7e99a74b19b7c40c3abccb5b3146",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "国芳集团涉及连锁零售、消费场景及营收增长。",
+      "evidence": [
+        "国芳集团 | 连锁零售+消费场景+营收增长",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "公司增长不等于全板块"
+      ]
+    },
+    {
+      "source_hash": "459c6c9712633ef603debaf4d2070b01fd513c8e1e83dc2cc7b537ac021ee3c1",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用",
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.64,
+      "novelty": 0.2,
+      "summary": "华建集团含工程设计与上海微电子相关，未直接出现建筑或半导体专属词。",
+      "evidence": [
+        "华建集团 | 上海微电子相关+工程设计+子公司重整获批+上海国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "关联关系未展开",
+        "不补写半导体业务"
+      ]
+    },
+    {
+      "source_hash": "7d0d8d816e5358d63433b514031178a4aed7a78590fd11d5e65bf87e1fd89f4a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.4,
+      "summary": "领湃科技涉及储能电池与新能源服务。",
+      "evidence": [
+        "领湃科技 | 储能电池+新能源综合服务+衡阳国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "收入规模未说明"
+      ]
+    },
+    {
+      "source_hash": "ed1b90ed0959fdde086b7e53b2508f64c8d66be041b150a53559ceee3ddf1c4d",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.7,
+      "novelty": 0.3,
+      "summary": "金健米业为粮油食品和粮食储备，不把粮食统称映射豆粕。",
+      "evidence": [
+        "金健米业 | 粮油食品+健康食品+粮食储备",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "缺少专属关键词",
+        "品种不同"
+      ]
+    },
+    {
+      "source_hash": "e11306d6efafca7975be52f233cd2d029f66d5fbb046b4046a836f6ef6bdf8a8",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.3,
+      "summary": "上工申贝明确包含机器人缝制。",
+      "evidence": [
+        "上工申贝 | 缝制设备+机器人缝制+轻型飞机",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "轻型飞机不自动作軍工证据"
+      ]
+    },
+    {
+      "source_hash": "f5e6d6e9efd6187b76059f1d98e60caecfe07561995af7d7a07af1fc069392d5",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.3,
+      "summary": "新亚强为有机硅与电子化学品，未补写化工专属词。",
+      "evidence": [
+        "新亚强 | 有机硅+电子化学品+国资控股",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "不可凭电子一词映射半导体"
+      ]
+    },
+    {
+      "source_hash": "f7e58684735566a1a1f7e9f05fd73703acfabd4514e98fd7b5363b57aef08322",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.71,
+      "novelty": 0.4,
+      "summary": "东岳硅材披露三季报预增与有机硅题材，未给增长幅度。",
+      "evidence": [
+        "东岳硅材 | 三季报预增+有机硅+全产业链",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "无专属关键词映射"
+      ]
+    },
+    {
+      "source_hash": "badbbcb539b682ac1ba251350469e1b61a32b3277bf9735536263bcc70cf408f",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.4,
+      "summary": "科力远涉及固态电池、储能电站及材料。",
+      "evidence": [
+        "科力远 | 固态电池+储能电站+电池材料",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "技术落地与订单未知"
+      ]
+    },
+    {
+      "source_hash": "fc71202262b6a86b3ab10d83b3db99338efde708169b1fc6d341b4624c99a6f8",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512760.SH",
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.84,
+      "novelty": 0.4,
+      "summary": "楚环科技虽有半导体环保及航天投资标签，股价被操纵是明显个股风险。",
+      "evidence": [
+        "楚环科技 | 废气治理+半导体环保+航空航天投资+股价被操纵",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "股价被操纵",
+        "负面不能推断整个行业",
+        "参股概念"
+      ]
+    },
+    {
+      "source_hash": "f91b578414ad982623b404a5be98cd6499d52f301dde6bf3223f842b78e74a7f",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.4,
+      "summary": "丰元股份为固态电池和磷酸铁锂题材。",
+      "evidence": [
+        "丰元股份 | 固态电池+磷酸铁锂+比亚迪合作",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "合作规模未说明"
+      ]
+    },
+    {
+      "source_hash": "2bde57fda8df35e189de14cbe2d722d4890c9aa835e538f800eee8d70044d371",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.63,
+      "novelty": 0.3,
+      "summary": "晨光新材为功能性硅烷和产能题材，无专属映射。",
+      "evidence": [
+        "晨光新材 | 功能性硅烷+多基地产能",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "不能补写化工关键词"
+      ]
+    },
+    {
+      "source_hash": "d7e0d86f558644cbd59181974d3712374ce698eca9ad699b9641eee3c21d169f",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.3,
+      "summary": "丽人丽妆涉及化妆品电商及扭亏，不能把电商直接当互联网科技。",
+      "evidence": [
+        "丽人丽妆 | 化妆品电商+海外总代+业绩扭亏",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "无专属ETF映射"
+      ]
+    },
+    {
+      "source_hash": "1cf09d2fa3dba1a0e3c57074354927a5e64cff99dd474c75a6757f4562096767",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "515790.SH",
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.3,
+      "summary": "安彩高科涉及光伏玻璃，另有资产出售因素。",
+      "evidence": [
+        "安彩高科 | 光伏玻璃+资产出售+高透产品",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "资产出售不等于持续盈利"
+      ]
+    },
+    {
+      "source_hash": "d763ed0c8efa46973d4220d79b5215f776e38a2980d148469b6649fb7348582c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.4,
+      "summary": "雄韬股份同时涉及数据中心UPS与固态、锂电池。",
+      "evidence": [
+        "雄韬股份 | 数据中心UPS+固态电池+锂电池",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "跨题材",
+        "需区分主营与应用"
+      ]
+    },
+    {
+      "source_hash": "6d4cdd4643ab72e45d3fc0d22d3718f7964ebd5f13c1fbf2841b66d515844550",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.66,
+      "novelty": 0.3,
+      "summary": "远程股份含数据中心电缆及参股半导体；电网应用未写电网设备，不补该专属映射。",
+      "evidence": [
+        "远程股份 | 电线电缆+电网应用+数据中心电缆+参股半导体",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "参股不等于主营",
+        "仅依据本行"
+      ]
+    },
+    {
+      "source_hash": "5c0ca638d4541736af6168f38a34c16e134f0e21ac85b6d4a974e200e427ede7",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.71,
+      "novelty": 0.3,
+      "summary": "华北制药有抗生素和创新药归因；鼠疫仅是标题标签。",
+      "evidence": [
+        "华北制药 | 鼠疫+抗生素+创新药+集采",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "不确认公共卫生事件",
+        "跨市场外推"
+      ]
+    },
+    {
+      "source_hash": "34cfb47986c853daef67ff775f4fc5674c9395b1b1f96eb64d99cde30049b703",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.71,
+      "novelty": 0.3,
+      "summary": "九阳股份涉及机器人投资和厨房小家电。",
+      "evidence": [
+        "九阳股份 | 机器人投资+厨房小家电+内容电商",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "投资概念",
+        "不能视为机器人主营"
+      ]
+    },
+    {
+      "source_hash": "0571c98c9f62bbc390b4608af87c2bd68e4aee08a212255589a009d312668270",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.81,
+      "novelty": 0.2,
+      "summary": "三柏硕为蹦床健身器材外销，不直接对应池内专属方向。",
+      "evidence": [
+        "三柏硕 | 蹦床+健身器材+外销",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "运动器材不是传媒"
+      ]
+    },
+    {
+      "source_hash": "8f92114ae3d97292cfcf0c5be2633c231b06d7c118bb4d88797565128036fe56",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.69,
+      "novelty": 0.4,
+      "summary": "新华传媒拟收购财联社并重组；方向线索来自传媒公司及图书发行。",
+      "evidence": [
+        "新华传媒 | 拟收购财联社+重大资产重组+图书发行",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "拟收购尚未完成"
+      ]
+    },
+    {
+      "source_hash": "49ff845dc9a9f5b8dd2b41bde1d000149f2617bc5e70cc1c4154386ea0522863",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.4,
+      "summary": "时代万恒涉及新能源电池及圆柱锂电。",
+      "evidence": [
+        "时代万恒 | 新能源电池+圆柱锂电+辽宁国资",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "无新增订单细节"
+      ]
+    },
+    {
+      "source_hash": "051775127c9327d0c82965595987239d78b03daf618aa18ce10866f98fdd8829",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.4,
+      "summary": "紫竹高科包含固态电池与铝塑膜材料。",
+      "evidence": [
+        "紫竹高科 | 固态电池+铝塑膜+电池客户",
+        "ths_hot_reason"
+      ],
+      "risk_flags": [
+        "客户与量产规模未说明"
+      ]
+    },
+    {
+      "source_hash": "269c6eb441de8c34f477d28613a29e3d96ddfac4b1814fe3b3b1d92590e999ac",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.2,
+      "summary": "紫竹高科涨停池标注电池，与同花顺为同一公司事件。",
+      "evidence": [
+        "紫竹高科 | 电池",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复不加倍计数"
+      ]
+    },
+    {
+      "source_hash": "d461013fa93d17b866ae91fe9d245cd13ea6ccff17c824c4a3f32c36361e4551",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.2,
+      "summary": "时代万恒电池分类涨停，不能由本行扩展其他题材。",
+      "evidence": [
+        "时代万恒 | 电池",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "e7a1f6c2b9f59d3b54f0c45d8390d8270705af9e3b853f0f213828738df01f65",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.2,
+      "summary": "新华传媒在涨停池归类出版；传媒公司名也是直接线索。",
+      "evidence": [
+        "新华传媒 | 出版",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "未给收购进展"
+      ]
+    },
+    {
+      "source_hash": "337b16dc4468ebe06bb7f58e7495ce741a63d29ee2ca8cd9be0fed8258f1e9da",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.79,
+      "novelty": 0.1,
+      "summary": "三柏硕虽在涨停池，文娱用品不是影视或传媒业务证据。",
+      "evidence": [
+        "三柏硕 | 文娱用品",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "不按文娱字样误映射传媒"
+      ]
+    },
+    {
+      "source_hash": "401476c70d3eb9cd8f5288cb5e289952a59e504c0e55bbbdf021777d918d6ff8",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "九阳股份小家电涨停，直接支持家电方向。",
+      "evidence": [
+        "九阳股份 | 小家电",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "本行无机器人投资细节"
+      ]
+    },
+    {
+      "source_hash": "dde24ebb834095cc4e92d9a38b968cc6b6e2d685b7d89c0f757074d259844d03",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "华北制药化学制药涨停，不由本行补写创新药。",
+      "evidence": [
+        "华北制药 | 化学制药",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "d3be8445fdd5cc578ea3b54125376e4d66bbbac242ca6e1e9eb2f9693e3c2f4b",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.2,
+      "summary": "雄韬股份电池涨停，当前来源只确认电池分类。",
+      "evidence": [
+        "雄韬股份 | 电池",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不继承另一行数据中心标签"
+      ]
+    },
+    {
+      "source_hash": "28898df6826388a9cfea10f2ccf210b696ed264cdeb303e3273a880b74b349fc",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "远程股份在涨停池明确归为电网设备。",
+      "evidence": [
+        "远程股份 | 电网设备",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "个股不等于全电网"
+      ]
+    },
+    {
+      "source_hash": "f568538d927cd28c3800cb7108a091e60a94528c793d6ce289b578e965845396",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "新华文轩出版分类涨停，当前行有出版专属证据。",
+      "evidence": [
+        "新华文轩 | 出版",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "fb2e912209bef391bef494482dd3d08cff245df49b13f2a7ff752e9bd035aad9",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.1,
+      "summary": "丽人丽妆涨停池分类截断为互联网电，不能把电商当互联网科技。",
+      "evidence": [
+        "丽人丽妆 | 互联网电",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "分类截断",
+        "无专属ETF映射"
+      ]
+    },
+    {
+      "source_hash": "d0364258ce9eca817d293d5c508fc6e714ddbcc0042cbef0da2c524c0b05c60e",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "安彩高科涨停池归类光伏设备。",
+      "evidence": [
+        "安彩高科 | 光伏设备",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不补写玻璃细分"
+      ]
+    },
+    {
+      "source_hash": "1af320345b3669758b8f2c882f99f077551e957ab9e0fb860b95aa10324cfef4",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.1,
+      "summary": "晨光新材化学制品涨停，只留化学行业背景。",
+      "evidence": [
+        "晨光新材 | 化学制品",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "无专属词",
+        "不扩大化工映射"
+      ]
+    },
+    {
+      "source_hash": "065521a59a0495a9db2878d2fa4503cc7ee4f1f5d01730130b0d28b84bfa76c3",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "丰元股份电池分类涨停。",
+      "evidence": [
+        "丰元股份 | 电池",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "0ec09d9c338cc1c98895204bcd55bd2978a74045bfffeb0bd02a791c518a70bd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.81,
+      "novelty": 0.1,
+      "summary": "楚环科技当前行只有环保设备涨停，未映射其他题材。",
+      "evidence": [
+        "楚环科技 | 环保设备",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "不得用其他行补原文"
+      ]
+    },
+    {
+      "source_hash": "47479bae2dfb66490962635694a2f5ed2aa899ab0b7263219858bcdd85c9b06c",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.2,
+      "summary": "科力远电池分类涨停。",
+      "evidence": [
+        "科力远 | 电池",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "本行无固态量产证据"
+      ]
+    },
+    {
+      "source_hash": "1e497548d7ac9d7e450920a3d66bdea471857ed4035d1dbf307eb7dc738e70b5",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.1,
+      "summary": "东岳硅材化学制品大涨，类别背景不能自动映射化工ETF。",
+      "evidence": [
+        "东岳硅材 | 化学制品",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "无专属词",
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "75cb15868b548e5e5ec7d45789b6a565755b0faf88017ae72f053468dc363177",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.1,
+      "summary": "新亚强化学制品涨停，无该行专属ETF关键词。",
+      "evidence": [
+        "新亚强 | 化学制品",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "779b315e72f7c4f5859b3d9bb177e58ea33ba514347852abee1327cf92fb908d",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "上工申贝专用设备涨停，本行不支持自动化或机器人细分。",
+      "evidence": [
+        "上工申贝 | 专用设备",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "泛设备不等于工程机械"
+      ]
+    },
+    {
+      "source_hash": "542445f539b9a258f17c2cea7e2fa6dcb36bc8c85ca07faae0062a6b0d54118e",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.1,
+      "summary": "金健米业农产品加工分类被截断，不识别为豆粕证据。",
+      "evidence": [
+        "金健米业 | 农产品加",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "分类截断",
+        "农产品不能互相替代"
+      ]
+    },
+    {
+      "source_hash": "d140e8faf23bc7b58b6870192d899078274ed000ff7051144cc42749e0e2afc1",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "领湃科技电池分类涨停。",
+      "evidence": [
+        "领湃科技 | 电池",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "cdaca74f0e912f2dc97c23f0414f363e44a43108588638acc3a99da9d98fcb01",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.1,
+      "summary": "华建集团工程咨询涨停，本行没有建筑或半导体的直接关键词。",
+      "evidence": [
+        "华建集团 | 工程咨询",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不扩散至相关行业"
+      ]
+    },
+    {
+      "source_hash": "b077c915a168a85ea5853c03a328c8e75b65e4f93adce956a0f2d5ad92501680",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "国芳集团一般零售涨停。",
+      "evidence": [
+        "国芳集团 | 一般零售",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "ecf0a902c5a7e2effe15eae447e2baaa4659c7ea5f9da2480b1844c4f4f96d9c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.82,
+      "novelty": 0.1,
+      "summary": "万向德农种植业涨停，不能推断大豆、豆粕或养殖。",
+      "evidence": [
+        "万向德农 | 种植业",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "品种未指明",
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "ca7acd4c19ba8c629f923b85157ffb2424762158f079ad786510c54f763b423a",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "汇嘉时代一般零售涨停。",
+      "evidence": [
+        "汇嘉时代 | 一般零售",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "461f45fc3671879921b6fc718c7acaf1815fb49a939cbe217d6c10b479532832",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "东诚药业化学制药涨停，本行不扩展港股或创新药标签。",
+      "evidence": [
+        "东诚药业 | 化学制药",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "842f50efa31e33131162e812d2172503c9e7e879aefb969df0d00b22b04b52a9",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "安泰集团焦炭分类涨停。",
+      "evidence": [
+        "安泰集团 | 焦炭Ⅱ",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "单公司不能代表煤炭整体"
+      ]
+    },
+    {
+      "source_hash": "6836160e014c7971cc35b4336d34cda162ddda8d7a92cafcf07d989562260476",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.2,
+      "summary": "中红医疗在涨停池明确标为医疗器械。",
+      "evidence": [
+        "中红医疗 | 医疗器械",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "2d39f9afe1f7c523c110da03e35c41c0525779590b9e731e557be338385ea31b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.8,
+      "novelty": 0.1,
+      "summary": "金圆股份环境治理涨停，该行不支持锂电或其他专属方向。",
+      "evidence": [
+        "金圆股份 | 环境治理",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "不能借另一来源扩展映射"
+      ]
+    },
+    {
+      "source_hash": "09c8598622b30b2b2a6cf055aad3458ae19d4ebb841c80532ed3bacce7815e2c",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "新筑股份本行明确为电力分类涨停。",
+      "evidence": [
+        "新筑股份 | 电力",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "仅个股线索"
+      ]
+    },
+    {
+      "source_hash": "3c677b3baa703a56120b0321963dc06c7369ab36d5f6d9b60c9730dcc11d57ef",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.1,
+      "summary": "绿盟科技软件开发涨停，当前行缺AI专属证据。",
+      "evidence": [
+        "绿盟科技 | 软件开发",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "软件不等于AI"
+      ]
+    },
+    {
+      "source_hash": "0043f313b4453fe296e992cdf428e5e7fcb5d90ea9e0f8b9c7de9af39d3f5dae",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "百大集团一般零售涨停，当前行不扩展物业。",
+      "evidence": [
+        "百大集团 | 一般零售",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "be02ce00aa7f8b4e80c4ab1f16fa5facdc9cc865c239506afb5459881e0f6424",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.1,
+      "summary": "妙可蓝多饮料乳品涨停，无消费或食品饮料专属完整字样。",
+      "evidence": [
+        "妙可蓝多 | 饮料乳品",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "只留行业背景"
+      ]
+    },
+    {
+      "source_hash": "d36dc73cef52c68b14823f25113ea53dd21a0fe4ed2cd99968b3be8606d9fc7b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.1,
+      "summary": "天融信软件开发涨停，不把通用软件分类推成AI证据。",
+      "evidence": [
+        "天融信 | 软件开发",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "c6de4a1017b53806a5db825cddd094c5599977b9a49939b1d3f2016a194a16cc",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "国光连锁一般零售涨停。",
+      "evidence": [
+        "国光连锁 | 一般零售",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "4c5ab390eaf03a541ce0ec90bbbc06413b40525347f73128f6f0c6ba987c14ba",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "振华股份化学原料涨停，该行无金属或化工专属词。",
+      "evidence": [
+        "振华股份 | 化学原料",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不继承另一行金属铬"
+      ]
+    },
+    {
+      "source_hash": "c4409ec83f7c33e2e73d4ed692eb416f8145cd43ac6114c701c72adff136b221",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.2,
+      "summary": "西部黄金在贵金属分类涨停。",
+      "evidence": [
+        "西部黄金 | 贵金属",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "矿企与黄金价格有差异"
+      ]
+    },
+    {
+      "source_hash": "efba9b32903da9261d92684e0b121105f29d5e211fb4baeb3a3ed8f565269c37",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.83,
+      "novelty": 0.1,
+      "summary": "敦煌种业种植业涨停，不作豆粕或养殖信号。",
+      "evidence": [
+        "敦煌种业 | 种植业",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "品种不明",
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "1bae6ded09425ffaae9356c4d98270e12c9c0ccfdb4543182fc53dcce1fbc57d",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.1,
+      "summary": "吉林化纤化学纤维涨停，仅作行业背景。",
+      "evidence": [
+        "吉林化纤 | 化学纤维",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "无专属ETF关键词"
+      ]
+    },
+    {
+      "source_hash": "ffb02cb43f4eabb77393c3fee8aefc9da0d217ff03c11c97867e4db9ba75ffcf",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "华鑫股份证券分类涨停。",
+      "evidence": [
+        "华鑫股份 | 证券Ⅱ",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不扩展港股券商"
+      ]
+    },
+    {
+      "source_hash": "98d7772fb49f80726759d2cfbb87f5dc1b79038c7b640afb19d8dd0ca220eab3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.1,
+      "summary": "大智慧软件开发涨停，不能继承同花顺行的互联网金融或AI词。",
+      "evidence": [
+        "大智慧 | 软件开发",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "本行证据有限"
+      ]
+    },
+    {
+      "source_hash": "4f685a71a3f3b2586694f919802cd6858774287637348fc3f0c76916ad6a3aef",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.71,
+      "novelty": 0.1,
+      "summary": "中新赛克计算机设备分类截断，不能自动推成算力或半导体。",
+      "evidence": [
+        "中新赛克 | 计算机设",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "分类截断",
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "550afc744aa7936e2c72154004093467af25923b0d803b14ec26552050a668b9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "东亚药业本行明确化学制药分类并涨停。",
+      "evidence": [
+        "东亚药业 | 化学制药",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "b19e3871b9a3796d49d7fce02e71ddf29a0d4451ce44740bb23a7bd722395c26",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "郑中设计装修装饰涨停，不由该行补写半导体投资。",
+      "evidence": [
+        "郑中设计 | 装修装饰",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "无专属关键词"
+      ]
+    },
+    {
+      "source_hash": "91861d789731161c18c40d04a6429e3c6e9bc9ed1eee12b9500f5191f97421ac",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "九牧王服装家纺涨停，仅有消费行业背景。",
+      "evidence": [
+        "九牧王 | 服装家纺",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "不继承另一来源零售标签"
+      ]
+    },
+    {
+      "source_hash": "7a963d2b6dc94665825bba377251ca483de1d9ee13fba4f9333a07cabb3d3aae",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "德才股份装修装饰涨停，本行无AI或建筑专属词。",
+      "evidence": [
+        "德才股份 | 装修装饰",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "84b9193876238e68eeca79126383b21f73231eae7770e68dfb93c8fe76a0ce1a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.2,
+      "summary": "龙版传媒出版涨停，传媒公司名直接可见。",
+      "evidence": [
+        "龙版传媒 | 出版",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "本行无AI证据"
+      ]
+    },
+    {
+      "source_hash": "5953f64874f4a5d3bf4e03bd9ce51f857bcf131bbee3b6904a6723b7ff8daccd",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "上海电影影视院线分类涨停。",
+      "evidence": [
+        "上海电影 | 影视院线",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "单日表现非持续趋势"
+      ]
+    },
+    {
+      "source_hash": "952486d074d261078592792324a7090d7b05242dba24868f3d5f49cd0c562fa4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.71,
+      "novelty": 0.2,
+      "summary": "吉视传媒电视广播涨停，传媒公司名为直接主题线索。",
+      "evidence": [
+        "吉视传媒 | 电视广播",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不补写AI与算力"
+      ]
+    },
+    {
+      "source_hash": "554b1ff25a650abf55409894463601ba5be6982dd3892aaf83a9fae0bd10d8a6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "新经典出版分类涨停。",
+      "evidence": [
+        "新经典 | 出版",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "本行不提供AI证据"
+      ]
+    },
+    {
+      "source_hash": "8efc1b09ab70e03547e1bd81e8f047596b20d7caac5f697ee5e6aee75ad89af6",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.1,
+      "summary": "贝瑞基因医疗服务涨停，不直接视作医疗器械。",
+      "evidence": [
+        "贝瑞基因 | 医疗服务",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "医疗服务与器械不同",
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "9bf7202f185d5f9ecc3e7b9ff8cb9a4bc772b75178c0c752a59907433cf824cb",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "欢瑞世纪影视院线分类涨停。",
+      "evidence": [
+        "欢瑞世纪 | 影视院线",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "c70946edf4f15c6d6b578fff4382d17be064b675c671b3aeadd7675ad92dddc2",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.1,
+      "summary": "格尔软件软件开发涨停，不能由通用分类推出AI。",
+      "evidence": [
+        "格尔软件 | 软件开发",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "47c798c8e35bbb976502f44c3f2528909fa2c2b9e8c77ad89bc5a2ca0457ded6",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "众生药业涨停池标注中药，当前行支持中药方向。",
+      "evidence": [
+        "众生药业 | 中药Ⅱ",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不补创新药"
+      ]
+    },
+    {
+      "source_hash": "d636341426a9036fd1d3c15856eea033c1a6d27e4861b6b25abde1297918ad3d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "中文在线数字媒体涨停，未直接出现映射要求的传媒、影视或短剧字样。",
+      "evidence": [
+        "中文在线 | 数字媒体",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不借其他行填证据"
+      ]
+    },
+    {
+      "source_hash": "7e10cb89970f54c70bf0364eaf6dec4cf9d7af84b4fbec80eb05a0c7eaa71327",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "掌阅科技数字媒体涨停，本行不自动扩展AI和短剧。",
+      "evidence": [
+        "掌阅科技 | 数字媒体",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "70bed63e7caf2a0fee6eece944a4e6a4c77ab5ee31bd931e6de3f91709d77751",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "粤传媒本行标注出版涨停。",
+      "evidence": [
+        "粤 传 媒 | 出版",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源名称空格不另算一家公司"
+      ]
+    },
+    {
+      "source_hash": "61c0eda86de9445f050d8228d0805572e3e8bc988f524be426047401865cc85b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.1,
+      "summary": "麒麟信安软件开发涨停，本行不等于AI或半导体线索。",
+      "evidence": [
+        "麒麟信安 | 软件开发",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "6f17ac8548eaf26c7e466e5cf0667341e021120fa12d0e5fd2ff8a58fd0a773d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "博纳影业影视院线分类涨停。",
+      "evidence": [
+        "博纳影业 | 影视院线",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "本行无AI"
+      ]
+    },
+    {
+      "source_hash": "ae9b694b3906e15dee814d5127f84796f20f1a58c2983b1a85290ce76596501a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "芒果超媒数字媒体涨停，当前行不补写短剧或AI。",
+      "evidence": [
+        "芒果超媒 | 数字媒体",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "缺专属关键词"
+      ]
+    },
+    {
+      "source_hash": "c2709f376728c3773aa6f892e57c5e0714d000f144ac052207932560e886e6b4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.2,
+      "summary": "慈文传媒影视院线涨停。",
+      "evidence": [
+        "慈文传媒 | 影视院线",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "ecb0678a23bb31422a4a50f252e1bcd64bb361af1653c64a16b358401feac1a1",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业",
+        "商品"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.2,
+      "summary": "百洋股份饲料分类涨停，仅作饲料链线索。",
+      "evidence": [
+        "百洋股份 | 饲料",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "饲料企业涨停不证明豆粕上涨"
+      ]
+    },
+    {
+      "source_hash": "eedb2754f6f33c1ba4fc6c393c7716a5e222a4fd635ecbc2f1ffca4f24451bdc",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "雷赛智能自动化设备涨停，自动化关键词可见。",
+      "evidence": [
+        "雷赛智能 | 自动化设",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "分类尾部截断"
+      ]
+    },
+    {
+      "source_hash": "3582c8311eadcdfbfd669b52c43da79d9613c33361fa742b4a3e516c914f98a5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.2,
+      "summary": "三人行广告营销涨停，本行对应传媒广告。",
+      "evidence": [
+        "三人行 | 广告营销",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "不补写AI"
+      ]
+    },
+    {
+      "source_hash": "585840eb714f506d274599824ffe95c3d9a61a17c0459601d7b8c8c634653dc8",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.1,
+      "summary": "梦天家居家居用品涨停，不能据此推成智能家居或半导体。",
+      "evidence": [
+        "梦天家居 | 家居用品",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "普通家居不是智能家居"
+      ]
+    },
+    {
+      "source_hash": "66347e4b7f788eee6e3176673a21b4db46625c0ea0a2c433a616e57e66ed92cc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "文投控股游戏分类涨停，本行仅支持游戏。",
+      "evidence": [
+        "文投控股 | 游戏Ⅱ",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "e16f80f14862f7fd76aa39a25311e8161a012e809fa56e3e516f3de2d729b812",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.2,
+      "summary": "中交发展房地产服务分类涨停。",
+      "evidence": [
+        "中交发展 | 房地产服",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复",
+        "分类尾部截断"
+      ]
+    },
+    {
+      "source_hash": "fd986004d855c87c404fa3ac07e5cd6d92216995e00aba042b39ba9ae5a87786",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.1,
+      "summary": "澳弘电子元件涨停，通用元件不等同芯片、AI或通信。",
+      "evidence": [
+        "澳弘电子 | 元件",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "64524a3c8ebecdb582e94b71a768c198e3bb23ed9893087e0fe8586945af10d2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.1,
+      "summary": "红豆股份服装家纺涨停，本行无机器人证据。",
+      "evidence": [
+        "红豆股份 | 服装家纺",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "42681f3518fc736f93f65be26be7d1f2e85d61a71d6ae770d384929476069ce7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.82,
+      "novelty": 0.1,
+      "summary": "海南橡胶种植业涨停，不作豆粕、大豆或养殖信号。",
+      "evidence": [
+        "海南橡胶 | 种植业",
+        "eastmoney_limit_up"
+      ],
+      "risk_flags": [
+        "泛农业品种不能替代",
+        "跨源重复"
+      ]
+    },
+    {
+      "source_hash": "b5e546dfcccd636a819876ff770bb22dab9e56adad2f03c8fa1bbbb175e6a7fe",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.3,
+      "summary": "园林股份基础建设炸板后仍上涨，表示分歧，未出现基建专属词。",
+      "evidence": [
+        "园林股份 | 基础建设",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "炸板",
+        "未确认板块趋势"
+      ]
+    },
+    {
+      "source_hash": "2d8b53733cb39486eebacbd9eb419e05b3db11975433b9e16c29dc624baaa121",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.3,
+      "summary": "拉芳家化化妆品炸板后上涨，仅为个股分歧。",
+      "evidence": [
+        "拉芳家化 | 化妆品",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "炸板",
+        "无专属映射"
+      ]
+    },
+    {
+      "source_hash": "c659f7c98cc1c9aabbfe394320ba5a8cfd56b247e01ffa1e7423e4db54ef6e20",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.79,
+      "novelty": 0.3,
+      "summary": "世联行房地产服务炸板后小幅上涨，地产方向承接有分歧。",
+      "evidence": [
+        "世联行 | 房地产服",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "炸板不等于全面转弱"
+      ]
+    },
+    {
+      "source_hash": "9d21628c8eda0e00ea6a94593d7cab180fd387b2f72febca8f3e92dccc81fdea",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.79,
+      "novelty": 0.3,
+      "summary": "博通集成半导体炸板后上涨，显示盘中分歧。",
+      "evidence": [
+        "博通集成 | 半导体",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "单个公司不能代表芯片全行业"
+      ]
+    },
+    {
+      "source_hash": "cba91dda940a11dadfb3872aaff8dea3078a68755a5191726f9537a97b8a7b48",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.3,
+      "summary": "向日葵化学制药炸板但仍大幅上涨，不判作确定性利空。",
+      "evidence": [
+        "向日葵 | 化学制药",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "冲高回落",
+        "未披露业务事件"
+      ]
+    },
+    {
+      "source_hash": "a67199ed5d1dbb2a3f409f0f68a35808b56178dc09dc83ce2931e8528de5d889",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.3,
+      "summary": "孚日股份纺织制造炸板，仅有个股价格分歧。",
+      "evidence": [
+        "孚日股份 | 纺织制造",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "无专属ETF映射"
+      ]
+    },
+    {
+      "source_hash": "e8b91d52dbe597478c0bc1b8110cb4ce486ebce1ded79c06070e2f934a248290",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.3,
+      "summary": "丰山集团农化制品炸板，本行不足以补成农药或化工直接证据。",
+      "evidence": [
+        "丰山集团 | 农化制品",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "泛分类",
+        "炸板"
+      ]
+    },
+    {
+      "source_hash": "48646ba044f7818c5e83d5789558be0923451de0db2e7ed334b2e4c9f043c25e",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.8,
+      "novelty": 0.3,
+      "summary": "新华百货零售炸板仍上涨，零售方向有分歧。",
+      "evidence": [
+        "新华百货 | 一般零售",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "不能用单股推全消费"
+      ]
+    },
+    {
+      "source_hash": "56d2fb83f7de653c89fd61907e7815e130dbdc5a3091ebe5a7210bd2784c68c2",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "海欣食品食品加工炸板，仅作消费背景，不补完整食品饮料关键词。",
+      "evidence": [
+        "海欣食品 | 食品加工",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "炸板",
+        "缺专属映射"
+      ]
+    },
+    {
+      "source_hash": "88542fc8c6085105d24618a04ee5b2bee25af5a04d054a4cba4329c7e7e736be",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.3,
+      "summary": "阳光乳业饮料乳品炸板后上涨，不判断全行业转弱。",
+      "evidence": [
+        "阳光乳业 | 饮料乳品",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "炸板",
+        "缺专属映射"
+      ]
+    },
+    {
+      "source_hash": "5915b872e281b0a795e7af400c1dd3688f05f29aa714d09796a863b74fdd0c43",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.8,
+      "novelty": 0.4,
+      "summary": "天赐材料电池炸板但收涨超过9%，涨势与封板分歧并存。",
+      "evidence": [
+        "天赐材料 | 电池",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "高位分歧",
+        "并非新利好"
+      ]
+    },
+    {
+      "source_hash": "9644e696a0932ddbeb79939556cc7d38b4a575208d47fd0311fa643d690b8f77",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.79,
+      "novelty": 0.3,
+      "summary": "科恒股份电池炸板但仍显著上涨，不能简单归为负面趋势。",
+      "evidence": [
+        "科恒股份 | 电池",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "炸板",
+        "短期波动"
+      ]
+    },
+    {
+      "source_hash": "6120be2dc61931ce921db20a715ce6e4bf979513f070267c1a7adc09b3faab7b",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "力王股份电池炸板后仍大涨，不能把北交所涨幅直接等同主板封板。",
+      "evidence": [
+        "力王股份 | 电池",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "不同交易制度",
+        "炸板"
+      ]
+    },
+    {
+      "source_hash": "e877dc66e90312f775175ab4d2c5d372a6497ce6220f9c00a7a05a0f4b63496c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.77,
+      "novelty": 0.2,
+      "summary": "信隆健康摩托车相关分类截断且炸板，不直接对应新能源汽车或机器人。",
+      "evidence": [
+        "信隆健康 | 摩托车及",
+        "eastmoney_broken_board"
+      ],
+      "risk_flags": [
+        "无专属方向",
+        "分类截断"
+      ]
+    },
+    {
+      "source_hash": "dc51f2f22fcb99b0971125f0bfd72919606323a0319ae304ec8790eaa724f5fb",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.3,
+      "summary": "华之杰通用设备跌停，仅为设备类个股风险，不扩展工程机械。",
+      "evidence": [
+        "华之杰 | 通用设备",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "无专属ETF映射",
+        "个股下跌"
+      ]
+    },
+    {
+      "source_hash": "704866bde4497f478fb91d4bd722a89caeccfc546f5677ed7fe66b3e08794203",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "百合花化学制品跌停，留作行业风险背景。",
+      "evidence": [
+        "百合花 | 化学制品",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "无专属词",
+        "不广播为化工ETF卖出"
+      ]
+    },
+    {
+      "source_hash": "599bd1b6e36d0d74dd7055331769ca4196a48c95daac7547f36f3e592b3632d7",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "彩蝶实业化学纤维跌停，仅见个股负面价格线索。",
+      "evidence": [
+        "彩蝶实业 | 化学纤维",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "无专属ETF映射"
+      ]
+    },
+    {
+      "source_hash": "e797a5c6e920b679cd36465aa4277bd1dc25cede82ab15509ec7f295d27a266e",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": -2,
+      "horizon": "intraday",
+      "confidence": 0.85,
+      "novelty": 0.4,
+      "summary": "泰永长征电网设备跌停，与该方向的上涨个股形成明显分化。",
+      "evidence": [
+        "泰永长征 | 电网设备",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "个股跌停不能证明整个电网趋势反转"
+      ]
+    },
+    {
+      "source_hash": "85b50d821f3e5a6691ec0d8f57e84ba0fce8bd3517f51d93760a4539130c226b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "五方光电光学光电跌停，不把光学光电直接当光通信或芯片。",
+      "evidence": [
+        "五方光电 | 光学光电",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "无专属映射"
+      ]
+    },
+    {
+      "source_hash": "c22264361f632b0960c5f5dc17f7c7b1aa8701d037de9cf956069367f6f8289c",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "宏柏新材化学制品跌停，不能仅凭分类广播化工ETF负面。",
+      "evidence": [
+        "宏柏新材 | 化学制品",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "无专属词",
+        "价格非基本面"
+      ]
+    },
+    {
+      "source_hash": "7dc87406874c0ddc2cd71445879492bc0f6d8a7bb4b27d27d5139d5c65b29deb",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.3,
+      "summary": "金安国纪元件跌停，不能由元件直接扩展为半导体或AI风险。",
+      "evidence": [
+        "金安国纪 | 元件",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "无专属映射"
+      ]
+    },
+    {
+      "source_hash": "0db0a252a622bc16311750099c413c5ad054fdb4896c3337e930db5ff8ae2cf1",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": -2,
+      "horizon": "intraday",
+      "confidence": 0.85,
+      "novelty": 0.4,
+      "summary": "大金重工风电设备跌停，新能源设备内部存在分化。",
+      "evidence": [
+        "大金重工 | 风电设备",
+        "eastmoney_limit_down"
+      ],
+      "risk_flags": [
+        "风电不等于全部光伏",
+        "个股风险外推有限"
+      ]
+    }
+  ]
+}

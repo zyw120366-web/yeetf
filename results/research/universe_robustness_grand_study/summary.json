@@ -1,0 +1,57 @@
+{
+  "status": "research_only_not_formal_strategy",
+  "generated_through": "2026-07-28",
+  "pre_registered_candidate": "80%原45只主策略资金 + 20%锚定平权广池扩展策略资金",
+  "unchanged_logic": [
+    "ROC20 + 1.5*ROC60",
+    "MA120 and bias gates",
+    "AI/news confirmation",
+    "exit rules",
+    "T+1 open execution and costs"
+  ],
+  "membership_variants": 64,
+  "single_pool_dispersion": {
+    "return_min": 4.591449421051664,
+    "return_median": 4.996659510615126,
+    "return_max": 5.48694325890104,
+    "return_range": 0.8954938378493766,
+    "return_std": 0.3410118750517651,
+    "mdd_worst": -0.2531344160704029,
+    "mdd_median": -0.24026048984515452
+  },
+  "main_expanded_dispersion": {
+    "return_min": 5.288471515979204,
+    "return_median": 5.354906856230649,
+    "return_max": 5.457143275034081,
+    "return_range": 0.1686717590548774,
+    "return_std": 0.06736400047146515,
+    "mdd_worst": -0.2243713095268235,
+    "mdd_median": -0.2230953336667535
+  },
+  "new_etf_only_dispersion": {
+    "return_min": 5.411654418981037,
+    "return_median": 5.4222064282173115,
+    "return_max": 5.441176528853933,
+    "return_range": 0.02952210987289572,
+    "return_std": 0.009598081015259842,
+    "mdd_worst": -0.2218193578066835,
+    "mdd_median": -0.22102912448776102
+  },
+  "single_pool_pbo": {
+    "pbo": 0.4714285714285714,
+    "median_oos_percentile": 0.5703125,
+    "split_count": 70
+  },
+  "main_expanded_pbo": {
+    "pbo": 0.7428571428571429,
+    "median_oos_percentile": 0.2578125,
+    "split_count": 70
+  },
+  "new_etf_only_pbo": {
+    "pbo": 0.9,
+    "median_oos_percentile": 0.3203125,
+    "split_count": 70
+  },
+  "max_new_universe_target_weight": 0.19999999999999996,
+  "decision_rule": "Do not select the historically best membership or broad-share value. Judge whether the pre-registered 80/20 structure materially compresses membership sensitivity while preserving acceptable risk/return."
+}

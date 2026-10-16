@@ -1,0 +1,31 @@
+{
+  "status": "research_only_formal_strategy_unchanged",
+  "data_through": "2026-07-29",
+  "comparison": "current 51 vs proposed 55, both only use 20% when expanded selection picks a newly added ETF",
+  "five_year_start": "2021-07-29",
+  "extra_symbols": [
+    "159667.SZ",
+    "561580.SH",
+    "513730.SH",
+    "159518.SZ"
+  ],
+  "selected_days_last5y": {
+    "512980.SH": 18,
+    "513520.SH": 37,
+    "561580.SH": 3,
+    "513730.SH": 10
+  },
+  "target_difference_episode_count_last5y": 5,
+  "completed_extra_round_trips_last5y": 3,
+  "small_capital_completed_extra_round_trips_last5y": 3,
+  "small_capital_extra_signal_checks": 13,
+  "small_capital_extra_position_success_rate": 1.0,
+  "small_capital_extra_weight_median": 0.19433873923566214,
+  "full_period_total_return_change_pp": -9.719636831804301,
+  "full_period_max_drawdown_change_pp": 0.0,
+  "five_year_total_return_change_pp": -7.587262548724016,
+  "five_year_max_drawdown_change_pp": 0.0,
+  "trade_count_change": 7,
+  "small_capital_trade_count_change": 5,
+  "interpretation_rule": "Do not accept or reject membership because historical return improved; judge coverage, risk containment and executability."
+}

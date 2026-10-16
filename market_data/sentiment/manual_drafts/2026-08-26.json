@@ -1,0 +1,2533 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "21ffb93acccd267199eb72f8c858349a1715d527a8274c7b7d8edc3b973b4dae",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：*ST四通 | 摘帽申请+锆钛矿+陶瓷制造 摘帽申请+锆钛矿+陶瓷制造。",
+      "evidence": [
+        "*ST四通 | 摘帽申请+锆钛矿+陶瓷制造 摘帽申请+锆钛矿+陶瓷制造（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "6ea5952c28981ab2e0ed5c3d5dac73dc1a2ef8e120e2b2a6d56732a8dc2bf7c9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：茶花股份 | 电子元器件分销+家居用品+业绩扭亏 电子元器件分销+家居用品+业绩扭亏。",
+      "evidence": [
+        "茶花股份 | 电子元器件分销+家居用品+业绩扭亏 电子元器件分销+家居用品+业绩扭亏（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "874a9444968dfdec226cc1a0891c4cdf038278d260d08fa8ca350a2f6436798c",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：立新能源 | 风电+光伏+半年报增长+新疆国资 风电+光伏+半年报增长+新疆国资。",
+      "evidence": [
+        "立新能源 | 风电+光伏+半年报增长+新疆国资 风电+光伏+半年报增长+新疆国资（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "5ade38a749b9098f4d55341618cab53da5731d658d3805c3e9517e9e22c741b0",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：联合精密 | 成飞概念+航空精密零部件+拟定增 成飞概念+航空精密零部件+拟定增。",
+      "evidence": [
+        "联合精密 | 成飞概念+航空精密零部件+拟定增 成飞概念+航空精密零部件+拟定增（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "c15aeee5537e3039edfd9942ce37621e0b515d784333de8bdfd806bda633cd13",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：凯瑞德 | 控股矿业+宇航存储+煤炭贸易 控股矿业+宇航存储+煤炭贸易。",
+      "evidence": [
+        "凯瑞德 | 控股矿业+宇航存储+煤炭贸易 控股矿业+宇航存储+煤炭贸易（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "c4de72192038acbb09cfb23cf6b0cff930d07843106458c630aa1d55a8bf283d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：共进股份 | 半年报增长+800G交换机+硅光芯片 半年报增长+800G交换机+硅光芯片。",
+      "evidence": [
+        "共进股份 | 半年报增长+800G交换机+硅光芯片 半年报增长+800G交换机+硅光芯片（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "e45ed00f982848611ca2611885b08767a7d35ddd6fb1d6ebf30889cbd2c28e36",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：顺钠股份 | 干式变压器+核电+数据中心+业绩增长 干式变压器+核电+数据中心+业绩增长。",
+      "evidence": [
+        "顺钠股份 | 干式变压器+核电+数据中心+业绩增长 干式变压器+核电+数据中心+业绩增长（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "eab0736b1c03ed9e34612dd101a260479f7808f998a656e0dca176ff0be504b6",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：郴电国际 | 电力+新能源+业绩增长 电力+新能源+业绩增长。",
+      "evidence": [
+        "郴电国际 | 电力+新能源+业绩增长 电力+新能源+业绩增长（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "545edd83fc42110ff3549cc690734aa13b761ae682403a22cc6f6c8a079c89ec",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：ST海龙 | 航空并购+业务优化+帘子布 航空并购+业务优化+帘子布。",
+      "evidence": [
+        "ST海龙 | 航空并购+业务优化+帘子布 航空并购+业务优化+帘子布（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "5058dc048198c7a66c7719100974e10982b70ddd8fa7f4c48b079108f1a216b8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：ST麦趣 | 乳制品+烘焙食品+破产撤回 乳制品+烘焙食品+破产撤回。",
+      "evidence": [
+        "ST麦趣 | 乳制品+烘焙食品+破产撤回 乳制品+烘焙食品+破产撤回（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "1c43ca3571ebc11e6927764aeeb84c7be6a96169f11ed012c3e81335e28b4ea5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：剑桥科技 | 高速光模块+1.6T+CPO/NPO+中报增长 高速光模块+1.6T+CPO/NPO+中报增长。",
+      "evidence": [
+        "剑桥科技 | 高速光模块+1.6T+CPO/NPO+中报增长 高速光模块+1.6T+CPO/NPO+中报增长（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "4d947e0c296a676adb1c5158ec4cb573b8c1b0e1a73f9118fba0f72d36900757",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：恒银科技 | 金融信创+AI应用+智能终端 金融信创+AI应用+智能终端。",
+      "evidence": [
+        "恒银科技 | 金融信创+AI应用+智能终端 金融信创+AI应用+智能终端（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "ac9299237703671d197b8a0a123e5babe29e22e35f514c59b3e092f085ef1e8f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：新大陆 | 中报增长+AI支付+跨境支付+数字货币 中报增长+AI支付+跨境支付+数字货币。",
+      "evidence": [
+        "新大陆 | 中报增长+AI支付+跨境支付+数字货币 中报增长+AI支付+跨境支付+数字货币（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "58484420503d3474236dca29853314c13ec30ea11cc85cd4536f12df50be919c",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：楚天龙 | 数字人民币+金融科技+数字安全 数字人民币+金融科技+数字安全。",
+      "evidence": [
+        "楚天龙 | 数字人民币+金融科技+数字安全 数字人民币+金融科技+数字安全（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "827ea76a5513b55617b0a668455001ce32f64e1b7487c2a90266351debb60649",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：青岛金王 | CIPS+蜡烛香薰+美妆零售+金融投资 CIPS+蜡烛香薰+美妆零售+金融投资。",
+      "evidence": [
+        "青岛金王 | CIPS+蜡烛香薰+美妆零售+金融投资 CIPS+蜡烛香薰+美妆零售+金融投资（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "1be9aa687ca5aace0a45f5f9c3fa882269427bcca69db1895ea8e6596ebe9dfe",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：白银有色 | 白银+黄金+多金属综合+锂电材料 白银+黄金+多金属综合+锂电材料。",
+      "evidence": [
+        "白银有色 | 白银+黄金+多金属综合+锂电材料 白银+黄金+多金属综合+锂电材料（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "4e642357390a63ea0db78fb3e8f61b01f54dc7c1e2d8d0e041ef1d18269eea64",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：湘财股份 | 证券+中报预增+吸收合并 证券+中报预增+吸收合并。",
+      "evidence": [
+        "湘财股份 | 证券+中报预增+吸收合并 证券+中报预增+吸收合并（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "691aee9a4b70ea4f329d0fd785d37c5e59de59772b178ea5f6e903da1a16c72a",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：迪阿股份 | 高端婚嫁黄金+求婚钻戒+门店优化 高端婚嫁黄金+求婚钻戒+门店优化。",
+      "evidence": [
+        "迪阿股份 | 高端婚嫁黄金+求婚钻戒+门店优化 高端婚嫁黄金+求婚钻戒+门店优化（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "ce35b48149fed97bd1fd8b6c0e1ad1713af773bfb309c043e3cd8090de523bfd",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：深中华A | 黄金珠宝+珠宝加工+客户拓展 黄金珠宝+珠宝加工+客户拓展。",
+      "evidence": [
+        "深中华A | 黄金珠宝+珠宝加工+客户拓展 黄金珠宝+珠宝加工+客户拓展（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "3ad4ad23d94793db32a48f7e9b603ba031e095583ef18cdc06eda0ec502dc08f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "金融地产",
+        "商品"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159851.SZ",
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：金一文化 | 黄金珠宝+数字货币+AI应用+海淀国资 黄金珠宝+数字货币+AI应用+海淀国资。",
+      "evidence": [
+        "金一文化 | 黄金珠宝+数字货币+AI应用+海淀国资 黄金珠宝+数字货币+AI应用+海淀国资（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "094027c531651e332f400c8a276343332f8fb02c290a4829911ae61c79170f62",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：上海洗霸 | 固态电池+液冷+水处理 固态电池+液冷+水处理。",
+      "evidence": [
+        "上海洗霸 | 固态电池+液冷+水处理 固态电池+液冷+水处理（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "ae6aac2a31343b751c748f78b70afa1536a83c74e68ba947450bfdae72217fb3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：华培动力 | 人形机器人+六维力传感器+芯片 人形机器人+六维力传感器+芯片。",
+      "evidence": [
+        "华培动力 | 人形机器人+六维力传感器+芯片 人形机器人+六维力传感器+芯片（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "91032f5047eefb6ae249ea914ac7d9726502065245df6c74a8e461860e8f113e",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：江西铜业 | 半年报增长+铜业主业+算力铜箔 半年报增长+铜业主业+算力铜箔。",
+      "evidence": [
+        "江西铜业 | 半年报增长+铜业主业+算力铜箔 半年报增长+铜业主业+算力铜箔（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "1685c51667dbd80c7ecf2032ea95184b8e62e15941ae748600aa493548e8ad03",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：金诚信 | 中报增长+铜矿开发+矿山服务 中报增长+铜矿开发+矿山服务。",
+      "evidence": [
+        "金诚信 | 中报增长+铜矿开发+矿山服务 中报增长+铜矿开发+矿山服务（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "10db41a8884af0ebdf3e04fa263c4429488c718cc9a04f1ed941bc5002b21c67",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：精艺股份 | 铜加工+头部客户+国资背景 铜加工+头部客户+国资背景。",
+      "evidence": [
+        "精艺股份 | 铜加工+头部客户+国资背景 铜加工+头部客户+国资背景（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "5842fdaf00c27c825bc337fd4ec83333408284949108a969c204fd3a5384ee9e",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：锦龙股份 | 证券业务+算力租赁+重大重组 证券业务+算力租赁+重大重组。",
+      "evidence": [
+        "锦龙股份 | 证券业务+算力租赁+重大重组 证券业务+算力租赁+重大重组（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "dc9a091efd4c12302323ebc0dbcc58e58ca5361581dd1104a6918d77dfe4bc8d",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：赤天化 | 甲醇+尿素+煤化工+中报扭亏 甲醇+尿素+煤化工+中报扭亏。",
+      "evidence": [
+        "赤天化 | 甲醇+尿素+煤化工+中报扭亏 甲醇+尿素+煤化工+中报扭亏（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "49ed327a7fab0411215f0ff7e4072d4a2530c47da386c36e3a8c3f3b336f5b2e",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "港股与亚洲"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：开开实业 | SPD+医药商业+资产收购+上海国资 SPD+医药商业+资产收购+上海国资。",
+      "evidence": [
+        "开开实业 | SPD+医药商业+资产收购+上海国资 SPD+医药商业+资产收购+上海国资（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "0a145764722579a2799ef22853664507d1dc89741d3930a4b70a4e1dc0902ff8",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：华天酒店 | 旅游酒店+生活服务+国资背景 旅游酒店+生活服务+国资背景。",
+      "evidence": [
+        "华天酒店 | 旅游酒店+生活服务+国资背景 旅游酒店+生活服务+国资背景（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "7b5fdcd5c372ac09386ce89f0b511a9de49d30e9383448f60b536a1334259e4f",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：新中港 | 热电联产+弗迪电池供汽+电网储能 热电联产+弗迪电池供汽+电网储能。",
+      "evidence": [
+        "新中港 | 热电联产+弗迪电池供汽+电网储能 热电联产+弗迪电池供汽+电网储能（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "edf939fda51c7ab47490c3ea9cafb124630af54e510afcfe5705cbf5aa306c7f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：万泰生物 | 股份捐赠+九价HPV疫苗+疫苗诊断+出海 股份捐赠+九价HPV疫苗+疫苗诊断+出海。",
+      "evidence": [
+        "万泰生物 | 股份捐赠+九价HPV疫苗+疫苗诊断+出海 股份捐赠+九价HPV疫苗+疫苗诊断+出海（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "e44bcde4ebc19f5dfa02ecc5fcdd34fd2cacc63ee1382b334570293ee32ed51f",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：新农股份 | 农药制剂+噻唑锌+业绩增长 农药制剂+噻唑锌+业绩增长。",
+      "evidence": [
+        "新农股份 | 农药制剂+噻唑锌+业绩增长 农药制剂+噻唑锌+业绩增长（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "e284f903507c6e5f04c8986ec810f0435159b99ae8de4bbba9673efe8b1185a6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：宝鹰股份 | 光耦合器+风电+股权转让+国企改革 光耦合器+风电+股权转让+国企改革。",
+      "evidence": [
+        "宝鹰股份 | 光耦合器+风电+股权转让+国企改革 光耦合器+风电+股权转让+国企改革（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "59b957372bffc074d6659bb2873069b462237033309aa36caa944b236f41286e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：一拖股份 | 扣非增长+农机出海+高端农机+无人驾驶 扣非增长+农机出海+高端农机+无人驾驶。",
+      "evidence": [
+        "一拖股份 | 扣非增长+农机出海+高端农机+无人驾驶 扣非增长+农机出海+高端农机+无人驾驶（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "4094efd4df1b3b4e8fb02bffb96567c9d4a4acde61f320df1140742a52124da0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "516970.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：华阳国际 | AI设计+城市更新+装配式建筑 AI设计+城市更新+装配式建筑。",
+      "evidence": [
+        "华阳国际 | AI设计+城市更新+装配式建筑 AI设计+城市更新+装配式建筑（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "bd2c7959aae6bf64006fb1663b031e458871249ac92752b62708e23a06b23b54",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：法尔胜 | 光纤参股+环保业务+金属制品 光纤参股+环保业务+金属制品。",
+      "evidence": [
+        "法尔胜 | 光纤参股+环保业务+金属制品 光纤参股+环保业务+金属制品（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "b06d645f08287eaa2f06250668171c2fc35af219df26de24b56f72d317d6a804",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：万向德农 | 转基因玉米+玉米种业+新品研发 转基因玉米+玉米种业+新品研发。",
+      "evidence": [
+        "万向德农 | 转基因玉米+玉米种业+新品研发 转基因玉米+玉米种业+新品研发（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "3031a60b7965d6e34921be54d28787a4aca7266a0e26454217676449e9c61734",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：青山纸业 | 光模块+竹浆纸+福建国资 光模块+竹浆纸+福建国资。",
+      "evidence": [
+        "青山纸业 | 光模块+竹浆纸+福建国资 光模块+竹浆纸+福建国资（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "82bd975b51d20a7562cf009f6780ea66de3ade54ec5a71f96027a5bb81414cb7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：市北高新 | 间接参股长存+数字园区+中报减亏+上海国资 间接参股长存+数字园区+中报减亏+上海国资。",
+      "evidence": [
+        "市北高新 | 间接参股长存+数字园区+中报减亏+上海国资 间接参股长存+数字园区+中报减亏+上海国资（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "f009c54c1d2187a3168301facf2a16dd15c86a6a9f873cd2c4f4433241bbf2b9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：华映科技 | 显示面板+车载显示+高附加值转型 显示面板+车载显示+高附加值转型。",
+      "evidence": [
+        "华映科技 | 显示面板+车载显示+高附加值转型 显示面板+车载显示+高附加值转型（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "74440711d4f27e7345dd500ee2f404f0b4cfa4ee54e67f75fce62f3f1df93fa5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：杭电股份 | 半年报高增+光纤光缆+定增扩产 半年报高增+光纤光缆+定增扩产。",
+      "evidence": [
+        "杭电股份 | 半年报高增+光纤光缆+定增扩产 半年报高增+光纤光缆+定增扩产（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "25222848e2eb785b4bfabd9e930420fac740beaa3659d7a438f17b19e89d8943",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：洪通燃气 | 业绩增长+LNG/CNG+新疆燃气 业绩增长+LNG/CNG+新疆燃气。",
+      "evidence": [
+        "洪通燃气 | 业绩增长+LNG/CNG+新疆燃气 业绩增长+LNG/CNG+新疆燃气（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "40f1a929b6b5f5e23596a562861df09d0076a5dba3c92627e499694db9dae594",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "516970.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：豪尔赛 | 液冷服务器+智慧光艺+照明工程+智慧城域 液冷服务器+智慧光艺+照明工程+智慧城域。",
+      "evidence": [
+        "豪尔赛 | 液冷服务器+智慧光艺+照明工程+智慧城域 液冷服务器+智慧光艺+照明工程+智慧城域（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "e50e98b128d77c0b64a794b0484964801de439e7e4e9de3e6b7cb2dcbef424a2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：浙江世宝 | 无人驾驶+线控转向+车企配套+半年报增长 无人驾驶+线控转向+车企配套+半年报增长。",
+      "evidence": [
+        "浙江世宝 | 无人驾驶+线控转向+车企配套+半年报增长 无人驾驶+线控转向+车企配套+半年报增长（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "f9e26f8c9a49af07b05bea685fe49804f120dd81daff58d6b4c2ea7afa4568cb",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：康希诺 | mRNA肿瘤疫苗+破伤风疫苗+创新疫苗 mRNA肿瘤疫苗+破伤风疫苗+创新疫苗。",
+      "evidence": [
+        "康希诺 | mRNA肿瘤疫苗+破伤风疫苗+创新疫苗 mRNA肿瘤疫苗+破伤风疫苗+创新疫苗（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "e8889eec4ad82ffe29c1420226dc6377a251f02adf77e3d9e3877567129b9453",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512760.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：同宇新材 | 中报增长+电子树脂+高频高速+覆铜板上游 中报增长+电子树脂+高频高速+覆铜板上游。",
+      "evidence": [
+        "同宇新材 | 中报增长+电子树脂+高频高速+覆铜板上游 中报增长+电子树脂+高频高速+覆铜板上游（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "9f1375c3f05b40271b988dbcaa62588f16d157a19c3437eebac788e01ab4ae6b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：新亚电子 | 半年报增长+高速铜缆+AI服务器 半年报增长+高速铜缆+AI服务器。",
+      "evidence": [
+        "新亚电子 | 半年报增长+高速铜缆+AI服务器 半年报增长+高速铜缆+AI服务器（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "a18454a64d443ddb5ae89135f8037d938f2454d306b3601bc209e4bd233316f2",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：百利电气 | 可控核聚变+超导+电网设备+营收增长 可控核聚变+超导+电网设备+营收增长。",
+      "evidence": [
+        "百利电气 | 可控核聚变+超导+电网设备+营收增长 可控核聚变+超导+电网设备+营收增长（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "24941b5834e3ce9bca2895513aa3a0f9220915e2971491d1cfa47bdc7ff08c85",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "港股与亚洲"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：千金药业 | 业绩增长+女性健康+创新药 业绩增长+女性健康+创新药。",
+      "evidence": [
+        "千金药业 | 业绩增长+女性健康+创新药 业绩增长+女性健康+创新药（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "684a6cf541d6efb26495fbaf855a913fdd454abbd4ad04dad09713fd52b72c2d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512760.SH",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：金辰股份 | 拟投资+半导体装备+钙钛矿设备+光伏设备 拟投资+半导体装备+钙钛矿设备+光伏设备。",
+      "evidence": [
+        "金辰股份 | 拟投资+半导体装备+钙钛矿设备+光伏设备 拟投资+半导体装备+钙钛矿设备+光伏设备（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "c0f3d3203fe5ed36b19418dbfdcbbb4cc49ab76e9247226afe98f42ba8419f40",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：捷荣技术 | 消费电子+精密结构件+亏损收窄 消费电子+精密结构件+亏损收窄。",
+      "evidence": [
+        "捷荣技术 | 消费电子+精密结构件+亏损收窄 消费电子+精密结构件+亏损收窄（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "33e4b6341195be0b873add80a9cca6c4a23989c5b55113d732a08d361d8f7880",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "港股与亚洲"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：冀衡医药 | 医药制造+半年报减亏+资产注入 医药制造+半年报减亏+资产注入。",
+      "evidence": [
+        "冀衡医药 | 医药制造+半年报减亏+资产注入 医药制造+半年报减亏+资产注入（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "83ed7f1f3c3ef5f8a65d38d54fa015c19d10cf43c35b3a3352c6e1a137366fc9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：康盛股份 | 液冷+智算中心+家电制冷 液冷+智算中心+家电制冷。",
+      "evidence": [
+        "康盛股份 | 液冷+智算中心+家电制冷 液冷+智算中心+家电制冷（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "32429eca5846ddff425ece7004c1f8ac1f744ca6582580ad761607fdaa6f867a",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：融发核电 | 核电中标+核电装备+核聚变 核电中标+核电装备+核聚变。",
+      "evidence": [
+        "融发核电 | 核电中标+核电装备+核聚变 核电中标+核电装备+核聚变（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "f5db74a15865de13996e28706aa7d063014c2d639e9101fb194242b3c29ac398",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：ST三木 | 跨境电商+国资背景+资产盘活 跨境电商+国资背景+资产盘活。",
+      "evidence": [
+        "ST三木 | 跨境电商+国资背景+资产盘活 跨境电商+国资背景+资产盘活（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "97edcff602ecc3c79ca22c7df0ff7a8d7824a84c5ec5086592eb634eb6706548",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "516970.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：海鸥住工 | 控制权拟变更+装配式厨卫+越南制造 控制权拟变更+装配式厨卫+越南制造。",
+      "evidence": [
+        "海鸥住工 | 控制权拟变更+装配式厨卫+越南制造 控制权拟变更+装配式厨卫+越南制造（冻结来源：ths_hot_reason）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "fef86b19f5ab065bb1f17bafb009bc9edfbd9700ceabceaa8ba3a0fbfe764c9f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：海鸥住工 | 家居用品 家居用品。",
+      "evidence": [
+        "海鸥住工 | 家居用品 家居用品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "21e3b16e63c51a340d9db51cc6dede2b6621211f0fad9cae2a7c4cb0d8857d6f",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：融发核电 | 其他电源 其他电源。",
+      "evidence": [
+        "融发核电 | 其他电源 其他电源（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "e0a128a0ecad0e9b19c49412adebdcf4cd5b3b0a542585c1201c389c23a293cb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：康盛股份 | 家电零部 家电零部。",
+      "evidence": [
+        "康盛股份 | 家电零部 家电零部（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "e552689a8113d45b5a9e3cc17b8146920968bae97f0eddb128a7579737b5aaf9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "港股与亚洲"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：冀衡医药 | 化学制药 化学制药。",
+      "evidence": [
+        "冀衡医药 | 化学制药 化学制药（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "ffa48782f5d2ea72d99e66852d21807701094e50413643b5eda49cce4014dd80",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：捷荣技术 | 消费电子 消费电子。",
+      "evidence": [
+        "捷荣技术 | 消费电子 消费电子（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "592b13562d69d849a2bd27f5e7a152158967172067b7abcb08dfad2e63cdf3b4",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：金辰股份 | 光伏设备 光伏设备。",
+      "evidence": [
+        "金辰股份 | 光伏设备 光伏设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "9a7de7b3497f0ad71e46ba5cb3b7b51ade0d862a15473fd34c8d4fbcbab02a14",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：同宇新材 | 电子化学 电子化学。",
+      "evidence": [
+        "同宇新材 | 电子化学 电子化学（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "99d8d25b1ac371de1828595498f705a395f983360758ee7fd61092c535ffa265",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：新亚电子 | 消费电子 消费电子。",
+      "evidence": [
+        "新亚电子 | 消费电子 消费电子（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "5a69ff53ed0243aa079ebb99d011fc3b7eab3ac5350376e1048e605f7f0b3614",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：千金药业 | 中药Ⅱ 中药Ⅱ。",
+      "evidence": [
+        "千金药业 | 中药Ⅱ 中药Ⅱ（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "3f49b554a6e3829ef4b389a8719101233ad23cb5922e205f911d263fccfd46e4",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：百利电气 | 电网设备 电网设备。",
+      "evidence": [
+        "百利电气 | 电网设备 电网设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "bc0f5e937ccb8899365a3a8fb2f5580b206f7b4c9d98902917d1ce63dc972880",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：康希诺 | 生物制品 生物制品。",
+      "evidence": [
+        "康希诺 | 生物制品 生物制品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "b813de80da009e8d1c6b91a3d631f6006b937e17a1916b75df57e565cc441676",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：浙江世宝 | 汽车零部 汽车零部。",
+      "evidence": [
+        "浙江世宝 | 汽车零部 汽车零部（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "cbc23c4eece658641ef391bcb60346111473486c4a61a775286569e73740ed39",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：洪通燃气 | 燃气Ⅱ 燃气Ⅱ。",
+      "evidence": [
+        "洪通燃气 | 燃气Ⅱ 燃气Ⅱ（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "e4979fae9d5bbf9ded5ff3a6602d93f8c7c950722b10bc4cc7d0d19bb18df27b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：豪尔赛 | 装修装饰 装修装饰。",
+      "evidence": [
+        "豪尔赛 | 装修装饰 装修装饰（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "090730c4c070522237f15d7b3ef764ab4ea628f844a4654c0d77c9cb4d2e93a9",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：杭电股份 | 电网设备 电网设备。",
+      "evidence": [
+        "杭电股份 | 电网设备 电网设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "5ec09a68fd4239717c958a96024decf5247e68924b041326ce7f1bdc3ae6bccf",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：华映科技 | 光学光电 光学光电。",
+      "evidence": [
+        "华映科技 | 光学光电 光学光电（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "6e146f0bc09ba0f686046f780d12076df7e0e8e9ca52338284cfa2d3c6f95799",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：市北高新 | 房地产开 房地产开。",
+      "evidence": [
+        "市北高新 | 房地产开 房地产开（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "4c05d93c9d5f0b5d5e18f80eadf4783f1b054c0780a59cd9a5217318635c40fe",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：万向德农 | 种植业 种植业。",
+      "evidence": [
+        "万向德农 | 种植业 种植业（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "b3f12501254f3a79ae4607a84e7bfb035a8d9ad407059475c099662452ca7495",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：青山纸业 | 造纸 造纸。",
+      "evidence": [
+        "青山纸业 | 造纸 造纸（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "4c5c8cee9b94a83628ce60625a9226c476a733075158cb9d3f0df5b10ce7c9b6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：法尔胜 | 环保设备 环保设备。",
+      "evidence": [
+        "法尔胜 | 环保设备 环保设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "5afc40d261071a37a9b2652d3700a17a93937018b0b9e057e8ae7dae41484ed6",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "516970.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：华阳国际 | 工程咨询 工程咨询。",
+      "evidence": [
+        "华阳国际 | 工程咨询 工程咨询（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "b646609a6ff6a76cc85bd4f64046053caf714d101266f38aa076588379190a32",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：一拖股份 | 专用设备 专用设备。",
+      "evidence": [
+        "一拖股份 | 专用设备 专用设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "5be175a2064de5968ab3f594cdc55eba1434895970ba98de43b1b2045aa4301a",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：新中港 | 电力 电力。",
+      "evidence": [
+        "新中港 | 电力 电力（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "8e80b3e9fb2832c337d5f5db85350558d542bf6467d4f7ca426c030a309e85ec",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：万泰生物 | 医疗器械 医疗器械。",
+      "evidence": [
+        "万泰生物 | 医疗器械 医疗器械（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "5c2523e1aa47a0ba2c6b3332e96153ebddfc6a09ae241bc5e43d8c2d4cd0bd26",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：宝鹰股份 | 装修装饰 装修装饰。",
+      "evidence": [
+        "宝鹰股份 | 装修装饰 装修装饰（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "2cb8f60284dc623be8c9e6777a8dc3d3c4f4f9407e249318ef37a354aef91ec3",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：华天酒店 | 酒店餐饮 酒店餐饮。",
+      "evidence": [
+        "华天酒店 | 酒店餐饮 酒店餐饮（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "36a60f28097a540caea521516816e29e351de31cc43b4b0148a7268ccf3332a6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：新农股份 | 农化制品 农化制品。",
+      "evidence": [
+        "新农股份 | 农化制品 农化制品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "3269b1922560d64684f2ca9a5a0073da87ac990dbb523bf23a12eff0a541d894",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "港股与亚洲"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "513200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：开开实业 | 医药商业 医药商业。",
+      "evidence": [
+        "开开实业 | 医药商业 医药商业（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "e6b21276bcefad0a0923ce86b93309ca574dc8b8682ca072735bd00eadbf99d0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：赤天化 | 农化制品 农化制品。",
+      "evidence": [
+        "赤天化 | 农化制品 农化制品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "6ec48489835229d6cebf7f36d02a83ba12dee8e5e8b224ce186cc9af61674e0b",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：精艺股份 | 工业金属 工业金属。",
+      "evidence": [
+        "精艺股份 | 工业金属 工业金属（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "25621c5471d72315b39fb4a2c7e264bb56a71219cf5bd7caee9a159641168c76",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：锦龙股份 | 证券Ⅱ 证券Ⅱ。",
+      "evidence": [
+        "锦龙股份 | 证券Ⅱ 证券Ⅱ（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "9947084e68ed6f3a175382fa8e1f2da66633fa19190dfc60c9ddb520a5bd62bb",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：金诚信 | 工业金属 工业金属。",
+      "evidence": [
+        "金诚信 | 工业金属 工业金属（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "775679dabdf47318c7beb4aefb7016400a48ec48b4f78c451e607bd208f2c0ea",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：新 大 陆 | 计算机设 计算机设。",
+      "evidence": [
+        "新 大 陆 | 计算机设 计算机设（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "9326e75f1d178c1da84ed38e6d3199cedaef5d995c17ce64ffb0a88959e9c577",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：华培动力 | 汽车零部 汽车零部。",
+      "evidence": [
+        "华培动力 | 汽车零部 汽车零部（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "67108baf148fcf2721fa60ef80f89536f56ae3d552aafb67ac1130a3d887f13f",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：江西铜业 | 工业金属 工业金属。",
+      "evidence": [
+        "江西铜业 | 工业金属 工业金属（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "1ead69061b7900e1dd4da054d6bd16862822e561bf03dd50a2089b7f34482a98",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：上海洗霸 | 环境治理 环境治理。",
+      "evidence": [
+        "上海洗霸 | 环境治理 环境治理（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "b6fb1f5284684349a9771eebf5ca12f8217e86fa38e6fe0870f518733d3c7bcd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：金一文化 | 饰品 饰品。",
+      "evidence": [
+        "金一文化 | 饰品 饰品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "2879ba305b30148b8fa72a2a09c7c85c9972407dbcb9887d368034f9b19c248b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：深中华A | 饰品 饰品。",
+      "evidence": [
+        "深中华A | 饰品 饰品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "42c2379a17c63d0bd7194da6a4d0f728aec2d935757e99088483b1bc8e1a0f11",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：迪阿股份 | 饰品 饰品。",
+      "evidence": [
+        "迪阿股份 | 饰品 饰品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "8feb5196e4ad69961f63ba5420034233e809316ba0d270a03b97f13debf6f82e",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512070.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：湘财股份 | 证券Ⅱ 证券Ⅱ。",
+      "evidence": [
+        "湘财股份 | 证券Ⅱ 证券Ⅱ（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "9fca0ba4c70a014a0f82fe137b67604a69a032252616bddb39c9349600029ec0",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：白银有色 | 工业金属 工业金属。",
+      "evidence": [
+        "白银有色 | 工业金属 工业金属（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "f05f3bbfbc61272226a79d04b3b7aaea42bc45986b6e5b48c1df249772c3a343",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：楚天龙 | 通信设备 通信设备。",
+      "evidence": [
+        "楚天龙 | 通信设备 通信设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "b06d6d8a599519536cc4119d4cadfdcec30e9e13fcbc1f1140fa5013aa30dcca",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：青岛金王 | 家居用品 家居用品。",
+      "evidence": [
+        "青岛金王 | 家居用品 家居用品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "99ba5839e98c9f7351689b2bb3a4c5aa6bdf4ab371747f9a78f419ec98083e72",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：恒银科技 | 计算机设 计算机设。",
+      "evidence": [
+        "恒银科技 | 计算机设 计算机设（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "5ebd497d1b59e78a2dc46a2749398c866123676f34e6755b724d6434b99d122d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：剑桥科技 | 通信设备 通信设备。",
+      "evidence": [
+        "剑桥科技 | 通信设备 通信设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "cdb9e6dedadcd73379d0550bdef1a3f8c606a005d4e0cfa123c86b75f16ae073",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：郴电国际 | 电力 电力。",
+      "evidence": [
+        "郴电国际 | 电力 电力（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "902cc458c6901bf8f8714edd595dd7afbad2a18cb644a9b313eaa12b84d194c5",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：顺钠股份 | 电网设备 电网设备。",
+      "evidence": [
+        "顺钠股份 | 电网设备 电网设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "c818ebf762e4614174d663c5e5b781b1a59eb389c6a51a64153838fae23896fb",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：共进股份 | 通信设备 通信设备。",
+      "evidence": [
+        "共进股份 | 通信设备 通信设备（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "adae050d8d8ed1591b20b8b8c7dc15e9438458950123ddb783b1bbf992c05773",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：凯瑞德 | 贸易Ⅱ 贸易Ⅱ。",
+      "evidence": [
+        "凯瑞德 | 贸易Ⅱ 贸易Ⅱ（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "b7c689cd91d195efdfaa7cb342b7cda4ec969dd78736e03129653db69bb8ae8a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：联合精密 | 家电零部 家电零部。",
+      "evidence": [
+        "联合精密 | 家电零部 家电零部（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "413ae55c388320ec40c8e0bc283b53ca1db0428a7687a99dd473cb7138fbc4b0",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "正面盘面个股条目：立新能源 | 电力 电力。",
+      "evidence": [
+        "立新能源 | 电力 电力（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "个股题材或涨停信息，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "ffe8523f75a6818df74064d60fc26635d005d0c0ed03e535ff3fd6e6c3bbe5cb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：茶花股份 | 家居用品 家居用品。",
+      "evidence": [
+        "茶花股份 | 家居用品 家居用品（冻结来源：eastmoney_limit_up）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "79b096b244e056152770d34dce0e8e1c13bf9d7a0d4867f61c77da0c39f156b3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：中南文化 | 通用设备 通用设备。",
+      "evidence": [
+        "中南文化 | 通用设备 通用设备（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "ce97b60ff6354d778ee5e3c1e407a49ee1d8f7d40931fd55babfe18f439877db",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：中 关 村 | 化学制药 化学制药。",
+      "evidence": [
+        "中 关 村 | 化学制药 化学制药（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "7b80ff8fdd5b768bea42c45c84793f64ef1207aedd903d233e75f8e32d6348ad",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "封板失败的个股条目：汉森制药 | 中药Ⅱ 中药Ⅱ。",
+      "evidence": [
+        "汉森制药 | 中药Ⅱ 中药Ⅱ（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "封板失败仅为个股短期风险，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "7a90d2971bcac5908853d9d7f97b7d4a67021ad952c190d76ac0b11d0162838a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：亿利达 | 通用设备 通用设备。",
+      "evidence": [
+        "亿利达 | 通用设备 通用设备（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "ea7aaf9bf7adc9920b0e922fedc9689b109d084632fa7369fabe8a7817a9db4d",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "封板失败的个股条目：卫光生物 | 生物制品 生物制品。",
+      "evidence": [
+        "卫光生物 | 生物制品 生物制品（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "封板失败仅为个股短期风险，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "ed3545b53a6308abc7cb59374f642cd1b5761bd0acf325366b276d7d483b0093",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：宁科生物 | 化学制品 化学制品。",
+      "evidence": [
+        "宁科生物 | 化学制品 化学制品（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "74bcf62f7b034ed95dc7acdfc47ec0b47b70daa02a9f6f09dd080b855ed2ed62",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：太阳纸业 | 造纸 造纸。",
+      "evidence": [
+        "太阳纸业 | 造纸 造纸（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "11cf9f334d69a5f7b7ccfde454025967b244d1946757fd779a8cafb7cfb4ffec",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：大千生态 | 基础建设 基础建设。",
+      "evidence": [
+        "大千生态 | 基础建设 基础建设（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "167567ebb0254f46442e4bf5b78daec84b7105cc9ac292397faae6c668c983b8",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "封板失败的个股条目：益佰制药 | 中药Ⅱ 中药Ⅱ。",
+      "evidence": [
+        "益佰制药 | 中药Ⅱ 中药Ⅱ（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "封板失败仅为个股短期风险，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "5f114e4a69810cc99cffa38f2cf8f698e322fb97bff10887d31f4207f3deb2f4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：日盈电子 | 汽车零部 汽车零部。",
+      "evidence": [
+        "日盈电子 | 汽车零部 汽车零部（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "8a68e83dae57b68a88cf8de0547e8dba47545e403d78819e66adea570ba0c1b4",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "封板失败的个股条目：澳洋健康 | 医疗服务 医疗服务。",
+      "evidence": [
+        "澳洋健康 | 医疗服务 医疗服务（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "封板失败仅为个股短期风险，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "4807bb2e99536e4d09cf181cb05a386a495d62fb795645617139e3c8269b99ef",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：尤夫股份 | 化学纤维 化学纤维。",
+      "evidence": [
+        "尤夫股份 | 化学纤维 化学纤维（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "87a2ffd61330e5e1fdb18ee2aadc02dfb40b288fbebc75c77bffeb87a73d5273",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "封板失败的个股条目：西安饮食 | 酒店餐饮 酒店餐饮。",
+      "evidence": [
+        "西安饮食 | 酒店餐饮 酒店餐饮（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "封板失败仅为个股短期风险，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "ca68497f262d97b86f4beed1c77a9fd723d79e986088dd7ad4858afb7e98e870",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：兆日科技 | 计算机设 计算机设。",
+      "evidence": [
+        "兆日科技 | 计算机设 计算机设（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "39f5d22ecd515b1bd194eee30c2184a391629520771ff960ef3dda8b10f90859",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：南华期货 | 多元金融 多元金融。",
+      "evidence": [
+        "南华期货 | 多元金融 多元金融（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "e47a2a7beedf5cbc4890f160cddc05638f5ae30d0af8e8f6fea5b2fbc17d8c0e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：国仪公司-U | 通用设备 通用设备。",
+      "evidence": [
+        "国仪公司-U | 通用设备 通用设备（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "a0e0d8bb3bad4f5e4abc96c8c23079ed6077dd137abbd84b02f281f3ddf824ae",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：山东威达 | 通用设备 通用设备。",
+      "evidence": [
+        "山东威达 | 通用设备 通用设备（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "26fece1c35d2d9996de6a98e15fbea9bebe27a7baa009d6009ea80c9841985bf",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：嘉友国际 | 物流 物流。",
+      "evidence": [
+        "嘉友国际 | 物流 物流（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    },
+    {
+      "source_hash": "8bc7c13e925c29eb0b1749222883e1cd59292e617c3941e3254cedd40df57c03",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.35,
+      "summary": "封板失败的个股条目：上海能源 | 煤炭开采 煤炭开采。",
+      "evidence": [
+        "上海能源 | 煤炭开采 煤炭开采（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "封板失败仅为个股短期风险，不能外推为行业趋势"
+      ]
+    },
+    {
+      "source_hash": "2c9f41ff9fa6a9cbe0420428be12fc391f23c48f8ea5edbd2e00eee6c293ea84",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.84,
+      "novelty": 0,
+      "summary": "冻结题材文本未命中正式池专属关键词：海南橡胶 | 种植业 种植业。",
+      "evidence": [
+        "海南橡胶 | 种植业 种植业（冻结来源：eastmoney_broken_board）"
+      ],
+      "risk_flags": [
+        "与固定ETF池无直接专属关键词关联"
+      ]
+    }
+  ]
+}

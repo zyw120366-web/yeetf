@@ -1,0 +1,167 @@
+{
+  "card_type": "ye_live_run_card",
+  "strategy": {
+    "id": "YE-FORMAL-2026-07-29C",
+    "name": "ye 策略",
+    "status": "frozen_for_live",
+    "effective_for_signal_dates_from": "2026-07-29",
+    "rule_source": "config/ye_strategy.yaml",
+    "execution_source": "scripts/run_after_close.py",
+    "daily_mode": "收盘后生成、下一交易日开盘执行"
+  },
+  "signal_date": "2026-08-27",
+  "execute": "下一交易日开盘",
+  "created_at_utc": "2026-08-27T07:05:10.784905+00:00",
+  "decision": {
+    "current_symbol": "512010.SH",
+    "target_symbol": "512010.SH",
+    "backtest_shadow_target_symbol": "513200.SH",
+    "actions": [
+      {
+        "side": "hold",
+        "symbol": "512010.SH",
+        "target_weight": 1.0,
+        "reasons": []
+      }
+    ],
+    "cost": "唯一固定成本；回测、压力检查和实盘记录都不得切换成本口径"
+  },
+  "account_state": {
+    "source": "用户2026-08-06常设授权：未另行报告时，按上一交易日开盘计划完整执行并按当日实际开盘价记账",
+    "as_of": "2026-08-27_close",
+    "confirmation_status": "assumed_authorized",
+    "first_live_day": false,
+    "total_equity": 10113.200194,
+    "available_cash": 0.0,
+    "performance": {
+      "strategy_start_date": "2026-07-21",
+      "net_contributed_capital": 9825.0,
+      "calculation_basis": "用户确认资金全部投入首笔买入；26200股×0.375元=9825元，后续如有出入金必须同步调整"
+    },
+    "positions": [
+      {
+        "symbol": "512010.SH",
+        "name": "医药ETF易方达",
+        "opened_on": "2026-07-21",
+        "quantity": 26200,
+        "average_cost": 0.375,
+        "market_price": 0.3860000073909759,
+        "market_value": 10113.200193643568,
+        "unrealized_pnl": 288.20019364356847
+      }
+    ],
+    "pending_orders": []
+  },
+  "decision_basis": {
+    "live_position_source": "results/live/account_state.json；不得使用回测持仓代替",
+    "eligible_candidates": [
+      {
+        "symbol": "512010.SH",
+        "name": "医药ETF易方达",
+        "pool_role": "core",
+        "rank": 2,
+        "momentum_score": 0.2811412179107627,
+        "selection_score": 0.2811412179107627,
+        "entry_path": "常规动量"
+      },
+      {
+        "symbol": "159985.SZ",
+        "name": "豆粕ETF华夏",
+        "pool_role": "core",
+        "rank": 3,
+        "momentum_score": 0.2545796108978866,
+        "selection_score": 0.2545796108978866,
+        "entry_path": "常规动量"
+      },
+      {
+        "symbol": "518880.SH",
+        "name": "黄金ETF华安",
+        "pool_role": "core",
+        "rank": 4,
+        "momentum_score": 0.1565717429062664,
+        "selection_score": 0.1565717429062664,
+        "entry_path": "常规动量"
+      }
+    ],
+    "selection_rule": "核心候选拥有第一买入权；只有当天无合格核心候选时，挑战者才填补空档。核心旧仓先检查原卖出，再检查5/5点/2日/5日机会换仓；挑战者持仓遇到合格核心候选时让位。",
+    "opportunity_switch": {
+      "enabled": true,
+      "candidate_symbol": "159985.SZ",
+      "qualifies_today": false,
+      "confirmation_streak": 0,
+      "required_confirmation_days": 2,
+      "triggered": false,
+      "status": "not_qualified",
+      "live_baseline_on": "2026-07-29",
+      "live_confirmation_starts_on": "2026-07-30",
+      "holding_symbol": "512010.SH",
+      "holding_rank": 2.0,
+      "holding_since": "2026-07-21",
+      "held_trading_days": 28,
+      "candidate_rank": 3.0,
+      "score_gap": -0.026561607012876076,
+      "minimum_score_advantage": 0.05,
+      "reset_rule": "任一条件中断或领先ETF改变，连续计数归零"
+    },
+    "backtest_shadow_note": "回测影子持仓只用于绩效和一致性审计，不代表真实账户持仓，也不决定首次实盘买单。"
+  },
+  "cash_management": {
+    "enabled": true,
+    "product": "收盘宝",
+    "instruction": "收盘后仅对实际闲置现金执行；不改变上述ETF计划。",
+    "subscribe_window": "交易日15:00-15:30",
+    "amount_rule": "收盘可用现金大于1000元时，按1000元整数倍申报；保留无法整除的余额",
+    "fee_rate": 1e-05,
+    "annualized_yield": "下单时实时值；不得在实盘计划中写死或承诺收益",
+    "maturity": "下一交易日开盘前本金和利息回到股票账户可用资金",
+    "failure_action": "下单失败、收益率缺失、额度不足或到账异常时，保留现金；不得影响ETF卖出或买入计划"
+  },
+  "sentiment_review": {
+    "status": "complete",
+    "coverage": 1.0,
+    "reviewed_count": 175,
+    "input_count": 175,
+    "prompt_version": "ye-codex-chat-review-2026-07-22",
+    "review_metadata": {
+      "model_family": "GPT-5",
+      "model_snapshot": "not_exposed_by_codex",
+      "surface": "Codex desktop",
+      "reviewed_in_current_conversation": true
+    },
+    "review_protocol": {
+      "version": "ye-codex-chat-review-2026-07-22",
+      "files": [
+        {
+          "path": "config/sentiment_review_policy.yaml",
+          "sha256": "64cc6dd0db1d6888b47d3e15903bbfb194f23dc6495b50a9b94ab778e3275f80"
+        },
+        {
+          "path": "config/sentiment.yaml",
+          "sha256": "264703aa392f3f796635c7e62fcbd21700e2a7bf03ab379f5242c6b23f2af5a2"
+        },
+        {
+          "path": "skills/ye-daily-execution/references/review-schema.md",
+          "sha256": "3a7433d841da73e87a60ca1f559a454fa40f2568ea56ef7566ac3469d7aa1734"
+        }
+      ]
+    },
+    "protocol_status": "fingerprinted"
+  },
+  "release": {
+    "readiness": "READY",
+    "blocking_items": [],
+    "plan_is_not_fill": true
+  },
+  "audit": {
+    "run_manifest": "results/audit/2026-08-27_run_manifest.json",
+    "run_manifest_sha256": "3b97b2c0b12a4e2eceac01381ae8ed36ff7deeaf87e920d539347092253fd25d",
+    "critical_file_count": 21,
+    "source_file_count": 20,
+    "price_file_count": 59
+  },
+  "execution_reconciliation": {
+    "status": "not_required",
+    "actual_fill_template": null,
+    "reconciliation_output": "results/audit/2026-08-27_execution_reconciliation.json"
+  }
+}
