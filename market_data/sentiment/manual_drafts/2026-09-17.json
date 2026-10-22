@@ -1,0 +1,2369 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "b9ca4a292e9055e51e4b482d44d971b9899be0a175acde1746632594a9f125d6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "龙版传媒的AI漫剧与出版发行构成短期内容产业线索。",
+      "evidence": [
+        "龙版传媒 | AI漫剧+出版发行+黑龙江国资"
+      ],
+      "risk_flags": [
+        "题材归因不等于新增订单；AI漫剧不能代表整个AI产业",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "88627b7ba28cfc4635558c50f114b9c387cd8452e271ca5bdad245e99dd9642a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.55,
+      "summary": "克来机电归因为工业机器人及自动化装备。",
+      "evidence": [
+        "克来机电 | 工业机器人+自动化装备+汽车零部件"
+      ],
+      "risk_flags": [
+        "汽车零部件业务不能整体等同机器人收入",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "3833e5a49033d449db291bcb4d894ee54e65cd3971c6f648b814bd288a94334a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "锡华科技的风电齿轮箱与大兆瓦装备受到关注。",
+      "evidence": [
+        "锡华科技 | 风电齿轮箱+大兆瓦装备+高端部件"
+      ],
+      "risk_flags": [
+        "个股部件题材不能外推所有新能源细分",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "bbf1842bc97397ff93b24b424369f970111857646bc7df0f39910ae9811cad69",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.55,
+      "summary": "吉鑫科技的风电铸件和轴承伴随半年报增长归因。",
+      "evidence": [
+        "吉鑫科技 | 风电铸件+风电轴承+半年报增长"
+      ],
+      "risk_flags": [
+        "原文没有业绩增长具体数值",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "092df8f838c279be3782866f662ccdae76158129af81d8f55a1f0d4769a199b6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "恒丰纸业为烟草和卷烟纸线索，没有池内ETF的直接专属证据。",
+      "evidence": [
+        "恒丰纸业 | 新型烟草+卷烟纸+HNB+黑龙江国资"
+      ],
+      "risk_flags": [
+        "不把烟草及地方国资泛化为消费或红利ETF",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f910989d6e0369bbf8bd46eede7dff4802baaed9656336b1248f78f9dd550699",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "云煤能源的焦炭与煤焦价格构成煤炭链正向线索。",
+      "evidence": [
+        "云煤能源 | 焦炭+煤焦价格+吸收合并"
+      ],
+      "risk_flags": [
+        "吸收合并为公司事件；没有价格涨幅数值",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "01ae1d0d7a10d3ee7d1d6cd3d5a92d7b7edb0072f5679257e7b697ff2b1e3e4b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "四通的陶瓷、锆钛精炼和摘帽申请不满足直接ETF映射。",
+      "evidence": [
+        "*ST四通 | 陶瓷制造+锆钛精炼+摘帽申请"
+      ],
+      "risk_flags": [
+        "ST及摘帽存在独立风险；不能补写建材或有色关键词",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "4ae1e675378c57ee71ef6ce75ae130337bf489b2e8aa0d77fb7901bbf7fd541d",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.66,
+      "novelty": 0.5,
+      "summary": "新中港包含明确电网侧储能线索。",
+      "evidence": [
+        "新中港 | 热电联产+弗迪供汽+电网侧储能+员工持股"
+      ],
+      "risk_flags": [
+        "供汽、员工持股不等于储能订单；未明确电网设备",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2c034b11cc92c9a7eac599d01ba999d0fa78bb7abf81a1e57c1112e7c1e4f643",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.7,
+      "novelty": 0.55,
+      "summary": "均胜电子的人形机器人及光通信为两条直接主题线索。",
+      "evidence": [
+        "均胜电子 | 人形机器人+智能驾驶+光通信"
+      ],
+      "risk_flags": [
+        "题材不等于对应业务已贡献实质利润",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2c268168dd1c5235c4e6d58f2ee2aae39ebc033839b580a3e2829dec49ab6db3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "华软科技为光引发剂与并购归因，缺少池内专属关键词。",
+      "evidence": [
+        "华软科技 | 光引发剂+并购莱恩光电+造纸化学品"
+      ],
+      "risk_flags": [
+        "不能将造纸化学品自动改写成化工或半导体",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "af6ce72ac9cc1497d51d01d6ba394961764918c290a98dc98a52a80fd17f5203",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.74,
+      "novelty": 0.55,
+      "summary": "先导基电的半导体材料及离子注入机伴随半年报增长。",
+      "evidence": [
+        "先导基电 | 半导体材料+离子注入机+铟+半年报增长"
+      ],
+      "risk_flags": [
+        "个股增长未披露幅度；铟不能自动扩成全有色证据",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "5f8627e812d7657f70af336f8b7ceb80ba416c74cdc87d4be3ec023bae90ea16",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "华宝股份涉及新型烟草和香精配料，无直接ETF映射。",
+      "evidence": [
+        "华宝股份 | 新型烟草+营养健康+香精配料"
+      ],
+      "risk_flags": [
+        "营养健康不等于医药医疗证据",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2dabc010034ddbdb4d21ebac175b0bab647ddcb8bc9b2278a3cd395ca7e374ec",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.45,
+      "summary": "招商轮船是油运和干散货航运线索。",
+      "evidence": [
+        "招商轮船 | 油运景气+干散货运输+航运龙头"
+      ],
+      "risk_flags": [
+        "油运不等于石油生产受益，池内没有直接航运ETF",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "12c017070e8cb7aafcb7689f8faae4befbca2e3b641211138825fedcb5a27351",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "159981.SZ",
+        "516020.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.7,
+      "novelty": 0.55,
+      "summary": "雪天盐业的锂电负极与盐化工归因具直接主题联系。",
+      "evidence": [
+        "雪天盐业 | 重大重组+锂电负极+盐及盐化工"
+      ],
+      "risk_flags": [
+        "重组预期不等于已完成，不能推断全板块受益",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "118606201f532422ee0dc5cfbccc640f6dd3e98e0e4d2b605dabe30c2b5a81cc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.92,
+      "novelty": 0.4,
+      "summary": "万向德农为玉米种业及转基因研发，非豆粕直接证据。",
+      "evidence": [
+        "万向德农 | 玉米种业+转基因玉米+新品研发"
+      ],
+      "risk_flags": [
+        "玉米不能替代大豆、豆粕或饲料原文证据",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "3038982311e3bd421c60eda33196ca3d451b193c95a29907e2c8212fe0466cb1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.85,
+      "novelty": 0.4,
+      "summary": "跨境通为跨境电商与中报扭亏，缺少池内直接关键词。",
+      "evidence": [
+        "跨境通 | 跨境电商+中报扭亏"
+      ],
+      "risk_flags": [
+        "不将跨境电商泛化为港股互联网或零售指数",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0095d5d7f0c9e61d9c84ed1817516bfccb4e13f2960aebdbfbdfd8285219c2c1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "英飞涉及预重整与智慧城市，未见池内直接主题证据。",
+      "evidence": [
+        "*ST英飞 | 预重整+董事会换届+智慧城市"
+      ],
+      "risk_flags": [
+        "ST重整及董事会变化为公司特异风险",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0ef33f6e1d5dac36bcca2f5b7dfade071b05a9439457d5412dee081f55b44635",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "华英农业为控制权、鸭业及羽绒出口线索。",
+      "evidence": [
+        "华英农业 | 控制权变更+鸭业全产业链+羽绒出口"
+      ],
+      "risk_flags": [
+        "冻结行未直接写养殖或饲料，不映射豆粕",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f3afcf2e85106bdea0ae1f654742e35d825144dc515c5cebbc5c3d2a67a9e9c0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "冠盛股份包含机器人研发与固液电池业务线索。",
+      "evidence": [
+        "冠盛股份 | 机器人研发+固液电池+马来西亚项目+汽配出口"
+      ],
+      "risk_flags": [
+        "研发及海外项目不等于量产收益",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "437b3a1827d8ccf68a62d719ba0d343d70125f82899b13070351260443a0dbe2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.92,
+      "novelty": 0.4,
+      "summary": "敦煌种业聚焦玉米与商业化育种，不构成豆粕证据。",
+      "evidence": [
+        "敦煌种业 | 玉米种业+核心品种+商业化育种"
+      ],
+      "risk_flags": [
+        "种业主题不能泛化为豆粕或养殖",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "db757aa7bd1db300493087717bd91fe6d55fcedbfe5e7bec0a63e475f34691c3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "金杯汽车为汽配和客户定点线索。",
+      "evidence": [
+        "金杯汽车 | 汽车零部件+宁德时代定点+吉利供应链"
+      ],
+      "risk_flags": [
+        "宁德时代客户名不足以证明本行电池业务",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2524b782cdea9ee4dfc467fa7ebd46bf1a0a6f0137fcf176e74202e554953c51",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "众泰汽车为整车及海外布局归因，缺少直接ETF词。",
+      "evidence": [
+        "众泰汽车 | 汽车整车+A0车型+海外布局"
+      ],
+      "risk_flags": [
+        "不把所有汽车整车视为新能源车主题",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "7033374159ab136dd082ba64382bcaffe1db435988e9e128c5228ee76fff568f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "龙头股份为纺织服装与上海国资线索。",
+      "evidence": [
+        "龙头股份 | 纺织服装+上海国资+中报增长"
+      ],
+      "risk_flags": [
+        "地方国资不等于高股息，纺织不泛化至全消费",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "1a217edea4ce20252cc5cefc5898f659fda0457e5aee356b3748d8fb097794b7",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.7,
+      "novelty": 0.55,
+      "summary": "凯迪股份的具身机器人送样提供机器人研发线索。",
+      "evidence": [
+        "凯迪股份 | 具身机器人送样+智能线性驱动+汽车零部件"
+      ],
+      "risk_flags": [
+        "送样不等于量产或收入确认",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "00c813622e9030359a503256b67f5653b3bd465951ebe152e906a900f15b7af2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "天海电子为汽车线束与连接器线索，未见直接池内映射。",
+      "evidence": [
+        "天海电子 | 汽车线束+汽车连接器+高压高速连接器"
+      ],
+      "risk_flags": [
+        "高速连接器不自动等于通信或半导体",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "8279ffc44612d6a9b6841c0bc63ebfbcc708fd4544f55f142b1e698a6f64229c",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.64,
+      "novelty": 0.5,
+      "summary": "上海物贸有色交易具直接有色主题联系。",
+      "evidence": [
+        "上海物贸 | 汽车贸易+新能源营销+有色交易+上海国资"
+      ],
+      "risk_flags": [
+        "贸易敞口不等于上游价格利润；新能源营销不代表光伏",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "1b3d3586d822efdb846ce88dda10222f8dbee153d22b174d8ebd2aa98f23691d",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.55,
+      "summary": "大连圣亚的旅游经营及海洋公园伴随扭亏归因。",
+      "evidence": [
+        "大连圣亚 | 旅游经营+海洋公园+业绩扭亏"
+      ],
+      "risk_flags": [
+        "单一景区公司不能代表整个旅游行业",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "88b9bd2c6c8af4e6df8c3e20c0015aa65d80f3b6db18e0f167d3d54f5c12f142",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "159819.SZ",
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.6,
+      "summary": "共达电声拟参投芯片及AI算力项目是新增主题线索。",
+      "evidence": [
+        "共达电声 | 拟参投硅臻芯片+AI算力+电声元器件+苹果概念"
+      ],
+      "risk_flags": [
+        "拟投资并非落地，不能视为已获算力订单",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "d630432d08eafb1b87282cb6c66f9fec0fe2e97b70014b695c180b6030b58a37",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.5,
+      "summary": "北特科技的人形机器人丝杠为直接配套线索。",
+      "evidence": [
+        "北特科技 | 行星滚柱丝杠+人形机器人+汽车零部件"
+      ],
+      "risk_flags": [
+        "配套题材不保证量产与盈利",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "6ca07be81d0e09ed9099086c41c2965dbeaa91b9d5d45947ef5888f60c01c886",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "金健米业涉及粮油食品和储备，但无池内专属词支持。",
+      "evidence": [
+        "金健米业 | 粮油食品+粮食储备+健康食品"
+      ],
+      "risk_flags": [
+        "不把泛粮食映射为豆粕，也不补写食品饮料",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "3f59be38c2610f9d7cd97b2244172d7297711b49cec1fe50389d29e07b0a7af8",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.55,
+      "summary": "世嘉科技的光模块和移动通信构成通信正向线索。",
+      "evidence": [
+        "世嘉科技 | 光模块+移动通信+购置液冷"
+      ],
+      "risk_flags": [
+        "液冷采购不等于新增收入",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f0f33c27905fe98323ed6173fd30fa9db7c27ec1f6bead67fbf14d46d86643a2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "华纺股份为纺织印染与国企背景线索。",
+      "evidence": [
+        "华纺股份 | 纺织印染+绿色印染+国企背景"
+      ],
+      "risk_flags": [
+        "国企背景不是央企红利证据",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "28a9752625a6abb7ef3b968df18a37ed6eaa486f5e39e3a8f9039bbd8ed14c54",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.5,
+      "summary": "澳弘电子的服务器电源提供通信算力硬件配套线索。",
+      "evidence": [
+        "澳弘电子 | PCB+HDI板+服务器电源"
+      ],
+      "risk_flags": [
+        "PCB及HDI并非芯片，不扩散至半导体ETF",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "ec8e1612eaa000f7d0083a94f1ff9a729dde0d0a417b55980575988f331c7e9f",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.55,
+      "summary": "南华生物的生物医药、细胞医疗与扭亏归因具有直接联系。",
+      "evidence": [
+        "南华生物 | 生物医药+细胞医疗+资源再生+中报扭亏"
+      ],
+      "risk_flags": [
+        "个股扭亏幅度与持续性未披露",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "126a7224fc0ee3c298603715ce962140b0158994262376818a77f7e7892d3d80",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "山子高科为重整关联和汽配业务线索。",
+      "evidence": [
+        "山子高科 | 哪吒重整关联+整车业务+汽车零部件"
+      ],
+      "risk_flags": [
+        "不能将整车业务自行认定为新能源车",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "fed5e2d61554aeee9ae41684c79473d638398ccfd79e7b84807834b91a8ca438",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.5,
+      "summary": "百花医药名称及CRO、复杂制剂业务构成医药线索。",
+      "evidence": [
+        "百花医药 | CRO+复杂制剂+MAH业务"
+      ],
+      "risk_flags": [
+        "未披露订单或临床重大进展",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "419cc1d04e701a1c86223df29ce8ff2b62acd8a3dd3eebc0b2bf2bc066069ccd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.4,
+      "summary": "安凯客车为新能源客车及智能驾驶线索。",
+      "evidence": [
+        "安凯客车 | 新能源客车+客车销量+智能驾驶"
+      ],
+      "risk_flags": [
+        "不把新能源客车仅凭新能源字样映射光伏；未命中新能源车专属词",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "45b0334a6e87430e58eaa0bf2673255404fb30c27b704e988d5a4e916554bdf6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.4,
+      "summary": "新宏泽为烟标印刷及员工持股，不构成池内直接主题。",
+      "evidence": [
+        "新宏泽 | 烟标印刷+员工持股+多元化布局"
+      ],
+      "risk_flags": [
+        "员工持股不能推定行业改善",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "4a0dd35755ca51586b106b5b25982bbd53f55662dc9db2c542fa5672a4c2cbb5",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.5,
+      "summary": "三峡新材的电子和汽车玻璃构成玻璃建材主题线索。",
+      "evidence": [
+        "三峡新材 | 电子玻璃+汽车玻璃+硅砂矿"
+      ],
+      "risk_flags": [
+        "汽车玻璃景气不能代表所有建材",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "016a8eb8f75371ebf472f1747c27db0d9ebc3140f120ede5c550d164bd1357e1",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.62,
+      "novelty": 0.5,
+      "summary": "中岩大地的核电工程是核电建设配套线索。",
+      "evidence": [
+        "中岩大地 | PCB刀具+核电工程+岩土固化"
+      ],
+      "risk_flags": [
+        "工程配套不是发电运营，外推电力ETF强度有限",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "ac7c96d02766c4215e3ca7da0eeff3659c243fb011f356f3e36e5c22c9f12517",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.55,
+      "summary": "沃顿科技的半导体超纯水膜和满产归因提供材料配套线索。",
+      "evidence": [
+        "沃顿科技 | 半导体超纯水膜+膜分离+产能满产+盐湖提锂"
+      ],
+      "risk_flags": [
+        "配套材料不是芯片主体，满产范围不明",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2583157454da1b63b7f713a45b20786ac15aa4de9cd9243b629015262a892e19",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "科森科技归因为机器人结构件及精密制造。",
+      "evidence": [
+        "科森科技 | 机器人结构件+苹果供应链+精密制造"
+      ],
+      "risk_flags": [
+        "苹果供应链不自动证明消费电子关键词或机器人量产",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f792413f6e3545cc2a79fba943cbae6bdf8ec654d0354806d0f00f37f090785b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.87,
+      "novelty": 0.4,
+      "summary": "积成电子为智能电网和配电线索，但本行未命中电网设备专属词。",
+      "evidence": [
+        "积成电子 | 智能电网+智能配电+V2G"
+      ],
+      "risk_flags": [
+        "保留电网主题背景，不用类别自动映射ETF",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "56d1fa89347d3c46665c0bf77bafce0d9b9e81f1e193060ba043840dd3c61cdd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.86,
+      "novelty": 0.45,
+      "summary": "金石亚药涉及呼吸用药、集采及增长，本行无医药ETF专属词。",
+      "evidence": [
+        "金石亚药 | 呼吸用药+集采放量+皮肤科学+业绩增长"
+      ],
+      "risk_flags": [
+        "不得把其他来源化学制药标签借入本行",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "301040cc30fb4e351ce0fef6afe4d1428b344d56d545bd7c08394e534df0f525",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.69,
+      "novelty": 0.5,
+      "summary": "世联行的房地产服务形成直接地产线索。",
+      "evidence": [
+        "世联行 | 房地产服务+大资管+珠海国资"
+      ],
+      "risk_flags": [
+        "地方国资及资管题材不能确认地产基本面反转",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "5e30fc7a9624da544001b0462b816f1d6bcc51035aa2515b80c731a6fe76401a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "华瓷股份的氧化锆粉体和MLCC验证不具池内直接关键词。",
+      "evidence": [
+        "华瓷股份 | 氧化锆粉体+MLCC验证+越南基地"
+      ],
+      "risk_flags": [
+        "MLCC不是半导体，验证未等同量产",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "89d301b5cc23056a487b0e7188ec7a8765dcdcde1993fbe306d015030206aa88",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.6,
+      "summary": "经纬股份的电力服务伴随复牌与控制权转让。",
+      "evidence": [
+        "经纬股份 | 复牌+控制权变更+溢价转让+电力服务"
+      ],
+      "risk_flags": [
+        "上涨归因可能主要为股权事件，不代表全电力板块",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "e61575b7a25378fd0daf8d80992294eaed6b26bfec6284ee024279d627334581",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.75,
+      "novelty": 0.6,
+      "summary": "中晶科技的半导体硅片与订单充足构成直接正向线索。",
+      "evidence": [
+        "中晶科技 | 半导体硅片+订单充足+股权激励"
+      ],
+      "risk_flags": [
+        "订单金额及期限未披露，激励不保证增长",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0120bc6e88720f8081158f3ef5134d2876cc9de28393e8458212f57e6f48d495",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "内蒙新华的出版发行与教育服务为出版传媒线索。",
+      "evidence": [
+        "内蒙新华 | 出版发行+教育服务+文化消费"
+      ],
+      "risk_flags": [
+        "文化消费不等于消费ETF整体改善",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0a8758cf8a10ad9ded20a3679b8fdc12d8fcc07e983af284897d9867b1accca1",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "中晶科技半导体分类涨约9.99%，提供价格强势佐证。",
+      "evidence": [
+        "中晶科技 | 半导体"
+      ],
+      "risk_flags": [
+        "同公司跨源事件只计一次；涨停不保证持续",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f0f74c59a5f2f9df6b0665f973267a0ea6c790fd53fceed5c5969180289ce234",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "经纬股份涨20%，但工程咨询标签不能直接映射池内ETF。",
+      "evidence": [
+        "经纬股份 | 工程咨询"
+      ],
+      "risk_flags": [
+        "不能借入其他来源电力主题；小成交额不等于行业热度",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "b9f3eea416700437500e4f3b4906c2cc7d92602933c5c59ef3b4580be29870ea",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.35,
+      "summary": "内蒙新华出版分类涨约9.96%，短期表现强势。",
+      "evidence": [
+        "内蒙新华 | 出版"
+      ],
+      "risk_flags": [
+        "与题材归因跨源重复；个股不能代表全传媒",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0cb6bc2d38aac1018a0fb64a715c95848a58f579d4c87560993353193c75e301",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.35,
+      "summary": "世联行房地产服务分类涨约10.04%。",
+      "evidence": [
+        "世联行 | 房地产服"
+      ],
+      "risk_flags": [
+        "跨源同事件去重；单股上涨不能确认行业反转",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "ae3419c99709ac1533751b80a0129e21f76cf773c3808a944a404572fcf44d1d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.91,
+      "novelty": 0.3,
+      "summary": "华瓷股份家居用品分类涨约10.02%，没有直接池内映射。",
+      "evidence": [
+        "华瓷股份 | 家居用品"
+      ],
+      "risk_flags": [
+        "家居用品不等于家电或智能家居",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "6844653b1dda19cfe789d0964dc9146136999ae688e51b2864363db1e9119ab9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "澳弘电子元件分类涨约9.99%，本行没有服务器或半导体证据。",
+      "evidence": [
+        "澳弘电子 | 元件"
+      ],
+      "risk_flags": [
+        "不能借用另一来源业务归因",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "41683bdc9466ffbf1eb2c5f876b1d0a486fd66f6e4ce86dad669f1889aed939f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.79,
+      "novelty": 0.4,
+      "summary": "金石亚药化学制药分类涨约19.98%，显示医药个股强势。",
+      "evidence": [
+        "金石亚药 | 化学制药"
+      ],
+      "risk_flags": [
+        "不因20%涨幅直接给强趋势结论；与同公司事件去重",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "1cd643b70844c64519f171508a87fd34774cb82dadac6a39bfea869df016b1df",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.79,
+      "novelty": 0.4,
+      "summary": "积成电子电网设备分类涨约10.03%，直接支持电网设备主题。",
+      "evidence": [
+        "积成电子 | 电网设备"
+      ],
+      "risk_flags": [
+        "与同公司归因去重；个股不能代表全板块",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2fc93169d60897aaddb140bba9763c1b73e6c5f8a6db4b568acb88360f12b3ca",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.35,
+      "summary": "科森科技消费电子分类涨约10.03%，为消费电子线索。",
+      "evidence": [
+        "科森科技 | 消费电子"
+      ],
+      "risk_flags": [
+        "只按本行消费电子映射，不能借入机器人归因",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2c1002c4360b890ec964fb144b1ff0b5c96a4bcd1f3ae5c2757c7d7a6aeea75c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "沃顿科技塑料分类涨约10.02%，本行无直接ETF专属词。",
+      "evidence": [
+        "沃顿科技 | 塑料"
+      ],
+      "risk_flags": [
+        "不把塑料自行改写化工或半导体",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "fb7c1c15bf1ee12fd2fe49fe00166a738cfa23f0d8f3ab346b02ff21ad8675bf",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.89,
+      "novelty": 0.3,
+      "summary": "中岩大地专业工程分类涨约10.02%，缺乏直接ETF映射。",
+      "evidence": [
+        "中岩大地 | 专业工程"
+      ],
+      "risk_flags": [
+        "不借入其他来源核电信息",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "b6e3317234ad7316d79f2f0a7bcabdebb521e428a158bae49a58a85a748d17e3",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "三峡新材玻璃玻纤分类涨约10.03%，玻璃主题强势。",
+      "evidence": [
+        "三峡新材 | 玻璃玻纤"
+      ],
+      "risk_flags": [
+        "跨源重复需去重，不能外推所有建材",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "a618abeaa6f43ed947234213e29a763452cf34a2a48510ac376421f212d6be65",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.35,
+      "summary": "百花医药医疗服务分类涨约10.01%，医药医疗方向强势。",
+      "evidence": [
+        "百花医药 | 医疗服务"
+      ],
+      "risk_flags": [
+        "同公司跨源重复；没有临床或订单新事实",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "378f1691451a268b34787e05e0b12f592f0790a2a16f551e5e5daa64ee13df80",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "新宏泽包装印刷分类涨约10.05%，没有直接池内映射。",
+      "evidence": [
+        "新宏泽 | 包装印刷"
+      ],
+      "risk_flags": [
+        "包装印刷不等于出版传媒",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "329bfd56bde0a07b86135a7b72a21a9a13537d00fb1daa454025010cf100d270",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "安凯客车商用车分类涨约10.03%，不足以映射具体池内主题。",
+      "evidence": [
+        "安凯客车 | 商用车"
+      ],
+      "risk_flags": [
+        "商用车不自动等于新能源车",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "d6f458c3f89b089c837c49d5870aeb25a0932f494db1d4f0305c4cba6c9b13c0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "山子高科汽车零部分类涨约9.85%，无直接ETF关键词。",
+      "evidence": [
+        "山子高科 | 汽车零部"
+      ],
+      "risk_flags": [
+        "不将汽配普遍映射机器人或电池",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "cc432a2c4802e1358f73c3f685371dbe2ab2e5522656814951e7c70c1b617d5d",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.35,
+      "summary": "南华生物医疗服务分类涨约10.04%，形成医疗直接线索。",
+      "evidence": [
+        "南华生物 | 医疗服务"
+      ],
+      "risk_flags": [
+        "本行不能借入另一来源生物医药词；同事件去重",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "23017e63883fd263b44a54a61f2bc7f6bc271b8e298f83b78fa78152c2119ae2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "华纺股份纺织制造涨约9.90%，无直接池内ETF映射。",
+      "evidence": [
+        "华纺股份 | 纺织制造"
+      ],
+      "risk_flags": [
+        "不将纺织制造扩大为全消费",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0711d75064a13558cfbdd9d5e5e454e91989df950719dd70fd97856c6ef56e1a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "世嘉科技通信设备分类涨约10.01%，通信表现强势。",
+      "evidence": [
+        "世嘉科技 | 通信设备"
+      ],
+      "risk_flags": [
+        "跨源重复需去重；没有DDE资金佐证",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "02935f1386c71665eb28f3acb3baa8103a93d585ac6f17a1b17a7f5feb8d9f4b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "上海物贸汽车服务分类涨约9.96%，本行无有色直接证据。",
+      "evidence": [
+        "上海物贸 | 汽车服务"
+      ],
+      "risk_flags": [
+        "不把其他来源有色交易归因带入",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "38a001a2bfda90464c29f46c5709bbf0919acfc4a70d75e875184cbf8135e34a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.91,
+      "novelty": 0.3,
+      "summary": "金健米业农产品加工分类涨约9.97%，未见豆粕或大豆证据。",
+      "evidence": [
+        "金健米业 | 农产品加"
+      ],
+      "risk_flags": [
+        "泛农产品不是豆粕直接线索",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "52fa087433517862e10fcaf12371f01f7f4df3ff17ddf91fa5414209866dfee0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "北特科技汽车零部分类涨约10.01%，无本行机器人证据。",
+      "evidence": [
+        "北特科技 | 汽车零部"
+      ],
+      "risk_flags": [
+        "不能跨行借用人形机器人题材",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2017c38afb1136ef6c02e4bbddfd73955a36835a695226b71b4c5f3289131513",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.92,
+      "novelty": 0.3,
+      "summary": "敦煌种业种植业分类涨约10.05%，不构成豆粕直接证据。",
+      "evidence": [
+        "敦煌种业 | 种植业"
+      ],
+      "risk_flags": [
+        "种植业不等同大豆或饲料",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f8ae075b0a0a7b0be975d6545dd540fc5ba82d2e00bf9d50bc7135c69faf2095",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.76,
+      "novelty": 0.35,
+      "summary": "共达电声消费电子分类涨约10.01%，为消费电子强势线索。",
+      "evidence": [
+        "共达电声 | 消费电子"
+      ],
+      "risk_flags": [
+        "本行未含芯片或算力，不借入另一来源主题",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "470391f52bc6690cefd40afcd44acf8492f9c6ac617e70a94975edaaad851ff8",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "大连圣亚旅游分类涨约10.01%，为旅游板块个股强势佐证。",
+      "evidence": [
+        "大连圣亚 | 旅游及景"
+      ],
+      "risk_flags": [
+        "跨源同事件去重，个股扭亏不能泛化行业",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0e3c1771e0c922096e3f427728273c516e843d68d0557f64f7735c3bc170f88a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "天海电子汽车零部分类涨10%，无具体池内主题证据。",
+      "evidence": [
+        "天海电子 | 汽车零部"
+      ],
+      "risk_flags": [
+        "连接器相关信息未出现在本行",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "abe00464cfaebd2bf6d1b80a1e2b3c829c9d85b871843413d21b84347e990d83",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "凯迪股份自动化分类涨约9.99%，直接支持自动化主题。",
+      "evidence": [
+        "凯迪股份 | 自动化设"
+      ],
+      "risk_flags": [
+        "与同公司机器人归因去重，不重复累计热度",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "801540df90e7a4011b5b32749e18732aaf8474293b2a8ab9c94213df1b3b69e1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "龙头股份服装家纺分类涨约10.07%，没有直接池内映射。",
+      "evidence": [
+        "龙头股份 | 服装家纺"
+      ],
+      "risk_flags": [
+        "服装家纺不等同家电或智能家居",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "a6c3aff5ca121128144724dd1e2d2169079c9f143f2e73efe8d60c5edb92cdd2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "众泰汽车汽车零部分类涨约10.23%，无直接ETF专属词。",
+      "evidence": [
+        "众泰汽车 | 汽车零部"
+      ],
+      "risk_flags": [
+        "涨幅强势也不能替代主题证据",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "330db3586867340efc4a8101495df03221080a3c5d3c9ef6d8884f04682e9d52",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "金杯汽车汽车零部分类涨约10.15%，本行不能映射电池ETF。",
+      "evidence": [
+        "金杯汽车 | 汽车零部"
+      ],
+      "risk_flags": [
+        "不按客户名或其他来源推导主题",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "c43d27e23c65659567730be45d24d79c2d64e1794a16dad6d794c4e56d8a1367",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "冠盛股份汽车零部分类涨约10.01%，本行无机器人或电池词。",
+      "evidence": [
+        "冠盛股份 | 汽车零部"
+      ],
+      "risk_flags": [
+        "与其他来源保持独立证据审查",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "cb96bcc66bd8a56ed901044f2e672dc3225215245212ae8f97041e42517346c9",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.73,
+      "novelty": 0.4,
+      "summary": "华英农业养殖业分类涨约10.10%，提供养殖端的短期强势线索。",
+      "evidence": [
+        "华英农业 | 养殖业"
+      ],
+      "risk_flags": [
+        "仅为下游养殖证据，不代表豆粕价格利多或新增饲料需求已证实",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "7a04e3286a895de99d2cf6def105aaefbbc3b76c79a08aca1f26d48f113da892",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲"
+      ],
+      "matched_symbols": [
+        "513130.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.62,
+      "novelty": 0.35,
+      "summary": "跨境通互联网电商分类涨约9.91%，有互联网直接主题关联。",
+      "evidence": [
+        "跨境通 | 互联网电"
+      ],
+      "risk_flags": [
+        "A股电商不是港股指数成分代表，跨市场外推有限",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "43f0e403e7424fb48d978bf2090901a6bdd30389b1b1e4c79b57424209a4dbaa",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.92,
+      "novelty": 0.3,
+      "summary": "万向德农种植业分类涨约9.99%，不能作为豆粕直接证据。",
+      "evidence": [
+        "万向德农 | 种植业"
+      ],
+      "risk_flags": [
+        "本行没有大豆、豆粕或饲料词",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "35bd30b6b46e9069d76cb98ceeb980b76f169fab81b05010074a1bf84f4c6784",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.92,
+      "novelty": 0.3,
+      "summary": "招商轮船航运港口分类涨约10.02%，池内无直接航运标的。",
+      "evidence": [
+        "招商轮船 | 航运港口"
+      ],
+      "risk_flags": [
+        "不将油运或航运走势映射石油价格",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "eb0d77df0e0fcf6b40f20cf5417a2f1ed6e01cd5596a1608a2efce9d19ebac42",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.89,
+      "novelty": 0.3,
+      "summary": "雪天盐业化学原料分类涨10%，未直接命中化工专属词。",
+      "evidence": [
+        "雪天盐业 | 化学原料"
+      ],
+      "risk_flags": [
+        "不能借入另一来源锂电与盐化工标签",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "5a71c3f2146c3e43333104d5d6227b984bc4dd135ab45f76153d6e3c4b82c937",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.89,
+      "novelty": 0.3,
+      "summary": "华宝股份化学制品分类涨约20.01%，无直接ETF关键词。",
+      "evidence": [
+        "华宝股份 | 化学制品"
+      ],
+      "risk_flags": [
+        "涨幅大小不能替代主题映射证据",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "9d18f41359cc3df06b417f902ef40324f911f7928ba9895ccff206844a7c743f",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "先导基电半导体分类涨约10.01%，提供半导体强势佐证。",
+      "evidence": [
+        "先导基电 | 半导体"
+      ],
+      "risk_flags": [
+        "与同公司材料归因去重；不可推断整个行业涨幅",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "76fd31160428be35b259862fa9b2d88547ac502d252a90e313807aacbe4ae5e4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.89,
+      "novelty": 0.3,
+      "summary": "华软科技化学制品分类涨约9.98%，无直接池内专属词。",
+      "evidence": [
+        "华软科技 | 化学制品"
+      ],
+      "risk_flags": [
+        "不把化学制品自动替换为化工标签",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "22e46312e1f48b0b201618d1a98e044b07d123679f27e3b387160a2e944f9365",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "均胜电子汽车零部分类涨约10.02%，本行无机器人或通信词。",
+      "evidence": [
+        "均胜电子 | 汽车零部"
+      ],
+      "risk_flags": [
+        "不借入其他来源题材",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "0898ae9924222815d111f5a6961f3d409109a3dab3a9efeac541f330eced0af5",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.35,
+      "summary": "新中港电力分类涨约10.01%，电力个股短期强势。",
+      "evidence": [
+        "新中港 | 电力"
+      ],
+      "risk_flags": [
+        "与公司另一来源归因同事件去重，不能扩散储能",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "7a91b2e881d5193b92bd7b6106e876eda3fcdff94cb3e13302a286ce4053c90f",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "云煤能源焦炭分类涨约10.10%，支持焦炭链个股热度。",
+      "evidence": [
+        "云煤能源 | 焦炭Ⅱ"
+      ],
+      "risk_flags": [
+        "跨源事件只计一次，不能确认焦炭现货涨价",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f3606d1b678b6ac69cf8967ccaa65e9477ed2b82e5dd1c289ef107955b513f3f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "恒丰纸业造纸分类涨约10.04%，没有直接池内映射。",
+      "evidence": [
+        "恒丰纸业 | 造纸"
+      ],
+      "risk_flags": [
+        "造纸不是出版传媒或基础化工的直接词",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "bed5bc5072a30a1e337193181cb824a43367966e0e62175c009e3cc4b790f080",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "吉鑫科技风电设备分类涨约9.96%，为风电强势佐证。",
+      "evidence": [
+        "吉鑫科技 | 风电设备"
+      ],
+      "risk_flags": [
+        "同公司归因与涨停不能重复算两家",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "081fc24bd3467dc9e1459768a0794cdfbf4be6b0a11d9ca8f308b0c657909967",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.78,
+      "novelty": 0.35,
+      "summary": "锡华科技风电设备分类涨约10.00%，风电短期表现强。",
+      "evidence": [
+        "锡华科技 | 风电设备"
+      ],
+      "risk_flags": [
+        "跨源同事件去重，不能推断全新能源收益",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "d73608d14323acb0b402fb621ebf8370e1bf3113e8f7ec380c6ccf8bc8d3eb8a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.3,
+      "summary": "克来机电汽车零部分类涨约10.03%，本行未含机器人词。",
+      "evidence": [
+        "克来机电 | 汽车零部"
+      ],
+      "risk_flags": [
+        "不跨来源借用工业机器人业务证据",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "304737d53ea575e47f2dee177718ac718ad690d343dbb5c233a9a5196685c3d0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.77,
+      "novelty": 0.35,
+      "summary": "龙版传媒名称及出版分类对应传媒，涨约9.97%。",
+      "evidence": [
+        "龙版传媒 | 出版"
+      ],
+      "risk_flags": [
+        "本行没有AI词，不将另一行AI漫剧扩散过来",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "9e09bfedf737a9c432ed46ef833350b98af2b9144d7067722234160107160f24",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "159647.SZ"
+      ],
+      "direction": -1,
+      "horizon": "intraday",
+      "confidence": 0.8,
+      "novelty": 0.55,
+      "summary": "康惠股份中药分类冲板后跌约2.93%，显示中药个股明显分歧。",
+      "evidence": [
+        "康惠股份 | 中药Ⅱ"
+      ],
+      "risk_flags": [
+        "炸板转跌是个股风险，不等于整个中药趋势转坏",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "bf9c2ac6de4f464a6c96b95017fe1c86e4bfefefd44ed2c10203134954c4d01a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.45,
+      "summary": "上海亚虹专用设备冲板后跌约3.33%，但缺少池内直接映射。",
+      "evidence": [
+        "上海亚虹 | 专用设备"
+      ],
+      "risk_flags": [
+        "保留市场分歧事实，不自行推导机器人主题",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "fd69aaf2755eff1aafcedd415cd6610f1da5ead1ee448959de459ec401192469",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "中材科技玻璃玻纤仍涨约5.03%，但冲板未封住。",
+      "evidence": [
+        "中材科技 | 玻璃玻纤"
+      ],
+      "risk_flags": [
+        "炸板回落说明追涨分歧，成交额大不等于净流入",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "1ca8ba98fd592c1145dad0a0df8e7336e37fff1e3cca98cc0c4d351ae5148fa4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.89,
+      "novelty": 0.4,
+      "summary": "黑猫股份橡胶冲板后跌约0.99%，无直接ETF关键词。",
+      "evidence": [
+        "黑猫股份 | 橡胶"
+      ],
+      "risk_flags": [
+        "不能将橡胶自动改写能源化工或石油",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "f63c1e82b3ff842cb579836f7e59c1a2b46b42814edc76af1f696ef5cd8f75aa",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "潍柴重机通用设备涨约2.46%且炸板，没有直接ETF主题证据。",
+      "evidence": [
+        "潍柴重机 | 通用设备"
+      ],
+      "risk_flags": [
+        "通用设备不等于工程机械ETF",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "71521db90a417a01ddb823a9659bba76360837de15124d5b1c3d2d66c6f74d03",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.89,
+      "novelty": 0.45,
+      "summary": "西陇科学电子化学冲板后微跌约0.31%，本行无直接ETF关键词。",
+      "evidence": [
+        "西陇科学 | 电子化学"
+      ],
+      "risk_flags": [
+        "电子化学不能自动改写半导体或化工",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "22a60416fa12dd5f998ad256b9f383955ffd848044f0fdb5622b3417cf1734f6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.4,
+      "summary": "洪兴股份服装家纺冲板后仅涨约0.16%，无直接池内映射。",
+      "evidence": [
+        "洪兴股份 | 服装家纺"
+      ],
+      "risk_flags": [
+        "家纺不等于家电，冲板不等于持续强势",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "82378efba106cf90b486bc266044921f1b49c5243d256602f57c796fcf5c849f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "实益达光学光电涨约4.27%但炸板，本行不能直接映射通信或芯片。",
+      "evidence": [
+        "实益达 | 光学光电"
+      ],
+      "risk_flags": [
+        "光学光电不等于光通信",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "61da283b208a77f39efe2f50e9b1c71119f38bb3cca94d4c71e0bbab213a8132",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "联域股份照明设备涨约8.37%且未封板，没有直接池内映射。",
+      "evidence": [
+        "联域股份 | 照明设备"
+      ],
+      "risk_flags": [
+        "照明设备不自动等于家电或电网设备",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "4ebbdcfe8e55b65cd18f5ab8fcdb06992cd8c5f24602c1d166fec6e07692fae5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "沃格光电光学光电涨约2.59%且炸板，无直接ETF专属词。",
+      "evidence": [
+        "沃格光电 | 光学光电"
+      ],
+      "risk_flags": [
+        "不能补写半导体封装或消费电子业务",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "e3ad05bc6166f0c4698d3f3f32f4eff87a8b717f73ccbb640eaf4065138e48ae",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.66,
+      "novelty": 0.5,
+      "summary": "北玻股份玻璃玻纤涨约6.02%，玻璃个股仍强但存在炸板。",
+      "evidence": [
+        "北玻股份 | 玻璃玻纤"
+      ],
+      "risk_flags": [
+        "冲板未封不视为无分歧热度，不能外推全建材",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "5aac42117b8b5417b903189617d0a875b552528fb1b7c68db79a8b1f7af4d12f",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.63,
+      "novelty": 0.5,
+      "summary": "神奇制药化学制药涨约4.15%，但炸板显示分歧。",
+      "evidence": [
+        "神奇制药 | 化学制药"
+      ],
+      "risk_flags": [
+        "只有个股价格线索，没有药品获批新事实",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "d4fdc680e6a731374cd7a5fbc580737d279e444dbd917d994a199935a9742c6a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.68,
+      "novelty": 0.5,
+      "summary": "中视传媒影视院线涨约7.64%，仍偏强但冲板回落。",
+      "evidence": [
+        "中视传媒 | 影视院线"
+      ],
+      "risk_flags": [
+        "影视个股波动不等于内容产业长期改善",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "10d6c814e6e4d0031b987a0aa96832c3fd356765d360cc9cfe81170c382d3621",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "和达科技软件开发涨约9.83%且炸板，本行无AI或金融科技专属词。",
+      "evidence": [
+        "和达科技 | 软件开发"
+      ],
+      "risk_flags": [
+        "软件开发不自动映射人工智能",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "ac45644f5ed0c24b5128f98bdb1476af519286fac54532eaaa2a14f46af3fca8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.89,
+      "novelty": 0.4,
+      "summary": "近岸蛋白生物制品涨18.75%且炸板，但未命中医药专属词。",
+      "evidence": [
+        "近岸蛋白 | 生物制品"
+      ],
+      "risk_flags": [
+        "不能把生物制品标签自行替换生物医药",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2ada871b2aec0d0bd1e601c1692d54c623b2be1b5429bc1af5a27f72122e0e33",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.4,
+      "summary": "模塑科技汽车零部涨约6.83%但炸板，无直接ETF映射。",
+      "evidence": [
+        "模塑科技 | 汽车零部"
+      ],
+      "risk_flags": [
+        "不将汽配泛化为机器人",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2ed7f4ef6b18ebee59a8755576ee5e1f0fdfc6e01b7ea5b1fda8008623be3b94",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.4,
+      "summary": "海马汽车乘用车涨约7.92%但炸板，没有直接新能源车证据。",
+      "evidence": [
+        "海马汽车 | 乘用车"
+      ],
+      "risk_flags": [
+        "乘用车不等于新能源车",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2583b38dc182cf362b45596e112f54a28e4e198593d35b3f0a9c466e940a2183",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.4,
+      "summary": "天汽模汽车零部涨约6.64%但炸板，本行无具体池内主题词。",
+      "evidence": [
+        "天汽模 | 汽车零部"
+      ],
+      "risk_flags": [
+        "不借行业常识补写电池或机器人",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "1b36f86c6a0577c060a89138fb406ed9842239292ee603721d0a743f1c69b289",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "intraday",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "和胜股份工业金属涨约5.66%，但炸板显示金属个股分歧。",
+      "evidence": [
+        "和胜股份 | 工业金属"
+      ],
+      "risk_flags": [
+        "公司加工业务不代表上游金属价格，成交不等于资金净流入",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "c3cf677e63d74df16af51ee5831fad3e515f58082e5d29ab840882de3da688e4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.88,
+      "novelty": 0.4,
+      "summary": "华东数控通用设备涨约5.20%但炸板，未见工程机械直接词。",
+      "evidence": [
+        "华东数控 | 通用设备"
+      ],
+      "risk_flags": [
+        "数控及通用设备不能自动映射工程机械",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    },
+    {
+      "source_hash": "2603d11120d8336a36f4c076ec550320bf5502c97b0cb56eb860b386db6ea3f2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.9,
+      "novelty": 0.5,
+      "summary": "海南发展装修装饰跌约9.97%，属于明确个股弱势但无直接ETF映射。",
+      "evidence": [
+        "海南发展 | 装修装饰"
+      ],
+      "risk_flags": [
+        "不将装修装饰自动替换建筑或地产，市场跌停事实仍保留",
+        "DDE缺失，不能确认正向大单资金；个股线索不是ETF收益预测"
+      ]
+    }
+  ]
+}

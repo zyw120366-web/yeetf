@@ -1,7 +1,7 @@
 {
   "card_type": "ye_live_run_card",
   "strategy": {
-    "id": "YE-FORMAL-2026-07-19",
+    "id": "YE-FORMAL-2026-07-22",
     "name": "ye 策略",
     "status": "frozen_for_live",
     "rule_source": "config/ye_strategy.yaml",
@@ -10,7 +10,7 @@
   },
   "signal_date": "2026-07-22",
   "execute": "下一交易日开盘",
-  "created_at_utc": "2026-07-22T07:24:24.905024+00:00",
+  "created_at_utc": "2026-07-22T11:24:55.968988+00:00",
   "decision": {
     "current_symbol": "512010.SH",
     "target_symbol": "512010.SH",
@@ -88,7 +88,11 @@
     "status": "complete",
     "coverage": 1.0,
     "reviewed_count": 138,
-    "input_count": 138
+    "input_count": 138,
+    "prompt_version": "ye-codex-chat-review-2026-07-18",
+    "review_metadata": null,
+    "review_protocol": null,
+    "protocol_status": "legacy_pre_policy"
   },
   "release": {
     "readiness": "READY",
@@ -97,14 +101,14 @@
   },
   "audit": {
     "run_manifest": "results/audit/2026-07-22_run_manifest.json",
-    "run_manifest_sha256": "bef8dc7a57439b644015ef9bf975db02ca07eb3753a7309a62224663d1a27d72",
-    "critical_file_count": 20,
+    "run_manifest_sha256": "d55f115741a0bb75f1ab11d5779ed60bfa612b7259ef44c7fc5be849341c45ae",
+    "critical_file_count": 21,
     "source_file_count": 20,
     "price_file_count": 56
   },
   "execution_reconciliation": {
     "status": "not_required",
-    "actual_fill_template": "results/live/2026-07-22_actual_fills.template.json",
+    "actual_fill_template": null,
     "reconciliation_output": "results/audit/2026-07-22_execution_reconciliation.json"
   }
 }
