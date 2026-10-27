@@ -11,8 +11,8 @@
     "execution_source": "scripts/run_after_close.py",
     "daily_mode": "收盘后生成、下一交易日开盘执行"
   },
-  "created_at_utc": "2026-10-27T07:02:52.611706+00:00",
-  "execute": null,
+  "created_at_utc": "2026-10-27T07:08:16.028007+00:00",
+  "execute": "下一交易日开盘",
   "account_state": {
     "account_type": "live",
     "as_of": "2026-09-11_close",
@@ -86,7 +86,16 @@
     "current_symbol": "159985.SZ",
     "target_symbol": null,
     "backtest_shadow_target_symbol": null,
-    "actions": [],
+    "actions": [
+      {
+        "side": "sell",
+        "symbol": "159985.SZ",
+        "target_weight": 0.0,
+        "reasons": [
+          "跌破MA120（硬退出）"
+        ]
+      }
+    ],
     "cost": null
   },
   "decision_basis": {},
@@ -103,22 +112,22 @@
   },
   "daily_report": "results/live/2026-10-27_daily_report.json",
   "release": {
-    "readiness": "BLOCKED",
+    "readiness": "SELL_ONLY",
     "blocking_items": [
-      "真实成交已记录；新增入金、余款及费用待核，不能核定账户权益与可用资金。"
+      "现金、入金及费用待核，仅禁止买入；真实持仓与风险退出已独立核验，允许卖出"
     ],
     "plan_is_not_fill": true
   },
   "audit": {
     "run_manifest": "results/audit/2026-10-27_run_manifest.json",
-    "run_manifest_sha256": "576466c0785eb3c411eca822b5f9fa08669a9890294a4e91c65cf6209e075cd2",
+    "run_manifest_sha256": "ee6ff5d9553d25a39fc26598df69fe3854e6b85a3b537796c39f08b4edb6352f",
     "critical_file_count": 5,
     "source_file_count": 0,
     "price_file_count": 59
   },
   "execution_reconciliation": {
-    "status": "not_required",
-    "actual_fill_template": null,
+    "status": "pending_next_open",
+    "actual_fill_template": "results/live/2026-10-27_actual_fills.template.json",
     "reconciliation_output": "results/audit/2026-10-27_execution_reconciliation.json"
   }
 }

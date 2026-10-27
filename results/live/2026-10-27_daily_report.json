@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "signal_date": "2026-10-27",
-  "status": "BLOCKED",
+  "status": "SELL_ONLY",
   "blocking_items": [
-    "真实成交已记录；新增入金、余款及费用待核，不能核定账户权益与可用资金。"
+    "现金、入金及费用待核，仅禁止买入；真实持仓与风险退出已独立核验，允许卖出"
   ],
   "account": {
     "account_type": "live",
@@ -2478,10 +2478,10 @@
       "enabled": true,
       "candidate_symbol": "512800.SH",
       "qualifies_today": true,
-      "confirmation_streak": 1,
+      "confirmation_streak": 4,
       "required_confirmation_days": 2,
-      "triggered": false,
-      "status": "counting",
+      "triggered": true,
+      "status": "triggered",
       "live_baseline_on": "2026-07-29",
       "live_confirmation_starts_on": "2026-07-30",
       "holding_symbol": "159985.SZ",
@@ -2530,8 +2530,28 @@
     "dde_available": false
   },
   "backtest_as_of": "2026-09-10",
-  "orders": [],
-  "actions": [],
+  "orders": [
+    {
+      "side": "sell",
+      "symbol": "159985.SZ",
+      "target_weight": 0.0,
+      "reasons": [
+        "跌破MA120（硬退出）"
+      ],
+      "confirmed_quantity": 6500.0,
+      "instruction": "仅卖出已核对的现有持仓，卖出后保持现金；禁止买入或借券卖空"
+    }
+  ],
+  "actions": [
+    {
+      "side": "sell",
+      "symbol": "159985.SZ",
+      "target_weight": 0.0,
+      "reasons": [
+        "跌破MA120（硬退出）"
+      ]
+    }
+  ],
   "price_risk_check": [
     "159985.SZ：跌破MA120，触发价格硬退出",
     "159985.SZ：ROC20转负，触发软退出价格条件",
@@ -2543,6 +2563,6 @@
     "market_data/sentiment/ai_review/2026-10-27.json"
   ],
   "target_symbol": null,
-  "target_is_executable": false,
+  "target_is_executable": true,
   "cash_management_status": "以券商回单为准；未核验不阻断ETF日报"
 }

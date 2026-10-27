@@ -144,6 +144,55 @@ def test_sell_only_authorized_advance_liquidates_without_new_position(tmp_path, 
     assert json.loads(advance_script.ACCOUNT.read_text()) == after
 
 
+def pending_cash_state(state):
+    state["confirmation_status"] = "pending"
+    state["cash_reconciliation"] = {"status": "pending"}
+    state["available_cash"] = state["total_equity"] = None
+    p = state["positions"][0]
+    state["as_of"] = p["opened_on"] + "_close"
+    state["actual_execution"] = {"execution_date": p["opened_on"], "fills": [
+        {"side": "buy", "symbol": p["symbol"], "quantity": p["quantity"], "price": p["average_cost"]}]}
+    return state
+
+
+def test_cash_gap_releases_confirmed_shares_without_inventing_cash(risk_env):
+    root, panel, state = risk_env
+    hard_exit(panel)
+    pending_cash_state(state)
+    atomic_json(root / "results/live/account_state.json", state)
+    assert risk_release.publish_sell_only(root, DATE, "资金待核")
+    report = json.loads((root / f"results/live/{DATE}_daily_report.json").read_text())
+    assert report["status"] == "SELL_ONLY"
+    assert report["target_symbol"] is None
+    assert [o["side"] for o in report["orders"]] == ["sell"]
+    assert report["orders"][0]["confirmed_quantity"] == state["positions"][0]["quantity"]
+    assert report["account"]["available_cash"] is None
+    assert report["valuation"]["account_equity"] is None
+    assert json.loads((root / "results/live/account_state.json").read_text()) == state
+
+
+@pytest.mark.parametrize("fault", ["quantity", "cost", "date", "pending", "exception", "unreconciled"])
+def test_cash_gap_does_not_bypass_share_or_order_checks(risk_env, monkeypatch, fault):
+    root, panel, state = risk_env
+    hard_exit(panel)
+    pending_cash_state(state)
+    if fault == "quantity":
+        state["positions"][0]["quantity"] += 100
+    elif fault == "cost":
+        state["actual_execution"]["fills"][0]["price"] += .1
+    elif fault == "date":
+        state["actual_execution"]["execution_date"] = "2099-01-01"
+    elif fault == "pending":
+        state["pending_orders"] = [{"side": "sell"}]
+    elif fault == "exception":
+        state["confirmation_status"] = "exception"
+    else:
+        monkeypatch.setattr(validate_live_readiness, "previous_execution_is_reconciled", lambda *_: False)
+    atomic_json(root / "results/live/account_state.json", state)
+    with pytest.raises(ValueError):
+        risk_release.assess_sell_only(root, DATE)
+
+
 def test_failed_sell_publication_rolls_back_to_blocked(tmp_path, monkeypatch):
     atomic_json(tmp_path / "results/live/account_state.json", json.loads((ROOT / "results/live/account_state.json").read_text()))
     monkeypatch.setattr(run_after_close, "ROOT", tmp_path)

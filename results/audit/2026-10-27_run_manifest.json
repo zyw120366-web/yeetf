@@ -1,31 +1,36 @@
 {
   "schema_version": 2,
   "signal_date": "2026-10-27",
-  "status": "BLOCKED",
-  "created_at_utc": "2026-10-27T07:02:52.611706+00:00",
-  "code_revision": "77fb5a40888200bff3a01e6c30480d6fc58b5da0",
-  "uncommitted_code": [],
+  "status": "SELL_ONLY",
+  "created_at_utc": "2026-10-27T07:08:16.028007+00:00",
+  "code_revision": "2fde0d43c35dd43873b56b85ade661a70a9e0529",
+  "uncommitted_code": [
+    " M scripts/build_live_order_plan.py",
+    " M src/etf_rotation/daily_report.py",
+    " M src/etf_rotation/live.py",
+    " M src/etf_rotation/risk_release.py"
+  ],
   "scope": "只绑定当日计划与日报；行情/资讯记录路径，不重复全库哈希。历史代码及输入版本追溯Git。",
   "critical_files": [
     {
       "path": "results/live/2026-10-27_order_plan.json",
-      "sha256": "ca8d661b549e0289bf714767e29bafa645b4c7c4af93a291a0604de92b4ab41d"
+      "sha256": "bcca25e0cda7fda9580c15a275af3e4c14bcf084864ce608bb36ec1f2390dee4"
     },
     {
       "path": "results/live/2026-10-27_daily_report.json",
-      "sha256": "d9cb9ec3c84ee024e1c274a0542daeab7e6fa32b370220d271db9b1782150e0f"
+      "sha256": "18c6a0e410de0df4d63910502986162fc3ebcced98759c92cdf07a0f361da8d1"
     },
     {
       "path": "results/live/2026-10-27_daily_report.md",
-      "sha256": "4cff83d0fb726e7cd959c8851a8ade827e6d7a3a4b6b55e4c6a569beaf9f5a36"
+      "sha256": "74fb283ea7788038e47768f6d45c2affcadd72346026be4b60841b46814c26e9"
     },
     {
       "path": "outputs/ETF轮动策略_今日日报.html",
-      "sha256": "26e583913543b65d41fffe10bbe142addcaf9a12bf1698ab13e4579988004229"
+      "sha256": "13b43dd5adc5459ac5f37908ca634dcadb6712c98ad0b9aa5c97a4b062a86549"
     },
     {
       "path": "dashboard/public/ye-daily.html",
-      "sha256": "1ab75b2a5cd55497687ca1ffd3bd2bb25054e6840052f65e14d86822ec42edc7"
+      "sha256": "5b12e6d335fa793789937a6b775ecc5ca1f77030544710dd687989d19a595b3b"
     }
   ],
   "evidence_files": [

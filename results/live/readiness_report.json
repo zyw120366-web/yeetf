@@ -1,10 +1,13 @@
 {
   "signal_date": "2026-10-27",
-  "status": "BLOCKED",
-  "blocking_items": [
-    "真实成交已记录；新增入金、余款及费用待核，不能核定账户权益与可用资金。"
-  ],
-  "error": "ValueError: 账户状态未确认",
+  "status": "SELL_ONLY",
   "buy_allowed": false,
-  "sell_allowed": false
+  "sell_allowed": true,
+  "blocking_items": [
+    "现金、入金及费用待核，仅禁止买入；真实持仓与风险退出已独立核验，允许卖出"
+  ],
+  "sell_reasons": [
+    "跌破MA120（硬退出）"
+  ],
+  "note": "只放行独立校验的风险卖单，不代表完整策略READY"
 }

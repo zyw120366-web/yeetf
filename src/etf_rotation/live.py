@@ -103,6 +103,39 @@ def validate_account(account: dict, date: str | None = None) -> None:
         raise ValueError("现金加持仓市值不等于账户权益")
 
 
+def validate_sell_position(account: dict, date: str) -> None:
+    """Cash-only gaps do not revoke authenticated existing shares; never permits buys."""
+    if account.get("confirmation_status") in {"confirmed", "assumed_authorized"}:
+        validate_account(account, date)
+        return
+    if (account.get("confirmation_status") != "pending"
+            or account.get("cash_reconciliation", {}).get("status") != "pending"
+            or account.get("pending_orders")):
+        raise ValueError("持仓或未完成订单尚未核清，不能卖出")
+    positions = account.get("positions")
+    if not isinstance(positions, list) or len(positions) != 1:
+        raise ValueError("风险卖出需要单一已确认持仓")
+    p = positions[0]
+    execution = account.get("actual_execution", {})
+    as_of = pd.Timestamp(str(account.get("as_of", "")).split("_")[0])
+    opened = pd.Timestamp(p.get("opened_on"))
+    executed = pd.Timestamp(execution.get("execution_date"))
+    if (pd.isna(as_of) or pd.isna(opened) or pd.isna(executed)
+            or not opened == executed == as_of or as_of > pd.Timestamp(date)):
+        raise ValueError("持仓与用户成交日期不一致")
+    if (not p.get("symbol") or not valid_number(p.get("quantity"), positive=True)
+            or float(p["quantity"]) != int(float(p["quantity"]))
+            or not valid_number(p.get("average_cost"), positive=True)):
+        raise ValueError("持仓代码、数量或成本无效")
+    fills = execution.get("fills", [])
+    buys = [f for f in fills if f.get("side") == "buy"]
+    if (len(buys) != 1 or not fills or fills[-1] != buys[0]
+            or buys[0].get("symbol") != p["symbol"]
+            or buys[0].get("quantity") != p["quantity"]
+            or buys[0].get("price") != p["average_cost"]):
+        raise ValueError("持仓与真实买入数量、成本不符")
+
+
 def raw_quote(root: Path, symbol: str, date: str) -> tuple[float, float]:
     path = root / "market_data" / "live_quotes" / f"{date}.json"
     snapshot = json.loads(path.read_text(encoding="utf-8"))

@@ -170,17 +170,35 @@ def opportunity_switch_status(
     if qualifies and candidate is not None and day >= starts_on:
         streak = 1
         previous = previous_trading_day(day, root=root)
-        if previous is not None and previous >= starts_on:
+        while previous is not None and previous >= starts_on:
             prior_path = root / "results" / "live" / f"{previous.date()}_order_plan.json"
-            if prior_path.exists():
+            report_path = root / "results" / "live" / f"{previous.date()}_daily_report.json"
+            if report_path.exists():
+                report = json.loads(report_path.read_text(encoding="utf-8"))
+                analysis = report.get("analysis", {})
+                prior = analysis.get("opportunity_switch", {})
+                positions = report.get("account", {}).get("positions", [])
+                same_position = (len(positions) == 1
+                    and positions[0].get("symbol") == current
+                    and positions[0].get("opened_on") == str(holding_since.date())
+                    and positions[0].get("quantity") == next(
+                        p["quantity"] for p in account["positions"] if p["symbol"] == current))
+                valid = (report.get("signal_date") == str(previous.date())
+                         and analysis.get("status") == "complete" and same_position)
+            elif prior_path.exists():
                 prior_plan = json.loads(prior_path.read_text(encoding="utf-8"))
                 prior = prior_plan.get("decision_basis", {}).get("opportunity_switch", {})
-                if (
-                    prior_plan.get("current_symbol") == current
-                    and prior.get("qualifies_today") is True
-                    and prior.get("candidate_symbol") == candidate
-                ):
-                    streak = int(prior.get("confirmation_streak", 0)) + 1
+                valid = (prior_plan.get("signal_date") == str(previous.date())
+                         and prior_plan.get("current_symbol") == current
+                         and prior.get("holding_since") == str(holding_since.date()))
+            else:
+                break
+            if not (valid and prior.get("qualifies_today") is True
+                    and prior.get("candidate_symbol") == candidate):
+                break
+            # Replay daily facts, not an old cached streak (which may be buggy).
+            streak += 1
+            previous = previous_trading_day(previous, root=root)
     required = int(rule["confirmation_days"])
     if day < starts_on:
         status = "baseline"

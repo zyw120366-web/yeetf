@@ -235,7 +235,11 @@ def collect(root: Path, date: str) -> dict:
         review = {"status": "unverified", "coverage": None, "error": str(exc)}
     if status in {"READY", "SELL_ONLY"}:
         try:
-            validate_account(account, date)
+            if status == "SELL_ONLY":
+                from .live import validate_sell_position
+                validate_sell_position(account, date)
+            else:
+                validate_account(account, date)
             if status == "READY" and review["status"] != "complete":
                 raise ValueError("完整计划缺少有效资讯审核")
         except ValueError as exc:

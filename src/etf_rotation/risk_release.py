@@ -11,7 +11,7 @@ import yaml
 from .data import load_panel, universe_keys
 from .etfwin import etfwin_features
 from .execution import entry_eligibility
-from .live import atomic_json, raw_quote, validate_account
+from .live import atomic_json, raw_quote, validate_sell_position
 from .sentiment_ai import validate_live_review
 from .ye import _rules, anchor_competitive_rank
 
@@ -19,7 +19,7 @@ from .ye import _rules, anchor_competitive_rank
 def assess_sell_only(root: Path, date: str) -> dict:
     from scripts.validate_live_readiness import previous_execution_is_reconciled
     account = json.loads((root / "results/live/account_state.json").read_text())
-    validate_account(account, date)
+    validate_sell_position(account, date)
     if not previous_execution_is_reconciled(date, root):
         raise ValueError("上一订单未对账，不能发布风险卖单")
     if len(account["positions"]) != 1:
@@ -39,7 +39,7 @@ def assess_sell_only(root: Path, date: str) -> dict:
     position = account["positions"][0]
     symbol = position["symbol"]
     _, raw_close = raw_quote(root, symbol, date)
-    if not math.isclose(float(position["market_price"]), raw_close, abs_tol=1e-8):
+    if account.get("confirmation_status") != "pending" and not math.isclose(float(position["market_price"]), raw_close, abs_tol=1e-8):
         raise ValueError("账户与当日不复权收盘价不符")
     benchmark = pd.read_csv(root / "market_data/prices/510300.SH.csv", parse_dates=["datetime"])
     expected = pd.DatetimeIndex(benchmark["datetime"])
@@ -98,11 +98,13 @@ def assess_sell_only(root: Path, date: str) -> dict:
     quantity = float(position["quantity"])
     action = {"side": "sell", "symbol": symbol, "target_weight": 0.0, "reasons": reasons}
     return {"strategy": "ye 策略", "signal_date": date, "execute": "下一交易日开盘",
-            "current_symbol": symbol, "target_symbol": None, "account_state": account,
+            "status": "SELL_ONLY", "current_symbol": symbol, "target_symbol": None, "account_state": account,
             "actions": [action], "review_dates_required": review_dates,
             "risk_evidence": {"adjusted_close": float(held.iloc[-1]), "ma120": ma,
                               "unadjusted_close": raw_close, "price_window_dates": len(held)},
-            "execution": {"release_required": True, "sell_only": True, "orders": [
+            "execution": {"release_required": True, "sell_only": True,
+                          "broker_fill_confirmation_required": account.get("confirmation_status") == "pending",
+                          "orders": [
                 {**action, "confirmed_quantity": quantity,
                  "instruction": "仅卖出已核对的现有持仓，卖出后保持现金；禁止买入或借券卖空"}]}}
 
@@ -115,8 +117,10 @@ def publish_sell_only(root: Path, date: str, failure: str) -> str | None:
         return None
     live = root / "results/live"
     action = plan["actions"][0]
+    cash_pending = plan["account_state"].get("cash_reconciliation", {}).get("status") == "pending"
+    detail = "现金、入金及费用待核，仅禁止买入；真实持仓与风险退出已独立核验，允许卖出" if cash_pending else failure
     ready = {"signal_date": date, "status": "SELL_ONLY", "buy_allowed": False, "sell_allowed": True,
-             "blocking_items": [failure], "sell_reasons": action["reasons"],
+             "blocking_items": [detail], "sell_reasons": action["reasons"],
              "note": "只放行独立校验的风险卖单，不代表完整策略READY"}
     atomic_json(live / f"{date}_order_plan.json", plan)
     atomic_json(live / "readiness_report.json", ready)
