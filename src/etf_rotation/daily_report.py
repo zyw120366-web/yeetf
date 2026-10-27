@@ -235,7 +235,13 @@ def collect(root: Path, date: str) -> dict:
         review = {"status": "unverified", "coverage": None, "error": str(exc)}
     if status in {"READY", "SELL_ONLY"}:
         try:
-            if status == "SELL_ONLY":
+            if status == "READY" and plan.get("execution", {}).get("funding_scope") == "sale_proceeds_only":
+                from .rotation_execution import validate_proceeds_plan
+                validate_proceeds_plan(account, plan, date)
+                if (analysis.get("status") != "complete" or analysis.get("technical_target") != plan.get("target_symbol")
+                        or not analysis.get("exit_reasons")):
+                    raise ValueError("卖出款换仓缺少完整正式买入及退出证据")
+            elif status == "SELL_ONLY":
                 from .live import validate_sell_position
                 validate_sell_position(account, date)
             else:
@@ -265,6 +271,7 @@ def collect(root: Path, date: str) -> dict:
                                       f"market_data/sentiment/ai_review/{date}.json"] if (root / p).is_file()],
                   "target_symbol": plan.get("target_symbol") if status != "BLOCKED" else None,
                   "target_is_executable": status in {"READY", "SELL_ONLY"},
+                  "funding_scope": plan.get("execution", {}).get("funding_scope"),
                   "cash_management_status": "以券商回单为准；未核验不阻断ETF日报"})
 
 
@@ -296,9 +303,13 @@ def describe_action(report: dict) -> str:
         label = labels.get(action.get("side"), "待核")
         name = names.get(action.get("symbol"), action.get("symbol") or "现金")
         weight = number(action.get("target_weight"))
-        descriptions.append(f"{label} {name}" + (f"（目标仓位{weight:.0%}）" if weight is not None else ""))
+        allocation = ("（仅使用本次卖出净款）" if action.get("side") == "buy" and report.get("funding_scope") == "sale_proceeds_only"
+                      else f"（目标仓位{weight:.0%}）" if weight is not None else "")
+        descriptions.append(f"{label} {name}" + allocation)
     text = "；".join(descriptions)
-    return "次日开盘：" + (text or "待核") + ("；仅卖出转现金，禁止买入。" if status == "SELL_ONLY" else "。计划不是成交。")
+    suffix = ("；仅卖出转现金，禁止买入。" if status == "SELL_ONLY" else
+              "；旧仓全部成交后，仅用卖出净款换仓；买入数量开盘重算，历史现金仍待核。" if report.get("funding_scope") == "sale_proceeds_only" else "。计划不是成交。")
+    return "次日开盘：" + (text or "待核") + suffix
 
 
 def sections(report: dict):

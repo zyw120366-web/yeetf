@@ -11,8 +11,8 @@
     "execution_source": "scripts/run_after_close.py",
     "daily_mode": "收盘后生成、下一交易日开盘执行"
   },
-  "created_at_utc": "2026-10-27T07:08:16.028007+00:00",
-  "execute": "下一交易日开盘",
+  "created_at_utc": "2026-10-27T07:28:49.039692+00:00",
+  "execute": "下一交易日开盘先卖后买",
   "account_state": {
     "account_type": "live",
     "as_of": "2026-09-11_close",
@@ -84,21 +84,66 @@
   },
   "decision": {
     "current_symbol": "159985.SZ",
-    "target_symbol": null,
+    "target_symbol": "512800.SH",
     "backtest_shadow_target_symbol": null,
     "actions": [
       {
         "side": "sell",
         "symbol": "159985.SZ",
         "target_weight": 0.0,
+        "confirmed_quantity": 6500,
         "reasons": [
-          "跌破MA120（硬退出）"
-        ]
+          "跌破MA120（硬退出）",
+          "ROC20转负",
+          "5日与20日排名同时下滑"
+        ],
+        "instruction": "先卖出全部已确认持仓；未全部成交或仍有未完成卖单，禁止买入新ETF。"
+      },
+      {
+        "side": "buy",
+        "symbol": "512800.SH",
+        "target_weight": 1.0,
+        "requires_full_sale": true,
+        "cost_parameters": {
+          "commission_rate": 0.0003,
+          "minimum_commission": 5.0,
+          "lot_size": 100
+        },
+        "instruction": "卖单全部成交后，仅使用本次卖出净款且不超过券商实际可用资金；按实际买价重新计算100股整数倍，不能机械照抄参考数量。",
+        "buy_estimate": {
+          "last_close": 0.8759999871253967,
+          "estimated_execution_price": 0.8770511871099472,
+          "estimated_quantity_at_last_close": 16000,
+          "estimated_sale_net": 14050.612752342224,
+          "estimated_sell_fee": 5.0,
+          "quantity_rule": "开盘数量由实际卖出成交价、费用及银行买价决定；价格变化会增减100股，旧现金和历史入金不纳入预算。"
+        }
       }
     ],
     "cost": null
   },
-  "decision_basis": {},
+  "decision_basis": {
+    "opportunity_switch": {
+      "enabled": true,
+      "candidate_symbol": "512800.SH",
+      "qualifies_today": true,
+      "confirmation_streak": 4,
+      "required_confirmation_days": 2,
+      "triggered": true,
+      "status": "triggered",
+      "live_baseline_on": "2026-07-29",
+      "live_confirmation_starts_on": "2026-07-30",
+      "holding_symbol": "159985.SZ",
+      "holding_rank": 18.0,
+      "holding_since": "2026-09-11",
+      "held_trading_days": 27,
+      "candidate_rank": 2.0,
+      "score_gap": 0.29185988287835485,
+      "minimum_score_advantage": 0.05,
+      "reset_rule": "任一条件中断或领先ETF改变，连续计数归零"
+    },
+    "live_position_source": "用户已确认成交；不使用回测影子持仓"
+  },
   "sentiment_review": {
     "status": "complete",
     "input_count": 134,
@@ -112,15 +157,13 @@
   },
   "daily_report": "results/live/2026-10-27_daily_report.json",
   "release": {
-    "readiness": "SELL_ONLY",
-    "blocking_items": [
-      "现金、入金及费用待核，仅禁止买入；真实持仓与风险退出已独立核验，允许卖出"
-    ],
+    "readiness": "READY",
+    "blocking_items": [],
     "plan_is_not_fill": true
   },
   "audit": {
     "run_manifest": "results/audit/2026-10-27_run_manifest.json",
-    "run_manifest_sha256": "ee6ff5d9553d25a39fc26598df69fe3854e6b85a3b537796c39f08b4edb6352f",
+    "run_manifest_sha256": "dff0249b9e4bd1f5cdf75ab11b0ac53aaabdca36b3e7cbc16fd7bcef67048480",
     "critical_file_count": 5,
     "source_file_count": 0,
     "price_file_count": 59

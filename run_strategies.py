@@ -149,6 +149,8 @@ def result_summary(
     return {
         "name": name,
         "generated_through": end,
+        "execution_model": "net-proceeds-single-position-v2-2026-10-27",
+        "execution_change_note": "用户授权修正整手最低佣金计算；单仓旧ETF未全卖完不得买入新ETF。旧冻结验证数值属于此前执行口径，不改写为新口径认证。",
         "metrics": clean(result.metrics),
         "periods": {
             label: clean(

@@ -1,13 +1,9 @@
 {
   "signal_date": "2026-10-27",
-  "status": "SELL_ONLY",
-  "buy_allowed": false,
+  "status": "READY",
+  "buy_allowed": true,
   "sell_allowed": true,
-  "blocking_items": [
-    "现金、入金及费用待核，仅禁止买入；真实持仓与风险退出已独立核验，允许卖出"
-  ],
-  "sell_reasons": [
-    "跌破MA120（硬退出）"
-  ],
-  "note": "只放行独立校验的风险卖单，不代表完整策略READY"
+  "funding_scope": "sale_proceeds_only",
+  "blocking_items": [],
+  "note": "仅本次卖出净款的条件换仓已放行；历史现金、本金及账户总收益仍待核，不代表资金全账已核清。"
 }

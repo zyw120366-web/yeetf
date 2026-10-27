@@ -1,36 +1,46 @@
 {
   "schema_version": 2,
   "signal_date": "2026-10-27",
-  "status": "SELL_ONLY",
-  "created_at_utc": "2026-10-27T07:08:16.028007+00:00",
-  "code_revision": "2fde0d43c35dd43873b56b85ade661a70a9e0529",
+  "status": "READY",
+  "created_at_utc": "2026-10-27T07:28:49.039692+00:00",
+  "code_revision": "ebfba714e921f1d0f77aa6e91b9d6d6231852ec6",
   "uncommitted_code": [
+    " M config/market.yaml",
+    " M config/strategy_governance.yaml",
+    " M dashboard/scripts/build_ye_strategy_html.py",
+    " M run_strategies.py",
+    " M scripts/advance_authorized_live_account.py",
     " M scripts/build_live_order_plan.py",
+    " M scripts/reconcile_actual_fills.py",
+    " M scripts/run_after_close.py",
+    " M scripts/validate_live_readiness.py",
+    " M src/etf_rotation/backtest.py",
     " M src/etf_rotation/daily_report.py",
     " M src/etf_rotation/live.py",
-    " M src/etf_rotation/risk_release.py"
+    "?? src/etf_rotation/funding.py",
+    "?? src/etf_rotation/rotation_execution.py"
   ],
   "scope": "只绑定当日计划与日报；行情/资讯记录路径，不重复全库哈希。历史代码及输入版本追溯Git。",
   "critical_files": [
     {
       "path": "results/live/2026-10-27_order_plan.json",
-      "sha256": "bcca25e0cda7fda9580c15a275af3e4c14bcf084864ce608bb36ec1f2390dee4"
+      "sha256": "01c820e196cd83ba4ea35d272fdca7628ea3806bf829998aea99b470a2b24242"
     },
     {
       "path": "results/live/2026-10-27_daily_report.json",
-      "sha256": "18c6a0e410de0df4d63910502986162fc3ebcced98759c92cdf07a0f361da8d1"
+      "sha256": "eb2c4c1ba080baebf63bf1ec6d34a0d55a46dc6fea0a29f4b379e6ff73178655"
     },
     {
       "path": "results/live/2026-10-27_daily_report.md",
-      "sha256": "74fb283ea7788038e47768f6d45c2affcadd72346026be4b60841b46814c26e9"
+      "sha256": "411d15269941cd6660e15a16a8d7703544033e20f06d1707b456cb01e2bcff61"
     },
     {
       "path": "outputs/ETF轮动策略_今日日报.html",
-      "sha256": "13b43dd5adc5459ac5f37908ca634dcadb6712c98ad0b9aa5c97a4b062a86549"
+      "sha256": "89444c5f91e74c5881f8134308dd6015a2a7925dd279cef46429b53c7a66b08f"
     },
     {
       "path": "dashboard/public/ye-daily.html",
-      "sha256": "5b12e6d335fa793789937a6b775ecc5ca1f77030544710dd687989d19a595b3b"
+      "sha256": "bad439a450f50ba7d00840c483233d77d4140eee8cb97fd4fdab0e2df61f8003"
     }
   ],
   "evidence_files": [

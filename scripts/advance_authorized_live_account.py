@@ -129,9 +129,8 @@ def advance(date: str | None = None) -> None:
             opening, _ = quote(symbol, day)
             rate, slip, minimum = costs(symbol, market)
             price = opening * (1 + slip)
-            quantity = math.floor(cash / price / lot) * lot
-            while quantity and quantity * price + max(minimum, quantity * price * rate) > cash:
-                quantity -= lot
+            from etf_rotation.funding import affordable_quantity
+            quantity = affordable_quantity(cash, price, rate, minimum, lot)
             if quantity <= 0:
                 raise RuntimeError("资金不足一手，不能标记为完整成交")
             gross = quantity * price

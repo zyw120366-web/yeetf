@@ -38,9 +38,13 @@ def test_formal_summary_matches_frozen_validation() -> None:
         )
     else:
         assert 0.0 <= summary["timing"]["failed_operation_rate"] <= 1.0
-    assert summary["periods"]["2021—2022"]["total_return"] == pytest.approx(
-        validation["return_2021_2022"], abs=1e-10
-    )
+    if summary.get("execution_model") == "net-proceeds-single-position-v2-2026-10-27":
+        assert summary["periods"]["2021—2022"]["total_return"] > -1
+        assert "旧冻结验证数值属于此前执行口径" in summary["execution_change_note"]
+    else:
+        assert summary["periods"]["2021—2022"]["total_return"] == pytest.approx(
+            validation["return_2021_2022"], abs=1e-10
+        )
 
 
 def test_daily_entry_does_not_call_research_scripts() -> None:

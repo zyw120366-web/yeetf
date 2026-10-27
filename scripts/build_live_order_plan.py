@@ -242,13 +242,8 @@ def estimate_buy(symbol: str, available_cash: float, day: pd.Timestamp, market: 
     minimum_commission = float(market["execution"]["minimum_commission"])
     lot = int(market["project"]["lot_size"])
     estimated_price = close * (1.0 + slippage_rate)
-    quantity = math.floor(available_cash / estimated_price / lot) * lot
-    while quantity > 0:
-        gross = quantity * estimated_price
-        commission = max(minimum_commission, gross * commission_rate)
-        if gross + commission <= available_cash:
-            break
-        quantity -= lot
+    from etf_rotation.funding import affordable_quantity
+    quantity = affordable_quantity(available_cash, estimated_price, commission_rate, minimum_commission, lot)
     return {
         "last_close": close,
         "estimated_execution_price": estimated_price,

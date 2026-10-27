@@ -1,10 +1,8 @@
 {
   "schema_version": 1,
   "signal_date": "2026-10-27",
-  "status": "SELL_ONLY",
-  "blocking_items": [
-    "现金、入金及费用待核，仅禁止买入；真实持仓与风险退出已独立核验，允许卖出"
-  ],
+  "status": "READY",
+  "blocking_items": [],
   "account": {
     "account_type": "live",
     "as_of": "2026-09-11_close",
@@ -2529,17 +2527,39 @@
   "news_data_quality": {
     "dde_available": false
   },
-  "backtest_as_of": "2026-09-10",
+  "backtest_as_of": "2026-10-27",
   "orders": [
     {
       "side": "sell",
       "symbol": "159985.SZ",
       "target_weight": 0.0,
+      "confirmed_quantity": 6500,
       "reasons": [
-        "跌破MA120（硬退出）"
+        "跌破MA120（硬退出）",
+        "ROC20转负",
+        "5日与20日排名同时下滑"
       ],
-      "confirmed_quantity": 6500.0,
-      "instruction": "仅卖出已核对的现有持仓，卖出后保持现金；禁止买入或借券卖空"
+      "instruction": "先卖出全部已确认持仓；未全部成交或仍有未完成卖单，禁止买入新ETF。"
+    },
+    {
+      "side": "buy",
+      "symbol": "512800.SH",
+      "target_weight": 1.0,
+      "requires_full_sale": true,
+      "cost_parameters": {
+        "commission_rate": 0.0003,
+        "minimum_commission": 5.0,
+        "lot_size": 100
+      },
+      "instruction": "卖单全部成交后，仅使用本次卖出净款且不超过券商实际可用资金；按实际买价重新计算100股整数倍，不能机械照抄参考数量。",
+      "buy_estimate": {
+        "last_close": 0.8759999871253967,
+        "estimated_execution_price": 0.8770511871099472,
+        "estimated_quantity_at_last_close": 16000,
+        "estimated_sale_net": 14050.612752342224,
+        "estimated_sell_fee": 5.0,
+        "quantity_rule": "开盘数量由实际卖出成交价、费用及银行买价决定；价格变化会增减100股，旧现金和历史入金不纳入预算。"
+      }
     }
   ],
   "actions": [
@@ -2547,9 +2567,33 @@
       "side": "sell",
       "symbol": "159985.SZ",
       "target_weight": 0.0,
+      "confirmed_quantity": 6500,
       "reasons": [
-        "跌破MA120（硬退出）"
-      ]
+        "跌破MA120（硬退出）",
+        "ROC20转负",
+        "5日与20日排名同时下滑"
+      ],
+      "instruction": "先卖出全部已确认持仓；未全部成交或仍有未完成卖单，禁止买入新ETF。"
+    },
+    {
+      "side": "buy",
+      "symbol": "512800.SH",
+      "target_weight": 1.0,
+      "requires_full_sale": true,
+      "cost_parameters": {
+        "commission_rate": 0.0003,
+        "minimum_commission": 5.0,
+        "lot_size": 100
+      },
+      "instruction": "卖单全部成交后，仅使用本次卖出净款且不超过券商实际可用资金；按实际买价重新计算100股整数倍，不能机械照抄参考数量。",
+      "buy_estimate": {
+        "last_close": 0.8759999871253967,
+        "estimated_execution_price": 0.8770511871099472,
+        "estimated_quantity_at_last_close": 16000,
+        "estimated_sale_net": 14050.612752342224,
+        "estimated_sell_fee": 5.0,
+        "quantity_rule": "开盘数量由实际卖出成交价、费用及银行买价决定；价格变化会增减100股，旧现金和历史入金不纳入预算。"
+      }
     }
   ],
   "price_risk_check": [
@@ -2562,7 +2606,8 @@
     "outputs/ETF轮动策略_策略与回测.html",
     "market_data/sentiment/ai_review/2026-10-27.json"
   ],
-  "target_symbol": null,
+  "target_symbol": "512800.SH",
   "target_is_executable": true,
+  "funding_scope": "sale_proceeds_only",
   "cash_management_status": "以券商回单为准；未核验不阻断ETF日报"
 }

@@ -44,7 +44,8 @@ def previous_execution_is_reconciled(date: str, root: Path | None = None) -> boo
     if record.get("status") not in RECONCILED_EXECUTION_STATUSES:
         return False
     try:
-        validate_fills({"signal_date": record.get("signal_date"), "fills": record.get("actual_fills", [])}, plan, plan_path.name[:10])
+        validate_fills({"signal_date": record.get("signal_date"), "fills": record.get("actual_fills", []),
+                        "broker_available_after_sale": record.get("broker_available_after_sale")}, plan, plan_path.name[:10])
         if not all(row.get("status") == "filled" for row in record["actual_fills"]):
             return False
         account = json.loads((root / "results/live/account_state.json").read_text(encoding="utf-8"))

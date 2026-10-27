@@ -73,7 +73,7 @@ def test_soft_exit_missing_review_remains_blocked(risk_env, monkeypatch):
 
 def test_soft_exit_cannot_bypass_hot_protection(risk_env, monkeypatch):
     root, panel, _ = risk_env
-    dates = panel["close"].index[-2:]
+    dates = panel["close"].loc[:pd.Timestamp(DATE)].index[-2:]
     monkeypatch.setattr(build_sentiment_features, "build", lambda **_: pd.DataFrame([
         {"date": day, "symbol": "513200.SH", "hot_score": 1, "matched_count": 4, "positive_dde_share": 1}
         for day in dates]))

@@ -273,13 +273,14 @@ def run_backtest(
 
         # Buys are clipped to available cash and rounded to board lots.
         for symbol in delta[delta > 0].sort_values(ascending=False).index:
+            if target_w.gt(0).sum() == 1 and shares.drop(symbol).gt(0).any():
+                pending_execution = True
+                continue  # Single-position rotation cannot buy before the old holding is fully sold.
             wanted = float(delta[symbol])
             symbol_commission, symbol_slippage, symbol_min_commission = costs_for(symbol)
             price = float(raw_open[symbol]) * (1 + symbol_slippage)
-            cash_after_min_fee = max(0.0, cash - symbol_min_commission)
-            affordable = (
-                np.floor((cash_after_min_fee / (price * (1 + symbol_commission))) / lot) * lot
-            )
+            from etf_rotation.funding import affordable_quantity
+            affordable = affordable_quantity(cash, price, symbol_commission, symbol_min_commission, lot)
             cap = capacity_qty(symbol, float(raw_open[symbol]))
             qty = max(0.0, min(wanted, affordable, cap))
             if qty + 1e-9 < min(wanted, affordable):

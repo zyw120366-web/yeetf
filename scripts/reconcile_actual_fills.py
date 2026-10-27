@@ -6,7 +6,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from etf_rotation.live import atomic_json, fingerprint, validate_account, validate_fills, live_lock
+from etf_rotation.live import atomic_json, fingerprint, validate_account, validate_fills, live_lock, raw_quote
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -124,6 +124,7 @@ def reconcile() -> None:
             "status": "confirmed" if confirmation and matched and filled else "exception",
             "expected_orders": [{"side": side, "symbol": symbol} for side, symbol in expected],
             "actual_fills": records,
+            "broker_available_after_sale": fills.get("broker_available_after_sale"),
             "confirmation_status": fills.get("confirmation_status"),
             "matched_plan": matched,
             "all_filled": filled,
@@ -131,6 +132,34 @@ def reconcile() -> None:
             "note": fills.get("note", ""),
             "created_at_utc": datetime.now(timezone.utc).isoformat(),
         }
+    if plan.get("execution", {}).get("funding_scope") == "sale_proceeds_only" and report["status"] == "confirmed":
+        account_path = ROOT / "results/live/account_state.json"
+        account = json.loads(account_path.read_text())
+        existing_path = ROOT / f"results/audit/{args.date}_execution_reconciliation.json"
+        existing = json.loads(existing_path.read_text()) if existing_path.exists() else {}
+        if (existing.get("actual_fills") == records and existing.get("account_after") == account):
+            report = existing
+        else:
+            if fingerprint(account) != fingerprint(plan["account_state"]):
+                raise ValueError("账户已改变，不能重复或覆盖真实换仓成交")
+            execution_date = fills.get("execution_date")
+            if not execution_date or execution_date <= args.date:
+                raise ValueError("换仓成交日期必须晚于信号日")
+            buy = records[-1]
+            _, close = raw_quote(ROOT, buy["symbol"], execution_date)
+            report["account_before_sha256"] = fingerprint(account)
+            old = account["positions"][0]["symbol"]
+            account["positions"] = [{"symbol": buy["symbol"], "opened_on": execution_date,
+                "quantity": buy["quantity"], "average_cost": buy["price"], "market_price": close,
+                "market_value": buy["quantity"] * close}]
+            account["as_of"] = execution_date + "_close"
+            account["actual_execution"] = {"signal_date": args.date, "execution_date": execution_date, "fills": records}
+            account.setdefault("last_exit_dates", {})[old] = execution_date
+            account["available_cash"] = account["total_equity"] = None
+            account["source"] = "用户或券商真实换仓成交，历史资金仍待核"
+            report["account_after"] = account
+            atomic_json(existing_path, report)
+            atomic_json(account_path, account)
     if args.accept_account_baseline_date:
         account_path = ROOT / "results" / "live" / "account_state.json"
         if not account_path.exists():

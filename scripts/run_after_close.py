@@ -91,6 +91,12 @@ def run_pipeline(args) -> None:
             except subprocess.CalledProcessError:
                 print(f"{previous_date}不复权报价未取到：仅当日持仓盈亏待核，不取消日报")
     from scripts.advance_authorized_live_account import advance
+    import json
+    account = json.loads((ROOT / "results/live/account_state.json").read_text())
+    if account.get("cash_reconciliation", {}).get("status") == "pending":
+        from etf_rotation.rotation_execution import publish_proceeds_rotation
+        if publish_proceeds_rotation(ROOT, args.date):
+            return
     advance(args.date)
     if not args.skip_collect:
         run("scripts/collect_daily_sentiment.py", "--date", args.date)

@@ -20,9 +20,14 @@ change_control:
     - 用户明确确认后才可修改唯一规则真源
 live_audit:
   require_run_card: true
+  sale_proceeds_rotation:
+    enabled: true
+    approved_by: user
+    approved_on: '2026-10-27'
+    rule: 现金历史待核不阻断使用本次卖出净款的正式换仓；须旧仓全部成交、实际净款与券商可用已核验，按实际买价及费用核量。未知旧现金不计入预算，不假定成交。
   require_previous_execution_reconciliation: true
   plan_is_not_fill: true
-  release_scope: READY放行完整计划；SELL_ONLY仅放行独立校验并绑定哈希的现有持仓卖单、随后持有现金；BLOCKED不放行
+  release_scope: READY放行经过核验的计划，sale_proceeds_only仅允许旧仓全部成交后用本次净款换仓，不代表历史资金已核清；SELL_ONLY仅卖出转现金；BLOCKED不放行
   actual_fill_source: 用户或券商成交回单确认；用户常设授权启用时可按计划假定完整成交，实际回单优先覆盖
   account_state_path: results/live/account_state.json
   account_state_rule: 实盘仓位只来自用户或券商确认或常设执行授权；历史回测影子持仓不得代替

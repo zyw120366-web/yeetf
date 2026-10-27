@@ -171,10 +171,25 @@ def validate_fills(fills: dict, plan: dict, date: str) -> None:
             held = next((x for x in plan.get("account_state", {}).get("positions", []) if x["symbol"] == row["symbol"]), None)
             if held and float(quantity) != float(held["quantity"]):
                 raise ValueError("完整卖出数量与计划账户不符，应记录为部分成交")
+    if plan.get("execution", {}).get("funding_scope") == "sale_proceeds_only":
+        buys = [r for r in records if r["side"] == "buy" and r["status"] in {"filled", "partial"}]
+        if buys:
+            from .funding import proceeds_buy_quantity
+            buy = buys[0]
+            available = fills.get("broker_available_after_sale")
+            if not valid_number(available) or not valid_number(buy.get("fee")):
+                raise ValueError("换仓需实际卖出费用、买入费用及券商卖后可用资金")
+            maximum = proceeds_buy_quantity(plan, records[0], buy["price"], available)
+            net = records[0]["quantity"] * records[0]["price"] - records[0]["fee"]
+            if (buy["quantity"] > maximum or buy["quantity"] % 100
+                    or buy["quantity"] * buy["price"] + buy["fee"] > min(net, available)):
+                raise ValueError("买入超过本次卖出净款或实际可用资金")
 
 
 def validate_authorized_plan(root: Path, plan: dict, account: dict, prior: str) -> None:
     """Never apply a draft, a changed plan or an existing execution twice."""
+    if plan.get("execution", {}).get("funding_scope") == "sale_proceeds_only":
+        raise ValueError("卖出款换仓须核对实际成交及可用资金，禁止假定执行")
     card_path = root / "results" / "audit" / f"{prior}_live_run_card.json"
     card = json.loads(card_path.read_text(encoding="utf-8"))
     release = card.get("release", {}).get("readiness")
