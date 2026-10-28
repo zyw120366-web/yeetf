@@ -26,12 +26,12 @@ def previous_execution_is_reconciled(date: str, root: Path | None = None) -> boo
     root = root or ROOT
     plans = sorted((root / "results" / "live").glob("*_order_plan.json"))
     previous = [path for path in plans if path.name[:10] < date]
-    if not previous:
-        return True
-    plan_path = previous[-1]
-    plan = json.loads(plan_path.read_text(encoding="utf-8"))
-    requires_confirmation = any(item["side"] in {"buy", "sell"} for item in plan["actions"])
-    if not requires_confirmation:
+    # An empty BLOCKED or observation-only plan does not settle an earlier order.
+    for plan_path in reversed(previous):
+        plan = json.loads(plan_path.read_text(encoding="utf-8"))
+        if any(item["side"] in {"buy", "sell"} for item in plan["actions"]):
+            break
+    else:
         return True
     reconciliation = root / "results" / "audit" / f"{plan_path.name[:10]}_execution_reconciliation.json"
     if not reconciliation.exists():
@@ -40,7 +40,8 @@ def previous_execution_is_reconciled(date: str, root: Path | None = None) -> boo
     if record.get("status") == "baseline_confirmed":
         account = json.loads((root / "results/live/account_state.json").read_text(encoding="utf-8"))
         baseline = record.get("baseline_acceptance", {})
-        return baseline.get("date") == date and baseline.get("account_sha256") == fingerprint(account)
+        baseline_date = baseline.get("date", "")
+        return bool(plan_path.name[:10] < baseline_date <= date and baseline.get("account_sha256") == fingerprint(account))
     if record.get("status") not in RECONCILED_EXECUTION_STATUSES:
         return False
     try:

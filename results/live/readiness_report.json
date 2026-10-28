@@ -1,9 +1,11 @@
 {
-  "signal_date": "2026-10-27",
-  "status": "READY",
-  "buy_allowed": true,
-  "sell_allowed": true,
-  "funding_scope": "sale_proceeds_only",
-  "blocking_items": [],
-  "note": "仅本次卖出净款的条件换仓已放行；历史现金、本金及账户总收益仍待核，不代表资金全账已核清。"
+  "signal_date": "2026-10-28",
+  "status": "BLOCKED",
+  "blocking_items": [
+    "上一计划成交尚未核对，无法确认当前持仓，禁止重复交易",
+    "上一计划成交未对账，当前实际持仓和收益待核"
+  ],
+  "error": "ValueError: 上一订单未对账，禁止重复换仓",
+  "buy_allowed": false,
+  "sell_allowed": false
 }

@@ -45,6 +45,47 @@ def test_pending_cash_still_publishes_full_frozen_analysis(report_root):
         validate_account(json.loads(before), DATE)
 
 
+def test_unreconciled_prior_order_does_not_claim_current_holding(report_root, monkeypatch):
+    from scripts import validate_live_readiness
+    monkeypatch.setattr(validate_live_readiness, "previous_execution_is_reconciled", lambda *_: False)
+    account = report_root / "results/live/account_state.json"
+    before = account.read_bytes()
+    publish_blocked(report_root, DATE, "上一计划未对账")
+    report = daily_report.read_json(report_root / f"results/live/{DATE}_daily_report.json")
+    assert report["position_reconciliation_required"] is True
+    assert report["status"] == "BLOCKED" and not report["orders"]
+    assert report["analysis"]["status"] == "partial" and len(report["analysis"]["ranking"]) == 51
+    assert report["analysis"]["held"] is None and report["analysis"]["technical_target"] is None
+    assert all(row["final_entry_pass"] is None for row in report["analysis"]["ranking"])
+    assert report["valuation"]["daily_pnl"] is None and report["valuation"]["purchase_pnl"] is None
+    page = (report_root / "outputs/ETF轮动策略_今日日报.html").read_text()
+    assert "账户最后确认记录" in page and "今天实际持仓和收益待核" in page
+    assert "真实卖出冷却排除：待核" in page
+    assert "持仓已确认；新增入金" not in page
+    assert account.read_bytes() == before
+    card = daily_report.read_json(report_root / f"results/audit/{DATE}_live_run_card.json")
+    assert card["execution_reconciliation"]["status"] == "prior_unreconciled"
+    assert daily_report.validate_delivery(report_root, DATE)["delivery"] == "PASS"
+
+
+def test_empty_blocked_plan_does_not_hide_unreconciled_earlier_order(tmp_path, monkeypatch):
+    from scripts import validate_live_readiness as readiness
+
+    atomic_json(tmp_path / "results/live/2026-10-27_order_plan.json", {
+        "actions": [{"side": "sell", "symbol": "159985.SZ"}],
+    })
+    atomic_json(tmp_path / "results/live/2026-10-28_order_plan.json", {"status": "BLOCKED", "actions": []})
+    assert not readiness.previous_execution_is_reconciled("2026-10-29", tmp_path)
+
+    atomic_json(tmp_path / "results/live/account_state.json", {"positions": []})
+    atomic_json(tmp_path / "results/audit/2026-10-27_execution_reconciliation.json", {
+        "status": "confirmed", "signal_date": "2026-10-27",
+        "actual_fills": [{"side": "sell", "symbol": "159985.SZ", "status": "filled"}],
+    })
+    monkeypatch.setattr(readiness, "validate_fills", lambda *_: None)
+    assert readiness.previous_execution_is_reconciled("2026-10-29", tmp_path)
+
+
 def test_stale_running_message_and_old_buy_are_replaced(report_root, monkeypatch):
     monkeypatch.setattr(daily_report, "analyze", lambda *_: {"status": "unavailable", "ranking": [], "candidates": []})
     atomic_json(report_root / "results/live/readiness_report.json", {"signal_date": DATE, "status": "RUNNING", "blocking_items": ["本次运行尚未完成"]})

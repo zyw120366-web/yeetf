@@ -222,6 +222,27 @@ def collect(root: Path, date: str) -> dict:
     except Exception as exc:
         analysis["error"] = f"{type(exc).__name__}: {exc}"
         analysis["issues"] = ["价格或配置证据不足；已确认持仓与可用估值仍单独展示"]
+    # A historical confirmation does not establish today's position if an
+    # intervening live order may have filled and has not been reconciled.
+    from scripts.validate_live_readiness import previous_execution_is_reconciled
+    try:
+        position_pending = not previous_execution_is_reconciled(date, root)
+    except (OSError, ValueError, KeyError, TypeError):
+        position_pending = True
+    if position_pending:
+        issue = "上一计划成交未对账，当前实际持仓和收益待核"
+        status = "BLOCKED"
+        reasons = list(dict.fromkeys([*reasons, issue]))
+        if analysis.get("ranking"):
+            analysis["status"] = "partial"
+        analysis.update(holding_trusted=False, holding_decision_status="unknown",
+                        held=None, exit_reasons=[], opportunity_switch={"status": "unknown"},
+                        technical_target=None, candidates=[])
+        for row in analysis.get("ranking", []):
+            row["final_entry_pass"] = None
+            row["live_cooldown_blocked"] = None
+        deps = analysis.setdefault("news_dependencies", {})
+        deps["issues"] = list(dict.fromkeys([*deps.get("issues", []), issue]))
     checked = analysis.get("news_dependencies", {}).get("checks", {}).get(date)
     try:
         if checked:
@@ -260,13 +281,17 @@ def collect(root: Path, date: str) -> dict:
     orders = plan.get("execution", {}).get("orders", []) if status in {"READY", "SELL_ONLY"} else []
     if status == "SELL_ONLY" and any(x.get("side") != "sell" for x in orders):
         status, reasons, orders = "BLOCKED", ["仅卖出状态中出现非卖出订单"], []
+    unknown_valuation = {"account_return": None, "account_equity": None, "purchase_pnl": None,
+                         "purchase_return": None, "daily_pnl": None, "daily_return": None}
     return clean({"schema_version": 1, "signal_date": date, "status": status,
-                  "blocking_items": reasons, "account": account, "valuation": valuation(root, date, account),
+                  "blocking_items": reasons, "account": account,
+                  "position_reconciliation_required": position_pending,
+                  "valuation": unknown_valuation if position_pending else valuation(root, date, account),
                   "analysis": analysis, "review": review, "sources": sources,
                   "news_data_quality": {"dde_available": dde_available},
                   "backtest_as_of": read_json(root / "results/comparison/latest_signals.json").get("signal_date"),
                   "orders": orders, "actions": plan.get("actions", []) if status != "BLOCKED" else [],
-                  "price_risk_check": price_risk_check(root, date, account, ranking=analysis.get("ranking")),
+                  "price_risk_check": [] if position_pending else price_risk_check(root, date, account, ranking=analysis.get("ranking")),
                   "available_links": [p for p in ["outputs/ETF轮动策略_回测.html", "outputs/ETF轮动策略_策略与回测.html",
                                       f"market_data/sentiment/ai_review/{date}.json"] if (root / p).is_file()],
                   "target_symbol": plan.get("target_symbol") if status != "BLOCKED" else None,
@@ -315,6 +340,14 @@ def describe_action(report: dict) -> str:
 def sections(report: dict):
     a, v, review = report["analysis"], report["valuation"], report["review"]
     overview = [describe_action(report)]
+    if report.get("position_reconciliation_required"):
+        positions = report.get("account", {}).get("positions", [])
+        if len(positions) == 1:
+            p = positions[0]
+            as_of = str(report["account"].get("as_of", "未知")).split("_")[0]
+            overview.append(f"账户最后确认记录：{as_of} {p.get('name', p.get('symbol'))} {p.get('quantity')}股；上一计划成交未核，今天实际持仓和收益待核。")
+        else:
+            overview.append("上一计划成交未核，今天实际持仓和收益待核。")
     if v.get("symbol"):
         overview.append(f"{v['name']} {v['quantity']:g}股，收盘{v['close']:.3f}元；今日持仓{money(v['daily_pnl'])}，本次持仓{money(v['purchase_pnl'])}（{pct(v['purchase_return'])}，未计费用）。")
     held = a.get("held")
@@ -327,7 +360,9 @@ def sections(report: dict):
         overview.append("尚需核清：" + "；".join(x.rstrip("。；") for x in report["blocking_items"]) + "。")
     limitations = a.get("news_dependencies", {}).get("issues", []) or a.get("issues", [])
     if limitations:
-        overview.append("数据缺口：" + "；".join(limitations) + ("。价格排名可看；依赖这些资讯的判断显示待核，不当作不通过。" if a.get("ranking") else "。不沿用旧日结论。"))
+        suffix = ("。价格排名可看；实际持仓和操作待核。" if report.get("position_reconciliation_required") else
+                  "。价格排名可看；依赖这些资讯的判断显示待核，不当作不通过。" if a.get("ranking") else "。不沿用旧日结论。")
+        overview.append("待核事项：" + "；".join(limitations) + suffix)
     ranking = a.get("ranking", [])
     def names(rows):
         return "、".join(f"{r['name']}（{r['symbol']}）" for r in rows) or "无"
@@ -343,20 +378,27 @@ def sections(report: dict):
         if a["status"] == "complete":
             funnel += [f"技术与资讯门槛通过{len(tech)}只：" + names(tech),
                        f"真实冷却与核心优先后{len(final)}只：" + names(final)]
+        elif report.get("position_reconciliation_required"):
+            funnel += ["今日资讯已单独列示；上一计划未对账，真实冷却和最终候选待核。"]
         else:
             funnel += ["资讯确认、新趋势记忆及最终候选待核；不能把未知候选写成0只，也不能据此买入。"]
-        funnel += ["真实卖出冷却排除：" + names(blocked), "候选合格不等于买入，仍须检查旧仓退出与换仓，并通过订单核验。"]
+        cooldown_text = "真实卖出冷却排除：待核" if report.get("position_reconciliation_required") else "真实卖出冷却排除：" + names(blocked)
+        funnel += [cooldown_text, "候选合格不等于买入，仍须检查旧仓退出与换仓，并通过订单核验。"]
         satellites = [r for r in ranking if r["pool_role"] == "challenger"]
         satellite = ["6只卫星：" + names(satellites),
                      "卫星常规价格条件通过：" + names([r for r in satellites if r["base_entry_pass"]])]
         satellite += (["卫星技术合格：" + names([r for r in satellites if r["technical_entry_pass"]]),
                        "卫星最终补位：" + names([r for r in satellites if r["final_entry_pass"]])]
-                      if a["status"] == "complete" else ["卫星资讯确认及最终补位待核，不生成新增订单。"])
+                      if a["status"] == "complete" else
+                      ["上一计划未对账，卫星最终补位待核，不生成新增订单。"] if report.get("position_reconciliation_required") else
+                      ["卫星资讯确认及最终补位待核，不生成新增订单。"])
     else:
         funnel = ["全池价格筛选暂不可确认，缺少有效价格或配置证据。具体诊断已保存在运行卡，不以旧日排名代替。"]
         satellite = ["今日卫星条件未知，不生成新增订单。"]
     checks = []
-    if held and a.get("holding_decision_status") != "unknown":
+    if report.get("position_reconciliation_required"):
+        checks = ["上一计划可能已成交；当前持仓、持有、卖出和换仓判断均待核，不能以旧持仓替代。"]
+    elif held and a.get("holding_decision_status") != "unknown":
         switch = a.get("opportunity_switch", {})
         checks = [f"持有：{held['name']}；收盘在MA120{'上' if held['above_ma120'] else '下'}方。",
                   "退出/让位：" + ("；".join(a.get("exit_reasons", [])) or "未触发"),
@@ -375,8 +417,9 @@ def sections(report: dict):
     if held:
         dde = pct(held.get("sentiment_positive_dde_share")) if report.get("news_data_quality", {}).get("dde_available") else "未知（来源未提供）"
         news.append(f"持仓直接匹配数量：{held.get('sentiment_matched_count', '—')}；正DDE占比：{dde}。不把泛行业题材扩散到不相关ETF。")
-    if limitations:
-        news.append("近期连续证据：" + "；".join(limitations))
+    news_issues = [x for x in limitations if x != "上一计划成交未对账，当前实际持仓和收益待核"]
+    if news_issues:
+        news.append("近期连续证据：" + "；".join(news_issues))
     return [("今日决策路径综述", overview), ("今日筛选漏斗", funnel),
             ("持有、卖出与换仓", checks), ("今日卫星检查", satellite), ("资讯审核", news)]
 
@@ -553,12 +596,15 @@ def delivery_receipt(root: Path, date: str, *, deep: bool = False) -> str:
                   else "；".join(report["analysis"].get("exit_reasons", [])) or "未触发卖出或换仓")
         lines.append(f"持仓核心/参考排名第{held['rank']:g}；{reason}。")
     if report["analysis"].get("status") == "partial":
-        lines.append("连续资讯缺口：" + "；".join(report["analysis"]["news_dependencies"]["issues"]))
+        prefix = "对账或数据待核：" if report.get("position_reconciliation_required") else "连续资讯缺口："
+        lines.append(prefix + "；".join(report["analysis"]["news_dependencies"]["issues"]))
         lines.extend(report.get("price_risk_check", []))
     if number(v.get("account_equity")) is not None:
         lines.append(f"账户权益：{v['account_equity']:,.2f}元；累计{pct(v.get('account_return'))}。")
     state = str(account.get("confirmation_status", "未知"))
-    if account.get("cash_reconciliation", {}).get("status") == "pending":
+    if report.get("position_reconciliation_required"):
+        state += "（上一计划成交未核，当前持仓待核）"
+    elif account.get("cash_reconciliation", {}).get("status") == "pending":
         state += "（资金待核，不代表已确认成交未记录）"
     coverage = "未核验" if number(review.get("coverage")) is None else f"{review['coverage']:.0%}"
     lines += [f"对账：{state}；AI审核{review.get('reviewed_count', '—')}/{review.get('input_count', '—')}，覆盖{coverage}。",

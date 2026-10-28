@@ -80,7 +80,8 @@ def write_run_record(root: Path, date: str) -> dict:
         "audit": {"run_manifest": str(manifest_path.relative_to(root)), "run_manifest_sha256": sha256(manifest_path),
                   "critical_file_count": len(delivery_files(date)), "source_file_count": 0, "price_file_count": len(prices)},
         "execution_reconciliation": {
-            "status": "pending_next_open" if requires_fill else "not_required",
+            "status": ("prior_unreconciled" if report.get("position_reconciliation_required")
+                       else "pending_next_open" if requires_fill else "not_required"),
             "actual_fill_template": f"results/live/{date}_actual_fills.template.json" if requires_fill else None,
             "reconciliation_output": f"results/audit/{date}_execution_reconciliation.json"},
     }

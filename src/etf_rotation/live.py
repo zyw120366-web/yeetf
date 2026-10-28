@@ -300,6 +300,8 @@ def block_orders(root: Path, date: str, reason: str) -> tuple[dict, dict]:
     cash_pending = account.get("cash_reconciliation", {}).get("status") == "pending"
     detail = ("真实成交已记录；新增入金、余款及费用待核，不能核定账户权益与可用资金。"
               if cash_pending and "账户" in reason else reason)
+    if "上一订单未对账" in reason:
+        detail = "上一计划成交尚未核对，无法确认当前持仓，禁止重复交易"
     ready = {"signal_date": date, "status": "BLOCKED", "blocking_items": [detail],
              "error": reason, "buy_allowed": False, "sell_allowed": False}
     atomic_json(live / "readiness_report.json", ready)
