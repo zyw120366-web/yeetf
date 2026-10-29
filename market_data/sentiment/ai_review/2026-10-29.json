@@ -1,0 +1,5471 @@
+{
+  "date": "2026-10-29",
+  "status": "complete",
+  "policy": "every_collected_row_reviewed_in_codex_chat_fail_closed",
+  "prompt_version": "ye-codex-chat-review-2026-07-22",
+  "reviewer": "codex_chat",
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "review_protocol": {
+    "version": "ye-codex-chat-review-2026-07-22",
+    "files": [
+      {
+        "path": "config/sentiment_review_policy.yaml",
+        "sha256": "64cc6dd0db1d6888b47d3e15903bbfb194f23dc6495b50a9b94ab778e3275f80"
+      },
+      {
+        "path": "config/sentiment.yaml",
+        "sha256": "264703aa392f3f796635c7e62fcbd21700e2a7bf03ab379f5242c6b23f2af5a2"
+      },
+      {
+        "path": "skills/ye-daily-execution/references/review-schema.md",
+        "sha256": "3a7433d841da73e87a60ca1f559a454fa40f2568ea56ef7566ac3469d7aa1734"
+      }
+    ]
+  },
+  "reviewed_at_utc": "2026-10-29T07:08:46.353294+00:00",
+  "snapshot_hash": "b8c33a87413cd74dde15a11dd2cee174bed239742baf9c8d4849f8088944f138",
+  "input_count": 143,
+  "reviewed_count": 143,
+  "relevant_count": 46,
+  "coverage": 1.0,
+  "items": [
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95359474",
+      "published_at": "2026-10-29",
+      "name": "东方海洋",
+      "title": "东方海洋 | “羊”字辈+体外诊断+海参养殖+水溶性维生素试剂",
+      "body": "“羊”字辈+体外诊断+海参养殖+水溶性维生素试剂",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "5ca2fa97ce36eb0d18801434868ed27131d85bb4f4abd80237c63d1a59318880",
+      "normalization": {
+        "event_key": "d212053d355bc1aeea1b40a6ef603f10ddc432ed61e4c427f08057fbbc47e3f6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "562600.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "5ca2fa97ce36eb0d18801434868ed27131d85bb4f4abd80237c63d1a59318880",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "东方海洋 | “羊”字辈+体外诊断+海参养殖+水溶性维生素试剂",
+        "evidence": [
+          "“羊”字辈+体外诊断+海参养殖+水溶性维生素试剂"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95356142",
+      "published_at": "2026-10-29",
+      "name": "桂林三金",
+      "title": "桂林三金 | 三季报增长+中成药+西瓜霜+抗体研发",
+      "body": "三季报增长+中成药+西瓜霜+抗体研发",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "f438639889887093785d6f6cef79b597657c058660fa6a2337470c387a0923e8",
+      "normalization": {
+        "event_key": "7a22cf6cd38194d7f1050bb39c5bf871b521940f8bd25dc0aca65ccef0ae0c8f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159647.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f438639889887093785d6f6cef79b597657c058660fa6a2337470c387a0923e8",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "159647.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "桂林三金 | 三季报增长+中成药+西瓜霜+抗体研发",
+        "evidence": [
+          "三季报增长+中成药+西瓜霜+抗体研发"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95355315",
+      "published_at": "2026-10-29",
+      "name": "宇晶股份",
+      "title": "宇晶股份 | 机器人+碳化硅设备+磷化铟设备",
+      "body": "机器人+碳化硅设备+磷化铟设备",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "8519b5c85922327561c078178c968531a2d83e74ec9d95af9bbe09996448cd49",
+      "normalization": {
+        "event_key": "36e4508b35b8a5cbe136ba596d944bf52cdd7b95372b68067917921fbb1eabd3",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": [
+          "512760.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "8519b5c85922327561c078178c968531a2d83e74ec9d95af9bbe09996448cd49",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562500.SH",
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "宇晶股份 | 机器人+碳化硅设备+磷化铟设备",
+        "evidence": [
+          "机器人+碳化硅设备+磷化铟设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95346857",
+      "published_at": "2026-10-29",
+      "name": "天顺风能",
+      "title": "天顺风能 | 三季报增长+海上风电+油气船舶",
+      "body": "三季报增长+海上风电+油气船舶",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "9628f8aba54aa320a5bd1cc3ed46ebc4b0b3e8c48b14438ec4e790ec6f484cde",
+      "normalization": {
+        "event_key": "739d5656b6e267d8379ee0a03aeff1fc7eef7e7079b4ecb0d56d1f638d834a20",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9628f8aba54aa320a5bd1cc3ed46ebc4b0b3e8c48b14438ec4e790ec6f484cde",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "天顺风能 | 三季报增长+海上风电+油气船舶",
+        "evidence": [
+          "三季报增长+海上风电+油气船舶"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95346431",
+      "published_at": "2026-10-29",
+      "name": "西部材料",
+      "title": "西部材料 | 商业航天+航天铌合金+稀贵金属+超导",
+      "body": "商业航天+航天铌合金+稀贵金属+超导",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "f773b9a71a56b4725f06e12d698a33ef5652059fd05010ca1fbfadd0442d16f0",
+      "normalization": {
+        "event_key": "c97917241eabfd5767d002f4fb5cd07a338153b1066160aeab11772d2f31f384",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f773b9a71a56b4725f06e12d698a33ef5652059fd05010ca1fbfadd0442d16f0",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "西部材料 | 商业航天+航天铌合金+稀贵金属+超导",
+        "evidence": [
+          "商业航天+航天铌合金+稀贵金属+超导"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95346330",
+      "published_at": "2026-10-29",
+      "name": "祥源文旅",
+      "title": "祥源文旅 | 旅游景区+冰雪产业+低空文旅",
+      "body": "旅游景区+冰雪产业+低空文旅",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e2ab4d002d652056e9bc8dc41372512083d814174bcd5f088d0f96e23994cfbf",
+      "normalization": {
+        "event_key": "ed1fae1963b9affc38e767a80dcbfa98ab4a17e6ac9b9dc3614702ddaed31286",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159766.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e2ab4d002d652056e9bc8dc41372512083d814174bcd5f088d0f96e23994cfbf",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159766.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "祥源文旅 | 旅游景区+冰雪产业+低空文旅",
+        "evidence": [
+          "旅游景区+冰雪产业+低空文旅"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95345241",
+      "published_at": "2026-10-29",
+      "name": "冰山冷热",
+      "title": "冰山冷热 | 冰雪工程+数据中心液冷+船舶制冷",
+      "body": "冰雪工程+数据中心液冷+船舶制冷",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2bb04d8636d2ea635fc17892fc561b177f635d9aef6e0484124d1397c874d291",
+      "normalization": {
+        "event_key": "dff457199ac3b4af40207bc2925a8c6f2a33577da2edf1919ffc827f84134b93",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2bb04d8636d2ea635fc17892fc561b177f635d9aef6e0484124d1397c874d291",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "冰山冷热 | 冰雪工程+数据中心液冷+船舶制冷",
+        "evidence": [
+          "冰雪工程+数据中心液冷+船舶制冷"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95344509",
+      "published_at": "2026-10-29",
+      "name": "航天晨光",
+      "title": "航天晨光 | 商业航天+特种装备+可控核聚变",
+      "body": "商业航天+特种装备+可控核聚变",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "58132bc92b175fcfb11076e37af3da75c3e36fd1dcac0c797d5baacca8a0aad7",
+      "normalization": {
+        "event_key": "82a42cb0547e9a8ef807adc1251c1477f9dc51214a299114db1e31d835ea1da0",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "58132bc92b175fcfb11076e37af3da75c3e36fd1dcac0c797d5baacca8a0aad7",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "航天晨光 | 商业航天+特种装备+可控核聚变",
+        "evidence": [
+          "商业航天+特种装备+可控核聚变"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95344435",
+      "published_at": "2026-10-29",
+      "name": "中国卫星",
+      "title": "中国卫星 | 三季报增长+卫星制造+商业航天",
+      "body": "三季报增长+卫星制造+商业航天",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "fb9c47a7bc3194b5ce3d6c06ca5b3ac11cd02fda49b9f5d6b54f1de564279652",
+      "normalization": {
+        "event_key": "ad9ffe28192965196d122d17181ff974e621c9c10a14c2c4b40708050e59ad3b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "fb9c47a7bc3194b5ce3d6c06ca5b3ac11cd02fda49b9f5d6b54f1de564279652",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "中国卫星 | 三季报增长+卫星制造+商业航天",
+        "evidence": [
+          "三季报增长+卫星制造+商业航天"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95343667",
+      "published_at": "2026-10-29",
+      "name": "一鸣食品",
+      "title": "一鸣食品 | 低温乳品+烘焙食品+米制鲜食",
+      "body": "低温乳品+烘焙食品+米制鲜食",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b4e82a47882f970109521f473a4fb09c69860b17e5c22669f324b04ad951a23e",
+      "normalization": {
+        "event_key": "b4e41a498c9233539b2ee4ae79d51b80dfd4a3998442123d80e300ab89adb013",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "b4e82a47882f970109521f473a4fb09c69860b17e5c22669f324b04ad951a23e",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "一鸣食品 | 低温乳品+烘焙食品+米制鲜食",
+        "evidence": [
+          "低温乳品+烘焙食品+米制鲜食"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95343574",
+      "published_at": "2026-10-29",
+      "name": "福建金森",
+      "title": "福建金森 | 三季报增长+林业+FSC森林认证+海峡两岸",
+      "body": "三季报增长+林业+FSC森林认证+海峡两岸",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "623642d66f133215244bd97612f038d06bf15fafeb079b530b4d46ce745d70a8",
+      "normalization": {
+        "event_key": "618bce7206b0e126a0f35c50e979bb1e1aebeceddc7ecb972d4aed17ec991f24",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "623642d66f133215244bd97612f038d06bf15fafeb079b530b4d46ce745d70a8",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "福建金森 | 三季报增长+林业+FSC森林认证+海峡两岸",
+        "evidence": [
+          "三季报增长+林业+FSC森林认证+海峡两岸"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95343233",
+      "published_at": "2026-10-29",
+      "name": "盛洋科技",
+      "title": "盛洋科技 | 卫星通信终端+高速铜缆+“羊”字辈",
+      "body": "卫星通信终端+高速铜缆+“羊”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e77f8d55f9cd5e26cba28d22116b1762c52c6a52229ea7916e366a4b7f09c422",
+      "normalization": {
+        "event_key": "712cadd4f856d1f314ba74d0b6fcf808a89e92495e65d1c163e2285f76ca61e2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e77f8d55f9cd5e26cba28d22116b1762c52c6a52229ea7916e366a4b7f09c422",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "盛洋科技 | 卫星通信终端+高速铜缆+“羊”字辈",
+        "evidence": [
+          "卫星通信终端+高速铜缆+“羊”字辈"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95343050",
+      "published_at": "2026-10-29",
+      "name": "上海港湾",
+      "title": "上海港湾 | 商业航天+卫星能源+钙钛矿电池",
+      "body": "商业航天+卫星能源+钙钛矿电池",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2512733928cec823a45e3b1da80e4599306890494e3a180368428f835224e174",
+      "normalization": {
+        "event_key": "e839182b08ac21fd4a4de1d3b78cf1205b0dca12dfeec801a3d861debbf7e48b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "515790.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "2512733928cec823a45e3b1da80e4599306890494e3a180368428f835224e174",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "515790.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "上海港湾 | 商业航天+卫星能源+钙钛矿电池",
+        "evidence": [
+          "商业航天+卫星能源+钙钛矿电池"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342919",
+      "published_at": "2026-10-29",
+      "name": "惠发食品",
+      "title": "惠发食品 | 预制菜+速冻调理肉制品",
+      "body": "预制菜+速冻调理肉制品",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e136986945a137fea87ebaacc07a4ad14eb31dba98b22cec6d7ac2710f65079b",
+      "normalization": {
+        "event_key": "185918d1f7490029250e92b15257b501a76ea29a6239e3d2c97dee9557808409",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "e136986945a137fea87ebaacc07a4ad14eb31dba98b22cec6d7ac2710f65079b",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "惠发食品 | 预制菜+速冻调理肉制品",
+        "evidence": [
+          "预制菜+速冻调理肉制品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342888",
+      "published_at": "2026-10-29",
+      "name": "钧达股份",
+      "title": "钧达股份 | 商业航天+光伏电池+土耳其产能",
+      "body": "商业航天+光伏电池+土耳其产能",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b94fdb8aafd9f3cfc28456805cac825591dcf17a7d978d8e46dcd5b3f9e9720b",
+      "normalization": {
+        "event_key": "3484808403cb0575376370069bcc872aec18394995d055cf5dd9f98598a2280c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515790.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b94fdb8aafd9f3cfc28456805cac825591dcf17a7d978d8e46dcd5b3f9e9720b",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "515790.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "钧达股份 | 商业航天+光伏电池+土耳其产能",
+        "evidence": [
+          "商业航天+光伏电池+土耳其产能"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342863",
+      "published_at": "2026-10-29",
+      "name": "巴比食品",
+      "title": "巴比食品 | 三季报净利增+中式面点+中期分红+小笼包扩张",
+      "body": "三季报净利增+中式面点+中期分红+小笼包扩张",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "cf7084ed2f72b4d1e674c2e314647ca265c41e6373003dd64bb9c8b1eb8a0f1a",
+      "normalization": {
+        "event_key": "5702206c10fa1acbbc6d23008b26f0af03972cb86810b3c97cb33c417802b8b4",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "cf7084ed2f72b4d1e674c2e314647ca265c41e6373003dd64bb9c8b1eb8a0f1a",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "巴比食品 | 三季报净利增+中式面点+中期分红+小笼包扩张",
+        "evidence": [
+          "三季报净利增+中式面点+中期分红+小笼包扩张"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342857",
+      "published_at": "2026-10-29",
+      "name": "海阳科技",
+      "title": "海阳科技 | 尼龙6+帘子布+涤纶工业丝+“羊”字辈",
+      "body": "尼龙6+帘子布+涤纶工业丝+“羊”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "fbbe38f6624b66a564e92959e50d40b07426e4067a5f329f30a18e98c5b4f0be",
+      "normalization": {
+        "event_key": "5b769c760d134158718789f8c172ea8fdeeb8b1e1ef000fcd91dd50cafa70c31",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "fbbe38f6624b66a564e92959e50d40b07426e4067a5f329f30a18e98c5b4f0be",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "海阳科技 | 尼龙6+帘子布+涤纶工业丝+“羊”字辈",
+        "evidence": [
+          "尼龙6+帘子布+涤纶工业丝+“羊”字辈"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342775",
+      "published_at": "2026-10-29",
+      "name": "邵阳液压",
+      "title": "邵阳液压 | 航天+液压主业+三季报增长+生肖炒作",
+      "body": "航天+液压主业+三季报增长+生肖炒作",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "0ebb21800ea37c0066998f0191d0d0e8363e9d1ad05c1825f4655779e22bcb53",
+      "normalization": {
+        "event_key": "5fbe60b2fff15dcb2f451b1f669216d4b5f46ffef68a72cdc7ec7203e86ed5f1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "563380.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "0ebb21800ea37c0066998f0191d0d0e8363e9d1ad05c1825f4655779e22bcb53",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "邵阳液压 | 航天+液压主业+三季报增长+生肖炒作",
+        "evidence": [
+          "航天+液压主业+三季报增长+生肖炒作"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342404",
+      "published_at": "2026-10-29",
+      "name": "顺灏股份",
+      "title": "顺灏股份 | 太空算力+特种纸印刷+新型烟草",
+      "body": "太空算力+特种纸印刷+新型烟草",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2488bbc34f91b3d7a849a60a32adacfe32a7634950ebeb2772b8fc4345b5f336",
+      "normalization": {
+        "event_key": "7178ee7287368768484a764e19dd639ed70c9c5ae5077c0d4ec228acb55551ef",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2488bbc34f91b3d7a849a60a32adacfe32a7634950ebeb2772b8fc4345b5f336",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "顺灏股份 | 太空算力+特种纸印刷+新型烟草",
+        "evidence": [
+          "太空算力+特种纸印刷+新型烟草"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342382",
+      "published_at": "2026-10-29",
+      "name": "上海沪工",
+      "title": "上海沪工 | 三季报扭亏+焊接机器人+商业航天+焊接切割设备",
+      "body": "三季报扭亏+焊接机器人+商业航天+焊接切割设备",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "269b3530ab0b687a05fc53af734361abac1f1ba3cae592cdd15fdba11ec2452a",
+      "normalization": {
+        "event_key": "5a7e69e6f6eef90ca540f82983208f21c7811a4de49eb4ba0d9b59307c711663",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH",
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "269b3530ab0b687a05fc53af734361abac1f1ba3cae592cdd15fdba11ec2452a",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "562500.SH",
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "上海沪工 | 三季报扭亏+焊接机器人+商业航天+焊接切割设备",
+        "evidence": [
+          "三季报扭亏+焊接机器人+商业航天+焊接切割设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342196",
+      "published_at": "2026-10-29",
+      "name": "横店影视",
+      "title": "横店影视 | AI短剧+影视全产业链+电影放映",
+      "body": "AI短剧+影视全产业链+电影放映",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "abae5d003fab1f86e5f34e2d5b98fad07178fe2a707b5956ef7bbe76f48ce305",
+      "normalization": {
+        "event_key": "1d53500dbf5d4fbe7d811bd5188584ce48c72a3d12669bf84d87e6139f525d6a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "abae5d003fab1f86e5f34e2d5b98fad07178fe2a707b5956ef7bbe76f48ce305",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "横店影视 | AI短剧+影视全产业链+电影放映",
+        "evidence": [
+          "AI短剧+影视全产业链+电影放映"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95342114",
+      "published_at": "2026-10-29",
+      "name": "和泰机电",
+      "title": "和泰机电 | 物料输送设备+输送链+海外拓展",
+      "body": "物料输送设备+输送链+海外拓展",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "d622dc1a10f161f64a1881fb4ca485020f57442ea71fa3402737e3800ab304b7",
+      "normalization": {
+        "event_key": "3f62def452f577d5a2ccd6a4af4321b4c9133646cff8550d07c6d174ac869b3a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d622dc1a10f161f64a1881fb4ca485020f57442ea71fa3402737e3800ab304b7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "和泰机电 | 物料输送设备+输送链+海外拓展",
+        "evidence": [
+          "物料输送设备+输送链+海外拓展"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341923",
+      "published_at": "2026-10-29",
+      "name": "开滦股份",
+      "title": "开滦股份 | 第三季度净利增长+炼焦煤+煤化工",
+      "body": "第三季度净利增长+炼焦煤+煤化工",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b40c10c5c306c2951c1a91589f59c16eae034119b712fce6314e5940cbe8dfd6",
+      "normalization": {
+        "event_key": "d71da7b710e0568479b3dbdb1ab4bb34ed186fb1ad11737e2aeac57ed3ee87c8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515220.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b40c10c5c306c2951c1a91589f59c16eae034119b712fce6314e5940cbe8dfd6",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "515220.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "开滦股份 | 第三季度净利增长+炼焦煤+煤化工",
+        "evidence": [
+          "第三季度净利增长+炼焦煤+煤化工"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341891",
+      "published_at": "2026-10-29",
+      "name": "厦门信达",
+      "title": "厦门信达 | 大宗商品+算力业务+三季报增长",
+      "body": "大宗商品+算力业务+三季报增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "0b9d99b8b0a8090478d0cbe8feed64282eedaf31046a85ab82ba6c215d42a4e3",
+      "normalization": {
+        "event_key": "f60f618c977f2701ee2418101f3eefacab1b129da12b71f1fdc822757b3fb4d5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0b9d99b8b0a8090478d0cbe8feed64282eedaf31046a85ab82ba6c215d42a4e3",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "厦门信达 | 大宗商品+算力业务+三季报增长",
+        "evidence": [
+          "大宗商品+算力业务+三季报增长"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341594",
+      "published_at": "2026-10-29",
+      "name": "阳光照明",
+      "title": "阳光照明 | 商业航天+激光通信投资+LED照明+“羊”字辈",
+      "body": "商业航天+激光通信投资+LED照明+“羊”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "1bebd978d8277232c2010894d10cef546f90cfc678fb1a2de7bc5f8d106ee1b7",
+      "normalization": {
+        "event_key": "6bd103cce2a4c58a157d3aa1006565aadc878ef5725b7fd5bd718a3505fe1278",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1bebd978d8277232c2010894d10cef546f90cfc678fb1a2de7bc5f8d106ee1b7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "阳光照明 | 商业航天+激光通信投资+LED照明+“羊”字辈",
+        "evidence": [
+          "商业航天+激光通信投资+LED照明+“羊”字辈"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341592",
+      "published_at": "2026-10-29",
+      "name": "传智教育",
+      "title": "传智教育 | 三季报增长+AI职业教育+具身智能培训",
+      "body": "三季报增长+AI职业教育+具身智能培训",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "fa0cddef4a0642b97044d616e6c15b70f4bc6a4373e19a775dd5e8294caec330",
+      "normalization": {
+        "event_key": "7b7ab7315b9f140cd08cd1d0823a5a34e58fa872a902566d8b208f552e8ab2c7",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "fa0cddef4a0642b97044d616e6c15b70f4bc6a4373e19a775dd5e8294caec330",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "传智教育 | 三季报增长+AI职业教育+具身智能培训",
+        "evidence": [
+          "三季报增长+AI职业教育+具身智能培训"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341568",
+      "published_at": "2026-10-29",
+      "name": "龙江交通",
+      "title": "龙江交通 | 冰雪旅游保障+高速公路运营",
+      "body": "冰雪旅游保障+高速公路运营",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "627f960e88914ef63618ecc32081161a8fbea139f79d0abba18fb4f0f0b9ff05",
+      "normalization": {
+        "event_key": "495851b7a80450299552ef6f85393fa9a627637f5782da4f54f352a6dc92add9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "627f960e88914ef63618ecc32081161a8fbea139f79d0abba18fb4f0f0b9ff05",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "龙江交通 | 冰雪旅游保障+高速公路运营",
+        "evidence": [
+          "冰雪旅游保障+高速公路运营"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341543",
+      "published_at": "2026-10-29",
+      "name": "文投控股",
+      "title": "文投控股 | AI漫剧+游戏运营+影院多元业态",
+      "body": "AI漫剧+游戏运营+影院多元业态",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "39d433060da0cac33b13faaa5ccc59835b8f63d8b6a1dcf17d4a463b885d618c",
+      "normalization": {
+        "event_key": "5cf0ee40af272b767e3c4a3b4072126d7065b329c39857dedc045e9f7690cda7",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159869.SZ"
+        ],
+        "rejected_matched_symbols": [
+          "512980.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "39d433060da0cac33b13faaa5ccc59835b8f63d8b6a1dcf17d4a463b885d618c",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH",
+          "159869.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "文投控股 | AI漫剧+游戏运营+影院多元业态",
+        "evidence": [
+          "AI漫剧+游戏运营+影院多元业态"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341541",
+      "published_at": "2026-10-29",
+      "name": "爱建集团",
+      "title": "爱建集团 | 三季报增长+多元金融+金融科技",
+      "body": "三季报增长+多元金融+金融科技",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6bcadb2f07fb4def6848b35745acdab82d345e809533e01911d42590e83a0668",
+      "normalization": {
+        "event_key": "b426443134765ac14375853e5f062cfefc21e990b5fde28944c72e0a4c723129",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159851.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6bcadb2f07fb4def6848b35745acdab82d345e809533e01911d42590e83a0668",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "159851.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "爱建集团 | 三季报增长+多元金融+金融科技",
+        "evidence": [
+          "三季报增长+多元金融+金融科技"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341540",
+      "published_at": "2026-10-29",
+      "name": "龙溪股份",
+      "title": "龙溪股份 | 关节轴承+人形机器人+智元机器人",
+      "body": "关节轴承+人形机器人+智元机器人",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "fdecfc07da86ebdbcc431fc13269bb9a711fa04392a7d6754805c4c9bf55c745",
+      "normalization": {
+        "event_key": "066854651b9d32ad699d5ea058b6a968ddab639db735c644a67faacfc01135b9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "fdecfc07da86ebdbcc431fc13269bb9a711fa04392a7d6754805c4c9bf55c745",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "龙溪股份 | 关节轴承+人形机器人+智元机器人",
+        "evidence": [
+          "关节轴承+人形机器人+智元机器人"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341537",
+      "published_at": "2026-10-29",
+      "name": "中远海特",
+      "title": "中远海特 | 三季报增长+特种运输+重吊船",
+      "body": "三季报增长+特种运输+重吊船",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "d13195924d61743391dee39c9d31afa30c47116c631e4fb72553e323f8b13d74",
+      "normalization": {
+        "event_key": "74c42aca7d52e58b13b66c0b1211c55bb82ad28474912f4e1cee94461f8b80a2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d13195924d61743391dee39c9d31afa30c47116c631e4fb72553e323f8b13d74",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "中远海特 | 三季报增长+特种运输+重吊船",
+        "evidence": [
+          "三季报增长+特种运输+重吊船"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341528",
+      "published_at": "2026-10-29",
+      "name": "友阿股份",
+      "title": "友阿股份 | 尚阳通重组+功率半导体+百货零售",
+      "body": "尚阳通重组+功率半导体+百货零售",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "de91da0ef4a46736ce4b04093450b893a67c741fe46eab2e48ff8da9eb232c2a",
+      "normalization": {
+        "event_key": "834bca18fb6a6a73486154a4b39dff1c6dc21f85687eb5d685f5c6b4ba58fd64",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "de91da0ef4a46736ce4b04093450b893a67c741fe46eab2e48ff8da9eb232c2a",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "友阿股份 | 尚阳通重组+功率半导体+百货零售",
+        "evidence": [
+          "尚阳通重组+功率半导体+百货零售"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341526",
+      "published_at": "2026-10-29",
+      "name": "澳洋健康",
+      "title": "澳洋健康 | 脑机接口+医疗服务+国资控股+“羊”字辈",
+      "body": "脑机接口+医疗服务+国资控股+“羊”字辈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "dc13c31b4b644cd5a1bfeb079ce0aa05d9b061cfdf16411e2b14bedd41b068a5",
+      "normalization": {
+        "event_key": "971b8ffc79d687afc1949285f3404e2e2f48ea943870e217bfb2989dca617555",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dc13c31b4b644cd5a1bfeb079ce0aa05d9b061cfdf16411e2b14bedd41b068a5",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "澳洋健康 | 脑机接口+医疗服务+国资控股+“羊”字辈",
+        "evidence": [
+          "脑机接口+医疗服务+国资控股+“羊”字辈"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341523",
+      "published_at": "2026-10-29",
+      "name": "联明股份",
+      "title": "联明股份 | 三季报增长+新能源水冷板+汽车零部件",
+      "body": "三季报增长+新能源水冷板+汽车零部件",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b31108479ed4fe0a42d2cdff79379399f40c1165f1a055454db674193c3966df",
+      "normalization": {
+        "event_key": "02a52444fb04ca1719825f87a7cee3acc80d2b43f8d6f0551eb5d649a0d6a1ee",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b31108479ed4fe0a42d2cdff79379399f40c1165f1a055454db674193c3966df",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "联明股份 | 三季报增长+新能源水冷板+汽车零部件",
+        "evidence": [
+          "三季报增长+新能源水冷板+汽车零部件"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341468",
+      "published_at": "2026-10-29",
+      "name": "东贝集团",
+      "title": "东贝集团 | 机器人电机+制冷压缩机+商用制冷",
+      "body": "机器人电机+制冷压缩机+商用制冷",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "fdb760f6af00f5d382f7e784e1695ab2370bd6f6caefd37a2b3a21f061a68a2d",
+      "normalization": {
+        "event_key": "df9e38cf44866cc0c36e5fecede7ee3b2c93010303ebff2021659eeaee3cae6a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "fdb760f6af00f5d382f7e784e1695ab2370bd6f6caefd37a2b3a21f061a68a2d",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "东贝集团 | 机器人电机+制冷压缩机+商用制冷",
+        "evidence": [
+          "机器人电机+制冷压缩机+商用制冷"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341467",
+      "published_at": "2026-10-29",
+      "name": "实丰文化",
+      "title": "实丰文化 | AI玩具+IP潮玩+玩具出海",
+      "body": "AI玩具+IP潮玩+玩具出海",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "26a53d1b0fb6a20bbedb906d8ee029e5e3a060e8752f6a093db2f81d43cc348a",
+      "normalization": {
+        "event_key": "810a7abb22cf216299ddbe0b52f50690576c622086998b54eab1c0e9da74218e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "26a53d1b0fb6a20bbedb906d8ee029e5e3a060e8752f6a093db2f81d43cc348a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "实丰文化 | AI玩具+IP潮玩+玩具出海",
+        "evidence": [
+          "AI玩具+IP潮玩+玩具出海"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341463",
+      "published_at": "2026-10-29",
+      "name": "山东矿机",
+      "title": "山东矿机 | 煤炭机械+焊接机器人+第三季度业绩增长",
+      "body": "煤炭机械+焊接机器人+第三季度业绩增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b30777decf9b3c89807b5cb3e3c3e93c21015fb60c00565d937b41b2f059a8f6",
+      "normalization": {
+        "event_key": "4e956ca9c71d052b7a90dc3498592c2a6bb364bcf6d0ed9b6851e1a3ebc33064",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b30777decf9b3c89807b5cb3e3c3e93c21015fb60c00565d937b41b2f059a8f6",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "山东矿机 | 煤炭机械+焊接机器人+第三季度业绩增长",
+        "evidence": [
+          "煤炭机械+焊接机器人+第三季度业绩增长"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "95341462",
+      "published_at": "2026-10-29",
+      "name": "青岛食品",
+      "title": "青岛食品 | 股权转让+三季报增长+饼干食品",
+      "body": "股权转让+三季报增长+饼干食品",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "118a6149de30936f039fa86ee308662c81e03562285cb1c9429ec71d265a267a",
+      "normalization": {
+        "event_key": "0b88ff2cb2707d1e4f81360f74099e932ddf31952d04558b6fffc8712c7a3630",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "118a6149de30936f039fa86ee308662c81e03562285cb1c9429ec71d265a267a",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "青岛食品 | 股权转让+三季报增长+饼干食品",
+        "evidence": [
+          "股权转让+三季报增长+饼干食品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001219",
+      "published_at": null,
+      "name": "青岛食品",
+      "title": "青岛食品 | 休闲食品",
+      "body": "休闲食品",
+      "return_pct": 10.01213550567627,
+      "turnover": 54276760.0,
+      "dde_net": null,
+      "source_hash": "78f2edc3815b18e4f5160f3c0c07c5b318b62d6a7b992383431c44f90e6caf75",
+      "normalization": {
+        "event_key": "0b88ff2cb2707d1e4f81360f74099e932ddf31952d04558b6fffc8712c7a3630",
+        "duplicate_of": "118a6149de30936f039fa86ee308662c81e03562285cb1c9429ec71d265a267a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "78f2edc3815b18e4f5160f3c0c07c5b318b62d6a7b992383431c44f90e6caf75",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "青岛食品 | 休闲食品",
+        "evidence": [
+          "休闲食品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002526",
+      "published_at": null,
+      "name": "山东矿机",
+      "title": "山东矿机 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 10.067113876342773,
+      "turnover": 146112222.0,
+      "dde_net": null,
+      "source_hash": "0e6459a518f6c56bad38e47fd21dd5a32b9a16f6030101cb231f7025bbab9737",
+      "normalization": {
+        "event_key": "4e956ca9c71d052b7a90dc3498592c2a6bb364bcf6d0ed9b6851e1a3ebc33064",
+        "duplicate_of": "b30777decf9b3c89807b5cb3e3c3e93c21015fb60c00565d937b41b2f059a8f6",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0e6459a518f6c56bad38e47fd21dd5a32b9a16f6030101cb231f7025bbab9737",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "山东矿机 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002708",
+      "published_at": null,
+      "name": "光洋股份",
+      "title": "光洋股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 9.978880882263184,
+      "turnover": 2887379408.0,
+      "dde_net": null,
+      "source_hash": "8aa6f308b9dcd763c8fff4013dd59a05e02c240ef257751a1bbd5f570ab3e801",
+      "normalization": {
+        "event_key": "a13a93de546ce8be77a235140bbf393ef5ac13a031537c80f833e203d40119f6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8aa6f308b9dcd763c8fff4013dd59a05e02c240ef257751a1bbd5f570ab3e801",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "光洋股份 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002862",
+      "published_at": null,
+      "name": "实丰文化",
+      "title": "实丰文化 | 文娱用品",
+      "body": "文娱用品",
+      "return_pct": 10.0130033493042,
+      "turnover": 36290862.0,
+      "dde_net": null,
+      "source_hash": "0abd301775f4df3f6e01de9ad4f913a32d17f39e5a3fafebe910c8e7882f56a3",
+      "normalization": {
+        "event_key": "810a7abb22cf216299ddbe0b52f50690576c622086998b54eab1c0e9da74218e",
+        "duplicate_of": "26a53d1b0fb6a20bbedb906d8ee029e5e3a060e8752f6a093db2f81d43cc348a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0abd301775f4df3f6e01de9ad4f913a32d17f39e5a3fafebe910c8e7882f56a3",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "实丰文化 | 文娱用品",
+        "evidence": [
+          "文娱用品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "601956",
+      "published_at": null,
+      "name": "东贝集团",
+      "title": "东贝集团 | 家电零部",
+      "body": "家电零部",
+      "return_pct": 10.016420364379883,
+      "turnover": 105518669.0,
+      "dde_net": null,
+      "source_hash": "b5d2499c875b2a8d7e8784eb0f61b621e7b39eef21ba853b8cb0cd2af81987ef",
+      "normalization": {
+        "event_key": "df9e38cf44866cc0c36e5fecede7ee3b2c93010303ebff2021659eeaee3cae6a",
+        "duplicate_of": "fdb760f6af00f5d382f7e784e1695ab2370bd6f6caefd37a2b3a21f061a68a2d",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b5d2499c875b2a8d7e8784eb0f61b621e7b39eef21ba853b8cb0cd2af81987ef",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "东贝集团 | 家电零部",
+        "evidence": [
+          "家电零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600643",
+      "published_at": null,
+      "name": "爱建集团",
+      "title": "爱建集团 | 多元金融",
+      "body": "多元金融",
+      "return_pct": 10.10362720489502,
+      "turnover": 276870448.0,
+      "dde_net": null,
+      "source_hash": "64960349fdbfbacc9946df84d8bb97577d44b1d15fe500373a6be8fd84aafb22",
+      "normalization": {
+        "event_key": "b426443134765ac14375853e5f062cfefc21e990b5fde28944c72e0a4c723129",
+        "duplicate_of": "6bcadb2f07fb4def6848b35745acdab82d345e809533e01911d42590e83a0668",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "64960349fdbfbacc9946df84d8bb97577d44b1d15fe500373a6be8fd84aafb22",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "爱建集团 | 多元金融",
+        "evidence": [
+          "多元金融"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603006",
+      "published_at": null,
+      "name": "联明股份",
+      "title": "联明股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 9.962756156921387,
+      "turnover": 72326435.0,
+      "dde_net": null,
+      "source_hash": "9988e67e21a592dd7d5da275ddeae11cc6c75c5ecdc4085aec4827f61f878f0e",
+      "normalization": {
+        "event_key": "02a52444fb04ca1719825f87a7cee3acc80d2b43f8d6f0551eb5d649a0d6a1ee",
+        "duplicate_of": "b31108479ed4fe0a42d2cdff79379399f40c1165f1a055454db674193c3966df",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9988e67e21a592dd7d5da275ddeae11cc6c75c5ecdc4085aec4827f61f878f0e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "联明股份 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600715",
+      "published_at": null,
+      "name": "文投控股",
+      "title": "文投控股 | 游戏Ⅱ",
+      "body": "游戏Ⅱ",
+      "return_pct": 10.194174766540527,
+      "turnover": 1154861104.0,
+      "dde_net": null,
+      "source_hash": "f5c1cc7819937c78d3ae51d045f757da6d11fb3b9041be268c6ecc46d917dc39",
+      "normalization": {
+        "event_key": "5cf0ee40af272b767e3c4a3b4072126d7065b329c39857dedc045e9f7690cda7",
+        "duplicate_of": "39d433060da0cac33b13faaa5ccc59835b8f63d8b6a1dcf17d4a463b885d618c",
+        "effective_matched_symbols": [
+          "159869.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f5c1cc7819937c78d3ae51d045f757da6d11fb3b9041be268c6ecc46d917dc39",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159869.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "文投控股 | 游戏Ⅱ",
+        "evidence": [
+          "游戏Ⅱ"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600592",
+      "published_at": null,
+      "name": "龙溪股份",
+      "title": "龙溪股份 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 9.981048583984375,
+      "turnover": 247028038.0,
+      "dde_net": null,
+      "source_hash": "cf1b03c4fad9e278e1fc3edaf0947cf7ee497ccbeb23dc071ea6fc25e4440f50",
+      "normalization": {
+        "event_key": "066854651b9d32ad699d5ea058b6a968ddab639db735c644a67faacfc01135b9",
+        "duplicate_of": "fdecfc07da86ebdbcc431fc13269bb9a711fa04392a7d6754805c4c9bf55c745",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cf1b03c4fad9e278e1fc3edaf0947cf7ee497ccbeb23dc071ea6fc25e4440f50",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "龙溪股份 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600428",
+      "published_at": null,
+      "name": "中远海特",
+      "title": "中远海特 | 航运港口",
+      "body": "航运港口",
+      "return_pct": 10.048309326171875,
+      "turnover": 423744112.0,
+      "dde_net": null,
+      "source_hash": "67810d5fe65d96b7c43ba5f0fdc592fe9cf965e90a47868d6667e77dc82add72",
+      "normalization": {
+        "event_key": "74c42aca7d52e58b13b66c0b1211c55bb82ad28474912f4e1cee94461f8b80a2",
+        "duplicate_of": "d13195924d61743391dee39c9d31afa30c47116c631e4fb72553e323f8b13d74",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "67810d5fe65d96b7c43ba5f0fdc592fe9cf965e90a47868d6667e77dc82add72",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "中远海特 | 航运港口",
+        "evidence": [
+          "航运港口"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002172",
+      "published_at": null,
+      "name": "澳洋健康",
+      "title": "澳洋健康 | 医疗服务",
+      "body": "医疗服务",
+      "return_pct": 10.040983200073242,
+      "turnover": 757232208.0,
+      "dde_net": null,
+      "source_hash": "af16d57d622b1552d852fc8432b9ceafd82e0481c1fd60ac12a5943d59569d1b",
+      "normalization": {
+        "event_key": "971b8ffc79d687afc1949285f3404e2e2f48ea943870e217bfb2989dca617555",
+        "duplicate_of": "dc13c31b4b644cd5a1bfeb079ce0aa05d9b061cfdf16411e2b14bedd41b068a5",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "af16d57d622b1552d852fc8432b9ceafd82e0481c1fd60ac12a5943d59569d1b",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "澳洋健康 | 医疗服务",
+        "evidence": [
+          "医疗服务"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002277",
+      "published_at": null,
+      "name": "友阿股份",
+      "title": "友阿股份 | 一般零售",
+      "body": "一般零售",
+      "return_pct": 9.940357208251953,
+      "turnover": 413593424.0,
+      "dde_net": null,
+      "source_hash": "dbf314dd777e016970c40341aa831bb122d0ad6e5bbcbf026d32cfa5fc7f6989",
+      "normalization": {
+        "event_key": "834bca18fb6a6a73486154a4b39dff1c6dc21f85687eb5d685f5c6b4ba58fd64",
+        "duplicate_of": "de91da0ef4a46736ce4b04093450b893a67c741fe46eab2e48ff8da9eb232c2a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dbf314dd777e016970c40341aa831bb122d0ad6e5bbcbf026d32cfa5fc7f6989",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "友阿股份 | 一般零售",
+        "evidence": [
+          "一般零售"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "601188",
+      "published_at": null,
+      "name": "龙江交通",
+      "title": "龙江交通 | 铁路公路",
+      "body": "铁路公路",
+      "return_pct": 10.06289291381836,
+      "turnover": 642104880.0,
+      "dde_net": null,
+      "source_hash": "8c5cbf5152f8ba294731a13f3fbcca480aab0807c5192a7699e6e34167b418e0",
+      "normalization": {
+        "event_key": "495851b7a80450299552ef6f85393fa9a627637f5782da4f54f352a6dc92add9",
+        "duplicate_of": "627f960e88914ef63618ecc32081161a8fbea139f79d0abba18fb4f0f0b9ff05",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8c5cbf5152f8ba294731a13f3fbcca480aab0807c5192a7699e6e34167b418e0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "龙江交通 | 铁路公路",
+        "evidence": [
+          "铁路公路"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "003032",
+      "published_at": null,
+      "name": "传智教育",
+      "title": "传智教育 | 教育",
+      "body": "教育",
+      "return_pct": 9.96354866027832,
+      "turnover": 212346760.0,
+      "dde_net": null,
+      "source_hash": "7e8527d9a2ccb55483b4a3cc43c7e5d7114ea05753016491ecdecb173a8d24ec",
+      "normalization": {
+        "event_key": "7b7ab7315b9f140cd08cd1d0823a5a34e58fa872a902566d8b208f552e8ab2c7",
+        "duplicate_of": "fa0cddef4a0642b97044d616e6c15b70f4bc6a4373e19a775dd5e8294caec330",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7e8527d9a2ccb55483b4a3cc43c7e5d7114ea05753016491ecdecb173a8d24ec",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "传智教育 | 教育",
+        "evidence": [
+          "教育"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600261",
+      "published_at": null,
+      "name": "阳光照明",
+      "title": "阳光照明 | 照明设备",
+      "body": "照明设备",
+      "return_pct": 10.059171676635742,
+      "turnover": 278628288.0,
+      "dde_net": null,
+      "source_hash": "bd31ffaa5efd4a04fa4a49a22bdfbf89a4289ced6ebc249fe217a0b9d13feeab",
+      "normalization": {
+        "event_key": "6bd103cce2a4c58a157d3aa1006565aadc878ef5725b7fd5bd718a3505fe1278",
+        "duplicate_of": "1bebd978d8277232c2010894d10cef546f90cfc678fb1a2de7bc5f8d106ee1b7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bd31ffaa5efd4a04fa4a49a22bdfbf89a4289ced6ebc249fe217a0b9d13feeab",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "阳光照明 | 照明设备",
+        "evidence": [
+          "照明设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000701",
+      "published_at": null,
+      "name": "厦门信达",
+      "title": "厦门信达 | 贸易Ⅱ",
+      "body": "贸易Ⅱ",
+      "return_pct": 9.980430603027344,
+      "turnover": 320283648.0,
+      "dde_net": null,
+      "source_hash": "6cff24a5dee0349605b4c3efa3a6ea9ea80004684df0c5d718154f8535988d68",
+      "normalization": {
+        "event_key": "f60f618c977f2701ee2418101f3eefacab1b129da12b71f1fdc822757b3fb4d5",
+        "duplicate_of": "0b9d99b8b0a8090478d0cbe8feed64282eedaf31046a85ab82ba6c215d42a4e3",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6cff24a5dee0349605b4c3efa3a6ea9ea80004684df0c5d718154f8535988d68",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "厦门信达 | 贸易Ⅱ",
+        "evidence": [
+          "贸易Ⅱ"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600997",
+      "published_at": null,
+      "name": "开滦股份",
+      "title": "开滦股份 | 焦炭Ⅱ",
+      "body": "焦炭Ⅱ",
+      "return_pct": 10.0,
+      "turnover": 164820034.0,
+      "dde_net": null,
+      "source_hash": "3d6156e4fc043e822b8333ab44f654601b0a0a4fb1b3e95d72bfb3ea0ba15464",
+      "normalization": {
+        "event_key": "d71da7b710e0568479b3dbdb1ab4bb34ed186fb1ad11737e2aeac57ed3ee87c8",
+        "duplicate_of": "b40c10c5c306c2951c1a91589f59c16eae034119b712fce6314e5940cbe8dfd6",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3d6156e4fc043e822b8333ab44f654601b0a0a4fb1b3e95d72bfb3ea0ba15464",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "开滦股份 | 焦炭Ⅱ",
+        "evidence": [
+          "焦炭Ⅱ"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002275",
+      "published_at": null,
+      "name": "桂林三金",
+      "title": "桂林三金 | 中药Ⅱ",
+      "body": "中药Ⅱ",
+      "return_pct": 10.016155242919922,
+      "turnover": 309836336.0,
+      "dde_net": null,
+      "source_hash": "92cde6467821d79c09f1de53a0f1db2eafc032d1369627f07afa97cd0b2714f8",
+      "normalization": {
+        "event_key": "7a22cf6cd38194d7f1050bb39c5bf871b521940f8bd25dc0aca65ccef0ae0c8f",
+        "duplicate_of": "f438639889887093785d6f6cef79b597657c058660fa6a2337470c387a0923e8",
+        "effective_matched_symbols": [
+          "159647.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "92cde6467821d79c09f1de53a0f1db2eafc032d1369627f07afa97cd0b2714f8",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "159647.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "桂林三金 | 中药Ⅱ",
+        "evidence": [
+          "中药Ⅱ"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001225",
+      "published_at": null,
+      "name": "和泰机电",
+      "title": "和泰机电 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 9.98997688293457,
+      "turnover": 232527923.0,
+      "dde_net": null,
+      "source_hash": "93a7462994b456c406449e69a880c5650c4aad90bede4a43d4b202a0b52f9d44",
+      "normalization": {
+        "event_key": "3f62def452f577d5a2ccd6a4af4321b4c9133646cff8550d07c6d174ac869b3a",
+        "duplicate_of": "d622dc1a10f161f64a1881fb4ca485020f57442ea71fa3402737e3800ab304b7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "93a7462994b456c406449e69a880c5650c4aad90bede4a43d4b202a0b52f9d44",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "和泰机电 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603103",
+      "published_at": null,
+      "name": "横店影视",
+      "title": "横店影视 | 影视院线",
+      "body": "影视院线",
+      "return_pct": 10.031545639038086,
+      "turnover": 217694009.0,
+      "dde_net": null,
+      "source_hash": "e6b4b99408e2ed0bec21eac90dd646aa5e09bd86f3c06e2e544ff4ee0d0f18c4",
+      "normalization": {
+        "event_key": "1d53500dbf5d4fbe7d811bd5188584ce48c72a3d12669bf84d87e6139f525d6a",
+        "duplicate_of": "abae5d003fab1f86e5f34e2d5b98fad07178fe2a707b5956ef7bbe76f48ce305",
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e6b4b99408e2ed0bec21eac90dd646aa5e09bd86f3c06e2e544ff4ee0d0f18c4",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "横店影视 | 影视院线",
+        "evidence": [
+          "影视院线"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603131",
+      "published_at": null,
+      "name": "上海沪工",
+      "title": "上海沪工 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 10.0,
+      "turnover": 574523840.0,
+      "dde_net": null,
+      "source_hash": "34003dbbb4c2da49832e6ccf255a47d25a6b62dad0660b0b4a900c9587e8b838",
+      "normalization": {
+        "event_key": "5a7e69e6f6eef90ca540f82983208f21c7811a4de49eb4ba0d9b59307c711663",
+        "duplicate_of": "269b3530ab0b687a05fc53af734361abac1f1ba3cae592cdd15fdba11ec2452a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "34003dbbb4c2da49832e6ccf255a47d25a6b62dad0660b0b4a900c9587e8b838",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "上海沪工 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002565",
+      "published_at": null,
+      "name": "顺灏股份",
+      "title": "顺灏股份 | 包装印刷",
+      "body": "包装印刷",
+      "return_pct": 10.0,
+      "turnover": 969166832.0,
+      "dde_net": null,
+      "source_hash": "dab97f0f0e0d4a17825b82ee2b4c7dce8c8f4fc4020983fd7882ce76eca23b97",
+      "normalization": {
+        "event_key": "7178ee7287368768484a764e19dd639ed70c9c5ae5077c0d4ec228acb55551ef",
+        "duplicate_of": "2488bbc34f91b3d7a849a60a32adacfe32a7634950ebeb2772b8fc4345b5f336",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dab97f0f0e0d4a17825b82ee2b4c7dce8c8f4fc4020983fd7882ce76eca23b97",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "顺灏股份 | 包装印刷",
+        "evidence": [
+          "包装印刷"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002865",
+      "published_at": null,
+      "name": "钧达股份",
+      "title": "钧达股份 | 光伏设备",
+      "body": "光伏设备",
+      "return_pct": 9.997151374816895,
+      "turnover": 1099486064.0,
+      "dde_net": null,
+      "source_hash": "69312e3996e09601d387679ba2249541733c9452b438d3f4f319f78becb01869",
+      "normalization": {
+        "event_key": "3484808403cb0575376370069bcc872aec18394995d055cf5dd9f98598a2280c",
+        "duplicate_of": "b94fdb8aafd9f3cfc28456805cac825591dcf17a7d978d8e46dcd5b3f9e9720b",
+        "effective_matched_symbols": [
+          "515790.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "69312e3996e09601d387679ba2249541733c9452b438d3f4f319f78becb01869",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "515790.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "钧达股份 | 光伏设备",
+        "evidence": [
+          "光伏设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "301079",
+      "published_at": null,
+      "name": "邵阳液压",
+      "title": "邵阳液压 | 工程机械",
+      "body": "工程机械",
+      "return_pct": 20.014118194580078,
+      "turnover": 472972368.0,
+      "dde_net": null,
+      "source_hash": "f5fa278f8cc804804ccf979b8e5681a813821bd955cac4c8b9f6f6e000c8d074",
+      "normalization": {
+        "event_key": "5fbe60b2fff15dcb2f451b1f669216d4b5f46ffef68a72cdc7ec7203e86ed5f1",
+        "duplicate_of": "0ebb21800ea37c0066998f0191d0d0e8363e9d1ad05c1825f4655779e22bcb53",
+        "effective_matched_symbols": [
+          "560280.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f5fa278f8cc804804ccf979b8e5681a813821bd955cac4c8b9f6f6e000c8d074",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "560280.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "邵阳液压 | 工程机械",
+        "evidence": [
+          "工程机械"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605338",
+      "published_at": null,
+      "name": "巴比食品",
+      "title": "巴比食品 | 食品加工",
+      "body": "食品加工",
+      "return_pct": 10.028985023498535,
+      "turnover": 95984658.0,
+      "dde_net": null,
+      "source_hash": "b046e1d3215467215e123db7738cf9805845a13a4e4ed5c6299999a63324963c",
+      "normalization": {
+        "event_key": "5702206c10fa1acbbc6d23008b26f0af03972cb86810b3c97cb33c417802b8b4",
+        "duplicate_of": "cf7084ed2f72b4d1e674c2e314647ca265c41e6373003dd64bb9c8b1eb8a0f1a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "b046e1d3215467215e123db7738cf9805845a13a4e4ed5c6299999a63324963c",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "巴比食品 | 食品加工",
+        "evidence": [
+          "食品加工"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603382",
+      "published_at": null,
+      "name": "海阳科技",
+      "title": "海阳科技 | 化学纤维",
+      "body": "化学纤维",
+      "return_pct": 10.022148132324219,
+      "turnover": 251381009.0,
+      "dde_net": null,
+      "source_hash": "34ca3197d121690b5a01ce1965b41a6ce77bd38d97182ac45c75a72dfbaf9143",
+      "normalization": {
+        "event_key": "5b769c760d134158718789f8c172ea8fdeeb8b1e1ef000fcd91dd50cafa70c31",
+        "duplicate_of": "fbbe38f6624b66a564e92959e50d40b07426e4067a5f329f30a18e98c5b4f0be",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "34ca3197d121690b5a01ce1965b41a6ce77bd38d97182ac45c75a72dfbaf9143",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "海阳科技 | 化学纤维",
+        "evidence": [
+          "化学纤维"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603536",
+      "published_at": null,
+      "name": "惠发食品",
+      "title": "惠发食品 | 食品加工",
+      "body": "食品加工",
+      "return_pct": 10.010537147521973,
+      "turnover": 140291754.0,
+      "dde_net": null,
+      "source_hash": "c0958103998b9f7fb68ba9a1edaa5c128458f582b01d5c7b93de6e64808c8dd0",
+      "normalization": {
+        "event_key": "185918d1f7490029250e92b15257b501a76ea29a6239e3d2c97dee9557808409",
+        "duplicate_of": "e136986945a137fea87ebaacc07a4ad14eb31dba98b22cec6d7ac2710f65079b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "c0958103998b9f7fb68ba9a1edaa5c128458f582b01d5c7b93de6e64808c8dd0",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "惠发食品 | 食品加工",
+        "evidence": [
+          "食品加工"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605598",
+      "published_at": null,
+      "name": "上海港湾",
+      "title": "上海港湾 | 专业工程",
+      "body": "专业工程",
+      "return_pct": 9.982332229614258,
+      "turnover": 137500626.0,
+      "dde_net": null,
+      "source_hash": "83be56d18fdcaa4871f2f51b22f1ef57ef642066d2af92b69ca344e8bff71fbe",
+      "normalization": {
+        "event_key": "e839182b08ac21fd4a4de1d3b78cf1205b0dca12dfeec801a3d861debbf7e48b",
+        "duplicate_of": "2512733928cec823a45e3b1da80e4599306890494e3a180368428f835224e174",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "83be56d18fdcaa4871f2f51b22f1ef57ef642066d2af92b69ca344e8bff71fbe",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "上海港湾 | 专业工程",
+        "evidence": [
+          "专业工程"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603703",
+      "published_at": null,
+      "name": "盛洋科技",
+      "title": "盛洋科技 | 光学光电",
+      "body": "光学光电",
+      "return_pct": 10.030394554138184,
+      "turnover": 361176208.0,
+      "dde_net": null,
+      "source_hash": "d2107244836fd5a2406947c11056745e3fbdff08308e0dff1fd9db50261846a9",
+      "normalization": {
+        "event_key": "712cadd4f856d1f314ba74d0b6fcf808a89e92495e65d1c163e2285f76ca61e2",
+        "duplicate_of": "e77f8d55f9cd5e26cba28d22116b1762c52c6a52229ea7916e366a4b7f09c422",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d2107244836fd5a2406947c11056745e3fbdff08308e0dff1fd9db50261846a9",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "盛洋科技 | 光学光电",
+        "evidence": [
+          "光学光电"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002679",
+      "published_at": null,
+      "name": "福建金森",
+      "title": "福建金森 | 林业Ⅱ",
+      "body": "林业Ⅱ",
+      "return_pct": 10.020661354064941,
+      "turnover": 151196290.0,
+      "dde_net": null,
+      "source_hash": "40320b1b8f03ab314b1d9b13813a2d024b478a59326f9120bff93e2b228b011c",
+      "normalization": {
+        "event_key": "618bce7206b0e126a0f35c50e979bb1e1aebeceddc7ecb972d4aed17ec991f24",
+        "duplicate_of": "623642d66f133215244bd97612f038d06bf15fafeb079b530b4d46ce745d70a8",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "40320b1b8f03ab314b1d9b13813a2d024b478a59326f9120bff93e2b228b011c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "福建金森 | 林业Ⅱ",
+        "evidence": [
+          "林业Ⅱ"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605179",
+      "published_at": null,
+      "name": "一鸣食品",
+      "title": "一鸣食品 | 饮料乳品",
+      "body": "饮料乳品",
+      "return_pct": 9.995372772216797,
+      "turnover": 889176464.0,
+      "dde_net": null,
+      "source_hash": "ad0d8f117a7999b12974ceaac085120a3661c2c1f7c3dee7e77bd4eb457db57e",
+      "normalization": {
+        "event_key": "b4e41a498c9233539b2ee4ae79d51b80dfd4a3998442123d80e300ab89adb013",
+        "duplicate_of": "b4e82a47882f970109521f473a4fb09c69860b17e5c22669f324b04ad951a23e",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "510630.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "ad0d8f117a7999b12974ceaac085120a3661c2c1f7c3dee7e77bd4eb457db57e",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "一鸣食品 | 饮料乳品",
+        "evidence": [
+          "饮料乳品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600118",
+      "published_at": null,
+      "name": "中国卫星",
+      "title": "中国卫星 | 航天装备",
+      "body": "航天装备",
+      "return_pct": 9.996065139770508,
+      "turnover": 3113427488.0,
+      "dde_net": null,
+      "source_hash": "38d3e1055a166ccc0730f66265f9eac6abbabe65758f7f841071f671c45c79e0",
+      "normalization": {
+        "event_key": "ad9ffe28192965196d122d17181ff974e621c9c10a14c2c4b40708050e59ad3b",
+        "duplicate_of": "fb9c47a7bc3194b5ce3d6c06ca5b3ac11cd02fda49b9f5d6b54f1de564279652",
+        "effective_matched_symbols": [
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "38d3e1055a166ccc0730f66265f9eac6abbabe65758f7f841071f671c45c79e0",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "中国卫星 | 航天装备",
+        "evidence": [
+          "航天装备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600501",
+      "published_at": null,
+      "name": "航天晨光",
+      "title": "航天晨光 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 10.032573699951172,
+      "turnover": 568768624.0,
+      "dde_net": null,
+      "source_hash": "07df5307d0967d9f898607143e2fce3366700194f306257996a3dc068ae9533f",
+      "normalization": {
+        "event_key": "82a42cb0547e9a8ef807adc1251c1477f9dc51214a299114db1e31d835ea1da0",
+        "duplicate_of": "58132bc92b175fcfb11076e37af3da75c3e36fd1dcac0c797d5baacca8a0aad7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "07df5307d0967d9f898607143e2fce3366700194f306257996a3dc068ae9533f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "航天晨光 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000530",
+      "published_at": null,
+      "name": "冰山冷热",
+      "title": "冰山冷热 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 10.026738166809082,
+      "turnover": 1804942208.0,
+      "dde_net": null,
+      "source_hash": "09997ad2612254ec69eb66b038e18414f49086339064f7bb30dd622eaa6da2c0",
+      "normalization": {
+        "event_key": "dff457199ac3b4af40207bc2925a8c6f2a33577da2edf1919ffc827f84134b93",
+        "duplicate_of": "2bb04d8636d2ea635fc17892fc561b177f635d9aef6e0484124d1397c874d291",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "09997ad2612254ec69eb66b038e18414f49086339064f7bb30dd622eaa6da2c0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "冰山冷热 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600576",
+      "published_at": null,
+      "name": "祥源文旅",
+      "title": "祥源文旅 | 旅游及景",
+      "body": "旅游及景",
+      "return_pct": 10.0204496383667,
+      "turnover": 135127901.0,
+      "dde_net": null,
+      "source_hash": "20662fdbfc73f7132b676bb584e468fdf8349eb9ad79238c5e01c4248af6dba5",
+      "normalization": {
+        "event_key": "ed1fae1963b9affc38e767a80dcbfa98ab4a17e6ac9b9dc3614702ddaed31286",
+        "duplicate_of": "e2ab4d002d652056e9bc8dc41372512083d814174bcd5f088d0f96e23994cfbf",
+        "effective_matched_symbols": [
+          "159766.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "20662fdbfc73f7132b676bb584e468fdf8349eb9ad79238c5e01c4248af6dba5",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159766.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "祥源文旅 | 旅游及景",
+        "evidence": [
+          "旅游及景"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002149",
+      "published_at": null,
+      "name": "西部材料",
+      "title": "西部材料 | 小金属",
+      "body": "小金属",
+      "return_pct": 10.010213851928711,
+      "turnover": 1847363520.0,
+      "dde_net": null,
+      "source_hash": "e08e66d0531926529dc8a7ef62595643caf20911caffb21ff56ea65bfbc52621",
+      "normalization": {
+        "event_key": "c97917241eabfd5767d002f4fb5cd07a338153b1066160aeab11772d2f31f384",
+        "duplicate_of": "f773b9a71a56b4725f06e12d698a33ef5652059fd05010ca1fbfadd0442d16f0",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e08e66d0531926529dc8a7ef62595643caf20911caffb21ff56ea65bfbc52621",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "西部材料 | 小金属",
+        "evidence": [
+          "小金属"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002531",
+      "published_at": null,
+      "name": "天顺风能",
+      "title": "天顺风能 | 风电设备",
+      "body": "风电设备",
+      "return_pct": 9.968847274780273,
+      "turnover": 962133680.0,
+      "dde_net": null,
+      "source_hash": "50ccf1e8982df84ff41bc3ed755c89676f9aa8bc23c6316cda25d66f860634cc",
+      "normalization": {
+        "event_key": "739d5656b6e267d8379ee0a03aeff1fc7eef7e7079b4ecb0d56d1f638d834a20",
+        "duplicate_of": "9628f8aba54aa320a5bd1cc3ed46ebc4b0b3e8c48b14438ec4e790ec6f484cde",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "50ccf1e8982df84ff41bc3ed755c89676f9aa8bc23c6316cda25d66f860634cc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "天顺风能 | 风电设备",
+        "evidence": [
+          "风电设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002943",
+      "published_at": null,
+      "name": "宇晶股份",
+      "title": "宇晶股份 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 9.996017456054688,
+      "turnover": 902711424.0,
+      "dde_net": null,
+      "source_hash": "93dd0631ab745d7dd80035714d6254cd40bdc366f2828a5f166e3f02079edfa1",
+      "normalization": {
+        "event_key": "36e4508b35b8a5cbe136ba596d944bf52cdd7b95372b68067917921fbb1eabd3",
+        "duplicate_of": "8519b5c85922327561c078178c968531a2d83e74ec9d95af9bbe09996448cd49",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "93dd0631ab745d7dd80035714d6254cd40bdc366f2828a5f166e3f02079edfa1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "宇晶股份 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002086",
+      "published_at": null,
+      "name": "东方海洋",
+      "title": "东方海洋 | 农产品加",
+      "body": "农产品加",
+      "return_pct": 9.829059600830078,
+      "turnover": 836997776.0,
+      "dde_net": null,
+      "source_hash": "9c9d9ed5e53c27a724787f0bbb66249969199be46fda381bd9d69f8a39deae48",
+      "normalization": {
+        "event_key": "d212053d355bc1aeea1b40a6ef603f10ddc432ed61e4c427f08057fbbc47e3f6",
+        "duplicate_of": "5ca2fa97ce36eb0d18801434868ed27131d85bb4f4abd80237c63d1a59318880",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9c9d9ed5e53c27a724787f0bbb66249969199be46fda381bd9d69f8a39deae48",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "东方海洋 | 农产品加",
+        "evidence": [
+          "农产品加"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "003011",
+      "published_at": null,
+      "name": "海象新材",
+      "title": "海象新材 | 家居用品",
+      "body": "家居用品",
+      "return_pct": 1.4125956296920776,
+      "turnover": 168130753.0,
+      "dde_net": null,
+      "source_hash": "9bbf07d7300de649f51e594648870e1b7c0826af1bede5df06e1e1b1056b8ecf",
+      "normalization": {
+        "event_key": "bab50a2b6e51ca5eff3bff847c2e0b0c12b55ab5728bae5bdca85f66d4da485c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9bbf07d7300de649f51e594648870e1b7c0826af1bede5df06e1e1b1056b8ecf",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "海象新材 | 家居用品",
+        "evidence": [
+          "家居用品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "605118",
+      "published_at": null,
+      "name": "力鼎光电",
+      "title": "力鼎光电 | 计算机设",
+      "body": "计算机设",
+      "return_pct": 6.391952991485596,
+      "turnover": 484484944.0,
+      "dde_net": null,
+      "source_hash": "468217562c191a0aac79fda78f60dac479cd6f376a28b9f6f57947d1c6ce9c38",
+      "normalization": {
+        "event_key": "a390cd82f214723971cd1841f78167fad1dcf9c581c6b6e9075c8c4f1138121c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "468217562c191a0aac79fda78f60dac479cd6f376a28b9f6f57947d1c6ce9c38",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "力鼎光电 | 计算机设",
+        "evidence": [
+          "计算机设"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600727",
+      "published_at": null,
+      "name": "鲁北化工",
+      "title": "鲁北化工 | 化学原料",
+      "body": "化学原料",
+      "return_pct": 5.462822437286377,
+      "turnover": 308193648.0,
+      "dde_net": null,
+      "source_hash": "0e817c95d5471e282a06dc8be54503d082a55c0d84e285572e815b38a28bc554",
+      "normalization": {
+        "event_key": "513217ea19b3c880dc55ed52eb307d3a48deeaffa286aa4cca874663a814c76a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0e817c95d5471e282a06dc8be54503d082a55c0d84e285572e815b38a28bc554",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "鲁北化工 | 化学原料",
+        "evidence": [
+          "化学原料"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603279",
+      "published_at": null,
+      "name": "景津装备",
+      "title": "景津装备 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 9.27384090423584,
+      "turnover": 553430976.0,
+      "dde_net": null,
+      "source_hash": "b2ed393ece4231d6b827bd2eb1068815aed140eec3bed5585318e7283d448429",
+      "normalization": {
+        "event_key": "4c064c9b4fd644d2857280404a34db592e1c035281c35432c1a6e5d7a7dc0442",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b2ed393ece4231d6b827bd2eb1068815aed140eec3bed5585318e7283d448429",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "景津装备 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "003028",
+      "published_at": null,
+      "name": "振邦智能",
+      "title": "振邦智能 | 家电零部",
+      "body": "家电零部",
+      "return_pct": 2.663064479827881,
+      "turnover": 387064240.0,
+      "dde_net": null,
+      "source_hash": "09b935362ea571fb74f3a90f32e2659366ccd4a3caa8852a9993ca33fd2cecde",
+      "normalization": {
+        "event_key": "d9718f5d394121765464f948c518ab4187cea81146036b981305776d5ad4f2f1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "09b935362ea571fb74f3a90f32e2659366ccd4a3caa8852a9993ca33fd2cecde",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "振邦智能 | 家电零部",
+        "evidence": [
+          "家电零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "000678",
+      "published_at": null,
+      "name": "襄阳轴承",
+      "title": "襄阳轴承 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 6.473594665527344,
+      "turnover": 3689998768.0,
+      "dde_net": null,
+      "source_hash": "2896a259544222962728b30555de3379c41d9361609d8a2d90ea6c2d165db252",
+      "normalization": {
+        "event_key": "a7f5d98683f3980e847740a75a02b45a3f7824c8f4560658980e7a741e1bc343",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2896a259544222962728b30555de3379c41d9361609d8a2d90ea6c2d165db252",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "襄阳轴承 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002337",
+      "published_at": null,
+      "name": "赛象科技",
+      "title": "赛象科技 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 5.010438442230225,
+      "turnover": 381669440.0,
+      "dde_net": null,
+      "source_hash": "9d5ed673af92251df3e89f5207062343e9ed0d256a714fd39dc67ff27db04f43",
+      "normalization": {
+        "event_key": "92ef3f8684b41220b7215a68de3e7d072ffcc831d074c6bab428116f3b13af2f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9d5ed673af92251df3e89f5207062343e9ed0d256a714fd39dc67ff27db04f43",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "赛象科技 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002434",
+      "published_at": null,
+      "name": "万里扬",
+      "title": "万里扬 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 3.0927834510803223,
+      "turnover": 1133893952.0,
+      "dde_net": null,
+      "source_hash": "78b9f524fddb4e8fd3f63d69068681e08c65d81b68ae0608803202027ecc8089",
+      "normalization": {
+        "event_key": "79e89aac6d122639d15bf6f09142ae1b1248c888fdf719f339daa155873d455d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "78b9f524fddb4e8fd3f63d69068681e08c65d81b68ae0608803202027ecc8089",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "万里扬 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002347",
+      "published_at": null,
+      "name": "泰尔股份",
+      "title": "泰尔股份 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 2.5641026496887207,
+      "turnover": 752166112.0,
+      "dde_net": null,
+      "source_hash": "c1a6d8d96c35a172b0748ebeab8e48464bb97b5772423d93a8d2afff23f7edf1",
+      "normalization": {
+        "event_key": "1d0d388e5b3db16ec0510a74ccab3fcc37b139d50f1e9726e05def0ae16a4fc1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c1a6d8d96c35a172b0748ebeab8e48464bb97b5772423d93a8d2afff23f7edf1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "泰尔股份 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603066",
+      "published_at": null,
+      "name": "音飞储存",
+      "title": "音飞储存 | 物流",
+      "body": "物流",
+      "return_pct": 2.816901445388794,
+      "turnover": 200527836.0,
+      "dde_net": null,
+      "source_hash": "81f607bfd47441ab2207a262c572a7fd07388dce84996cebd2d2fac33f2e1357",
+      "normalization": {
+        "event_key": "3a37dcc6ecca8665f00e02dd81e4f5ecd36918dd4c5d7301160d84111b8259e7",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "81f607bfd47441ab2207a262c572a7fd07388dce84996cebd2d2fac33f2e1357",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "音飞储存 | 物流",
+        "evidence": [
+          "物流"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002164",
+      "published_at": null,
+      "name": "宁波东力",
+      "title": "宁波东力 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 6.449703693389893,
+      "turnover": 1967416288.0,
+      "dde_net": null,
+      "source_hash": "cb0cc35133eec0092f618adf9bb0e7bd72147884ea23751cc46bc6be86d3deaf",
+      "normalization": {
+        "event_key": "4e16ea384539640d25a768a8353d33c6aa16ab17f1b01cc903fda20934e3f015",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cb0cc35133eec0092f618adf9bb0e7bd72147884ea23751cc46bc6be86d3deaf",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "宁波东力 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603081",
+      "published_at": null,
+      "name": "大丰实业",
+      "title": "大丰实业 | 专用设备",
+      "body": "专用设备",
+      "return_pct": -0.08841732889413834,
+      "turnover": 538046864.0,
+      "dde_net": null,
+      "source_hash": "c7c30a01f291819f348fc59833508e3100fa76dda6332eb2ac281b50132c5a58",
+      "normalization": {
+        "event_key": "1bdc19b168051222c6f4b5c86fa9633d2a7c1117f46c8b5eb27bc92cc4cd8dba",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c7c30a01f291819f348fc59833508e3100fa76dda6332eb2ac281b50132c5a58",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "大丰实业 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001317",
+      "published_at": null,
+      "name": "三羊马",
+      "title": "三羊马 | 铁路公路",
+      "body": "铁路公路",
+      "return_pct": 4.932249546051025,
+      "turnover": 1095654512.0,
+      "dde_net": null,
+      "source_hash": "351e7c4fa9a5470b9f87fe04da43cd7c90ba3f5bcdd09a11d9580d39b4055cf9",
+      "normalization": {
+        "event_key": "603e8baeb5733159975ada66689277a62c319e4f372339ef685475bc953be90a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "351e7c4fa9a5470b9f87fe04da43cd7c90ba3f5bcdd09a11d9580d39b4055cf9",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "三羊马 | 铁路公路",
+        "evidence": [
+          "铁路公路"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600611",
+      "published_at": null,
+      "name": "大众交通",
+      "title": "大众交通 | 铁路公路",
+      "body": "铁路公路",
+      "return_pct": 5.301204681396484,
+      "turnover": 661370784.0,
+      "dde_net": null,
+      "source_hash": "12bef63afe604cd8725ec9421981e866459f782c3beefb2ac1d699609a29b58f",
+      "normalization": {
+        "event_key": "6c3920c70097252b0ff75c87c1a529056c09d25cbb3f9bbfddb38b694c4b8c41",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "12bef63afe604cd8725ec9421981e866459f782c3beefb2ac1d699609a29b58f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "大众交通 | 铁路公路",
+        "evidence": [
+          "铁路公路"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603211",
+      "published_at": null,
+      "name": "晋拓股份",
+      "title": "晋拓股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 2.6984951496124268,
+      "turnover": 458556528.0,
+      "dde_net": null,
+      "source_hash": "f0649fc0903c9d7c30656886711334f1ed49428626a0143a9dd6dd71b77f41d8",
+      "normalization": {
+        "event_key": "ab0fc7d2be224a1370fd777d41634a62d6eed0f2f0af4ca6a65886146f54d96e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f0649fc0903c9d7c30656886711334f1ed49428626a0143a9dd6dd71b77f41d8",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "晋拓股份 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "300177",
+      "published_at": null,
+      "name": "中海达",
+      "title": "中海达 | 军工电子",
+      "body": "军工电子",
+      "return_pct": 14.194578170776367,
+      "turnover": 889652608.0,
+      "dde_net": null,
+      "source_hash": "8015c207c1465b7f70d655ae03608d92da2326d44efdf98b681e06ea2d859a40",
+      "normalization": {
+        "event_key": "0c2aee8416ab324fb5ead590431e724673666a4248ed07e0220ca490fc9dcc45",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512660.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8015c207c1465b7f70d655ae03608d92da2326d44efdf98b681e06ea2d859a40",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "512660.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "中海达 | 军工电子",
+        "evidence": [
+          "军工电子"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002949",
+      "published_at": null,
+      "name": "华阳国际",
+      "title": "华阳国际 | 工程咨询",
+      "body": "工程咨询",
+      "return_pct": 2.7477102279663086,
+      "turnover": 264677519.0,
+      "dde_net": null,
+      "source_hash": "cc10c184296bf8fb9f558f251981a4c0dc1e0fc34dda797c9da3c7bbfac3ce71",
+      "normalization": {
+        "event_key": "6d75541fc57311e2a80d6bc57f2bc38d4067a96388a1346a70a885a7a679e43f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cc10c184296bf8fb9f558f251981a4c0dc1e0fc34dda797c9da3c7bbfac3ce71",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "华阳国际 | 工程咨询",
+        "evidence": [
+          "工程咨询"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001270",
+      "published_at": null,
+      "name": "铖昌科技",
+      "title": "铖昌科技 | 军工电子",
+      "body": "军工电子",
+      "return_pct": 6.174999713897705,
+      "turnover": 1602328320.0,
+      "dde_net": null,
+      "source_hash": "a60bc81f339e1461805e1ba6792c0cee6a6d6bf1e61bdedbd555ca5b3b1f5d91",
+      "normalization": {
+        "event_key": "894f48006b5af2df44f862167d9555a85a70b2d11c8446c40cf7c58670a39df9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512660.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a60bc81f339e1461805e1ba6792c0cee6a6d6bf1e61bdedbd555ca5b3b1f5d91",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "512660.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "铖昌科技 | 军工电子",
+        "evidence": [
+          "军工电子"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001400",
+      "published_at": null,
+      "name": "江顺科技",
+      "title": "江顺科技 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 4.359642028808594,
+      "turnover": 760060752.0,
+      "dde_net": null,
+      "source_hash": "809bc11606d740decedf82746ccc051f4e9941b7941916f143b8f0310610b9fc",
+      "normalization": {
+        "event_key": "0b2b5eddc431db44033064800b50b69198f5afbdc4f5092d0b69b33d0a64da3d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "809bc11606d740decedf82746ccc051f4e9941b7941916f143b8f0310610b9fc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "江顺科技 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001379",
+      "published_at": null,
+      "name": "腾达科技",
+      "title": "腾达科技 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 6.384408473968506,
+      "turnover": 131102375.0,
+      "dde_net": null,
+      "source_hash": "c1906ff7bb6fb2a90e242a1e2da02f07dcee94f9ed2711e962525ffc4eff26f1",
+      "normalization": {
+        "event_key": "dba6ded0d571e679839991085ee74cb4d8d08e8a4be5a9506c1c2368d9851cd8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c1906ff7bb6fb2a90e242a1e2da02f07dcee94f9ed2711e962525ffc4eff26f1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "腾达科技 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "301232",
+      "published_at": null,
+      "name": "飞沃科技",
+      "title": "飞沃科技 | 风电设备",
+      "body": "风电设备",
+      "return_pct": 17.08953094482422,
+      "turnover": 1428815360.0,
+      "dde_net": null,
+      "source_hash": "b9af660b6c0674e79b2ed4b041fb22507d8424cfd75abd7e430c273fc643d2ec",
+      "normalization": {
+        "event_key": "9101477df50456c78a25b79b5b41af98333283d8519a26cb7c1d2d7f9c926de6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b9af660b6c0674e79b2ed4b041fb22507d8424cfd75abd7e430c273fc643d2ec",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "飞沃科技 | 风电设备",
+        "evidence": [
+          "风电设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600510",
+      "published_at": null,
+      "name": "黑牡丹",
+      "title": "黑牡丹 | 房地产开",
+      "body": "房地产开",
+      "return_pct": 5.385996341705322,
+      "turnover": 157119816.0,
+      "dde_net": null,
+      "source_hash": "79b533df393f4ae9d82356fa302d6afb13a3df32dd7aab00b154703f49a1cdac",
+      "normalization": {
+        "event_key": "1208ad98951629702f7987da89a5f976c99c7ca916109b962e6256a697a12aff",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "79b533df393f4ae9d82356fa302d6afb13a3df32dd7aab00b154703f49a1cdac",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "黑牡丹 | 房地产开",
+        "evidence": [
+          "房地产开"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600742",
+      "published_at": null,
+      "name": "富维股份",
+      "title": "富维股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 2.34375,
+      "turnover": 241023642.0,
+      "dde_net": null,
+      "source_hash": "49d8d6f66708d46011d56f95611fe3717e9fcdec218c9612fc1f0b2630745947",
+      "normalization": {
+        "event_key": "69b5f6f5297c88ae7e32b6e8ea71775acc38a29a9a273600a58878499391783f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "49d8d6f66708d46011d56f95611fe3717e9fcdec218c9612fc1f0b2630745947",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "富维股份 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002963",
+      "published_at": null,
+      "name": "豪尔赛",
+      "title": "豪尔赛 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": 3.2919254302978516,
+      "turnover": 134690327.0,
+      "dde_net": null,
+      "source_hash": "7998aa52ee83cf34d69aaf162daa60e11038075c1fee6c76c16afe43e08beea8",
+      "normalization": {
+        "event_key": "a839dc613a2259877ead8bee7be60525d07814b240d2eb63008a1ba97f5530b9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7998aa52ee83cf34d69aaf162daa60e11038075c1fee6c76c16afe43e08beea8",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "豪尔赛 | 装修装饰",
+        "evidence": [
+          "装修装饰"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600728",
+      "published_at": null,
+      "name": "佳都科技",
+      "title": "佳都科技 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 8.552631378173828,
+      "turnover": 727020160.0,
+      "dde_net": null,
+      "source_hash": "40d62dfd0d8015892912628a08019d4a69096195312e8572c14440d07fbfc628",
+      "normalization": {
+        "event_key": "a5ee643393c32d02c4f77ec2fb3dcb298a62ed5479f1ffe61fae4959582050b8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "40d62dfd0d8015892912628a08019d4a69096195312e8572c14440d07fbfc628",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "佳都科技 | IT服务Ⅱ",
+        "evidence": [
+          "IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600771",
+      "published_at": null,
+      "name": "广誉远",
+      "title": "广誉远 | 中药Ⅱ",
+      "body": "中药Ⅱ",
+      "return_pct": -9.970458030700684,
+      "turnover": 283282480.0,
+      "dde_net": null,
+      "source_hash": "6a55ff0e02ddec195b2fefd140a183169fbe27f2796af812054889bd1adc3dd5",
+      "normalization": {
+        "event_key": "b59647bd025b7628ce00431d2ea325049bb7e15370810d0ce12c680033055879",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159647.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6a55ff0e02ddec195b2fefd140a183169fbe27f2796af812054889bd1adc3dd5",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "159647.SZ"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "广誉远 | 中药Ⅱ",
+        "evidence": [
+          "中药Ⅱ"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002274",
+      "published_at": null,
+      "name": "华昌化工",
+      "title": "华昌化工 | 化学原料",
+      "body": "化学原料",
+      "return_pct": -10.056926727294922,
+      "turnover": 202064154.0,
+      "dde_net": null,
+      "source_hash": "367721086beafb6b1d5048107a2479e3c79b6a99d5e7a6410a224c87b9f15801",
+      "normalization": {
+        "event_key": "bd031c8e22d16367366c2c3d49b43532286acfce5d689ff6db2cea042694b138",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "367721086beafb6b1d5048107a2479e3c79b6a99d5e7a6410a224c87b9f15801",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "华昌化工 | 化学原料",
+        "evidence": [
+          "化学原料"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603101",
+      "published_at": null,
+      "name": "汇嘉时代",
+      "title": "汇嘉时代 | 一般零售",
+      "body": "一般零售",
+      "return_pct": -9.952038764953613,
+      "turnover": 253577509.0,
+      "dde_net": null,
+      "source_hash": "2255e22594f094abcf1b4513c2945de3df5a281faa84941412b77112860568a0",
+      "normalization": {
+        "event_key": "580002449db86a3a63c597c751a3f867a8f4c52833594307bf0314421b3bb6b2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2255e22594f094abcf1b4513c2945de3df5a281faa84941412b77112860568a0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "汇嘉时代 | 一般零售",
+        "evidence": [
+          "一般零售"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002774",
+      "published_at": null,
+      "name": "快意电梯",
+      "title": "快意电梯 | 专用设备",
+      "body": "专用设备",
+      "return_pct": -9.967845916748047,
+      "turnover": 166962635.0,
+      "dde_net": null,
+      "source_hash": "08f42aa29c6856b16adef6976054600184843705def300f3402896602310c966",
+      "normalization": {
+        "event_key": "211367ec84f01e111292eb100899a46762bb662faf5aa9b6a9272e8a4293389b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "08f42aa29c6856b16adef6976054600184843705def300f3402896602310c966",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "快意电梯 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603730",
+      "published_at": null,
+      "name": "岱美股份",
+      "title": "岱美股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": -9.956331253051758,
+      "turnover": 427141168.0,
+      "dde_net": null,
+      "source_hash": "81c82fe9c4f811cbd94832e38d3dcb062759618883ee52f272c869b6eb44d74e",
+      "normalization": {
+        "event_key": "43f3e4452d8bcf4216b44863f739a082f3eb6a76bc783796c7db6d81f8ec9906",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "81c82fe9c4f811cbd94832e38d3dcb062759618883ee52f272c869b6eb44d74e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "岱美股份 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002938",
+      "published_at": null,
+      "name": "鹏鼎控股",
+      "title": "鹏鼎控股 | 元件",
+      "body": "元件",
+      "return_pct": -9.998529434204102,
+      "turnover": 1650664112.0,
+      "dde_net": null,
+      "source_hash": "d8332d0bb3873d5593924a8a25352a16b5cd7f0685a152bae43214dc863ba211",
+      "normalization": {
+        "event_key": "2b10e255415e90c32be3c34079d5521a017d3e602c0c05fdee611754e0213a0f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d8332d0bb3873d5593924a8a25352a16b5cd7f0685a152bae43214dc863ba211",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "鹏鼎控股 | 元件",
+        "evidence": [
+          "元件"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002074",
+      "published_at": null,
+      "name": "国轩高科",
+      "title": "国轩高科 | 电池",
+      "body": "电池",
+      "return_pct": -10.0,
+      "turnover": 1263358768.0,
+      "dde_net": null,
+      "source_hash": "eeb906a913eb7c6be85dff9b4b2e15593aaaf5fe344404883417dff5e406feff",
+      "normalization": {
+        "event_key": "46e1e62d251d82e43fe93d5d72586ff58dc364a7058930ebbcc0bb223d54d343",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159755.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "eeb906a913eb7c6be85dff9b4b2e15593aaaf5fe344404883417dff5e406feff",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "159755.SZ"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "国轩高科 | 电池",
+        "evidence": [
+          "电池"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002820",
+      "published_at": null,
+      "name": "桂发祥",
+      "title": "桂发祥 | 休闲食品",
+      "body": "休闲食品",
+      "return_pct": -9.951690673828125,
+      "turnover": 411916704.0,
+      "dde_net": null,
+      "source_hash": "1065c41382bbe32013b223a9f9a75596fced94a77b5b7fa38a68ea1ed06456b9",
+      "normalization": {
+        "event_key": "7e9633727edc197e3b9d715544058adead4a98e878b2ff81661b1eb7ddb24870",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1065c41382bbe32013b223a9f9a75596fced94a77b5b7fa38a68ea1ed06456b9",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "桂发祥 | 休闲食品",
+        "evidence": [
+          "休闲食品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "605058",
+      "published_at": null,
+      "name": "澳弘电子",
+      "title": "澳弘电子 | 元件",
+      "body": "元件",
+      "return_pct": -10.005908966064453,
+      "turnover": 680301136.0,
+      "dde_net": null,
+      "source_hash": "35cd751560230789439fe7c50cd1f70474a338d37a9bc79d1d5a016d50c65290",
+      "normalization": {
+        "event_key": "bb5bd5fa2ae2aba250983077bab5cf76282d1bc9fe5238ea212f3588ade3c00b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "35cd751560230789439fe7c50cd1f70474a338d37a9bc79d1d5a016d50c65290",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "澳弘电子 | 元件",
+        "evidence": [
+          "元件"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "003018",
+      "published_at": null,
+      "name": "金富科技",
+      "title": "金富科技 | 包装印刷",
+      "body": "包装印刷",
+      "return_pct": -10.0,
+      "turnover": 439847488.0,
+      "dde_net": null,
+      "source_hash": "22cc6c07ff98ebdf6ab25c0d63df6f344be83df9de9523b1724fd78c543bc677",
+      "normalization": {
+        "event_key": "65a7249489fb2c37ad47e71fa9df7c02fe0698c16ae0e7d3f1852854519606cc",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "22cc6c07ff98ebdf6ab25c0d63df6f344be83df9de9523b1724fd78c543bc677",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "金富科技 | 包装印刷",
+        "evidence": [
+          "包装印刷"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002112",
+      "published_at": null,
+      "name": "三变科技",
+      "title": "三变科技 | 电网设备",
+      "body": "电网设备",
+      "return_pct": -9.966997146606445,
+      "turnover": 371271616.0,
+      "dde_net": null,
+      "source_hash": "7447fd63688f668fcb405598c58c062e5f6258ac885de4226a04c505992d4657",
+      "normalization": {
+        "event_key": "0e280d548f395e9bb8494aebd1da9e5596a01d11e93bf0460a1d491052debbc5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "561380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7447fd63688f668fcb405598c58c062e5f6258ac885de4226a04c505992d4657",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "561380.SH"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "三变科技 | 电网设备",
+        "evidence": [
+          "电网设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600785",
+      "published_at": null,
+      "name": "新华百货",
+      "title": "新华百货 | 一般零售",
+      "body": "一般零售",
+      "return_pct": -10.007147789001465,
+      "turnover": 610375856.0,
+      "dde_net": null,
+      "source_hash": "8c92823569a23060643c955a329fc7b1b171c0aa7bd05e8b1927760b3f626fbb",
+      "normalization": {
+        "event_key": "d00b2766b35d57da517bb08536e78fe75a0f33f86ffa485247c0493b3602132c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8c92823569a23060643c955a329fc7b1b171c0aa7bd05e8b1927760b3f626fbb",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "新华百货 | 一般零售",
+        "evidence": [
+          "一般零售"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603067",
+      "published_at": null,
+      "name": "振华股份",
+      "title": "振华股份 | 化学原料",
+      "body": "化学原料",
+      "return_pct": -9.98266887664795,
+      "turnover": 762143328.0,
+      "dde_net": null,
+      "source_hash": "94362ff0d836ca77f343be2e0d93b3e6b49bc5c09483c87df26c176fc483d4ac",
+      "normalization": {
+        "event_key": "41d7a315460d69ab8ce72978d9c5ca9fa40cb4d327f14541d5f2f7040d5c2c17",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "94362ff0d836ca77f343be2e0d93b3e6b49bc5c09483c87df26c176fc483d4ac",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "振华股份 | 化学原料",
+        "evidence": [
+          "化学原料"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "001216",
+      "published_at": null,
+      "name": "华瓷股份",
+      "title": "华瓷股份 | 家居用品",
+      "body": "家居用品",
+      "return_pct": -10.0,
+      "turnover": 675328624.0,
+      "dde_net": null,
+      "source_hash": "c1b914b1af8008b411aa5cbe77a0177ff24bbae28ce977b661e593441c633d53",
+      "normalization": {
+        "event_key": "6fc38e6d849349c689e3b7161c65f98eefb97fe98b048fccb3dcfeb9a9b6ef9d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c1b914b1af8008b411aa5cbe77a0177ff24bbae28ce977b661e593441c633d53",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "华瓷股份 | 家居用品",
+        "evidence": [
+          "家居用品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "601231",
+      "published_at": null,
+      "name": "环旭电子",
+      "title": "环旭电子 | 消费电子",
+      "body": "消费电子",
+      "return_pct": -9.990917205810547,
+      "turnover": 730634160.0,
+      "dde_net": null,
+      "source_hash": "94e603eb72a3d3e4e814187a635fe8ecfb26fa00a3af6de50034f05fdd381cc7",
+      "normalization": {
+        "event_key": "ec8b1c69e336d9421ca7970d734329107461d0a05cfef9445c9d54fd6ed166a5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "94e603eb72a3d3e4e814187a635fe8ecfb26fa00a3af6de50034f05fdd381cc7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "环旭电子 | 消费电子",
+        "evidence": [
+          "消费电子"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603331",
+      "published_at": null,
+      "name": "百达精工",
+      "title": "百达精工 | 通用设备",
+      "body": "通用设备",
+      "return_pct": -10.024855613708496,
+      "turnover": 228520432.0,
+      "dde_net": null,
+      "source_hash": "4f32a96d4128f7fa9237ec8d6d94b3003f4a74316764966fb6a493a0bb1cbe9c",
+      "normalization": {
+        "event_key": "8b670369c3cd3ffc52785831d903eb511abdec4272cf4e2b682d790ac06c5ddb",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4f32a96d4128f7fa9237ec8d6d94b3003f4a74316764966fb6a493a0bb1cbe9c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "百达精工 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002535",
+      "published_at": null,
+      "name": "林州重机",
+      "title": "林州重机 | 专用设备",
+      "body": "专用设备",
+      "return_pct": -10.0,
+      "turnover": 233994725.0,
+      "dde_net": null,
+      "source_hash": "f66c76489d80defc7c74ec7c3d861260e0678166ec75cfa163d5a519c04b4cb9",
+      "normalization": {
+        "event_key": "664daa2649fe213118e74a6fdb19bd8c4c4dc8fbe64ed6156e7e1df28cd9e646",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f66c76489d80defc7c74ec7c3d861260e0678166ec75cfa163d5a519c04b4cb9",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "林州重机 | 专用设备",
+        "evidence": [
+          "专用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002093",
+      "published_at": null,
+      "name": "国脉科技",
+      "title": "国脉科技 | 教育",
+      "body": "教育",
+      "return_pct": -9.962639808654785,
+      "turnover": 557057184.0,
+      "dde_net": null,
+      "source_hash": "b6eacb26a14d5e95c0b1dd9e4e5f5955024d48d79e04f00269dc82c08e6eee69",
+      "normalization": {
+        "event_key": "cc47207ca5bbedff15cfb8e6221b99aafcba81957709857606c11dbbe69465dd",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b6eacb26a14d5e95c0b1dd9e4e5f5955024d48d79e04f00269dc82c08e6eee69",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "国脉科技 | 教育",
+        "evidence": [
+          "教育"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002536",
+      "published_at": null,
+      "name": "飞龙股份",
+      "title": "飞龙股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": -10.002571105957031,
+      "turnover": 1719836672.0,
+      "dde_net": null,
+      "source_hash": "24b09ee5f77e79f4ac82fc6df9641178ecf273d799b5f55862c10c5a9e270c38",
+      "normalization": {
+        "event_key": "f4726e539b56b0ef28c8066cc4a8ecb0f59ceb0697aae64c3586642de0357e50",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "24b09ee5f77e79f4ac82fc6df9641178ecf273d799b5f55862c10c5a9e270c38",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "飞龙股份 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600178",
+      "published_at": null,
+      "name": "东安动力",
+      "title": "东安动力 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": -9.990009307861328,
+      "turnover": 453731392.0,
+      "dde_net": null,
+      "source_hash": "1851c969ec6e5c54ac66d7e693490df693c5e7fe3acf4c414290045a3a1db787",
+      "normalization": {
+        "event_key": "a0514a8829a5ec64c411ab40dc8ac831aed782f2aa706c3cd727e9c533a8d5b2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1851c969ec6e5c54ac66d7e693490df693c5e7fe3acf4c414290045a3a1db787",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "东安动力 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603758",
+      "published_at": null,
+      "name": "秦安股份",
+      "title": "秦安股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": -10.0,
+      "turnover": 245166235.0,
+      "dde_net": null,
+      "source_hash": "409373df46470ee6b63b7e1cb631beef2ba8e74ea4c37670bbe4fb22e5bbe2df",
+      "normalization": {
+        "event_key": "4093d135ddcc619ca41413a9aa76c9288000d6b8a4ea973aa22805adaaf7628d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "409373df46470ee6b63b7e1cb631beef2ba8e74ea4c37670bbe4fb22e5bbe2df",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "秦安股份 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603089",
+      "published_at": null,
+      "name": "正裕工业",
+      "title": "正裕工业 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": -10.009443283081055,
+      "turnover": 237185298.0,
+      "dde_net": null,
+      "source_hash": "bd735aacf6afd903debc9f43f74e6de83fac795169c0ddc36fcff40bb4e1ea1e",
+      "normalization": {
+        "event_key": "15cca6a07501ab3b6ab61d1d8de44e34ffb36d7735d771c68c149862382d3f82",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bd735aacf6afd903debc9f43f74e6de83fac795169c0ddc36fcff40bb4e1ea1e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "正裕工业 | 汽车零部",
+        "evidence": [
+          "汽车零部"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "000422",
+      "published_at": null,
+      "name": "湖北宜化",
+      "title": "湖北宜化 | 农化制品",
+      "body": "农化制品",
+      "return_pct": -9.960552215576172,
+      "turnover": 294363056.0,
+      "dde_net": null,
+      "source_hash": "b1f7943a678e47cc28fcaa09c6fbf43ced354d0b4f41590933b89e1e64aabb5f",
+      "normalization": {
+        "event_key": "cf0909ecae2f2315e34145406abbf6ab8f5a464a4509c44f45a92c571dcf24be",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b1f7943a678e47cc28fcaa09c6fbf43ced354d0b4f41590933b89e1e64aabb5f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "湖北宜化 | 农化制品",
+        "evidence": [
+          "农化制品"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603228",
+      "published_at": null,
+      "name": "景旺电子",
+      "title": "景旺电子 | 元件",
+      "body": "元件",
+      "return_pct": -9.997400283813477,
+      "turnover": 1893891648.0,
+      "dde_net": null,
+      "source_hash": "d302cb719811407cdfe4883e8cb9468fbbc3f0ebf6a4e8405334cdc0a59680ad",
+      "normalization": {
+        "event_key": "368b4bdc5b0b11457eb12a88e5907fa7c1f7083d33f85014fb5c461bc88cfc96",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d302cb719811407cdfe4883e8cb9468fbbc3f0ebf6a4e8405334cdc0a59680ad",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "景旺电子 | 元件",
+        "evidence": [
+          "元件"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603496",
+      "published_at": null,
+      "name": "恒为科技",
+      "title": "恒为科技 | 计算机设",
+      "body": "计算机设",
+      "return_pct": -10.013908386230469,
+      "turnover": 206718712.0,
+      "dde_net": null,
+      "source_hash": "3de4bfee086972833760813e860dbbf102d812918c2ba8cfd58a3e0b10b1e92d",
+      "normalization": {
+        "event_key": "6f56176880a35a535b5a0c647cdc0fade916beeeca11a1f51022cef835cff567",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3de4bfee086972833760813e860dbbf102d812918c2ba8cfd58a3e0b10b1e92d",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "恒为科技 | 计算机设",
+        "evidence": [
+          "计算机设"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002212",
+      "published_at": null,
+      "name": "天融信",
+      "title": "天融信 | 软件开发",
+      "body": "软件开发",
+      "return_pct": -9.970674514770508,
+      "turnover": 601148352.0,
+      "dde_net": null,
+      "source_hash": "de22a67c0c4da5830b7491137599a474e8b93795d988e8b87d77f6faed7ec2e5",
+      "normalization": {
+        "event_key": "50a7a57884050df3be39f09f4f884edb01706c821051848c899c281f4185d859",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "de22a67c0c4da5830b7491137599a474e8b93795d988e8b87d77f6faed7ec2e5",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "天融信 | 软件开发",
+        "evidence": [
+          "软件开发"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603028",
+      "published_at": null,
+      "name": "赛福天",
+      "title": "赛福天 | 通用设备",
+      "body": "通用设备",
+      "return_pct": -10.0,
+      "turnover": 601422096.0,
+      "dde_net": null,
+      "source_hash": "d1a546df6f87d4346f9a904fe123238cabfac6e2196b26cfb3474e6f8a1e2db1",
+      "normalization": {
+        "event_key": "f77348affba36f13274f31f22bfb16ada65b8e8f866ccffb6bb84ab726a38344",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d1a546df6f87d4346f9a904fe123238cabfac6e2196b26cfb3474e6f8a1e2db1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "赛福天 | 通用设备",
+        "evidence": [
+          "通用设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002980",
+      "published_at": null,
+      "name": "华盛昌",
+      "title": "华盛昌 | 电网设备",
+      "body": "电网设备",
+      "return_pct": -10.001224517822266,
+      "turnover": 745815168.0,
+      "dde_net": null,
+      "source_hash": "fcdd8c1e7f9997f565f47472d94d610bf18dc3e402016901280e99bdb505a5df",
+      "normalization": {
+        "event_key": "e1dc46bdc4dedf0e997d66782e4ab2ad496bd6ddf7604f91a40820570a28b666",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "561380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "fcdd8c1e7f9997f565f47472d94d610bf18dc3e402016901280e99bdb505a5df",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "561380.SH"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "华盛昌 | 电网设备",
+        "evidence": [
+          "电网设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "000058",
+      "published_at": null,
+      "name": "深 赛 格",
+      "title": "深 赛 格 | 一般零售",
+      "body": "一般零售",
+      "return_pct": -10.01220989227295,
+      "turnover": 496607936.0,
+      "dde_net": null,
+      "source_hash": "91319b98a4474f8b747f51e4a56375a65c3bab17099842d682ba9b78d5e51deb",
+      "normalization": {
+        "event_key": "c7f44096a7a4840f646c97557738f4a8330bba934b50f50b963c95d3399773c4",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "91319b98a4474f8b747f51e4a56375a65c3bab17099842d682ba9b78d5e51deb",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "深 赛 格 | 一般零售",
+        "evidence": [
+          "一般零售"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002463",
+      "published_at": null,
+      "name": "沪电股份",
+      "title": "沪电股份 | 元件",
+      "body": "元件",
+      "return_pct": -10.00286865234375,
+      "turnover": 5526972416.0,
+      "dde_net": null,
+      "source_hash": "7910a18f76ffa52893ef7bb94ac86d1897d1f7eb25aa13fc918cbd3f9469be90",
+      "normalization": {
+        "event_key": "995245db221cc7ee33e2ab6ef29bad9858135d1b26d09aa600885ade2d7ea0d6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7910a18f76ffa52893ef7bb94ac86d1897d1f7eb25aa13fc918cbd3f9469be90",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "沪电股份 | 元件",
+        "evidence": [
+          "元件"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603083",
+      "published_at": null,
+      "name": "剑桥科技",
+      "title": "剑桥科技 | 通信设备",
+      "body": "通信设备",
+      "return_pct": -9.99655532836914,
+      "turnover": 2610145936.0,
+      "dde_net": null,
+      "source_hash": "7f3e322e65278db791a97de82cf8a3a1ce6e3d1dfa014545a56cb27ca15d8119",
+      "normalization": {
+        "event_key": "e7de294920a350ebf7141a5fdf56a81fb8e063cb18aad23615206c72e8b544d1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7f3e322e65278db791a97de82cf8a3a1ce6e3d1dfa014545a56cb27ca15d8119",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "剑桥科技 | 通信设备",
+        "evidence": [
+          "通信设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600293",
+      "published_at": null,
+      "name": "三峡新材",
+      "title": "三峡新材 | 玻璃玻纤",
+      "body": "玻璃玻纤",
+      "return_pct": -9.870129585266113,
+      "turnover": 540188672.0,
+      "dde_net": null,
+      "source_hash": "bd9fe5ad039dec10fd272157abc628a28f6138b341e443bd1042cc6a8c952c90",
+      "normalization": {
+        "event_key": "a487f23ab57e38ab73cb3b73d999d7abc9101493a92dd309fa3dd853148b575f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bd9fe5ad039dec10fd272157abc628a28f6138b341e443bd1042cc6a8c952c90",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "三峡新材 | 玻璃玻纤",
+        "evidence": [
+          "玻璃玻纤"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002811",
+      "published_at": null,
+      "name": "郑中设计",
+      "title": "郑中设计 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": -10.0,
+      "turnover": 325704720.0,
+      "dde_net": null,
+      "source_hash": "890f0f402cbbd3fc1a00ccea6cdcf6d83e5a5c98f656b17f83c6a03045178918",
+      "normalization": {
+        "event_key": "3a73fa3f783032b1a67e44464ad12ff0793413e4c722f9c10aef8d9b549abf9f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "890f0f402cbbd3fc1a00ccea6cdcf6d83e5a5c98f656b17f83c6a03045178918",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "郑中设计 | 装修装饰",
+        "evidence": [
+          "装修装饰"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603528",
+      "published_at": null,
+      "name": "多伦科技",
+      "title": "多伦科技 | 软件开发",
+      "body": "软件开发",
+      "return_pct": -10.033822059631348,
+      "turnover": 946101680.0,
+      "dde_net": null,
+      "source_hash": "32a37e11ea679ab337497bba15ab325e44e7512721215f5172596450147e3379",
+      "normalization": {
+        "event_key": "da66cd9d0f4d94ef66d7327b98e9039c4aec084458644ecb741d5b9f5793aea5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "32a37e11ea679ab337497bba15ab325e44e7512721215f5172596450147e3379",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "多伦科技 | 软件开发",
+        "evidence": [
+          "软件开发"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603618",
+      "published_at": null,
+      "name": "杭电股份",
+      "title": "杭电股份 | 电网设备",
+      "body": "电网设备",
+      "return_pct": -9.981583595275879,
+      "turnover": 1516775936.0,
+      "dde_net": null,
+      "source_hash": "dae31b3159986ff8ebaec3e2577cd9382ae70c839dccb24ff8df1d282662189d",
+      "normalization": {
+        "event_key": "548fdb432a76706bbac37ada004d59af6521f59e2f088b53e6626c0b0cc555c7",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "561380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dae31b3159986ff8ebaec3e2577cd9382ae70c839dccb24ff8df1d282662189d",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "561380.SH"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "杭电股份 | 电网设备",
+        "evidence": [
+          "电网设备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002456",
+      "published_at": null,
+      "name": "欧菲光",
+      "title": "欧菲光 | 光学光电",
+      "body": "光学光电",
+      "return_pct": -10.0,
+      "turnover": 642984000.0,
+      "dde_net": null,
+      "source_hash": "39caa74e63148e8ff913aa642a77ca8dcda83393ef323a9db30f8fe88d02819e",
+      "normalization": {
+        "event_key": "9887e85673cd78ab003c99898277b4ce4ee6e02bdcca0f9b2bb965959f52491c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "39caa74e63148e8ff913aa642a77ca8dcda83393ef323a9db30f8fe88d02819e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "欧菲光 | 光学光电",
+        "evidence": [
+          "光学光电"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002913",
+      "published_at": null,
+      "name": "奥士康",
+      "title": "奥士康 | 元件",
+      "body": "元件",
+      "return_pct": -10.0,
+      "turnover": 326699888.0,
+      "dde_net": null,
+      "source_hash": "b983132b5202ab6deeda61e5a3abf72c7594fae5b382a0f18e58e2d9db373f17",
+      "normalization": {
+        "event_key": "e7123a129990e71e8db43a8db587a1dc6f262d52a3bf6212365e6206d9acec46",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b983132b5202ab6deeda61e5a3abf72c7594fae5b382a0f18e58e2d9db373f17",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "奥士康 | 元件",
+        "evidence": [
+          "元件"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600641",
+      "published_at": null,
+      "name": "先导基电",
+      "title": "先导基电 | 半导体",
+      "body": "半导体",
+      "return_pct": -10.0,
+      "turnover": 2216035424.0,
+      "dde_net": null,
+      "source_hash": "f8cf6d373dd059cf5275d407d2ac98dc27962db0f3bfec87336a73fe38dee048",
+      "normalization": {
+        "event_key": "f8e63082af620e4642af7a23806a178fb10836fdd094a84c5ca52d7370babc68",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f8cf6d373dd059cf5275d407d2ac98dc27962db0f3bfec87336a73fe38dee048",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512760.SH"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "先导基电 | 半导体",
+        "evidence": [
+          "半导体"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600839",
+      "published_at": null,
+      "name": "四川长虹",
+      "title": "四川长虹 | 黑色家电",
+      "body": "黑色家电",
+      "return_pct": -10.067113876342773,
+      "turnover": 627198272.0,
+      "dde_net": null,
+      "source_hash": "a9b98023a5437cb55b38af20ae228c7fa9a46e77b626e01a52f435abe0098fbc",
+      "normalization": {
+        "event_key": "7ab2bcb69ce1090a3d954b06b996eb64f4dce1b7df6a45bdfc9c3cd896090248",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a9b98023a5437cb55b38af20ae228c7fa9a46e77b626e01a52f435abe0098fbc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "四川长虹 | 黑色家电",
+        "evidence": [
+          "黑色家电"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603186",
+      "published_at": null,
+      "name": "华正新材",
+      "title": "华正新材 | 元件",
+      "body": "元件",
+      "return_pct": -9.997556686401367,
+      "turnover": 2951138752.0,
+      "dde_net": null,
+      "source_hash": "3279bdf5f4d62d92546c0270b833f0091ccb1aa93ed1db1d872862a790616203",
+      "normalization": {
+        "event_key": "f2ccfaaf790d25900743b89a7daac49c14aafc2dafe1a51f3d1c05bcf7f2001f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3279bdf5f4d62d92546c0270b833f0091ccb1aa93ed1db1d872862a790616203",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.65,
+        "novelty": 0.5,
+        "summary": "华正新材 | 元件",
+        "evidence": [
+          "元件"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002625",
+      "published_at": null,
+      "name": "光启技术",
+      "title": "光启技术 | 航空装备",
+      "body": "航空装备",
+      "return_pct": -10.008665084838867,
+      "turnover": 344336000.0,
+      "dde_net": null,
+      "source_hash": "4a17edf3c207d06649c4db9d34fe92b5cbe282a060bd55dedb3603486c0e7859",
+      "normalization": {
+        "event_key": "659f72fe08b22165f34c6ae5efe09681bf99bb32854f7a217a3fd6b22611ea6f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": [
+          "563380.SH"
+        ]
+      },
+      "ai": {
+        "source_hash": "4a17edf3c207d06649c4db9d34fe92b5cbe282a060bd55dedb3603486c0e7859",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "563380.SH"
+        ],
+        "direction": -1,
+        "horizon": "1-3d",
+        "confidence": 0.7,
+        "novelty": 0.5,
+        "summary": "光启技术 | 航空装备",
+        "evidence": [
+          "航空装备"
+        ],
+        "risk_flags": [
+          "DDE字段未提供",
+          "题材归因不是已验证因果"
+        ]
+      }
+    }
+  ]
+}

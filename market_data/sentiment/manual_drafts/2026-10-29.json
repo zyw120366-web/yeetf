@@ -1,0 +1,2772 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "5ca2fa97ce36eb0d18801434868ed27131d85bb4f4abd80237c63d1a59318880",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "东方海洋 | “羊”字辈+体外诊断+海参养殖+水溶性维生素试剂",
+      "evidence": [
+        "“羊”字辈+体外诊断+海参养殖+水溶性维生素试剂"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "f438639889887093785d6f6cef79b597657c058660fa6a2337470c387a0923e8",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "桂林三金 | 三季报增长+中成药+西瓜霜+抗体研发",
+      "evidence": [
+        "三季报增长+中成药+西瓜霜+抗体研发"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "8519b5c85922327561c078178c968531a2d83e74ec9d95af9bbe09996448cd49",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "宇晶股份 | 机器人+碳化硅设备+磷化铟设备",
+      "evidence": [
+        "机器人+碳化硅设备+磷化铟设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "9628f8aba54aa320a5bd1cc3ed46ebc4b0b3e8c48b14438ec4e790ec6f484cde",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "天顺风能 | 三季报增长+海上风电+油气船舶",
+      "evidence": [
+        "三季报增长+海上风电+油气船舶"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "f773b9a71a56b4725f06e12d698a33ef5652059fd05010ca1fbfadd0442d16f0",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "西部材料 | 商业航天+航天铌合金+稀贵金属+超导",
+      "evidence": [
+        "商业航天+航天铌合金+稀贵金属+超导"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "e2ab4d002d652056e9bc8dc41372512083d814174bcd5f088d0f96e23994cfbf",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "祥源文旅 | 旅游景区+冰雪产业+低空文旅",
+      "evidence": [
+        "旅游景区+冰雪产业+低空文旅"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "2bb04d8636d2ea635fc17892fc561b177f635d9aef6e0484124d1397c874d291",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "冰山冷热 | 冰雪工程+数据中心液冷+船舶制冷",
+      "evidence": [
+        "冰雪工程+数据中心液冷+船舶制冷"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "58132bc92b175fcfb11076e37af3da75c3e36fd1dcac0c797d5baacca8a0aad7",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "航天晨光 | 商业航天+特种装备+可控核聚变",
+      "evidence": [
+        "商业航天+特种装备+可控核聚变"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "fb9c47a7bc3194b5ce3d6c06ca5b3ac11cd02fda49b9f5d6b54f1de564279652",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "中国卫星 | 三季报增长+卫星制造+商业航天",
+      "evidence": [
+        "三季报增长+卫星制造+商业航天"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b4e82a47882f970109521f473a4fb09c69860b17e5c22669f324b04ad951a23e",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "一鸣食品 | 低温乳品+烘焙食品+米制鲜食",
+      "evidence": [
+        "低温乳品+烘焙食品+米制鲜食"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "623642d66f133215244bd97612f038d06bf15fafeb079b530b4d46ce745d70a8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "福建金森 | 三季报增长+林业+FSC森林认证+海峡两岸",
+      "evidence": [
+        "三季报增长+林业+FSC森林认证+海峡两岸"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "e77f8d55f9cd5e26cba28d22116b1762c52c6a52229ea7916e366a4b7f09c422",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "盛洋科技 | 卫星通信终端+高速铜缆+“羊”字辈",
+      "evidence": [
+        "卫星通信终端+高速铜缆+“羊”字辈"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "2512733928cec823a45e3b1da80e4599306890494e3a180368428f835224e174",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "上海港湾 | 商业航天+卫星能源+钙钛矿电池",
+      "evidence": [
+        "商业航天+卫星能源+钙钛矿电池"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "e136986945a137fea87ebaacc07a4ad14eb31dba98b22cec6d7ac2710f65079b",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "惠发食品 | 预制菜+速冻调理肉制品",
+      "evidence": [
+        "预制菜+速冻调理肉制品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b94fdb8aafd9f3cfc28456805cac825591dcf17a7d978d8e46dcd5b3f9e9720b",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "钧达股份 | 商业航天+光伏电池+土耳其产能",
+      "evidence": [
+        "商业航天+光伏电池+土耳其产能"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "cf7084ed2f72b4d1e674c2e314647ca265c41e6373003dd64bb9c8b1eb8a0f1a",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "巴比食品 | 三季报净利增+中式面点+中期分红+小笼包扩张",
+      "evidence": [
+        "三季报净利增+中式面点+中期分红+小笼包扩张"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "fbbe38f6624b66a564e92959e50d40b07426e4067a5f329f30a18e98c5b4f0be",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "海阳科技 | 尼龙6+帘子布+涤纶工业丝+“羊”字辈",
+      "evidence": [
+        "尼龙6+帘子布+涤纶工业丝+“羊”字辈"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "0ebb21800ea37c0066998f0191d0d0e8363e9d1ad05c1825f4655779e22bcb53",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "邵阳液压 | 航天+液压主业+三季报增长+生肖炒作",
+      "evidence": [
+        "航天+液压主业+三季报增长+生肖炒作"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "2488bbc34f91b3d7a849a60a32adacfe32a7634950ebeb2772b8fc4345b5f336",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "顺灏股份 | 太空算力+特种纸印刷+新型烟草",
+      "evidence": [
+        "太空算力+特种纸印刷+新型烟草"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "269b3530ab0b687a05fc53af734361abac1f1ba3cae592cdd15fdba11ec2452a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "上海沪工 | 三季报扭亏+焊接机器人+商业航天+焊接切割设备",
+      "evidence": [
+        "三季报扭亏+焊接机器人+商业航天+焊接切割设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "abae5d003fab1f86e5f34e2d5b98fad07178fe2a707b5956ef7bbe76f48ce305",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "横店影视 | AI短剧+影视全产业链+电影放映",
+      "evidence": [
+        "AI短剧+影视全产业链+电影放映"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "d622dc1a10f161f64a1881fb4ca485020f57442ea71fa3402737e3800ab304b7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "和泰机电 | 物料输送设备+输送链+海外拓展",
+      "evidence": [
+        "物料输送设备+输送链+海外拓展"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b40c10c5c306c2951c1a91589f59c16eae034119b712fce6314e5940cbe8dfd6",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "515220.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "开滦股份 | 第三季度净利增长+炼焦煤+煤化工",
+      "evidence": [
+        "第三季度净利增长+炼焦煤+煤化工"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "0b9d99b8b0a8090478d0cbe8feed64282eedaf31046a85ab82ba6c215d42a4e3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "厦门信达 | 大宗商品+算力业务+三季报增长",
+      "evidence": [
+        "大宗商品+算力业务+三季报增长"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "1bebd978d8277232c2010894d10cef546f90cfc678fb1a2de7bc5f8d106ee1b7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "阳光照明 | 商业航天+激光通信投资+LED照明+“羊”字辈",
+      "evidence": [
+        "商业航天+激光通信投资+LED照明+“羊”字辈"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "fa0cddef4a0642b97044d616e6c15b70f4bc6a4373e19a775dd5e8294caec330",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "传智教育 | 三季报增长+AI职业教育+具身智能培训",
+      "evidence": [
+        "三季报增长+AI职业教育+具身智能培训"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "627f960e88914ef63618ecc32081161a8fbea139f79d0abba18fb4f0f0b9ff05",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "龙江交通 | 冰雪旅游保障+高速公路运营",
+      "evidence": [
+        "冰雪旅游保障+高速公路运营"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "39d433060da0cac33b13faaa5ccc59835b8f63d8b6a1dcf17d4a463b885d618c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH",
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "文投控股 | AI漫剧+游戏运营+影院多元业态",
+      "evidence": [
+        "AI漫剧+游戏运营+影院多元业态"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "6bcadb2f07fb4def6848b35745acdab82d345e809533e01911d42590e83a0668",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "159851.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "爱建集团 | 三季报增长+多元金融+金融科技",
+      "evidence": [
+        "三季报增长+多元金融+金融科技"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "fdecfc07da86ebdbcc431fc13269bb9a711fa04392a7d6754805c4c9bf55c745",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "龙溪股份 | 关节轴承+人形机器人+智元机器人",
+      "evidence": [
+        "关节轴承+人形机器人+智元机器人"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "d13195924d61743391dee39c9d31afa30c47116c631e4fb72553e323f8b13d74",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "中远海特 | 三季报增长+特种运输+重吊船",
+      "evidence": [
+        "三季报增长+特种运输+重吊船"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "de91da0ef4a46736ce4b04093450b893a67c741fe46eab2e48ff8da9eb232c2a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "友阿股份 | 尚阳通重组+功率半导体+百货零售",
+      "evidence": [
+        "尚阳通重组+功率半导体+百货零售"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "dc13c31b4b644cd5a1bfeb079ce0aa05d9b061cfdf16411e2b14bedd41b068a5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "澳洋健康 | 脑机接口+医疗服务+国资控股+“羊”字辈",
+      "evidence": [
+        "脑机接口+医疗服务+国资控股+“羊”字辈"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b31108479ed4fe0a42d2cdff79379399f40c1165f1a055454db674193c3966df",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "联明股份 | 三季报增长+新能源水冷板+汽车零部件",
+      "evidence": [
+        "三季报增长+新能源水冷板+汽车零部件"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "fdb760f6af00f5d382f7e784e1695ab2370bd6f6caefd37a2b3a21f061a68a2d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "东贝集团 | 机器人电机+制冷压缩机+商用制冷",
+      "evidence": [
+        "机器人电机+制冷压缩机+商用制冷"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "26a53d1b0fb6a20bbedb906d8ee029e5e3a060e8752f6a093db2f81d43cc348a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "实丰文化 | AI玩具+IP潮玩+玩具出海",
+      "evidence": [
+        "AI玩具+IP潮玩+玩具出海"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b30777decf9b3c89807b5cb3e3c3e93c21015fb60c00565d937b41b2f059a8f6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "山东矿机 | 煤炭机械+焊接机器人+第三季度业绩增长",
+      "evidence": [
+        "煤炭机械+焊接机器人+第三季度业绩增长"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "118a6149de30936f039fa86ee308662c81e03562285cb1c9429ec71d265a267a",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "青岛食品 | 股权转让+三季报增长+饼干食品",
+      "evidence": [
+        "股权转让+三季报增长+饼干食品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "78f2edc3815b18e4f5160f3c0c07c5b318b62d6a7b992383431c44f90e6caf75",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "青岛食品 | 休闲食品",
+      "evidence": [
+        "休闲食品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "0e6459a518f6c56bad38e47fd21dd5a32b9a16f6030101cb231f7025bbab9737",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "山东矿机 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "8aa6f308b9dcd763c8fff4013dd59a05e02c240ef257751a1bbd5f570ab3e801",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "光洋股份 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "0abd301775f4df3f6e01de9ad4f913a32d17f39e5a3fafebe910c8e7882f56a3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "实丰文化 | 文娱用品",
+      "evidence": [
+        "文娱用品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b5d2499c875b2a8d7e8784eb0f61b621e7b39eef21ba853b8cb0cd2af81987ef",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "东贝集团 | 家电零部",
+      "evidence": [
+        "家电零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "64960349fdbfbacc9946df84d8bb97577d44b1d15fe500373a6be8fd84aafb22",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "爱建集团 | 多元金融",
+      "evidence": [
+        "多元金融"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "9988e67e21a592dd7d5da275ddeae11cc6c75c5ecdc4085aec4827f61f878f0e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "联明股份 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "f5c1cc7819937c78d3ae51d045f757da6d11fb3b9041be268c6ecc46d917dc39",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "文投控股 | 游戏Ⅱ",
+      "evidence": [
+        "游戏Ⅱ"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "cf1b03c4fad9e278e1fc3edaf0947cf7ee497ccbeb23dc071ea6fc25e4440f50",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "龙溪股份 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "67810d5fe65d96b7c43ba5f0fdc592fe9cf965e90a47868d6667e77dc82add72",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "中远海特 | 航运港口",
+      "evidence": [
+        "航运港口"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "af16d57d622b1552d852fc8432b9ceafd82e0481c1fd60ac12a5943d59569d1b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "澳洋健康 | 医疗服务",
+      "evidence": [
+        "医疗服务"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "dbf314dd777e016970c40341aa831bb122d0ad6e5bbcbf026d32cfa5fc7f6989",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "友阿股份 | 一般零售",
+      "evidence": [
+        "一般零售"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "8c5cbf5152f8ba294731a13f3fbcca480aab0807c5192a7699e6e34167b418e0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "龙江交通 | 铁路公路",
+      "evidence": [
+        "铁路公路"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "7e8527d9a2ccb55483b4a3cc43c7e5d7114ea05753016491ecdecb173a8d24ec",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "传智教育 | 教育",
+      "evidence": [
+        "教育"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "bd31ffaa5efd4a04fa4a49a22bdfbf89a4289ced6ebc249fe217a0b9d13feeab",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "阳光照明 | 照明设备",
+      "evidence": [
+        "照明设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "6cff24a5dee0349605b4c3efa3a6ea9ea80004684df0c5d718154f8535988d68",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "厦门信达 | 贸易Ⅱ",
+      "evidence": [
+        "贸易Ⅱ"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "3d6156e4fc043e822b8333ab44f654601b0a0a4fb1b3e95d72bfb3ea0ba15464",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "开滦股份 | 焦炭Ⅱ",
+      "evidence": [
+        "焦炭Ⅱ"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "92cde6467821d79c09f1de53a0f1db2eafc032d1369627f07afa97cd0b2714f8",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "桂林三金 | 中药Ⅱ",
+      "evidence": [
+        "中药Ⅱ"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "93a7462994b456c406449e69a880c5650c4aad90bede4a43d4b202a0b52f9d44",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "和泰机电 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "e6b4b99408e2ed0bec21eac90dd646aa5e09bd86f3c06e2e544ff4ee0d0f18c4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "横店影视 | 影视院线",
+      "evidence": [
+        "影视院线"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "34003dbbb4c2da49832e6ccf255a47d25a6b62dad0660b0b4a900c9587e8b838",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "上海沪工 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "dab97f0f0e0d4a17825b82ee2b4c7dce8c8f4fc4020983fd7882ce76eca23b97",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "顺灏股份 | 包装印刷",
+      "evidence": [
+        "包装印刷"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "69312e3996e09601d387679ba2249541733c9452b438d3f4f319f78becb01869",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "钧达股份 | 光伏设备",
+      "evidence": [
+        "光伏设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "f5fa278f8cc804804ccf979b8e5681a813821bd955cac4c8b9f6f6e000c8d074",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "560280.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "邵阳液压 | 工程机械",
+      "evidence": [
+        "工程机械"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b046e1d3215467215e123db7738cf9805845a13a4e4ed5c6299999a63324963c",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "巴比食品 | 食品加工",
+      "evidence": [
+        "食品加工"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "34ca3197d121690b5a01ce1965b41a6ce77bd38d97182ac45c75a72dfbaf9143",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "海阳科技 | 化学纤维",
+      "evidence": [
+        "化学纤维"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "c0958103998b9f7fb68ba9a1edaa5c128458f582b01d5c7b93de6e64808c8dd0",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "惠发食品 | 食品加工",
+      "evidence": [
+        "食品加工"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "83be56d18fdcaa4871f2f51b22f1ef57ef642066d2af92b69ca344e8bff71fbe",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "上海港湾 | 专业工程",
+      "evidence": [
+        "专业工程"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "d2107244836fd5a2406947c11056745e3fbdff08308e0dff1fd9db50261846a9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "盛洋科技 | 光学光电",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "40320b1b8f03ab314b1d9b13813a2d024b478a59326f9120bff93e2b228b011c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "福建金森 | 林业Ⅱ",
+      "evidence": [
+        "林业Ⅱ"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "ad0d8f117a7999b12974ceaac085120a3661c2c1f7c3dee7e77bd4eb457db57e",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "一鸣食品 | 饮料乳品",
+      "evidence": [
+        "饮料乳品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "38d3e1055a166ccc0730f66265f9eac6abbabe65758f7f841071f671c45c79e0",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "中国卫星 | 航天装备",
+      "evidence": [
+        "航天装备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "07df5307d0967d9f898607143e2fce3366700194f306257996a3dc068ae9533f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "航天晨光 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "09997ad2612254ec69eb66b038e18414f49086339064f7bb30dd622eaa6da2c0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "冰山冷热 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "20662fdbfc73f7132b676bb584e468fdf8349eb9ad79238c5e01c4248af6dba5",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "祥源文旅 | 旅游及景",
+      "evidence": [
+        "旅游及景"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "e08e66d0531926529dc8a7ef62595643caf20911caffb21ff56ea65bfbc52621",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "西部材料 | 小金属",
+      "evidence": [
+        "小金属"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "50ccf1e8982df84ff41bc3ed755c89676f9aa8bc23c6316cda25d66f860634cc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "天顺风能 | 风电设备",
+      "evidence": [
+        "风电设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "93dd0631ab745d7dd80035714d6254cd40bdc366f2828a5f166e3f02079edfa1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "宇晶股份 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "9c9d9ed5e53c27a724787f0bbb66249969199be46fda381bd9d69f8a39deae48",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "东方海洋 | 农产品加",
+      "evidence": [
+        "农产品加"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "9bbf07d7300de649f51e594648870e1b7c0826af1bede5df06e1e1b1056b8ecf",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "海象新材 | 家居用品",
+      "evidence": [
+        "家居用品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "468217562c191a0aac79fda78f60dac479cd6f376a28b9f6f57947d1c6ce9c38",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "力鼎光电 | 计算机设",
+      "evidence": [
+        "计算机设"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "0e817c95d5471e282a06dc8be54503d082a55c0d84e285572e815b38a28bc554",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "鲁北化工 | 化学原料",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b2ed393ece4231d6b827bd2eb1068815aed140eec3bed5585318e7283d448429",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "景津装备 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "09b935362ea571fb74f3a90f32e2659366ccd4a3caa8852a9993ca33fd2cecde",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "振邦智能 | 家电零部",
+      "evidence": [
+        "家电零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "2896a259544222962728b30555de3379c41d9361609d8a2d90ea6c2d165db252",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "襄阳轴承 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "9d5ed673af92251df3e89f5207062343e9ed0d256a714fd39dc67ff27db04f43",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "赛象科技 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "78b9f524fddb4e8fd3f63d69068681e08c65d81b68ae0608803202027ecc8089",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "万里扬 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "c1a6d8d96c35a172b0748ebeab8e48464bb97b5772423d93a8d2afff23f7edf1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "泰尔股份 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "81f607bfd47441ab2207a262c572a7fd07388dce84996cebd2d2fac33f2e1357",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "音飞储存 | 物流",
+      "evidence": [
+        "物流"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "cb0cc35133eec0092f618adf9bb0e7bd72147884ea23751cc46bc6be86d3deaf",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "宁波东力 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "c7c30a01f291819f348fc59833508e3100fa76dda6332eb2ac281b50132c5a58",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "大丰实业 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "351e7c4fa9a5470b9f87fe04da43cd7c90ba3f5bcdd09a11d9580d39b4055cf9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "三羊马 | 铁路公路",
+      "evidence": [
+        "铁路公路"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "12bef63afe604cd8725ec9421981e866459f782c3beefb2ac1d699609a29b58f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "大众交通 | 铁路公路",
+      "evidence": [
+        "铁路公路"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "f0649fc0903c9d7c30656886711334f1ed49428626a0143a9dd6dd71b77f41d8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "晋拓股份 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "8015c207c1465b7f70d655ae03608d92da2326d44efdf98b681e06ea2d859a40",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "中海达 | 军工电子",
+      "evidence": [
+        "军工电子"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "cc10c184296bf8fb9f558f251981a4c0dc1e0fc34dda797c9da3c7bbfac3ce71",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "华阳国际 | 工程咨询",
+      "evidence": [
+        "工程咨询"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "a60bc81f339e1461805e1ba6792c0cee6a6d6bf1e61bdedbd555ca5b3b1f5d91",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "铖昌科技 | 军工电子",
+      "evidence": [
+        "军工电子"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "809bc11606d740decedf82746ccc051f4e9941b7941916f143b8f0310610b9fc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "江顺科技 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "c1906ff7bb6fb2a90e242a1e2da02f07dcee94f9ed2711e962525ffc4eff26f1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "腾达科技 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b9af660b6c0674e79b2ed4b041fb22507d8424cfd75abd7e430c273fc643d2ec",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "飞沃科技 | 风电设备",
+      "evidence": [
+        "风电设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "79b533df393f4ae9d82356fa302d6afb13a3df32dd7aab00b154703f49a1cdac",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "黑牡丹 | 房地产开",
+      "evidence": [
+        "房地产开"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "49d8d6f66708d46011d56f95611fe3717e9fcdec218c9612fc1f0b2630745947",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "富维股份 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "7998aa52ee83cf34d69aaf162daa60e11038075c1fee6c76c16afe43e08beea8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "豪尔赛 | 装修装饰",
+      "evidence": [
+        "装修装饰"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "40d62dfd0d8015892912628a08019d4a69096195312e8572c14440d07fbfc628",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "佳都科技 | IT服务Ⅱ",
+      "evidence": [
+        "IT服务Ⅱ"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "6a55ff0e02ddec195b2fefd140a183169fbe27f2796af812054889bd1adc3dd5",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "159647.SZ"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "广誉远 | 中药Ⅱ",
+      "evidence": [
+        "中药Ⅱ"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "367721086beafb6b1d5048107a2479e3c79b6a99d5e7a6410a224c87b9f15801",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "华昌化工 | 化学原料",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "2255e22594f094abcf1b4513c2945de3df5a281faa84941412b77112860568a0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "汇嘉时代 | 一般零售",
+      "evidence": [
+        "一般零售"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "08f42aa29c6856b16adef6976054600184843705def300f3402896602310c966",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "快意电梯 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "81c82fe9c4f811cbd94832e38d3dcb062759618883ee52f272c869b6eb44d74e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "岱美股份 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "d8332d0bb3873d5593924a8a25352a16b5cd7f0685a152bae43214dc863ba211",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "鹏鼎控股 | 元件",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "eeb906a913eb7c6be85dff9b4b2e15593aaaf5fe344404883417dff5e406feff",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "国轩高科 | 电池",
+      "evidence": [
+        "电池"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "1065c41382bbe32013b223a9f9a75596fced94a77b5b7fa38a68ea1ed06456b9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "桂发祥 | 休闲食品",
+      "evidence": [
+        "休闲食品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "35cd751560230789439fe7c50cd1f70474a338d37a9bc79d1d5a016d50c65290",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "澳弘电子 | 元件",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "22cc6c07ff98ebdf6ab25c0d63df6f344be83df9de9523b1724fd78c543bc677",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "金富科技 | 包装印刷",
+      "evidence": [
+        "包装印刷"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "7447fd63688f668fcb405598c58c062e5f6258ac885de4226a04c505992d4657",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "三变科技 | 电网设备",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "8c92823569a23060643c955a329fc7b1b171c0aa7bd05e8b1927760b3f626fbb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "新华百货 | 一般零售",
+      "evidence": [
+        "一般零售"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "94362ff0d836ca77f343be2e0d93b3e6b49bc5c09483c87df26c176fc483d4ac",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "振华股份 | 化学原料",
+      "evidence": [
+        "化学原料"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "c1b914b1af8008b411aa5cbe77a0177ff24bbae28ce977b661e593441c633d53",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "华瓷股份 | 家居用品",
+      "evidence": [
+        "家居用品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "94e603eb72a3d3e4e814187a635fe8ecfb26fa00a3af6de50034f05fdd381cc7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "环旭电子 | 消费电子",
+      "evidence": [
+        "消费电子"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "4f32a96d4128f7fa9237ec8d6d94b3003f4a74316764966fb6a493a0bb1cbe9c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "百达精工 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "f66c76489d80defc7c74ec7c3d861260e0678166ec75cfa163d5a519c04b4cb9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "林州重机 | 专用设备",
+      "evidence": [
+        "专用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b6eacb26a14d5e95c0b1dd9e4e5f5955024d48d79e04f00269dc82c08e6eee69",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "国脉科技 | 教育",
+      "evidence": [
+        "教育"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "24b09ee5f77e79f4ac82fc6df9641178ecf273d799b5f55862c10c5a9e270c38",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "飞龙股份 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "1851c969ec6e5c54ac66d7e693490df693c5e7fe3acf4c414290045a3a1db787",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "东安动力 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "409373df46470ee6b63b7e1cb631beef2ba8e74ea4c37670bbe4fb22e5bbe2df",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "秦安股份 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "bd735aacf6afd903debc9f43f74e6de83fac795169c0ddc36fcff40bb4e1ea1e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "正裕工业 | 汽车零部",
+      "evidence": [
+        "汽车零部"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b1f7943a678e47cc28fcaa09c6fbf43ced354d0b4f41590933b89e1e64aabb5f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "湖北宜化 | 农化制品",
+      "evidence": [
+        "农化制品"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "d302cb719811407cdfe4883e8cb9468fbbc3f0ebf6a4e8405334cdc0a59680ad",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "景旺电子 | 元件",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "3de4bfee086972833760813e860dbbf102d812918c2ba8cfd58a3e0b10b1e92d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "恒为科技 | 计算机设",
+      "evidence": [
+        "计算机设"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "de22a67c0c4da5830b7491137599a474e8b93795d988e8b87d77f6faed7ec2e5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "天融信 | 软件开发",
+      "evidence": [
+        "软件开发"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "d1a546df6f87d4346f9a904fe123238cabfac6e2196b26cfb3474e6f8a1e2db1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "赛福天 | 通用设备",
+      "evidence": [
+        "通用设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "fcdd8c1e7f9997f565f47472d94d610bf18dc3e402016901280e99bdb505a5df",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "华盛昌 | 电网设备",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "91319b98a4474f8b747f51e4a56375a65c3bab17099842d682ba9b78d5e51deb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "深 赛 格 | 一般零售",
+      "evidence": [
+        "一般零售"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "7910a18f76ffa52893ef7bb94ac86d1897d1f7eb25aa13fc918cbd3f9469be90",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "沪电股份 | 元件",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "7f3e322e65278db791a97de82cf8a3a1ce6e3d1dfa014545a56cb27ca15d8119",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "剑桥科技 | 通信设备",
+      "evidence": [
+        "通信设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "bd9fe5ad039dec10fd272157abc628a28f6138b341e443bd1042cc6a8c952c90",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "三峡新材 | 玻璃玻纤",
+      "evidence": [
+        "玻璃玻纤"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "890f0f402cbbd3fc1a00ccea6cdcf6d83e5a5c98f656b17f83c6a03045178918",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "郑中设计 | 装修装饰",
+      "evidence": [
+        "装修装饰"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "32a37e11ea679ab337497bba15ab325e44e7512721215f5172596450147e3379",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "多伦科技 | 软件开发",
+      "evidence": [
+        "软件开发"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "dae31b3159986ff8ebaec3e2577cd9382ae70c839dccb24ff8df1d282662189d",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "杭电股份 | 电网设备",
+      "evidence": [
+        "电网设备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "39caa74e63148e8ff913aa642a77ca8dcda83393ef323a9db30f8fe88d02819e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "欧菲光 | 光学光电",
+      "evidence": [
+        "光学光电"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "b983132b5202ab6deeda61e5a3abf72c7594fae5b382a0f18e58e2d9db373f17",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "奥士康 | 元件",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "f8cf6d373dd059cf5275d407d2ac98dc27962db0f3bfec87336a73fe38dee048",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "先导基电 | 半导体",
+      "evidence": [
+        "半导体"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "a9b98023a5437cb55b38af20ae228c7fa9a46e77b626e01a52f435abe0098fbc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "四川长虹 | 黑色家电",
+      "evidence": [
+        "黑色家电"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "3279bdf5f4d62d92546c0270b833f0091ccb1aa93ed1db1d872862a790616203",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.65,
+      "novelty": 0.5,
+      "summary": "华正新材 | 元件",
+      "evidence": [
+        "元件"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    },
+    {
+      "source_hash": "4a17edf3c207d06649c4db9d34fe92b5cbe282a060bd55dedb3603486c0e7859",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "563380.SH"
+      ],
+      "direction": -1,
+      "horizon": "1-3d",
+      "confidence": 0.7,
+      "novelty": 0.5,
+      "summary": "光启技术 | 航空装备",
+      "evidence": [
+        "航空装备"
+      ],
+      "risk_flags": [
+        "DDE字段未提供",
+        "题材归因不是已验证因果"
+      ]
+    }
+  ]
+}
