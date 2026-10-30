@@ -2,7 +2,7 @@
   "account_type": "live",
   "as_of": "2026-10-30_user_report",
   "confirmation_status": "pending",
-  "source": "2026-10-30用户报告豆粕卖出6500股、红利ETF持有3900股且成本3.433；成交日期和完整账户待核",
+  "source": "用户确认2026-10-30买入红利ETF3900股、成本3.433；豆粕成交日期和完整账户待核",
   "first_live_day": false,
   "total_equity": null,
   "available_cash": null,
@@ -15,7 +15,7 @@
     {
       "symbol": "510880.SH",
       "name": "红利ETF华泰柏瑞",
-      "opened_on": null,
+      "opened_on": "2026-10-30",
       "quantity": 3900,
       "average_cost": 3.433,
       "market_price": null,
@@ -32,7 +32,7 @@
   },
   "actual_execution": {
     "signal_date": null,
-    "execution_date": null,
+    "execution_date": "2026-10-30",
     "source": "2026-10-30用户在本会话报告；成本不是已确认成交价",
     "fills": [
       {
@@ -43,7 +43,7 @@
       }
     ]
   },
-  "note": "用户报告已卖出豆粕6500股、未买银行，现买入红利ETF3900股、成本3.433。买卖实际日期、买入成交价、费用、可用现金、其他持仓及未完成委托尚未完全核对；不得伪造旧计划成交或自动放行。原账户快照在10月27日计划中保留。",
+  "note": "用户报告已卖出豆粕6500股、未买银行，确认2026-10-30买入红利ETF3900股、成本3.433。豆粕卖出日期、红利成交价、费用、可用现金、其他持仓及未完成委托尚未完全核对；不得伪造旧计划成交或自动放行。原账户快照在10月27日计划中保留。",
   "execution_assumption": {
     "enabled": false,
     "authorization_date": "2026-08-06",
