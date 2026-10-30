@@ -1,8 +1,8 @@
 {
   "account_type": "live",
-  "as_of": "2026-09-11_close",
+  "as_of": "2026-10-30_user_report",
   "confirmation_status": "pending",
-  "source": "用户确认9月11日以1.018元卖光513200.SH 9100股，以2.350元买入159985.SZ 6500股",
+  "source": "2026-10-30用户报告豆粕卖出6500股、红利ETF持有3900股且成本3.433；成交日期和完整账户待核",
   "first_live_day": false,
   "total_equity": null,
   "available_cash": null,
@@ -13,46 +13,43 @@
   },
   "positions": [
     {
-      "symbol": "159985.SZ",
-      "name": "豆粕ETF华夏",
-      "opened_on": "2026-09-11",
-      "quantity": 6500,
-      "average_cost": 2.35,
-      "market_price": 2.325000047683716,
-      "market_value": 15112.500309944153,
-      "unrealized_pnl": -162.49969005584774
+      "symbol": "510880.SH",
+      "name": "红利ETF华泰柏瑞",
+      "opened_on": null,
+      "quantity": 3900,
+      "average_cost": 3.433,
+      "market_price": null,
+      "market_value": null,
+      "unrealized_pnl": null
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {"status": "unknown", "note": "用户尚未确认是否有未完成委托"}
+  ],
   "last_exit_dates": {
     "512010.SH": "2026-09-03",
     "513200.SH": "2026-09-11"
   },
   "actual_execution": {
-    "signal_date": "2026-09-10",
-    "execution_date": "2026-09-11",
+    "signal_date": null,
+    "execution_date": null,
+    "source": "2026-10-30用户在本会话报告；成本不是已确认成交价",
     "fills": [
       {
-        "side": "sell",
-        "symbol": "513200.SH",
-        "quantity": 9100,
-        "price": 1.018
-      },
-      {
         "side": "buy",
-        "symbol": "159985.SZ",
-        "quantity": 6500,
-        "price": 2.35
+        "symbol": "510880.SH",
+        "quantity": 3900,
+        "reported_average_cost": 3.433
       }
     ]
   },
-  "note": "当前持仓及两笔成交已由用户确认，医药已清仓。pending只指新增入金、剩余现金与费用未核；空值表示未知而非零，不得计算总权益及累计收益或假定执行。上一完整快照保存在9月10日计划的account_state。",
+  "note": "用户报告已卖出豆粕6500股、未买银行，现买入红利ETF3900股、成本3.433。买卖实际日期、买入成交价、费用、可用现金、其他持仓及未完成委托尚未完全核对；不得伪造旧计划成交或自动放行。原账户快照在10月27日计划中保留。",
   "execution_assumption": {
     "enabled": false,
     "authorization_date": "2026-08-06",
     "prior_signal_date": "2026-09-09",
     "assumed_fills": [],
-    "override": "9月11日真实成交优先；资金对账待补"
+    "override": "10月30日用户报告红利持仓优先；日期、资金与未完成委托待核，禁止假定执行"
   },
   "cash_reconciliation": {
     "status": "pending",

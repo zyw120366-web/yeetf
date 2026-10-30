@@ -1,0 +1,18 @@
+{
+  "report_date": "2026-10-30",
+  "source": "用户在本会话报告",
+  "symbol": "159985.SZ",
+  "side": "sell",
+  "reported_fills": [
+    {"quantity": 3300, "price": 2.167},
+    {"quantity": 3200, "price": 2.153}
+  ],
+  "execution_date": null,
+  "execution_date_for_scenario_only": "2026-10-29",
+  "broker_fees": null,
+  "broker_available_cash": null,
+  "buy_512800_status": "user_reported_not_bought",
+  "current_positions": "unknown",
+  "reconciliation_status": "pending",
+  "note": "用户称豆粕已卖出并提供两笔价格和股数，表示没有买银行、目前等待；要求按2026-10-29卖出作情景计算，非券商日期确认。费用、券商当前资金和完整持仓尚未确认。此记录不推定信号日，也不改变正式账户或放行状态。"
+}
