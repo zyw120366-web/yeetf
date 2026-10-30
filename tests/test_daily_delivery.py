@@ -86,6 +86,46 @@ def test_empty_blocked_plan_does_not_hide_unreconciled_earlier_order(tmp_path, m
     assert readiness.previous_execution_is_reconciled("2026-10-29", tmp_path)
 
 
+def test_new_layout_puts_action_first_and_keeps_unverified_candidates_observational():
+    report = daily_report.read_json(ROOT / "results/live/2026-10-29_daily_report.json")
+    page = daily_report.render(report)
+    assert page.index("先看怎么做") < page.index("今日收益") < page.index("今天为什么") < page.index("今天筛选出了什么")
+    assert "暂不下单" in page and "当前没有放行的买卖订单" in page
+    assert "红利ETF华泰柏瑞（510880.SH）" in page and "最终候选待核，不能当作买入指令" in page
+    assert "<details class=\"card\"><summary>查看全部ETF筛选明细" in page
+    assert all(row["symbol"] in page for row in report["analysis"]["ranking"])
+
+
+def test_new_layout_labels_user_report_without_claiming_reconciled_position():
+    report = daily_report.read_json(ROOT / "results/live/2026-10-29_daily_report.json")
+    report["signal_date"] = "2026-10-30"
+    report["account"] = {"as_of": "2026-10-30_user_report", "confirmation_status": "pending",
+                         "positions": [{"symbol": "510880.SH", "name": "红利ETF华泰柏瑞",
+                                        "quantity": 3900, "average_cost": 3.433}]}
+    page = daily_report.render(report)
+    assert "用户报告持仓（2026-10-30）：红利ETF华泰柏瑞（510880.SH）3900股，成本3.433元" in page
+    assert "上一计划未对账，不能据此确认完整账户或执行订单" in page
+    assert "暂不下单" in page
+
+
+def test_new_layout_does_not_turn_missing_news_into_no_candidates():
+    report = daily_report.read_json(ROOT / "results/live/2026-10-29_daily_report.json")
+    for row in report["analysis"]["ranking"]:
+        row["technical_entry_pass"] = None
+        row["final_entry_pass"] = None
+    page = daily_report.render(report)
+    assert "完整候选待核；不能把缺失信息当作零或买入信号" in page
+    assert "技术条件通过 0 只" not in page
+
+
+def test_blocked_layout_does_not_display_stale_orders_as_actions():
+    report = daily_report.read_json(ROOT / "results/live/2026-10-29_daily_report.json")
+    report["orders"] = [{"side": "buy", "symbol": "512800.SH", "confirmed_quantity": 16000,
+                         "instruction": "UNRELEASED_ORDER_MUST_NOT_APPEAR"}]
+    page = daily_report.render(report)
+    assert "暂不下单" in page and "UNRELEASED_ORDER_MUST_NOT_APPEAR" not in page
+
+
 def test_stale_running_message_and_old_buy_are_replaced(report_root, monkeypatch):
     monkeypatch.setattr(daily_report, "analyze", lambda *_: {"status": "unavailable", "ranking": [], "candidates": []})
     atomic_json(report_root / "results/live/readiness_report.json", {"signal_date": DATE, "status": "RUNNING", "blocking_items": ["本次运行尚未完成"]})

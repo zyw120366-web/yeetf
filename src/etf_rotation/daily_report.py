@@ -425,51 +425,139 @@ def sections(report: dict):
 
 
 def render(report: dict, *, public=False) -> str:
+    """Present the verified decision first; evidence remains available on demand."""
     esc = html.escape
     date = report["signal_date"]
     root = "../../" if public else "../"
+    a, v = report["analysis"], report["valuation"]
+    ranking = a.get("ranking", [])
+    names = {row["symbol"]: row["name"] for row in ranking}
+    def display(rows):
+        return "、".join(f"{row['name']}（{row['symbol']}）" for row in rows) or "无"
+    def gate(value):
+        return "待核" if value is None else "通过" if value else "未通过"
+
+    status = report["status"]
+    if status == "BLOCKED":
+        action_title = "暂不下单"
+        action_text = "当前没有放行的买卖订单。"
+    else:
+        action_title = "下一交易日计划"
+        action_text = describe_action(report)
+    order_lines = []
+    visible_orders = report.get("orders", []) if status in {"READY", "SELL_ONLY"} else []
+    if status == "SELL_ONLY":
+        visible_orders = [order for order in visible_orders if order.get("side") == "sell"]
+    for order in visible_orders:
+        side = {"buy": "买入", "sell": "卖出"}.get(order.get("side"), "待核")
+        symbol = order.get("symbol") or ""
+        quantity = order.get("confirmed_quantity", order.get("buy_estimate", {}).get("estimated_quantity_at_last_close"))
+        quantity_text = "开盘核算" if quantity is None else f"{quantity:g}股"
+        quantity_text = ("数量参考：" + quantity_text + "（非成交数量）"
+                         if order.get("side") == "buy" else "计划数量：" + quantity_text)
+        order_lines.append(f"{side} {names.get(symbol, symbol)}（{symbol}）：{quantity_text}。{order.get('instruction', '')}")
+    reasons = [str(item).rstrip("。；") for item in report.get("blocking_items", []) if item]
+    if status == "BLOCKED":
+        short_reasons = []
+        for reason in reasons:
+            if "上一计划成交" in reason or "上一笔" in reason and "成交" in reason:
+                summary = "上一笔计划的实际成交未核对"
+            elif "账户状态未确认" in reason:
+                summary = "账户持仓或资金未核清"
+            else:
+                summary = reason
+            if summary not in short_reasons:
+                short_reasons.append(summary)
+        action_text += "原因：" + ("；".join(short_reasons) if short_reasons else "账户或数据尚未核清") + "。"
+
+    account = report.get("account", {})
+    positions = account.get("positions") or []
+    as_of = str(account.get("as_of", ""))[:10]
+    position = positions[0] if len(positions) == 1 and as_of and as_of <= date else None
+    if position:
+        label = "用户报告持仓" if "user_report" in str(account.get("as_of", "")) else "账户记录"
+        holding = f"{label}（{as_of}）：{position.get('name', position.get('symbol'))}（{position.get('symbol')}）{position.get('quantity')}股，成本{position.get('average_cost')}元。"
+        if report.get("position_reconciliation_required"):
+            holding += "上一计划未对账，不能据此确认完整账户或执行订单。"
+    elif not positions and account.get("confirmation_status") in {"confirmed", "assumed_authorized"} and not report.get("position_reconciliation_required"):
+        holding = "账户记录：空仓。"
+    else:
+        holding = "当前持仓待核；不使用历史或回测持仓代替。"
+
+    held = a.get("held")
+    if held and a.get("holding_decision_status") == "complete":
+        why = "持仓：" + ("；".join(a.get("exit_reasons", [])) or "未触发卖出条件") + "。"
+        switch = a.get("opportunity_switch") or {}
+        if switch.get("enabled"):
+            streak, required = switch.get("confirmation_streak"), switch.get("required_confirmation_days")
+            why += (f" 换仓确认：{streak}/{required}。" if streak is not None and required is not None else " 换仓确认待核。")
+    else:
+        why = "持仓的卖出和换仓判断待核。"
+    market = a.get("market") or {}
+    market_text = (f"市场：{market['up']}涨、{market['down']}跌、{market['flat']}平；沪深300ETF {pct(market.get('benchmark_change'))}。"
+                   if all(key in market for key in ("up", "down", "flat")) else "市场数据待核。")
+    core_top = [row for row in ranking if row.get("pool_role") == "core" and number(row.get("rank")) is not None and row["rank"] <= 5]
+    price_pass = [row for row in ranking if row.get("base_entry_pass") is True]
+    technical_pass = [row for row in ranking if row.get("technical_entry_pass") is True]
+    final_pass = [row for row in ranking if row.get("final_entry_pass") is True]
+    if not ranking:
+        funnel = ["全池筛选数据待核。"]
+    else:
+        funnel = ["核心排名前5：" + display(core_top),
+                  f"常规价格条件通过 {len(price_pass)} 只：" + display(price_pass)]
+        if a.get("status") == "complete":
+            funnel.append(f"账户及优先级筛选后 {len(final_pass)} 只：" + display(final_pass))
+        elif all(row.get("technical_entry_pass") is not None for row in ranking):
+            funnel.append(f"技术条件通过 {len(technical_pass)} 只：" + display(technical_pass) + "；最终候选待核，不能当作买入指令。")
+        else:
+            funnel.append("完整候选待核；不能把缺失信息当作零或买入信号。")
+    satellites = [row for row in ranking if row.get("pool_role") == "challenger"]
+    if satellites:
+        satellite_pass = [row for row in satellites if row.get("base_entry_pass") is True]
+        funnel.append("卫星常规价格条件：" + (display(satellite_pass) if satellite_pass else "无通过"))
+
+    review = report.get("review", {})
+    coverage = review.get("coverage")
+    review_text = (f"资讯审核 {review.get('reviewed_count', '—')}/{review.get('input_count', '—')}，覆盖 {coverage:.0%}（仅指已采集资讯）。"
+                   if number(coverage) is not None else "资讯审核未完成或未核验。")
+    if not report.get("news_data_quality", {}).get("dde_available"):
+        review_text += " DDE数据未提供。"
+
     links = report.get("available_links", [])
     navigation = []
     for target, label in [("outputs/ETF轮动策略_回测.html", "回测"), ("outputs/ETF轮动策略_策略与回测.html", "策略介绍")]:
         if target in links:
             if label == "回测" and report.get("backtest_as_of"):
                 label += f"（截至{report['backtest_as_of']}）"
-            navigation.append(f'<a href="{root}{target}">{label}</a>')
+            navigation.append(f'<a href="{root}{target}">{esc(label)}</a>')
     navigation.append(f'<a href="{root}results/audit/{date}_live_run_card.json">运行卡</a>')
-    evidence = (f'<a href="{root}market_data/sentiment/ai_review/{date}.json">逐条审核证据</a> · '
-                if f"market_data/sentiment/ai_review/{date}.json" in links else "")
-    v = report["valuation"]
-    blocks = []
-    for i, (title, paragraphs) in enumerate(sections(report)):
-        blocks.append(f'<section class="section" id="{"dailyOverview" if i == 0 else "detail" + str(i)}"><h2>{title}</h2>' + "".join(f"<p>{esc(p)}</p>" for p in paragraphs if p) + "</section>")
+    if f"market_data/sentiment/ai_review/{date}.json" in links:
+        navigation.append(f'<a href="{root}market_data/sentiment/ai_review/{date}.json">逐条审核证据</a>')
+    navigation.append(f'<a href="{root}results/live/{date}_daily_report.json">日报数据</a>')
     rows = []
-    def gate(value):
-        return "待核" if value is None else "通过" if value else "未通过"
-    for r in report["analysis"].get("ranking", []):
-        cells = [r["name"] + "（" + r["symbol"] + "）", "核心" if r["pool_role"] == "core" else "卫星",
-                 str(r["rank"]), pct(r["change_1d"]), pct(r["momentum_score"]), pct(r["roc20"]), pct(r["roc60"]), pct(r["ma120_bias"]),
-                 gate(r["pool_eligible"]), gate(r["normal_entry"]), gate(r["emerging_entry"]), gate(r["quality_extension"]),
-                 "冷却排除" if r.get("live_cooldown_blocked") else "待核" if r["final_entry_pass"] is None else "观察候选" if r["final_entry_pass"] else "未入选"]
+    for row in ranking:
+        cells = [row["name"] + "（" + row["symbol"] + "）", "核心" if row["pool_role"] == "core" else "卫星",
+                 str(row["rank"]), pct(row["change_1d"]), pct(row["momentum_score"]), pct(row["roc20"]), pct(row["roc60"]), pct(row["ma120_bias"]),
+                 gate(row["pool_eligible"]), gate(row["normal_entry"]), gate(row["emerging_entry"]), gate(row["quality_extension"]),
+                 "冷却排除" if row.get("live_cooldown_blocked") else "待核" if row["final_entry_pass"] is None else "观察候选" if row["final_entry_pass"] else "未入选"]
         rows.append("<tr>" + "".join(f"<td>{esc(x)}</td>" for x in cells) + "</tr>")
     headers = ["ETF", "角色", "排名", "今日", "动量分", "ROC20", "ROC60", "MA120乖离", "资格", "常规价格", "新趋势", "延伸", "筛选结果"]
-    table = '<section class="section"><h2>全池逐层筛选明细</h2><div class="scroll"><table><thead><tr>' + "".join(f"<th>{x}</th>" for x in headers) + "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div></section>"
-    orders = '<section class="section"><h2>执行边界</h2><p>' + esc(report["status"]) + "：" + esc(describe_action(report)) + "</p>"
-    for order in report["orders"]:
-        estimate = order.get("buy_estimate", {})
-        quantity = order.get("confirmed_quantity", estimate.get("estimated_quantity_at_last_close"))
-        side = {"buy": "买入", "sell": "卖出"}.get(order.get("side"), "待核")
-        orders += f"<p>{side} {esc(str(order.get('symbol')))}；数量参考：{esc(str(quantity if quantity is not None else '开盘核算'))}；{esc(str(order.get('instruction', '实际开盘按计划核算，禁止把估算当成交。')))}</p>"
-        if estimate.get("quantity_rule"):
-            orders += f"<p>{esc(estimate['quantity_rule'])}</p>"
-    orders += "<p>账户总权益：" + money(v["account_equity"]) + "；账户状态：" + esc(str(report["account"].get("confirmation_status", "未知"))) + "。持仓盈亏未计费用，账户收益与新增本金不可混淆。</p></section>"
+    table = '<div class="scroll"><table><thead><tr>' + "".join(f"<th>{esc(x)}</th>" for x in headers) + "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>"
+    detail_sections = sections(report)
+    audit_detail = "".join(f'<h3>{esc(title)}</h3>' + "".join(f'<p>{esc(line)}</p>' for line in paragraphs if line)
+                           for title, paragraphs in detail_sections)
     return f'''<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ye 策略日报 · {date}</title>
-<style>body{{margin:0;background:#f5f7fa;color:#223044;font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}}main{{max-width:1200px;margin:auto;padding:28px}}h1{{font-size:30px}}h2{{font-size:21px}}.section,.stat{{background:white;border:1px solid #e1e6ee;border-radius:12px;padding:22px;margin:18px 0}}.stats{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}}.stat strong{{display:block;font-size:27px}}small{{color:#64758b}}a{{color:#315faf}}.scroll{{overflow:auto}}table{{border-collapse:collapse;font-size:14px;width:100%}}td,th{{padding:10px;border-bottom:1px solid #e5eaf2;white-space:nowrap;text-align:left}}th{{background:#edf2f8}}@media(max-width:720px){{main{{padding:14px}}.stats{{grid-template-columns:1fr}}}}</style></head><body><main>
-<h1>ye 策略 · 今日日报</h1><p>{date} 收盘｜数据与订单分开核验</p>
-<p>{' · '.join(navigation)}</p>
-<div class="stats"><div class="stat">策略实盘开启以来<strong>{pct(v['account_return'])}</strong><small>资金未核时不计算</small></div><div class="stat">本次买入收益<strong>{money(v['purchase_pnl'])}</strong><small>{pct(v['purchase_return'])}，未计费用</small></div><div class="stat">今日收益<strong>{money(v['daily_pnl'])}</strong><small>{pct(v['daily_return'])}；仅已确认持仓</small></div></div>
-{''.join(blocks)}{table}{orders}
-<p>{evidence}<a href="{root}results/live/{date}_daily_report.json">日报结构化数据</a></p>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ye 策略日报 · {esc(date)}</title>
+<style>
+*{{box-sizing:border-box}}body{{margin:0;background:#f3f5f8;color:#172337;font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}}main{{max-width:1040px;margin:auto;padding:32px 24px 64px}}h1{{font-size:28px;margin:0}}h2{{font-size:21px;margin:0 0 14px}}h3{{font-size:16px;margin:24px 0 8px}}p{{margin:8px 0}}.top{{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}}.date,.muted,small{{color:#64748b}}.nav a,a{{color:#345fb1}}.nav{{font-size:14px;display:flex;gap:16px;flex-wrap:wrap}}.card{{background:#fff;border:1px solid #e3e8ef;border-radius:16px;padding:23px;margin:16px 0;box-shadow:0 3px 14px #23314d08}}.decision{{background:#172b47;color:#fff;border:0;padding:28px}}.decision .eyebrow{{color:#bbcadb}}.decision h2{{font-size:29px;margin:4px 0 12px}}.decision p{{color:#e2e9f3}}.decision.warning{{background:#493523}}.holding{{border-top:1px solid #ffffff33;padding-top:13px;margin-top:16px}}.stats{{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}}.stat{{background:#fff;border:1px solid #e3e8ef;border-radius:14px;padding:18px}}.stat span,.stat small{{display:block}}.stat strong{{display:block;font-size:24px;margin:3px 0}}.points{{display:grid;gap:8px}}.point{{background:#f5f7fa;border-radius:9px;padding:11px 14px}}.note{{font-size:14px;color:#64748b}}details.card summary{{cursor:pointer;font-weight:650;font-size:17px}}details.card[open] summary{{margin-bottom:15px}}.scroll{{overflow:auto}}table{{border-collapse:collapse;font-size:14px;width:100%}}td,th{{padding:9px;border-bottom:1px solid #e5eaf2;white-space:nowrap;text-align:left}}th{{background:#edf2f8}}@media(max-width:720px){{main{{padding:20px 14px 40px}}.top{{align-items:start;flex-direction:column}}.stats{{grid-template-columns:1fr}}.decision h2{{font-size:25px}}}}
+</style></head><body><main>
+<header class="top"><div><h1>ye 策略日报</h1><div class="date">{esc(date)} 收盘 · 下一交易日计划</div></div><nav class="nav">{' '.join(navigation)}</nav></header>
+<section class="card decision{' warning' if status == 'BLOCKED' else ''}" id="dailyOverview"><div class="eyebrow">先看怎么做</div><h2>{esc(action_title)}</h2><p>{esc(action_text)}</p>{''.join(f'<p>{esc(line)}</p>' for line in order_lines)}<p class="holding">{esc(holding)}</p></section>
+<div class="stats"><div class="stat"><span>今日收益</span><strong>{money(v.get('daily_pnl'))}</strong><small>{pct(v.get('daily_return'))} · 持仓口径</small></div><div class="stat"><span>本次买入收益</span><strong>{money(v.get('purchase_pnl'))}</strong><small>{pct(v.get('purchase_return'))} · 未计费用</small></div><div class="stat"><span>策略开启以来</span><strong>{pct(v.get('account_return'))}</strong><small>账户资金未核时不计算</small></div></div>
+<section class="card"><h2>今天为什么</h2><p>{esc(why)}</p><p>{esc(market_text)}</p><p class="note">{esc(review_text)}</p></section>
+<section class="card"><h2>今天筛选出了什么</h2><div class="points">{''.join(f'<div class="point">{esc(line)}</div>' for line in funnel)}</div><p class="note">候选不等于订单；先确认持仓和放行状态。</p></section>
+<details class="card"><summary>查看全部ETF筛选明细</summary>{table}</details>
+<details class="card"><summary>查看审核与决策依据</summary>{audit_detail}</details>
 </main></body></html>'''
 
 
