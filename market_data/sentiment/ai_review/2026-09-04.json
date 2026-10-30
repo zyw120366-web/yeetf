@@ -1,0 +1,5316 @@
+{
+  "date": "2026-09-04",
+  "status": "complete",
+  "policy": "every_collected_row_reviewed_in_codex_chat_fail_closed",
+  "prompt_version": "ye-codex-chat-review-2026-07-22",
+  "reviewer": "codex_chat",
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "review_protocol": {
+    "version": "ye-codex-chat-review-2026-07-22",
+    "files": [
+      {
+        "path": "config/sentiment_review_policy.yaml",
+        "sha256": "64cc6dd0db1d6888b47d3e15903bbfb194f23dc6495b50a9b94ab778e3275f80"
+      },
+      {
+        "path": "config/sentiment.yaml",
+        "sha256": "264703aa392f3f796635c7e62fcbd21700e2a7bf03ab379f5242c6b23f2af5a2"
+      },
+      {
+        "path": "skills/ye-daily-execution/references/review-schema.md",
+        "sha256": "3a7433d841da73e87a60ca1f559a454fa40f2568ea56ef7566ac3469d7aa1734"
+      }
+    ]
+  },
+  "reviewed_at_utc": "2026-09-08T02:36:02.059185+00:00",
+  "snapshot_hash": "f985f63b12676b6bc762b49d03aa5d88878d3dcbb04851aef652fd9785af2402",
+  "input_count": 136,
+  "reviewed_count": 136,
+  "relevant_count": 71,
+  "coverage": 1.0,
+  "items": [
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872495",
+      "published_at": "2026-09-04",
+      "name": "新炬网络",
+      "title": "新炬网络 | AI智能运维+国产数据库+数据中心运维",
+      "body": "AI智能运维+国产数据库+数据中心运维",
+      "return_pct": 9.984,
+      "turnover": 10942.0,
+      "dde_net": 0.0,
+      "source_hash": "8876350b6530ac6e458820f7bda988e4194ec010765905eb8bc2e4c042edca65",
+      "normalization": {
+        "event_key": "b9582d53c70980d5648a9255cddf64c5f70df2f77b9eff680193f3b31229e245",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8876350b6530ac6e458820f7bda988e4194ec010765905eb8bc2e4c042edca65",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及数据中心、AI，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "新炬网络 新炬网络 | AI智能运维+国产数据库+数据中心运维 AI智能运维+国产数据库+数据中心运维"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872497",
+      "published_at": "2026-09-04",
+      "name": "恒盛能源",
+      "title": "恒盛能源 | 培育钻石+金刚石散热+热电联产",
+      "body": "培育钻石+金刚石散热+热电联产",
+      "return_pct": 9.985,
+      "turnover": 8133.0,
+      "dde_net": 0.0,
+      "source_hash": "01933a608d59a818a91f76ed35b4b6ac6914022b3d59d19b50a90000360b7a83",
+      "normalization": {
+        "event_key": "7731b820bb9fc7372b9ef95c6e64b65952d4090ed9ba173a535ecb882cc3e092",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "01933a608d59a818a91f76ed35b4b6ac6914022b3d59d19b50a90000360b7a83",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "恒盛能源 恒盛能源 | 培育钻石+金刚石散热+热电联产 培育钻石+金刚石散热+热电联产"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872524",
+      "published_at": "2026-09-04",
+      "name": "楚天龙",
+      "title": "楚天龙 | 数字人民币+AI政务+数字安全",
+      "body": "数字人民币+AI政务+数字安全",
+      "return_pct": 10.0,
+      "turnover": 104033.0,
+      "dde_net": 7.65,
+      "source_hash": "7073115ae01eb8c1d9b366b7f499850e0f941b6bb3fa0ad46be1d22a8fd2b055",
+      "normalization": {
+        "event_key": "fe6143ce1115eb165f4e141f8d58dca91a930150a30eb9c0d8644984ef70c4c8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7073115ae01eb8c1d9b366b7f499850e0f941b6bb3fa0ad46be1d22a8fd2b055",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "楚天龙 楚天龙 | 数字人民币+AI政务+数字安全 数字人民币+AI政务+数字安全"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872526",
+      "published_at": "2026-09-04",
+      "name": "翠微股份",
+      "title": "翠微股份 | 数字人民币+跨境支付+AI应用+北京国资",
+      "body": "数字人民币+跨境支付+AI应用+北京国资",
+      "return_pct": 10.039,
+      "turnover": 35485.0,
+      "dde_net": 0.0,
+      "source_hash": "74766dd5767646e08ae9674b11da9d05a89dc03a81256d69aa64a5fbc96ebac4",
+      "normalization": {
+        "event_key": "c35255f0d05d887191f13f5bf648dcb5b18bc892ec65bb043fe19172a9d8e1c3",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "74766dd5767646e08ae9674b11da9d05a89dc03a81256d69aa64a5fbc96ebac4",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "翠微股份 翠微股份 | 数字人民币+跨境支付+AI应用+北京国资 数字人民币+跨境支付+AI应用+北京国资"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872536",
+      "published_at": "2026-09-04",
+      "name": "*ST美芝",
+      "title": "*ST美芝 | 公开招募+建筑装饰+佛山国资",
+      "body": "公开招募+建筑装饰+佛山国资",
+      "return_pct": 10.0,
+      "turnover": 6350.0,
+      "dde_net": 0.19,
+      "source_hash": "a9ceb69d58726fa66c66976153994f6682cc0e71032ec8a71bccf8cb61ae8621",
+      "normalization": {
+        "event_key": "3511db34d3c96159a45d8c60efafdb6117b60e24dda4882f644d7e1a7d6b9814",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "516970.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a9ceb69d58726fa66c66976153994f6682cc0e71032ec8a71bccf8cb61ae8621",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "516970.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及建筑，映射至基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "*ST美芝 *ST美芝 | 公开招募+建筑装饰+佛山国资 公开招募+建筑装饰+佛山国资"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872553",
+      "published_at": "2026-09-04",
+      "name": "爱仕达",
+      "title": "爱仕达 | 人形机器人+工业机器人+炊具小家电",
+      "body": "人形机器人+工业机器人+炊具小家电",
+      "return_pct": 10.049,
+      "turnover": 13456.0,
+      "dde_net": 1.71,
+      "source_hash": "b17841d54cce6e39cac8bc9fda81e09ec14d4ddf84eaeee138c1c3aa548573e5",
+      "normalization": {
+        "event_key": "3d5f1439c8e91775ea523421482309078f6e7426f29f38132bf133af6e0f9b9d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH",
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b17841d54cce6e39cac8bc9fda81e09ec14d4ddf84eaeee138c1c3aa548573e5",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "562500.SH",
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及机器人、人形机器人、家电，映射至科技数字、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "爱仕达 爱仕达 | 人形机器人+工业机器人+炊具小家电 人形机器人+工业机器人+炊具小家电"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872555",
+      "published_at": "2026-09-04",
+      "name": "高争民爆",
+      "title": "高争民爆 | 控股股东拟变更+矿山投资开发+民爆+西藏国资",
+      "body": "控股股东拟变更+矿山投资开发+民爆+西藏国资",
+      "return_pct": 9.993,
+      "turnover": 63271.0,
+      "dde_net": 0.76,
+      "source_hash": "69bd817131bf6807e2e926124123c03eaab98cfb592d12b6d59b6065c9742c90",
+      "normalization": {
+        "event_key": "e2a1159270f760988fe9b289bcd4d8801231f6a2969370b25550100989e51873",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "69bd817131bf6807e2e926124123c03eaab98cfb592d12b6d59b6065c9742c90",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "高争民爆 高争民爆 | 控股股东拟变更+矿山投资开发+民爆+西藏国资 控股股东拟变更+矿山投资开发+民爆+西藏国资"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872562",
+      "published_at": "2026-09-04",
+      "name": "龙版传媒",
+      "title": "龙版传媒 | AI漫剧+出版发行+黑龙江国资",
+      "body": "AI漫剧+出版发行+黑龙江国资",
+      "return_pct": 9.972,
+      "turnover": 49505.0,
+      "dde_net": 0.0,
+      "source_hash": "36a76b1593b88adb4a9487cde5f7600342047f40c065be2220f93cd308293e68",
+      "normalization": {
+        "event_key": "a1d625fd7f9aa840af58658760f6b1d414ec885b7b238689820142f83c62f57f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "36a76b1593b88adb4a9487cde5f7600342047f40c065be2220f93cd308293e68",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI、传媒、出版，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "龙版传媒 龙版传媒 | AI漫剧+出版发行+黑龙江国资 AI漫剧+出版发行+黑龙江国资"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872650",
+      "published_at": "2026-09-04",
+      "name": "会稽山",
+      "title": "会稽山 | 高端黄酒+云集系列+爽酒",
+      "body": "高端黄酒+云集系列+爽酒",
+      "return_pct": 10.009,
+      "turnover": 39943.0,
+      "dde_net": 0.0,
+      "source_hash": "ed260c58efbc76abf9a42354583ed13ec56518eaf06edaf57834892d9cd7ab54",
+      "normalization": {
+        "event_key": "775e20421cb08227a9487b1e9b78dd119f88c9ee2715aea60632bd2cc8c5841a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512690.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ed260c58efbc76abf9a42354583ed13ec56518eaf06edaf57834892d9cd7ab54",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512690.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及黄酒，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "会稽山 会稽山 | 高端黄酒+云集系列+爽酒 高端黄酒+云集系列+爽酒"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872722",
+      "published_at": "2026-09-04",
+      "name": "亚盛集团",
+      "title": "亚盛集团 | 玉米制种+现代农业+甘肃国资",
+      "body": "玉米制种+现代农业+甘肃国资",
+      "return_pct": 10.101,
+      "turnover": 94426.0,
+      "dde_net": 0.0,
+      "source_hash": "4a04919acd72fd888cf09ba60c12d4c9ba4dfff5b6294beb3421e0199b9e0509",
+      "normalization": {
+        "event_key": "7cf2ba88dbba2feaafeb22844d8aed8783988aec7abe26974d5b3152d99f5c57",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4a04919acd72fd888cf09ba60c12d4c9ba4dfff5b6294beb3421e0199b9e0509",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "亚盛集团 亚盛集团 | 玉米制种+现代农业+甘肃国资 玉米制种+现代农业+甘肃国资"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872830",
+      "published_at": "2026-09-04",
+      "name": "海通发展",
+      "title": "海通发展 | 干散货航运+定增募资+船舶购置+海峡两岸",
+      "body": "干散货航运+定增募资+船舶购置+海峡两岸",
+      "return_pct": 9.993,
+      "turnover": 119690.0,
+      "dde_net": 0.0,
+      "source_hash": "ad27574f13c9f38955444c2f7eecbee9077caa9038c8e91a278c1df257d95ce7",
+      "normalization": {
+        "event_key": "fd3a1e695de8061cac5a954afc54b3764e082fe0647a3e5ac005182e23c2155f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ad27574f13c9f38955444c2f7eecbee9077caa9038c8e91a278c1df257d95ce7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "海通发展 海通发展 | 干散货航运+定增募资+船舶购置+海峡两岸 干散货航运+定增募资+船舶购置+海峡两岸"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93872832",
+      "published_at": "2026-09-04",
+      "name": "通达电气",
+      "title": "通达电气 | 智慧交通+智能网联+中报净利增长",
+      "body": "智慧交通+智能网联+中报净利增长",
+      "return_pct": 10.0,
+      "turnover": 14859.0,
+      "dde_net": 0.0,
+      "source_hash": "95b83ff6aef0b60308ad6516e17723b35ec683870a89481ee9bf63bc0e8ceb8b",
+      "normalization": {
+        "event_key": "6d256fcc654154c1a8b95e87ded27d297644eeccaec689bdef2f38dc91ef573e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "95b83ff6aef0b60308ad6516e17723b35ec683870a89481ee9bf63bc0e8ceb8b",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "通达电气 通达电气 | 智慧交通+智能网联+中报净利增长 智慧交通+智能网联+中报净利增长"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873077",
+      "published_at": "2026-09-04",
+      "name": "播恩集团",
+      "title": "播恩集团 | 饲料主业+业绩扭亏+并购布局",
+      "body": "饲料主业+业绩扭亏+并购布局",
+      "return_pct": 10.038,
+      "turnover": 20661.0,
+      "dde_net": 3.84,
+      "source_hash": "bf47823795ebaf349af47151f5d5c4cf2fe7d235ab09a4898766c137feeb21f5",
+      "normalization": {
+        "event_key": "60a7344114ced093e620607b0544305393644e65ebb21800e2152c6357aa1655",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bf47823795ebaf349af47151f5d5c4cf2fe7d235ab09a4898766c137feeb21f5",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "播恩集团 播恩集团 | 饲料主业+业绩扭亏+并购布局 饲料主业+业绩扭亏+并购布局"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873243",
+      "published_at": "2026-09-04",
+      "name": "古越龙山",
+      "title": "古越龙山 | 高端黄酒+年轻化产品+全国化布局",
+      "body": "高端黄酒+年轻化产品+全国化布局",
+      "return_pct": 10.06,
+      "turnover": 65527.0,
+      "dde_net": 0.0,
+      "source_hash": "7cac7fa1056411dcbb1d26b427fdf00baf3fc598084a67b0eab2e948ee08a351",
+      "normalization": {
+        "event_key": "3a3e1ed9bdbfaf8be5fc22c7c943493d556b76bbf5dc35c66c209fb34c8d085c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512690.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7cac7fa1056411dcbb1d26b427fdf00baf3fc598084a67b0eab2e948ee08a351",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512690.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及黄酒，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "古越龙山 古越龙山 | 高端黄酒+年轻化产品+全国化布局 高端黄酒+年轻化产品+全国化布局"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873273",
+      "published_at": "2026-09-04",
+      "name": "中水渔业",
+      "title": "中水渔业 | 远洋渔业+AI渔业+半年报增长+央企平台",
+      "body": "远洋渔业+AI渔业+半年报增长+央企平台",
+      "return_pct": 9.978,
+      "turnover": 21363.0,
+      "dde_net": 2.59,
+      "source_hash": "d582db6be49962cf39fdfdda3c4acdffed1f70b69ff00b6615f2257bfc4c2a02",
+      "normalization": {
+        "event_key": "fd9145f5e2b669a9ac1975c4b77b9ad417e9b2dc5a03f8cd56888a33fc494a42",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d582db6be49962cf39fdfdda3c4acdffed1f70b69ff00b6615f2257bfc4c2a02",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "中水渔业 中水渔业 | 远洋渔业+AI渔业+半年报增长+央企平台 远洋渔业+AI渔业+半年报增长+央企平台"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873305",
+      "published_at": "2026-09-04",
+      "name": "中国出版",
+      "title": "中国出版 | 数智化出版+图书出版+央企背景",
+      "body": "数智化出版+图书出版+央企背景",
+      "return_pct": 10.0,
+      "turnover": 30633.0,
+      "dde_net": 0.0,
+      "source_hash": "21d6ca3488744a7492ed93d2031d37a487d75c5dc974ca52d67403bd9018bc40",
+      "normalization": {
+        "event_key": "33497f427c9888a6db708efd3ec4fcde0c2a58833df701ecea92c92e5a128232",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "21d6ca3488744a7492ed93d2031d37a487d75c5dc974ca52d67403bd9018bc40",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及出版，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "中国出版 中国出版 | 数智化出版+图书出版+央企背景 数智化出版+图书出版+央企背景"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873349",
+      "published_at": "2026-09-04",
+      "name": "天沃科技",
+      "title": "天沃科技 | 光热风电+电力设计+高端装备+上海国资",
+      "body": "光热风电+电力设计+高端装备+上海国资",
+      "return_pct": 10.045,
+      "turnover": 7829.0,
+      "dde_net": 0.8,
+      "source_hash": "1eb6e459b3cb63886bb55abb11399a86f94574c039d39f3ced32be732b2f65c2",
+      "normalization": {
+        "event_key": "7f5e79d32682755297affc59145f150b83590aeba6909f476af17a79910fe8e1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515790.SH",
+          "159611.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1eb6e459b3cb63886bb55abb11399a86f94574c039d39f3ced32be732b2f65c2",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造",
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "515790.SH",
+          "159611.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及风电、电力，映射至高端制造、基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "天沃科技 天沃科技 | 光热风电+电力设计+高端装备+上海国资 光热风电+电力设计+高端装备+上海国资"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873368",
+      "published_at": "2026-09-04",
+      "name": "敦煌种业",
+      "title": "敦煌种业 | 种业+育种研发+中报增长",
+      "body": "种业+育种研发+中报增长",
+      "return_pct": 10.038,
+      "turnover": 124031.0,
+      "dde_net": 0.0,
+      "source_hash": "ba2c26b88b5ec9233389080350329792ca1ec96ccdeaf8e78a2ad4f05448d824",
+      "normalization": {
+        "event_key": "a4a53cb45cdf6cad0e7a3bff98fa37840da14a280198b92065d2d2f447dcb855",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ba2c26b88b5ec9233389080350329792ca1ec96ccdeaf8e78a2ad4f05448d824",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "敦煌种业 敦煌种业 | 种业+育种研发+中报增长 种业+育种研发+中报增长"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873649",
+      "published_at": "2026-09-04",
+      "name": "欢瑞世纪",
+      "title": "欢瑞世纪 | AIGC影视+互动影游+影视制作",
+      "body": "AIGC影视+互动影游+影视制作",
+      "return_pct": 10.039,
+      "turnover": 166028.0,
+      "dde_net": 5.43,
+      "source_hash": "0aaee6dd031becae49607e3d234b27e81c3b78e16be1041eae9deee17f8a0ab8",
+      "normalization": {
+        "event_key": "36117ed5055e20ad2aff00bd67812110afa61d8ae801a9252588c6e7b75931de",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0aaee6dd031becae49607e3d234b27e81c3b78e16be1041eae9deee17f8a0ab8",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI、影视，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "欢瑞世纪 欢瑞世纪 | AIGC影视+互动影游+影视制作 AIGC影视+互动影游+影视制作"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873655",
+      "published_at": "2026-09-04",
+      "name": "天邦食品",
+      "title": "天邦食品 | 生猪养殖+机器人概念+食品加工+预重整",
+      "body": "生猪养殖+机器人概念+食品加工+预重整",
+      "return_pct": 10.0,
+      "turnover": 68668.0,
+      "dde_net": 4.24,
+      "source_hash": "9a83d364a6d435d010926adbc30be29caa39a8efdc40f8c6a6824072dd8a8851",
+      "normalization": {
+        "event_key": "770daf6f0bc070a7611c550b4737d318daf32bc0fcadab715c114bd2ebd15b91",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "562500.SH",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9a83d364a6d435d010926adbc30be29caa39a8efdc40f8c6a6824072dd8a8851",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "科技数字",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "562500.SH",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖、机器人，映射至商品、科技数字、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "天邦食品 天邦食品 | 生猪养殖+机器人概念+食品加工+预重整 生猪养殖+机器人概念+食品加工+预重整"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873756",
+      "published_at": "2026-09-04",
+      "name": "湖南天雁",
+      "title": "湖南天雁 | 兵装重组+涡轮增压器+电子水泵",
+      "body": "兵装重组+涡轮增压器+电子水泵",
+      "return_pct": 10.014,
+      "turnover": 60926.0,
+      "dde_net": 0.0,
+      "source_hash": "cc741168006ae68f1e43bd8e0d70d83052d18b61630fc92583f8d98326aa725b",
+      "normalization": {
+        "event_key": "d44ba9a5220f7ff4e8ff77712e59cd20f69d91c033eb1e77e9b314e97117b89d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cc741168006ae68f1e43bd8e0d70d83052d18b61630fc92583f8d98326aa725b",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "湖南天雁 湖南天雁 | 兵装重组+涡轮增压器+电子水泵 兵装重组+涡轮增压器+电子水泵"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93873916",
+      "published_at": "2026-09-04",
+      "name": "华天酒店",
+      "title": "华天酒店 | 旅游酒店+文体旅融合+生活服务",
+      "body": "旅游酒店+文体旅融合+生活服务",
+      "return_pct": 10.094,
+      "turnover": 28040.0,
+      "dde_net": 1.97,
+      "source_hash": "e6e02c010c5ab64d9737068b7b0ccdcf7333e741f8af9ac39947b95e690f8d23",
+      "normalization": {
+        "event_key": "47a61673a47f410246e64d8910463b82d4f5c4d65074dd7f9a85f2519c9b2dad",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159766.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e6e02c010c5ab64d9737068b7b0ccdcf7333e741f8af9ac39947b95e690f8d23",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159766.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及旅游、酒店，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "华天酒店 华天酒店 | 旅游酒店+文体旅融合+生活服务 旅游酒店+文体旅融合+生活服务"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93875162",
+      "published_at": "2026-09-04",
+      "name": "邦基科技",
+      "title": "邦基科技 | 猪饲料+生猪养殖+产业链一体化",
+      "body": "猪饲料+生猪养殖+产业链一体化",
+      "return_pct": 10.012,
+      "turnover": 10131.0,
+      "dde_net": 0.0,
+      "source_hash": "28856d70482f4cfb1b9e43f37a7217f24782c009e11a2b699a3dde7dcbe0ade0",
+      "normalization": {
+        "event_key": "e9c30fb283eb5266980d876c9273eb180544dd9322836057c8c092e51d1b4467",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "28856d70482f4cfb1b9e43f37a7217f24782c009e11a2b699a3dde7dcbe0ade0",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖、饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "邦基科技 邦基科技 | 猪饲料+生猪养殖+产业链一体化 猪饲料+生猪养殖+产业链一体化"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93876044",
+      "published_at": "2026-09-04",
+      "name": "统一股份",
+      "title": "统一股份 | 液冷+业绩增长+润滑油",
+      "body": "液冷+业绩增长+润滑油",
+      "return_pct": 10.012,
+      "turnover": 60652.0,
+      "dde_net": 0.0,
+      "source_hash": "82aa9e2100ade326ff2a7ea9f1ff7fdd8b124758b22676454f7cfc162a90acf7",
+      "normalization": {
+        "event_key": "2a7ffdadf10a948e1bc4e8ebec4d96b49028beddde4e884acc9c399dfd9ca22b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "82aa9e2100ade326ff2a7ea9f1ff7fdd8b124758b22676454f7cfc162a90acf7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "统一股份 统一股份 | 液冷+业绩增长+润滑油 液冷+业绩增长+润滑油"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93876549",
+      "published_at": "2026-09-04",
+      "name": "福建水泥",
+      "title": "福建水泥 | 水泥熟料+重点项目+福建国资",
+      "body": "水泥熟料+重点项目+福建国资",
+      "return_pct": 9.916,
+      "turnover": 12619.0,
+      "dde_net": 0.0,
+      "source_hash": "369c7f40ba2ccbd6eb4ebeb5cfb830c580da85ebb96e3a7fe4a3ab9134ceca09",
+      "normalization": {
+        "event_key": "864e959e16e3474b38cc1fb97593bbed8907e26490bb98fb318d60e15d63629c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159745.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "369c7f40ba2ccbd6eb4ebeb5cfb830c580da85ebb96e3a7fe4a3ab9134ceca09",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159745.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及水泥，映射至基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "福建水泥 福建水泥 | 水泥熟料+重点项目+福建国资 水泥熟料+重点项目+福建国资"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93876849",
+      "published_at": "2026-09-04",
+      "name": "合富中国",
+      "title": "合富中国 | AI医疗+医疗数智化+体外诊断+海峡两岸",
+      "body": "AI医疗+医疗数智化+体外诊断+海峡两岸",
+      "return_pct": 9.975999999999999,
+      "turnover": 44951.0,
+      "dde_net": 0.0,
+      "source_hash": "cf3899f7432ebdeb773ed07b000ab15f96b0be925f8726b89691bff8569966b0",
+      "normalization": {
+        "event_key": "b7b5518c8542ec276c0860d1dc54c92ba8acdb284247e02efca401f8f17eb107",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562600.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cf3899f7432ebdeb773ed07b000ab15f96b0be925f8726b89691bff8569966b0",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗",
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562600.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及医疗、AI，映射至医药医疗、科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "合富中国 合富中国 | AI医疗+医疗数智化+体外诊断+海峡两岸 AI医疗+医疗数智化+体外诊断+海峡两岸"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93877301",
+      "published_at": "2026-09-04",
+      "name": "海欣食品",
+      "title": "海欣食品 | 速冻食品+山姆渠道+营收增长+海峡两岸",
+      "body": "速冻食品+山姆渠道+营收增长+海峡两岸",
+      "return_pct": 10.0,
+      "turnover": 15390.0,
+      "dde_net": 2.45,
+      "source_hash": "2a0e1042a695e22b27418f17ffe27b95efbac8efcb8797f676de301f49725ba0",
+      "normalization": {
+        "event_key": "ce127d1009a74747fe4f2ed2a34cb015274f41904c72572a8fe1c80c6b40c761",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2a0e1042a695e22b27418f17ffe27b95efbac8efcb8797f676de301f49725ba0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "海欣食品 海欣食品 | 速冻食品+山姆渠道+营收增长+海峡两岸 速冻食品+山姆渠道+营收增长+海峡两岸"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93877371",
+      "published_at": "2026-09-04",
+      "name": "平潭发展",
+      "title": "平潭发展 | 林业+林板一体化+海峡两岸",
+      "body": "林业+林板一体化+海峡两岸",
+      "return_pct": 9.985,
+      "turnover": 247156.0,
+      "dde_net": 6.32,
+      "source_hash": "2a9da3b51d7f89a39e507dac195ccd49e030569f7353cc342e072ba0e2fd668a",
+      "normalization": {
+        "event_key": "50afd4c0ca9c043f6b23958f123b34dbaaca2b3697a823db7d988370b84f683b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2a9da3b51d7f89a39e507dac195ccd49e030569f7353cc342e072ba0e2fd668a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "平潭发展 平潭发展 | 林业+林板一体化+海峡两岸 林业+林板一体化+海峡两岸"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93877528",
+      "published_at": "2026-09-04",
+      "name": "安记食品",
+      "title": "安记食品 | 调味品+海峡两岸+智能制造",
+      "body": "调味品+海峡两岸+智能制造",
+      "return_pct": 10.036,
+      "turnover": 49559.0,
+      "dde_net": 0.0,
+      "source_hash": "bb8069bb72b3489dd3d1d1885c6216379931635785e7dde68bc0375f80328e67",
+      "normalization": {
+        "event_key": "1e66a0fca1cb72fb1dcdf5f83c6a1c2b29b7cd8c3a62ac3111e52c502e1dba40",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bb8069bb72b3489dd3d1d1885c6216379931635785e7dde68bc0375f80328e67",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "安记食品 安记食品 | 调味品+海峡两岸+智能制造 调味品+海峡两岸+智能制造"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93878073",
+      "published_at": "2026-09-04",
+      "name": "绿康生化",
+      "title": "绿康生化 | 动物保健+宠物经济+资产剥离",
+      "body": "动物保健+宠物经济+资产剥离",
+      "return_pct": 10.009,
+      "turnover": 34625.0,
+      "dde_net": 1.18,
+      "source_hash": "04ba003719e87c518313a31351ba0894f6c516c147eeecec99d14e59c53598d4",
+      "normalization": {
+        "event_key": "c5e04921f76261ffa16599bfd4c3b017740a76fcb3d61c4c4e7511ddc9f7fc90",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "04ba003719e87c518313a31351ba0894f6c516c147eeecec99d14e59c53598d4",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "绿康生化 绿康生化 | 动物保健+宠物经济+资产剥离 动物保健+宠物经济+资产剥离"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93879538",
+      "published_at": "2026-09-04",
+      "name": "罗牛山",
+      "title": "罗牛山 | 生猪养殖+黑猪育种+全产业链",
+      "body": "生猪养殖+黑猪育种+全产业链",
+      "return_pct": 10.054,
+      "turnover": 47156.0,
+      "dde_net": 2.15,
+      "source_hash": "9c1aa33718a30cf3748ccab670058b04c1bd3cb68b1543bc736bcfbe47565bbb",
+      "normalization": {
+        "event_key": "e0f0cdc8f00cb223817bb334032ac729e6c233b67aff333cab62d3182454c879",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9c1aa33718a30cf3748ccab670058b04c1bd3cb68b1543bc736bcfbe47565bbb",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "罗牛山 罗牛山 | 生猪养殖+黑猪育种+全产业链 生猪养殖+黑猪育种+全产业链"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93880157",
+      "published_at": "2026-09-04",
+      "name": "正虹科技",
+      "title": "正虹科技 | 生猪养殖+饲料主业+反刍料+降本增效",
+      "body": "生猪养殖+饲料主业+反刍料+降本增效",
+      "return_pct": 10.018,
+      "turnover": 11090.0,
+      "dde_net": 1.31,
+      "source_hash": "7b28770198e4970576abc38047f3af0a5a305ad9892c3892b1a9d9fb850ef009",
+      "normalization": {
+        "event_key": "ad132519609e6547052dd5d69bfdb938e3a379fec00260c83f32f94de4aff678",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7b28770198e4970576abc38047f3af0a5a305ad9892c3892b1a9d9fb850ef009",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖、饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "正虹科技 正虹科技 | 生猪养殖+饲料主业+反刍料+降本增效 生猪养殖+饲料主业+反刍料+降本增效"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93888670",
+      "published_at": "2026-09-04",
+      "name": "润贝航科",
+      "title": "润贝航科 | 航材分销+航材国产化+AI航检眼镜+中报增长",
+      "body": "航材分销+航材国产化+AI航检眼镜+中报增长",
+      "return_pct": 9.985,
+      "turnover": 22898.0,
+      "dde_net": 1.16,
+      "source_hash": "6bc62cba2ad3b4aca98e0a3d290573ef6ced22e5c112cee1054f3fcd36b1dfb0",
+      "normalization": {
+        "event_key": "8961906252c991070faf07f1f55681e8103ccd0fa09222aaac163d524b4267ff",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6bc62cba2ad3b4aca98e0a3d290573ef6ced22e5c112cee1054f3fcd36b1dfb0",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "润贝航科 润贝航科 | 航材分销+航材国产化+AI航检眼镜+中报增长 航材分销+航材国产化+AI航检眼镜+中报增长"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93888880",
+      "published_at": "2026-09-04",
+      "name": "新五丰",
+      "title": "新五丰 | 生猪养殖+产能去化+国企改革",
+      "body": "生猪养殖+产能去化+国企改革",
+      "return_pct": 10.039,
+      "turnover": 31502.0,
+      "dde_net": 0.0,
+      "source_hash": "41d7616be3539493a21dacb122309c4b5463edb56755ce32b4b15940190e1ce6",
+      "normalization": {
+        "event_key": "73b285d633a59ad39c88128cc8af5686cd774af5bfbfaee1029a988656274398",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "41d7616be3539493a21dacb122309c4b5463edb56755ce32b4b15940190e1ce6",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "新五丰 新五丰 | 生猪养殖+产能去化+国企改革 生猪养殖+产能去化+国企改革"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93889143",
+      "published_at": "2026-09-04",
+      "name": "华阳国际",
+      "title": "华阳国际 | AI设计+城市更新+建筑设计",
+      "body": "AI设计+城市更新+建筑设计",
+      "return_pct": 10.008,
+      "turnover": 25225.0,
+      "dde_net": 2.61,
+      "source_hash": "db46c98f754fa7f0a6b5ce95a35e0f11bce3eaa256dd09bdbb8689c1f83d0808",
+      "normalization": {
+        "event_key": "e0d4bb7861ad422fafbf9a57daaaaa5888f08e6634bb403865ffe6b2f80a73d4",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ",
+          "516970.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "db46c98f754fa7f0a6b5ce95a35e0f11bce3eaa256dd09bdbb8689c1f83d0808",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159819.SZ",
+          "516970.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI、建筑，映射至科技数字、基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "华阳国际 华阳国际 | AI设计+城市更新+建筑设计 AI设计+城市更新+建筑设计"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93889194",
+      "published_at": "2026-09-04",
+      "name": "新希望",
+      "title": "新希望 | 猪价回暖+饲料增长+养殖降本",
+      "body": "猪价回暖+饲料增长+养殖降本",
+      "return_pct": 10.0,
+      "turnover": 136025.0,
+      "dde_net": 0.77,
+      "source_hash": "5bb5179e67b18d0486a1be467d3ed6edf0d769d0256b7db76da9a172214a5f66",
+      "normalization": {
+        "event_key": "5f78653f9a8c9c3508a1ba7cc53e5e2aa1a54ff59bedc79c91e6a9e8ed934f32",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5bb5179e67b18d0486a1be467d3ed6edf0d769d0256b7db76da9a172214a5f66",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖、饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "新希望 新希望 | 猪价回暖+饲料增长+养殖降本 猪价回暖+饲料增长+养殖降本"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93890107",
+      "published_at": "2026-09-04",
+      "name": "实丰文化",
+      "title": "实丰文化 | AI玩具+IP潮玩+玩具制造",
+      "body": "AI玩具+IP潮玩+玩具制造",
+      "return_pct": 10.014,
+      "turnover": 18525.0,
+      "dde_net": 2.22,
+      "source_hash": "4ae4c9d37b2c3c8703721f868c500304135f3d7784c111b4db988abcd46f2cb4",
+      "normalization": {
+        "event_key": "9632ddaac60c7d161021c41b626d3ed0b220e163e46dffd0ff071a7906ffc2c4",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4ae4c9d37b2c3c8703721f868c500304135f3d7784c111b4db988abcd46f2cb4",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及AI，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "实丰文化 实丰文化 | AI玩具+IP潮玩+玩具制造 AI玩具+IP潮玩+玩具制造"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93890856",
+      "published_at": "2026-09-04",
+      "name": "ST标准",
+      "title": "ST标准 | 控制权变更+西安国资+缝制设备",
+      "body": "控制权变更+西安国资+缝制设备",
+      "return_pct": 10.0,
+      "turnover": 5929.0,
+      "dde_net": 0.0,
+      "source_hash": "81bbc4e88f5cfe48fde03510d092799510b11ff46d307a6d8f07d029cca3cde4",
+      "normalization": {
+        "event_key": "e56d65b6e35a2be1a563ad97227b605da114c175d6ec65dd9fe4fe2e009fdf8f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "81bbc4e88f5cfe48fde03510d092799510b11ff46d307a6d8f07d029cca3cde4",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "ST标准 ST标准 | 控制权变更+西安国资+缝制设备 控制权变更+西安国资+缝制设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93893383",
+      "published_at": "2026-09-04",
+      "name": "源飞宠物",
+      "title": "源飞宠物 | 宠物食品+海外产能+自有品牌",
+      "body": "宠物食品+海外产能+自有品牌",
+      "return_pct": 9.973,
+      "turnover": 18068.0,
+      "dde_net": 2.59,
+      "source_hash": "e7ed2e0fb80c4abb71cc813523ec41f899318d8003ce953bcfa4fe4c7e7773b7",
+      "normalization": {
+        "event_key": "6fc0b7f248ea9e93821e552a818851fd0eff84d9586cab811cc6e6814fdc1bdb",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e7ed2e0fb80c4abb71cc813523ec41f899318d8003ce953bcfa4fe4c7e7773b7",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "源飞宠物 源飞宠物 | 宠物食品+海外产能+自有品牌 宠物食品+海外产能+自有品牌"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93893615",
+      "published_at": "2026-09-04",
+      "name": "百大集团",
+      "title": "百大集团 | 商业零售+物业租赁+恒隆租约",
+      "body": "商业零售+物业租赁+恒隆租约",
+      "return_pct": 9.981,
+      "turnover": 60202.0,
+      "dde_net": 0.0,
+      "source_hash": "1447e5950547efd6153b3f87c60a06e90972b1946b9c81909f93db6dce1f2a25",
+      "normalization": {
+        "event_key": "6c72bf30266b890adf1b3f067960b70d567139cc2a9234995abff35f9329fda1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH",
+          "510630.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1447e5950547efd6153b3f87c60a06e90972b1946b9c81909f93db6dce1f2a25",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512200.SH",
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及物业、零售，映射至金融地产、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "百大集团 百大集团 | 商业零售+物业租赁+恒隆租约 商业零售+物业租赁+恒隆租约"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605580",
+      "published_at": null,
+      "name": "恒盛能源",
+      "title": "恒盛能源 | 电力",
+      "body": "电力",
+      "return_pct": 9.985315322875977,
+      "turnover": 81332412.0,
+      "dde_net": null,
+      "source_hash": "37b2a43bc40157302de3503d25b6d55fa35bc71e5467fea890b7b7f0c7926610",
+      "normalization": {
+        "event_key": "7731b820bb9fc7372b9ef95c6e64b65952d4090ed9ba173a535ecb882cc3e092",
+        "duplicate_of": "01933a608d59a818a91f76ed35b4b6ac6914022b3d59d19b50a90000360b7a83",
+        "effective_matched_symbols": [
+          "159611.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "37b2a43bc40157302de3503d25b6d55fa35bc71e5467fea890b7b7f0c7926610",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159611.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及电力，映射至基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "恒盛能源 恒盛能源 | 电力 电力"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605398",
+      "published_at": null,
+      "name": "新炬网络",
+      "title": "新炬网络 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 9.983498573303223,
+      "turnover": 109420985.0,
+      "dde_net": null,
+      "source_hash": "e754e5fa6bc86cda0f0eb4284c0a24b41f16d00f0e20e4453e2fcd4a8d33eaa4",
+      "normalization": {
+        "event_key": "b9582d53c70980d5648a9255cddf64c5f70df2f77b9eff680193f3b31229e245",
+        "duplicate_of": "8876350b6530ac6e458820f7bda988e4194ec010765905eb8bc2e4c042edca65",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e754e5fa6bc86cda0f0eb4284c0a24b41f16d00f0e20e4453e2fcd4a8d33eaa4",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "新炬网络 新炬网络 | IT服务Ⅱ IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "003040",
+      "published_at": null,
+      "name": "楚天龙",
+      "title": "楚天龙 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 10.0,
+      "turnover": 1040333104.0,
+      "dde_net": null,
+      "source_hash": "e73bda3ec05dd8cbb1b960e9f858f6e2bac529d363948115c2dbbb026c4eb4fa",
+      "normalization": {
+        "event_key": "fe6143ce1115eb165f4e141f8d58dca91a930150a30eb9c0d8644984ef70c4c8",
+        "duplicate_of": "7073115ae01eb8c1d9b366b7f499850e0f941b6bb3fa0ad46be1d22a8fd2b055",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e73bda3ec05dd8cbb1b960e9f858f6e2bac529d363948115c2dbbb026c4eb4fa",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及通信，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "楚天龙 楚天龙 | 通信设备 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603123",
+      "published_at": null,
+      "name": "翠微股份",
+      "title": "翠微股份 | 多元金融",
+      "body": "多元金融",
+      "return_pct": 10.039369583129883,
+      "turnover": 354857104.0,
+      "dde_net": null,
+      "source_hash": "1aa9006eb73ae40f1c46cb3d9f2a1c1b315f30094415e76bc6d4561c73a2d440",
+      "normalization": {
+        "event_key": "c35255f0d05d887191f13f5bf648dcb5b18bc892ec65bb043fe19172a9d8e1c3",
+        "duplicate_of": "74766dd5767646e08ae9674b11da9d05a89dc03a81256d69aa64a5fbc96ebac4",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1aa9006eb73ae40f1c46cb3d9f2a1c1b315f30094415e76bc6d4561c73a2d440",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "翠微股份 翠微股份 | 多元金融 多元金融"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002827",
+      "published_at": null,
+      "name": "高争民爆",
+      "title": "高争民爆 | 化学制品",
+      "body": "化学制品",
+      "return_pct": 9.993349075317383,
+      "turnover": 632718592.0,
+      "dde_net": null,
+      "source_hash": "9d62b11a9ed20b2a9f1a9d1ea61d1b33fadd3092250c7dd1a2868f3db1606327",
+      "normalization": {
+        "event_key": "e2a1159270f760988fe9b289bcd4d8801231f6a2969370b25550100989e51873",
+        "duplicate_of": "69bd817131bf6807e2e926124123c03eaab98cfb592d12b6d59b6065c9742c90",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9d62b11a9ed20b2a9f1a9d1ea61d1b33fadd3092250c7dd1a2868f3db1606327",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "高争民爆 高争民爆 | 化学制品 化学制品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "605577",
+      "published_at": null,
+      "name": "龙版传媒",
+      "title": "龙版传媒 | 出版",
+      "body": "出版",
+      "return_pct": 9.971712112426758,
+      "turnover": 495051040.0,
+      "dde_net": null,
+      "source_hash": "e1868c6b825b0bbe8a909b07d2d878175890d04cdd41c20b68770a2835016b72",
+      "normalization": {
+        "event_key": "a1d625fd7f9aa840af58658760f6b1d414ec885b7b238689820142f83c62f57f",
+        "duplicate_of": "36a76b1593b88adb4a9487cde5f7600342047f40c065be2220f93cd308293e68",
+        "effective_matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e1868c6b825b0bbe8a909b07d2d878175890d04cdd41c20b68770a2835016b72",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及传媒、出版，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "龙版传媒 龙版传媒 | 出版 出版"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002403",
+      "published_at": null,
+      "name": "爱仕达",
+      "title": "爱仕达 | 小家电",
+      "body": "小家电",
+      "return_pct": 10.04878044128418,
+      "turnover": 134563284.0,
+      "dde_net": null,
+      "source_hash": "fa2d87595617f555c16dec100bde344c112325dccbae82891718310f6a3b226c",
+      "normalization": {
+        "event_key": "3d5f1439c8e91775ea523421482309078f6e7426f29f38132bf133af6e0f9b9d",
+        "duplicate_of": "b17841d54cce6e39cac8bc9fda81e09ec14d4ddf84eaeee138c1c3aa548573e5",
+        "effective_matched_symbols": [
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "fa2d87595617f555c16dec100bde344c112325dccbae82891718310f6a3b226c",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及家电，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "爱仕达 爱仕达 | 小家电 小家电"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "601579",
+      "published_at": null,
+      "name": "会稽山",
+      "title": "会稽山 | 非白酒",
+      "body": "非白酒",
+      "return_pct": 10.009140968322754,
+      "turnover": 399438320.0,
+      "dde_net": null,
+      "source_hash": "7c2237d7f5cde257ebec1c994d4aa3b87cd55db6c1afe8989f912340ea8a3f6c",
+      "normalization": {
+        "event_key": "775e20421cb08227a9487b1e9b78dd119f88c9ee2715aea60632bd2cc8c5841a",
+        "duplicate_of": "ed260c58efbc76abf9a42354583ed13ec56518eaf06edaf57834892d9cd7ab54",
+        "effective_matched_symbols": [
+          "512690.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7c2237d7f5cde257ebec1c994d4aa3b87cd55db6c1afe8989f912340ea8a3f6c",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512690.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及白酒、非白酒，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "会稽山 会稽山 | 非白酒 非白酒"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600108",
+      "published_at": null,
+      "name": "亚盛集团",
+      "title": "亚盛集团 | 种植业",
+      "body": "种植业",
+      "return_pct": 10.1010103225708,
+      "turnover": 944268800.0,
+      "dde_net": null,
+      "source_hash": "ae25297f85b5f1eba2f41429e131c3508be265adbc18669cc72915d79cfbc05c",
+      "normalization": {
+        "event_key": "7cf2ba88dbba2feaafeb22844d8aed8783988aec7abe26974d5b3152d99f5c57",
+        "duplicate_of": "4a04919acd72fd888cf09ba60c12d4c9ba4dfff5b6294beb3421e0199b9e0509",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ae25297f85b5f1eba2f41429e131c3508be265adbc18669cc72915d79cfbc05c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "亚盛集团 亚盛集团 | 种植业 种植业"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603390",
+      "published_at": null,
+      "name": "通达电气",
+      "title": "通达电气 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 10.0,
+      "turnover": 148595858.0,
+      "dde_net": null,
+      "source_hash": "86fae06f27631901fd93e23f6519d263e783e403efb5b19617abd8f59d274de9",
+      "normalization": {
+        "event_key": "6d256fcc654154c1a8b95e87ded27d297644eeccaec689bdef2f38dc91ef573e",
+        "duplicate_of": "95b83ff6aef0b60308ad6516e17723b35ec683870a89481ee9bf63bc0e8ceb8b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "86fae06f27631901fd93e23f6519d263e783e403efb5b19617abd8f59d274de9",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "通达电气 通达电气 | 汽车零部 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603162",
+      "published_at": null,
+      "name": "海通发展",
+      "title": "海通发展 | 航运港口",
+      "body": "航运港口",
+      "return_pct": 9.992486953735352,
+      "turnover": 1196908208.0,
+      "dde_net": null,
+      "source_hash": "e14cf4f91955d108fa9a17d1e810f1de4855c0eb4dbfc3ee5608d8cdee45a919",
+      "normalization": {
+        "event_key": "fd3a1e695de8061cac5a954afc54b3764e082fe0647a3e5ac005182e23c2155f",
+        "duplicate_of": "ad27574f13c9f38955444c2f7eecbee9077caa9038c8e91a278c1df257d95ce7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e14cf4f91955d108fa9a17d1e810f1de4855c0eb4dbfc3ee5608d8cdee45a919",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "海通发展 海通发展 | 航运港口 航运港口"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001366",
+      "published_at": null,
+      "name": "播恩集团",
+      "title": "播恩集团 | 饲料",
+      "body": "饲料",
+      "return_pct": 10.038313865661621,
+      "turnover": 206619808.0,
+      "dde_net": null,
+      "source_hash": "f2247294e0163071c711a8c8272acabf729df51b0f65c792eb49bbc5cd5fa25b",
+      "normalization": {
+        "event_key": "60a7344114ced093e620607b0544305393644e65ebb21800e2152c6357aa1655",
+        "duplicate_of": "bf47823795ebaf349af47151f5d5c4cf2fe7d235ab09a4898766c137feeb21f5",
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f2247294e0163071c711a8c8272acabf729df51b0f65c792eb49bbc5cd5fa25b",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "播恩集团 播恩集团 | 饲料 饲料"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600059",
+      "published_at": null,
+      "name": "古越龙山",
+      "title": "古越龙山 | 非白酒",
+      "body": "非白酒",
+      "return_pct": 10.059880256652832,
+      "turnover": 655276944.0,
+      "dde_net": null,
+      "source_hash": "0be02b1deda785d27c83cf84b7a9a0bc02dd83e58e44c2f8d0ff33718ed27b99",
+      "normalization": {
+        "event_key": "3a3e1ed9bdbfaf8be5fc22c7c943493d556b76bbf5dc35c66c209fb34c8d085c",
+        "duplicate_of": "7cac7fa1056411dcbb1d26b427fdf00baf3fc598084a67b0eab2e948ee08a351",
+        "effective_matched_symbols": [
+          "512690.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0be02b1deda785d27c83cf84b7a9a0bc02dd83e58e44c2f8d0ff33718ed27b99",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512690.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及白酒、非白酒，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "古越龙山 古越龙山 | 非白酒 非白酒"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000798",
+      "published_at": null,
+      "name": "中水渔业",
+      "title": "中水渔业 | 渔业",
+      "body": "渔业",
+      "return_pct": 9.978307723999023,
+      "turnover": 213634474.0,
+      "dde_net": null,
+      "source_hash": "576a45a3452284acd298dd670912d75f105c86d3f9574c751706204eb3387bb6",
+      "normalization": {
+        "event_key": "fd9145f5e2b669a9ac1975c4b77b9ad417e9b2dc5a03f8cd56888a33fc494a42",
+        "duplicate_of": "d582db6be49962cf39fdfdda3c4acdffed1f70b69ff00b6615f2257bfc4c2a02",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "576a45a3452284acd298dd670912d75f105c86d3f9574c751706204eb3387bb6",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "中水渔业 中水渔业 | 渔业 渔业"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "601949",
+      "published_at": null,
+      "name": "中国出版",
+      "title": "中国出版 | 出版",
+      "body": "出版",
+      "return_pct": 10.0,
+      "turnover": 306336544.0,
+      "dde_net": null,
+      "source_hash": "2f16d84ecd3e4f086dfea2d024df3f629f231bf9cbf9bd9e9f56dd1e155ef67d",
+      "normalization": {
+        "event_key": "33497f427c9888a6db708efd3ec4fcde0c2a58833df701ecea92c92e5a128232",
+        "duplicate_of": "21d6ca3488744a7492ed93d2031d37a487d75c5dc974ca52d67403bd9018bc40",
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2f16d84ecd3e4f086dfea2d024df3f629f231bf9cbf9bd9e9f56dd1e155ef67d",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及出版，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "中国出版 中国出版 | 出版 出版"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002564",
+      "published_at": null,
+      "name": "天沃科技",
+      "title": "天沃科技 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 10.044642448425293,
+      "turnover": 78292653.0,
+      "dde_net": null,
+      "source_hash": "e093d2b620c6f0a9b2d6c96d6e14241a5ec5558b5a1de9fccf7a8e098df57b70",
+      "normalization": {
+        "event_key": "7f5e79d32682755297affc59145f150b83590aeba6909f476af17a79910fe8e1",
+        "duplicate_of": "1eb6e459b3cb63886bb55abb11399a86f94574c039d39f3ced32be732b2f65c2",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e093d2b620c6f0a9b2d6c96d6e14241a5ec5558b5a1de9fccf7a8e098df57b70",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "天沃科技 天沃科技 | 专用设备 专用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600354",
+      "published_at": null,
+      "name": "敦煌种业",
+      "title": "敦煌种业 | 种植业",
+      "body": "种植业",
+      "return_pct": 10.038119316101074,
+      "turnover": 1240319856.0,
+      "dde_net": null,
+      "source_hash": "8845fd083d94818ba075385315afdc513e420f026bbb6ac134b6dde7b687072a",
+      "normalization": {
+        "event_key": "a4a53cb45cdf6cad0e7a3bff98fa37840da14a280198b92065d2d2f447dcb855",
+        "duplicate_of": "ba2c26b88b5ec9233389080350329792ca1ec96ccdeaf8e78a2ad4f05448d824",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8845fd083d94818ba075385315afdc513e420f026bbb6ac134b6dde7b687072a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "敦煌种业 敦煌种业 | 种植业 种植业"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000892",
+      "published_at": null,
+      "name": "欢瑞世纪",
+      "title": "欢瑞世纪 | 影视院线",
+      "body": "影视院线",
+      "return_pct": 10.039369583129883,
+      "turnover": 1660285776.0,
+      "dde_net": null,
+      "source_hash": "e9ce90433c4f22543e317eb18ce681dcbf1991cf163764a92b63ccff5ea46a71",
+      "normalization": {
+        "event_key": "36117ed5055e20ad2aff00bd67812110afa61d8ae801a9252588c6e7b75931de",
+        "duplicate_of": "0aaee6dd031becae49607e3d234b27e81c3b78e16be1041eae9deee17f8a0ab8",
+        "effective_matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e9ce90433c4f22543e317eb18ce681dcbf1991cf163764a92b63ccff5ea46a71",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及影视，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "欢瑞世纪 欢瑞世纪 | 影视院线 影视院线"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002124",
+      "published_at": null,
+      "name": "天邦食品",
+      "title": "天邦食品 | 养殖业",
+      "body": "养殖业",
+      "return_pct": 10.0,
+      "turnover": 686686384.0,
+      "dde_net": null,
+      "source_hash": "1ef92a67e074642f2b7eb283f7222ba4acc4e22c235feb07147716ffca772a66",
+      "normalization": {
+        "event_key": "770daf6f0bc070a7611c550b4737d318daf32bc0fcadab715c114bd2ebd15b91",
+        "duplicate_of": "9a83d364a6d435d010926adbc30be29caa39a8efdc40f8c6a6824072dd8a8851",
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1ef92a67e074642f2b7eb283f7222ba4acc4e22c235feb07147716ffca772a66",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "天邦食品 天邦食品 | 养殖业 养殖业"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600698",
+      "published_at": null,
+      "name": "湖南天雁",
+      "title": "湖南天雁 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 10.013908386230469,
+      "turnover": 609261872.0,
+      "dde_net": null,
+      "source_hash": "bc7c9b657b4470b28036c334d3c8d2b6ee6b1e84ec23e75a4e4c35b01a9d3a97",
+      "normalization": {
+        "event_key": "d44ba9a5220f7ff4e8ff77712e59cd20f69d91c033eb1e77e9b314e97117b89d",
+        "duplicate_of": "cc741168006ae68f1e43bd8e0d70d83052d18b61630fc92583f8d98326aa725b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bc7c9b657b4470b28036c334d3c8d2b6ee6b1e84ec23e75a4e4c35b01a9d3a97",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "湖南天雁 湖南天雁 | 汽车零部 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "920075",
+      "published_at": null,
+      "name": "柏星龙",
+      "title": "柏星龙 | 包装印刷",
+      "body": "包装印刷",
+      "return_pct": 30.000001907348633,
+      "turnover": 122264550.0,
+      "dde_net": null,
+      "source_hash": "a86415d8cdbd7508961df9705a64b5a18cff8e449c4de2a61c141f20fcfdbf0c",
+      "normalization": {
+        "event_key": "a52ffb709c7a0a098c19e084685dbb952598fc722a52be428749e56fa542cfba",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a86415d8cdbd7508961df9705a64b5a18cff8e449c4de2a61c141f20fcfdbf0c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "柏星龙 柏星龙 | 包装印刷 包装印刷"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000428",
+      "published_at": null,
+      "name": "华天酒店",
+      "title": "华天酒店 | 酒店餐饮",
+      "body": "酒店餐饮",
+      "return_pct": 10.093896865844727,
+      "turnover": 280402176.0,
+      "dde_net": null,
+      "source_hash": "43c6e6d247d08e7468a3c3eb69fb0843c6310617a8c07f5719a82c5458137956",
+      "normalization": {
+        "event_key": "47a61673a47f410246e64d8910463b82d4f5c4d65074dd7f9a85f2519c9b2dad",
+        "duplicate_of": "e6e02c010c5ab64d9737068b7b0ccdcf7333e741f8af9ac39947b95e690f8d23",
+        "effective_matched_symbols": [
+          "159766.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "43c6e6d247d08e7468a3c3eb69fb0843c6310617a8c07f5719a82c5458137956",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159766.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及酒店，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "华天酒店 华天酒店 | 酒店餐饮 酒店餐饮"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603151",
+      "published_at": null,
+      "name": "邦基科技",
+      "title": "邦基科技 | 饲料",
+      "body": "饲料",
+      "return_pct": 10.01213550567627,
+      "turnover": 101315826.0,
+      "dde_net": null,
+      "source_hash": "f80361b34d096d5c8cfaa96c1a14fad7398ba4cf332e69a6d2bc664811081560",
+      "normalization": {
+        "event_key": "e9c30fb283eb5266980d876c9273eb180544dd9322836057c8c092e51d1b4467",
+        "duplicate_of": "28856d70482f4cfb1b9e43f37a7217f24782c009e11a2b699a3dde7dcbe0ade0",
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f80361b34d096d5c8cfaa96c1a14fad7398ba4cf332e69a6d2bc664811081560",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "邦基科技 邦基科技 | 饲料 饲料"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600506",
+      "published_at": null,
+      "name": "统一股份",
+      "title": "统一股份 | 炼化及贸",
+      "body": "炼化及贸",
+      "return_pct": 10.011919021606445,
+      "turnover": 606529008.0,
+      "dde_net": null,
+      "source_hash": "1afd2e1fdb612143fbeb3fc0455dab9b1561714731f3cb0bb6991b57da3f986e",
+      "normalization": {
+        "event_key": "2a7ffdadf10a948e1bc4e8ebec4d96b49028beddde4e884acc9c399dfd9ca22b",
+        "duplicate_of": "82aa9e2100ade326ff2a7ea9f1ff7fdd8b124758b22676454f7cfc162a90acf7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1afd2e1fdb612143fbeb3fc0455dab9b1561714731f3cb0bb6991b57da3f986e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "统一股份 统一股份 | 炼化及贸 炼化及贸"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600802",
+      "published_at": null,
+      "name": "福建水泥",
+      "title": "福建水泥 | 水泥",
+      "body": "水泥",
+      "return_pct": 9.91561222076416,
+      "turnover": 126192109.0,
+      "dde_net": null,
+      "source_hash": "8274a1411fc786ba788dbd12a8266842f6134dc878cd5522d7ffa09c6f405ce7",
+      "normalization": {
+        "event_key": "864e959e16e3474b38cc1fb97593bbed8907e26490bb98fb318d60e15d63629c",
+        "duplicate_of": "369c7f40ba2ccbd6eb4ebeb5cfb830c580da85ebb96e3a7fe4a3ab9134ceca09",
+        "effective_matched_symbols": [
+          "159745.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8274a1411fc786ba788dbd12a8266842f6134dc878cd5522d7ffa09c6f405ce7",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159745.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及水泥，映射至基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "福建水泥 福建水泥 | 水泥 水泥"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603122",
+      "published_at": null,
+      "name": "合富中国",
+      "title": "合富中国 | 医疗服务",
+      "body": "医疗服务",
+      "return_pct": 9.975668907165527,
+      "turnover": 449514144.0,
+      "dde_net": null,
+      "source_hash": "ba2e97f67716d48c28cc0f8fce129a6652ddefc45c28932c784fa211663e6949",
+      "normalization": {
+        "event_key": "b7b5518c8542ec276c0860d1dc54c92ba8acdb284247e02efca401f8f17eb107",
+        "duplicate_of": "cf3899f7432ebdeb773ed07b000ab15f96b0be925f8726b89691bff8569966b0",
+        "effective_matched_symbols": [
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ba2e97f67716d48c28cc0f8fce129a6652ddefc45c28932c784fa211663e6949",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及医疗，映射至医药医疗；仅作单日题材强弱证据。",
+        "evidence": [
+          "合富中国 合富中国 | 医疗服务 医疗服务"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002702",
+      "published_at": null,
+      "name": "海欣食品",
+      "title": "海欣食品 | 食品加工",
+      "body": "食品加工",
+      "return_pct": 10.0,
+      "turnover": 153909626.0,
+      "dde_net": null,
+      "source_hash": "5d48bd5e6e25f161e8148bd515eb6da0db53cd0b794ec4063140ad118ceddab3",
+      "normalization": {
+        "event_key": "ce127d1009a74747fe4f2ed2a34cb015274f41904c72572a8fe1c80c6b40c761",
+        "duplicate_of": "2a0e1042a695e22b27418f17ffe27b95efbac8efcb8797f676de301f49725ba0",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5d48bd5e6e25f161e8148bd515eb6da0db53cd0b794ec4063140ad118ceddab3",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "海欣食品 海欣食品 | 食品加工 食品加工"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000592",
+      "published_at": null,
+      "name": "平潭发展",
+      "title": "平潭发展 | 林业Ⅱ",
+      "body": "林业Ⅱ",
+      "return_pct": 9.985315322875977,
+      "turnover": 2471567696.0,
+      "dde_net": null,
+      "source_hash": "4dbabe00892ceb754ba74aa5046fe44b5eb71aacd313c297d04b0b6e4c8649c4",
+      "normalization": {
+        "event_key": "50afd4c0ca9c043f6b23958f123b34dbaaca2b3697a823db7d988370b84f683b",
+        "duplicate_of": "2a9da3b51d7f89a39e507dac195ccd49e030569f7353cc342e072ba0e2fd668a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4dbabe00892ceb754ba74aa5046fe44b5eb71aacd313c297d04b0b6e4c8649c4",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "平潭发展 平潭发展 | 林业Ⅱ 林业Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603696",
+      "published_at": null,
+      "name": "安记食品",
+      "title": "安记食品 | 调味发酵",
+      "body": "调味发酵",
+      "return_pct": 10.03636360168457,
+      "turnover": 495599584.0,
+      "dde_net": null,
+      "source_hash": "8059e9e0ebec2c120fc524b38b921e9929842b3443624aecc68b6449219f0b78",
+      "normalization": {
+        "event_key": "1e66a0fca1cb72fb1dcdf5f83c6a1c2b29b7cd8c3a62ac3111e52c502e1dba40",
+        "duplicate_of": "bb8069bb72b3489dd3d1d1885c6216379931635785e7dde68bc0375f80328e67",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8059e9e0ebec2c120fc524b38b921e9929842b3443624aecc68b6449219f0b78",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "安记食品 安记食品 | 调味发酵 调味发酵"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002868",
+      "published_at": null,
+      "name": "绿康生化",
+      "title": "绿康生化 | 动物保健",
+      "body": "动物保健",
+      "return_pct": 10.008517265319824,
+      "turnover": 346250944.0,
+      "dde_net": null,
+      "source_hash": "4dc05560bfc4aae27ee00386e736b38995c08c0d1e8ea8246cfbbffacaa7852f",
+      "normalization": {
+        "event_key": "c5e04921f76261ffa16599bfd4c3b017740a76fcb3d61c4c4e7511ddc9f7fc90",
+        "duplicate_of": "04ba003719e87c518313a31351ba0894f6c516c147eeecec99d14e59c53598d4",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4dc05560bfc4aae27ee00386e736b38995c08c0d1e8ea8246cfbbffacaa7852f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "绿康生化 绿康生化 | 动物保健 动物保健"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000735",
+      "published_at": null,
+      "name": "罗 牛 山",
+      "title": "罗 牛 山 | 养殖业",
+      "body": "养殖业",
+      "return_pct": 10.05385971069336,
+      "turnover": 471560288.0,
+      "dde_net": null,
+      "source_hash": "865fa4324f7753865ba8585f387c429773380af17cbc57781ccc0cbb0c8e1499",
+      "normalization": {
+        "event_key": "e0f0cdc8f00cb223817bb334032ac729e6c233b67aff333cab62d3182454c879",
+        "duplicate_of": "9c1aa33718a30cf3748ccab670058b04c1bd3cb68b1543bc736bcfbe47565bbb",
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "865fa4324f7753865ba8585f387c429773380af17cbc57781ccc0cbb0c8e1499",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "罗 牛 山 罗 牛 山 | 养殖业 养殖业"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000702",
+      "published_at": null,
+      "name": "正虹科技",
+      "title": "正虹科技 | 饲料",
+      "body": "饲料",
+      "return_pct": 10.017574310302734,
+      "turnover": 110905654.0,
+      "dde_net": null,
+      "source_hash": "eff5bc354a6756771cb05cf76137cad209f41d186bae72461fed6a516a3e0e18",
+      "normalization": {
+        "event_key": "ad132519609e6547052dd5d69bfdb938e3a379fec00260c83f32f94de4aff678",
+        "duplicate_of": "7b28770198e4970576abc38047f3af0a5a305ad9892c3892b1a9d9fb850ef009",
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "eff5bc354a6756771cb05cf76137cad209f41d186bae72461fed6a516a3e0e18",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "正虹科技 正虹科技 | 饲料 饲料"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001316",
+      "published_at": null,
+      "name": "润贝航科",
+      "title": "润贝航科 | 炼化及贸",
+      "body": "炼化及贸",
+      "return_pct": 9.98542308807373,
+      "turnover": 228986064.0,
+      "dde_net": null,
+      "source_hash": "dd3f629e17330db0ab5daa0baed4d07f2101d5239c5286efbe95288c5f3827c0",
+      "normalization": {
+        "event_key": "8961906252c991070faf07f1f55681e8103ccd0fa09222aaac163d524b4267ff",
+        "duplicate_of": "6bc62cba2ad3b4aca98e0a3d290573ef6ced22e5c112cee1054f3fcd36b1dfb0",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dd3f629e17330db0ab5daa0baed4d07f2101d5239c5286efbe95288c5f3827c0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "润贝航科 润贝航科 | 炼化及贸 炼化及贸"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600975",
+      "published_at": null,
+      "name": "新五丰",
+      "title": "新五丰 | 养殖业",
+      "body": "养殖业",
+      "return_pct": 10.039369583129883,
+      "turnover": 315029456.0,
+      "dde_net": null,
+      "source_hash": "e293ef735e49c9178b987b9920a2ee55e91f2266a2441c7843deabab9e59ee61",
+      "normalization": {
+        "event_key": "73b285d633a59ad39c88128cc8af5686cd774af5bfbfaee1029a988656274398",
+        "duplicate_of": "41d7616be3539493a21dacb122309c4b5463edb56755ce32b4b15940190e1ce6",
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e293ef735e49c9178b987b9920a2ee55e91f2266a2441c7843deabab9e59ee61",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及养殖，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "新五丰 新五丰 | 养殖业 养殖业"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002949",
+      "published_at": null,
+      "name": "华阳国际",
+      "title": "华阳国际 | 工程咨询",
+      "body": "工程咨询",
+      "return_pct": 10.007819175720215,
+      "turnover": 252251728.0,
+      "dde_net": null,
+      "source_hash": "d258a3ec5f9c86e4a20bb04e265e71dfa2be14980138e0b0b170454f0a2c92bc",
+      "normalization": {
+        "event_key": "e0d4bb7861ad422fafbf9a57daaaaa5888f08e6634bb403865ffe6b2f80a73d4",
+        "duplicate_of": "db46c98f754fa7f0a6b5ce95a35e0f11bce3eaa256dd09bdbb8689c1f83d0808",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d258a3ec5f9c86e4a20bb04e265e71dfa2be14980138e0b0b170454f0a2c92bc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "华阳国际 华阳国际 | 工程咨询 工程咨询"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000876",
+      "published_at": null,
+      "name": "新 希 望",
+      "title": "新 希 望 | 饲料",
+      "body": "饲料",
+      "return_pct": 10.0,
+      "turnover": 1360256304.0,
+      "dde_net": null,
+      "source_hash": "950ee5ddc34b9a41695bc3df1d6998a94f846f06c1145f1977db45013b93dc5f",
+      "normalization": {
+        "event_key": "5f78653f9a8c9c3508a1ba7cc53e5e2aa1a54ff59bedc79c91e6a9e8ed934f32",
+        "duplicate_of": "5bb5179e67b18d0486a1be467d3ed6edf0d769d0256b7db76da9a172214a5f66",
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "950ee5ddc34b9a41695bc3df1d6998a94f846f06c1145f1977db45013b93dc5f",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "新 希 望 新 希 望 | 饲料 饲料"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002862",
+      "published_at": null,
+      "name": "实丰文化",
+      "title": "实丰文化 | 文娱用品",
+      "body": "文娱用品",
+      "return_pct": 10.013717651367188,
+      "turnover": 185258126.0,
+      "dde_net": null,
+      "source_hash": "62769c88c48e63b88a6c6658c8542a3808848c86da92a2978e15a46a0dd07d09",
+      "normalization": {
+        "event_key": "9632ddaac60c7d161021c41b626d3ed0b220e163e46dffd0ff071a7906ffc2c4",
+        "duplicate_of": "4ae4c9d37b2c3c8703721f868c500304135f3d7784c111b4db988abcd46f2cb4",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "62769c88c48e63b88a6c6658c8542a3808848c86da92a2978e15a46a0dd07d09",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "实丰文化 实丰文化 | 文娱用品 文娱用品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001222",
+      "published_at": null,
+      "name": "源飞宠物",
+      "title": "源飞宠物 | 文娱用品",
+      "body": "文娱用品",
+      "return_pct": 9.972677230834961,
+      "turnover": 180684691.0,
+      "dde_net": null,
+      "source_hash": "56cbe8c28ab533943812020e9ed6df2166e6e72ad9c3834f0717479285aa95db",
+      "normalization": {
+        "event_key": "6fc0b7f248ea9e93821e552a818851fd0eff84d9586cab811cc6e6814fdc1bdb",
+        "duplicate_of": "e7ed2e0fb80c4abb71cc813523ec41f899318d8003ce953bcfa4fe4c7e7773b7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "56cbe8c28ab533943812020e9ed6df2166e6e72ad9c3834f0717479285aa95db",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "源飞宠物 源飞宠物 | 文娱用品 文娱用品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600865",
+      "published_at": null,
+      "name": "百大集团",
+      "title": "百大集团 | 一般零售",
+      "body": "一般零售",
+      "return_pct": 9.980620384216309,
+      "turnover": 602024512.0,
+      "dde_net": null,
+      "source_hash": "67c8fac4dcc8ac690936f30969164f803d39f3aae902952f451679e09b747029",
+      "normalization": {
+        "event_key": "6c72bf30266b890adf1b3f067960b70d567139cc2a9234995abff35f9329fda1",
+        "duplicate_of": "1447e5950547efd6153b3f87c60a06e90972b1946b9c81909f93db6dce1f2a25",
+        "effective_matched_symbols": [
+          "510630.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "67c8fac4dcc8ac690936f30969164f803d39f3aae902952f451679e09b747029",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.68,
+        "novelty": 0.3,
+        "summary": "原文直接提及零售，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "百大集团 百大集团 | 一般零售 一般零售"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600611",
+      "published_at": null,
+      "name": "大众交通",
+      "title": "大众交通 | 铁路公路",
+      "body": "铁路公路",
+      "return_pct": -2.7184464931488037,
+      "turnover": 1703308896.0,
+      "dde_net": null,
+      "source_hash": "73767000cde9dd10df537b5ada36e69c8277b41a35407d67d647f55b10e781bc",
+      "normalization": {
+        "event_key": "b0f5acb141f29cb380c5a45f9cc33780a511c5fa78c66db7cabcf908c8a1ec73",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "73767000cde9dd10df537b5ada36e69c8277b41a35407d67d647f55b10e781bc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "大众交通 大众交通 | 铁路公路 铁路公路"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002472",
+      "published_at": null,
+      "name": "双环传动",
+      "title": "双环传动 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 7.4251837730407715,
+      "turnover": 3195893472.0,
+      "dde_net": null,
+      "source_hash": "9ac6856d3b62bd06a72fcc5eab2bccefbb94368c644316b14baa453a6b4364bd",
+      "normalization": {
+        "event_key": "d955d5e4c6f6bb78d98864d1069f94bdae26dcc3e8733ea6aa6103bf056ecad2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9ac6856d3b62bd06a72fcc5eab2bccefbb94368c644316b14baa453a6b4364bd",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "双环传动 双环传动 | 汽车零部 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002980",
+      "published_at": null,
+      "name": "华盛昌",
+      "title": "华盛昌 | 电网设备",
+      "body": "电网设备",
+      "return_pct": 0.6562910079956055,
+      "turnover": 1983750032.0,
+      "dde_net": null,
+      "source_hash": "0743e877ab4e99627090e18c259a6abfbce46e13c958ad365a88db2dc35f55be",
+      "normalization": {
+        "event_key": "eef7d170bff9de9018bd5499f8090a59c6fe4d1ca0b42d5a984b20bc49f7d212",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "561380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0743e877ab4e99627090e18c259a6abfbce46e13c958ad365a88db2dc35f55be",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "561380.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及电网设备，映射至基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "华盛昌 华盛昌 | 电网设备 电网设备"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "605088",
+      "published_at": null,
+      "name": "冠盛股份",
+      "title": "冠盛股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 4.258241653442383,
+      "turnover": 635972160.0,
+      "dde_net": null,
+      "source_hash": "eb8720aaf8887684633d08d822acc2a73e71117982d6809a17a337f4f625ebec",
+      "normalization": {
+        "event_key": "519b68e4aca1c7a26c41e29c38d43183fda953c0fdc9594aab6011f62e7441b6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "eb8720aaf8887684633d08d822acc2a73e71117982d6809a17a337f4f625ebec",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "冠盛股份 冠盛股份 | 汽车零部 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603138",
+      "published_at": null,
+      "name": "海量数据",
+      "title": "海量数据 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 5.724138259887695,
+      "turnover": 751891520.0,
+      "dde_net": null,
+      "source_hash": "b7307326e8c25f8f25fb6e982b4e588685e370d308a3ceba6b42c13a6a91b85e",
+      "normalization": {
+        "event_key": "9200662e03718f93ad4f675e284a747c4c63a9fd9721980eb76eae1181533283",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b7307326e8c25f8f25fb6e982b4e588685e370d308a3ceba6b42c13a6a91b85e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "海量数据 海量数据 | IT服务Ⅱ IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603270",
+      "published_at": null,
+      "name": "金帝股份",
+      "title": "金帝股份 | 通用设备",
+      "body": "通用设备",
+      "return_pct": -4.520744323730469,
+      "turnover": 1213490896.0,
+      "dde_net": null,
+      "source_hash": "ce16395fabb53850a65b25e7c57c156cace3c4851c7c3c75d35aae8f54badd1a",
+      "normalization": {
+        "event_key": "0634cd2add654335bfcf24a920cd7621f884971c35578a3f56049c5d6448b54a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ce16395fabb53850a65b25e7c57c156cace3c4851c7c3c75d35aae8f54badd1a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "金帝股份 金帝股份 | 通用设备 通用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001299",
+      "published_at": null,
+      "name": "美能能源",
+      "title": "美能能源 | 燃气Ⅱ",
+      "body": "燃气Ⅱ",
+      "return_pct": 2.992957830429077,
+      "turnover": 482435568.0,
+      "dde_net": null,
+      "source_hash": "4521199dde6410f103fb4356ea36e1f046a09aab6ca4d7009a45e760f0806a39",
+      "normalization": {
+        "event_key": "912dc8cc4066d03e16df74f7398454dd6a31e5c78022efa6a11347ba99d049ca",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4521199dde6410f103fb4356ea36e1f046a09aab6ca4d7009a45e760f0806a39",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "美能能源 美能能源 | 燃气Ⅱ 燃气Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002104",
+      "published_at": null,
+      "name": "恒宝股份",
+      "title": "恒宝股份 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 7.662835121154785,
+      "turnover": 2906303648.0,
+      "dde_net": null,
+      "source_hash": "c5e8a4b8351269b952a2f2266274d22511c3ac7964c35b989ec99c259ce461d4",
+      "normalization": {
+        "event_key": "1a4792a20c197b207603ddbb70319286ff2a3bad06cd956cd3e99df8cff0408e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c5e8a4b8351269b952a2f2266274d22511c3ac7964c35b989ec99c259ce461d4",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及通信，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "恒宝股份 恒宝股份 | 通信设备 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002537",
+      "published_at": null,
+      "name": "海联金汇",
+      "title": "海联金汇 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 5.600000381469727,
+      "turnover": 758813184.0,
+      "dde_net": null,
+      "source_hash": "5bc0b82e991c4f02be529da35bbbfdf8376b5f51ed9474d89a9b0428406caf4f",
+      "normalization": {
+        "event_key": "96573ab46f13a32a0cef0ffdcdc6f27875447e1126a65a9f72e1355e35c411ba",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5bc0b82e991c4f02be529da35bbbfdf8376b5f51ed9474d89a9b0428406caf4f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "海联金汇 海联金汇 | 汽车零部 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603124",
+      "published_at": null,
+      "name": "江南新材",
+      "title": "江南新材 | 金属新材",
+      "body": "金属新材",
+      "return_pct": -2.9629628658294678,
+      "turnover": 1379048000.0,
+      "dde_net": null,
+      "source_hash": "3f1e7b93577e7c0c0460510962b1b53e740c927d45d907b5c53aaa87f235c154",
+      "normalization": {
+        "event_key": "c7e62e68e76c5fbdc2bc875047622893c8d9aafe3babcac59e09b7fbf3f52ab4",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3f1e7b93577e7c0c0460510962b1b53e740c927d45d907b5c53aaa87f235c154",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "512400.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及金属，映射至周期资源；仅作单日题材强弱证据。",
+        "evidence": [
+          "江南新材 江南新材 | 金属新材 金属新材"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "000560",
+      "published_at": null,
+      "name": "我爱我家",
+      "title": "我爱我家 | 房地产服",
+      "body": "房地产服",
+      "return_pct": 10.139860153198242,
+      "turnover": 2428572960.0,
+      "dde_net": null,
+      "source_hash": "e5bc5c4e5bf9c8f757d4b7be0ea52c15472fb543b50161c58f1135832d8fc438",
+      "normalization": {
+        "event_key": "97be741b7185d5d1b27275f4d681c5e545ac1babe6e48553e443bec836655b3d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e5bc5c4e5bf9c8f757d4b7be0ea52c15472fb543b50161c58f1135832d8fc438",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及房地产、地产，映射至金融地产；仅作单日题材强弱证据。",
+        "evidence": [
+          "我爱我家 我爱我家 | 房地产服 房地产服"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002922",
+      "published_at": null,
+      "name": "伊戈尔",
+      "title": "伊戈尔 | 其他电子",
+      "body": "其他电子",
+      "return_pct": 2.7653517723083496,
+      "turnover": 1075352896.0,
+      "dde_net": null,
+      "source_hash": "a2f2d42cc0aa7808754d24e23b57365f3c65d5e54e14e724774c9275804ab71f",
+      "normalization": {
+        "event_key": "be07c139e63a522c62d0f209ba83ab010aee1c88bfb0d726918671162f30cf8f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a2f2d42cc0aa7808754d24e23b57365f3c65d5e54e14e724774c9275804ab71f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "伊戈尔 伊戈尔 | 其他电子 其他电子"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600657",
+      "published_at": null,
+      "name": "信达地产",
+      "title": "信达地产 | 房地产开",
+      "body": "房地产开",
+      "return_pct": 4.1666669845581055,
+      "turnover": 895324352.0,
+      "dde_net": null,
+      "source_hash": "79544abb04ee02359173e26d4f02f51a0acc431b2c4310483224cca155a6badf",
+      "normalization": {
+        "event_key": "b6ad19578d92a5145985ab0e0e02ab80210b4dd32143f43114967eb018175aed",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "79544abb04ee02359173e26d4f02f51a0acc431b2c4310483224cca155a6badf",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及房地产、地产，映射至金融地产；仅作单日题材强弱证据。",
+        "evidence": [
+          "信达地产 信达地产 | 房地产开 房地产开"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603067",
+      "published_at": null,
+      "name": "振华股份",
+      "title": "振华股份 | 化学原料",
+      "body": "化学原料",
+      "return_pct": 4.113834857940674,
+      "turnover": 3210338304.0,
+      "dde_net": null,
+      "source_hash": "ab4e49e98d2f05e5d4b45cc9d8eb85201a742e8923bcfba3e9f4bcf82917c8ec",
+      "normalization": {
+        "event_key": "35aac6175356fc3915eed03b5bb9f2a5460276a5b8cd02d4415ec311df916312",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ab4e49e98d2f05e5d4b45cc9d8eb85201a742e8923bcfba3e9f4bcf82917c8ec",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "振华股份 振华股份 | 化学原料 化学原料"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600601",
+      "published_at": null,
+      "name": "方正科技",
+      "title": "方正科技 | 元件",
+      "body": "元件",
+      "return_pct": 3.7242472171783447,
+      "turnover": 5551176448.0,
+      "dde_net": null,
+      "source_hash": "9896599945ee89c60f754500f99cfd80861b0e06d768b11e1346cfb9d859b77d",
+      "normalization": {
+        "event_key": "f657be3e970c6872bf714d8401542d5612c4e36b11040096a6118a640bc3d3cf",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9896599945ee89c60f754500f99cfd80861b0e06d768b11e1346cfb9d859b77d",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "方正科技 方正科技 | 元件 元件"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "605177",
+      "published_at": null,
+      "name": "东亚药业",
+      "title": "东亚药业 | 化学制药",
+      "body": "化学制药",
+      "return_pct": -3.7248027324676514,
+      "turnover": 523470144.0,
+      "dde_net": null,
+      "source_hash": "b53561404def4f3213eef26f949a8959878fe1f46f43041ab3cf565c414f6f58",
+      "normalization": {
+        "event_key": "82436ca3df1ce89c5a9111234682f4382e3bf4b6868be87bb0c88803c254ee54",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b53561404def4f3213eef26f949a8959878fe1f46f43041ab3cf565c414f6f58",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及化学制药，映射至医药医疗；仅作单日题材强弱证据。",
+        "evidence": [
+          "东亚药业 东亚药业 | 化学制药 化学制药"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002579",
+      "published_at": null,
+      "name": "中京电子",
+      "title": "中京电子 | 元件",
+      "body": "元件",
+      "return_pct": 2.6200873851776123,
+      "turnover": 1696327008.0,
+      "dde_net": null,
+      "source_hash": "0a408753847ce374485a7d3e7aca56d5b24cf8a3475b2deb0de99e213f519b98",
+      "normalization": {
+        "event_key": "fcd3b527752cefc0f96e3ee71971fe9e29b9aa33f82169af1047b5b79a76f447",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0a408753847ce374485a7d3e7aca56d5b24cf8a3475b2deb0de99e213f519b98",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "中京电子 中京电子 | 元件 元件"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002970",
+      "published_at": null,
+      "name": "锐明技术",
+      "title": "锐明技术 | 计算机设",
+      "body": "计算机设",
+      "return_pct": 4.390873908996582,
+      "turnover": 598579440.0,
+      "dde_net": null,
+      "source_hash": "d79e78ac3171ba6396a032ffa4b908aa995338a458e9e68a93b7359ec88b061f",
+      "normalization": {
+        "event_key": "58f3974abb3db4319a9a7f41ccf465a403ef8eec690690a9b15ab00cc7026589",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d79e78ac3171ba6396a032ffa4b908aa995338a458e9e68a93b7359ec88b061f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "锐明技术 锐明技术 | 计算机设 计算机设"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603991",
+      "published_at": null,
+      "name": "领先股份",
+      "title": "领先股份 | 半导体",
+      "body": "半导体",
+      "return_pct": 8.320890426635742,
+      "turnover": 1169179104.0,
+      "dde_net": null,
+      "source_hash": "8fa6911a55a0022896dd76e71da7e3b6e027bcacd1650113582f55b728cfb64c",
+      "normalization": {
+        "event_key": "87b69d3d303679bffc54627213c0c21b3ff484972a66142682ffa359c6d6b42f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8fa6911a55a0022896dd76e71da7e3b6e027bcacd1650113582f55b728cfb64c",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512760.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及半导体，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "领先股份 领先股份 | 半导体 半导体"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "300468",
+      "published_at": null,
+      "name": "四方精创",
+      "title": "四方精创 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 14.583333015441895,
+      "turnover": 4105487424.0,
+      "dde_net": null,
+      "source_hash": "9249442f8889fa68c3d8e3609e41ad9266a52295b7728ed9c265b17b0fe8f16a",
+      "normalization": {
+        "event_key": "668eaf9456eccdbb17b14009aae4633915e35568ca366cbbadd89fb28b6d5763",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9249442f8889fa68c3d8e3609e41ad9266a52295b7728ed9c265b17b0fe8f16a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "四方精创 四方精创 | 软件开发 软件开发"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002952",
+      "published_at": null,
+      "name": "亚世光电",
+      "title": "亚世光电 | 光学光电",
+      "body": "光学光电",
+      "return_pct": 4.736588001251221,
+      "turnover": 379165952.0,
+      "dde_net": null,
+      "source_hash": "3eb4ba6957ab20a72a3a1f2b83d736d882a86be6546b54e12e9dc73986cf4c78",
+      "normalization": {
+        "event_key": "19e3b8a31af6b984e028377c379297708b3397d6ff582f9f1daa00daa8287ef9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3eb4ba6957ab20a72a3a1f2b83d736d882a86be6546b54e12e9dc73986cf4c78",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "亚世光电 亚世光电 | 光学光电 光学光电"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "688435",
+      "published_at": null,
+      "name": "英方软件",
+      "title": "英方软件 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 12.006802558898926,
+      "turnover": 258290545.0,
+      "dde_net": null,
+      "source_hash": "343625d319ee88fb8d5b31d8429e0f6359dca597ee99e159bcb7e482b5676066",
+      "normalization": {
+        "event_key": "c7f9bb77796e1be60fcb1c26121c988b1b44cfa9cca484d13b64cf086f5033ff",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "343625d319ee88fb8d5b31d8429e0f6359dca597ee99e159bcb7e482b5676066",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "英方软件 英方软件 | 软件开发 软件开发"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001360",
+      "published_at": null,
+      "name": "南矿集团",
+      "title": "南矿集团 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 3.3888888359069824,
+      "turnover": 226283561.0,
+      "dde_net": null,
+      "source_hash": "61793e81cae219ee00b25ec88264ac7ee1921fac10084ace39a7258070b68308",
+      "normalization": {
+        "event_key": "624066c985f49482aef3119a6c62d47446bfa00b0d6b342a97cf2e6c6647edb2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "61793e81cae219ee00b25ec88264ac7ee1921fac10084ace39a7258070b68308",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "南矿集团 南矿集团 | 专用设备 专用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600272",
+      "published_at": null,
+      "name": "开开实业",
+      "title": "开开实业 | 医药商业",
+      "body": "医药商业",
+      "return_pct": 7.659313678741455,
+      "turnover": 900634368.0,
+      "dde_net": null,
+      "source_hash": "d682b1672a1cfeaf913b08abb4fef6f96b2a1c047665780ff90900379105302b",
+      "normalization": {
+        "event_key": "09b88fb88d54f8a4cd8f235f76daa2798400d5331ace1109fc304682292cf27f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d682b1672a1cfeaf913b08abb4fef6f96b2a1c047665780ff90900379105302b",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "513200.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及医药，映射至医药医疗；仅作单日题材强弱证据。",
+        "evidence": [
+          "开开实业 开开实业 | 医药商业 医药商业"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002354",
+      "published_at": null,
+      "name": "天娱数科",
+      "title": "天娱数科 | 广告营销",
+      "body": "广告营销",
+      "return_pct": 8.751608848571777,
+      "turnover": 5219316992.0,
+      "dde_net": null,
+      "source_hash": "3b2302c809155d1d9f1ff5522b33a2ad0ff1f16e43e8866c7c608194f3f93603",
+      "normalization": {
+        "event_key": "f24f58bbcb369ef03b743af67c90015e99f03c70b0c783e2da026435c4f2ec27",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3b2302c809155d1d9f1ff5522b33a2ad0ff1f16e43e8866c7c608194f3f93603",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及广告，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "天娱数科 天娱数科 | 广告营销 广告营销"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002940",
+      "published_at": null,
+      "name": "昂利康",
+      "title": "昂利康 | 化学制药",
+      "body": "化学制药",
+      "return_pct": 6.119226455688477,
+      "turnover": 858857104.0,
+      "dde_net": null,
+      "source_hash": "f4cdd7ba43467cb4e517dfdcbe6c3b553376160363ae910b8099e4da49121fe3",
+      "normalization": {
+        "event_key": "25e7087d2c6c4f1b0d7d0437512c2f48f48f7db25a8f2d47a2a5f58286c6dcfa",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f4cdd7ba43467cb4e517dfdcbe6c3b553376160363ae910b8099e4da49121fe3",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及化学制药，映射至医药医疗；仅作单日题材强弱证据。",
+        "evidence": [
+          "昂利康 昂利康 | 化学制药 化学制药"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600616",
+      "published_at": null,
+      "name": "金枫酒业",
+      "title": "金枫酒业 | 非白酒",
+      "body": "非白酒",
+      "return_pct": 5.720823764801025,
+      "turnover": 191476023.0,
+      "dde_net": null,
+      "source_hash": "a809055b748d1c7cc42f98789e7dbfb05c4c0b9640334938dab143e690af9659",
+      "normalization": {
+        "event_key": "5d43008ca6101fd207c990e35c1d7bca11cf16733da3bcfcfa0d4150be4d713c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512690.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a809055b748d1c7cc42f98789e7dbfb05c4c0b9640334938dab143e690af9659",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512690.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及白酒、非白酒、酒业，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "金枫酒业 金枫酒业 | 非白酒 非白酒"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603230",
+      "published_at": null,
+      "name": "内蒙新华",
+      "title": "内蒙新华 | 出版",
+      "body": "出版",
+      "return_pct": 4.255319118499756,
+      "turnover": 145637558.0,
+      "dde_net": null,
+      "source_hash": "4777422a4e6cf7030e138a32a1096befdd4c77841f4eb34e97d04b670fc8fd4d",
+      "normalization": {
+        "event_key": "b2e40f3cdceadd5744f870b62ec11c9e7b4199bacbd8d33d698fa32a9704e9ba",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4777422a4e6cf7030e138a32a1096befdd4c77841f4eb34e97d04b670fc8fd4d",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及出版，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "内蒙新华 内蒙新华 | 出版 出版"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603613",
+      "published_at": null,
+      "name": "国联股份",
+      "title": "国联股份 | 互联网电",
+      "body": "互联网电",
+      "return_pct": 9.360127449035645,
+      "turnover": 810266160.0,
+      "dde_net": null,
+      "source_hash": "bf315357aeea9194e25c9a921b08e43d2f00afa27b821d4bb067d07ca0a242ac",
+      "normalization": {
+        "event_key": "9961a751a4835ffe89ea5f8f9cb8cb5bcbe9ba8441ed53d50e15b68be9893586",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bf315357aeea9194e25c9a921b08e43d2f00afa27b821d4bb067d07ca0a242ac",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "国联股份 国联股份 | 互联网电 互联网电"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "601999",
+      "published_at": null,
+      "name": "出版传媒",
+      "title": "出版传媒 | 出版",
+      "body": "出版",
+      "return_pct": 6.240713119506836,
+      "turnover": 523886016.0,
+      "dde_net": null,
+      "source_hash": "5be981fc6779f23814174b27721ca39077a6af16988e38f0d9cad1b4c0da60f7",
+      "normalization": {
+        "event_key": "f74315e7005330fa9ab18db01221045b4f0fe9b9d564e36803feee68bd57176a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5be981fc6779f23814174b27721ca39077a6af16988e38f0d9cad1b4c0da60f7",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及传媒、出版，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "出版传媒 出版传媒 | 出版 出版"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600857",
+      "published_at": null,
+      "name": "宁波中百",
+      "title": "宁波中百 | 一般零售",
+      "body": "一般零售",
+      "return_pct": 8.229166984558105,
+      "turnover": 395563248.0,
+      "dde_net": null,
+      "source_hash": "ef3fbb54ba6083fac4ea06086c36f87e5141440113b453d709165f11ef3ae03e",
+      "normalization": {
+        "event_key": "0c1b3d6e3f572657158f36491ae7b771b93e74dfb699d639c45ac5f3f8bcb626",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "510630.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ef3fbb54ba6083fac4ea06086c36f87e5141440113b453d709165f11ef3ae03e",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及零售，映射至消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "宁波中百 宁波中百 | 一般零售 一般零售"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "301171",
+      "published_at": null,
+      "name": "易点天下",
+      "title": "易点天下 | 广告营销",
+      "body": "广告营销",
+      "return_pct": 11.117562294006348,
+      "turnover": 6314085120.0,
+      "dde_net": null,
+      "source_hash": "0716990523b53baf87fb0dc44840c17e828e3e7371bf150d572b6e0dd080e7ec",
+      "normalization": {
+        "event_key": "5fe771845d984457f7145fe7659962fd2ed6494ec6776b90d0e0f949c399bb65",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0716990523b53baf87fb0dc44840c17e828e3e7371bf150d572b6e0dd080e7ec",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及广告，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "易点天下 易点天下 | 广告营销 广告营销"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600095",
+      "published_at": null,
+      "name": "湘财股份",
+      "title": "湘财股份 | 证券Ⅱ",
+      "body": "证券Ⅱ",
+      "return_pct": 7.505285739898682,
+      "turnover": 1739983504.0,
+      "dde_net": null,
+      "source_hash": "8b27e4ba572bdae7ff88c554783e3f1fddfa66c7efac7ac3e4f60e24340f5889",
+      "normalization": {
+        "event_key": "9711429c2c978e525511a7342ee47054d2bdd921990705fb6fe7eb8fedaa48b7",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512070.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8b27e4ba572bdae7ff88c554783e3f1fddfa66c7efac7ac3e4f60e24340f5889",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512070.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及证券，映射至金融地产；仅作单日题材强弱证据。",
+        "evidence": [
+          "湘财股份 湘财股份 | 证券Ⅱ 证券Ⅱ"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002721",
+      "published_at": null,
+      "name": "金一文化",
+      "title": "金一文化 | 饰品",
+      "body": "饰品",
+      "return_pct": 4.651162624359131,
+      "turnover": 1249229632.0,
+      "dde_net": null,
+      "source_hash": "181fea22d9d2746dba2528831bd7d412acb53a57cdccf77f499e8076747801cf",
+      "normalization": {
+        "event_key": "a5b1f49b3f5d49178c717327c3f5aef9e8b6ed39b1f2a5e5b8b60dfb3d7e1120",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "181fea22d9d2746dba2528831bd7d412acb53a57cdccf77f499e8076747801cf",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "金一文化 金一文化 | 饰品 饰品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002285",
+      "published_at": null,
+      "name": "世联行",
+      "title": "世联行 | 房地产服",
+      "body": "房地产服",
+      "return_pct": 4.4052863121032715,
+      "turnover": 397691696.0,
+      "dde_net": null,
+      "source_hash": "6c033308f534c2c36875522d12b02fbee99c1f313ad6b65b99e46035bb989e5c",
+      "normalization": {
+        "event_key": "c4ea579ec3c052d7132f238890ec15e1af416c66bb27b155588d91647615b19f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6c033308f534c2c36875522d12b02fbee99c1f313ad6b65b99e46035bb989e5c",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及房地产、地产，映射至金融地产；仅作单日题材强弱证据。",
+        "evidence": [
+          "世联行 世联行 | 房地产服 房地产服"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603161",
+      "published_at": null,
+      "name": "科华控股",
+      "title": "科华控股 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 4.672330379486084,
+      "turnover": 291382336.0,
+      "dde_net": null,
+      "source_hash": "627fad580f40eff76a836c6391d1a96ee6749decb43be68ddc150765afd20896",
+      "normalization": {
+        "event_key": "d10e16c2f0d8b5ecb815463ede80dfe2a7864f12dbdfd7cecf1bc4f5d9d5e65e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "627fad580f40eff76a836c6391d1a96ee6749decb43be68ddc150765afd20896",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "科华控股 科华控股 | 汽车零部 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603598",
+      "published_at": null,
+      "name": "引力传媒",
+      "title": "引力传媒 | 广告营销",
+      "body": "广告营销",
+      "return_pct": 5.985318660736084,
+      "turnover": 788888112.0,
+      "dde_net": null,
+      "source_hash": "b5192dde35c069773112fc95d8d85765f0a62938c2b727b1463a2b9593db7eb2",
+      "normalization": {
+        "event_key": "da2f18041115a05e5af17a909052018c683d5bb33f2da6966f3d6279a0aaaeed",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b5192dde35c069773112fc95d8d85765f0a62938c2b727b1463a2b9593db7eb2",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159869.SZ",
+          "512980.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及传媒、广告，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "引力传媒 引力传媒 | 广告营销 广告营销"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "001258",
+      "published_at": null,
+      "name": "立新能源",
+      "title": "立新能源 | 电力",
+      "body": "电力",
+      "return_pct": 5.857019901275635,
+      "turnover": 2071253040.0,
+      "dde_net": null,
+      "source_hash": "d6c6d86771aeb7699aede53ee0f7e667da9f30aaf0bf22dc6800c7174630b7a6",
+      "normalization": {
+        "event_key": "dca76399e0c1354b81c7bfe2f20e489ea5afabb052955fcc173c91baab88a02d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515790.SH",
+          "159611.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d6c6d86771aeb7699aede53ee0f7e667da9f30aaf0bf22dc6800c7174630b7a6",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造",
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "515790.SH",
+          "159611.SZ"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及新能源、电力，映射至高端制造、基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "立新能源 立新能源 | 电力 电力"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600629",
+      "published_at": null,
+      "name": "华建集团",
+      "title": "华建集团 | 工程咨询",
+      "body": "工程咨询",
+      "return_pct": 9.345237731933594,
+      "turnover": 1348112816.0,
+      "dde_net": null,
+      "source_hash": "ffa5115654524f52b0b1421ab8c7e154ac1eccfd56fe53e0d0b9f0becc384bed",
+      "normalization": {
+        "event_key": "02feafe5fb2aa3817f14a022d0ef9079325f5f0fdc87846e70b0e3a71a3f20b8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ffa5115654524f52b0b1421ab8c7e154ac1eccfd56fe53e0d0b9f0becc384bed",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "华建集团 华建集团 | 工程咨询 工程咨询"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600318",
+      "published_at": null,
+      "name": "新力金融",
+      "title": "新力金融 | 多元金融",
+      "body": "多元金融",
+      "return_pct": 4.558404445648193,
+      "turnover": 485206016.0,
+      "dde_net": null,
+      "source_hash": "bebc94745fba46267b05cc54271c810def8590eb04cbd09825abd13c597912f3",
+      "normalization": {
+        "event_key": "ab7307e131e59814ae7658f62ebd77f54205b5e5ff395cc7cbad56b5019f7e39",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bebc94745fba46267b05cc54271c810def8590eb04cbd09825abd13c597912f3",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "新力金融 新力金融 | 多元金融 多元金融"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603363",
+      "published_at": null,
+      "name": "傲农生物",
+      "title": "傲农生物 | 饲料",
+      "body": "饲料",
+      "return_pct": 8.970099449157715,
+      "turnover": 487403440.0,
+      "dde_net": null,
+      "source_hash": "a2bc66b1e0d181583c039d9a302851f759410823c2ec1ce592e0a296137d938a",
+      "normalization": {
+        "event_key": "182139616ca1c146f7b96911cb1e0a3c2e309be49e58dc8ca7f8985651959a8c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a2bc66b1e0d181583c039d9a302851f759410823c2ec1ce592e0a296137d938a",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "傲农生物 傲农生物 | 饲料 饲料"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603228",
+      "published_at": null,
+      "name": "景旺电子",
+      "title": "景旺电子 | 元件",
+      "body": "元件",
+      "return_pct": 8.957249641418457,
+      "turnover": 7414110720.0,
+      "dde_net": null,
+      "source_hash": "b0b57922d38a67f28c8302090992153fb7197eba8e0d81de4230d7af3e2dadb0",
+      "normalization": {
+        "event_key": "9674fba1e7012551cd8ce08548b1a5fcd414b67e4a09dd7f6c9a383fae40a16b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b0b57922d38a67f28c8302090992153fb7197eba8e0d81de4230d7af3e2dadb0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "景旺电子 景旺电子 | 元件 元件"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "688170",
+      "published_at": null,
+      "name": "德龙激光",
+      "title": "德龙激光 | 自动化设",
+      "body": "自动化设",
+      "return_pct": 17.50189781188965,
+      "turnover": 1068862768.0,
+      "dde_net": null,
+      "source_hash": "4fe0aff71fe975d30854f7a1f841845c9db24a75ea2cfddfbbecc62d489e8035",
+      "normalization": {
+        "event_key": "66c4f98925a01f869c8b11c91766802399eb416c15189870241f0e3704cec6a1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4fe0aff71fe975d30854f7a1f841845c9db24a75ea2cfddfbbecc62d489e8035",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及自动化，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "德龙激光 德龙激光 | 自动化设 自动化设"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002548",
+      "published_at": null,
+      "name": "金新农",
+      "title": "金新农 | 饲料",
+      "body": "饲料",
+      "return_pct": 8.78859806060791,
+      "turnover": 278486272.0,
+      "dde_net": null,
+      "source_hash": "80c863458eba053d90cc15fe9f47a9e27c8d72f74ba758620f3eb4032f51fa4f",
+      "normalization": {
+        "event_key": "c28a2f93554b00393a5c54bb36228624f54d1c3773c9eb2febaf4231b33bed1f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "80c863458eba053d90cc15fe9f47a9e27c8d72f74ba758620f3eb4032f51fa4f",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "金新农 金新农 | 饲料 饲料"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603257",
+      "published_at": null,
+      "name": "中国瑞林",
+      "title": "中国瑞林 | 工程咨询",
+      "body": "工程咨询",
+      "return_pct": 9.321128845214844,
+      "turnover": 410855040.0,
+      "dde_net": null,
+      "source_hash": "a882378a4a664942da977891a0bd45b5b7584b52808f7455df4790ff9f51a325",
+      "normalization": {
+        "event_key": "7953f5ad04a272089ddd298294067ac9d7ad3e865b18161c6f42c6f168654ceb",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a882378a4a664942da977891a0bd45b5b7584b52808f7455df4790ff9f51a325",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "中国瑞林 中国瑞林 | 工程咨询 工程咨询"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "003002",
+      "published_at": null,
+      "name": "壶化股份",
+      "title": "壶化股份 | 化学制品",
+      "body": "化学制品",
+      "return_pct": 6.441902160644531,
+      "turnover": 219823407.0,
+      "dde_net": null,
+      "source_hash": "270ede6fb797b6cf50547386dc210dab342cbfc486106e74616ebb4187c46d2a",
+      "normalization": {
+        "event_key": "054adef1a0ef8c82b60a522b903bb862502213e74696fb18f307ffd78cf25f4d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "270ede6fb797b6cf50547386dc210dab342cbfc486106e74616ebb4187c46d2a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "壶化股份 壶化股份 | 化学制品 化学制品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002567",
+      "published_at": null,
+      "name": "唐人神",
+      "title": "唐人神 | 饲料",
+      "body": "饲料",
+      "return_pct": 8.0,
+      "turnover": 382086256.0,
+      "dde_net": null,
+      "source_hash": "f6ab82a4b4514a93ff01965b08d2d18cfa79ef41b8a79ff958e27d38937af669",
+      "normalization": {
+        "event_key": "580f94c2bc85669ce02df684c600cf6158b1cc4d155af6723c306f60d50b1dbd",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f6ab82a4b4514a93ff01965b08d2d18cfa79ef41b8a79ff958e27d38937af669",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159985.SZ",
+          "159865.SZ"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及饲料，映射至商品、消费农业；仅作单日题材强弱证据。",
+        "evidence": [
+          "唐人神 唐人神 | 饲料 饲料"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600150",
+      "published_at": null,
+      "name": "中国船舶",
+      "title": "中国船舶 | 航海装备",
+      "body": "航海装备",
+      "return_pct": 9.178321838378906,
+      "turnover": 12392923904.0,
+      "dde_net": null,
+      "source_hash": "7db1364dc570482ea32732cf9a00f45fb06a0ad88e6eeb6f01255478fbf6f2da",
+      "normalization": {
+        "event_key": "7f6d36e4f123a1d8386610a0e827b9cabe1df6b46b0b5c0cf934cbf1613baae2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7db1364dc570482ea32732cf9a00f45fb06a0ad88e6eeb6f01255478fbf6f2da",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "中国船舶 中国船舶 | 航海装备 航海装备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002909",
+      "published_at": null,
+      "name": "集泰股份",
+      "title": "集泰股份 | 化学制品",
+      "body": "化学制品",
+      "return_pct": -9.987516403198242,
+      "turnover": 1135015040.0,
+      "dde_net": null,
+      "source_hash": "9b4acee08d3c891e4506b5b18a166bd14fee73bb3d8a8fb3689a85cf72dbd738",
+      "normalization": {
+        "event_key": "83a1effb166b04891daecc01146b67c68c07f108623db3b781362e11bb2f373f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9b4acee08d3c891e4506b5b18a166bd14fee73bb3d8a8fb3689a85cf72dbd738",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "集泰股份 集泰股份 | 化学制品 化学制品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "003032",
+      "published_at": null,
+      "name": "传智教育",
+      "title": "传智教育 | 教育",
+      "body": "教育",
+      "return_pct": -10.0,
+      "turnover": 952070688.0,
+      "dde_net": null,
+      "source_hash": "1ea33f95a6b87e793ceccf9c94677686acba889eb1929f159fbc6bf148afdc96",
+      "normalization": {
+        "event_key": "0b76f86acc7a3784b504afcf91d13002e91b12cf187caa9f5bb14d753bb48610",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1ea33f95a6b87e793ceccf9c94677686acba889eb1929f159fbc6bf148afdc96",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "传智教育 传智教育 | 教育 教育"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "605068",
+      "published_at": null,
+      "name": "明新旭腾",
+      "title": "明新旭腾 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": -10.0,
+      "turnover": 232201357.0,
+      "dde_net": null,
+      "source_hash": "e929d5797c207c4505f81e1f3568226d4c21d6b6a44c1e946b841bf884a33a72",
+      "normalization": {
+        "event_key": "61e90142677ae33bd70dc999f96e34b6a7b60784bcbecf99ca97c1c151d50837",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e929d5797c207c4505f81e1f3568226d4c21d6b6a44c1e946b841bf884a33a72",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "明新旭腾 明新旭腾 | 汽车零部 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603256",
+      "published_at": null,
+      "name": "宏和科技",
+      "title": "宏和科技 | 玻璃玻纤",
+      "body": "玻璃玻纤",
+      "return_pct": -10.0,
+      "turnover": 3344578112.0,
+      "dde_net": null,
+      "source_hash": "9c5d16ca28969852664dea6a5420e144692ec7f93350eca3a7c4dfe68ede0707",
+      "normalization": {
+        "event_key": "3caec0aeb1f440232bb9dfd0da397876bf5a1cad3efa587e8e196ab92ed1a353",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159745.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9c5d16ca28969852664dea6a5420e144692ec7f93350eca3a7c4dfe68ede0707",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159745.SZ"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及玻璃，映射至基建公用；仅作单日题材强弱证据。",
+        "evidence": [
+          "宏和科技 宏和科技 | 玻璃玻纤 玻璃玻纤"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "003005",
+      "published_at": null,
+      "name": "竞业达",
+      "title": "竞业达 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": -9.985387802124023,
+      "turnover": 895051152.0,
+      "dde_net": null,
+      "source_hash": "7d65802e4c4f0b56f9d6516135cc2987ce172ba3e2c800b2b124d983d91a3080",
+      "normalization": {
+        "event_key": "7cb6d5058be9510ef02fe8de2b1c71244b5e2c217a89a784ae5d011b945f2091",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7d65802e4c4f0b56f9d6516135cc2987ce172ba3e2c800b2b124d983d91a3080",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "竞业达 竞业达 | IT服务Ⅱ IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600892",
+      "published_at": null,
+      "name": "大晟文化",
+      "title": "大晟文化 | 游戏Ⅱ",
+      "body": "游戏Ⅱ",
+      "return_pct": -9.908256530761719,
+      "turnover": 831202368.0,
+      "dde_net": null,
+      "source_hash": "c819444a4517c3d180d1329b5bbf37714804b4e1dd133c1172a66f2e0d3ee90a",
+      "normalization": {
+        "event_key": "6de2966dd0013107a864f519a5be3995fd9fc2c299f979b924686990ea8905b9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159869.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c819444a4517c3d180d1329b5bbf37714804b4e1dd133c1172a66f2e0d3ee90a",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "159869.SZ"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及游戏，映射至科技数字；仅作单日题材强弱证据。",
+        "evidence": [
+          "大晟文化 大晟文化 | 游戏Ⅱ 游戏Ⅱ"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "000977",
+      "published_at": null,
+      "name": "浪潮信息",
+      "title": "浪潮信息 | 计算机设",
+      "body": "计算机设",
+      "return_pct": -9.994209289550781,
+      "turnover": 13708426752.0,
+      "dde_net": null,
+      "source_hash": "8ee572f6fa65699c37b0a1218d34d580067cdc4e0f22dddab8c5eb4d5f3f79ac",
+      "normalization": {
+        "event_key": "a7d2328a85a431375e61e0e8de33bb3804d0e1564d294b24199e0df61e55d1fc",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8ee572f6fa65699c37b0a1218d34d580067cdc4e0f22dddab8c5eb4d5f3f79ac",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "浪潮信息 浪潮信息 | 计算机设 计算机设"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "000017",
+      "published_at": null,
+      "name": "深中华A",
+      "title": "深中华A | 饰品",
+      "body": "饰品",
+      "return_pct": -10.018903732299805,
+      "turnover": 1016791280.0,
+      "dde_net": null,
+      "source_hash": "12a88c47c3d153903009dd59ebdaacb7a47f4ff0e0f13f2cae5456ba8e51f639",
+      "normalization": {
+        "event_key": "3f8ae84b938f0536a1497e0db9c9ad83b9c941a44aff0883b8e934cde31534e8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "12a88c47c3d153903009dd59ebdaacb7a47f4ff0e0f13f2cae5456ba8e51f639",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.84,
+        "novelty": 0.0,
+        "summary": "原文未出现固定ETF池的直接专属关键词，不纳入ETF题材判断。",
+        "evidence": [
+          "深中华A 深中华A | 饰品 饰品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接专属关键词关联"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600121",
+      "published_at": null,
+      "name": "郑州煤电",
+      "title": "郑州煤电 | 煤炭开采",
+      "body": "煤炭开采",
+      "return_pct": -10.017574310302734,
+      "turnover": 668913072.0,
+      "dde_net": null,
+      "source_hash": "2e08e145f94ed4db221ee78570d00c1e44e7f6b6f6d836b0ba157bd13d7884cf",
+      "normalization": {
+        "event_key": "3273314d3f88f80aadb441d91174efd6f80aa328a28c29a3ae34bbcdf141c8f4",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515220.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2e08e145f94ed4db221ee78570d00c1e44e7f6b6f6d836b0ba157bd13d7884cf",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "515220.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.62,
+        "novelty": 0.3,
+        "summary": "原文直接提及煤炭，映射至周期资源；仅作单日题材强弱证据。",
+        "evidence": [
+          "郑州煤电 郑州煤电 | 煤炭开采 煤炭开采"
+        ],
+        "risk_flags": [
+          "个股题材或涨跌停信息，不能外推为行业趋势"
+        ]
+      }
+    }
+  ]
+}

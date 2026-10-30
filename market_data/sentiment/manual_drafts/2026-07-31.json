@@ -1,0 +1,5432 @@
+{
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "items": [
+    {
+      "source_hash": "f03260b8d21488c0d6cf85039abb315f7f6fa73dd9ee6629487629e4f83176b9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "*ST沐邦 | 预重整+光伏硅片+机器人概念"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "5f1f927441ce0e38842294af94b1963eee44bcc1cbd0063f3fcdc9a5a3153fd6",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "安记食品 | 大消费+调味品+一季报增长"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "400d45a9e7c44e72d4818a9fd8862b95a6b9e1a3d5039b01e224c5feb0a69290",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "159869.SZ",
+        "512660.SH",
+        "563380.SH",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "三维通信 | AI应用+短剧/漫剧+卫星通信"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "440389ea671b3d1b015a6a8a42d8db21b3cd43bf0b9be079bd08984d7810610a",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "512690.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "威龙股份 | 葡萄酒+淄博国资入主+股权转让"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "a92bb4af0f2d7cc8b57dce498963b67acb3f37b5da6888f6b53687ff44870b3d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "协鑫能科 | 算力租赁+虚拟电厂+超跌反弹"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "0f126a16de377d8d8ebfc620ac81f34de2d7e449f871d2b6d9ff17550cfb9274",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2e81f267fb1b55b238924fbf503f7349b9e8669cbc8849da5df8b58a7d0f162b",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "柘中股份 | 成套开关设备+集成电路+订单新高+半年报预增"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "6d211773c182e5c5041d1045da3512b684516c430a9e3841395ab8624f490bf3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "10685d612bb0f4f2a7c500095503e491b36ab18e2ec0221f92fff4a4f2d94e14",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "雷赛智能 | 人形机器人+中报预增+伺服系统"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "5c5aaa2f1f2c68be4120be17732809a3aa03fa599ce2ff70440cd071bc6e20d1",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "唐源电气 | 机器人+AI智能体+一带一路"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "673bcd0e2499d15845d20b0d0ea7fcfd43af21a5c9a6163bf16800f6cdeecd05",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "永茂泰 | 机器人+铝合金+业绩预增"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "093db1813cd06424c02c2c2b9366e34011ca326ca32d859edd6c3faa854ba1d4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "北特科技 | 人形机器人+丝杠+汽车零部件"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "7106cf25c07a9871dcc4015e8992457a00538fc9043dcfbe87b3f00a58449c07",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "威派格 | 智慧水务+六张网+AI应用"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "db6d7beb682d6619d50424986cc0a92526815255b3bf052bd920a7370353660d",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "*ST发展 | 预重整+房地产"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "7c13c6b4f07a9d354c51e88dd378f99ac0da631b4dbbabcbb6a19708a2fe335f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "法狮龙 | AI智算+算力调度+集成吊顶"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "917bcc9f022ad719e5f222bcb21483c151d0fed169d75922662c6442396d69a3",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159981.SZ",
+        "516020.SH",
+        "561360.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "镇海股份 | 控制权转让+石化工程+国企"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "774ec68a18b16b54d092ad03b2e76bab32396b5c30ee451e36a8d3f171ceb5f8",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "562500.SH",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "中国宝安 | 股东增持+锂电池负极材料+机器人概念"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "835eff66b523af97909b447f695105fc8686727a0a6c41b2a1b60e349fc84bc0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "日盈电子 | 人形机器人+电子皮肤+汽车零部件"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "e0709eeb08aa82395f9de38411c0a012be326ee093a77fd11b98bbaee9846e16",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "卧龙电驱 | 回购+人形机器人+低空经济+电驱龙头"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9914f141e09829736e94c2034e7c4c6c58e0c26cfd7e3f1c1e7509e69c2137ea",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512200.SH",
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "香江控股 | 算力+IDC+家居商贸+房地产"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "aa7c7540d126003eaef8391deeda5143b01df105afbaf270e1f201071ebe8a3f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "40646ede054b323e7072009f8bfb38d21058f704a47cffda0c94f7d6620ec9a9",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "深桑达A | 半导体洁净室+AI云平台+央企"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "08018ea3b21817f01b23655cc0b0332792183645395844276119ce3d131d5f27",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "荣信文化 | AI应用+AI智能硬件+AI漫剧+少儿出版"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "a4a6731be92f13aef13764cbf0fdaba382a581233681ef987f66fd59b85e8f30",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "515050.SH",
+        "159819.SZ",
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "昆仑万维 | AI短剧+AI硬件+AI音乐+算力芯片"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "38ee82886ac0eacad34d09dc279c4e7fffad0ebcc622900423858ab5672ba309",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "竞业达 | AI应用+教育AI+智能体"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "14731cb447b11c55eaedf85edc17aa15bebaa6dbf854b90410137d285ac639be",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "浙文互联 | 算力租赁+AI营销+浙江国资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2e9d17f7cd4ef8c63c540655a108a9ca5cd61c391442f492bab8b84fdd887e5d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "凯文教育 | AI教育+智谱AI+北京国资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "4ab98ae216db744a0dddd23055f9a3d0f9ad4d0fd47d82afd83791c5020668a6",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "文科股份 | 光伏+装饰园林+佛山国资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "36f1adcb4a9c8cb35a5facfd9daee51901a497ca09852b2f61ca1ef8dd1521bd",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "中文在线 | AI短剧+IP资产+海外短剧"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2c18fe5bb82990925e2a7c40b9d29814d4e0afd314971176889bc79e07a791f1",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562600.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "九安医疗 | 参股月之暗面/DeepSeek+AI医疗+中报预增"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "b19300ccf5eaae60bad3736dc584433ff1caefdca65d05098f4a07dd5e449d60",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "税友股份 | AI应用+财税SaaS+实控人增持+资产出售"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "41aa47798e18ecf8497acb39bab1a34713066aa6a4b4546f08d7fba41afd842c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "蓝色光标 | AI应用+出海广告+一季报增长"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "f496f42f8bb97023291200f033a132f304a0b00e437b559b448e7d777b94c865",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "513200.SH",
+        "512010.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "宏辉果蔬 | 收购施美药业+创新药+苏州国资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "5070d964d40c79145f2207d660f5b639b560ad6f383e348d0dcd982c3172ec6f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "证通电子 | 算力租赁+数据中心REITs+中报扭亏"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2f423611da23c2ec8aef082d30ae6ed454b8839fa186db3ac41373903c937cab",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "中广天择 | AI语料+AI漫剧+长沙国资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "50ba5abe0327a986e5f7c4c74122aa1b790a5140e1ec431bbbae02b7c8f5f5e8",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "润建股份 | 算力租赁+Token工厂+东盟出海+股份回购"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "09f8eaa0fccfa12452fb72c09ff1dde5fac72a64ad1efc995b884223bbd32285",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "云赛智联 | 智算中心+AI产业基金+上海国资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "89ab5704e3a629e15dadbdc5f1b5ea3e8c48a7478ca9d12b05dd7289f43c63ba",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "美利云 | 算力租赁+东数西算+央企"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "004ed630886363fe80658bda6b16760da0a69085909f134f2c6be644849c4b31",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "引力传媒 | AI应用+数字营销+多模态AI"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "c7cc2ba1b50a907d2888f2457c2b792e72ceb8ea442651989d6a83ad604108ee",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "用友网络 | AI应用+机器人概念+企业软件龙头"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2a02d8b0d3591803b402433180f0da00dd6fb274f277ecda704d66a6f2324a1a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "掌阅科技 | AI应用+AI短剧+半年报减亏"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "d89ffdd12b8a92af2f4941f095d368ecade6d6c288e32773313af0d096c3edb2",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "易点天下 | AI应用+出海营销+AI Drive 2.0"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "b2656a162eef642c33ab62096329c7a36257e1c88057e7ab74cf572d68e2e817",
+      "relevant": true,
+      "matched_categories": [
+        "商品"
+      ],
+      "matched_symbols": [
+        "518880.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "招金黄金 | 黄金+半年报预增+国企改革"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "e2805bd64f0587466c31efb1ca6f5649810179d2e7cf41dba0b539a7d1721d31",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "泛微网络 | AI应用+半年报预增+协同办公"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "93cf51b47e628e80d21b2a0bea24e899606aaf80a7b44d77b9f0da824b070e2f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "立方控股 | 智慧停车+AI应用+停车运营服务"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2001ae44a73ecdc69709ee556023bab54ece0a36b2560dfc903e80a224f56dc9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "福昕软件 | AI应用+引入战投+PDF软件"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "fccdbd2f8311cf1254e91752bb972ae77ecdacc1a85dbb0858f18cc8f4ab65c0",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "利欧股份 | AI营销+液冷泵+半导体"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3175bb7e69dcb85bcb01ed585278b2568d0472cbfc03574e3207f897e2d94755",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "欢瑞世纪 | AI应用+互动影游+短剧游戏"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2d080873f1a19df19c9f29419388599848b8f4f7ae94227ea96bf7e658db9562",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "三人行 | AI营销+世界杯IP+算力租赁"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "a66dfee5846149d20b138423db5288be150da1c297e41c507fad4c7ed2327d95",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "248712dceb9b21c5d0866e1a210b69a60f34ddb91c5ba13c857048a899a52b9b",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "江顺科技 | 商业航天+3D打印+铝挤压模具"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "945b43dad67e2f7a6f8f0e8e226ff08fb390e9d0f93fc731aed0b14d495ba4bb",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "豪尔赛 | 智慧灯杆+液冷服务器+照明工程"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "666ba7a8480babe41e87ae8c5f104151e1898cbe53cef50dda221a4f214a0964",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "锋龙股份 | 回购+优必选入主+汽车零部件+机器人概念"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3c2f1313ab99dd485540d6c723a2c4e6a8ef30d0ddcdfcff53bf9bfe4ecfefaa",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "普联软件 | 明略科技入主+AI智能体+信创ERP"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "998a6b43e5e29f75b694d40a9e989caa2df6efdf7457f0e3928421c8e822bb91",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "正和生态 | AI应用+智能巡检机器狗+生态水利"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "b00cb9dd9e83b4d7d2d32364748b351c6232ccfbdd5733a16a2ad4e856e51e0f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "3ff55c9ec8401be2b778b63ca1aa5587e17a4bf32f8958043446b39ae79a9dad",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "杰克科技 | 人形机器人+AI数字成套+实控人增持"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9e38a07934d8b78623ea81665d9e3858e57a308e5f3ed0f10084c0d8289159cf",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "立航科技 | 超跌反弹+军工+高端装备+成飞概念"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "763df0f998426bb7d8fc6dc269e4c20b0ac47cefb5124bea119c58ae630fb4b7",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "德才股份 | AI应用+AI漫剧+火山引擎合作"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "36f639a44f129a6878a64788f6964dd071cc9d3eedfbf6067243a49f76aeda2d",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "诚邦股份 | 存储芯片+定增扩产+扭亏为盈"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "f675106f758ab2b2d9090a3b88e25dd55ba8f2df881ebaac333975a74672c5db",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5c56d0a659d9ba6582520ebcf916b139f16bf583b4b0564f71684a3b2294ef79",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "快意电梯 | AI电梯+旧梯更新+印度地铁订单"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "07dfbc7956475102be0ec354d0349b5b2f67d2053b4ba7aae4294e7e5e2b21fa",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "中大力德 | 人形机器人+精密减速器+海外布局"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "dc5338897bb386b75c12bd4c13929a2fd7089e9884e34b505e441bfab790a96e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "海星股份 | AI电极箔+中报预增+产品涨价+全球龙头"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3d1c527c0015b803aed636d5ba4de6599b6c2118c4e7f30200250a1504d35f20",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "盛景微 | 存储芯片+电子雷管+低空经济"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "91acc3cfb504fa1a7d28802ae9c62400bb704f83dc8d257ea78ec0b579f250f9",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "159647.SZ",
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "康惠股份 | 算力服务+中药+中报预增"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9def7ecdce72eb8afc4e8b3fc7b287cb0f5d799ccde56aaddb6e943663ec9b2f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "宁夏建材 | 央企重组+数据中心+水泥"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "48cae5608c6efd9f0dbab1b8addbf906c59dfd580d0f2fa770d96856a859b9fc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "汇绿生态 | 光模块+重大资产重组+超跌反弹"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "89cfe2cecd2a1c4d537292c141f53502df7b5217d3598a5f047f79db75c4f4c3",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "安德利 | 浓缩果汁+拟跨界覆铜板+双龙头格局"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9a863b18b6bdfbddc3b073bddc061fac295cea8edf4507f8623b15908bc5786e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "恒银科技 | AI应用+金融信创+全球化布局"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "4f6ac19fec24726db0ae103c05fbba23a2a0c075d92bb1efb9615909fa30b499",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字",
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "安孚科技 | 回购+中报预增+CPO+南孚电池"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "5df78cf45e8a3d19ffee4fc964ea697e6be42f29d1ec390a3881617d70c3e231",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "京能置业 | 房地产开发+北京国资+永续债融资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "0d88fb36931a2c02cb00ebe8c432407fc6f74f6ba9ff61ffa83ebf5366277353",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "东阳光 | 回购+增持+算力服务+制冷剂"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3994c3f29f49b02acea940096132fac34733fa3eeddda457a84ca26848a1be9c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "科瑞技术 | 光模块设备+人形机器人+一季报增长"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "b2c73ac67a078b45ec3223ca44a397d6f6897eb126eb8ade420870f580a4781a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "麦格米特 | 超跌反弹+AI电源+英伟达产业链"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "0897eabf0afe4aac0bb4c7f0d472a15de0a92f6acbe16a3dce4d25d71efee010",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9b3550761e4009f51449dfaf251c0a3204f0c1e64596ab8540de23031db47dad",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "10b73b28319956801306307cf7a380582dea1d3917b2ead297c1da728c423b6e",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "宝鼎科技 | 中报预增+覆铜板+PCB+黄金+国企"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "c874628588378f0bf681842369ca72f459da2f347545b13fcd7799e4ee5f9152",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "维宏股份 | 灵巧手+人形机器人+工业母机"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "180a3b739dc4856529804aa56a68ca91375a8bc4c191e3e23f41f9735ef28083",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "泰坦股份 | 电子布织机+固态电池+高端纺机"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "cd6fd2ca2c643804a0fbb66aff2b43bcc367111812fc12eb07b529a44f6e4f61",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "272a862b63d48a45b4b6ea6a090a8e83276eea53ef002ed7af36a0da7f677ef3",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "海川智能 | 超跌反弹+拟跨界半导体+自动衡器"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "009d42816d8e36f9454eded6805e09e465ea60e4d9632cbc47ef0b21ca88e8d8",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "华天酒店 | 酒店+国企改革+并购重组预期"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2e45c0da092486d49adb8648f2edd43f2e9d121fd2041abdb11f33d5ddee7c4f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "309bcd91c30a1ac61447f66794306a753b78c63f7e24485f3b6e04aa7ebe05e6",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "宏景科技 | 算力服务+超跌反弹+设立合资公司"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "d7dc121fe7f4f982d7a2549468d19adb7cb0f6f6d0781f4c2ca461d6db84ea23",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "金富科技 | 液冷服务器+中报预增+定增扩产+饮料瓶盖"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2c70ff353ed9ab217f738ff24b99f85e045d8e765e2a8bf07398d0e607907d2e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "天娱数科 | 具身智能数据集+3D视觉+算力租赁+AI营销"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "8ec9fa309b2e2883f420cf9853ea847fb482ed9487e60d6d9ed570674c429df2",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "中岩大地 | 核电+可控核聚变+PCB刀具+岩土工程"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "211dc10b291a4051872ef09a5b8c9ce3e6eeea0635c57f258613c7ac835b002c",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "科技数字",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "515050.SH",
+        "159819.SZ",
+        "562500.SH",
+        "159865.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "京基智农 | 算力租赁+机器人+生猪养殖"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "91a7dac38b3225baf9c83f74a50d6cb061ff41208af10d2157d10134b148754f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "罗曼股份 | AI算力+液冷服务器+超跌反弹"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "0824f046b37d0b552168449aeab616c13438a6ed41016aa850465a0d4a5ed9ba",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "泰晶科技 | 光模块晶振+CPO+半年报预增"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "fa386f00502054df7cfe628ea6a89301773f9c865d44aaa8f971cc8e626e1c61",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e3fe621bc40617230d147b5455a0db4ddc4e9cab00af574f8f173f01a7409d10",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "时空科技 | 存储芯片+拟收购嘉合劲威+照明工程"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "0369883f65fb36347228b40ab2dd50ded803c38f498430edbc46aab58a0ce62f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "48d777075f7a2fb25ad4080c0415e6acf0ee2da6379a5d51a100d67c2b0f6c93",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ",
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "盈峰环境 | 算力租赁+机器人+环卫装备"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "7b6c6bfa4338e752b0fb9e92493af140a20196627fc429426fcaf6d6c5e1fecc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH",
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "利通电子 | 算力租赁+英伟达合作+中报预增"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "04779873975c47e1e9ed27759022e0c2e81fd6957450c4660c94de8efcb08b1a",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "159755.SZ",
+        "515790.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "*ST节能 | 撤销退市风险警示+储能+再生铜"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "8915f032438596fe12316317597cbc61cb81939862c79fe9569c5eee59b5332a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9f6963f150d44cda3f5949a66a115df3dfff4f44d6e37e4f14b92f35ecb82719",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "爱丽家居 | 拟收购欧康诺+存储芯片+PVC弹性地板"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "f4f932e10be89ba8d12ea5386ec95b5f16b8234231254aefcfa1229bb9b3ae75",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "太极实业 | 存储芯片+先进封装+SK海力士+无锡国资"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3870508b1f3ea5c38f94e98603412926c5982ff8df878904c6d51d0d830aaa8f",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159819.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.68,
+      "novelty": 0.55,
+      "summary": "强势原因出现ETF专属关键词，作为对应ETF的短期题材线索。",
+      "evidence": [
+        "传智教育 | 具身智能+AI教育+中报扭亏"
+      ],
+      "risk_flags": [
+        "个股强势原因不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3b103f1951b80b9c31f2cbd3d1eda1262c7804bca176355f708263e19a3caa4f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e7d20fdfd38119988b66c00b2771094727107a99c05541c750451d3c395637af",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f66c876b4c7c52b13ba3ba8974f796b8282d7a33fa2096d4ae446e47a2c12eba",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d36a5836abfff0bc4d5e219f947bcc80eaed0b2fa639214c6e8bc78ea67b1af5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f5422887e00584a903eddedd398e13d39f492a1a14b1b98aa228aff3f22a4b81",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "利通电子 | 消费电子"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "80023121689651076f6751d45031254d461fd64184ccde90b331ded3fe7f40dc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "1147ea5e780417bec75c92af9254ef6c418fd51d9ec635407f321f64fbe0c9df",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f86aaf88a239b274e1d42fdf95d3514bf77e4983d3f4185be56e31e344847862",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "fbe7710bb835807ded97b64a7c2721a125503db7428b104afa9b71a442705e5d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "cab8364317c301792934efe02b6a4b94e9ccb786560a45bb3859ddfec55526d8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9687686b989a68b31058d2decda2ecf4ecf0827282f08c77cebf2fcc987fc453",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "14d6126dea69fd193c5bb7b2b510052772f278f9f9ab31cd175de5e729de60fd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "232e7525ac5ff67992b44a5ac09d8372fa86d5c7409cf92a1ee59870b9717ed6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "6f60c9be81a062569f88093379a2beeb783b289e8c9a5293e65ccc47dc835ab2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "796dffe9d12e159d8976d07e740891707913d0697ddcedfcc94f2bc97b606548",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "acdfea2e54d563de4cad8f1e8ab15d80a6ae5e1bf12df290d1ad8f16b5352bb5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c841b23a6809698292d1cfc632aaa697a0bd9e48daace0af6003a9450da26be7",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "天娱数科 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "f020c20b55209338fe94b2520d799f4603fab8b75f6d14deec1c516fcf01ba9a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "cb25f03c9e61409630b7393cd3073ccbc9b6ba68726be988cdb87a1453e67e86",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159985.SZ",
+        "159865.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "京基智农 | 养殖业"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2c4c958c89bdea610b50f2e29706d342efe116695b1af0d99a6125290ab52bdf",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159766.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "华天酒店 | 酒店餐饮"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "dcc06a7f873fa199c8124ed91631bfa11de43d986d6f6a311a41999fc4f3dbfc",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2adcb51c2f97a36c57ae88a27faf574d57981c19d8af4db64c91b9d99d72a04c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f36ecf4bd2ed4a40ed63aa86038bf5fcf261d7ccfef888b82e870c6e334df3f7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "256dda19ba0aaa244321db7535f628edb7afd54e44cbd9936f2e3a224e0e0647",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2fef2315504016dab105f86670695bdc6a5b4c91c4e60d74e09df3a4c3d55353",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f381c1fb019194a571d85aa956d612b81e6bba3cbe3b4ecf0c7325ba14b5d5ae",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "17924d79355504080fefbb29f11b85a4ce15489e14bf651cb0e4923b6caeb4f4",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "新能股份 | 电力"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "d0456427d00a16c628fe1bdeec64d1fb2f6ebee5680646c403310a2d17e3bb4f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "415cad472817345d00edb30535ef9402119e6b1f4b587a3a8732bcb95512f24a",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "科瑞技术 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2da5a7fbc9575bd0e7859c5b25ca47a371b1ed2e6e105ee4c5e0d35ab6a300d3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "6c633a79d43c0b027cfb679269ec21b6869cd724cb0205cc4511a332e88e6df2",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "159755.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "安孚科技 | 电池"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "b33e282190c3193577183d6bc2a4c0d5c610896b5be52b3b42586302386fec24",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c7a7f7897b1ef8782e8a8479b0f7233db983c39c910834312eb37636c04130b7",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "汇绿生态 | 通信设备"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3d5aeeb65c3a4de4f462c7ca0f4e38a606044fd9da1de34c84130610e9c17c48",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "159647.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "康惠股份 | 中药Ⅱ"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9ba06939d818dd4e45db588cce27d084ae0b954d41a852a077b4a41b90d56008",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "277f8258f787770186d972fcff04659468a4453cf95ca6523a3a3866104de585",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "盛景微 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "6e1123b247e408857071fde5e2e29228d89e9cb8544dd88a86fc455f18bf64bf",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "宁夏建材 | 水泥"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "1aa1ff73472af6485f8bb5d1deba14dd26dce8acd334f173f06cb3d6ed3f481a",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "京能置业 | 房地产开"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "c7233c354931cc37bd16fe4d7ca37d0dead84dd85e9621b1d034d6604308ba72",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "7a3a92964b6d681dd4f04f38961890d864c255d05a07132dd9c1e81e81156435",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "49412a1d28e32fad2f37e80f51215970c8a0145291ff918ad6d9ec15d2ed85cc",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "锦和商管 | 一般零售"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "e1ce76f3729ebb02e0d64347f5ef89a01fedecbb0e70108a0b6bb5a19746860c",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "诚邦股份 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "8f0ac269569650259f7e94313d98f2e3d2d7b3ffeaa9a147981b00a8e8b63ee4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "77cd1cc922779dc304968cda0e63a7f8ce1118d8f10980550e125a1b14c0ef41",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "1075cc4d5a2820396192edad6cbb205915bd3afb5a1b6cbeb14309d5f9631406",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f5a0ab906311e3fad98d95633d4a2353b6dd88ea37589e119882205f582d09ba",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "eb56c2f3ec11b6f12b0f83fc7dcc8469f1f26c27bf2f9b1221e68b8feb7d00fa",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f95fbd827e97ed69c6db998debfbf9880e2d8d0ebcbcea6a1355f7040661f8f8",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "欧克科技 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "81161b6f53a35f1c4c063fb5bdeb0861f5af5d07a85e98491288e629625fb4ae",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8dcd0cdac01af7e45929c9b206ef8ab9e8d3dcd4e98a2d564a86ff535c865af2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "712eda0479a6c381ddd377ddcc68b4059a095c57c38be73aa28caeb045c4fd4e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "de9650befc0762a67579a93454a95baf342c76ca1505be7e8ca435ea1bd12e9d",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "智度股份 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "4d5c24b5750e222ba29e3c006e922b9ae47282d7fc4dc6f42c59d224ae64a8d3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "三人行 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "838fdaeb641cfd833886532e3b27ae9acb2811568c009208cc391dee9292b659",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "欢瑞世纪 | 影视院线"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "d2f40d8819b9c8606aab10e539430f4e3995777aba7ae01256590ba148add977",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "3ec49c30a8bd611f147c8169421b88345430fea743ac08dfb735d306c5cf45ad",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9f3a3938f199ec395b94e23059c682810472907860f6bbc9eedff422ae94844c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f8805f65cd51986607c3934a2990f78cf6a34a9b52a99332ea2633d1e1270330",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "易点天下 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "429e2fb3f5a33e7ddcbd772fa7ebac9a921130b9ef9fab517dfb9a36054f99ad",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f2eaaf7eb0f6020ad669274e4d171298a13ba1299ef946b94da91f10c13fe7fd",
+      "relevant": true,
+      "matched_categories": [
+        "商品",
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "518880.SH",
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "招金黄金 | 贵金属"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "1005ed39c3fa9e2cf0e1cce2782a137e280289bd5883cf5b44879fd871ab212c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "185e9c7661f31c7744b673e01bf6c4018ab6230946be7c064c76a231c3738813",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "引力传媒 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "b9e55a08894176551167e14ab8601e185bd5044fefe2bb0a6ab7b8b735991f9c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "45beaebaf9d850eac088e258564784df48331fb012024223265e101c4ecd45c1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "208c8340452fe227b8491b3f0cd91cf79cb9c5d345b1891345ae668cdd3e513d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d8d2a341d3caf064d6728a9815dff95d57518335b6fed7e17d6ec843491ce19c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "b5c9c92d1b99f2f0ec1ab9772556614354c07efc0688a6f8324e87bbbdeb8c9e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "润建股份 | 通信服务"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "723b3320a8cf7eba53e0027faa6623364174268db192d337c6ef68841236263e",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "中广天择 | 影视院线"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2d358f30da4b4374e668146465d0b7b81d61a329c257f99b013496d9ec85b0be",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c34fce48292bdf0fe842bcf5a3a9286b2461a1d1107170a3b469f95bfcccbcd0",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "蓝色光标 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "6c4179b343740c0463b3bca49f8e444c064404448f1f1520c1f84b3712e40bf1",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c3bac04f184067d48a2c9ee4f53c243b34ac7dd38cf3bbcb00eb6540c02333d5",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "九安医疗 | 医疗器械"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9977f13aa2dfac26a865558531a45408daede0a09214a0ae68e0e33942cf601d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "352a0eadde064f18b132df0331afd01f021cac2e5464f3945bdce14fbb2a00ba",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8fee1d721bb46fb16f4d2ec167f3128b2c05363ab908ec327a364084692ca93c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8ad41e3e74354bab9a4d0f7458d7a93d802a9a0305d5eacff3a076fe0fd9a390",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "浙文互联 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "e32cafb9212d8879c44efbc9006425b0d99271bc623a5489cc74d3f24933aa5d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e147999545800da1312511ac6bf9927bee6108feaa13877c1cfca51a8e7e1a46",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2e857c9728ae731ac7a996c769eed8c7ed6d2ba9a73f1534b2d900fc9de3b664",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "荣信文化 | 出版"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "98daca1b87cebed6338e1ae1bbe6cfe8c1e4eece43a1435940bc57fa87edb554",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c35a241b9688cf4365a2e47938ff6d87b0a95ed1bf078807cbbf570d4c99060f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a805105dee0c4b6cd8261216d1209145bd648473c9c49d164068e071daebe328",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "512690.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "威龙股份 | 非白酒"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "382ebe8e027d34c3cb1df629dae5f589590f2e80b0ebf781c675a477489ccdde",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "香江控股 | 房地产开"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "d0586d221108c0ff391161dd721145cdc908438cdba1ae3319ff0babd9316b08",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "b8d7d5a77cceff38bae8f160a6b7b028d7b3c33984f7d3dbed9b1d15aa996c35",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e8d1b44a8d759daacc77f738405c6da646ff979c247032769a125c1342ecf6e0",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "4c2995377146e0cf1aa9351703b95d50a48477e95d6b11fef4f79809c5b315a7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "737b0219ba2e4b7e92e662608bcf101dc28a48f6549a7491f58339426ecb42b3",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "三维通信 | 通信服务"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "3798b550163ffa9ec02a312e839b44644666437e738e92a2c7439afdf04b2302",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "法狮龙 | 装修建材"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "0828da516e7337a12baab135d2db82594edcc04f74b7707ed98ee798d53375a9",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "871a0ccc01a959b18ab74f8a88dfe97dd661f9dfac82032c93dd6ff5a5152981",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "344e396c197756580dbaf9b9723d6ed2810a9e592abf1a4ee6f12d147311d140",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "永茂泰 | 工业金属"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9a88858ec98df1c6eeb41f153bec4f6d0d9c89a0436508c5a4c3b11c19198d33",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "fb05dd5c3674b5d71c8b2d5beef76896f79673eb0f9fe8fdc6850074303f8bed",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "雷赛智能 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "4d2ed9e4d575221f27ddb34691bc8738d516456ec392858204ee6103676899a8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "68663f867c1198a1f9f90189b895e619404fd480d77c44ced83f2ed23990b860",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "柘中股份 | 电网设备"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "974b83dc2741640b697845b84aec2de2fd4c3874c8fbe15b2a8d938dc3667abd",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "19427e53016028602a1a5989522bb5903b20c6339706be454bc5302ec7152757",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159611.SZ"
+      ],
+      "direction": 1,
+      "horizon": "1-3d",
+      "confidence": 0.82,
+      "novelty": 0.45,
+      "summary": "涨停行出现ETF专属关键词，显示对应ETF题材短期活跃。",
+      "evidence": [
+        "协鑫能科 | 电力"
+      ],
+      "risk_flags": [
+        "单只个股涨停不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "89fc72b37b7fbecb98b6cd20a7fdfcab00a8ff59f4d9bf7e5be2742faca2dfd3",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2b3f947f1440fbc1b9a366c1cdf61d5da3e90d28d2173124c32843b4e9599fad",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "ad7f8c688af7d7b3d4b26d12fb258c1cc6e098840e3e925cdebd486c6e8efb36",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "德明利 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "fc2866ef09c62c271ad67dd4624cdf631a3dcd57d87ed4b5a7ddeec9fcc5d65f",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "云南锗业 | 小金属"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "be8a2612935a948035faa721518a8bd522b26376052facfc7bd896ede809a2f8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "03cf6cbf2653023f73cdde5e3280ba6d2586483c9d46b9ae78614ca394823339",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "18ca92dcbcbdcef0adae828d976a0e43a54e3c60b7e810a1588422a010c3495a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a7f35f856da78c5e182968bff1031fc64310be8b015333ed9e6763768bcbfe87",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "兆易创新 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "fe3adbfa335062242215369132e4d3f5ed52c51f5ca18929d065afcd2d8e4cfa",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "普冉股份 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "a1ecdc731a02580541809542b3dc63713519c7571e9e3de381039c391ff1b761",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "36ef453145bb9e7187a63207476b6b8d18a9cb553b39de76ca7e87bc8d791f72",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "392561903240e0114c31ef10b0939693f8f03853b941eeffc029fa063a65e51d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "59c606f4a36aaeeaad5f3b31df352fc8cc39d0f3060d0c0a3ef8607543174809",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c44d0020c851a45e445c238715555e74fc5ee5f04a41bc8986d1233b425ad901",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "ebbad2ed95e21bd61ed26742fe20e53f066f49205ac767e664a96e49f1c81d5c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a83e76879946d1eb4ca8bd734cdde9f4ea525e489d07c8f436fc960a58aab5aa",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8cd891d19f6cef5aaf76c2d585e825ad39b225faa94b8d13241f0da5a0d49c9d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c32a5a3b75154dba1d894fa6bd37607a6c89aa775fc7eda4c767ae8b072eee10",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "afb982663631986818a645a9ff716e15c226401bd335742947244cf39a1e9b42",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "dc1345b3616ba3a9b1137eed752e4cadc80896f64fa4d8c3325f631fa14ec0d1",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "东方钽业 | 小金属"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "74269b3e2b5323cb98166013604e185cef8a2735c40115669027cff82f304e11",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "bdf98fc537d1224b1afdde224e79b2eb8450ef7638a0413d75880bc8e07fa675",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "95250d1f45b1f1ce2a8e1933f4ba0b48d129e4e5abca291b024c78bc94d2b491",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "588c74300b40bbc921269626bedcc3d8d37fa2e8e6ab5d938bc2f5b56e304d06",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a9c779a2a99bfca68e4502ee39d7c87d4cbf1aac5af0d911fa62a13ca5fc063a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a991fe8b66dce9b22ec7dfa53bc3e1ac683e42b6821ff78c2da5e9ce5cfd0f49",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "和林微纳 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "0b1f4a4eff9bf43b5c93901187b8da5be230eceaf99595784555f8e0737ad204",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "立昂微 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "311c673777374099911fd57187b56c3e91510627b73fd83c6ed6d88046ba0325",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e8fe1f9e3859f91da6da8641eb1d38ab240c9a98160170612433e123819f5d14",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "杭电股份 | 电网设备"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "095a1a79fa6a6071d4e7e791f5d615d06a32f86a9fba9abfa71611dedbeef8e8",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "55feb2d8a1a4f3f84bccc70e03bb33a3cf4a42b60e43bace95362b509a6157b4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f714f92aa40361d388b8c9d847f91669e548f8fd0991be8eca5a196ecede46cb",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "科森科技 | 消费电子"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "84feb15a90a1a68db341caee73cedfcb4a67f20298f16336b3706d53b88a2675",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "4818bfaa3789376b440d7a1279b0f6690a74852cd393751a13aabdd92280849a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "72a3e2acd8b209492f9a674bb3f0e7db566e174b7e8dbfa158c5b8faa11256f9",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "快克智能 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "f4e74ab9fc341e65f3efac4f8c8de0cd4cf701671e0c66e195df00bf577e27c2",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "博杰股份 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "ab9e7c312101275c51520054da85cf60cf8388946e68402b9f3f2ff651e37ad7",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "智立方 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "11a8e7526a1474b9b7f2ff9711d97e63a551fa492be6fbecee086184c85c4cc7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "91f802bf3a225d276f00b44ed1bea454aabcacd78fa83091c206c7d2252a9a56",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "11dd37ca3870e4a7a425ef1dd430bdad5b3c1b70abd0b1154429604784c7e366",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "江南新材 | 金属新材"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "6579ae77d4e9f083eae2e24a4bd2e2da1017f8861eefa484160f14aa84f1c615",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9d2eadb6fec05e0246548f3855115b407f6afe02c2352207f58b37d2c980685d",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "宏和科技 | 玻璃玻纤"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "1ef074bb5f8a86ddc8164266a1a58edc68795660f860cd9c80c3d90f1e360b68",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "博迁新材 | 金属新材"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "84c358e88fe2811ae2fcc20a6cc9ddc09647cecde3c054abcc3a2953362ebdf4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "eb40ba3668f92172225d289e8963cf7965ecbc1db44551b6c7bf93f5bbf1d83b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "71a2645b007834b22457b70ef7a30b41e1864c9b041182f869b25f3136228676",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "可川科技 | 消费电子"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "2d708d74467d4c894ea2891b5b9b09bff9951f0c2891a92e68f5673e41ce959f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "45d84337e6fc8818ec0b86fb3e560fc8fb2793f27724495cdae197224ba897d8",
+      "relevant": true,
+      "matched_categories": [
+        "周期资源"
+      ],
+      "matched_symbols": [
+        "512400.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "福达合金 | 金属新材"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "598f85bd1ff560c1ac73de6359bd677bdd890c9158d58192e2ae35661a163d69",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "金海通 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "ce6c7cbac35a10665d4b7651814951d27ad08263af27749b1cbbaffc4f41f249",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "光迅科技 | 通信设备"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "a1204320802d8991ae6e222744ace6e65b10785d9c22b263f455cda57314e00c",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "中瓷电子 | 通信设备"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "c45b9c94109181ba9b708491f32af0dcb5937fc943daa93e03ce8ae39767af99",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "阳光股份 | 房地产开"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "4c049bf50c0fec65ac3114120a3ed93d240e38472dc6e16247f6ba2bdca592b5",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "鸿仕达 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "ed511fa92448014c6865df1bdd71ea17514dde65f72b67d25a25c459b03ed6a7",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "159745.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "中国巨石 | 玻璃玻纤"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "ca7cfa6cf1515172c97c83b19ad67c9b2804847fdeefa6c3ddca22fa4909d5e6",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "e7a4c8f1e17620658cd072d396c964e603e77130ff486d16266f96bea6e8e2d3",
+      "relevant": true,
+      "matched_categories": [
+        "基建公用"
+      ],
+      "matched_symbols": [
+        "561380.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "远东股份 | 电网设备"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "182311a6a87f99b76f28cc0a22b45315f7aa218c2e80f0212c50476d95090117",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "787ed85b0767550638980ae821643449acb0d81ddca79dd10b4c7ddad8553099",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "华亚智能 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "4a110312a4576816ff1eb1122c91f4d069597932897daeaee6cebdc4494bb9b3",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "火炬电子 | 军工电子"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "c88dde7c354dfa67f7dcd62bafd3e725bff46e9c9194a79a84418c422ec95763",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d28882e77d3f586c9026d7c025d32d7016ad20721c7ce9e760b1cf9e6812e0cb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "43cf8ae2e61e2def4a4bfd8f12ae57db164337cdb0f1ccb27bc8af4225ecaecb",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "b60c3829ca99d03a3e9242d4f179812bc776ec921e334afe5965733f47bc9a4e",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "510630.SH",
+        "159996.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "共达电声 | 消费电子"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "195dcea618d3f6d5b3dc3a58d86ccb70769d16dcb742110cd4a1260966e0be33",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "515050.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "意华股份 | 通信设备"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "322d11f2b56c0df8df1ea2ef8dabc693aeac017c7218c7496468a65acb0be420",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "ed149dee955548065549fcb2be991b789fab5e465ba11e9ee29c7396df1dbb97",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "64a6d25f50cf3d0038f8931d5a9b5bade2eaa3051f07e4e3095233ee704d5bfc",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "562500.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "赛腾股份 | 自动化设"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "c64429a8ad6d515993fe811eead25daa6c45b9bdf921f6bea06e1406ba2b1227",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "8149e952793889612909d42993e435399928b3b636d16ce8789dd157322d81b6",
+      "relevant": true,
+      "matched_categories": [
+        "金融地产"
+      ],
+      "matched_symbols": [
+        "512200.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "首开股份 | 房地产开"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "5ab5b3f8136f3c69e7c377b61bf1294cddb5b87d07a19c0d575560725331f615",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "d73a4719d830db95acda9082eaf1006ec89268bbfcd82f09bed7e1798ab7f429",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "ca03934f8e44e735ce09668a639f8e51e2e26fbdffea4432313fa9ab381ec3ce",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "792ff6509bb45a70c316b873e382e220fa5469b483210d5d602dfc8a53330217",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "70db7235944b77cbea5d80c05dd2164c8d381254797d9b8abb62486a642d9642",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "7e15fe2d588fad6434f82e1593b80d1627678bbf4889bea098342bc45a70e557",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "159869.SZ",
+        "512980.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "思美传媒 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "ac804be7bc3612ac7a1f99acf1135253959f97357e62a59884023fe0ce8ba83a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "dd600cb1db7ca023a4647df0ed43a9cdb0794ec5f8dd1879e4df27a066e9766e",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "6ee8aa93e1c6d8ae8927768e2681385489bd9fb026937f87bcffdaf0904dbf7f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5c29cc32bb7c424e4129aa8f215f3208d129cb68d925edf595308f0477001834",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "562600.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "贝瑞基因 | 医疗服务"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "9c0d4c3f06e0a900bb9143c3662f1ea893c65c0d06a9cbdb89a1189c80fad749",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "0314444ec946bc7507deadad4b56c76fb49a349af2c43096d859834fd0a2b96f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5fc93d25b1164b0c28e73fafb6ce292f9a90681bbc52520b3814fd870ae57593",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "天龙集团 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "929eb49c4725591f2cf255da63a3e85209b1b56648557437e3acf0a8c1d89222",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "6de4dd438b212fd075634e69b90843262be7c0dbb1b17a90e26abd1270d36ea4",
+      "relevant": true,
+      "matched_categories": [
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "512980.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "省广集团 | 广告营销"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "e3c854202f6bbc833d1425f17dfb1400577c23ec1de475c29ec20d0cced2eb8a",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "f49552d1746849896fc53ba5852520a25d0f306389e047ac38484921841f205a",
+      "relevant": true,
+      "matched_categories": [
+        "医药医疗"
+      ],
+      "matched_symbols": [
+        "512010.SH",
+        "562600.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "康众医疗 | 医疗器械"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "6ae4a4f8b4d5053d5c3bc081d144cf3f07aa02d53cf95504c68a57f41d45f918",
+      "relevant": true,
+      "matched_categories": [
+        "港股与亚洲",
+        "科技数字"
+      ],
+      "matched_symbols": [
+        "513310.SH",
+        "512760.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "杰华特 | 半导体"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "deb543b907b990161b37c97b15b93661bb00c46ab436d2e2c21cfb3508826384",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "18a92b76e6359daa9acd78e91a9fd751a3ed36a209001bee36941fd015e38270",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "b826d65e3064fba0a857f009ea9e5dcc1725f1b65af036cbcba412ca4180f5dd",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "512660.SH",
+        "563380.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "观想科技 | 军工电子"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "b1f26b6d2f27fefd19651f4aab9f23b420c65e5ecc7ec4dd72a311a013075b32",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "14de9409393e6381d206238abf4c5222adbfc07416e6757fa8d12fc7ff742be5",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "697c44aa1651ead2e345e362371160c34631750480ae8440668c6bf018ed4577",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "fe5c181ec53020d82f00441eb5622177689e61dd5ab8e28bde6e16f01bcea492",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "08d08fe9e79a4fe856b8e6e7492b938706df54146fe426fbae099a11a408b864",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "cb526a54cee9397a7ca06f45c8652018ef5fc5e2ea764942ff04ca79b72e7e98",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5a075018c4e55f2050641c7dcb5b740affbbd920ba0a29eb95b2c9a3ca4d1594",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "5be3b82e69c15a798950da18282b70941a2c262e5b8e45f9168c6c67a66d538f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "c4d430493df101ae687365d5b961d113aa385fbff17e60176d7964033830e4f2",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "29df0b9761d5f7f6dd20fb5cde9909dc42710585e8d3bd271d1dd9f87c3cb66b",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "01ff8c4975f138aad8673528adc33f2efe23ea68ac0bae9bc9996268dc764ad7",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "a74e30b9772430ecdaff7bf4b2acdf2f43e16153533fb96c5b102679d35faf5d",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "9d1670cbb79eb6edb01551cf6adc83efc5f03ee8abfb4ba707b8a78c06cba32c",
+      "relevant": true,
+      "matched_categories": [
+        "消费农业"
+      ],
+      "matched_symbols": [
+        "159996.SZ"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "春光科技 | 家电零部"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "a4b3136c002d590f5cea25a4de4422d7f598d83219c14d39ed93d5a20950c327",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "2f34f4a188d09dea0b55cc7ea0dca1a266370d395317f64894e83daddc5057da",
+      "relevant": true,
+      "matched_categories": [
+        "高端制造"
+      ],
+      "matched_symbols": [
+        "515790.SH"
+      ],
+      "direction": 0,
+      "horizon": "intraday",
+      "confidence": 0.72,
+      "novelty": 0.35,
+      "summary": "炸板行出现ETF专属关键词，显示对应ETF题材存在盘中分歧。",
+      "evidence": [
+        "恒润股份 | 风电设备"
+      ],
+      "risk_flags": [
+        "单只个股炸板不等于ETF整体走势"
+      ]
+    },
+    {
+      "source_hash": "c7ed56b69816e0c4e505dafab912b6ec92245165bd95459921024ecee0c74ce4",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "42b4f72a0d6d53cca6ab79e90756660bc383ee59d852c9ed566e90838e98002f",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    },
+    {
+      "source_hash": "13911b2bbb155e44108c9fadc7e219aabf077e76eee5e278a1ec8c5390566c5c",
+      "relevant": false,
+      "matched_categories": [],
+      "matched_symbols": [],
+      "direction": 0,
+      "horizon": "unknown",
+      "confidence": 0.76,
+      "novelty": 0.25,
+      "summary": "该行未出现固定ETF的专属关键词，不作为ETF情绪证据。",
+      "evidence": [],
+      "risk_flags": []
+    }
+  ]
+}

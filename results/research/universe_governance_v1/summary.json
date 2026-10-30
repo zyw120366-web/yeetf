@@ -1,0 +1,27 @@
+{
+  "status": "governance_research_only",
+  "as_of": "2026-07-27",
+  "formal_strategy_unchanged": true,
+  "return_or_backtest_used_for_promotion": false,
+  "review_cadence": "semiannual",
+  "thresholds": {
+    "minimum_history_sessions": 252,
+    "eligibility_rate_last252": 0.9,
+    "maximum_missing_rate_last252": 0.01,
+    "minimum_trailing_amount20": 20000000.0
+  },
+  "required_metadata": [
+    "benchmark_index",
+    "expense_ratio",
+    "tracking_error"
+  ],
+  "promotion_rule": "one-for-one replacement of the same exposure only; never use historical return contribution",
+  "observable_ready_symbols": [
+    "560280.SH",
+    "512980.SH",
+    "513520.SH",
+    "513030.SH"
+  ],
+  "promotion_ready_symbols": [],
+  "daily_execution_impact": "none"
+}

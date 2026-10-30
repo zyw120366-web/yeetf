@@ -1,28 +1,66 @@
 {
   "account_type": "live",
-  "as_of": "2026-07-22_close",
-  "confirmation_status": "confirmed",
-  "source": "前日用户确认仓位；上一计划无买卖订单，按账户连续性滚存",
+  "as_of": "2026-10-30_user_report",
+  "confirmation_status": "pending",
+  "source": "用户确认2026-10-30买入红利ETF3900股、成本3.433；豆粕成交日期和完整账户待核",
   "first_live_day": false,
-  "total_equity": 9877.4,
-  "available_cash": 0.0,
+  "total_equity": null,
+  "available_cash": null,
   "performance": {
     "strategy_start_date": "2026-07-21",
-    "net_contributed_capital": 9825.0,
-    "calculation_basis": "用户确认资金全部投入首笔买入；26200股×0.375元=9825元，后续如有出入金必须同步调整"
+    "net_contributed_capital": null,
+    "calculation_basis": "9月10日前净投入9825元；本次新增入金待核，暂停账户收益计算"
   },
   "positions": [
     {
-      "symbol": "512010.SH",
-      "name": "医药ETF易方达",
-      "quantity": 26200,
-      "average_cost": 0.375,
-      "market_price": 0.377,
-      "market_value": 9877.4,
-      "unrealized_pnl": 52.4
+      "symbol": "510880.SH",
+      "name": "红利ETF华泰柏瑞",
+      "opened_on": "2026-10-30",
+      "quantity": 3900,
+      "average_cost": 3.433,
+      "market_price": null,
+      "market_value": null,
+      "unrealized_pnl": null
     }
   ],
-  "pending_orders": [],
-  "last_exit_dates": {},
-  "note": "用户确认2026-07-21以0.375成本买入26200股512010.SH并将账户资金全部投入；2026-07-21计划无买卖订单，故持仓与现金滚存至2026-07-22。今日收盘价0.377，收盘总权益按持仓市值计为9877.40元。历史回测模型持仓不得作为实盘持仓。"
+  "pending_orders": [
+    {"status": "unknown", "note": "用户尚未确认是否有未完成委托"}
+  ],
+  "last_exit_dates": {
+    "512010.SH": "2026-09-03",
+    "513200.SH": "2026-09-11"
+  },
+  "actual_execution": {
+    "signal_date": null,
+    "execution_date": "2026-10-30",
+    "source": "2026-10-30用户在本会话报告；成本不是已确认成交价",
+    "fills": [
+      {
+        "side": "buy",
+        "symbol": "510880.SH",
+        "quantity": 3900,
+        "reported_average_cost": 3.433
+      }
+    ]
+  },
+  "note": "用户报告已卖出豆粕6500股、未买银行，确认2026-10-30买入红利ETF3900股、成本3.433。豆粕卖出日期、红利成交价、费用、可用现金、其他持仓及未完成委托尚未完全核对；不得伪造旧计划成交或自动放行。原账户快照在10月27日计划中保留。",
+  "execution_assumption": {
+    "enabled": false,
+    "authorization_date": "2026-08-06",
+    "prior_signal_date": "2026-09-09",
+    "assumed_fills": [],
+    "override": "10月30日用户报告红利持仓优先；日期、资金与未完成委托待核，禁止假定执行"
+  },
+  "cash_reconciliation": {
+    "status": "pending",
+    "deposit_reported": true,
+    "deposit_amount": null,
+    "user_instruction": "用户确认有新增资金，但未提供金额；要求先生成今日日报。金额保持未知，不能当盈利。",
+    "previous_cash": 17.9,
+    "previous_net_contributed_capital": 9825,
+    "sell_notional": 9263.8,
+    "buy_notional": 15275,
+    "net_deposit_less_fees_less_ending_cash": 5993.3,
+    "note": "新增净入金=5993.30元+当次买卖费用+剩余现金；不推定具体入金或现金"
+  }
 }

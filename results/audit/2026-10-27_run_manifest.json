@@ -1,0 +1,256 @@
+{
+  "schema_version": 2,
+  "signal_date": "2026-10-27",
+  "status": "READY",
+  "created_at_utc": "2026-10-27T07:28:49.039692+00:00",
+  "code_revision": "ebfba714e921f1d0f77aa6e91b9d6d6231852ec6",
+  "uncommitted_code": [
+    " M config/market.yaml",
+    " M config/strategy_governance.yaml",
+    " M dashboard/scripts/build_ye_strategy_html.py",
+    " M run_strategies.py",
+    " M scripts/advance_authorized_live_account.py",
+    " M scripts/build_live_order_plan.py",
+    " M scripts/reconcile_actual_fills.py",
+    " M scripts/run_after_close.py",
+    " M scripts/validate_live_readiness.py",
+    " M src/etf_rotation/backtest.py",
+    " M src/etf_rotation/daily_report.py",
+    " M src/etf_rotation/live.py",
+    "?? src/etf_rotation/funding.py",
+    "?? src/etf_rotation/rotation_execution.py"
+  ],
+  "scope": "只绑定当日计划与日报；行情/资讯记录路径，不重复全库哈希。历史代码及输入版本追溯Git。",
+  "critical_files": [
+    {
+      "path": "results/live/2026-10-27_order_plan.json",
+      "sha256": "01c820e196cd83ba4ea35d272fdca7628ea3806bf829998aea99b470a2b24242"
+    },
+    {
+      "path": "results/live/2026-10-27_daily_report.json",
+      "sha256": "eb2c4c1ba080baebf63bf1ec6d34a0d55a46dc6fea0a29f4b379e6ff73178655"
+    },
+    {
+      "path": "results/live/2026-10-27_daily_report.md",
+      "sha256": "411d15269941cd6660e15a16a8d7703544033e20f06d1707b456cb01e2bcff61"
+    },
+    {
+      "path": "outputs/ETF轮动策略_今日日报.html",
+      "sha256": "89444c5f91e74c5881f8134308dd6015a2a7925dd279cef46429b53c7a66b08f"
+    },
+    {
+      "path": "dashboard/public/ye-daily.html",
+      "sha256": "bad439a450f50ba7d00840c483233d77d4140eee8cb97fd4fdab0e2df61f8003"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "market_data/live_quotes/2026-10-27.json"
+    },
+    {
+      "path": "market_data/live_quotes/2026-10-26.json"
+    },
+    {
+      "path": "market_data/sentiment/2026-10-23.json"
+    },
+    {
+      "path": "market_data/sentiment/ai_review/2026-10-23.json"
+    },
+    {
+      "path": "market_data/sentiment/2026-10-26.json"
+    },
+    {
+      "path": "market_data/sentiment/ai_review/2026-10-26.json"
+    },
+    {
+      "path": "market_data/sentiment/2026-10-27.json"
+    },
+    {
+      "path": "market_data/sentiment/ai_review/2026-10-27.json"
+    }
+  ],
+  "price_files": [
+    {
+      "path": "market_data/prices/159611.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159647.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159745.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159755.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159766.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159819.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159851.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159865.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159869.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159870.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159915.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159920.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159941.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159981.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159985.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/159996.SZ.csv"
+    },
+    {
+      "path": "market_data/prices/510300.SH.csv"
+    },
+    {
+      "path": "market_data/prices/510500.SH.csv"
+    },
+    {
+      "path": "market_data/prices/510630.SH.csv"
+    },
+    {
+      "path": "market_data/prices/510880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512010.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512040.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512070.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512100.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512170.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512200.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512400.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512660.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512690.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512760.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512800.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/512980.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513030.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513090.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513120.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513130.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513200.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513310.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513500.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513520.SH.csv"
+    },
+    {
+      "path": "market_data/prices/513530.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515030.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515050.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515210.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515220.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515790.SH.csv"
+    },
+    {
+      "path": "market_data/prices/515880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/516020.SH.csv"
+    },
+    {
+      "path": "market_data/prices/516150.SH.csv"
+    },
+    {
+      "path": "market_data/prices/516970.SH.csv"
+    },
+    {
+      "path": "market_data/prices/518880.SH.csv"
+    },
+    {
+      "path": "market_data/prices/560280.SH.csv"
+    },
+    {
+      "path": "market_data/prices/561360.SH.csv"
+    },
+    {
+      "path": "market_data/prices/561380.SH.csv"
+    },
+    {
+      "path": "market_data/prices/562500.SH.csv"
+    },
+    {
+      "path": "market_data/prices/562600.SH.csv"
+    },
+    {
+      "path": "market_data/prices/563380.SH.csv"
+    },
+    {
+      "path": "market_data/prices/588200.SH.csv"
+    }
+  ],
+  "counts": {
+    "critical_files": 5,
+    "source_files": 0,
+    "price_files": 59
+  }
+}

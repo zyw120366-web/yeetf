@@ -1,0 +1,25 @@
+{
+  "signal_date": "2026-10-27",
+  "execution_date": null,
+  "broker_available_after_sale": null,
+  "confirmation_status": "pending",
+  "source": "券商实际成交",
+  "fills": [
+    {
+      "side": "sell",
+      "symbol": "159985.SZ",
+      "status": "unfilled",
+      "quantity": 0,
+      "price": 0,
+      "fee": null
+    },
+    {
+      "side": "buy",
+      "symbol": "512800.SH",
+      "status": "unfilled",
+      "quantity": 0,
+      "price": 0,
+      "fee": null
+    }
+  ]
+}

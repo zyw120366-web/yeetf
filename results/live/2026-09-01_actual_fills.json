@@ -1,0 +1,22 @@
+{
+  "signal_date": "2026-09-01",
+  "confirmation_status": "complete",
+  "source": "用户2026-09-02明确确认：忘记操作，前一日计划两笔订单均未执行",
+  "fills": [
+    {
+      "side": "sell",
+      "symbol": "512010.SH",
+      "status": "cancelled",
+      "quantity": 0,
+      "price": 0
+    },
+    {
+      "side": "buy",
+      "symbol": "513200.SH",
+      "status": "cancelled",
+      "quantity": 0,
+      "price": 0
+    }
+  ],
+  "note": "用户确认仍持有原医药ETF易方达512010.SH 26,200股，未发生卖出或买入。"
+}

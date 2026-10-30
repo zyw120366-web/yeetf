@@ -1,0 +1,6150 @@
+{
+  "date": "2026-08-14",
+  "status": "complete",
+  "policy": "every_collected_row_reviewed_in_codex_chat_fail_closed",
+  "prompt_version": "ye-codex-chat-review-2026-07-22",
+  "reviewer": "codex_chat",
+  "review_metadata": {
+    "model_family": "GPT-5",
+    "model_snapshot": "not_exposed_by_codex",
+    "surface": "Codex desktop",
+    "reviewed_in_current_conversation": true
+  },
+  "review_protocol": {
+    "version": "ye-codex-chat-review-2026-07-22",
+    "files": [
+      {
+        "path": "config/sentiment_review_policy.yaml",
+        "sha256": "64cc6dd0db1d6888b47d3e15903bbfb194f23dc6495b50a9b94ab778e3275f80"
+      },
+      {
+        "path": "config/sentiment.yaml",
+        "sha256": "264703aa392f3f796635c7e62fcbd21700e2a7bf03ab379f5242c6b23f2af5a2"
+      },
+      {
+        "path": "skills/ye-daily-execution/references/review-schema.md",
+        "sha256": "3a7433d841da73e87a60ca1f559a454fa40f2568ea56ef7566ac3469d7aa1734"
+      }
+    ]
+  },
+  "reviewed_at_utc": "2026-08-14T07:03:44.207369+00:00",
+  "snapshot_hash": "51c223db32d640901930ce891348e51cd5a5eabc638079259ab5bf185e5b8397",
+  "input_count": 156,
+  "reviewed_count": 156,
+  "relevant_count": 93,
+  "coverage": 1.0,
+  "items": [
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93092128",
+      "published_at": "2026-08-14",
+      "name": "经纬辉开",
+      "title": "经纬辉开 | 专网通信+电磁线+液晶显示+收购完成",
+      "body": "专网通信+电磁线+液晶显示+收购完成",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2d552d8325b403bbc9da4455d87682ea156d04cbefb3fddde6344452f55bb885",
+      "normalization": {
+        "event_key": "5201d767cc566ecb2c9ee62d9bb7d11d7756431247a7c681777da9d93f39e5f9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2d552d8325b403bbc9da4455d87682ea156d04cbefb3fddde6344452f55bb885",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：经纬辉开 | 专网通信+电磁线+液晶显示+收购完成",
+        "evidence": [
+          "经纬辉开 | 专网通信+电磁线+液晶显示+收购完成"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93091414",
+      "published_at": "2026-08-14",
+      "name": "亨通光电",
+      "title": "亨通光电 | 光纤光缆+硅光芯片+CPO+海洋通信",
+      "body": "光纤光缆+硅光芯片+CPO+海洋通信",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "da463669f8dc4d862e340eac53d64132ccdc12dd38bbbffedc5f056c61ac9153",
+      "normalization": {
+        "event_key": "9fa3142b7500e29091f44aea61c92d20534370fb387a994f94755950ebd567c3",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "da463669f8dc4d862e340eac53d64132ccdc12dd38bbbffedc5f056c61ac9153",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：亨通光电 | 光纤光缆+硅光芯片+CPO+海洋通信",
+        "evidence": [
+          "亨通光电 | 光纤光缆+硅光芯片+CPO+海洋通信"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93090667",
+      "published_at": "2026-08-14",
+      "name": "人民同泰",
+      "title": "人民同泰 | 医药商业+DTP药房+半年报增长",
+      "body": "医药商业+DTP药房+半年报增长",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "f7d22f9f76057ca043af4b0a66f6c9050efd0875a0cfcb047cf268ed2aecfda1",
+      "normalization": {
+        "event_key": "529d5687da1c52003b64668157bdc86b00aa57c37e27ec94011565f29e6daf4e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f7d22f9f76057ca043af4b0a66f6c9050efd0875a0cfcb047cf268ed2aecfda1",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：人民同泰 | 医药商业+DTP药房+半年报增长",
+        "evidence": [
+          "人民同泰 | 医药商业+DTP药房+半年报增长"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93090274",
+      "published_at": "2026-08-14",
+      "name": "ST龙大",
+      "title": "ST龙大 | 预重整+猪肉+预制菜+半年报减亏",
+      "body": "预重整+猪肉+预制菜+半年报减亏",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "42046806be423c2b2154ecb98fc1ac26ad3219c6b667310336c3ef3a750b71ff",
+      "normalization": {
+        "event_key": "22e10f5d46b1049d7c533463ab21becfa6e9fa50ae663d5a53306e71a2a54deb",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159865.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "42046806be423c2b2154ecb98fc1ac26ad3219c6b667310336c3ef3a750b71ff",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "159865.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：ST龙大 | 预重整+猪肉+预制菜+半年报减亏",
+        "evidence": [
+          "ST龙大 | 预重整+猪肉+预制菜+半年报减亏"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93089814",
+      "published_at": "2026-08-14",
+      "name": "豪美新材",
+      "title": "豪美新材 | 机器人轻量化+液冷散热+汽车轻量化+定增获批",
+      "body": "机器人轻量化+液冷散热+汽车轻量化+定增获批",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6ffb8621616fbd4605ee64179abce7e0bd543fa6a6f4c907edb1a4bc061cd72b",
+      "normalization": {
+        "event_key": "687a3869bfeacdee0ac850baf8a7a3ae2249bd63a141e3cc958ede05903f5ccf",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6ffb8621616fbd4605ee64179abce7e0bd543fa6a6f4c907edb1a4bc061cd72b",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：豪美新材 | 机器人轻量化+液冷散热+汽车轻量化+定增获批",
+        "evidence": [
+          "豪美新材 | 机器人轻量化+液冷散热+汽车轻量化+定增获批"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93088933",
+      "published_at": "2026-08-14",
+      "name": "海星股份",
+      "title": "海星股份 | AI服务器+电极箔+全球龙头+中报预增",
+      "body": "AI服务器+电极箔+全球龙头+中报预增",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "34291ccdd6e04542cf81c7dda139fcdbd7f9f150b225b13f0cdc03e369b4958a",
+      "normalization": {
+        "event_key": "8ca3b0145fd8004af075ee6e7852bf45f0ffc8782d53ba303047c0e395c56204",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "34291ccdd6e04542cf81c7dda139fcdbd7f9f150b225b13f0cdc03e369b4958a",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：海星股份 | AI服务器+电极箔+全球龙头+中报预增",
+        "evidence": [
+          "海星股份 | AI服务器+电极箔+全球龙头+中报预增"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93088886",
+      "published_at": "2026-08-14",
+      "name": "中瓷电子",
+      "title": "中瓷电子 | 电子陶瓷+CPO+央企",
+      "body": "电子陶瓷+CPO+央企",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "138c01d317dc79cd2237855adc9949eee69a6b17bf851197490e22a62c5a90b0",
+      "normalization": {
+        "event_key": "ae35634a7dcc4ccc6db383984b5b625f89fb070eaadd459548642d12076239b2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "138c01d317dc79cd2237855adc9949eee69a6b17bf851197490e22a62c5a90b0",
+        "relevant": true,
+        "matched_categories": [
+          "风格红利"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中瓷电子 | 电子陶瓷+CPO+央企",
+        "evidence": [
+          "中瓷电子 | 电子陶瓷+CPO+央企"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93088238",
+      "published_at": "2026-08-14",
+      "name": "厦工股份",
+      "title": "厦工股份 | 工程机械+军工+厦门国资",
+      "body": "工程机械+军工+厦门国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "22b6241cd0fceb679916ed04dd38bd77aa6ada98cb53415e78205e69e0fbaebf",
+      "normalization": {
+        "event_key": "3432835b443a8d43995ccfbdbe81c4bb472d3814effa13d775ae8cc94b9fa944",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512660.SH",
+          "563380.SH",
+          "516970.SH",
+          "560280.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "22b6241cd0fceb679916ed04dd38bd77aa6ada98cb53415e78205e69e0fbaebf",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "512660.SH",
+          "563380.SH",
+          "516970.SH",
+          "560280.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：厦工股份 | 工程机械+军工+厦门国资",
+        "evidence": [
+          "厦工股份 | 工程机械+军工+厦门国资"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93088190",
+      "published_at": "2026-08-14",
+      "name": "成都路桥",
+      "title": "成都路桥 | 萤石矿+机器人+氟化工+中标基建",
+      "body": "萤石矿+机器人+氟化工+中标基建",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "7a3b5afacec320065d8ac9d138e8c0ec76e57dcef1947c0958e1dded3bb37762",
+      "normalization": {
+        "event_key": "c0590396967e165fd1834ac6cf229cc470981a4f40e515fe28a8a2df5d48630d",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159981.SZ",
+          "562500.SH",
+          "516020.SH",
+          "516970.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7a3b5afacec320065d8ac9d138e8c0ec76e57dcef1947c0958e1dded3bb37762",
+        "relevant": true,
+        "matched_categories": [
+          "商品",
+          "高端制造",
+          "周期资源",
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "159981.SZ",
+          "562500.SH",
+          "516020.SH",
+          "516970.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：成都路桥 | 萤石矿+机器人+氟化工+中标基建",
+        "evidence": [
+          "成都路桥 | 萤石矿+机器人+氟化工+中标基建"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93088156",
+      "published_at": "2026-08-14",
+      "name": "利通电子",
+      "title": "利通电子 | 算力租赁+英伟达合作+中报预增",
+      "body": "算力租赁+英伟达合作+中报预增",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "63911048dc98f70683812ed75446d4013a290da5ba323627a5a828b5755eeee4",
+      "normalization": {
+        "event_key": "daef6327c9fc09c4a9477d8b995c63f15ab604c592d1ce750f06295f9c626f54",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "63911048dc98f70683812ed75446d4013a290da5ba323627a5a828b5755eeee4",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：利通电子 | 算力租赁+英伟达合作+中报预增",
+        "evidence": [
+          "利通电子 | 算力租赁+英伟达合作+中报预增"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93087462",
+      "published_at": "2026-08-14",
+      "name": "网宿科技",
+      "title": "网宿科技 | CDN涨价+液冷+算力租赁+边缘AI",
+      "body": "CDN涨价+液冷+算力租赁+边缘AI",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "30face36c48f81c455a108a5039f0b901b43f857306faf0fee5de3f9532fc0bd",
+      "normalization": {
+        "event_key": "348553c6ddda500d108c9510bf88b58e56655362feeaf552747b3fc555795d86",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "30face36c48f81c455a108a5039f0b901b43f857306faf0fee5de3f9532fc0bd",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：网宿科技 | CDN涨价+液冷+算力租赁+边缘AI",
+        "evidence": [
+          "网宿科技 | CDN涨价+液冷+算力租赁+边缘AI"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93086821",
+      "published_at": "2026-08-14",
+      "name": "中国稀土",
+      "title": "中国稀土 | 稀土+半年报增长+央企",
+      "body": "稀土+半年报增长+央企",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "4f7f12d32d876b3022787974193bdd9071ba99b1ad63464176dc0bdc45dcfb82",
+      "normalization": {
+        "event_key": "fa199089f28f5d57d93c9e54a0c67e0aeb27fc9063440c367c79dd764433f511",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "516150.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4f7f12d32d876b3022787974193bdd9071ba99b1ad63464176dc0bdc45dcfb82",
+        "relevant": true,
+        "matched_categories": [
+          "风格红利",
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "516150.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中国稀土 | 稀土+半年报增长+央企",
+        "evidence": [
+          "中国稀土 | 稀土+半年报增长+央企"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93085730",
+      "published_at": "2026-08-14",
+      "name": "中天精装",
+      "title": "中天精装 | FCBGA封装基板+半导体转型+浙江国资",
+      "body": "FCBGA封装基板+半导体转型+浙江国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "41f9547f62e35be6e7c8c077800f0697a0b9a4d709f5344fcc36bf42ade52212",
+      "normalization": {
+        "event_key": "e3566f63fb9a84ce0b167404e18be7fe6d83cdd8f7f54f5cc541412f25f307df",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "41f9547f62e35be6e7c8c077800f0697a0b9a4d709f5344fcc36bf42ade52212",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中天精装 | FCBGA封装基板+半导体转型+浙江国资",
+        "evidence": [
+          "中天精装 | FCBGA封装基板+半导体转型+浙江国资"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93085712",
+      "published_at": "2026-08-14",
+      "name": "华宏科技",
+      "title": "华宏科技 | 稀土永磁+机器人概念+中报预增",
+      "body": "稀土永磁+机器人概念+中报预增",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "d1f1fe1c2d09784d658bb8578744bc037f3f98ca2e7c6738c83a6cbe5d827571",
+      "normalization": {
+        "event_key": "cc11c7f6655f60d33d3f90e37ebe75b5178827ba746228e86f722b9e8876e9da",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH",
+          "516150.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d1f1fe1c2d09784d658bb8578744bc037f3f98ca2e7c6738c83a6cbe5d827571",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造",
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "562500.SH",
+          "516150.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华宏科技 | 稀土永磁+机器人概念+中报预增",
+        "evidence": [
+          "华宏科技 | 稀土永磁+机器人概念+中报预增"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93085307",
+      "published_at": "2026-08-14",
+      "name": "金戈新材",
+      "title": "金戈新材 | 导热粉体+光模块导热应用+次新股",
+      "body": "导热粉体+光模块导热应用+次新股",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "8ad40e8c35dbf793f7eb25ebbf97ea442061315ac302ef714b3e92b106189464",
+      "normalization": {
+        "event_key": "69053767349eb69a4c34c769700a865ffd6a8c1896495ae46c3745b19170c87e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8ad40e8c35dbf793f7eb25ebbf97ea442061315ac302ef714b3e92b106189464",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金戈新材 | 导热粉体+光模块导热应用+次新股",
+        "evidence": [
+          "金戈新材 | 导热粉体+光模块导热应用+次新股"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93085304",
+      "published_at": "2026-08-14",
+      "name": "敏芯股份",
+      "title": "敏芯股份 | MEMS传感器+人形机器人",
+      "body": "MEMS传感器+人形机器人",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "d26c29b738d106eb1110a25c40056cb28bb7d23614c26eb4c171f3836e22f921",
+      "normalization": {
+        "event_key": "7254a93ec6e1899e3ca3eea96abf335a729151eec87ab3f8a8f4a48672d88e22",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d26c29b738d106eb1110a25c40056cb28bb7d23614c26eb4c171f3836e22f921",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：敏芯股份 | MEMS传感器+人形机器人",
+        "evidence": [
+          "敏芯股份 | MEMS传感器+人形机器人"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93085268",
+      "published_at": "2026-08-14",
+      "name": "祥龙电业",
+      "title": "祥龙电业 | 存算基地+供水+武汉国资",
+      "body": "存算基地+供水+武汉国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e213f606acfb3d9b706a7d8da0e8442f7b416fa87918e756225fdba27ed95514",
+      "normalization": {
+        "event_key": "8feb2f188d4cc96637c391162a06cb9a692f5dbd4c28be8b606ad30e42b17d36",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e213f606acfb3d9b706a7d8da0e8442f7b416fa87918e756225fdba27ed95514",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：祥龙电业 | 存算基地+供水+武汉国资",
+        "evidence": [
+          "祥龙电业 | 存算基地+供水+武汉国资"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93084643",
+      "published_at": "2026-08-14",
+      "name": "数据港",
+      "title": "数据港 | 算力租赁+智算转型+上海国资",
+      "body": "算力租赁+智算转型+上海国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "a6c12fb2b70e270003318e953eed72205c4bc1d51b76e83a10447d594bf62c70",
+      "normalization": {
+        "event_key": "c232ee71da1fdcf73130aa7859876cfb5169233f9eb7626089b527e46f998152",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a6c12fb2b70e270003318e953eed72205c4bc1d51b76e83a10447d594bf62c70",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：数据港 | 算力租赁+智算转型+上海国资",
+        "evidence": [
+          "数据港 | 算力租赁+智算转型+上海国资"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93084176",
+      "published_at": "2026-08-14",
+      "name": "剑桥科技",
+      "title": "剑桥科技 | 高速光模块+CPO+中报预增",
+      "body": "高速光模块+CPO+中报预增",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "ac28f3cd5e455c65049f65b8551c9cc382254f883d17390abcdfb43702fa858a",
+      "normalization": {
+        "event_key": "f14debbbf04a36f7092e12009748aa8a7564babd471c8e929b1812ded0f48af9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ac28f3cd5e455c65049f65b8551c9cc382254f883d17390abcdfb43702fa858a",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：剑桥科技 | 高速光模块+CPO+中报预增",
+        "evidence": [
+          "剑桥科技 | 高速光模块+CPO+中报预增"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93084166",
+      "published_at": "2026-08-14",
+      "name": "旭光电子",
+      "title": "旭光电子 | 氮化铝+可控核聚变+光刻机+真空灭弧室",
+      "body": "氮化铝+可控核聚变+光刻机+真空灭弧室",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "41c95ea8c79400aaaea425597f7bf5c07bff5179fe6be31522182e243ac89ca7",
+      "normalization": {
+        "event_key": "b71fdd849d91dd0be6f34a6376cd87408fecf75dab2c22ea9dd53c3375d5e6c1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "41c95ea8c79400aaaea425597f7bf5c07bff5179fe6be31522182e243ac89ca7",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：旭光电子 | 氮化铝+可控核聚变+光刻机+真空灭弧室",
+        "evidence": [
+          "旭光电子 | 氮化铝+可控核聚变+光刻机+真空灭弧室"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93083604",
+      "published_at": "2026-08-14",
+      "name": "盈新发展",
+      "title": "盈新发展 | 存储芯片+AI算力+转型科技",
+      "body": "存储芯片+AI算力+转型科技",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "6b5f4c15308f5fc568a6e9906ce6400f6563023e0ac48ca63bb57fd8dd9ebc4f",
+      "normalization": {
+        "event_key": "57682aaf65201a8632b95ccc18b6df81ad9d381e029a503204dd8b73cb25ad63",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "6b5f4c15308f5fc568a6e9906ce6400f6563023e0ac48ca63bb57fd8dd9ebc4f",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：盈新发展 | 存储芯片+AI算力+转型科技",
+        "evidence": [
+          "盈新发展 | 存储芯片+AI算力+转型科技"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93082207",
+      "published_at": "2026-08-14",
+      "name": "索菱股份",
+      "title": "索菱股份 | 重大合同+智能舱驾+5G",
+      "body": "重大合同+智能舱驾+5G",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "dfad5fd394bccce6537916863d5bd6878dc023194b7f9238f0841ec63014767a",
+      "normalization": {
+        "event_key": "6e297d4c9cee8588392e29a4205742e9841e6a8b16a4135274dbe41ba4034871",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dfad5fd394bccce6537916863d5bd6878dc023194b7f9238f0841ec63014767a",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：索菱股份 | 重大合同+智能舱驾+5G",
+        "evidence": [
+          "索菱股份 | 重大合同+智能舱驾+5G"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93081900",
+      "published_at": "2026-08-14",
+      "name": "华骐环保",
+      "title": "华骐环保 | 净水概念+BAF污水处理+股东增持",
+      "body": "净水概念+BAF污水处理+股东增持",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "1aa274bcc6dae62f56e8561a06d46e1f08b68e419ef2df60658dadc33f7a4366",
+      "normalization": {
+        "event_key": "771a5815fe9f680dbf42d1957a79026b30e343f4ad75aed0945609195affcdd6",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1aa274bcc6dae62f56e8561a06d46e1f08b68e419ef2df60658dadc33f7a4366",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华骐环保 | 净水概念+BAF污水处理+股东增持",
+        "evidence": [
+          "华骐环保 | 净水概念+BAF污水处理+股东增持"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93071958",
+      "published_at": "2026-08-14",
+      "name": "桂发祥",
+      "title": "桂发祥 | 中华老字号+大消费+国企改革",
+      "body": "中华老字号+大消费+国企改革",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "259d6e21b3489384115c7ae655076f2176a24c443301a4868414c93fe4b5b7a4",
+      "normalization": {
+        "event_key": "34b61c2df86c12b5ff8debb1f4d5bda43b377333c1e12711655df46f827de616",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "510630.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "259d6e21b3489384115c7ae655076f2176a24c443301a4868414c93fe4b5b7a4",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：桂发祥 | 中华老字号+大消费+国企改革",
+        "evidence": [
+          "桂发祥 | 中华老字号+大消费+国企改革"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93071562",
+      "published_at": "2026-08-14",
+      "name": "德创环保",
+      "title": "德创环保 | 钠电池+大气治理+环保催化剂",
+      "body": "钠电池+大气治理+环保催化剂",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "ad5a829757bbe820aa366ee376fd4423d3a34665e6c6e4627f9dbf2e9b2b8cad",
+      "normalization": {
+        "event_key": "bcd5577ca322abf86fdbbe4f417734fcf51762ab126ab658a68a806bd5eb5132",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159755.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ad5a829757bbe820aa366ee376fd4423d3a34665e6c6e4627f9dbf2e9b2b8cad",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "159755.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：德创环保 | 钠电池+大气治理+环保催化剂",
+        "evidence": [
+          "德创环保 | 钠电池+大气治理+环保催化剂"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93070326",
+      "published_at": "2026-08-14",
+      "name": "九州一轨",
+      "title": "九州一轨 | 半导体切割+光纤传感+声纹监测",
+      "body": "半导体切割+光纤传感+声纹监测",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "f6c098615cc9ec30e331ede6a964d06ebc23757c3c807a0c6f22061d416e20d1",
+      "normalization": {
+        "event_key": "24814672c623f5f2a72fab6c3c16133634ba36770637fb27799c6ce68cf0d9f1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f6c098615cc9ec30e331ede6a964d06ebc23757c3c807a0c6f22061d416e20d1",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：九州一轨 | 半导体切割+光纤传感+声纹监测",
+        "evidence": [
+          "九州一轨 | 半导体切割+光纤传感+声纹监测"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93070225",
+      "published_at": "2026-08-14",
+      "name": "圣达生物",
+      "title": "圣达生物 | 维生素+合成生物+生物保鲜剂",
+      "body": "维生素+合成生物+生物保鲜剂",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "cf489985e4cc93845e8efa15d3ec411f130373894fb70220c93002af475dd2c8",
+      "normalization": {
+        "event_key": "a6e532de5fcccea2db73986c86d82269b3cb777c053b0fd54a7904bcfe00a1ae",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cf489985e4cc93845e8efa15d3ec411f130373894fb70220c93002af475dd2c8",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：圣达生物 | 维生素+合成生物+生物保鲜剂",
+        "evidence": [
+          "圣达生物 | 维生素+合成生物+生物保鲜剂"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93069539",
+      "published_at": "2026-08-14",
+      "name": "杭电股份",
+      "title": "杭电股份 | 光纤光缆+定增扩产+PCB铜箔",
+      "body": "光纤光缆+定增扩产+PCB铜箔",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "316af3ab19c478da2dcd419a54bce4156302dbba8267aff5cc9584336b15687c",
+      "normalization": {
+        "event_key": "897523b46855ccb576dae75c985d30e70c8d2bb9ae5f7a370fe1e2a9011bdcf8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "316af3ab19c478da2dcd419a54bce4156302dbba8267aff5cc9584336b15687c",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：杭电股份 | 光纤光缆+定增扩产+PCB铜箔",
+        "evidence": [
+          "杭电股份 | 光纤光缆+定增扩产+PCB铜箔"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93069204",
+      "published_at": "2026-08-14",
+      "name": "阿莱德",
+      "title": "阿莱德 | CPO+存储芯片+导热材料",
+      "body": "CPO+存储芯片+导热材料",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b1c655eed71bfdf2c49d3a763c89af3e1ae2c51ab8fdf0749531931fd728600d",
+      "normalization": {
+        "event_key": "cb8a8580f50845cd0a914b6c50977d78c02e2edae8d60154ec12f6ce7632c267",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b1c655eed71bfdf2c49d3a763c89af3e1ae2c51ab8fdf0749531931fd728600d",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：阿莱德 | CPO+存储芯片+导热材料",
+        "evidence": [
+          "阿莱德 | CPO+存储芯片+导热材料"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93068665",
+      "published_at": "2026-08-14",
+      "name": "雪迪龙",
+      "title": "雪迪龙 | 半导体气体检测+碳监测+商业航天检测",
+      "body": "半导体气体检测+碳监测+商业航天检测",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "848386ee040abea9ec40a2fbfa155de4697a45cbf8be3242da0567694c3636c4",
+      "normalization": {
+        "event_key": "bbba85e006644e21e1ffa428ed27f2a3fadb946c62388ec6ad7937bd01b41bba",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "512660.SH",
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "848386ee040abea9ec40a2fbfa155de4697a45cbf8be3242da0567694c3636c4",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "512660.SH",
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：雪迪龙 | 半导体气体检测+碳监测+商业航天检测",
+        "evidence": [
+          "雪迪龙 | 半导体气体检测+碳监测+商业航天检测"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93068530",
+      "published_at": "2026-08-14",
+      "name": "郑中设计",
+      "title": "郑中设计 | MEMS芯片+室内设计+订单高增",
+      "body": "MEMS芯片+室内设计+订单高增",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "309f2c7fb69b6bf26362b4f8691b9d0c10080fea1fb771bee6ef84260fdafc3b",
+      "normalization": {
+        "event_key": "80327e21c0f3694144e361b0b2ce74161175d36723801806a2e799deaa89edff",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "309f2c7fb69b6bf26362b4f8691b9d0c10080fea1fb771bee6ef84260fdafc3b",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：郑中设计 | MEMS芯片+室内设计+订单高增",
+        "evidence": [
+          "郑中设计 | MEMS芯片+室内设计+订单高增"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93068110",
+      "published_at": "2026-08-14",
+      "name": "金螳螂",
+      "title": "金螳螂 | 洁净室+参建数据中心+海外业务+建筑装饰龙头",
+      "body": "洁净室+参建数据中心+海外业务+建筑装饰龙头",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e7dee22780f7618c7df8c4c9bff48999e14402ce34710f5fafc267d6db2cdcba",
+      "normalization": {
+        "event_key": "46b0a67580452d2bf491bfdbc9d39ba1d09e5ced6f5731a77eae3358a4c194d4",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "516970.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e7dee22780f7618c7df8c4c9bff48999e14402ce34710f5fafc267d6db2cdcba",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "516970.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金螳螂 | 洁净室+参建数据中心+海外业务+建筑装饰龙头",
+        "evidence": [
+          "金螳螂 | 洁净室+参建数据中心+海外业务+建筑装饰龙头"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93068072",
+      "published_at": "2026-08-14",
+      "name": "富信科技",
+      "title": "富信科技 | CPO+Micro TEC+产能扩张",
+      "body": "CPO+Micro TEC+产能扩张",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "c6c7aeaf16b6934c7fbc4c2cd248e424cf37deda31df1e5e51288cc3f70b1ec4",
+      "normalization": {
+        "event_key": "4dc09d0879177f8a421651b75c08f3e3089478c973730545d9ecc71a0285eaca",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c6c7aeaf16b6934c7fbc4c2cd248e424cf37deda31df1e5e51288cc3f70b1ec4",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：富信科技 | CPO+Micro TEC+产能扩张",
+        "evidence": [
+          "富信科技 | CPO+Micro TEC+产能扩张"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93068007",
+      "published_at": "2026-08-14",
+      "name": "正裕工业",
+      "title": "正裕工业 | 机器人概念+汽车减震器龙头+定增完成",
+      "body": "机器人概念+汽车减震器龙头+定增完成",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "9f3f1b3850b185d31611516b42070c757f608137cbd72f013805cc77d5f965f2",
+      "normalization": {
+        "event_key": "703bf38193523fa0ab378f24b5c0367d0b410dba341fd76ca721087c75ec9c02",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9f3f1b3850b185d31611516b42070c757f608137cbd72f013805cc77d5f965f2",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：正裕工业 | 机器人概念+汽车减震器龙头+定增完成",
+        "evidence": [
+          "正裕工业 | 机器人概念+汽车减震器龙头+定增完成"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93067927",
+      "published_at": "2026-08-14",
+      "name": "蓝盾光电",
+      "title": "蓝盾光电 | 拟收购岚创科技+真空镀膜设备+环境监测+低空经济",
+      "body": "拟收购岚创科技+真空镀膜设备+环境监测+低空经济",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "dc8579edf2969d3774bb117837e94f187fb1a90c5fa94d3e0b5035979ae3269e",
+      "normalization": {
+        "event_key": "dd0db328ce3f4412128db8ccfd307e9b252ad881bf106c81d468a22e35f6fa1c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dc8579edf2969d3774bb117837e94f187fb1a90c5fa94d3e0b5035979ae3269e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：蓝盾光电 | 拟收购岚创科技+真空镀膜设备+环境监测+低空经济",
+        "evidence": [
+          "蓝盾光电 | 拟收购岚创科技+真空镀膜设备+环境监测+低空经济"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93067275",
+      "published_at": "2026-08-14",
+      "name": "莲花控股",
+      "title": "莲花控股 | 算力租赁+阶跃星辰+类ABF膜+调味品",
+      "body": "算力租赁+阶跃星辰+类ABF膜+调味品",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "078d965fdf895c797bcaa5ec5c58f02d0c9397c13c64ab0854b0f0f925838a61",
+      "normalization": {
+        "event_key": "3545a2aa767ba4d2281c8ea4d18f6fdc6c57ff66a9232d78f149f54bf1ff93e9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "078d965fdf895c797bcaa5ec5c58f02d0c9397c13c64ab0854b0f0f925838a61",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：莲花控股 | 算力租赁+阶跃星辰+类ABF膜+调味品",
+        "evidence": [
+          "莲花控股 | 算力租赁+阶跃星辰+类ABF膜+调味品"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066843",
+      "published_at": "2026-08-14",
+      "name": "西点药业",
+      "title": "西点药业 | 创新药+瑞香素+化学制药",
+      "body": "创新药+瑞香素+化学制药",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "20ab898d959d87ffdd5886442e01b5cae5ff2bf3f495aa3922ae84eebd06c327",
+      "normalization": {
+        "event_key": "38f43935e4b35ea4ef17155f75c735f3116e026edc71abe0b8ec4854ae0791d8",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "20ab898d959d87ffdd5886442e01b5cae5ff2bf3f495aa3922ae84eebd06c327",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：西点药业 | 创新药+瑞香素+化学制药",
+        "evidence": [
+          "西点药业 | 创新药+瑞香素+化学制药"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066421",
+      "published_at": "2026-08-14",
+      "name": "金田股份",
+      "title": "金田股份 | 算力散热+液冷服务器+铜加工龙头+稀土",
+      "body": "算力散热+液冷服务器+铜加工龙头+稀土",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "ada4616d02350a75a2af8f44760e137323ad4f363d35bf0de59f894605cca61f",
+      "normalization": {
+        "event_key": "fa04885c390652a1e356d26d787e3be62e180bf04f9225dfb816769dc0aa76f0",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "512400.SH",
+          "516150.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ada4616d02350a75a2af8f44760e137323ad4f363d35bf0de59f894605cca61f",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "512400.SH",
+          "516150.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金田股份 | 算力散热+液冷服务器+铜加工龙头+稀土",
+        "evidence": [
+          "金田股份 | 算力散热+液冷服务器+铜加工龙头+稀土"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066343",
+      "published_at": "2026-08-14",
+      "name": "重药控股",
+      "title": "重药控股 | 医药商业+创新药+央企背景",
+      "body": "医药商业+创新药+央企背景",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b3893ea8e41dabdbe4cab18373115aaa896e4abd8f6cedd3d75513efff4601e4",
+      "normalization": {
+        "event_key": "ae5731e6c21864916bd905909095ab00781fbcdf4dfe4a9ac0682f1594763d1b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b3893ea8e41dabdbe4cab18373115aaa896e4abd8f6cedd3d75513efff4601e4",
+        "relevant": true,
+        "matched_categories": [
+          "风格红利",
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：重药控股 | 医药商业+创新药+央企背景",
+        "evidence": [
+          "重药控股 | 医药商业+创新药+央企背景"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066286",
+      "published_at": "2026-08-14",
+      "name": "海阳科技",
+      "title": "海阳科技 | 尼龙6+涤纶工业丝+智能制造",
+      "body": "尼龙6+涤纶工业丝+智能制造",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "7db06c77a38aec823022f2a527c6bf42df8b8fdcce58a9b600a87f6a54692dd2",
+      "normalization": {
+        "event_key": "082bbfb80a451be6f414f31d46ed20b917b22c5b4b698499b2c49f1efab80826",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7db06c77a38aec823022f2a527c6bf42df8b8fdcce58a9b600a87f6a54692dd2",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：海阳科技 | 尼龙6+涤纶工业丝+智能制造",
+        "evidence": [
+          "海阳科技 | 尼龙6+涤纶工业丝+智能制造"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066256",
+      "published_at": "2026-08-14",
+      "name": "利君股份",
+      "title": "利君股份 | 商业航天+军工+分红提议",
+      "body": "商业航天+军工+分红提议",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "4a0faabe26254760cb07a6b0ad338c3b5c9e5c1105d9a44133f61a7ba45d9519",
+      "normalization": {
+        "event_key": "d5329e49ceb2a7269c91a38b74210fc4c174460f585b6f7464c3d1de9d75a245",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512660.SH",
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4a0faabe26254760cb07a6b0ad338c3b5c9e5c1105d9a44133f61a7ba45d9519",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "512660.SH",
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：利君股份 | 商业航天+军工+分红提议",
+        "evidence": [
+          "利君股份 | 商业航天+军工+分红提议"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066215",
+      "published_at": "2026-08-14",
+      "name": "开开实业",
+      "title": "开开实业 | SPD+医药商业+资产收购+上海国资",
+      "body": "SPD+医药商业+资产收购+上海国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e10ae411f77497796f28f9785c7e830ddd5dae979e18d4b412ab5c8fc733be8f",
+      "normalization": {
+        "event_key": "f9629abb80788a761511c42666b15afbc03cfc6bc1f34c4c41f8e27b8cf4af3a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e10ae411f77497796f28f9785c7e830ddd5dae979e18d4b412ab5c8fc733be8f",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：开开实业 | SPD+医药商业+资产收购+上海国资",
+        "evidence": [
+          "开开实业 | SPD+医药商业+资产收购+上海国资"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066139",
+      "published_at": "2026-08-14",
+      "name": "大恒科技",
+      "title": "大恒科技 | 机器视觉+半导体+半年报预计扭亏",
+      "body": "机器视觉+半导体+半年报预计扭亏",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "a005452953318403a71157cd49c58e28bb52be55ba66dfaa06b568d83f53959f",
+      "normalization": {
+        "event_key": "7cd71cf0fe93d5ded87622a4f73e56665a22f4dc041fa425b6a4d8643a12f0df",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a005452953318403a71157cd49c58e28bb52be55ba66dfaa06b568d83f53959f",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：大恒科技 | 机器视觉+半导体+半年报预计扭亏",
+        "evidence": [
+          "大恒科技 | 机器视觉+半导体+半年报预计扭亏"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93066085",
+      "published_at": "2026-08-14",
+      "name": "中源协和",
+      "title": "中源协和 | 细胞治疗+精准诊断+创新药",
+      "body": "细胞治疗+精准诊断+创新药",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "9a6ff4773867dceaeb53d34f01f26349415a357b14dd1a244a36720a6d13a15c",
+      "normalization": {
+        "event_key": "2730c37b6fff9473f1ee641df3e0e215abba0ff1d8868fc46d72e3833a8a44c1",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9a6ff4773867dceaeb53d34f01f26349415a357b14dd1a244a36720a6d13a15c",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中源协和 | 细胞治疗+精准诊断+创新药",
+        "evidence": [
+          "中源协和 | 细胞治疗+精准诊断+创新药"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065987",
+      "published_at": "2026-08-14",
+      "name": "快意电梯",
+      "title": "快意电梯 | 股份过户+印度地铁订单+电梯出口",
+      "body": "股份过户+印度地铁订单+电梯出口",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "3e5d55f2b406810842ec83e1ee7edb0de777ba79104fe5ca87863b3204c33315",
+      "normalization": {
+        "event_key": "8a8a8f170151c9ae9fe995a30f7477f1afd7b0378c4b69b3dbffbec5d620a509",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3e5d55f2b406810842ec83e1ee7edb0de777ba79104fe5ca87863b3204c33315",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：快意电梯 | 股份过户+印度地铁订单+电梯出口",
+        "evidence": [
+          "快意电梯 | 股份过户+印度地铁订单+电梯出口"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065962",
+      "published_at": "2026-08-14",
+      "name": "华正新材",
+      "title": "华正新材 | 覆铜板+AI算力+定增受理+半年报预增",
+      "body": "覆铜板+AI算力+定增受理+半年报预增",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "c4e88c6f9a9ec6dfba23781be009d004f1b3d79bf4048af79bdeb7c7f9fe91ef",
+      "normalization": {
+        "event_key": "adfb19e87f2f7b03ec358b2430ddf7183f801487b7b68f51a8fd614f07ff326c",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c4e88c6f9a9ec6dfba23781be009d004f1b3d79bf4048af79bdeb7c7f9fe91ef",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华正新材 | 覆铜板+AI算力+定增受理+半年报预增",
+        "evidence": [
+          "华正新材 | 覆铜板+AI算力+定增受理+半年报预增"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065929",
+      "published_at": "2026-08-14",
+      "name": "艾华集团",
+      "title": "艾华集团 | MLPC+铝电解电容+AI服务器+算力",
+      "body": "MLPC+铝电解电容+AI服务器+算力",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "11b5fa59e0c9cb4e80eee5bbabb30b0bc28dabbfd1059629022823835305b08d",
+      "normalization": {
+        "event_key": "af8a801fc2fa5dc87781d2ef643e21f192f53fc7bf89648b44e1bfc8b9fce32f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "11b5fa59e0c9cb4e80eee5bbabb30b0bc28dabbfd1059629022823835305b08d",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：艾华集团 | MLPC+铝电解电容+AI服务器+算力",
+        "evidence": [
+          "艾华集团 | MLPC+铝电解电容+AI服务器+算力"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065913",
+      "published_at": "2026-08-14",
+      "name": "大唐电信",
+      "title": "大唐电信 | 安全芯片+卫星通信+央企",
+      "body": "安全芯片+卫星通信+央企",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "1df33a6e013b4621b991f0fdad26ce59207b9e05e3647b286cffa6f0b19e5015",
+      "normalization": {
+        "event_key": "b0e9c786fc1e6e7208a66bb97875978aed344d8ec770c577d2f8ad70ff5fea28",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH",
+          "512660.SH",
+          "563380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1df33a6e013b4621b991f0fdad26ce59207b9e05e3647b286cffa6f0b19e5015",
+        "relevant": true,
+        "matched_categories": [
+          "风格红利",
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH",
+          "515050.SH",
+          "512660.SH",
+          "563380.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：大唐电信 | 安全芯片+卫星通信+央企",
+        "evidence": [
+          "大唐电信 | 安全芯片+卫星通信+央企"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065879",
+      "published_at": "2026-08-14",
+      "name": "越剑智能",
+      "title": "越剑智能 | AI验布机+纺织机械+高端装备",
+      "body": "AI验布机+纺织机械+高端装备",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "efbf91b566032f9945a84a09be907e6ae8295a74975ca38c04736d188d6f91c2",
+      "normalization": {
+        "event_key": "da02c9d070d6239a4a2669266281a0e5907808ef24c88314fb280455f5e901d5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "efbf91b566032f9945a84a09be907e6ae8295a74975ca38c04736d188d6f91c2",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：越剑智能 | AI验布机+纺织机械+高端装备",
+        "evidence": [
+          "越剑智能 | AI验布机+纺织机械+高端装备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065870",
+      "published_at": "2026-08-14",
+      "name": "博济医药",
+      "title": "博济医药 | 中药创新药+CRO+战略合作",
+      "body": "中药创新药+CRO+战略合作",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "2c81a96b6aeec56c0ec60eabf2451e7ed29d69ad08183fb3e7849e6072e44344",
+      "normalization": {
+        "event_key": "00d3ddc79aeaa0d6171ea9a73a59e6005dd5fa67c896ecf27580d56b9a4428c9",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2c81a96b6aeec56c0ec60eabf2451e7ed29d69ad08183fb3e7849e6072e44344",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：博济医药 | 中药创新药+CRO+战略合作",
+        "evidence": [
+          "博济医药 | 中药创新药+CRO+战略合作"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065852",
+      "published_at": "2026-08-14",
+      "name": "天安新材",
+      "title": "天安新材 | 回购+机器人+电子皮肤+高分子饰面材料",
+      "body": "回购+机器人+电子皮肤+高分子饰面材料",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "9ae7b1ab12542ebd9113474f6386e1b89007c7c2f7f8d1672ab05b4e71a89068",
+      "normalization": {
+        "event_key": "398e16bfbfa71de4b2b8e0e7a850f1fb7560e4247e694ded2bb3d6f852ceac56",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9ae7b1ab12542ebd9113474f6386e1b89007c7c2f7f8d1672ab05b4e71a89068",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：天安新材 | 回购+机器人+电子皮肤+高分子饰面材料",
+        "evidence": [
+          "天安新材 | 回购+机器人+电子皮肤+高分子饰面材料"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065814",
+      "published_at": "2026-08-14",
+      "name": "金时科技",
+      "title": "金时科技 | 超级电容+储能+中报预计减亏",
+      "body": "超级电容+储能+中报预计减亏",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "a68559b55d341f96a200f47af7c7c8d49e388f44d25e259a54407e3007a555c5",
+      "normalization": {
+        "event_key": "f51848b42606a6770d86fa7012401ceea2b1e61b2a031d94aac2ff22e464054a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159755.SZ",
+          "515790.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a68559b55d341f96a200f47af7c7c8d49e388f44d25e259a54407e3007a555c5",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "159755.SZ",
+          "515790.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金时科技 | 超级电容+储能+中报预计减亏",
+        "evidence": [
+          "金时科技 | 超级电容+储能+中报预计减亏"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065791",
+      "published_at": "2026-08-14",
+      "name": "共进股份",
+      "title": "共进股份 | 数据中心交换机+机器人+网通设备+唐山国资",
+      "body": "数据中心交换机+机器人+网通设备+唐山国资",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "8cdf7fa084988e03a42117e295c3f177068dbc92dc181426abbb4ef37ae83134",
+      "normalization": {
+        "event_key": "c9b11ecb6c0eee1c5cfbbbeeee96e5b37c585cc6347a956f79a2cefda3c7da00",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8cdf7fa084988e03a42117e295c3f177068dbc92dc181426abbb4ef37ae83134",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：共进股份 | 数据中心交换机+机器人+网通设备+唐山国资",
+        "evidence": [
+          "共进股份 | 数据中心交换机+机器人+网通设备+唐山国资"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065746",
+      "published_at": "2026-08-14",
+      "name": "理工能科",
+      "title": "理工能科 | 半年报增长+高分红+AI应用",
+      "body": "半年报增长+高分红+AI应用",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "5d0571514c417bf899f84d3ba327b2920bca2812ea56d08a3930f47e8ad41606",
+      "normalization": {
+        "event_key": "a171203d2e07937b261c0cd10b21e5e346ee84891c54d0b28cb7b805fb61f053",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "159819.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5d0571514c417bf899f84d3ba327b2920bca2812ea56d08a3930f47e8ad41606",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "159819.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：理工能科 | 半年报增长+高分红+AI应用",
+        "evidence": [
+          "理工能科 | 半年报增长+高分红+AI应用"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065736",
+      "published_at": "2026-08-14",
+      "name": "天洋新材",
+      "title": "天洋新材 | CPO+电子胶+半年报预盈",
+      "body": "CPO+电子胶+半年报预盈",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "1a6a29113fe31d546c7208a2ff4dbb0c1804ffc178d6fde9331ba0f61f39fbbb",
+      "normalization": {
+        "event_key": "35fc7af57f8dc1d309ef35940f6cbd1c4e7116e283193ae37b92b87ff1b08599",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1a6a29113fe31d546c7208a2ff4dbb0c1804ffc178d6fde9331ba0f61f39fbbb",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：天洋新材 | CPO+电子胶+半年报预盈",
+        "evidence": [
+          "天洋新材 | CPO+电子胶+半年报预盈"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065721",
+      "published_at": "2026-08-14",
+      "name": "康盛股份",
+      "title": "康盛股份 | 算力+液冷+家电",
+      "body": "算力+液冷+家电",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "a45609e8c2935c7f5fce35b6250cec4ead3a8fcc0297dac8fe9929aefedee42b",
+      "normalization": {
+        "event_key": "e25a52c77262f35ffcfa7cdf3256c98272563d3fd1c9202e610c100f237ed9e0",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a45609e8c2935c7f5fce35b6250cec4ead3a8fcc0297dac8fe9929aefedee42b",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：康盛股份 | 算力+液冷+家电",
+        "evidence": [
+          "康盛股份 | 算力+液冷+家电"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065705",
+      "published_at": "2026-08-14",
+      "name": "海洋王",
+      "title": "海洋王 | 照明+智慧灯杆+物联网",
+      "body": "照明+智慧灯杆+物联网",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "b894d7e0adfdb2df1cfdf96baf19969ace40db0d41a11f74fec935027fb49976",
+      "normalization": {
+        "event_key": "7e852c9408de6425d4afd6b4d913d3ba4246b5c846f0c27b32d104ff5c540b43",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b894d7e0adfdb2df1cfdf96baf19969ace40db0d41a11f74fec935027fb49976",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "unknown",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：海洋王 | 照明+智慧灯杆+物联网",
+        "evidence": [
+          "海洋王 | 照明+智慧灯杆+物联网"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065695",
+      "published_at": "2026-08-14",
+      "name": "大豪科技",
+      "title": "大豪科技 | 半年报增长+缝制电控龙头+机器人+算力",
+      "body": "半年报增长+缝制电控龙头+机器人+算力",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "cc5afa4bb116367bdc7b0386794a9187b1cab41b918dfc9b6f819ca1b538ff18",
+      "normalization": {
+        "event_key": "3024aa96bfcd2fabd3b2416f6c3aa860931d3adc921654140c76ba957ff05826",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cc5afa4bb116367bdc7b0386794a9187b1cab41b918dfc9b6f819ca1b538ff18",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字",
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "515050.SH",
+          "159819.SZ",
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：大豪科技 | 半年报增长+缝制电控龙头+机器人+算力",
+        "evidence": [
+          "大豪科技 | 半年报增长+缝制电控龙头+机器人+算力"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065631",
+      "published_at": "2026-08-14",
+      "name": "神奇制药",
+      "title": "神奇制药 | 化学制药+抗肿瘤+感冒止咳",
+      "body": "化学制药+抗肿瘤+感冒止咳",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "f1bdcfc7ca66451a6c002c40f021fc0fd4c90c0ad0d1849a7d53a23a42444bba",
+      "normalization": {
+        "event_key": "fad4ab262ac96055a33a7ad40356224491660c92b2e27066e26675fd5d8d02c3",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f1bdcfc7ca66451a6c002c40f021fc0fd4c90c0ad0d1849a7d53a23a42444bba",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：神奇制药 | 化学制药+抗肿瘤+感冒止咳",
+        "evidence": [
+          "神奇制药 | 化学制药+抗肿瘤+感冒止咳"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065629",
+      "published_at": "2026-08-14",
+      "name": "中石科技",
+      "title": "中石科技 | 中际旭创入股+CPO散热+液冷服务器",
+      "body": "中际旭创入股+CPO散热+液冷服务器",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "8dc29c373c3904a7170ec90764366aaa86f8e400f1ca8be8eec13baf4b2efc0b",
+      "normalization": {
+        "event_key": "ff6c0ead9978ffb3c9572ea38c695220a3b6df8969a79cd680fba3091bbf05f5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8dc29c373c3904a7170ec90764366aaa86f8e400f1ca8be8eec13baf4b2efc0b",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中石科技 | 中际旭创入股+CPO散热+液冷服务器",
+        "evidence": [
+          "中石科技 | 中际旭创入股+CPO散热+液冷服务器"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065625",
+      "published_at": "2026-08-14",
+      "name": "华森制药",
+      "title": "华森制药 | 临床试验批准+青光眼+创新药+中成药",
+      "body": "临床试验批准+青光眼+创新药+中成药",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "7814cbf46a8da49aaabb0b5c8565a44d199a2d2e36c9bf61036aae38cf3a0e89",
+      "normalization": {
+        "event_key": "ee2618331107bc647b45adbf1070ef34b4ad10cccabaac82882879bb93f048a3",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7814cbf46a8da49aaabb0b5c8565a44d199a2d2e36c9bf61036aae38cf3a0e89",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华森制药 | 临床试验批准+青光眼+创新药+中成药",
+        "evidence": [
+          "华森制药 | 临床试验批准+青光眼+创新药+中成药"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065623",
+      "published_at": "2026-08-14",
+      "name": "澳洋健康",
+      "title": "澳洋健康 | 脑机接口+医疗服务+国企改革",
+      "body": "脑机接口+医疗服务+国企改革",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "174812a592a0ffeffff0a0ac1357a14f7beebaed38adac13e8e639a479e31cf4",
+      "normalization": {
+        "event_key": "d5d7a4089910d4bccc192698500ef1e2ca92f1c7d077249cf539316723889731",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "174812a592a0ffeffff0a0ac1357a14f7beebaed38adac13e8e639a479e31cf4",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：澳洋健康 | 脑机接口+医疗服务+国企改革",
+        "evidence": [
+          "澳洋健康 | 脑机接口+医疗服务+国企改革"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065621",
+      "published_at": "2026-08-14",
+      "name": "坤泰股份",
+      "title": "坤泰股份 | 汽车软内饰+海外产能+新能源客户",
+      "body": "汽车软内饰+海外产能+新能源客户",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "e42eb5b1771133362501b3341e591e62b17309f14451bc295b46f59c9dcb9d05",
+      "normalization": {
+        "event_key": "b11898437b23bc738212f8e5622572fed4d2b8f804ac3091a0f2c2b055de09d2",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515790.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e42eb5b1771133362501b3341e591e62b17309f14451bc295b46f59c9dcb9d05",
+        "relevant": true,
+        "matched_categories": [
+          "商品"
+        ],
+        "matched_symbols": [
+          "515790.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：坤泰股份 | 汽车软内饰+海外产能+新能源客户",
+        "evidence": [
+          "坤泰股份 | 汽车软内饰+海外产能+新能源客户"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "ths_hot_reason",
+      "source_id": "93065619",
+      "published_at": "2026-08-14",
+      "name": "华西股份",
+      "title": "华西股份 | 间接参股光芯片+磷化铟+涤纶化纤+创投",
+      "body": "间接参股光芯片+磷化铟+涤纶化纤+创投",
+      "return_pct": null,
+      "turnover": null,
+      "dde_net": null,
+      "source_hash": "dfa3384037388c158788015fae57d37ee08fe2f69f1ca9cbfbab22f5733ed63b",
+      "normalization": {
+        "event_key": "9343d79d698eca8a3bc6591e1bb3bcc8ceccd356ce5a91d01720ce37d3cd027a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "dfa3384037388c158788015fae57d37ee08fe2f69f1ca9cbfbab22f5733ed63b",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "1-3d",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华西股份 | 间接参股光芯片+磷化铟+涤纶化纤+创投",
+        "evidence": [
+          "华西股份 | 间接参股光芯片+磷化铟+涤纶化纤+创投"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000936",
+      "published_at": null,
+      "name": "华西股份",
+      "title": "华西股份 | 化学纤维",
+      "body": "化学纤维",
+      "return_pct": 9.936908721923828,
+      "turnover": 951168432.0,
+      "dde_net": null,
+      "source_hash": "7318f565eb05366aae66e37e24ccae8affbb70a218b0885b52a8177a2b7bc299",
+      "normalization": {
+        "event_key": "9343d79d698eca8a3bc6591e1bb3bcc8ceccd356ce5a91d01720ce37d3cd027a",
+        "duplicate_of": "dfa3384037388c158788015fae57d37ee08fe2f69f1ca9cbfbab22f5733ed63b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7318f565eb05366aae66e37e24ccae8affbb70a218b0885b52a8177a2b7bc299",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华西股份 | 化学纤维",
+        "evidence": [
+          "华西股份 | 化学纤维"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "001260",
+      "published_at": null,
+      "name": "坤泰股份",
+      "title": "坤泰股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 9.985734939575195,
+      "turnover": 29927907.0,
+      "dde_net": null,
+      "source_hash": "306455b1afe16e35599970d94d8b5542682cfa5a36766e1c72fe1677bc25572f",
+      "normalization": {
+        "event_key": "b11898437b23bc738212f8e5622572fed4d2b8f804ac3091a0f2c2b055de09d2",
+        "duplicate_of": "e42eb5b1771133362501b3341e591e62b17309f14451bc295b46f59c9dcb9d05",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "306455b1afe16e35599970d94d8b5542682cfa5a36766e1c72fe1677bc25572f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：坤泰股份 | 汽车零部",
+        "evidence": [
+          "坤泰股份 | 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002172",
+      "published_at": null,
+      "name": "澳洋健康",
+      "title": "澳洋健康 | 医疗服务",
+      "body": "医疗服务",
+      "return_pct": 9.927360534667969,
+      "turnover": 86716415.0,
+      "dde_net": null,
+      "source_hash": "84153d6e3b93f453ac039620cbf3e06fb8cbc060c4e5c39185ad9bd9150aa230",
+      "normalization": {
+        "event_key": "d5d7a4089910d4bccc192698500ef1e2ca92f1c7d077249cf539316723889731",
+        "duplicate_of": "174812a592a0ffeffff0a0ac1357a14f7beebaed38adac13e8e639a479e31cf4",
+        "effective_matched_symbols": [
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "84153d6e3b93f453ac039620cbf3e06fb8cbc060c4e5c39185ad9bd9150aa230",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：澳洋健康 | 医疗服务",
+        "evidence": [
+          "澳洋健康 | 医疗服务"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002907",
+      "published_at": null,
+      "name": "华森制药",
+      "title": "华森制药 | 中药Ⅱ",
+      "body": "中药Ⅱ",
+      "return_pct": 10.021629333496094,
+      "turnover": 82440807.0,
+      "dde_net": null,
+      "source_hash": "17b76ecbc81ecdf14ccfca1a1e367ba91ad946f663db2662c29932b3107bb5f8",
+      "normalization": {
+        "event_key": "ee2618331107bc647b45adbf1070ef34b4ad10cccabaac82882879bb93f048a3",
+        "duplicate_of": "7814cbf46a8da49aaabb0b5c8565a44d199a2d2e36c9bf61036aae38cf3a0e89",
+        "effective_matched_symbols": [
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "17b76ecbc81ecdf14ccfca1a1e367ba91ad946f663db2662c29932b3107bb5f8",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "512010.SH",
+          "159647.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华森制药 | 中药Ⅱ",
+        "evidence": [
+          "华森制药 | 中药Ⅱ"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300684",
+      "published_at": null,
+      "name": "中石科技",
+      "title": "中石科技 | 电子化学",
+      "body": "电子化学",
+      "return_pct": 20.007125854492188,
+      "turnover": 286464768.0,
+      "dde_net": null,
+      "source_hash": "2c267071620066535cb7296e9502b78ef7ef67af492ae351b0057681282d8da2",
+      "normalization": {
+        "event_key": "ff6c0ead9978ffb3c9572ea38c695220a3b6df8969a79cd680fba3091bbf05f5",
+        "duplicate_of": "8dc29c373c3904a7170ec90764366aaa86f8e400f1ca8be8eec13baf4b2efc0b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2c267071620066535cb7296e9502b78ef7ef67af492ae351b0057681282d8da2",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中石科技 | 电子化学",
+        "evidence": [
+          "中石科技 | 电子化学"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600613",
+      "published_at": null,
+      "name": "神奇制药",
+      "title": "神奇制药 | 化学制药",
+      "body": "化学制药",
+      "return_pct": 9.948541641235352,
+      "turnover": 80085303.0,
+      "dde_net": null,
+      "source_hash": "db8a7b4e2cda7b6e87bb984360935caf12c29ba67aea724706b9f43e8e10f70c",
+      "normalization": {
+        "event_key": "fad4ab262ac96055a33a7ad40356224491660c92b2e27066e26675fd5d8d02c3",
+        "duplicate_of": "f1bdcfc7ca66451a6c002c40f021fc0fd4c90c0ad0d1849a7d53a23a42444bba",
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "db8a7b4e2cda7b6e87bb984360935caf12c29ba67aea724706b9f43e8e10f70c",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：神奇制药 | 化学制药",
+        "evidence": [
+          "神奇制药 | 化学制药"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002724",
+      "published_at": null,
+      "name": "海洋王",
+      "title": "海洋王 | 照明设备",
+      "body": "照明设备",
+      "return_pct": 10.064934730529785,
+      "turnover": 133662850.0,
+      "dde_net": null,
+      "source_hash": "218342ced44fc2c0fde00c0c8552f1e01bebaea74c6b898919f66202c363e855",
+      "normalization": {
+        "event_key": "7e852c9408de6425d4afd6b4d913d3ba4246b5c846f0c27b32d104ff5c540b43",
+        "duplicate_of": "b894d7e0adfdb2df1cfdf96baf19969ace40db0d41a11f74fec935027fb49976",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "218342ced44fc2c0fde00c0c8552f1e01bebaea74c6b898919f66202c363e855",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：海洋王 | 照明设备",
+        "evidence": [
+          "海洋王 | 照明设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600645",
+      "published_at": null,
+      "name": "中源协和",
+      "title": "中源协和 | 生物制品",
+      "body": "生物制品",
+      "return_pct": 10.0,
+      "turnover": 998376160.0,
+      "dde_net": null,
+      "source_hash": "2b5e990efbcca9a063a9fb4648afeabce5d474fb206c49b7339b9aceaf4abb23",
+      "normalization": {
+        "event_key": "2730c37b6fff9473f1ee641df3e0e215abba0ff1d8868fc46d72e3833a8a44c1",
+        "duplicate_of": "9a6ff4773867dceaeb53d34f01f26349415a357b14dd1a244a36720a6d13a15c",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2b5e990efbcca9a063a9fb4648afeabce5d474fb206c49b7339b9aceaf4abb23",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中源协和 | 生物制品",
+        "evidence": [
+          "中源协和 | 生物制品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603025",
+      "published_at": null,
+      "name": "大豪科技",
+      "title": "大豪科技 | 自动化设",
+      "body": "自动化设",
+      "return_pct": 10.0,
+      "turnover": 315161424.0,
+      "dde_net": null,
+      "source_hash": "4a39d5af371a331d97eeb0650f25b2a157154e99ba016edda47ebfd92a7d8afe",
+      "normalization": {
+        "event_key": "3024aa96bfcd2fabd3b2416f6c3aa860931d3adc921654140c76ba957ff05826",
+        "duplicate_of": "cc5afa4bb116367bdc7b0386794a9187b1cab41b918dfc9b6f819ca1b538ff18",
+        "effective_matched_symbols": [
+          "562500.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4a39d5af371a331d97eeb0650f25b2a157154e99ba016edda47ebfd92a7d8afe",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "562500.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：大豪科技 | 自动化设",
+        "evidence": [
+          "大豪科技 | 自动化设"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603330",
+      "published_at": null,
+      "name": "天洋新材",
+      "title": "天洋新材 | 塑料",
+      "body": "塑料",
+      "return_pct": 9.989701271057129,
+      "turnover": 268205504.0,
+      "dde_net": null,
+      "source_hash": "45ebbd9359ffaa1c7686b3a70e0225900cf6fe49ac0ceaa4b6cc6fadf424fba8",
+      "normalization": {
+        "event_key": "35fc7af57f8dc1d309ef35940f6cbd1c4e7116e283193ae37b92b87ff1b08599",
+        "duplicate_of": "1a6a29113fe31d546c7208a2ff4dbb0c1804ffc178d6fde9331ba0f61f39fbbb",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "45ebbd9359ffaa1c7686b3a70e0225900cf6fe49ac0ceaa4b6cc6fadf424fba8",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：天洋新材 | 塑料",
+        "evidence": [
+          "天洋新材 | 塑料"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002418",
+      "published_at": null,
+      "name": "康盛股份",
+      "title": "康盛股份 | 家电零部",
+      "body": "家电零部",
+      "return_pct": 10.0,
+      "turnover": 327087280.0,
+      "dde_net": null,
+      "source_hash": "88b6dfcdfd91b0228cd15cd016937b861d0d2804461f1ed3feee661be5878c09",
+      "normalization": {
+        "event_key": "e25a52c77262f35ffcfa7cdf3256c98272563d3fd1c9202e610c100f237ed9e0",
+        "duplicate_of": "a45609e8c2935c7f5fce35b6250cec4ead3a8fcc0297dac8fe9929aefedee42b",
+        "effective_matched_symbols": [
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "88b6dfcdfd91b0228cd15cd016937b861d0d2804461f1ed3feee661be5878c09",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：康盛股份 | 家电零部",
+        "evidence": [
+          "康盛股份 | 家电零部"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002322",
+      "published_at": null,
+      "name": "理工能科",
+      "title": "理工能科 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 10.033726692199707,
+      "turnover": 322804112.0,
+      "dde_net": null,
+      "source_hash": "92841a2197b00ed8bab22f39350522f5461ddceb6c3d7063ca34de3f4bd66129",
+      "normalization": {
+        "event_key": "a171203d2e07937b261c0cd10b21e5e346ee84891c54d0b28cb7b805fb61f053",
+        "duplicate_of": "5d0571514c417bf899f84d3ba327b2920bca2812ea56d08a3930f47e8ad41606",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "92841a2197b00ed8bab22f39350522f5461ddceb6c3d7063ca34de3f4bd66129",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：理工能科 | 软件开发",
+        "evidence": [
+          "理工能科 | 软件开发"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603118",
+      "published_at": null,
+      "name": "共进股份",
+      "title": "共进股份 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 10.025062561035156,
+      "turnover": 1949605840.0,
+      "dde_net": null,
+      "source_hash": "ec794e1e647dc93ed862993292ee7f1ae4711cdbd9884c8e7cc344ffe3f10283",
+      "normalization": {
+        "event_key": "c9b11ecb6c0eee1c5cfbbbeeee96e5b37c585cc6347a956f79a2cefda3c7da00",
+        "duplicate_of": "8cdf7fa084988e03a42117e295c3f177068dbc92dc181426abbb4ef37ae83134",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ec794e1e647dc93ed862993292ee7f1ae4711cdbd9884c8e7cc344ffe3f10283",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：共进股份 | 通信设备",
+        "evidence": [
+          "共进股份 | 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002951",
+      "published_at": null,
+      "name": "金时科技",
+      "title": "金时科技 | 其他电源",
+      "body": "其他电源",
+      "return_pct": 10.006064414978027,
+      "turnover": 292007984.0,
+      "dde_net": null,
+      "source_hash": "5daceb9272ae71e9815eac3ab16cf0ecf2e677b336ba3d9b66c586b3cb7a8108",
+      "normalization": {
+        "event_key": "f51848b42606a6770d86fa7012401ceea2b1e61b2a031d94aac2ff22e464054a",
+        "duplicate_of": "a68559b55d341f96a200f47af7c7c8d49e388f44d25e259a54407e3007a555c5",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5daceb9272ae71e9815eac3ab16cf0ecf2e677b336ba3d9b66c586b3cb7a8108",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金时科技 | 其他电源",
+        "evidence": [
+          "金时科技 | 其他电源"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603725",
+      "published_at": null,
+      "name": "天安新材",
+      "title": "天安新材 | 家居用品",
+      "body": "家居用品",
+      "return_pct": 9.982014656066895,
+      "turnover": 382505872.0,
+      "dde_net": null,
+      "source_hash": "9c49858cce01495563e26594af11484f73b644a6fef36fb36d5ecbd1bec8e7e1",
+      "normalization": {
+        "event_key": "398e16bfbfa71de4b2b8e0e7a850f1fb7560e4247e694ded2bb3d6f852ceac56",
+        "duplicate_of": "9ae7b1ab12542ebd9113474f6386e1b89007c7c2f7f8d1672ab05b4e71a89068",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9c49858cce01495563e26594af11484f73b644a6fef36fb36d5ecbd1bec8e7e1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：天安新材 | 家居用品",
+        "evidence": [
+          "天安新材 | 家居用品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300404",
+      "published_at": null,
+      "name": "博济医药",
+      "title": "博济医药 | 医疗服务",
+      "body": "医疗服务",
+      "return_pct": 20.0,
+      "turnover": 1320038768.0,
+      "dde_net": null,
+      "source_hash": "e175835ecf500c9607e791cb74a1ff1fdc2bd2725562cae3d1cc600b1e2899f0",
+      "normalization": {
+        "event_key": "00d3ddc79aeaa0d6171ea9a73a59e6005dd5fa67c896ecf27580d56b9a4428c9",
+        "duplicate_of": "2c81a96b6aeec56c0ec60eabf2451e7ed29d69ad08183fb3e7849e6072e44344",
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH",
+          "562600.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e175835ecf500c9607e791cb74a1ff1fdc2bd2725562cae3d1cc600b1e2899f0",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH",
+          "562600.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：博济医药 | 医疗服务",
+        "evidence": [
+          "博济医药 | 医疗服务"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603989",
+      "published_at": null,
+      "name": "艾华集团",
+      "title": "艾华集团 | 元件",
+      "body": "元件",
+      "return_pct": 10.003334045410156,
+      "turnover": 1385909312.0,
+      "dde_net": null,
+      "source_hash": "0c6259d0b547928b05a5f3cd2f4cc5fbbe0ba0aecc1c9122b24f7fac8950dc2d",
+      "normalization": {
+        "event_key": "af8a801fc2fa5dc87781d2ef643e21f192f53fc7bf89648b44e1bfc8b9fce32f",
+        "duplicate_of": "11b5fa59e0c9cb4e80eee5bbabb30b0bc28dabbfd1059629022823835305b08d",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0c6259d0b547928b05a5f3cd2f4cc5fbbe0ba0aecc1c9122b24f7fac8950dc2d",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：艾华集团 | 元件",
+        "evidence": [
+          "艾华集团 | 元件"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603095",
+      "published_at": null,
+      "name": "越剑智能",
+      "title": "越剑智能 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 10.014727592468262,
+      "turnover": 119247990.0,
+      "dde_net": null,
+      "source_hash": "b75dc355da8eb9da315ca232bae6ad64502d0c812ab25920e0391128bcb74853",
+      "normalization": {
+        "event_key": "da02c9d070d6239a4a2669266281a0e5907808ef24c88314fb280455f5e901d5",
+        "duplicate_of": "efbf91b566032f9945a84a09be907e6ae8295a74975ca38c04736d188d6f91c2",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b75dc355da8eb9da315ca232bae6ad64502d0c812ab25920e0391128bcb74853",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：越剑智能 | 专用设备",
+        "evidence": [
+          "越剑智能 | 专用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600198",
+      "published_at": null,
+      "name": "大唐电信",
+      "title": "大唐电信 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 9.957924842834473,
+      "turnover": 416085824.0,
+      "dde_net": null,
+      "source_hash": "2894119cb45279859b8d5cc26f45329ab374eb18d4b1b4ee54fc60f39555b741",
+      "normalization": {
+        "event_key": "b0e9c786fc1e6e7208a66bb97875978aed344d8ec770c577d2f8ad70ff5fea28",
+        "duplicate_of": "1df33a6e013b4621b991f0fdad26ce59207b9e05e3647b286cffa6f0b19e5015",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2894119cb45279859b8d5cc26f45329ab374eb18d4b1b4ee54fc60f39555b741",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：大唐电信 | 通信设备",
+        "evidence": [
+          "大唐电信 | 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603186",
+      "published_at": null,
+      "name": "华正新材",
+      "title": "华正新材 | 元件",
+      "body": "元件",
+      "return_pct": 9.998686790466309,
+      "turnover": 1538855232.0,
+      "dde_net": null,
+      "source_hash": "790f74daf095e2a8e582d4a8873c5d4948849de360ceb15dde587f20aaf53ac4",
+      "normalization": {
+        "event_key": "adfb19e87f2f7b03ec358b2430ddf7183f801487b7b68f51a8fd614f07ff326c",
+        "duplicate_of": "c4e88c6f9a9ec6dfba23781be009d004f1b3d79bf4048af79bdeb7c7f9fe91ef",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "790f74daf095e2a8e582d4a8873c5d4948849de360ceb15dde587f20aaf53ac4",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华正新材 | 元件",
+        "evidence": [
+          "华正新材 | 元件"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002774",
+      "published_at": null,
+      "name": "快意电梯",
+      "title": "快意电梯 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 10.031347274780273,
+      "turnover": 192939695.0,
+      "dde_net": null,
+      "source_hash": "1c73707ea7d85f887c9e952cb5c76271fc7b981dbb720677760b845cc0fd0f60",
+      "normalization": {
+        "event_key": "8a8a8f170151c9ae9fe995a30f7477f1afd7b0378c4b69b3dbffbec5d620a509",
+        "duplicate_of": "3e5d55f2b406810842ec83e1ee7edb0de777ba79104fe5ca87863b3204c33315",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1c73707ea7d85f887c9e952cb5c76271fc7b981dbb720677760b845cc0fd0f60",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：快意电梯 | 专用设备",
+        "evidence": [
+          "快意电梯 | 专用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600288",
+      "published_at": null,
+      "name": "大恒科技",
+      "title": "大恒科技 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 9.983360290527344,
+      "turnover": 638464912.0,
+      "dde_net": null,
+      "source_hash": "e22e75fb73de76d1c62253e978290aae3772d417cba26464ffd8d4354ca6bc4c",
+      "normalization": {
+        "event_key": "7cd71cf0fe93d5ded87622a4f73e56665a22f4dc041fa425b6a4d8643a12f0df",
+        "duplicate_of": "a005452953318403a71157cd49c58e28bb52be55ba66dfaa06b568d83f53959f",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e22e75fb73de76d1c62253e978290aae3772d417cba26464ffd8d4354ca6bc4c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：大恒科技 | 软件开发",
+        "evidence": [
+          "大恒科技 | 软件开发"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600272",
+      "published_at": null,
+      "name": "开开实业",
+      "title": "开开实业 | 医药商业",
+      "body": "医药商业",
+      "return_pct": 10.0,
+      "turnover": 765437952.0,
+      "dde_net": null,
+      "source_hash": "a52869078966e94d5a85c810931fed0fd6d02b339672ab69fc6c157bb25aaa90",
+      "normalization": {
+        "event_key": "f9629abb80788a761511c42666b15afbc03cfc6bc1f34c4c41f8e27b8cf4af3a",
+        "duplicate_of": "e10ae411f77497796f28f9785c7e830ddd5dae979e18d4b412ab5c8fc733be8f",
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "a52869078966e94d5a85c810931fed0fd6d02b339672ab69fc6c157bb25aaa90",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：开开实业 | 医药商业",
+        "evidence": [
+          "开开实业 | 医药商业"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603382",
+      "published_at": null,
+      "name": "海阳科技",
+      "title": "海阳科技 | 化学纤维",
+      "body": "化学纤维",
+      "return_pct": 9.978991508483887,
+      "turnover": 143352481.0,
+      "dde_net": null,
+      "source_hash": "865bbd47f97328003fbbc965039e235de7e8a26ba41ac02a507c6fb62cfae1b3",
+      "normalization": {
+        "event_key": "082bbfb80a451be6f414f31d46ed20b917b22c5b4b698499b2c49f1efab80826",
+        "duplicate_of": "7db06c77a38aec823022f2a527c6bf42df8b8fdcce58a9b600a87f6a54692dd2",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "865bbd47f97328003fbbc965039e235de7e8a26ba41ac02a507c6fb62cfae1b3",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：海阳科技 | 化学纤维",
+        "evidence": [
+          "海阳科技 | 化学纤维"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002651",
+      "published_at": null,
+      "name": "利君股份",
+      "title": "利君股份 | 航空装备",
+      "body": "航空装备",
+      "return_pct": 9.960680961608887,
+      "turnover": 146682212.0,
+      "dde_net": null,
+      "source_hash": "50ac9857f9838cb1ec60d59053d8e4b829384bcdc3312c8fb7a0d9d0af8cba2d",
+      "normalization": {
+        "event_key": "d5329e49ceb2a7269c91a38b74210fc4c174460f585b6f7464c3d1de9d75a245",
+        "duplicate_of": "4a0faabe26254760cb07a6b0ad338c3b5c9e5c1105d9a44133f61a7ba45d9519",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "50ac9857f9838cb1ec60d59053d8e4b829384bcdc3312c8fb7a0d9d0af8cba2d",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：利君股份 | 航空装备",
+        "evidence": [
+          "利君股份 | 航空装备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000950",
+      "published_at": null,
+      "name": "重药控股",
+      "title": "重药控股 | 医药商业",
+      "body": "医药商业",
+      "return_pct": 9.965035438537598,
+      "turnover": 370880608.0,
+      "dde_net": null,
+      "source_hash": "225db7ecd1d98ccda8a9d6dd25de096076c609d9a9545a6b20a0d26509be3b59",
+      "normalization": {
+        "event_key": "ae5731e6c21864916bd905909095ab00781fbcdf4dfe4a9ac0682f1594763d1b",
+        "duplicate_of": "b3893ea8e41dabdbe4cab18373115aaa896e4abd8f6cedd3d75513efff4601e4",
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "225db7ecd1d98ccda8a9d6dd25de096076c609d9a9545a6b20a0d26509be3b59",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：重药控股 | 医药商业",
+        "evidence": [
+          "重药控股 | 医药商业"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "601609",
+      "published_at": null,
+      "name": "金田股份",
+      "title": "金田股份 | 工业金属",
+      "body": "工业金属",
+      "return_pct": 10.050251007080078,
+      "turnover": 636052608.0,
+      "dde_net": null,
+      "source_hash": "756e12ec68063aff7bb7e1b18715a978e51c8b4de1da3726c15b8f2532018845",
+      "normalization": {
+        "event_key": "fa04885c390652a1e356d26d787e3be62e180bf04f9225dfb816769dc0aa76f0",
+        "duplicate_of": "ada4616d02350a75a2af8f44760e137323ad4f363d35bf0de59f894605cca61f",
+        "effective_matched_symbols": [
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "756e12ec68063aff7bb7e1b18715a978e51c8b4de1da3726c15b8f2532018845",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金田股份 | 工业金属",
+        "evidence": [
+          "金田股份 | 工业金属"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000831",
+      "published_at": null,
+      "name": "中国稀土",
+      "title": "中国稀土 | 小金属",
+      "body": "小金属",
+      "return_pct": 9.99819564819336,
+      "turnover": 5416567552.0,
+      "dde_net": null,
+      "source_hash": "02bc6c495cbf20e0f4fe50d0cc82c3a299bba925e646134af1f1abe5a84950ba",
+      "normalization": {
+        "event_key": "fa199089f28f5d57d93c9e54a0c67e0aeb27fc9063440c367c79dd764433f511",
+        "duplicate_of": "4f7f12d32d876b3022787974193bdd9071ba99b1ad63464176dc0bdc45dcfb82",
+        "effective_matched_symbols": [
+          "512400.SH",
+          "516150.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "02bc6c495cbf20e0f4fe50d0cc82c3a299bba925e646134af1f1abe5a84950ba",
+        "relevant": true,
+        "matched_categories": [
+          "周期资源"
+        ],
+        "matched_symbols": [
+          "512400.SH",
+          "516150.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中国稀土 | 小金属",
+        "evidence": [
+          "中国稀土 | 小金属"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "301130",
+      "published_at": null,
+      "name": "西点药业",
+      "title": "西点药业 | 化学制药",
+      "body": "化学制药",
+      "return_pct": 19.992219924926758,
+      "turnover": 319398208.0,
+      "dde_net": null,
+      "source_hash": "8cd67b9fcc5c0ab240b6e75fe122ef766b98a6a4550e9583292ecb3312790bb2",
+      "normalization": {
+        "event_key": "38f43935e4b35ea4ef17155f75c735f3116e026edc71abe0b8ec4854ae0791d8",
+        "duplicate_of": "20ab898d959d87ffdd5886442e01b5cae5ff2bf3f495aa3922ae84eebd06c327",
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8cd67b9fcc5c0ab240b6e75fe122ef766b98a6a4550e9583292ecb3312790bb2",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：西点药业 | 化学制药",
+        "evidence": [
+          "西点药业 | 化学制药"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600186",
+      "published_at": null,
+      "name": "莲花控股",
+      "title": "莲花控股 | 调味发酵",
+      "body": "调味发酵",
+      "return_pct": 9.972553253173828,
+      "turnover": 3518677936.0,
+      "dde_net": null,
+      "source_hash": "21696bac159b35f1fcb5d2cc1850e0088e164473a01aac9cc9e18d5aef011289",
+      "normalization": {
+        "event_key": "3545a2aa767ba4d2281c8ea4d18f6fdc6c57ff66a9232d78f149f54bf1ff93e9",
+        "duplicate_of": "078d965fdf895c797bcaa5ec5c58f02d0c9397c13c64ab0854b0f0f925838a61",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "21696bac159b35f1fcb5d2cc1850e0088e164473a01aac9cc9e18d5aef011289",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：莲花控股 | 调味发酵",
+        "evidence": [
+          "莲花控股 | 调味发酵"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300862",
+      "published_at": null,
+      "name": "蓝盾光电",
+      "title": "蓝盾光电 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 19.994924545288086,
+      "turnover": 3494569136.0,
+      "dde_net": null,
+      "source_hash": "cdfd3b14ecee0016811d846e3d407c74b9309591ca209c9617f5e5bb6b095404",
+      "normalization": {
+        "event_key": "dd0db328ce3f4412128db8ccfd307e9b252ad881bf106c81d468a22e35f6fa1c",
+        "duplicate_of": "dc8579edf2969d3774bb117837e94f187fb1a90c5fa94d3e0b5035979ae3269e",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cdfd3b14ecee0016811d846e3d407c74b9309591ca209c9617f5e5bb6b095404",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：蓝盾光电 | 通用设备",
+        "evidence": [
+          "蓝盾光电 | 通用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603089",
+      "published_at": null,
+      "name": "正裕工业",
+      "title": "正裕工业 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 10.045146942138672,
+      "turnover": 58832130.0,
+      "dde_net": null,
+      "source_hash": "7fd250437488d6e2cb45ef5aba394a344dca7e21581bd4607097cf9b098b17ad",
+      "normalization": {
+        "event_key": "703bf38193523fa0ab378f24b5c0367d0b410dba341fd76ca721087c75ec9c02",
+        "duplicate_of": "9f3f1b3850b185d31611516b42070c757f608137cbd72f013805cc77d5f965f2",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7fd250437488d6e2cb45ef5aba394a344dca7e21581bd4607097cf9b098b17ad",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：正裕工业 | 汽车零部",
+        "evidence": [
+          "正裕工业 | 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "688662",
+      "published_at": null,
+      "name": "富信科技",
+      "title": "富信科技 | 其他电子",
+      "body": "其他电子",
+      "return_pct": 20.0,
+      "turnover": 1687193488.0,
+      "dde_net": null,
+      "source_hash": "ab97d14a25b7db815ece4e567079cc8ee633abcfd310a8d435b88616d3a4ab4f",
+      "normalization": {
+        "event_key": "4dc09d0879177f8a421651b75c08f3e3089478c973730545d9ecc71a0285eaca",
+        "duplicate_of": "c6c7aeaf16b6934c7fbc4c2cd248e424cf37deda31df1e5e51288cc3f70b1ec4",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ab97d14a25b7db815ece4e567079cc8ee633abcfd310a8d435b88616d3a4ab4f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：富信科技 | 其他电子",
+        "evidence": [
+          "富信科技 | 其他电子"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002081",
+      "published_at": null,
+      "name": "金 螳 螂",
+      "title": "金 螳 螂 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": 9.979209899902344,
+      "turnover": 2648471264.0,
+      "dde_net": null,
+      "source_hash": "3313d38ac9514da341147d2d83af44a9d9f0f66d4a33f56b5d0587ba70bd46fd",
+      "normalization": {
+        "event_key": "46b0a67580452d2bf491bfdbc9d39ba1d09e5ced6f5731a77eae3358a4c194d4",
+        "duplicate_of": "e7dee22780f7618c7df8c4c9bff48999e14402ce34710f5fafc267d6db2cdcba",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3313d38ac9514da341147d2d83af44a9d9f0f66d4a33f56b5d0587ba70bd46fd",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金 螳 螂 | 装修装饰",
+        "evidence": [
+          "金 螳 螂 | 装修装饰"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002811",
+      "published_at": null,
+      "name": "郑中设计",
+      "title": "郑中设计 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": 10.02921199798584,
+      "turnover": 93690499.0,
+      "dde_net": null,
+      "source_hash": "569e9a7c411fe8b956f4cd45a1eb179538f9a3637369bece444990dce8a4a64e",
+      "normalization": {
+        "event_key": "80327e21c0f3694144e361b0b2ce74161175d36723801806a2e799deaa89edff",
+        "duplicate_of": "309f2c7fb69b6bf26362b4f8691b9d0c10080fea1fb771bee6ef84260fdafc3b",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "569e9a7c411fe8b956f4cd45a1eb179538f9a3637369bece444990dce8a4a64e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：郑中设计 | 装修装饰",
+        "evidence": [
+          "郑中设计 | 装修装饰"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002658",
+      "published_at": null,
+      "name": "雪迪龙",
+      "title": "雪迪龙 | 环保设备",
+      "body": "环保设备",
+      "return_pct": 10.026738166809082,
+      "turnover": 183961901.0,
+      "dde_net": null,
+      "source_hash": "2d657a728d6d154ffdf105fc6fadb483fc3453ea6341a99ce924c3d8045aea7a",
+      "normalization": {
+        "event_key": "bbba85e006644e21e1ffa428ed27f2a3fadb946c62388ec6ad7937bd01b41bba",
+        "duplicate_of": "848386ee040abea9ec40a2fbfa155de4697a45cbf8be3242da0567694c3636c4",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2d657a728d6d154ffdf105fc6fadb483fc3453ea6341a99ce924c3d8045aea7a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：雪迪龙 | 环保设备",
+        "evidence": [
+          "雪迪龙 | 环保设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "301419",
+      "published_at": null,
+      "name": "阿莱德",
+      "title": "阿莱德 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 20.0,
+      "turnover": 437866176.0,
+      "dde_net": null,
+      "source_hash": "9b424cca0addf2d92abefd0a92cb09489051ac423ba38d61c46399276e50c36b",
+      "normalization": {
+        "event_key": "cb8a8580f50845cd0a914b6c50977d78c02e2edae8d60154ec12f6ce7632c267",
+        "duplicate_of": "b1c655eed71bfdf2c49d3a763c89af3e1ae2c51ab8fdf0749531931fd728600d",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "9b424cca0addf2d92abefd0a92cb09489051ac423ba38d61c46399276e50c36b",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：阿莱德 | 通信设备",
+        "evidence": [
+          "阿莱德 | 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603618",
+      "published_at": null,
+      "name": "杭电股份",
+      "title": "杭电股份 | 电网设备",
+      "body": "电网设备",
+      "return_pct": 10.018416404724121,
+      "turnover": 3281343152.0,
+      "dde_net": null,
+      "source_hash": "7733a72919bee78a3906287216671dd5f8971427c01c3f45860283b6240b465d",
+      "normalization": {
+        "event_key": "897523b46855ccb576dae75c985d30e70c8d2bb9ae5f7a370fe1e2a9011bdcf8",
+        "duplicate_of": "316af3ab19c478da2dcd419a54bce4156302dbba8267aff5cc9584336b15687c",
+        "effective_matched_symbols": [
+          "561380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7733a72919bee78a3906287216671dd5f8971427c01c3f45860283b6240b465d",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "561380.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：杭电股份 | 电网设备",
+        "evidence": [
+          "杭电股份 | 电网设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603083",
+      "published_at": null,
+      "name": "剑桥科技",
+      "title": "剑桥科技 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 10.0,
+      "turnover": 7130649344.0,
+      "dde_net": null,
+      "source_hash": "e8e5254c791ca21ce9579b065e64e7da47f779f30ec3a9ff1589b7b8ffd8b579",
+      "normalization": {
+        "event_key": "f14debbbf04a36f7092e12009748aa8a7564babd471c8e929b1812ded0f48af9",
+        "duplicate_of": "ac28f3cd5e455c65049f65b8551c9cc382254f883d17390abcdfb43702fa858a",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e8e5254c791ca21ce9579b065e64e7da47f779f30ec3a9ff1589b7b8ffd8b579",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：剑桥科技 | 通信设备",
+        "evidence": [
+          "剑桥科技 | 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603079",
+      "published_at": null,
+      "name": "圣达生物",
+      "title": "圣达生物 | 化学制品",
+      "body": "化学制品",
+      "return_pct": 10.008203506469727,
+      "turnover": 116588443.0,
+      "dde_net": null,
+      "source_hash": "bc818e1107d842146724c532a12016cffaaab03400715d01fc1e559800976286",
+      "normalization": {
+        "event_key": "a6e532de5fcccea2db73986c86d82269b3cb777c053b0fd54a7904bcfe00a1ae",
+        "duplicate_of": "cf489985e4cc93845e8efa15d3ec411f130373894fb70220c93002af475dd2c8",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bc818e1107d842146724c532a12016cffaaab03400715d01fc1e559800976286",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：圣达生物 | 化学制品",
+        "evidence": [
+          "圣达生物 | 化学制品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "688485",
+      "published_at": null,
+      "name": "九州一轨",
+      "title": "九州一轨 | 轨交设备",
+      "body": "轨交设备",
+      "return_pct": 20.00665855407715,
+      "turnover": 1278614816.0,
+      "dde_net": null,
+      "source_hash": "5b12afcabb6d3b2b3c5ae926bd06afd30d96ca90d62e09e84fa903cb9a9b34bb",
+      "normalization": {
+        "event_key": "24814672c623f5f2a72fab6c3c16133634ba36770637fb27799c6ce68cf0d9f1",
+        "duplicate_of": "f6c098615cc9ec30e331ede6a964d06ebc23757c3c807a0c6f22061d416e20d1",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5b12afcabb6d3b2b3c5ae926bd06afd30d96ca90d62e09e84fa903cb9a9b34bb",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：九州一轨 | 轨交设备",
+        "evidence": [
+          "九州一轨 | 轨交设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603177",
+      "published_at": null,
+      "name": "德创环保",
+      "title": "德创环保 | 环境治理",
+      "body": "环境治理",
+      "return_pct": 10.0,
+      "turnover": 96993120.0,
+      "dde_net": null,
+      "source_hash": "94a9013582248ab60c24ba83b5440e6a9a0ac8bdeadb70ab7e72cc54bb5678e0",
+      "normalization": {
+        "event_key": "bcd5577ca322abf86fdbbe4f417734fcf51762ab126ab658a68a806bd5eb5132",
+        "duplicate_of": "ad5a829757bbe820aa366ee376fd4423d3a34665e6c6e4627f9dbf2e9b2b8cad",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "94a9013582248ab60c24ba83b5440e6a9a0ac8bdeadb70ab7e72cc54bb5678e0",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：德创环保 | 环境治理",
+        "evidence": [
+          "德创环保 | 环境治理"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002820",
+      "published_at": null,
+      "name": "桂发祥",
+      "title": "桂发祥 | 休闲食品",
+      "body": "休闲食品",
+      "return_pct": 9.978307723999023,
+      "turnover": 133831257.0,
+      "dde_net": null,
+      "source_hash": "282a06d5372f8ce3af05d6e833351008d94a1f34b05bf4d6d5738f55ea33475f",
+      "normalization": {
+        "event_key": "34b61c2df86c12b5ff8debb1f4d5bda43b377333c1e12711655df46f827de616",
+        "duplicate_of": "259d6e21b3489384115c7ae655076f2176a24c443301a4868414c93fe4b5b7a4",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "282a06d5372f8ce3af05d6e833351008d94a1f34b05bf4d6d5738f55ea33475f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：桂发祥 | 休闲食品",
+        "evidence": [
+          "桂发祥 | 休闲食品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300929",
+      "published_at": null,
+      "name": "华骐环保",
+      "title": "华骐环保 | 环境治理",
+      "body": "环境治理",
+      "return_pct": 19.97146987915039,
+      "turnover": 201531334.0,
+      "dde_net": null,
+      "source_hash": "cb1495aa833e30cd25672089f412d3d0b6b9a549c3af131fde1a9f349d41fc4c",
+      "normalization": {
+        "event_key": "771a5815fe9f680dbf42d1957a79026b30e343f4ad75aed0945609195affcdd6",
+        "duplicate_of": "1aa274bcc6dae62f56e8561a06d46e1f08b68e419ef2df60658dadc33f7a4366",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cb1495aa833e30cd25672089f412d3d0b6b9a549c3af131fde1a9f349d41fc4c",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华骐环保 | 环境治理",
+        "evidence": [
+          "华骐环保 | 环境治理"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002766",
+      "published_at": null,
+      "name": "索菱股份",
+      "title": "索菱股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 10.024450302124023,
+      "turnover": 314007472.0,
+      "dde_net": null,
+      "source_hash": "d1cf3aa702da0f1dc59c63b85b17f48b11eb1cd751b34d568430061393618ee3",
+      "normalization": {
+        "event_key": "6e297d4c9cee8588392e29a4205742e9841e6a8b16a4135274dbe41ba4034871",
+        "duplicate_of": "dfad5fd394bccce6537916863d5bd6878dc023194b7f9238f0841ec63014767a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d1cf3aa702da0f1dc59c63b85b17f48b11eb1cd751b34d568430061393618ee3",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：索菱股份 | 汽车零部",
+        "evidence": [
+          "索菱股份 | 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "000620",
+      "published_at": null,
+      "name": "盈新发展",
+      "title": "盈新发展 | 房地产开",
+      "body": "房地产开",
+      "return_pct": 10.181818008422852,
+      "turnover": 1582394880.0,
+      "dde_net": null,
+      "source_hash": "c5731ea307f055ab66e2eda34944a62a4fac90168f0533965f934404d2c51ec8",
+      "normalization": {
+        "event_key": "57682aaf65201a8632b95ccc18b6df81ad9d381e029a503204dd8b73cb25ad63",
+        "duplicate_of": "6b5f4c15308f5fc568a6e9906ce6400f6563023e0ac48ca63bb57fd8dd9ebc4f",
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c5731ea307f055ab66e2eda34944a62a4fac90168f0533965f934404d2c51ec8",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：盈新发展 | 房地产开",
+        "evidence": [
+          "盈新发展 | 房地产开"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600353",
+      "published_at": null,
+      "name": "旭光电子",
+      "title": "旭光电子 | 其他电子",
+      "body": "其他电子",
+      "return_pct": 9.996455192565918,
+      "turnover": 2071321648.0,
+      "dde_net": null,
+      "source_hash": "3da1d6b350d52dab9da75702e2e5d4dc2e98a45021264910f6097b0068056ff1",
+      "normalization": {
+        "event_key": "b71fdd849d91dd0be6f34a6376cd87408fecf75dab2c22ea9dd53c3375d5e6c1",
+        "duplicate_of": "41c95ea8c79400aaaea425597f7bf5c07bff5179fe6be31522182e243ac89ca7",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3da1d6b350d52dab9da75702e2e5d4dc2e98a45021264910f6097b0068056ff1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：旭光电子 | 其他电子",
+        "evidence": [
+          "旭光电子 | 其他电子"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603881",
+      "published_at": null,
+      "name": "数据港",
+      "title": "数据港 | 通信服务",
+      "body": "通信服务",
+      "return_pct": 10.0,
+      "turnover": 2801935888.0,
+      "dde_net": null,
+      "source_hash": "0b6f903b64e8bbd0851c3516bcc7d4127001994e086d80670e20c13eca63c7cc",
+      "normalization": {
+        "event_key": "c232ee71da1fdcf73130aa7859876cfb5169233f9eb7626089b527e46f998152",
+        "duplicate_of": "a6c12fb2b70e270003318e953eed72205c4bc1d51b76e83a10447d594bf62c70",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0b6f903b64e8bbd0851c3516bcc7d4127001994e086d80670e20c13eca63c7cc",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：数据港 | 通信服务",
+        "evidence": [
+          "数据港 | 通信服务"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600769",
+      "published_at": null,
+      "name": "祥龙电业",
+      "title": "祥龙电业 | 环境治理",
+      "body": "环境治理",
+      "return_pct": 9.993337631225586,
+      "turnover": 311436784.0,
+      "dde_net": null,
+      "source_hash": "65c716b8ff4c0b76a0e0b2da5f887be39d0c2fdfade8f4a6c9c2a5c619932b09",
+      "normalization": {
+        "event_key": "8feb2f188d4cc96637c391162a06cb9a692f5dbd4c28be8b606ad30e42b17d36",
+        "duplicate_of": "e213f606acfb3d9b706a7d8da0e8442f7b416fa87918e756225fdba27ed95514",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "65c716b8ff4c0b76a0e0b2da5f887be39d0c2fdfade8f4a6c9c2a5c619932b09",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：祥龙电业 | 环境治理",
+        "evidence": [
+          "祥龙电业 | 环境治理"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "688286",
+      "published_at": null,
+      "name": "敏芯股份",
+      "title": "敏芯股份 | 半导体",
+      "body": "半导体",
+      "return_pct": 20.008962631225586,
+      "turnover": 615181952.0,
+      "dde_net": null,
+      "source_hash": "ea38bf809ff8a79eb432babbc6173407fe4f8c74790610da11519e21a4aeff9a",
+      "normalization": {
+        "event_key": "7254a93ec6e1899e3ca3eea96abf335a729151eec87ab3f8a8f4a48672d88e22",
+        "duplicate_of": "d26c29b738d106eb1110a25c40056cb28bb7d23614c26eb4c171f3836e22f921",
+        "effective_matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ea38bf809ff8a79eb432babbc6173407fe4f8c74790610da11519e21a4aeff9a",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "513310.SH",
+          "512760.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：敏芯股份 | 半导体",
+        "evidence": [
+          "敏芯股份 | 半导体"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "920083",
+      "published_at": null,
+      "name": "金戈新材",
+      "title": "金戈新材 | 非金属材",
+      "body": "非金属材",
+      "return_pct": 29.974571228027344,
+      "turnover": 327160848.0,
+      "dde_net": null,
+      "source_hash": "8aee4dfd0bdfcf9a215938023cd073f8da51a5ebdf056721591a1a349be706aa",
+      "normalization": {
+        "event_key": "69053767349eb69a4c34c769700a865ffd6a8c1896495ae46c3745b19170c87e",
+        "duplicate_of": "8ad40e8c35dbf793f7eb25ebbf97ea442061315ac302ef714b3e92b106189464",
+        "effective_matched_symbols": [
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "8aee4dfd0bdfcf9a215938023cd073f8da51a5ebdf056721591a1a349be706aa",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：金戈新材 | 非金属材",
+        "evidence": [
+          "金戈新材 | 非金属材"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002989",
+      "published_at": null,
+      "name": "中天精装",
+      "title": "中天精装 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": 10.02169132232666,
+      "turnover": 233359651.0,
+      "dde_net": null,
+      "source_hash": "18d91a34e30a62b09b057e9e58a2088461bc717ed3fba6ee550813f26170a0cc",
+      "normalization": {
+        "event_key": "e3566f63fb9a84ce0b167404e18be7fe6d83cdd8f7f54f5cc541412f25f307df",
+        "duplicate_of": "41f9547f62e35be6e7c8c077800f0697a0b9a4d709f5344fcc36bf42ade52212",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "18d91a34e30a62b09b057e9e58a2088461bc717ed3fba6ee550813f26170a0cc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中天精装 | 装修装饰",
+        "evidence": [
+          "中天精装 | 装修装饰"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002645",
+      "published_at": null,
+      "name": "华宏科技",
+      "title": "华宏科技 | 环保设备",
+      "body": "环保设备",
+      "return_pct": 9.984639167785645,
+      "turnover": 1049041072.0,
+      "dde_net": null,
+      "source_hash": "d8671fcec942f607f86574fad76fd929128344d945b0e533939add44679fe361",
+      "normalization": {
+        "event_key": "cc11c7f6655f60d33d3f90e37ebe75b5178827ba746228e86f722b9e8876e9da",
+        "duplicate_of": "d1f1fe1c2d09784d658bb8578744bc037f3f98ca2e7c6738c83a6cbe5d827571",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d8671fcec942f607f86574fad76fd929128344d945b0e533939add44679fe361",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华宏科技 | 环保设备",
+        "evidence": [
+          "华宏科技 | 环保设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600487",
+      "published_at": null,
+      "name": "亨通光电",
+      "title": "亨通光电 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 10.008733749389648,
+      "turnover": 19196727552.0,
+      "dde_net": null,
+      "source_hash": "b9fa17904ea7bd96af65cdd096a0fd948afaa3b0b526e751fc9dbd503f9ae866",
+      "normalization": {
+        "event_key": "9fa3142b7500e29091f44aea61c92d20534370fb387a994f94755950ebd567c3",
+        "duplicate_of": "da463669f8dc4d862e340eac53d64132ccdc12dd38bbbffedc5f056c61ac9153",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "b9fa17904ea7bd96af65cdd096a0fd948afaa3b0b526e751fc9dbd503f9ae866",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：亨通光电 | 通信设备",
+        "evidence": [
+          "亨通光电 | 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300017",
+      "published_at": null,
+      "name": "网宿科技",
+      "title": "网宿科技 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 20.013851165771484,
+      "turnover": 7662499072.0,
+      "dde_net": null,
+      "source_hash": "cfe70728aacc3ce96b3ffa5d6d403de995cdc17e5569d59c43cefeb2015a2875",
+      "normalization": {
+        "event_key": "348553c6ddda500d108c9510bf88b58e56655362feeaf552747b3fc555795d86",
+        "duplicate_of": "30face36c48f81c455a108a5039f0b901b43f857306faf0fee5de3f9532fc0bd",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cfe70728aacc3ce96b3ffa5d6d403de995cdc17e5569d59c43cefeb2015a2875",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：网宿科技 | IT服务Ⅱ",
+        "evidence": [
+          "网宿科技 | IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603629",
+      "published_at": null,
+      "name": "利通电子",
+      "title": "利通电子 | 消费电子",
+      "body": "消费电子",
+      "return_pct": 10.0,
+      "turnover": 8869939456.0,
+      "dde_net": null,
+      "source_hash": "f01d42250c83117bff8346e7b75d26434fd112f164fe39441052936434578670",
+      "normalization": {
+        "event_key": "daef6327c9fc09c4a9477d8b995c63f15ab604c592d1ce750f06295f9c626f54",
+        "duplicate_of": "63911048dc98f70683812ed75446d4013a290da5ba323627a5a828b5755eeee4",
+        "effective_matched_symbols": [
+          "510630.SH",
+          "159996.SZ"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f01d42250c83117bff8346e7b75d26434fd112f164fe39441052936434578670",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "510630.SH",
+          "159996.SZ"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：利通电子 | 消费电子",
+        "evidence": [
+          "利通电子 | 消费电子"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600815",
+      "published_at": null,
+      "name": "厦工股份",
+      "title": "厦工股份 | 工程机械",
+      "body": "工程机械",
+      "return_pct": 9.944750785827637,
+      "turnover": 429874256.0,
+      "dde_net": null,
+      "source_hash": "30a992b1ada70c8cbc4f5ac5b52f8fdef9ec231d8a8b084180c4c051b8648dcc",
+      "normalization": {
+        "event_key": "3432835b443a8d43995ccfbdbe81c4bb472d3814effa13d775ae8cc94b9fa944",
+        "duplicate_of": "22b6241cd0fceb679916ed04dd38bd77aa6ada98cb53415e78205e69e0fbaebf",
+        "effective_matched_symbols": [
+          "516970.SH",
+          "560280.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "30a992b1ada70c8cbc4f5ac5b52f8fdef9ec231d8a8b084180c4c051b8648dcc",
+        "relevant": true,
+        "matched_categories": [
+          "高端制造"
+        ],
+        "matched_symbols": [
+          "516970.SH",
+          "560280.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：厦工股份 | 工程机械",
+        "evidence": [
+          "厦工股份 | 工程机械"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002628",
+      "published_at": null,
+      "name": "成都路桥",
+      "title": "成都路桥 | 基础建设",
+      "body": "基础建设",
+      "return_pct": 10.099010467529297,
+      "turnover": 291031616.0,
+      "dde_net": null,
+      "source_hash": "3724a3c90ed3c0426aa53b0a620dff8a89a21ebc60d2d6cb53a8c5b9656a9657",
+      "normalization": {
+        "event_key": "c0590396967e165fd1834ac6cf229cc470981a4f40e515fe28a8a2df5d48630d",
+        "duplicate_of": "7a3b5afacec320065d8ac9d138e8c0ec76e57dcef1947c0958e1dded3bb37762",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "3724a3c90ed3c0426aa53b0a620dff8a89a21ebc60d2d6cb53a8c5b9656a9657",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：成都路桥 | 基础建设",
+        "evidence": [
+          "成都路桥 | 基础建设"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "003031",
+      "published_at": null,
+      "name": "中瓷电子",
+      "title": "中瓷电子 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 10.004228591918945,
+      "turnover": 1631796080.0,
+      "dde_net": null,
+      "source_hash": "36669a92482fcbadda6d1761c3d4716a500df3260c3d227b5cb1e2208784d98a",
+      "normalization": {
+        "event_key": "ae35634a7dcc4ccc6db383984b5b625f89fb070eaadd459548642d12076239b2",
+        "duplicate_of": "138c01d317dc79cd2237855adc9949eee69a6b17bf851197490e22a62c5a90b0",
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "36669a92482fcbadda6d1761c3d4716a500df3260c3d227b5cb1e2208784d98a",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：中瓷电子 | 通信设备",
+        "evidence": [
+          "中瓷电子 | 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "603115",
+      "published_at": null,
+      "name": "海星股份",
+      "title": "海星股份 | 元件",
+      "body": "元件",
+      "return_pct": 10.00257396697998,
+      "turnover": 1370645136.0,
+      "dde_net": null,
+      "source_hash": "449b60dc356eb4485ae5d279c33542fd4a10991fc9c316b603ce0fc4d73a7d8f",
+      "normalization": {
+        "event_key": "8ca3b0145fd8004af075ee6e7852bf45f0ffc8782d53ba303047c0e395c56204",
+        "duplicate_of": "34291ccdd6e04542cf81c7dda139fcdbd7f9f150b225b13f0cdc03e369b4958a",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "449b60dc356eb4485ae5d279c33542fd4a10991fc9c316b603ce0fc4d73a7d8f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：海星股份 | 元件",
+        "evidence": [
+          "海星股份 | 元件"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "002988",
+      "published_at": null,
+      "name": "豪美新材",
+      "title": "豪美新材 | 工业金属",
+      "body": "工业金属",
+      "return_pct": 10.009443283081055,
+      "turnover": 134563035.0,
+      "dde_net": null,
+      "source_hash": "4f1ff1fb183cf62a4bffafba0ae8c3ce27f0b255bed20db4d3195e5d7bd630fd",
+      "normalization": {
+        "event_key": "687a3869bfeacdee0ac850baf8a7a3ae2249bd63a141e3cc958ede05903f5ccf",
+        "duplicate_of": "6ffb8621616fbd4605ee64179abce7e0bd543fa6a6f4c907edb1a4bc061cd72b",
+        "effective_matched_symbols": [
+          "512400.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4f1ff1fb183cf62a4bffafba0ae8c3ce27f0b255bed20db4d3195e5d7bd630fd",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512400.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：豪美新材 | 工业金属",
+        "evidence": [
+          "豪美新材 | 工业金属"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "600829",
+      "published_at": null,
+      "name": "人民同泰",
+      "title": "人民同泰 | 医药商业",
+      "body": "医药商业",
+      "return_pct": 10.04651165008545,
+      "turnover": 565271888.0,
+      "dde_net": null,
+      "source_hash": "0302d0dd25b2965baaca693c381348ac2ef53fc9a537a553eab8ec94d6c75afc",
+      "normalization": {
+        "event_key": "529d5687da1c52003b64668157bdc86b00aa57c37e27ec94011565f29e6daf4e",
+        "duplicate_of": "f7d22f9f76057ca043af4b0a66f6c9050efd0875a0cfcb047cf268ed2aecfda1",
+        "effective_matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0302d0dd25b2965baaca693c381348ac2ef53fc9a537a553eab8ec94d6c75afc",
+        "relevant": true,
+        "matched_categories": [
+          "医药医疗"
+        ],
+        "matched_symbols": [
+          "513200.SH",
+          "512010.SH"
+        ],
+        "direction": 1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：人民同泰 | 医药商业",
+        "evidence": [
+          "人民同泰 | 医药商业"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_up",
+      "source_id": "300120",
+      "published_at": null,
+      "name": "经纬辉开",
+      "title": "经纬辉开 | 光学光电",
+      "body": "光学光电",
+      "return_pct": 19.94818687438965,
+      "turnover": 903252368.0,
+      "dde_net": null,
+      "source_hash": "158fb66cf00e218f87060ee087066ae964dbbeff88c478d70a271eecd7b163b1",
+      "normalization": {
+        "event_key": "5201d767cc566ecb2c9ee62d9bb7d11d7756431247a7c681777da9d93f39e5f9",
+        "duplicate_of": "2d552d8325b403bbc9da4455d87682ea156d04cbefb3fddde6344452f55bb885",
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "158fb66cf00e218f87060ee087066ae964dbbeff88c478d70a271eecd7b163b1",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": 0,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：经纬辉开 | 光学光电",
+        "evidence": [
+          "经纬辉开 | 光学光电"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "300333",
+      "published_at": null,
+      "name": "兆日科技",
+      "title": "兆日科技 | 计算机设",
+      "body": "计算机设",
+      "return_pct": 6.015037536621094,
+      "turnover": 999239584.0,
+      "dde_net": null,
+      "source_hash": "124a56b6a865ec4a2ef0e99d223d0c74338f0c3d43fa9f1158af119e13140745",
+      "normalization": {
+        "event_key": "4e51314bddb7c22d283144d950d3e5c0f7b783a505fbefc13e8f348640d427e7",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "124a56b6a865ec4a2ef0e99d223d0c74338f0c3d43fa9f1158af119e13140745",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：兆日科技 | 计算机设",
+        "evidence": [
+          "兆日科技 | 计算机设"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600683",
+      "published_at": null,
+      "name": "京投发展",
+      "title": "京投发展 | 房地产开",
+      "body": "房地产开",
+      "return_pct": -9.976798057556152,
+      "turnover": 1161751136.0,
+      "dde_net": null,
+      "source_hash": "2d3264d5f6b262e3ff99f7d2b402115be81a73fe9f1b02ea8307512ad5b246e6",
+      "normalization": {
+        "event_key": "a8e7eddb8295d9ccac2f8c12337a2176200ac3648d3105d4848fe06ed6881064",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2d3264d5f6b262e3ff99f7d2b402115be81a73fe9f1b02ea8307512ad5b246e6",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：京投发展 | 房地产开",
+        "evidence": [
+          "京投发展 | 房地产开"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "600800",
+      "published_at": null,
+      "name": "渤海化学",
+      "title": "渤海化学 | 炼化及贸",
+      "body": "炼化及贸",
+      "return_pct": -4.010695457458496,
+      "turnover": 513465280.0,
+      "dde_net": null,
+      "source_hash": "c02686c10991b5e5a16e47f535daa31bdc116d84d94e10e6a443b9a0ee4ac056",
+      "normalization": {
+        "event_key": "7b86c26062edf110fa36598ad8c85653802c945952ccf8032fed8fb0c835dfa3",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c02686c10991b5e5a16e47f535daa31bdc116d84d94e10e6a443b9a0ee4ac056",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：渤海化学 | 炼化及贸",
+        "evidence": [
+          "渤海化学 | 炼化及贸"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002279",
+      "published_at": null,
+      "name": "久其软件",
+      "title": "久其软件 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 3.708987236022949,
+      "turnover": 995429376.0,
+      "dde_net": null,
+      "source_hash": "c7e0a7f30f17b682acc118250d855ce82112e11cbe00bb8a9cfb769eca81a79d",
+      "normalization": {
+        "event_key": "a1af7a5a5550ab329b8155f81dd58fa4fc5d919f1f2760474598ce51238d7723",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "c7e0a7f30f17b682acc118250d855ce82112e11cbe00bb8a9cfb769eca81a79d",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：久其软件 | 软件开发",
+        "evidence": [
+          "久其软件 | 软件开发"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "000676",
+      "published_at": null,
+      "name": "智度股份",
+      "title": "智度股份 | 广告营销",
+      "body": "广告营销",
+      "return_pct": 4.843304634094238,
+      "turnover": 1648016928.0,
+      "dde_net": null,
+      "source_hash": "47ac12e4927ad078b04aa153f28812960699fc6eda48cff31b0ef0138484ec10",
+      "normalization": {
+        "event_key": "6bc6345d44ea4069173e83d1afc3f59fba432eed6b535224e3e524dae2364a95",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "47ac12e4927ad078b04aa153f28812960699fc6eda48cff31b0ef0138484ec10",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：智度股份 | 广告营销",
+        "evidence": [
+          "智度股份 | 广告营销"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002153",
+      "published_at": null,
+      "name": "石基信息",
+      "title": "石基信息 | 软件开发",
+      "body": "软件开发",
+      "return_pct": 4.892601490020752,
+      "turnover": 920685248.0,
+      "dde_net": null,
+      "source_hash": "47603377563106ffea49b25cad212918286cdb4639183cf1d122c15476062ec9",
+      "normalization": {
+        "event_key": "dc40fe34381a0e41b38539acf323677ff568afaf0d69e61d53755d457a685894",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "47603377563106ffea49b25cad212918286cdb4639183cf1d122c15476062ec9",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：石基信息 | 软件开发",
+        "evidence": [
+          "石基信息 | 软件开发"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "300634",
+      "published_at": null,
+      "name": "彩讯股份",
+      "title": "彩讯股份 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": 9.077306747436523,
+      "turnover": 986138368.0,
+      "dde_net": null,
+      "source_hash": "cf87e887b68513a6619acf144cad69bf2e554a6719101fede82f6806655c2b66",
+      "normalization": {
+        "event_key": "dae5a63ce0facc831e1472653a8f6111f2baf0863234f15703825a1e5eb2a65e",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "cf87e887b68513a6619acf144cad69bf2e554a6719101fede82f6806655c2b66",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：彩讯股份 | IT服务Ⅱ",
+        "evidence": [
+          "彩讯股份 | IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603803",
+      "published_at": null,
+      "name": "瑞斯康达",
+      "title": "瑞斯康达 | 通信设备",
+      "body": "通信设备",
+      "return_pct": 3.6279070377349854,
+      "turnover": 521894144.0,
+      "dde_net": null,
+      "source_hash": "1c9600ee39ee79510034682da4b3e0cfaeee2e99d92cd4b78135833ea7c8064c",
+      "normalization": {
+        "event_key": "08341e7f5be6ea0c5119c9a0c348d39c1c2b5123dbb9c70284d54ddba3ca2594",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "1c9600ee39ee79510034682da4b3e0cfaeee2e99d92cd4b78135833ea7c8064c",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：瑞斯康达 | 通信设备",
+        "evidence": [
+          "瑞斯康达 | 通信设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002674",
+      "published_at": null,
+      "name": "兴业科技",
+      "title": "兴业科技 | 纺织制造",
+      "body": "纺织制造",
+      "return_pct": 4.0758957862854,
+      "turnover": 1025914480.0,
+      "dde_net": null,
+      "source_hash": "86d02489deff8124ac23b5baa88e66cc80c0ff80be14b6ee59104a8dbf33bed6",
+      "normalization": {
+        "event_key": "57e06aeea1727d7d51f0982278db67e91ba4dcdf26b4a6e4a2563a3ea4db0296",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "86d02489deff8124ac23b5baa88e66cc80c0ff80be14b6ee59104a8dbf33bed6",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：兴业科技 | 纺织制造",
+        "evidence": [
+          "兴业科技 | 纺织制造"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "601579",
+      "published_at": null,
+      "name": "会稽山",
+      "title": "会稽山 | 非白酒",
+      "body": "非白酒",
+      "return_pct": 7.048710346221924,
+      "turnover": 1081551488.0,
+      "dde_net": null,
+      "source_hash": "4d54fbfd16309433818c9b0415dc1d6e3d03220295a8e32a07c9a6915934089a",
+      "normalization": {
+        "event_key": "02053c394e917f6b596043236af6fc7f547947c9ce40c9c2d4f3a9530d3adc80",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512690.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4d54fbfd16309433818c9b0415dc1d6e3d03220295a8e32a07c9a6915934089a",
+        "relevant": true,
+        "matched_categories": [
+          "消费农业"
+        ],
+        "matched_symbols": [
+          "512690.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：会稽山 | 非白酒",
+        "evidence": [
+          "会稽山 | 非白酒"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603002",
+      "published_at": null,
+      "name": "宏昌电子",
+      "title": "宏昌电子 | 电子化学",
+      "body": "电子化学",
+      "return_pct": 5.6840715408325195,
+      "turnover": 1586423600.0,
+      "dde_net": null,
+      "source_hash": "2f8322171b5060fd83ac32c03d26ee312c3c68344abf6a60dd3b43707274aa2f",
+      "normalization": {
+        "event_key": "a6cbca7bfefc4d2118be8fead4e7600f246e901eee190e31216bd49c9eeaf5ea",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "2f8322171b5060fd83ac32c03d26ee312c3c68344abf6a60dd3b43707274aa2f",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：宏昌电子 | 电子化学",
+        "evidence": [
+          "宏昌电子 | 电子化学"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "601890",
+      "published_at": null,
+      "name": "亚星锚链",
+      "title": "亚星锚链 | 航海装备",
+      "body": "航海装备",
+      "return_pct": 6.868452072143555,
+      "turnover": 977646448.0,
+      "dde_net": null,
+      "source_hash": "09ec6c63daae045836c19889157c50a62126e1040506e380c5fd646695e0bb9a",
+      "normalization": {
+        "event_key": "710419608e1a426ad0c396398a32509300a8ba22e88c690d3d7f8a7980b51b10",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "09ec6c63daae045836c19889157c50a62126e1040506e380c5fd646695e0bb9a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：亚星锚链 | 航海装备",
+        "evidence": [
+          "亚星锚链 | 航海装备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002437",
+      "published_at": null,
+      "name": "誉衡药业",
+      "title": "誉衡药业 | 化学制药",
+      "body": "化学制药",
+      "return_pct": 6.588235378265381,
+      "turnover": 4194545616.0,
+      "dde_net": null,
+      "source_hash": "5184131c5f655ed8e5eeec26327a3ff1ccb2f982d6ca395a4fe978fe0586507d",
+      "normalization": {
+        "event_key": "926c015b71224d23aa9b22495437477e0f1059c0209a2e600bc73f8581e52b60",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512010.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5184131c5f655ed8e5eeec26327a3ff1ccb2f982d6ca395a4fe978fe0586507d",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512010.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：誉衡药业 | 化学制药",
+        "evidence": [
+          "誉衡药业 | 化学制药"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002190",
+      "published_at": null,
+      "name": "成飞集成",
+      "title": "成飞集成 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": 6.731583118438721,
+      "turnover": 671119760.0,
+      "dde_net": null,
+      "source_hash": "300dd3e67082afd013e15e08598fbaa731b991992966796dc7bee0fb5cedeecc",
+      "normalization": {
+        "event_key": "60b9598ea1800857b94aa152569bafcaa26923e613c72fb2526a2ab968db68de",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "300dd3e67082afd013e15e08598fbaa731b991992966796dc7bee0fb5cedeecc",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：成飞集成 | 汽车零部",
+        "evidence": [
+          "成飞集成 | 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "603012",
+      "published_at": null,
+      "name": "创力集团",
+      "title": "创力集团 | 专用设备",
+      "body": "专用设备",
+      "return_pct": 3.2858707904815674,
+      "turnover": 787485424.0,
+      "dde_net": null,
+      "source_hash": "f61e2aeb5af7697f07dc8df6f5c7752d0bd42c78d54b71e2535407c19095bfeb",
+      "normalization": {
+        "event_key": "7f97e19d6c44f5b6f4cbe479ee94257228e435393028345caa707bb91af1be75",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f61e2aeb5af7697f07dc8df6f5c7752d0bd42c78d54b71e2535407c19095bfeb",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：创力集团 | 专用设备",
+        "evidence": [
+          "创力集团 | 专用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002980",
+      "published_at": null,
+      "name": "华盛昌",
+      "title": "华盛昌 | 电网设备",
+      "body": "电网设备",
+      "return_pct": 5.398514270782471,
+      "turnover": 1339533008.0,
+      "dde_net": null,
+      "source_hash": "4911ed4facdf14981f12a2aa4bff328908b54b29080c4c975c86e96feaa32012",
+      "normalization": {
+        "event_key": "9be1838ae7ca9fae2f72fc8904ccc63ea82f017a7255501c24d6ab972caaf473",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "561380.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "4911ed4facdf14981f12a2aa4bff328908b54b29080c4c975c86e96feaa32012",
+        "relevant": true,
+        "matched_categories": [
+          "基建公用"
+        ],
+        "matched_symbols": [
+          "561380.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：华盛昌 | 电网设备",
+        "evidence": [
+          "华盛昌 | 电网设备"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "000716",
+      "published_at": null,
+      "name": "黑芝麻",
+      "title": "黑芝麻 | 休闲食品",
+      "body": "休闲食品",
+      "return_pct": 4.303278923034668,
+      "turnover": 387183568.0,
+      "dde_net": null,
+      "source_hash": "d68044b73b210af634969d4926e64cb2204080983c01c3d856766adaabd88a62",
+      "normalization": {
+        "event_key": "c53b02fc93d1d042c2e59083ed9712f76094c8eef3609a5c80b85611df152a94",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "d68044b73b210af634969d4926e64cb2204080983c01c3d856766adaabd88a62",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：黑芝麻 | 休闲食品",
+        "evidence": [
+          "黑芝麻 | 休闲食品"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "002467",
+      "published_at": null,
+      "name": "二六三",
+      "title": "二六三 | 通信服务",
+      "body": "通信服务",
+      "return_pct": 5.773196220397949,
+      "turnover": 753075776.0,
+      "dde_net": null,
+      "source_hash": "f853f9e744864e9a347dcd9037155060875e8f0a08e571d5772c442fc9aa5df3",
+      "normalization": {
+        "event_key": "e5db99a16b480b9ff1979750a2ac5bca4e72566b2eb3060ae59d6da4080e0f0b",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "515050.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "f853f9e744864e9a347dcd9037155060875e8f0a08e571d5772c442fc9aa5df3",
+        "relevant": true,
+        "matched_categories": [
+          "科技数字"
+        ],
+        "matched_symbols": [
+          "515050.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：二六三 | 通信服务",
+        "evidence": [
+          "二六三 | 通信服务"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_broken_board",
+      "source_id": "300985",
+      "published_at": null,
+      "name": "致远新能",
+      "title": "致远新能 | 通用设备",
+      "body": "通用设备",
+      "return_pct": 18.284107208251953,
+      "turnover": 568454080.0,
+      "dde_net": null,
+      "source_hash": "29cf9609e4432848c4467e1d2b1ab213b8135cb3240e85656815cd92bc2a7bcf",
+      "normalization": {
+        "event_key": "23df5317087b1fbffa15019e4c6d3d0bbf8235d891afbd15373e6a5c2acfda7a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "29cf9609e4432848c4467e1d2b1ab213b8135cb3240e85656815cd92bc2a7bcf",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：致远新能 | 通用设备",
+        "evidence": [
+          "致远新能 | 通用设备"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600683",
+      "published_at": null,
+      "name": "京投发展",
+      "title": "京投发展 | 房地产开",
+      "body": "房地产开",
+      "return_pct": -9.976798057556152,
+      "turnover": 1161751136.0,
+      "dde_net": null,
+      "source_hash": "40c17fc3ddf4e9770a84e9bc6b580e95f2fec04fffab329729a194766b5fe579",
+      "normalization": {
+        "event_key": "a8e7eddb8295d9ccac2f8c12337a2176200ac3648d3105d4848fe06ed6881064",
+        "duplicate_of": "2d3264d5f6b262e3ff99f7d2b402115be81a73fe9f1b02ea8307512ad5b246e6",
+        "effective_matched_symbols": [
+          "512200.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "40c17fc3ddf4e9770a84e9bc6b580e95f2fec04fffab329729a194766b5fe579",
+        "relevant": true,
+        "matched_categories": [
+          "金融地产"
+        ],
+        "matched_symbols": [
+          "512200.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：京投发展 | 房地产开",
+        "evidence": [
+          "京投发展 | 房地产开"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603696",
+      "published_at": null,
+      "name": "安记食品",
+      "title": "安记食品 | 调味发酵",
+      "body": "调味发酵",
+      "return_pct": -10.018326759338379,
+      "turnover": 545260240.0,
+      "dde_net": null,
+      "source_hash": "19e8e97012fbbe36546d31cf0f085537e5c0c5200cd99ca828b1c9b2303ddb1e",
+      "normalization": {
+        "event_key": "741d3b9c06a9db057620ab9066e1e485c4ceab9163daeec411f81c29f65b153a",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "19e8e97012fbbe36546d31cf0f085537e5c0c5200cd99ca828b1c9b2303ddb1e",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：安记食品 | 调味发酵",
+        "evidence": [
+          "安记食品 | 调味发酵"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "000582",
+      "published_at": null,
+      "name": "北部湾港",
+      "title": "北部湾港 | 航运港口",
+      "body": "航运港口",
+      "return_pct": -10.0,
+      "turnover": 1119251472.0,
+      "dde_net": null,
+      "source_hash": "bf251cf4a201561e03028306771166f78f4284b20b432e21faeca389ce7ab17a",
+      "normalization": {
+        "event_key": "515cf579eca33511a08c1748da1fa72993c23cb6d804e9c9ac3ddcc931c3f5dc",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "bf251cf4a201561e03028306771166f78f4284b20b432e21faeca389ce7ab17a",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：北部湾港 | 航运港口",
+        "evidence": [
+          "北部湾港 | 航运港口"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603682",
+      "published_at": null,
+      "name": "锦和商管",
+      "title": "锦和商管 | 一般零售",
+      "body": "一般零售",
+      "return_pct": -10.030394554138184,
+      "turnover": 507966576.0,
+      "dde_net": null,
+      "source_hash": "e93f1aab4ff6800889c263d2359f03b4e879ed68012490f24a9520996df8ddbf",
+      "normalization": {
+        "event_key": "d12258eea420f89d387b7950c2c6f4a14785aad048c96f72c26533a0f4324eb0",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "510630.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "e93f1aab4ff6800889c263d2359f03b4e879ed68012490f24a9520996df8ddbf",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "510630.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：锦和商管 | 一般零售",
+        "evidence": [
+          "锦和商管 | 一般零售"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603137",
+      "published_at": null,
+      "name": "恒尚节能",
+      "title": "恒尚节能 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": -10.006901741027832,
+      "turnover": 913042624.0,
+      "dde_net": null,
+      "source_hash": "caabaca37df459232e426538c3b912fdcaaae2066bdb5a193e2abc8cb9394aba",
+      "normalization": {
+        "event_key": "5c81e0d174abfddafdb252e1466455ef6584de061942477d2444c37ec183cf29",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "caabaca37df459232e426538c3b912fdcaaae2066bdb5a193e2abc8cb9394aba",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：恒尚节能 | 装修装饰",
+        "evidence": [
+          "恒尚节能 | 装修装饰"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "000593",
+      "published_at": null,
+      "name": "德龙汇能",
+      "title": "德龙汇能 | 燃气Ⅱ",
+      "body": "燃气Ⅱ",
+      "return_pct": -10.0,
+      "turnover": 942271104.0,
+      "dde_net": null,
+      "source_hash": "7f12c12582e906cc56b376fb34441f3f25e510a4b86eda1c559dddcb40598724",
+      "normalization": {
+        "event_key": "44038b44fcc59987fc1be5bc5a267aa5869c053de3fd16b6fc443bb4335fc9e5",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "7f12c12582e906cc56b376fb34441f3f25e510a4b86eda1c559dddcb40598724",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：德龙汇能 | 燃气Ⅱ",
+        "evidence": [
+          "德龙汇能 | 燃气Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "600936",
+      "published_at": null,
+      "name": "北投科技",
+      "title": "北投科技 | IT服务Ⅱ",
+      "body": "IT服务Ⅱ",
+      "return_pct": -10.067113876342773,
+      "turnover": 752032256.0,
+      "dde_net": null,
+      "source_hash": "0de996b50a0a90e1d944167a52afae1dae51ccdc3173f243e43011287094c78d",
+      "normalization": {
+        "event_key": "039cd9f50a47e1fded3577d5eaa8782202a2951e508df8d6a0d854843195c807",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "0de996b50a0a90e1d944167a52afae1dae51ccdc3173f243e43011287094c78d",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：北投科技 | IT服务Ⅱ",
+        "evidence": [
+          "北投科技 | IT服务Ⅱ"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002047",
+      "published_at": null,
+      "name": "宝鹰股份",
+      "title": "宝鹰股份 | 装修装饰",
+      "body": "装修装饰",
+      "return_pct": -10.0,
+      "turnover": 343204576.0,
+      "dde_net": null,
+      "source_hash": "5f32b3c2b073546417dc5c7aa1cc570cf172ececa6d1a054f3f5dec26e1914d3",
+      "normalization": {
+        "event_key": "8a3f56f9e49062fa9c995ae7039d6ddd0539996d361ac52a8e427aabaf845a23",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "5f32b3c2b073546417dc5c7aa1cc570cf172ececa6d1a054f3f5dec26e1914d3",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：宝鹰股份 | 装修装饰",
+        "evidence": [
+          "宝鹰股份 | 装修装饰"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "002400",
+      "published_at": null,
+      "name": "省广集团",
+      "title": "省广集团 | 广告营销",
+      "body": "广告营销",
+      "return_pct": -9.93710708618164,
+      "turnover": 1821172896.0,
+      "dde_net": null,
+      "source_hash": "ed02c6d25ed765ee705e8e3a5dee7fd43dfe55e28083befbe0fa3702b22d7776",
+      "normalization": {
+        "event_key": "339e45e3b2cb847828c8971c2ba01c2f6c86eb71e338f0c4c4c13eee5ed18c1f",
+        "duplicate_of": null,
+        "effective_matched_symbols": [
+          "512980.SH"
+        ],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "ed02c6d25ed765ee705e8e3a5dee7fd43dfe55e28083befbe0fa3702b22d7776",
+        "relevant": true,
+        "matched_categories": [],
+        "matched_symbols": [
+          "512980.SH"
+        ],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.75,
+        "novelty": 0.25,
+        "summary": "冻结行记录：省广集团 | 广告营销",
+        "evidence": [
+          "省广集团 | 广告营销"
+        ],
+        "risk_flags": [
+          "个股题材到ETF外推有限",
+          "炸板/跌停为个股短期风险，不能外推为板块趋势"
+        ]
+      }
+    },
+    {
+      "source": "eastmoney_limit_down",
+      "source_id": "603758",
+      "published_at": null,
+      "name": "秦安股份",
+      "title": "秦安股份 | 汽车零部",
+      "body": "汽车零部",
+      "return_pct": -9.967427253723145,
+      "turnover": 190066684.0,
+      "dde_net": null,
+      "source_hash": "932add28408f67be3c37cfbf63dea03a3cbbb112fa8110f31057fc55fdf4dc83",
+      "normalization": {
+        "event_key": "dd0756eb0b806ac7a6f881832ac3dea0cdfaaf10520409fa38fe46b40687a8c0",
+        "duplicate_of": null,
+        "effective_matched_symbols": [],
+        "rejected_matched_symbols": []
+      },
+      "ai": {
+        "source_hash": "932add28408f67be3c37cfbf63dea03a3cbbb112fa8110f31057fc55fdf4dc83",
+        "relevant": false,
+        "matched_categories": [],
+        "matched_symbols": [],
+        "direction": -1,
+        "horizon": "intraday",
+        "confidence": 0.7,
+        "novelty": 0.25,
+        "summary": "冻结行记录：秦安股份 | 汽车零部",
+        "evidence": [
+          "秦安股份 | 汽车零部"
+        ],
+        "risk_flags": [
+          "与固定ETF池无直接映射"
+        ]
+      }
+    }
+  ]
+}

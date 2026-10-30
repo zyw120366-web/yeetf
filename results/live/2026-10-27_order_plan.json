@@ -1,0 +1,173 @@
+{
+  "strategy": "ye 策略",
+  "signal_date": "2026-10-27",
+  "execute": "下一交易日开盘先卖后买",
+  "status": "READY",
+  "current_symbol": "159985.SZ",
+  "target_symbol": "512800.SH",
+  "account_state": {
+    "account_type": "live",
+    "as_of": "2026-09-11_close",
+    "confirmation_status": "pending",
+    "source": "用户确认9月11日以1.018元卖光513200.SH 9100股，以2.350元买入159985.SZ 6500股",
+    "first_live_day": false,
+    "total_equity": null,
+    "available_cash": null,
+    "performance": {
+      "strategy_start_date": "2026-07-21",
+      "net_contributed_capital": null,
+      "calculation_basis": "9月10日前净投入9825元；本次新增入金待核，暂停账户收益计算"
+    },
+    "positions": [
+      {
+        "symbol": "159985.SZ",
+        "name": "豆粕ETF华夏",
+        "opened_on": "2026-09-11",
+        "quantity": 6500,
+        "average_cost": 2.35,
+        "market_price": 2.325000047683716,
+        "market_value": 15112.500309944153,
+        "unrealized_pnl": -162.49969005584774
+      }
+    ],
+    "pending_orders": [],
+    "last_exit_dates": {
+      "512010.SH": "2026-09-03",
+      "513200.SH": "2026-09-11"
+    },
+    "actual_execution": {
+      "signal_date": "2026-09-10",
+      "execution_date": "2026-09-11",
+      "fills": [
+        {
+          "side": "sell",
+          "symbol": "513200.SH",
+          "quantity": 9100,
+          "price": 1.018
+        },
+        {
+          "side": "buy",
+          "symbol": "159985.SZ",
+          "quantity": 6500,
+          "price": 2.35
+        }
+      ]
+    },
+    "note": "当前持仓及两笔成交已由用户确认，医药已清仓。pending只指新增入金、剩余现金与费用未核；空值表示未知而非零，不得计算总权益及累计收益或假定执行。上一完整快照保存在9月10日计划的account_state。",
+    "execution_assumption": {
+      "enabled": false,
+      "authorization_date": "2026-08-06",
+      "prior_signal_date": "2026-09-09",
+      "assumed_fills": [],
+      "override": "9月11日真实成交优先；资金对账待补"
+    },
+    "cash_reconciliation": {
+      "status": "pending",
+      "deposit_reported": true,
+      "deposit_amount": null,
+      "user_instruction": "用户确认有新增资金，但未提供金额；要求先生成今日日报。金额保持未知，不能当盈利。",
+      "previous_cash": 17.9,
+      "previous_net_contributed_capital": 9825,
+      "sell_notional": 9263.8,
+      "buy_notional": 15275,
+      "net_deposit_less_fees_less_ending_cash": 5993.3,
+      "note": "新增净入金=5993.30元+当次买卖费用+剩余现金；不推定具体入金或现金"
+    }
+  },
+  "actions": [
+    {
+      "side": "sell",
+      "symbol": "159985.SZ",
+      "target_weight": 0.0,
+      "confirmed_quantity": 6500,
+      "reasons": [
+        "跌破MA120（硬退出）",
+        "ROC20转负",
+        "5日与20日排名同时下滑"
+      ],
+      "instruction": "先卖出全部已确认持仓；未全部成交或仍有未完成卖单，禁止买入新ETF。"
+    },
+    {
+      "side": "buy",
+      "symbol": "512800.SH",
+      "target_weight": 1.0,
+      "requires_full_sale": true,
+      "cost_parameters": {
+        "commission_rate": 0.0003,
+        "minimum_commission": 5.0,
+        "lot_size": 100
+      },
+      "instruction": "卖单全部成交后，仅使用本次卖出净款且不超过券商实际可用资金；按实际买价重新计算100股整数倍，不能机械照抄参考数量。",
+      "buy_estimate": {
+        "last_close": 0.8759999871253967,
+        "estimated_execution_price": 0.8770511871099472,
+        "estimated_quantity_at_last_close": 16000,
+        "estimated_sale_net": 14050.612752342224,
+        "estimated_sell_fee": 5.0,
+        "quantity_rule": "开盘数量由实际卖出成交价、费用及银行买价决定；价格变化会增减100股，旧现金和历史入金不纳入预算。"
+      }
+    }
+  ],
+  "decision_basis": {
+    "opportunity_switch": {
+      "enabled": true,
+      "candidate_symbol": "512800.SH",
+      "qualifies_today": true,
+      "confirmation_streak": 4,
+      "required_confirmation_days": 2,
+      "triggered": true,
+      "status": "triggered",
+      "live_baseline_on": "2026-07-29",
+      "live_confirmation_starts_on": "2026-07-30",
+      "holding_symbol": "159985.SZ",
+      "holding_rank": 18.0,
+      "holding_since": "2026-09-11",
+      "held_trading_days": 27,
+      "candidate_rank": 2.0,
+      "score_gap": 0.29185988287835485,
+      "minimum_score_advantage": 0.05,
+      "reset_rule": "任一条件中断或领先ETF改变，连续计数归零"
+    },
+    "live_position_source": "用户已确认成交；不使用回测影子持仓"
+  },
+  "execution": {
+    "orders": [
+      {
+        "side": "sell",
+        "symbol": "159985.SZ",
+        "target_weight": 0.0,
+        "confirmed_quantity": 6500,
+        "reasons": [
+          "跌破MA120（硬退出）",
+          "ROC20转负",
+          "5日与20日排名同时下滑"
+        ],
+        "instruction": "先卖出全部已确认持仓；未全部成交或仍有未完成卖单，禁止买入新ETF。"
+      },
+      {
+        "side": "buy",
+        "symbol": "512800.SH",
+        "target_weight": 1.0,
+        "requires_full_sale": true,
+        "cost_parameters": {
+          "commission_rate": 0.0003,
+          "minimum_commission": 5.0,
+          "lot_size": 100
+        },
+        "instruction": "卖单全部成交后，仅使用本次卖出净款且不超过券商实际可用资金；按实际买价重新计算100股整数倍，不能机械照抄参考数量。",
+        "buy_estimate": {
+          "last_close": 0.8759999871253967,
+          "estimated_execution_price": 0.8770511871099472,
+          "estimated_quantity_at_last_close": 16000,
+          "estimated_sale_net": 14050.612752342224,
+          "estimated_sell_fee": 5.0,
+          "quantity_rule": "开盘数量由实际卖出成交价、费用及银行买价决定；价格变化会增减100股，旧现金和历史入金不纳入预算。"
+        }
+      }
+    ],
+    "funding_scope": "sale_proceeds_only",
+    "release_required": true,
+    "broker_fill_confirmation_required": true,
+    "order_sequence": "旧仓全部成交→确认净款及券商可用→按实际买价核量→买入"
+  }
+}

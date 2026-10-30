@@ -1,27 +1,11 @@
 {
-  "status": "READY",
-  "core_backtest_and_site": "PASS",
-  "checks": {
-    "single_strategy_name": true,
-    "pool_is_45": true,
-    "ordinary_cost_reconciles": true,
-    "premium_cost_reconciles": true,
-    "equity_return_reconciles": true,
-    "round_trip_pnl_reconciles": true,
-    "fees_reconcile": true,
-    "slippage_reconciles": true,
-    "html_exists": true,
-    "governance_frozen": true,
-    "previous_execution_reconciled": true,
-    "live_account_state_confirmed": true,
-    "live_plan_uses_account_truth": true,
-    "ai_review_complete": true
-  },
-  "blocking_items": [],
-  "reconciliation": {
-    "realized_round_trip_pnl": 546701.4825765907,
-    "open_position_pnl": 15965.000779444828,
-    "cash_management_net": 7124.492465753447,
-    "terminal_reconstructed_equity": 669790.975821789
-  }
+  "signal_date": "2026-10-29",
+  "status": "BLOCKED",
+  "blocking_items": [
+    "上一计划成交尚未核对，无法确认当前持仓，禁止重复交易",
+    "上一计划成交未对账，当前实际持仓和收益待核"
+  ],
+  "error": "ValueError: 上一订单未对账，禁止重复换仓",
+  "buy_allowed": false,
+  "sell_allowed": false
 }
